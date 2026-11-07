@@ -23,3 +23,14 @@
 - [ ] Valutare la sostituzione o l'isolamento di PSTricks.
 - [ ] Aggiungere controlli automatici e confronto degli artefatti generati.
 
+## Ampliamento dell'archivio
+
+- [x] Importare i nove problemi del 2021-2023.
+- [x] Recuperare e conservare i testi del 2024-2026.
+- [x] Importare i nove problemi del 2024-2026.
+- [x] Adeguare il verificatore all'archivio ampliato.
+- [ ] Verificare editorialmente i 18 testi rispetto alle fonti.
+- [ ] Ricostruire in LaTeX la figura del problema 2024.2.
+- [ ] Ricostruire in LaTeX la figura del problema 2026.1.
+- [ ] Recuperare i problemi degli anni 2014-2020.
+- [ ] Progettare il libro ampliato senza modificare quello storico.

@@ -33,3 +33,16 @@ conservati.
 
 Non è stato modificato il contenuto matematico.
 
+## 2026-11-07 - Importazione dei problemi 2021-2026
+
+1. I 18 problemi del periodo 2021-2026 sono importati in file
+   LaTeX canonici separati, mantenendo intatti gli originali.
+2. I testi matematici vengono conservati senza interventi editoriali.
+3. Le parti commentate delle bozze non vengono importate nei file
+   canonici, ma restano disponibili nelle fonti originali.
+4. Le figure esterne non vengono importate: saranno ricostruite
+   direttamente nel sorgente LaTeX.
+5. I problemi 2024.2 e 2026.1 contengono promemoria per le figure
+   ancora da realizzare.
+6. I campi non disponibili (risposte, aiutini, soluzioni) restano vuoti.
+7. Il libro storico di 205 pagine rimane indipendente dai nuovi problemi.

@@ -46,3 +46,25 @@ Per la compatibilità con gli strumenti attuali sono stati necessari soltanto
 adattamenti sintattici documentati in `DECISIONI.md`; PSTricks e i disegni
 incorporati sono stati conservati.
 
+## Ampliamento del 7 novembre 2026
+
+L'archivio contiene ora 96 problemi canonici:
+
+- 78 problemi storici, dal 1996 al 2013;
+- 9 problemi del periodo 2021-2023;
+- 9 problemi del periodo 2024-2026.
+
+Tutti i 96 problemi hanno il campo Testo compilato.
+I 18 nuovi problemi hanno per ora vuoti gli altri campi.
+
+Il verificatore controlla separatamente le statistiche del nucleo
+storico e la struttura dell'archivio ampliato.
+
+Restano da recuperare i problemi degli anni 2014-2020.
+
+Figure da ricostruire:
+- 2024.2: nove quadrati incernierati;
+- 2026.1: quadrilatero con i quattro lati assegnati.
+
+Le fonti originali e i materiali recuperati sono conservati in
+fonti-locali/, esclusa dal repository Git.
