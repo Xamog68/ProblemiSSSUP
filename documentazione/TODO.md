@@ -69,3 +69,13 @@
 - [ ] Versionare il generatore dell'inventario generale.
 - [ ] Aggiungere controlli automatici sui prodotti generati.
 - [ ] Documentare il procedimento per riprenderlo in Codex.
+
+## Sito web - Prossimi passi
+
+- [ ] Verificare la resa matematica delle conversioni del 2013.
+- [ ] Convertire e controllare i problemi del 1996-2012.
+- [ ] Migliorare il trattamento delle figure PSTricks.
+- [ ] Verificare i collegamenti e la leggibilita su dispositivi mobili.
+- [ ] Definire metadati editoriali e provenienza dei materiali.
+- [ ] Preparare il deploy su GitHub Pages.
+- [ ] Attivare la pubblicazione soltanto dopo la revisione.

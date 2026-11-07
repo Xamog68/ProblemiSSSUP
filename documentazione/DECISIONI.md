@@ -106,3 +106,21 @@ attualmente considerati appunti, da trascrivere e controllare.
 
 Prima della pubblicazione dovranno essere chiarite paternità,
 autorizzazioni e condizioni di distribuzione del materiale.
+
+## 2026-11-07 - Architettura e interfaccia del sito
+
+Il sito web utilizza gli stessi sorgenti LaTeX canonici del libro.
+
+La conversione dei contenuti matematici e l'infrastruttura
+grafica sono indipendenti.
+
+Ogni pagina annuale mostra immediatamente tutti i testi.
+Per ciascun problema sono disponibili due modalita:
+- B: pulsante che rivela le fisarmoniche dei materiali aggiuntivi;
+- C: nuova scheda con testo e materiali gia aperti.
+
+I pulsanti relativi ai contenuti mancanti non vengono mostrati.
+La navigazione rapida rimane accessibile durante lo scorrimento.
+
+I dati web gia convertiti possono essere aggiornati singolarmente,
+senza rigenerare l'interfaccia.

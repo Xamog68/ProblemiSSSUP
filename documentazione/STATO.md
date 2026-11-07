@@ -129,3 +129,18 @@ Sito GitHub Pages:
 
 La preparazione dei prodotti editoriali potrà procedere
 anche prima del completamento di tutti i problemi e soluzioni.
+
+## 2026-11-07 - Prototipo modulare del sito
+
+Prima versione dell'infrastruttura B+C inserita nel repository.
+
+L'indice comprende tutti gli anni dal 1996 al 2026.
+Sono gia disponibili in formato web:
+- i quattro problemi del 2013, con 18 sezioni aggiuntive;
+- i 18 problemi del 2021-2026, con i testi.
+
+Gli anni 1996-2012 attendono la conversione web.
+Le prove scritte del 2014-2020 sono ancora da recuperare.
+
+La documentazione tecnica si trova in documentazione/SITO.md.
+Il sito e sperimentale e non e ancora pubblicato su GitHub Pages.
