@@ -34,3 +34,38 @@
 - [ ] Ricostruire in LaTeX la figura del problema 2026.1.
 - [ ] Recuperare i problemi degli anni 2014-2020.
 - [ ] Progettare il libro ampliato senza modificare quello storico.
+
+## Obiettivo finale: libro e sito GitHub Pages
+
+### Consolidamento dell'archivio
+
+- [ ] Recuperare le prove scritte del 2014-2020.
+- [ ] Completare l'inventario editoriale per singolo problema.
+- [ ] Associare le fonti di soluzione ai rispettivi problemi.
+- [ ] Trascrivere e verificare gli appunti di soluzione 2024-2026.
+- [ ] Ricostruire in LaTeX le figure ancora mancanti.
+- [ ] Chiarire paternità e condizioni di pubblicazione.
+
+### Generazione del libro
+
+- [ ] Progettare un nuovo master senza alterare quello storico.
+- [ ] Consentire la selezione di anni e problemi.
+- [ ] Consentire la selezione dei campi da pubblicare.
+- [ ] Generare automaticamente il PDF dai sorgenti canonici.
+- [ ] Verificare impaginazione, formule e figure.
+
+### Generazione del sito
+
+- [ ] Definire la struttura di navigazione per anno e problema.
+- [ ] Scegliere la tecnologia di conversione LaTeX-web.
+- [ ] Gestire formule, macro storiche e disegni.
+- [ ] Generare pagine statiche dai sorgenti canonici.
+- [ ] Mostrare su richiesta soltanto i contenuti disponibili.
+- [ ] Configurare la pubblicazione mediante GitHub Pages.
+- [ ] Automatizzare gli aggiornamenti del sito.
+
+### Manutenzione
+
+- [ ] Versionare il generatore dell'inventario generale.
+- [ ] Aggiungere controlli automatici sui prodotti generati.
+- [ ] Documentare il procedimento per riprenderlo in Codex.

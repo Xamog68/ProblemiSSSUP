@@ -46,3 +46,63 @@ Non è stato modificato il contenuto matematico.
    ancora da realizzare.
 6. I campi non disponibili (risposte, aiutini, soluzioni) restano vuoti.
 7. Il libro storico di 205 pagine rimane indipendente dai nuovi problemi.
+
+## 2026-11-07 - Obiettivo finale e architettura editoriale
+
+Il progetto ha come obiettivo la raccolta, conservazione,
+revisione e pubblicazione dei problemi di matematica delle prove
+di ammissione alla Scuola Superiore Sant'Anna.
+
+### Unica fonte canonica
+
+Ogni problema è rappresentato da un unico sorgente LaTeX,
+contenente testo e, quando disponibili, risposta breve, aiutino,
+soluzioni, osservazioni e commenti.
+
+Non devono esistere copie editoriali indipendenti dello stesso
+contenuto destinate ai diversi prodotti.
+
+### Primo prodotto: libro PDF
+
+Il libro sarà generato automaticamente dai sorgenti canonici.
+
+Dovrà essere possibile scegliere:
+- tutti i problemi oppure una selezione;
+- gli anni da includere;
+- quali campi pubblicare: testi, risposte, aiutini, soluzioni,
+  osservazioni e commenti.
+
+Il master storico rimane conservato e riproducibile separatamente.
+
+### Secondo prodotto: sito GitHub Pages
+
+Il sito statico sarà organizzato principalmente per anno.
+
+Per ciascun anno presenterà i problemi della prova e permetterà
+di consultare, con un clic, gli altri contenuti disponibili
+per ciascun problema: risposte, aiutini, soluzioni, osservazioni
+e commenti.
+
+I contenuti mancanti non genereranno collegamenti vuoti.
+Il sito dovrà poter essere aggiornato automaticamente quando
+viene completato un campo del sorgente canonico.
+
+### Principio tecnico
+
+Libro e sito saranno due prodotti generati dalla medesima
+fonte LaTeX, eventualmente attraverso strumenti differenti.
+Non si manterrà una seconda versione HTML dei testi matematici.
+
+Le figure dovranno essere ricostruite direttamente nei sorgenti
+LaTeX, per quanto possibile, senza dipendere da PDF esterni.
+
+### Materiale non ancora validato
+
+Bozze, appunti e soluzioni non verificate rimangono distinti
+dai contenuti canonici pubblicabili.
+
+In particolare, i materiali di soluzione del 2024-2026 sono
+attualmente considerati appunti, da trascrivere e controllare.
+
+Prima della pubblicazione dovranno essere chiarite paternità,
+autorizzazioni e condizioni di distribuzione del materiale.

@@ -68,3 +68,64 @@ Figure da ricostruire:
 
 Le fonti originali e i materiali recuperati sono conservati in
 fonti-locali/, esclusa dal repository Git.
+
+## Appunti di soluzione 2024-2026
+
+Per gli anni 2024, 2025 e 2026 esistono tracce di soluzioni,
+manoscritte o in altri formati, corrispondenti ai problemi delle prove.
+
+Questi materiali sono classificati come APPUNTI DI SOLUZIONE:
+- non sono ancora trascritti sistematicamente in LaTeX;
+- non sono stati sottoposti a verifica matematica completa;
+- non si presume che coprano tutti i problemi;
+- non vanno ancora considerati soluzioni definitive o ufficiali.
+
+Le macro canoniche delle soluzioni rimangono vuote fino alla
+trascrizione e alla successiva verifica.
+
+## Obiettivo editoriale e situazione al 7 novembre 2026
+
+### Archivio canonico
+
+Sono disponibili 96 problemi in file LaTeX individuali:
+- 78 problemi del periodo 1996-2013;
+- 18 problemi del periodo 2021-2026.
+
+Mancano i problemi degli anni 2014-2020.
+
+Tutti i problemi canonici hanno il testo compilato.
+I problemi del 2021-2026 non hanno ancora contenuti aggiuntivi
+importati nei campi di risposta, aiutino e soluzione.
+
+Per il 2024-2026 esistono appunti di soluzione pertinenti
+alle prove, da trascrivere in LaTeX e verificare accuratamente.
+Non si presume che siano completi per tutti i problemi.
+
+### Inventario delle fonti
+
+È disponibile un generatore automatico dell'inventario generale.
+
+La fotografia del 7 novembre 2026 comprende 408 voci di fonte,
+tra file locali e membri degli archivi ZIP.
+
+Le fonti originali rimangono in fonti-locali/, fuori da Git.
+L'inventario distingue prove scritte, test a risposta multipla,
+materiali di soluzione e altre fonti.
+
+### Prodotti editoriali
+
+Libro storico:
+- compilazione riuscita sul Mac;
+- 205 pagine;
+- ancora basato sui problemi del 1996-2013.
+
+Nuovo libro:
+- generatore configurabile non ancora realizzato.
+
+Sito GitHub Pages:
+- non ancora realizzato;
+- prevista navigazione per anno e per problema;
+- contenuti aggiuntivi consultabili su richiesta.
+
+La preparazione dei prodotti editoriali potrà procedere
+anche prima del completamento di tutti i problemi e soluzioni.
