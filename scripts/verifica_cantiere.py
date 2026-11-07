@@ -89,14 +89,14 @@ def attesi() -> list[tuple[int, int]]:
 def main() -> int:
     errori: list[str] = []
     conteggi = Counter()
+    conteggi_totali = Counter()
     trovati: set[tuple[int, int]] = set()
+    insieme_atteso = set(attesi())
 
     file = sorted(PROBLEMI.glob("SA_????_*.tex"))
-    if len(file) != 78:
-        errori.append(f"Attesi 78 file di problema, trovati {len(file)}")
 
     for percorso in file:
-        corrispondenza = re.fullmatch(r"SA_(\d{4})_(\d)\.tex", percorso.name)
+        corrispondenza = re.fullmatch(r"SA_(\d{4})_([1-9]\d*)\.tex", percorso.name)
         if not corrispondenza:
             errori.append(f"Nome non valido: {percorso.name}")
             continue
@@ -136,15 +136,20 @@ def main() -> int:
         ):
             errori.append(f"{percorso.name}: numero interno incoerente")
 
+        if identificatore not in insieme_atteso and not ha_contenuto(valori["Testo"]):
+            errori.append(f"{percorso.name}: testo vuoto")
+
         for macro in MACRO_CONTENUTO:
             if ha_contenuto(valori[macro]):
-                conteggi[macro] += 1
+                conteggi_totali[macro] += 1
+                if identificatore in insieme_atteso:
+                    conteggi[macro] += 1
 
-    insieme_atteso = set(attesi())
     for identificatore in sorted(insieme_atteso - trovati):
         errori.append(f"Problema mancante: {identificatore[0]}.{identificatore[1]}")
     for identificatore in sorted(trovati - insieme_atteso):
-        errori.append(f"Problema inatteso: {identificatore[0]}.{identificatore[1]}")
+        if identificatore[0] < 2014:
+            errori.append(f"Anno non ammesso: {identificatore[0]}.{identificatore[1]}")
 
     for macro, numero_atteso in ATTESI.items():
         if conteggi[macro] != numero_atteso:
@@ -159,9 +164,11 @@ def main() -> int:
             print(f"- {errore}")
         return 1
 
-    print("Cantiere coerente: 78 problemi canonici, 1996–2013")
+    nuovi = len(trovati - insieme_atteso)
+    totale = len(trovati)
+    print(f"Cantiere coerente: {totale} problemi canonici (78 storici + {nuovi} nuovi)")
     for macro in MACRO_CONTENUTO:
-        print(f"- {macro}: {conteggi[macro]}/78")
+        print(f"- {macro}: storici {conteggi[macro]}/78; totale {conteggi_totali[macro]}/{totale}")
     return 0
 
 
