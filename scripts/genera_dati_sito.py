@@ -85,10 +85,31 @@ def preprocess(text: str) -> tuple[str,int]:
 
 def convert(text: str, provenance: str) -> tuple[str,int]:
     text, figures=preprocess(text)
-    run=subprocess.run(['pandoc','--from=latex','--to=html5','--mathjax','--wrap=none'],input=text,text=True,capture_output=True)
+
+    # Protegge ambienti numerati e riferimenti prima di Pandoc.
+    protected = {}
+
+    def preserve(match):
+        token = f'SSSUPMATHPRESERVED{len(protected):05d}END'
+        protected[token] = match.group(0)
+        return token
+
+    envs = r'equation\*?|align\*?|gather\*?|multline\*?|flalign\*?|alignat\*?'
+    text = re.sub(
+        r'\\begin\{(' + envs + r')\}.*?\\end\{\1\}',
+        preserve, text, flags=re.S
+    )
+    text = re.sub(
+        r'\\(?:ref|eqref)\{[^{}]+\}',
+        preserve, text
+    )
+
+    run=subprocess.run(['pandoc','--from=latex','--to=html5','--math-method=mathjax','--wrap=none'],input=text,text=True,capture_output=True)
     if run.returncode:
         raise RuntimeError(f'Pandoc {provenance}: {run.stderr[-1800:]}')
     h=run.stdout.strip()
+    for token, latex in protected.items():
+        h=h.replace(token, escape(latex))
     if not h and has_content(text):raise RuntimeError(f'Conversione vuota per {provenance}')
     for n in range(1,figures+1):
         token='SSSUPFIGURASEGNAPOSTO'+str(n)+'FINE'
