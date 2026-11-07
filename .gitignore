@@ -13,3 +13,5 @@
 # Le fonti storiche integrali sono conservate fuori da Git.
 /fonti/*.zip
 
+
+/fonti-locali/
