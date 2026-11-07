@@ -1,0 +1,186 @@
+\renewcommand{\Anno}{1997}
+
+\renewcommand{\NumeroProblema}{2}
+
+\renewcommand{\Testo}{ 
+La Scuola Superiore S. Anna possiede un
+auditorium a forma di triangolo equilatero in cui pareti, pavimento e
+soffitto assorbono perfettamente i suoni.  Ai vertici del triangolo
+sono disposte tre casse acustiche le cui potenze (misurate in
+centinaia di Watt) sono $1$, $1$, $k$, rispettivamente.
+
+Come \`{e} ben noto, l'intensit\`{a} del suono percepito in un punto
+\`{e} direttamente proporzionale alla potenza della sorgente ed
+inversamente proporzionale al quadrato della distanza dalla sorgente.
+	
+Determinare i valori di $k$ per cui esiste un punto della stanza in
+cui il suono emesso da ogni cassa \`{e} sentito alla stessa
+intensit\`{a} e, per tali valori di $k$, determinare il punto.
+}
+
+\renewcommand{\Risposta}{
+Esiste il punto se e solo se $k\leq 3$.  In tal caso il punto cercato
+appartiene all'asse del segmento che ha per estremi le 2 casse da 1, e
+la sua distanza dal segmento \`{e} data da
+$$\frac{-\sqrt{3}+\sqrt{k(4-k)}}{2(k-1)}.$$
+}
+
+\renewcommand{\Aiutino}{
+Consideriamo solo le 2 casse da 100 watt.  In quali punti il suono da
+loro emesso viene percepito con la stessa intensit\`{a}?  Come varia
+in tale luogo l'intensit\`{a} percepita del suono delle 3 casse?
+Questo basta per dire quando esiste il punto richiesto.  Per
+individuarlo esattamente, occorre poi impostare un'equazione
+opportuna.
+}
+
+\renewcommand{\SoluzioneUfficiale}{
+Indichiamo con $A$, $B$, $C$ i vertici del triangolo, che possiamo 
+supporre di lato unitario in qualche opportuna unit\`{a} di misura, e 
+supponiamo che le 2 casse da 1 stiano nei vertici $B$ e $C$. Avendo 
+la stessa potenza, il suono emesso da queste 2 casse si percepir\`{a} 
+con uguale intensit\`{a} nei punti equidistanti da $B$ e $C$, 
+cio\`{e} nei punti dell'asse del segmento $BC$, la cui intersezione 
+con il triangolo \`{e} la mediana $AM$.
+
+Consideriamo ora un punto $P$ variabile su tale mediana, ed 
+indichiamo con $x$ la sua distanza da $M$, come nella figura qui sotto. 
+\begin{center}
+	\psset{unit=10mm}
+	\pspicture(0,-0.4)(4,3.8)
+	
+	\pstGeonode[PosAngle={210,-30}](0,0){B}(4,0){C}
+	\pstRotation[PosAngle=90]{B}{C}{A}
+	\pstLineAB{A}{B}
+	\pstLineAB{C}{B}
+	\pstLineAB{A}{C}
+	\pstMiddleAB[PosAngle=-90]{B}{C}{M}
+	\pstLineAB[linecolor=blue]{A}{M}
+	\pstGeonode(2,1){P}
+	\pstLineAB[linecolor=blue,linestyle=dashed]{B}{P}
+	\rput[r](1.9,0.5){$x$}
+	\endpspicture
+\end{center}
+
+Indichiamo con $I_{A}(x)$, $I_{B}(x)$, $I_{C}(x)$, rispettivamente, le
+intensit\`{a} con cui viene percepito in $P$ il suono proveniente
+dalle casse poste in $A$, $B$, $C$.  Tenendo conto che $BM=CM=1/2$,
+$AM=\sqrt{3}/2$, quindi $AP=\sqrt{3}/2-x$, e per il teorema di
+Pitagora
+$$BP^{2}=CP^{2}=x^{2}+\frac{1}{4},$$
+avremo che
+$$I_{B}(x)=I_{C}(x)=\frac{\alpha}{\displaystyle{x^{2}+\frac{1}{4}}},
+\hspace{4em}
+I_{A}(x)=\frac{\alpha k}{\displaystyle{\left(
+\frac{\sqrt{3}}{2}-x\right)^{2}}},$$
+dove $\alpha$ \`{e} un'opportuna costante di proporzionalit\`{a}.
+
+Da queste formule segue immediatamente che l'intensit\`{a} del suono
+proveniente da $B$ e $C$ diminuisce con continuit\`{a} all'aumentare
+di $x$, mentre l'intensit\`{a} del suono proveniente da $A$ cresce con
+continuit\`{a} all'aumentare di $x$, e tende a $+\infty$ quando $P$ si
+avvicina ad $A$ (qui stiamo supponendo, per ovvie ragioni fisiche, che 
+sia $k>0$).
+
+Pertanto un punto in cui le 3 intensit\`{a} coincidono esister\`{a} (e
+sar\`{a} unico) se e solo se in $M$ il suono proveniente da $A$ giunge
+con intensit\`{a} minore od uguale del suono proveniente da $B$ e $C$.
+Poich\'{e} $M$ corrisponde ad $x=0$, questa condizione equivale a
+$$\frac{\alpha k}{\left(\sqrt{3}/2\right)^{2}}\leq \frac{\alpha}{1/4},
+$$
+da cui con semplici calcoli si ottiene la condizione $k\leq 3$, da 
+aggiungere alla condizione fisica $k>0$.
+
+Il grafico seguente riporta l'andamento di $I_{A}(x)$ e $I_{B}(x)$ 
+per alcuni valori del parametro $k$ (abbiamo supposto $\alpha=1$).
+\begin{center}
+	\psset{xunit=25ex,yunit=5ex} 
+	\pspicture(0,-1)(2,9.5) 
+	
+	\psplot[linewidth=1.5\pslinewidth]{0}{3 sqrt 2 div}{1 x 2 exp 1 4 div add div}
+	\psplot[linewidth=1.5\pslinewidth,linecolor=red]{0}{3 sqrt 2 div 1 3 div sub}{1 3 sqrt 2 div x sub 2 exp div}
+	\psplot[linewidth=1.5\pslinewidth,linecolor=blue]{0}{3 sqrt 2 div 2 sqrt 3 div sub}{2 3 sqrt 2 div x sub 2 exp div}
+	\psplot[linewidth=1.5\pslinewidth,linecolor=green]{0}{3 sqrt 2 div 3 sqrt 3 div sub}{3 3 sqrt 2 div x sub 2 exp div}
+	\psplot[linewidth=1.5\pslinewidth,linecolor=cyan]{0}{3 sqrt 2 div 4 sqrt 3 div sub}{4 3 sqrt 2 div x sub 2 exp div}
+	\psplot[linewidth=1.5\pslinewidth,linecolor=yellow]{0}{3 sqrt 2 div 1 2 div sqrt 3 div sub}{1 2 div 3 sqrt 2 div x sub 2 exp div}
+	
+	\psaxes[linewidth=.6\pslinewidth]{->}(1,9.5)
+	\rput(!3 sqrt 2 div 0){\pspicture(0,0)(0,0)\psline[linewidth=.6\pslinewidth](0,-3pt)(0,3pt)\endpspicture}
+	\rput[t](!3 sqrt 2 div 0.3 neg){$\sqrt{3}/2$}
+	\psline[linewidth=1.5\pslinewidth](1.3,7)(1.5,7)
+	\rput[l](1.6,7){$I_{B}(x)=I_{C}(x)$}
+	\psline[linewidth=1.5\pslinewidth,linecolor=cyan](1.3,6)(1.5,6)
+	\rput[l](1.6,6){$I_{A}(x)$ con $k=4$}
+	\psline[linewidth=1.5\pslinewidth,linecolor=green](1.3,5)(1.5,5)
+	\rput[l](1.6,5){$I_{A}(x)$ con $k=3$}
+	\psline[linewidth=1.5\pslinewidth,linecolor=blue](1.3,4)(1.5,4)
+	\rput[l](1.6,4){$I_{A}(x)$ con $k=2$}
+	\psline[linewidth=1.5\pslinewidth,linecolor=red](1.3,3)(1.5,3)
+	\rput[l](1.6,3){$I_{A}(x)$ con $k=1$}
+	\psline[linewidth=1.5\pslinewidth,linecolor=yellow](1.3,2)(1.5,2)
+	\rput[l](1.6,2){$I_{A}(x)$ con $k=1/2$}
+	\endpspicture
+\end{center}
+
+Nel caso in cui $0<k\leq 3$, si pu\`{o} trovare il valore esatto di 
+$x$ risolvendo l'equazione $I_{B}(x)=I_{C}(x)=I_{A}(x)$, e cio\`{e}
+$$\frac{\alpha k}{\displaystyle{\left(
+\frac{\sqrt{3}}{2}-x\right)^{2}}}=
+\frac{\alpha}{\displaystyle{x^{2}+\frac{1}{4}}},$$
+la quale con qualche calcolo si trasforma nell'equazione
+$$(k-1)x^{2}+\sqrt{3}\,x+\frac{k-3}{4}=0.$$
+
+Se $k=1$, tale equazione \`{e} di primo grado ed ha l'unica 
+soluzione $x=\sqrt{3}/6$ che corrisponde, come potevamo aspettarci, al 
+centro del triangolo.
+
+Se $k\neq 1$, tale equazione \`{e} di secondo grado ed ha le soluzioni
+$$x_{1}=\frac{-\sqrt{3}-\sqrt{k(4-k)}}{2(k-1)},
+\hspace{6em}
+x_{2}=\frac{-\sqrt{3}+\sqrt{k(4-k)}}{2(k-1)}.$$
+
+Per quanto detto sopra, noi gi\`{a} sappiamo che per $0<k\leq 3$ una 
+ed una sola di tali soluzioni appartiene all'intervallo 
+$[0,\sqrt{3}/2)$, dunque rappresenta un punto $P$ accettabile. 
+Dimostriamo che tale soluzione \`{e} $x_{2}$.
+
+Infatti, moltiplicando numeratore e denominatore per 
+$\sqrt{3}+\sqrt{k(4-k)}$, possiamo riscrivere $x_{2}$ nella forma
+$$x_{2}=\frac{-k^{2}+4k-3}{2(k-1)(\sqrt{3}+\sqrt{k(4-k)})}=
+\frac{3-k}{2(\sqrt{3}+\sqrt{k(4-k)})}.$$
+
+Ora \`{e} evidente che $x_{2}\geq 0$ per $k\leq 3$. Per dimostrare che 
+$x_{2}$ \`{e} anche minore di $\sqrt{3}/2$, dobbiamo risolvere 
+la disequazione
+$$\frac{3-k}{2(\sqrt{3}+\sqrt{k(4-k)})}<\frac{\sqrt{3}}{2}.$$
+
+Moltiplicando per il denominatore (sicuramente positivo) e svolgendo i 
+calcoli, si ritrova la disequazione
+$$-k< \sqrt{3k(4-k)},$$
+banalmente verificata per tutti i valori $0<k\leq 3$.
+}
+
+\renewcommand{\SoluzioniAlternative}{
+}
+
+\renewcommand{\Osservazioni}{\TitoloOsservazione
+Nella soluzione presentata abbiamo ottenuto la condizione su $k$ 
+ragionando sulla crescenza e decrescenza delle intensit\`{a} percepite. 
+Avremmo anche potuto limitarci ad impostare l'equazione 
+$I_{A}(x)=I_{B}(x)=I_{C}(x)$ e, \emph{dopo} aver ottenuto le 
+soluzioni $x_{1}$ e $x_{2}$, discutere al variare di $k$ la loro 
+appartenenza all'intervallo di accettabilit\`{a} $[0,\sqrt{3}/2)$. 
+Questo per\`{o} ci avrebbe portato a discutere ben 4 disequazioni 
+irrazionali. 
+
+Per i lettori interessati a questo approccio, enunciamo le conclusioni
+di tale discussione senza riportarne i passaggi: ferme restando le
+condizioni $k\neq 1$ (altrimenti l'equazione \`{e} di primo grado e va
+studiata a parte) e $k\in[0,4]$ (altrimenti il discriminante \`{e}
+negativo), abbiamo che $x_{1}<0$ per ogni $k>1$ e $x_{1}>\sqrt{3}/2$
+per ogni $k<1$ (quindi in particolare $x_{1}$ non sta mai
+nell'intervallo considerato), mentre $x_{2}\geq 0$ per $k\leq 3$ e
+$x_{2}<\sqrt{3}/2$ per $k>0$.  }
+
+\renewcommand{\Commenti}{
+}

@@ -1,0 +1,169 @@
+\renewcommand{\Anno}{2006}
+
+\renewcommand{\NumeroProblema}{3}
+
+\renewcommand{\Testo}{\`{E} ben noto che pi\`{u} ci si alza rispetto alla
+	superficie terrestre e pi\`{u} \`{e} possibile vedere (o
+	essere visti da) lontano.
+	\begin{enumerate}
+		\item Un satellite si trova ad altezza $h$ sulla verticale di
+		un punto $P$ della superficie terreste.  Determinare la
+		massima distanza da $P$ sulla superficie terrestre alla quale
+		\`{e} ancora possibile vedere il satellite.
+	
+		\item Una ditta di telecomunicazioni vorrebbe piazzare
+		4 satelliti in modo che da ogni punto della superficie
+		terrestre sia possibile vederne almeno uno.  Per
+		ragioni tecniche, la massima altezza da terra alla
+		quale i satelliti possono essere lanciati \`{e} uguale
+		al doppio del raggio terrestre.
+		
+		Determinare se la ditta pu\`{o} raggiungere il suo scopo.
+	
+		\item Determinare se, in assenza del vincolo sulla massima
+		altezza raggiungibile, sarebbe possibile disporre
+		opportunamente 3 satelliti in modo che da ogni punto della
+		superficie terrestre sia possibile vederne almeno uno.
+	\end{enumerate} 
+	
+	{\small Nota: si approssimi la Terra con una sfera di raggio $r$.}}
+
+\renewcommand{\Risposta}{\begin{enumerate}
+	\renewcommand{\labelenumi}{(\alph{enumi})} 
+	\item  La massima distanza \`{e}
+	$$r\cdot\arccos\frac{r}{r+h}.$$
+
+	\item  La ditta pu\`{o} raggiungere il suo scopo.
+
+	\item  Non \`{e} comunque possibile.
+\end{enumerate}
+}
+
+\renewcommand{\Aiutino}{\begin{enumerate}
+	\renewcommand{\labelenumi}{(\alph{enumi})} 
+	\item  Considerare la seguente figura
+	\begin{center}
+		\psset{unit=7ex}
+		\pspicture(-4,-1)(1,1)
+		\pstGeonode[PosAngle={-45,135,135}](0,0){O}(-1,0){P}(-2.5,0){S}
+		\pstHomO[HomCoef=0.5,PointSymbol=none]{S}{O}{C}
+		\pstInterCC[PosAngle=90,PointSymbolB=none]{C}{S}{O}{P}{H}{H'}
+		\pstCircleOA[linecolor=blue]{O}{P}
+		\pcline(S)(P)\bput{:U}{$h$}
+		\pcline(P)(O)\bput{:U}{$r$}
+		\pcline(H)(O)\aput{U}{$r$}
+		\pcline(S)(H)
+		\pstRightAngle{S}{H}{O}
+		\endpspicture
+
+	\end{center}
+	in cui la massima distanza richiesta \`{e} la lunghezza dell'arco 
+	$PH$.
+
+	\item  Disporre i 4 satelliti ai vertici di un tetraedro regolare 
+	di cui la terra sia la sfera inscritta. Quanto misura il raggio
+	della sfera inscritta ad un tetraedro regolare?
+
+	\item  Tre satelliti determinano un piano. Da quale(i) punto(i) 
+	della sfera questo piano non \`{e} visibile? 
+\end{enumerate}
+}
+
+\renewcommand{\SoluzioneUfficiale}{\DomandaA Consideriamo la seguente figura
+	\begin{center}
+		\psset{unit=7ex}
+		\pspicture(-4,-1)(1,1)
+		\pstGeonode[PosAngle={-45,135,135}](0,0){O}(-1,0){P}(-2.5,0){S}
+		\pstHomO[HomCoef=0.5,PointSymbol=none]{S}{O}{C}
+		\pstInterCC[PosAngle=90,PointSymbolB=none]{C}{S}{O}{P}{H}{H'}
+		\pstCircleOA[linecolor=blue]{O}{P}
+		\pcline(S)(P)\bput{:U}{$h$}
+		\pcline(P)(O)\bput{:U}{$r$}
+		\pcline(H)(O)\aput{U}{$r$}
+		\pcline(S)(H)
+		\pstRightAngle{S}{H}{O}
+		\pstMarkAngle[MarkAngleRadius=0.2,LabelSep=0.4]{H}{O}{S}{$\alpha$}
+		\endpspicture
+
+	\end{center}
+in cui il punto $S$ rappresenta la posizione del satellite. I punti
+della superficie terrestre dai quali si vede il satellite sono quelli
+ottenuti ruotando l'arco $PH$ intorno all'asse $SO$. Di conseguenza la
+massima distanza da $P$ alla quale il satellite \`{e} visibile
+corrisponde alla lunghezza dell'arco $PH$, e cio\`{e} $r\alpha$. Per
+determinare l'angolo $\alpha$, ci basta osservare che nel triangolo
+rettangolo $OHS$ si ha che
+$$\cos\alpha=\frac{OH}{OS}=\frac{r}{r+h}.$$
+
+Pertanto la lunghezza dell'arco $PH$ \`{e} data da
+$$r\cdot\arccos\frac{r}{r+h}.$$
+
+Si noti che, come ci si poteva facilmente aspettare, tale lunghezza
+\`{e} nulla per $h=0$ e tende a $r\pi/2$ quando $h\to+\infty$.
+
+\DomandaB La ditta pu\`{o} realizzare il suo scopo disponendo i 4
+satelliti in modo che siano i vertici di un tetraedro regolare, di cui
+la terra sia la sfera inscritta.  In questo modo \`{e} chiaro che da
+ogni punto della superficie terrestre si vede almeno un satellite.
+Verifichiamo che in tale disposizione la distanza di ogni satellite
+dalla superficie terrestre \`{e} uguale esattamente al doppio del
+raggio terrestre.  Per far questo, ci basta dimostrare che la distanza
+dei vertici di un tetraedro dal centro della sfera inscritta \`{e}
+uguale al triplo del raggio della sfera stessa, il che a sua volta
+\`{e} equivalente a dimostrare che il raggio della sfera inscritta ad
+un tetraedro \`{e} uguale ad 1/4 dell'altezza.  Questo \`{e} un fatto
+ben noto.  Per dimostrarlo, indichiamo con $h$ l'altezza, con $r$ il
+raggio della sfera inscritta, e con $T$ l'area di ciascuna faccia del
+tetraedro.  Il volume del tetraedro \`{e} allora $Th/6$.  D'altra
+parte, possiamo scomporre il tetraedro come unione di 4 tetraedri,
+ciascuno avente una faccia in comune con il tetraedro originario, ed
+il restante vertice nel centro della sfera.  Ciascuno di questi
+tetraedri pi\`{u} piccoli ha volume $Tr/6$, e pertanto
+$$\frac{Th}{6}=4\cdot\frac{Tr}{6},$$
+da cui $h=4r$.
+
+\DomandaC Mostriamo che con 3 satelliti, comunque disposti, c'\`{e}
+sempre almeno un punto della superficie terrestre dal quale non se ne
+vede nessuno.  Consideriamo infatti il piano che contiene i 3
+satelliti (se sono addirittura allineati, consideriamo un qualunque
+piano che li contenga).  Consideriamo ora la retta passante per il
+centro della terra e perpendicolare al piano: tale retta
+intersecher\`{a} la superficie terrestre in 2 punti $A$ e $B$.  Se il
+piano interseca propriamente (non tangente) la superficie terrestre,
+allora da $A$ e da $B$ non si vede nessun punto del piano, dunque in
+particolare non si vedono i satelliti (figura di sinistra). Se il
+piano non interseca la superficie terrestre, o \`{e} ad essa tangente,
+allora il piano \`{e} invisibile dal punto tra $A$ e $B$ che \`{e}
+pi\`{u} lontano dal piano stesso (figura di destra).
+
+\psset{unit=5ex}
+\pspicture(-4,-2)(4,2)
+\pscircle(0,0){1}
+\psline[linecolor=blue](-4,-0.3)(4,-0.3)
+\pstGeonode[PosAngle={90,-90}](0,1){A}(0,-1){B}
+\psline[linecolor=green](A)(-3.5,-0.3)
+\psline[linecolor=green](A)(-2.5,-0.3)
+\psline[linecolor=green](A)(-1.5,-0.3)
+\psline[linecolor=green](B)(-3,-0.3)
+\psline[linecolor=green](B)(-2,-0.3)
+\endpspicture
+\hfill
+\psset{unit=5ex}
+\pspicture(-4,-2)(4,2)
+\pscircle(0,0){1}
+\psline[linecolor=blue](-4,-1.5)(4,-1.5)
+\pstGeonode[PosAngle={90,90}](0,1){A}(0,-1){B}
+\psline[linecolor=green](A)(-3.5,-1.5)
+\psline[linecolor=green](A)(-2.5,-1.5)
+\psline[linecolor=green](A)(-1.5,-1.5)
+\endpspicture
+
+}
+
+\renewcommand{\SoluzioniAlternative}{
+}
+
+\renewcommand{\Osservazioni}{\TitoloOsservazione }
+
+\renewcommand{\Commenti}{
+}

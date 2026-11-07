@@ -1,0 +1,78 @@
+\renewcommand{\Anno}{2010}
+
+\renewcommand{\NumeroProblema}{2}
+
+\renewcommand{\Testo}{
+Consideriamo la successione $a_{0}$, $a_{1}$, $a_{2}$, \ldots\ 
+definita ponendo $a_{0}=1$ e poi, ricorsivamente, 
+$$a_{n+1}=2^{a_{n}}$$ 
+per ogni intero $n\geq 0$. Cos\`{i}, per esempio, si ha che 
+$a_{1}=2^{a_{0}}=2^{1}=2$, $a_{2}=2^{a_{1}}=2^{2}=4$, 
+$a_{3}=2^{a_{2}}=2^{4}=16$, e cos\`{i} via.
+
+Determinare il pi\`{u} piccolo valore di $n$ per cui 
+$$a_{n}\geq 2010^{2010^{2010}}.$$
+
+{\small Nota bene: la scrittura $a^{b^{c}}$ va intesa come 
+$a^{(b^{c})}$. 
+}
+}
+
+\renewcommand{\Risposta}{$n=6$}
+
+\renewcommand{\Aiutino}{
+Dimostrare, mediante opportune stime, che
+$a_{5}<2010^{2010^{2010}}<a_{6}$.  Per la maggiorazione pu\`{o}
+tornare utile il fatto che $2010<2048=2^{11}$.
+}
+
+\renewcommand{\SoluzioneUfficiale}{\TitoloSoluzione
+Mostriamo che
+\begin{equation}
+	a_{5}<2010^{2010^{2010}}<a_{6},
+	\label{stima:2010-2}
+\end{equation}
+da cui segue che il minimo intero richiesto \`{e} $n=6$.
+
+Il testo gi\`{a} ci dice che $a_{3}=16$, quindi $a_{4}=2^{16}$ e
+$$a_{5}=2^{2^{16}}<2010^{2010^{2010}},$$
+da cui la prima disuguaglianza.
+
+D'altra parte, essendo $2010<2048=2^{11}$, abbiamo che
+$$2010^{2010}<\left(2^{11}\right)^{\left(2^{11}\right)}=
+2^{11\cdot 2^{11}}<2^{16\cdot 2^{11}}=2^{2^{15}},$$
+e quindi
+$$11\cdot 2010^{2010}<16\cdot 2^{2^{15}}<2^{4+2^{15}}<2^{2^{16}}=a_{5}.$$
+
+Ne segue che
+$$2010^{2010^{2010}}<\left(2^{11}\right)^{2010^{2010}}
+=2^{11\cdot 2010^{2010}}<2^{a_{5}}=a_{6},$$
+da cui la seconda disuguaglianza.
+}
+
+\renewcommand{\SoluzioniAlternative}{\TitoloSoluzioneAlternativaA
+Mostriamo un approccio alternativo alla disuguaglianza di destra
+nella (\ref{stima:2010-2}).  Osserviamo intanto che dalla definizione
+degli $a_{n}$ segue che $a_{n-2}=\log_{2}(\log_{2} a_{n})$.  Pertanto
+dimostrare che
+$$a_{6}>2010^{2010^{2010}}$$
+\`{e} equivalente a dimostrare che
+$a_{4}>\log_{2}\left(\log_{2}2010^{2010^{2010}}\right)$. D'altra 
+parte per le propriet\`{a} dei logaritmi si ha che
+\begin{eqnarray*}
+	\log_{2}\left(\log_{2}\left(2010^{2010^{2010}}\right)\right) & = & 
+	\log_{2}\left(2010^{2010}\cdot\log_{2}2010\right)\\
+	 & = & 2010\cdot\log_{2}2010+\log_{2}(\log_{2}2010)  \\
+	 & < & 2010\cdot\log_{2}2048+\log_{2}(\log_{2}2048)  \\
+	 & = & 2010\cdot 11+\log_{2}(11)  \\
+	 & < & 2010\cdot 11+4   \\
+	 & < & 2^{16}\ =\ a_{4},  
+\end{eqnarray*}
+il che completa la dimostrazione.
+}
+
+\renewcommand{\Osservazioni}{
+}
+
+\renewcommand{\Commenti}{
+}

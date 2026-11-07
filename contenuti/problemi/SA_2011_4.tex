@@ -1,0 +1,159 @@
+\renewcommand{\Anno}{2011}
+
+\renewcommand{\NumeroProblema}{4}
+
+\renewcommand{\Testo}{
+\begin{enumerate}
+	\item  
+	Un gruppo di 8 amici ha acquistato dei biglietti di teatro,
+	numerati da 1 a 8, che occupano un'intera fila.  Giunti in sala,
+	si siedono nella fila prenotata ma in un ordine casuale.
+
+	Determinare la probabilit\`{a} che ognuno sieda su una sedia il
+	cui numero differisce da quello del suo biglietto per al pi\`{u}
+	uno.
+
+	\item Dopo il teatro, gli 8 amici hanno prenotato in un ristorante
+	per la cena.  Il proprietario ha riservato per loro un tavolo
+	rotondo con 8 posti, ed ha predisposto davanti ad ogni posto un
+	cartellino con il nome di uno dei commensali.  Giunti al
+	ristorante, gli 8 amici si siedono al tavolo a loro riservato, ma
+	ancora in ordine casuale.
+	
+	Determinare la probabilit\`{a} che ognuno sieda al posto che reca 
+	il suo nome, oppure in uno dei due posti adiacenti.
+\end{enumerate}
+}
+
+\renewcommand{\Risposta}{
+\begin{enumerate}
+	\renewcommand{\labelenumi}{(\alph{enumi})} 
+	\item  17/20160
+
+	\item  7/5760
+\end{enumerate}
+}
+
+\renewcommand{\Aiutino}{
+\begin{enumerate}
+	\renewcommand{\labelenumi}{(\alph{enumi})} 
+	
+	\item Generalizziamo il problema ad $n$ persone, ed indichiamo con
+	$L_{n}$ il numero di permutazioni che verificano la propriet\`{a}
+	richiesta.  Si tratta di trovare una relazione ricorrente per
+	$L_{n}$.  Dove pu\`{o} sedersi il proprietario del biglietto
+	numero~1?  Quante sono (in funzione dei casi precedenti) le
+	disposizioni possibili se si siede al posto numero~1?
+	
+	Se invece il proprietario del biglietto numero~1 si siede al posto
+	numero~2, chi si pu\`{o} sedere al posto numero~1?  Quante sono a
+	quel punto le possibili permutazioni?
+	
+	\item Numeriamo opportunamente persone e posti.  L'idea \`{e} di
+	ridursi al problema della fila considerando dove si siede il
+	proprietario del posto numero~1.
+	
+	Se si siede al suo posto, allora ci siamo ridotti al problema su 
+	un fila con una persona in meno (come? perch\'{e}?).
+	
+	Se si siede al posto numero~2, chi si pu\`{o} sedere al posto 
+	numero~1? Ora ci sono due possibilit\`{a}: se \`{e} il numero~2, 
+	allora ci siamo ridotti \ldots; se invece \`{e} il numero~8, 
+	allora come devono sedersi gli altri?
+	
+	Quali altre possibilit\`{a} ci sono per il proprietario del posto 
+	numero~1?
+\end{enumerate}
+}
+
+\renewcommand{\SoluzioneUfficiale}{\TitoloSoluzione\DomandaA
+La probabilit\`{a} richiesta \`{e} $34/8!=17/20160$.
+
+I casi possibili sono tanti quante le possibili permutazioni di 8 
+elementi, e cio\`{e} 8!.
+
+Per contare i casi favorevoli, generalizziamo il problema ad un 
+gruppo di $n$ persone, ed indichiamo con $L_{n}$ il numero di 
+permutazioni con la propriet\`{a} richiesta. \`{E} banale 
+verificare che $L_{1}=1$ ed $L_{2}=2$. Consideriamo ora un gruppo di 
+$n$ persone, con $n\geq 3$. Il proprietario del biglietto numero~1 
+pu\`{o} sedersi in 2 posti: il suo o quello adiacente.
+\begin{itemize}
+	\item  Se il proprietario del biglietto numero~1 si siede al suo 
+	posto, ci siamo ridotti allo stesso problema con una persona in 
+	meno, dunque abbiamo $L_{n-1}$ configurazioni possibili.
+
+	\item  Se il proprietario del biglietto numero~1 si siede al 
+	posto numero~2, allora necessariamente il possessore del 
+	biglietto numero~2 deve sedersi al posto numero~1 (gli altri 
+	infatti non possono farlo senza violare la condizione imposta 
+	dal problema). Ne segue quindi che i possessori dei biglietti~1 
+	e~2 si sono scambiati il posto, e ci siamo ridotti allo stesso 
+	problema per gli $(n-2)$ possessori dei biglietti dal 3 in poi, 
+	per i quali abbiamo quindi $L_{n-2}$ configurazioni possibili.
+\end{itemize}
+
+Abbiamo cos\`{i} dimostrato che 
+$$L_{n}=L_{n-1}+L_{n-2}
+\quad\quad
+\forall n\geq 3.$$
+
+Partendo da $L_{1}=1$ ed $L_{2}=2$ possiamo quindi facilmente 
+ricavarci i valori successivi, che risultano essere $L_{3}=3$, 
+$L_{4}=5$, $L_{5}=8$, $L_{6}=13$, $L_{7}=21$, $L_{8}=34$.
+
+\DomandaB
+La probabilit\`{a} richiesta \`{e} $49/8!=7/5760$.
+
+I casi possibili sono ancora tanti quante le possibili permutazioni di 8 
+elementi, e cio\`{e} 8!.
+
+Per contare i casi favorevoli, indichiamo convenzionalmente gli amici 
+ed i posti con i numeri da 1 ad 8, e distinguiamo i casi a seconda di 
+dove siede il commensale numero~1.
+\begin{itemize}
+	\item  Se il commensale numero~1 si siede al proprio posto, 
+	allora ci siamo ridotti al problema della fila sulle restanti 7 
+	persone e posizioni, per cui abbiamo $L_{7}$ possibilit\`{a}.
+
+	\item  Se il commensale numero~1 si siede al posto numero~2, 
+	allora ci sono 2 sottocasi a seconda di chi occupa il posto 
+	numero~1.
+	\begin{itemize}
+		\item Se il posto numero~1 viene occupato dal commensale
+		numero~2, allora semplicemente i commensali~1 e~2 si sono
+		scambiati il posto. Ci siamo quindi ridotti al problema della 
+		fila sulle restanti 6 posizioni, per un totale di $L_{6}$ 
+		possibilit\`{a}.
+	
+		\item Se il posto numero~1 viene occupato dal commensale
+		numero~8, allora necessariamente il commensale~2 dovr\`{a}
+		sedersi al posto~3 (non ha infatti altri posti a
+		disposizione), il commensale~3 al posto~4, e cos\`{i} via.  In
+		poche parole, la configurazione \`{e} fissa e si riduce ad una
+		rotazione della tavolata.  In questo sottocaso abbiamo quindi
+		una sola possibilit\`{a}.
+	\end{itemize}
+
+	\item  Se il commensale numero~1 si siede al posto numero~8, 
+	allora la situazione \`{e} perfettamente simmetrica rispetto alla 
+	precedente. Si generano dunque 2 sottocasi che producono, 
+	rispettivamente, $L_{6}$ ed 1 configurazione. 
+\end{itemize}
+
+In conclusione, il numero di casi favorevoli \`{e} $L_{7}+2L_{6}+2=49$.
+}
+
+\renewcommand{\SoluzioniAlternative}{}
+
+\renewcommand{\Osservazioni}{\TitoloOsservazione
+
+Data la relazione ricorrente che soddisfa, la successione $L_{n}$ 
+altro non \`{e} che la ben nota successione di Fibonacci.
+
+Inoltre il ragionamento svolto al punto~(b) si generalizza facilmente
+al caso di $n$ commensali, mostrando che in generale il numero di
+disposizioni intorno al tavolo che rispettano la propriet\`{a} data
+\`{e} $L_{n-1}+2L_{n-2}+2$.  }
+
+\renewcommand{\Commenti}{}

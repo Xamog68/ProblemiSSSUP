@@ -1,0 +1,97 @@
+\renewcommand{\Anno}{2008}
+
+\renewcommand{\NumeroProblema}{1}
+
+\renewcommand{\Testo}{
+\begin{enumerate}
+    \item Determinare quanti sono i numeri interi positivi che, nella
+    usuale rappresentazione decimale, hanno \emph{esattamente} $k$
+    cifre, tutte diverse da $7$.
+
+    \item Sia $S_k$ la somma dei reciproci di tutti i numeri interi
+    positivi che, nella usuale rappresentazione decimale, hanno
+    \emph{esattamente} $k$ cifre, tutte diverse da $7$.  
+    
+    Dimostrare che $S_{k}\leq 8$ per ogni valore di $k$.
+
+    \item Sia $T_k$ la somma dei reciproci di tutti i numeri interi
+    positivi che, nella usuale rappresentazione decimale, hanno
+    \emph{al pi\`u} $k$ cifre, tutte diverse da $7$.
+    
+    Determinare se esiste una costante $C$ tale che $T_k\le C$ per
+    qualunque valore di $k$.
+\end{enumerate}
+}
+
+\renewcommand{\Risposta}{
+\begin{enumerate}
+	\item  I numeri sono $8\cdot 9^{k-1}$.
+
+	\item  \ldots
+
+	\item  Esiste e la pi\`{u} piccola costante \`{e} $C=80$.
+\end{enumerate}
+}
+
+\renewcommand{\Aiutino}{
+\begin{enumerate}
+	\renewcommand{\labelenumi}{(\alph{enumi})} 
+	\item  In quanti modi possiamo scegliere la prima cifra (quella
+	pi\`{u} a sinistra)? In quanti modi possiamo scegliere le restanti
+	cifre?
+
+	\item  Da quanti addendi \`{e} composta la somma che costituisce
+	$S_{k}$? Qual \`{e} il pi\`{u} grande di questi addendi? Pertanto 
+	$S_{k}\leq\ldots$
+
+	\item  Come sono legati i $T_{k}$ agli $S_{k}$? Utilizzando la
+	maggiorazione trovata al punto precedente ci si riduce alla somma 
+	dei termini di una progressione geometrica.
+\end{enumerate}
+}
+
+\renewcommand{\SoluzioneUfficiale}{\TitoloSoluzione \DomandaA
+La prima cifra (quella pi\`{u} a sinistra) pu\`{o} essere scelta in 8
+modi (deve essere diversa da $0$ e da $7$), mentre le altre possono
+essere scelte in 9 modi, in quanto devono essere diverse solo da $7$.
+Trattandosi di scelte indipendenti abbiamo pertanto $8\cdot 9^{k-1}$
+tali numeri.
+
+\DomandaB I numeri con $k$ cifre sono tutti maggiori od uguali a $10^{k-1}$,
+quindi i loro reciproci sono minori od uguali a $10^{1-k}$.  Per
+quanto dimostrato al punto precedente $S_{k}$ \`{e} la somma di
+$8\cdot 9^{k-1}$ addendi, tutti minori od uguali a $10^{1-k}$. Ne
+segue che
+$$S_{k}\leq\frac{8\cdot 9^{k-1}}{10^{k-1}}=
+8\left(\frac{9}{10}\right)^{k-1}.$$
+
+In particolare
+$$S_{k}\leq
+8\left(\frac{9}{10}\right)^{k-1}\leq 8,$$
+con uguaglianza se e solo se $k=1$. 
+
+\DomandaC Mostriamo che $T_{k}\leq 80$ per ogni valore di $k$.
+Per quanto trovato al punto precedente si ha infatti che
+$$T_{k}=S_{1}+S_{2}+\ldots+S_{k}\leq
+8\cdot\left[1+\frac{9}{10}+\left(\frac{9}{10}\right)^{2}+
+\ldots+\left(\frac{9}{10}\right)^{k-1}\right].$$
+
+Per calcolare il termine tra parentesi quadre possiamo ricorrere al
+caso particolare $a=9/10$ della nota formula per la somma dei termini
+di una progressione geometrica
+$$1+a+a^{2}+\ldots+a^{k-1}=\frac{1-a^{k}}{1-a},$$
+valida per ogni $a\neq 1$. Si ha pertanto che
+$$T_{k}\leq
+8\cdot\frac{1-\displaystyle{\left(\frac{9}{10}\right)^{k}}}
+{1-\displaystyle{\frac{9}{10}}}
+\leq 8\cdot\frac{1}{1-\displaystyle{\frac{9}{10}}}= 80,$$
+il che completa la dimostrazione.
+}
+
+\renewcommand{\SoluzioniAlternative}{}
+
+\renewcommand{\Osservazioni}{
+}
+
+\renewcommand{\Commenti}{
+}

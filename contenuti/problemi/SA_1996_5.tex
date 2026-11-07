@@ -1,0 +1,102 @@
+\renewcommand{\Anno}{1996}
+
+\renewcommand{\NumeroProblema}{5}
+
+\renewcommand{\Testo}{
+La Scuola Superiore S. Anna custodisce con
+estrema cura in una cassaforte gli elaborati dei concorsi di
+ammissione.  Per motivi di sicurezza, la Direzione ha deciso di dotare
+la cassaforte di un certo numero di serrature e $4$ impiegati
+custodiscono ciascuno un certo numero di chiavi.  Per aprire la
+cassaforte servono le chiavi di tutte le serrature, ma pi\`{u}
+impiegati possono avere la chiave della stessa serratura.
+
+Determinare il numero minimo di serrature di cui deve essere dotata la
+cassaforte affinch\'{e}, distribuendo bene le chiavi, si abbia che 3
+qualunque dipendenti siano in grado di aprirla, ma 2 qualunque
+dipendenti non siano in grado di aprirla.  
+}
+
+\renewcommand{\Risposta}{6}
+
+\renewcommand{\Aiutino}{
+L'idea fondamentale \`{e} che ad ogni coppia di dipendenti deve 
+mancare (almeno) una chiave. Pu\`{o} la stessa chiave mancare a 2 
+coppie diverse di dipendenti? Quindi le chiavi devono essere almeno 
+\ldots. A questo punto basta esibire un esempio in cui il numero 
+di chiavi appena trovato \`{e} sufficiente.
+}
+
+\renewcommand{\SoluzioneUfficiale}{ Se 2 impiegati da soli non possono
+aprire la cassaforte, ne segue che a loro manca almeno una chiave.  La
+chiave di una stessa serratura non pu\`{o} mancare a 2 coppie diverse
+di impiegati perch\'{e}, se cos\`{\i} fosse, unendo le 2 coppie
+avremmo un gruppo di 3 o 4 impiegati (a seconda che le 2 coppie
+abbiano o meno un elemento in comune) che non pu\`{o} aprire la
+cassaforte, il che \`{e} contro l'ipotesi.
+
+Ne segue che a coppie diverse mancano chiavi di serrature diverse, 
+e quindi le serrature sono almeno tante quante le coppie di 
+impiegati, e cio\`{e} 6.
+
+Mostriamo ora che con 6 serrature (indicate con A, B, C, D, E, F) 
+possiamo verificare le condizioni distribuendo le chiavi secondo lo 
+schema indicato nella seguente tabella.
+\begin{center}
+	\renewcommand{\arraystretch}{1.3}
+	\begin{tabular}{|c|c|}
+		\hline
+		Impiegato & Serrature che pu\`{o} aprire  \\
+		\hline\hline
+		1 & ABC  \\
+		\hline
+		2 & ADE  \\
+		\hline
+		3 & BDF  \\
+		\hline
+		4 & CEF  \\
+		\hline
+	\end{tabular}
+\end{center}
+
+\`{E} infatti immediato controllare che, comunque si scelgano 3
+impiegati (si pu\`{o} fare in 4 modi), questi possiedono tutte le
+chiavi, mentre comunque si scelgano 2 impiegati (si pu\`{o} fare in 6
+modi), a questi manca sempre esattamente una chiave, come indicato
+nella tabella seguente.
+\begin{center}
+	\renewcommand{\arraystretch}{1.3}
+	\begin{tabular}{|c|c|}
+		\hline
+		Impiegati presenti & Chiave mancante  \\
+		\hline\hline
+		1--2 & F  \\
+		\hline
+		1--3 & E  \\
+		\hline
+		1--4 & D  \\
+		\hline
+		2--3 & C  \\
+		\hline
+		2--4 & B  \\
+		\hline
+		3--4 & A  \\
+		\hline
+	\end{tabular}
+\end{center}
+}
+
+\renewcommand{\SoluzioniAlternative}{
+}
+
+\renewcommand{\Osservazioni}{\TitoloOsservazione Se le serrature sono 
+6, la distribuzione delle chiavi tra gli impiegati \`{e} 
+sostanzialmente forzata (a meno di permutazioni delle serrature stesse). 
+Infatti, per la discussione fatta, sappiamo che in tal caso vi \`{e} 
+una corrispondenza biunivoca tra coppie di impiegati e serrature. 
+Scritta una qualunque di tali corrispondenze, come nella seconda 
+tabella, risultano determinate le chiavi che ciascuno non possiede, 
+dunque anche le chiavi che ciascuno possiede.}
+
+\renewcommand{\Commenti}{
+}

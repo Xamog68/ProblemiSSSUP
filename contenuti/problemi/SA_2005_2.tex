@@ -1,0 +1,352 @@
+\renewcommand{\Anno}{2005}
+
+\renewcommand{\NumeroProblema}{2}
+
+\renewcommand{\Testo}{La figura sottostante, in cui il lato di ogni
+quadratino corrisponde a 100 metri, rappresenta un fiume ed un suo
+affluente.  Nella zona \`{e} possibile costruire strade lungo
+qualunque tracciato, con l'unico vincolo che gli eventuali ponti
+devono risultare perpendicolari alla direzione dei rispettivi corsi
+d'acqua.
+	
+\begin{center}
+		\psset{unit=4.5mm}
+		\pspicture(-8.5,-8.5)(8.5,8.5)
+	
+		\newrgbcolor{colorefiume}{0.6 0.8 1}
+		\pspolygon*[linecolor=colorefiume]
+		(-8,-8)(-7,-8)(8,7)(8,8)(7,8)(4,5)(-8,5)(-8,4)(3,4)(-8,-7)(-8,-8)
+	
+		\psline{-}(-8,-7)(3,4)(-8,4)
+		\psline{-}(-8,5)(4,5)(7,8)
+		\psline{-}(-7,-8)(8,7)
+	
+		\psdots[dotscale=1](-6,7)(4,-7)(-2,3)
+		\uput[0](-6,7){$A$}
+		\uput[225](-2,3){$B$}
+		\uput[90](4,-7){$C$}
+	
+		\multido{\n=-8+1}{17}{
+		\psline[linestyle=dotted,dotsep=1pt]{-}(-8,\n)(8,\n)
+		\psline[linestyle=dotted,dotsep=1pt]{-}(\n,-8)(\n,8)}
+	
+		\endpspicture
+\end{center}
+
+	\begin{enumerate}
+		\item Determinare la lunghezza minima possibile per
+		una strada (eventuali ponti compresi) che unisce il
+		punto $A$ ed il punto $B$.
+	
+		\item Determinare la lunghezza minima possibile per
+		una strada (eventuali ponti compresi) che unisce il
+		punto $A$ ed il punto $C$.
+	\end{enumerate}}
+
+\renewcommand{\Risposta}{\begin{enumerate}
+		\item  600 metri
+	
+		\item  $(1600+100\sqrt{2})$ metri
+	\end{enumerate}}
+
+\renewcommand{\Aiutino}{\begin{enumerate}
+	\renewcommand{\labelenumi}{(\alph{enumi})} 
+	\item  Supponendo di ``contrarre il fiume'', rimane una strada che 
+	unisce il punto $A$ con un punto $B'$ che si trova un quadretto al di 
+	sopra di $B$. Tale strada deve avere lunghezza minima.
+	
+	In alternativa, si pu\`{o} calcolare la lunghezza del percorso in 
+	funzione del punto in cui viene fatto il ponte, e determinarne il 
+	minimo studiando la funzione.
+
+	\item  In questo caso i fiumi da contrarre sono 2. Dopo averlo fatto, 
+	rimane una strada che unisce il punto $A$ con un punto $C'$ che si 
+	trova due quadretti sopra ed un quadretto a sinistra rispetto al 
+	punto $C$.
+\end{enumerate}}
+
+\renewcommand{\SoluzioneUfficiale}{\TitoloSoluzione \DomandaA \`{E} chiaro che 
+tra $A$ e $B$ almeno un ponte sull'affluente ci deve essere, ed \`{e} 
+altrettanto chiaro che non conviene fare percorsi con pi\`{u} di un 
+ponte. Ci\`{o} premesso, consideriamo una qualunque strada tra $A$ e 
+$B$ (Figura 1). Poich\`{e} il ponte \`{e} perpendicolare al corso d'acqua, 
+eliminando quest'ultimo, cio\`{e} traslando in su di un quadratino la 
+sua ``sponda bassa'', i due estremi del ponte vanno a coincidere ed 
+otteniamo un cammino tra $A$ e l'immagine $B'$ del punto $B$ (Figura 2).
+\begin{center}
+	\hfill
+	\psset{unit=3ex}
+		\pspicture(-1,-2)(7,6)
+	
+		\newrgbcolor{colorefiume}{0.6 0.8 1}
+		
+		\psframe*[linecolor=colorefiume](-1,2)(7,3)
+	
+		\psline{-}(-1,2)(7,2)
+		\psline{-}(-1,3)(7,3)
+		
+		\pstGeonode(1,5){A}
+		\pstGeonode(5,1){B}
+	
+		\pstGeonode[PointSymbol=none](3,3){P'}
+		\pstGeonode[PointSymbol=none](3,2){Q'}
+	
+		\multips(-1,0)(1,0){9}{
+		\psline[linestyle=dotted,dotsep=1pt]{-}(0,0)(0,6)}
+		\multips(-1,0)(0,1){7}{
+		\psline[linestyle=dotted,dotsep=1pt]{-}(0,0)(8,0)}
+		
+		\psline{->}(7.5,2)(7.5,3)
+		\psline{->}(-1.5,2)(-1.5,3)
+	
+		\psset{linecolor=blue,linewidth=1.3\pslinewidth}
+		\pstLineAB{A}{P'}
+		\pstLineAB{Q'}{P'}
+		\pstLineAB{Q'}{B}
+		
+		\rput{0}(3,-1){Figura 1}
+		
+	\endpspicture
+	\hfill
+	\psset{unit=3ex}
+		\pspicture(-1,-2)(7,6)
+	
+		\newrgbcolor{colorefiume}{0.6 0.8 1}
+		
+	% 	\psframe*[linecolor=colorefiume](-1,2)(7,3)
+	
+	% 	\psline{-}(-1,2)(7,2)
+		\psline{-}(-1,3)(7,3)
+		
+		\pstGeonode(1,5){A}
+		\pstGeonode(5,1){B}
+		\pstGeonode(5,2){B'}
+	
+		\pstGeonode[PointSymbol=none](3,3){P'}
+		\pstGeonode[PointSymbol=none](3,2){Q'}
+	
+		\multips(-1,0)(1,0){9}{
+		\psline[linestyle=dotted,dotsep=1pt]{-}(0,0)(0,6)}
+		\multips(-1,0)(0,1){7}{
+		\psline[linestyle=dotted,dotsep=1pt]{-}(0,0)(8,0)}
+	
+	% 	\pstLineAB[arrows=->]{B}{B'}
+		\psset{linecolor=blue,linewidth=1.3\pslinewidth}
+		\pstLineAB{A}{P'}
+		\pstLineAB{B'}{P'}
+		\pstLineAB[linestyle=dashed]{Q'}{P'}
+		\pstLineAB[linestyle=dashed]{Q'}{B}
+		
+		\rput{0}(3,-1){Figura 2}
+		
+	\endpspicture
+	\hfill\mbox{}
+\end{center}
+
+Per minimizzare la lunghezza totale non ci resta quindi che 
+minimizzare la lunghezza di questo cammino fittizio tra $A$ e $B'$, 
+il che si ottiene prendendo il segmento $AB'$, la cui lunghezza (per 
+il teorema di Pitagora) \`{e} di 500 metri. Considerato che il ponte \`{e} 
+lungo necessariamente 100 metri, avremo che la minima lunghezza per una 
+strada che va da $A$ a $B$ \`{e} di 600 metri.
+
+La figura 3 mostra la strada ottimale ricostruita a partire dal
+segmento $AB'$.
+\begin{center}
+	\psset{unit=3ex}
+		\pspicture(-1,-2)(7,6)
+	
+		\newrgbcolor{colorefiume}{0.6 0.8 1}
+		
+		\psframe*[linecolor=colorefiume](-1,2)(7,3)
+	
+		\psline{-}(-1,2)(7,2)
+		\psline{-}(-1,3)(7,3)
+		
+		\pstGeonode(1,5){A}
+		\pstGeonode(5,1){B}
+		\pstGeonode[PosAngle=45](5,2){B'}
+	
+		\pstGeonode[PointSymbol=none](-1,3){F}
+		\pstGeonode[PointSymbol=none](7,3){F'}
+		\pstGeonode[PointSymbol=none](3,3){P'}
+		\pstGeonode[PointSymbol=none](3,2){Q'}
+		
+		\multips(-1,0)(1,0){9}{
+		\psline[linestyle=dotted,dotsep=1pt]{-}(0,0)(0,6)}
+		\multips(-1,0)(0,1){7}{
+		\psline[linestyle=dotted,dotsep=1pt]{-}(0,0)(8,0)}
+		
+		\pstInterLL[PointSymbol=none]{A}{B'}{F}{F'}{P}
+		\pstTranslation[PointSymbol=none]{P'}{Q'}{P}[Q]
+		
+		\psset{linecolor=blue,linewidth=1.3\pslinewidth}
+		\pstLineAB[linestyle=dashed]{P}{B'}
+		\pstLineAB{Q}{P}
+		\pstLineAB{Q}{B}
+		\pstLineAB{A}{P}
+		
+		\rput{0}(3,-1){Figura 3}
+		
+	\endpspicture
+\end{center}
+
+\DomandaB In questo caso \`{e} evidente che la strada migliore
+dovr\`{a} avere 2 ponti, uno sull'affluente ed uno sul fiume.
+Ragioniamo ora come nel caso precedente: la contrazione del ponte
+sull'affluente sposta il punto $C$ di un quadratino verso l'alto, la
+contrazione del ponte sul fiume lo sposta di un altro quadratino verso
+l'alto e di uno verso sinistra.
+
+Ci ritroviamo quindi un cammino che unisce $A$ con un punto $C'$ che
+da $A$ dista 900 metri in orizzontale e 1200 metri in verticale: per
+il teorema di Pitagora la distanza tra $A$ e $C'$ \`{e} dunque di 1500
+metri.  Per avere il cammino di lunghezza minima dobbiamo aggiungere a
+questa 100 metri per il ponte sull'affluente e $100\sqrt{2}$ metri per
+il ponte sul fiume, per un totale di $(1600+100\sqrt{2})$ metri.
+
+La figura 4 mostra il cammino ottimale ottenuto a partire dal segmento
+$AC'$ (i 3 tratti di strada ``terrestre'' sono tutti paralleli ad 
+$AC'$).
+\begin{center}
+	\psset{unit=3ex}
+		\pspicture(-8,-10)(8,8)
+		
+		\newrgbcolor{colorefiume}{0.6 0.8 1}
+		\pspolygon*[linecolor=colorefiume]
+		(-8,-8)(-7,-8)(8,7)(8,8)(7,8)(4,5)(-8,5)(-8,4)(3,4)(-8,-7)(-8,-8)
+		
+		\psline{-}(-8,-7)(3,4)(-8,4)
+		\psline{-}(-8,5)(4,5)(7,8)
+		\psline{-}(-7,-8)(8,7)
+		
+		\pstGeonode(-6,7){A}
+		\pstGeonode(4,-7){C}
+		\pstGeonode(3,-5){C'}
+
+		\pstGeonode[PointSymbol=none](-8,5){F}
+		\pstGeonode[PointSymbol=none](-7,5){F'}
+		\pstGeonode[PointSymbol=none](7,8){G}
+		\pstGeonode[PointSymbol=none](6,7){G'}
+		\pstGeonode[PointSymbol=none](0,3){P'}
+		\pstGeonode[PointSymbol=none](0,2){Q'}
+		\pstGeonode[PointSymbol=none](1,1){R'}
+			
+		\pstInterLL[PointSymbol=none]{A}{C'}{F}{F'}{P}
+		\pstTranslation[PointSymbol=none]{P'}{Q'}{P}[Q]
+		\pstTranslation[PointSymbol=none]{A}{C'}{Q}[C'']
+		\pstInterLL[PointSymbol=none]{Q}{C''}{G}{G'}{P''}
+		\pstTranslation[PointSymbol=none]{Q'}{R'}{P''}[Q'']
+
+		\multido{\n=-8+1}{17}{
+		\psline[linestyle=dotted,dotsep=1pt]{-}(-8,\n)(8,\n)
+		\psline[linestyle=dotted,dotsep=1pt]{-}(\n,-8)(\n,8)}
+		
+		\psset{linecolor=blue,linewidth=1.3\pslinewidth}
+		\pstLineAB[linestyle=dashed]{P}{C'}
+		\pstLineAB{A}{P}
+		\pstLineAB{Q}{P}
+		\pstLineAB{Q}{P''}
+		\pstLineAB{P''}{Q''}
+		\pstLineAB{Q''}{C}
+		\rput{0}(0,-9){Figura 4}
+		
+	\endpspicture
+\end{center}
+}
+
+\renewcommand{\SoluzioniAlternative}{\TitoloSoluzioneAlternativaA 
+Mostriamo un approccio computazionale al punto (a). Come
+nella soluzione precedente osserviamo che possiamo limitarci alle
+strade con un solo ponte (sull'affluente) e che hanno andamento
+rettilineo sia prima sia dopo il ponte.  Con riferimento alla figura
+5, in cui le lunghezze sono pensate in centinaia di metri, il problema si
+riduce pertanto a minimizzare la somma
+$$AP+PQ+QB=\sqrt{4+x^{2}}+1+\sqrt{1+(4-x)^{2}},$$
+in cui $x$ indica la distanza tra $P$ e la proiezione di $A$ sulla 
+sponda pi\`{u} vicina dell'affluente.
+
+\begin{center}
+	\psset{unit=4ex}
+		\pspicture(-1,-2)(7,6)
+	
+		\newrgbcolor{colorefiume}{0.6 0.8 1}
+		
+		\psframe*[linecolor=colorefiume](-1,2)(7,3)
+	
+		\psline{-}(-1,2)(7,2)
+		\psline{-}(-1,3)(7,3)
+		
+		\pstGeonode(1,5){A}
+		\pstGeonode[PosAngle=-45](5,1){B}
+	
+		\pstGeonode[PosAngle=45](2.3,3){P}
+		\pstGeonode[PosAngle=-90](2.3,2){Q}
+		\pstGeonode[PointName=none](1,3){H}
+		\pstGeonode[PointName=none](5,2){K}
+		
+		\pcline[linestyle=none](H)(P)\aput[3pt]{0}{$x$}
+		\pcline[linestyle=none](Q)(K)\aput[3pt]{0}{$4-x$}
+		\ncline{A}{H}\bput[3pt]{0}{$2$}
+		\ncline{B}{K}\bput[3pt]{0}{$1$}
+		
+		\multips(-1,0)(1,0){9}{
+		\psline[linestyle=dotted,dotsep=1pt]{-}(0,0)(0,6)}
+		\multips(-1,0)(0,1){7}{
+		\psline[linestyle=dotted,dotsep=1pt]{-}(0,0)(8,0)}
+		
+		\psset{linecolor=blue,linewidth=1.3\pslinewidth}
+		\pstLineAB{A}{P}
+		\pstLineAB{Q}{P}
+		\pstLineAB{Q}{B}
+		
+		\rput{0}(3,-1){Figura 5}
+
+		\endpspicture
+\end{center}
+
+
+Possiamo ora minimizzare questa funzione ricorrendo al calcolo 
+differenziale. Dallo studio del segno della derivata prima, cio\`{e} 
+della disequazione (interessante di per s\`{e})
+$$\frac{x}{\sqrt{4+x^{2}}}>\frac{4-x}{\sqrt{1+(4-x)^{2}}},$$
+segue che la funzione ha un minimo assoluto per $x=8/3$, e che tale minimo 
+vale 6, come mostrato dal grafico qualitativo riportato qui sotto.
+\begin{center}
+	\psset{unit=2.5ex}
+	\pspicture(-2,-1.5)(7,10)
+	
+	\psplot[linewidth=1.5\pslinewidth]{-2}{6}{x 2 exp 4 add sqrt 1 add 4 x sub 2 exp 1 add sqrt add}
+	
+	\psaxes[Dy=3,Dx=2,linewidth=0.7\pslinewidth]{->}(0,0)(-2,0)(7,10)
+	\psline[linecolor=blue,linestyle=dashed]{-}(!8 3 div 0)(!8 3 div 6)(0,6)
+	
+	\endpspicture
+\end{center}
+
+La lunghezza minima \`{e} pertanto 600 metri.
+
+Teoricamente l'approccio computazionale si pu\`{o} anche estendere al
+punto (b).  Come prima si osserva che ci si pu\`{o} limitare a
+considerare i percorsi costituiti da 3 tratti rettilinei e 2 ponti,
+uno sull'affluente ed uno sul fiume.  Tali percorsi sono univocamente
+determinati da 2 parametri $x$ e $y$: possiamo ad esempio prendere
+$x$ definita come nel caso precedente, e come $y$ la distanza in 
+orizzontale tra $C$ e l'estremo pi\'{u} vicino a $C$ del ponte sul 
+fiume. In funzione di questi parametri si possono quindi calcolare le 
+lunghezze dei 3 tratti del percorso: ci si riduce in questo modo a 
+minimizzare la funzione di 2 variabili
+$$\sqrt{4+x^{2}}+\sqrt{y^{2}+(10-y)^{2}}+\sqrt{y^{2}+(9-x-y)^{2}}.$$
+
+Una possibile strategia \`{e} ora quella di pensare $y$ come un
+parametro fisso e minimizzare in $x$ la somma del primo e del terzo
+addendo con la stessa tecnica del passo precedente.  In questo modo si
+ottiene una funzione della sola $y$ da minimizzare a sua volta.  \`{E}
+chiaro che gli ingenti calcoli rendono questo approccio decisamente
+svantaggioso in questo caso.}
+
+\renewcommand{\Osservazioni}{
+}
+
+\renewcommand{\Commenti}{
+}

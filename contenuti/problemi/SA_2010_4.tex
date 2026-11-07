@@ -1,0 +1,556 @@
+\renewcommand{\Anno}{2010}
+
+\renewcommand{\NumeroProblema}{4}
+
+\renewcommand{\Testo}{
+Definiamo \emph{striscia} di ampiezza $d$ la parte di piano compresa
+tra 2 rette parallele poste a distanza $d$ l'una dall'altra.
+Consideriamo ora una striscia di ampiezza $d<1$ ed un quadrato di lato
+1 con 2 lati paralleli alle rette che delimitano la striscia, ed il
+centro equidistante dalle rette stesse.
+
+Successivamente ruotiamo il quadrato in senso
+orario di un angolo $\theta$ (rispetto al centro).
+
+\begin{enumerate}
+	\item Determinare, in funzione di $d$, il pi\`{u} piccolo valore
+	di $\theta$ per cui 2 vertici del quadrato vengono a trovarsi
+	sulle rette che delimitano la striscia.
+
+	\item Detto $\theta_{0}$ il valore trovato al punto precedente,
+	determinare (in funzione di $d$ e $\theta$) l'area
+	dell'intersezione tra il quadrato e la striscia per valori di
+	$\theta$ tali che $0\leq\theta\leq\theta_{0}$.
+
+	\item Calcolare (in funzione di $d$) l'area dell'intersezione nel caso $\theta=45^{\circ}$.
+
+	\item Detto $\theta_{0}$ il valore trovato al punto (a),
+	determinare (in funzione di $d$ e $\theta$) l'area
+	dell'intersezione tra il quadrato e la striscia per valori di
+	$\theta$ tali che $\theta_{0}\leq\theta\leq 45^{\circ}$.
+
+\end{enumerate}
+}
+
+\renewcommand{\Risposta}{
+\begin{enumerate}
+	\item  Ci sono tantissimi modi (equivalenti) di esprimere la 
+	risposta. Ne segnaliamo \emph{alcuni}:
+	$$
+	\begin{array}{c@{\hspace{3em}}c@{\hspace{3em}}c}
+		\displaystyle{\frac{\pi}{4}-\arcsin\frac{d}{\sqrt{2}},} &
+		\displaystyle{-\frac{\pi}{4}+\arccos\frac{d}{\sqrt{2}},} &
+		\displaystyle{\frac{\pi}{4}-\arctan\frac{d}{\sqrt{2-d^{2}}},} \\
+		\noalign{\vspace{2ex}}
+		\displaystyle{\frac{1}{2}\arcsin(1-d^{2}),} &
+		\displaystyle{\arcsin\frac{\sqrt{2-d^{2}}-d}{2},} &
+		\displaystyle{\arccos\frac{\sqrt{2-d^{2}}+d}{2}.}
+	\end{array}$$
+
+	\item  L'area dell'intersezione \`{e} $d/\cos\theta$.
+
+	\item  L'area dell'intersezione \`{e} 
+	$$1-\frac{\left(\sqrt{2}-d\right)^{2}}{2}=
+	\sqrt{2}\,d-\frac{d^{2}}{2}.$$
+
+	\item  L'area dell'intersezione \`{e} 
+	$$1-
+\frac{\left(\cos\theta+\sin\theta-d\right)^{2}}{2\sin(2\theta)}.$$
+\end{enumerate}
+}
+
+\renewcommand{\Aiutino}{
+\begin{enumerate}
+	\renewcommand{\labelenumi}{(\alph{enumi})} \item Ragionare su uno
+	dei tanti triangoli rettangoli presenti nella figura, ad esempio
+	quello che ha come vertici il centro del quadrato, uno dei vertici
+	del quadrato che stanno su una delle rette che delimitano la
+	striscia, e la proiezione del centro sulla retta stessa. Quanto 
+	misurano gli angoli di questo triangolo?
+
+	\item L'intersezione \`{e} un parallelogrammo che ha altezza $d$. 
+	Non resta che esprimere la lunghezza della base in funzione di 
+	$\theta$. 
+
+	\item Conviene calcolare l'area dei due triangolini (uguali) che 
+	spuntano dalla striscia. La loro altezza si calcola facilmente 
+	pensando alla diagonale del quadrato. Quanto misurano gli angoli 
+	dei due triangolini?
+
+	\item Come nel caso precedente, conviene calcolare l'area dei due
+	triangolini (uguali) che spuntano dalla striscia.  Quanto 
+	misurano i loro angoli? E la loro altezza? Quale angolo forma la 
+	diagonale del quadrato (quella che congiunge i due vertici 
+	esterni) con una retta perpendicolare alla striscia?
+\end{enumerate}
+}
+
+\renewcommand{\SoluzioneUfficiale}{\TitoloSoluzione \DomandaA
+
+Con riferimento alla Figura~\ref{fig:quadrato-1}, consideriamo il
+triangolo rettangolo $H\!AO$.  Sappiamo che il cateto $OH$ misura
+$d/2$ e l'ipotenusa $OA$ misura $\sqrt{2}/2$ (mezza diagonale del
+quadrato).  Inoltre l'angolo che il lato $DA$ forma con ciascuna delle
+rette che delimitano la striscia \`{e} uguale all'angolo di rotazione
+$\theta_{0}$, dunque
+$$\angle OAH=\angle OAD-\angle HAD=45^{\circ}-\theta_{0}.$$
+
+Per le note relazioni trigonometriche nei triangoli rettangoli si 
+avr\`{a} pertanto che 
+$$OA\cdot\sin(\angle OAH)=OH,$$ 
+quindi 
+\begin{equation}
+	\frac{\sqrt{2}}{2}\cdot\sin\left(45^{\circ}-\theta_{0}\right)=
+	\frac{d}{2},
+	\label{eqn:theta-0}
+\end{equation}
+da cui si ricava facilmente che 
+$$\theta_{0}=45^{\circ}-\arcsin\frac{d}{\sqrt{2}}.$$
+
+\begin{figure}[hbt]
+	\centering
+	\psset{unit=3.5ex}
+	\pspicture(-8,-5.5)(8,5.5)
+	\newrgbcolor{azzurrino}{0.6 0.9 1}
+	\newcommand{\angolo}{20}
+	\pstGeonode[PointName=none,PointSymbol=none](0,0){O}(4,4){A'}(4,-4){B'}(-4,-4){C'}(-4,4){D'}
+	\pstGeonode[PointName=none,PointSymbol=none](8,4){A1}(8,-4){B1}(-8,-4){C1}(-8,4){D1}
+	\pstRotation[PosAngle=45,RotAngle=-\angolo]{O}{A'}[A]
+	\pstRotation[RotAngle=-\angolo]{O}{B'}[B]
+	\pstRotation[PosAngle=-90,RotAngle=-\angolo]{O}{C'}[C]
+	\pstRotation[PosAngle=135,RotAngle=-\angolo]{O}{D'}[D]
+	\pstProjection[PointName=none,PointSymbol=none]{A1}{B1}{A}[A2]
+	\pstProjection[PointName=none,PointSymbol=none]{C1}{D1}{C}[C2]
+	\psframe*[linecolor=azzurrino](C2)(A2)
+	\pstProjection{A}{A2}{O}[H]
+	\psline(A)(B)(C)(D)(A)
+	\psline(O)(H)(A)(O)
+	\psdots(O)(A)(C)
+	\pstMarkAngle[MarkAngleRadius=1,LabelSep=2.2]{D}{A}{H}{$\theta_{0}$}
+	\pstRightAngle[linewidth=0.5\pslinewidth,RightAngleSize=.5]{O}{H}{A}
+	\uput[225](0,0){$O$}
+	\endpspicture
+	\caption{Caso in cui due vertici del quadrato stanno sulle rette 
+	che delimitano la striscia}
+	\label{fig:quadrato-1}
+\end{figure}
+\begin{center}
+\end{center}
+
+
+Si noti che, come ci si poteva facilmente aspettare, $\theta_{0}$ 
+\`{e} sempre positivo e minore di $45^{\circ}$. Inoltre
+\begin{itemize}
+	\item  quando $d\to 1$ si ha che $\theta_{0}\to 0$, 
+
+	\item quando $d\to 0$ (cio\`{e} la striscia diventa
+	sostanzialmente una retta) si ha che $\theta_{0}\to 45^{\circ}$.
+\end{itemize}
+
+\DomandaB
+
+Siamo nel caso in cui il punto $A$ si trova all'esterno della striscia.
+Con riferimento alla Figura~\ref{fig:quadrato-2}, l'intersezione tra
+il quadrato e la striscia \`{e} il parallelogrammo $PQRS$, la cui area
+\`{e} $PQ\cdot d$.  Per calcolare $PQ$ osserviamo che \`{e} uguale
+alla lunghezza del segmento $AT$, dove la retta $AT$ \`{e} costruita
+parallelamente alla retta $PQ$.
+
+\begin{figure}[htbp]
+	\centering
+	\psset{unit=3ex}
+	\pspicture(-8,-5)(8,5.5)
+	\newrgbcolor{azzurrino}{0.6 0.9 1}
+	\newcommand{\angolo}{15}
+	\pstGeonode[PointName=none,PointSymbol=none](0,0){O}(4,4){A'}(4,-4){B'}(-4,-4){C'}(-4,4){D'}
+	\pstGeonode[PointName=none,PointSymbol=none](8,2){A1}(8,-2){B1}(-8,-2){C1}(-8,2){D1}
+	\pstRotation[PosAngle=45,RotAngle=-\angolo]{O}{A'}[A]
+	\pstRotation[RotAngle=-\angolo]{O}{B'}[B]
+	\pstRotation[PosAngle=-90,RotAngle=-\angolo]{O}{C'}[C]
+	\pstRotation[PosAngle=135,RotAngle=-\angolo]{O}{D'}[D]
+	\psframe*[linecolor=azzurrino](C1)(A1)
+	\pstInterLL[PosAngle=30]{A}{B}{D1}{A1}{P}
+	\pstInterLL[PosAngle=140]{C}{D}{D1}{A1}{Q}
+	\pstInterLL[PosAngle=-30]{A}{B}{C1}{B1}{S}
+	\pstInterLL[PosAngle=-150]{C}{D}{C1}{B1}{R}
+	\pstTranslation[PosAngle=140]{P}{Q}{A}[T]
+	\pspolygon*[linecolor=cyan](P)(Q)(R)(S)
+	\psline(A)(B)(C)(D)(A)
+	\psline(T)(A)
+	\psline(Q)(P)
+	\psline(R)(S)
+	\pstMarkAngle[MarkAngleRadius=1.3,LabelSep=2.4]{D}{A}{T}{$\theta$}
+	\endpspicture
+	\caption{caso in cui $0<\theta<\theta_{0}$}
+	\label{fig:quadrato-2}
+\end{figure}
+
+Applicando le note relazioni trigonometriche nel triangolo rettangolo 
+$DTA$, avremo pertanto che
+$$AT\cdot\cos\theta=AD=1,$$
+da cui
+$$PQ=AT=\frac{1}{\cos\theta},$$
+ed infine
+$$\mbox{Area intersezione}=PQ\cdot d=\frac{d}{\cos\theta}.$$
+
+Si noti che tale area \emph{aumenta} al crescere di $\theta$ 
+(perch\'{e} il numeratore \`{e} fisso ed il denominatore diminuisce).
+
+\DomandaC
+
+
+Per calcolare l'area dell'intersezione, conviene calcolare l'area dei
+due triangoli esclusi dall'intersezione stessa.  Con riferimento alla
+Figura~\ref{fig:quadrato-3}, nel fare questo possiamo limitarci al
+triangolo $DQP$, in quanto l'altro \`{e} uguale per simmetria.
+
+Il triangolo $DQP$ \`{e} rettangolo isoscele, in quanto gli angoli in 
+$Q$ e $P$ misurano $45^{\circ}$. La sua altezza $DH$ \`{e} uguale a 
+$(\sqrt{2}-d)/2$, cio\`{e} met\`{a} della diagonale del quadrato meno 
+met\`{a} dell'ampiezza della striscia. Essendo la base il doppio 
+dell'altezza, l'area sar\`{a} pertanto
+$$\mbox{Area}(DQP)=\frac{\left(\sqrt{2}-d\right)^{2}}{4}.$$
+
+\begin{figure}[htbp]
+	\centering
+	\psset{unit=3ex}
+	\pspicture(-8,-7)(8,7)
+	\newrgbcolor{azzurrino}{0.6 0.9 1}
+	\newcommand{\angolo}{45}
+	\pstGeonode[PointName=none,PointSymbol=none](8,3.2){A1}(8,-3.2){B1}(-8,-3.2){C1}(-8,3.2){D1}
+	\psframe*[linecolor=azzurrino](C1)(A1)
+	\pstGeonode[PointName=none,PointSymbol=none](0,0){O}(4,4){A'}(4,-4){B'}(-4,-4){C'}(-4,4){D'}
+	\pstRotation[PosAngle=0,RotAngle=-\angolo]{O}{A'}[A]
+	\pstRotation[PosAngle=-90,RotAngle=-\angolo]{O}{B'}[B]
+	\pstRotation[PosAngle=180,RotAngle=-\angolo]{O}{C'}[C]
+	\pstRotation[PosAngle=90,RotAngle=-\angolo]{O}{D'}[D]
+	\pstInterLL[PosAngle=45]{A}{D}{D1}{A1}{P}
+	\pstInterLL[PosAngle=135]{C}{D}{D1}{A1}{Q}
+	\psline(A)(B)(C)(D)(A)
+	\psline(Q)(P)
+	\psline(D)(B)
+	\pstProjection[PosAngle=-45]{Q}{P}{D}[H]
+	\pstMarkAngle[MarkAngleRadius=0.7,LabelSep=1.5]{D}{P}{Q}{$45^{\circ}$}
+	\pstMarkAngle[MarkAngleRadius=0.7,LabelSep=1.5]{P}{Q}{D}{$45^{\circ}$}
+	\endpspicture
+	\caption{caso $\theta=45^{\circ}$}
+	\label{fig:quadrato-3}
+\end{figure}
+
+Per differenza si ottiene quindi che
+\begin{equation}
+	\mbox{Area intersezione}=1-\frac{\left(\sqrt{2}-d\right)^{2}}{2}.
+	\label{intersezione-45}
+\end{equation}
+
+\DomandaD
+
+Siamo nel caso in cui il punto $A$ cade all'interno della striscia.
+Con riferimento alla Figura~\ref{fig:quadrato-4} il punto fondamentale
+\`{e}, come nel caso precedente, trovare l'area del triangolo $DQP$.
+Si tratta di un triangolo rettangolo di cui conosciamo gli angoli in
+$P$ (cio\`{e} $\theta$) ed in $Q$ (cio\`{e} $90^{\circ}-\theta$).  Per
+concludere dobbiamo calcolare l'altezza $DH$.
+
+\begin{figure}[htbp]
+	\centering
+	\psset{unit=3ex}
+	\pspicture(-8,-7)(8,7)
+	\newrgbcolor{azzurrino}{0.6 0.9 1}
+	\newcommand{\angolo}{30}
+	\pstGeonode[PointName=none,PointSymbol=none](8,3.2){A1}(8,-3.2){B1}(-8,-3.2){C1}(-8,3.2){D1}
+	\psframe*[linecolor=azzurrino](C1)(A1)
+	\pstGeonode[PointName=none,PointSymbol=none](0,0){O}(4,4){A'}(4,-4){B'}(-4,-4){C'}(-4,4){D'}
+	\pstRotation[PosAngle=0,RotAngle=-\angolo]{O}{A'}[A]
+	\pstRotation[PosAngle=-90,RotAngle=-\angolo]{O}{B'}[B]
+	\pstRotation[PosAngle=180,RotAngle=-\angolo]{O}{C'}[C]
+	\pstRotation[PosAngle=90,RotAngle=-\angolo]{O}{D'}[D]
+	\pstInterLL[PosAngle=45]{A}{D}{D1}{A1}{P}
+	\pstInterLL[PosAngle=135]{C}{D}{D1}{A1}{Q}
+	\pstProjection[PointName=none,PointSymbol=none]{C1}{D1}{B}[B2]
+	\pstProjection[PointName=none,PointSymbol=none]{A1}{B1}{B}[B3]
+	\pstProjection{B}{B2}{D}[K]
+	\psline(A)(B)(C)(D)(A)
+	\psline(Q)(P)
+	\psline(D)(B)
+	\psline(D)(K)
+	\psline[linewidth=0.7\pslinewidth](B2)(B3)
+	\pstProjection[PosAngle=-135]{Q}{P}{D}[H]
+	\pstMarkAngle[MarkAngleRadius=0.7,LabelSep=1.3]{D}{P}{Q}{$\theta$}
+	\pstMarkAngle[MarkAngleRadius=0.7,LabelSep=1.2]{C}{D}{K}{$\theta$}
+	\pstRightAngle[linewidth=0.5\pslinewidth,RightAngleSize=.5]{B}{K}{D}
+	\endpspicture
+	\caption{caso $\theta_{0}<\theta<45^{\circ}$}
+	\label{fig:quadrato-4}
+\end{figure}
+
+Tracciamo la parallela per $B$ alle rette che delimitano la striscia,
+ed indichiamo con $K$ la proiezione di $D$ su tale parallela.  \`{E}
+chiaro per ragioni di simmetria che $DH=(DK-d)/2$.  Per calcolare
+$DK$, osserviamo che nel triangolo rettangolo $KBD$ l'ipotenusa $DB$
+\`{e} $\sqrt{2}$ (la diagonale del quadrato) e
+$$\angle KDB=\angle CDB-\angle CDK=45^{\circ}-\theta.$$
+
+Ne segue che
+$$DH=\frac{1}{2}(DK-d)=
+\frac{1}{2}\left(\sqrt{2}\cos(45^{\circ}-\theta)-d\right),$$
+da cui, applicando la formula di sottrazione del coseno, si ha che
+$$DH=\frac{\cos\theta+\sin\theta-d}{2}.$$
+
+Applicando note formule ai triangoli rettangoli $DQP$, $DHQ$ e $DHP$ 
+avremo pertanto che
+$$\mbox{Area}(DQP)=\frac{1}{2}DQ\cdot DP=
+\frac{1}{2}\frac{DH}{\cos\theta}\cdot\frac{DH}{\sin\theta}=
+\frac{DH^{2}}{\sin(2\theta)}=
+\frac{\left(\cos\theta+\sin\theta-d\right)^{2}}{4\sin(2\theta)}.$$
+
+Per differenza si ottiene quindi che
+$$\mbox{Area intersezione}=1-
+\frac{\left(\cos\theta+\sin\theta-d\right)^{2}}{2\sin(2\theta)}.$$
+
+\`{E} relativamente semplice verificare che questa formula
+\begin{itemize}
+	\item  coincide con quella trovata al punto~(c) quando 
+	$\theta=45^{\circ}$,
+
+	\item  coincide con quella trovata al punto~(b) quando 
+	$\theta=\theta_{0}$, dove $\theta_{0}$ \`{e} l'angolo trovato al 
+	punto~(a), cio\`{e} l'angolo per cui 
+	$$d=\sqrt{2}\sin\left(45^{\circ}-\theta\right)=
+	\cos\theta-\sin\theta.$$
+\end{itemize}
+}
+
+\renewcommand{\SoluzioniAlternative}{\TitoloSoluzioneAlternativaA
+Il punto (a) pu\`{o} essere risolto in modo del tutto equivalente 
+esaminando uno qualunque dei triangoli rettangoli presenti in figura. 
+Ci si riduce ad un'equazione simile alla (\ref{eqn:theta-0}), 
+equazione che si pu\`{o} sempre portare nella forma
+$$\cos\theta-\sin\theta=d.$$
+
+Da qui si pu\`{o} mettere a sistema con la relazione trigonometrica 
+fondamentale $\cos^{2}\theta+\sin^{2}\theta=1$, e quindi ricavare 
+$\cos\theta$ e/o $\sin\theta$ e/o $\tan\theta$ risolvendo il sistema. 
+Si ottengono cos\`{i} molte delle scritture equivalenti di 
+$\theta_{0}$ indicate nel capitolo ``Risposte''. Verificarne 
+l'equaivalenza \`{e} un utile esercizio di trigonometria.
+
+Un approccio alternativo \`{e} basato sulla 
+Figura~\ref{fig:quadrato-5}. Applicando il teorema di Carnot nel 
+triangolo $OAA'$ si ha che
+\begin{equation}
+	[AA']^{2}=OA^{2}+[OA']^{2}-2\,OA\cdot OA'\cdot\cos\theta.
+	\label{eqn:quadrato-carnot}
+\end{equation}
+
+\begin{figure}[htb]
+	\centering
+	\psset{unit=2.5ex}
+	\pspicture(-8,-7.5)(8,7.5)
+	\newrgbcolor{azzurrino}{0.6 0.9 1}
+	\psframe*[linecolor=azzurrino](-8,-3)(8,3)
+	\pstGeonode[PosAngle={45,135,-135,-45,-90}](5,5){A}(-5,5){B}(-5,-5){C}(5,-5){D}(0,0){O}
+	\psline(A)(B)(C)(D)(A)
+	\pstCircleOA[linestyle=dashed,linecolor=blue]{O}{A}
+	\pstGeonode[PosAngle=60](!41 sqrt 3){A'}
+	\pstRotation[PosAngle=110,RotAngle=90]{O}{A'}[B']
+	\pstRotation[PosAngle=240,RotAngle=180]{O}{A'}[C']
+	\pstRotation[PosAngle=-80,RotAngle=270]{O}{A'}[D']
+	\psline[linecolor=magenta](A')(B')(C')(D')(A')
+	\psline[linewidth=1.3\pslinewidth](O)(A)(A')(O)
+	\pstMarkAngle[MarkAngleRadius=1.5,LabelSep=2.2]{A'}{O}{A}{$\theta$}
+	\endpspicture
+	\caption{Approccio mediante teorema di Carnot}
+	\label{fig:quadrato-5}
+\end{figure}
+
+Ora $OA$ e $OA'$ sono mezza diagonale del quadrato. Per calcolare 
+$AA'$ possiamo procedere per via analitica. Ponendo coordinate 
+cartesiane in modo che sia $O=(0,0)$ e $A=(1/2,1/2)$, avremo che $A'$ 
+si ottiene intersecando la retta di equazione $y=d/2$ (il bordo 
+superiore della striscia) con la circonferenza di equazione 
+$x^{2}+y^{2}=1/2$ (la circonferenza su cui si muovono i vertici del 
+quadrato durante la rotazione). Risolvendo il sistema si ricava che
+$$A'=\left(\frac{\sqrt{2-d^{2}}}{2},\frac{d}{2}\right).$$
+
+\`{E} ora immediato calcolare la distanza $AA'$ e quindi ricavare 
+$\cos\theta$ dalla (\ref{eqn:quadrato-carnot}).
+}
+
+\renewcommand{\Osservazioni}{\TitoloOsservazione
+
+\`{E} interessante chiedersi per quale valore di $\theta$ l'area
+dell'intersezione risulta massima.  Grazie alle formule ricavate nella
+soluzione, questo \`{e} equivalente a calcolare il massimo della
+funzione 
+$$\mbox{Area}(\theta)=\left\{
+\begin{array}{ll}
+	\displaystyle{\frac{d}{\cos\theta}} & \mbox{se
+	}0\leq\theta\leq\theta_{0}, \\
+	\noalign{\vspace{2ex}}
+	\displaystyle{1-\frac{\left(\cos\theta+
+	\sin\theta-d\right)^{2}}{2\sin(2\theta)}}\mbox{\quad}
+	& \mbox{se }\theta_{0}\leq\theta\leq\displaystyle{\frac{\pi}{4}},
+\end{array}
+\right.$$
+al variare di $\theta$ in $[0,\pi/4]$.
+
+La risposta, forse non cos\`{i} intuitiva, \`{e} che
+\begin{itemize}
+	\item  se $0<d\leq\sqrt{2}/2$ l'area massima si ottiene per 
+	$\theta=\pi/4$, ed \`{e} data dalla formula 
+	(\ref{intersezione-45}),
+
+	\item se $\sqrt{2}/2<d\leq 1$ l'area massima \`{e} $(d^{2}+1)/2$ e
+	si ottiene per 
+	$$\theta=\frac{\pi}{4}-\arccos\frac{1}{d\sqrt{2}}.$$
+\end{itemize}
+
+Vediamo un accenno a come si dimostra questo fatto. 
+
+Come abbiamo gi\`{a} osservato, per $\theta\in[0,\theta_{0}]$ l'area
+dell'intersezione \`{e} una funzione crescente di $\theta$.  Ci basta
+quindi massimizzare l'espressione valida in $[\theta_{0},\pi/4]$.
+
+Con il cambio di variabili $\phi=\pi/4-\theta$, e qualche formula 
+trigonometrica, ci si riduce a massimizzare la funzione
+$$f(\phi)=\mbox{Area}\left(\frac{\pi}{4}-\phi\right)=
+1-\frac{\left(\sqrt{2}\cos\phi-d\right)^{2}}{2\cos(2\phi)}$$
+al variare di 
+\begin{equation}
+	\phi\in\left[0,\frac{\pi}{4}-\theta_{0}\right].
+	\label{intervallo-phi}
+\end{equation}
+
+Per far questo utilizziamo gli strumenti del calcolo differenziale.
+Con qualche ulteriore calcolo si ottiene che
+$$f'(\phi)=\sin\phi\left(\sqrt{2}\cos\phi-d\right)
+\left(2d\cos\phi-\sqrt{2}\right).$$
+
+Esaminiamo il segno di tale espressione in tutto l'intervallo 
+$(0,\pi/4)$. In tale intervallo si ha chiaramente che $\sin\phi>0$ e
+$$\sqrt{2}\cos\phi-d>\sqrt{2}\cdot\frac{1}{\sqrt{2}}-1\geq 0.$$
+
+Il segno di $f'(\phi)$ dipende quindi unicamente dal segno 
+dell'ultimo fattore. Consideriamo ora due casi.
+\begin{itemize}
+	\item  Se $0<d\leq\sqrt{2}/2$ si ha che
+	$$2d\cos\phi-\sqrt{2}<2\cdot\frac{\sqrt{2}}{2}\cdot 
+	1-\sqrt{2}\leq 0.$$
+	
+	Ne segue che $f'(\phi)<0$ in tutto l'intervallo $(0,\pi/4)$, 
+	dunque $f(\phi)$ \`{e} strettamente decrescente nell'intervallo 
+	stesso. In particolare il massimo viene assunto per $\phi=0$ e di 
+	conseguenza, tornando al problema originario, si ha che
+	$$\max\left\{\mbox{Area}(\theta):
+	0\leq\theta\leq\frac{\pi}{4}\right\}=
+	\mbox{Area}\left(\frac{\pi}{4}\right)=
+	1-\frac{\left(\sqrt{2}-d\right)^{2}}{2}.$$
+
+	\item  Se $\sqrt{2}/2<d\leq 1$, allora il terzo fattore cambia 
+	segno. In particolare, posto
+	$$\phi_{s}=\arccos\frac{1}{d\sqrt{2}},$$
+	si ha che il terzo fattore \`{e} positivo in $(0,\phi_{s})$ e
+	negativo in $(\phi_{s},\pi/4)$.  Poich\'{e} lo stesso discorso
+	vale per il segno di $f'(\phi)$, ne segue che $f(\phi)$, vista
+	come funzione in $(0,\pi/4)$, ha massimo per $\phi=\phi_{s}$ (che
+	si verifica facilmente appartenere a tale intervallo).  Resta
+	per\`{o} da stabilire se $\phi_{s}$ appartiene all'intervallo
+	(\ref{intervallo-phi}).  Data l'espressione di $\theta_{0}$,
+	ci\`{o} \`{e} equivalente a chiedersi se
+	$$\arccos\frac{1}{d\sqrt{2}}\leq\arcsin\frac{d}{\sqrt{2}}.$$
+	
+	Sfruttando la nota relazione $\arccos x=\arcsin\sqrt{1-x^{2}}$ ci si 
+	riduce a
+	$$\arcsin\frac{\sqrt{2d^{2}-1}}{d\sqrt{2}}\leq
+	\arcsin\frac{d}{\sqrt{2}}.$$
+	
+	Eliminando l'arcoseno, che \`{e} una funzione crescente, si trova 
+	una disequazione irrazionale che risulta soddisfatta per ogni 
+	valore ammissibile di $d$. Ne segue che in tal caso il massimo di 
+	$f(\phi)$, al variare di $\phi$ nell'intervallo 
+	(\ref{intervallo-phi}), \`{e} sempre raggiunto in $\phi_{s}$, e 
+	con semplici conti si vede che vale $(d^{2}+1)/2$. 
+	
+	Tornando al problema originario abbiamo quindi che in tal caso
+	$$\max\left\{\mbox{Area}(\theta):
+	0\leq\theta\leq\frac{\pi}{4}\right\}=
+	\mbox{Area}\left(\frac{\pi}{4}-\phi_{s}\right)=
+	\frac{d^{2}+1}{2}.$$
+\end{itemize}
+
+
+\begin{figure}[htbp]
+	\hfill
+	\AreaIntPre{0.5}
+	\hfill
+	\AreaIntPre{0.6}
+	\hfill
+	\AreaIntPre{0.71}
+	\hfill\mbox{}
+
+	\hfill
+	\AreaIntPost{0.73}
+	\hfill
+	\AreaIntPost{0.82}
+	\hfill
+	\AreaIntPost{0.835}
+	\hfill\mbox{}\vspace{-4ex}
+	\caption{andamento del grafico della funzione
+	$\mbox{Area}(\theta)-d$ per diversi valori del parametro $d$.
+	Sono indicati anche $\theta_{0}$ ed il punto di massimo $\theta_{s}$
+	(quando \`{e} interno all'intervallo)}
+	\label{fig:grafici-area}
+\end{figure}
+
+I grafici della Figura~\ref{fig:grafici-area} mostrano il cambio di
+comportamento qualitativo (dall'avere il massimo in un estremo
+all'avercelo in un punto interno) dell'area dell'intersezione non
+appena $d$ attraversa il valore critico $\sqrt{2}/2$.  Per poter
+meglio confrontare i grafici abbiamo sottratto $d$ all'area
+dell'intersezione (il che non altera la crescenza o decrescenza del 
+grafico).
+
+Concludiamo con alcune ulteriori osservazioni.
+\begin{itemize}
+	\item Finora abbiamo determinato il massimo dell'area
+	dell'intersezione con il vincolo che il centro del quadrato fosse
+	equidistante dalle due rette che delimitano la striscia.  Cosa
+	accade se lasciamo libera la posizione del centro?
+	Sostanzialmente non cambia nulla.  Si pu\`{o} infatti dimostrare
+	abbastanza semplicemente che, a parit\`{a} di angolo di rotazione,
+	una delle posizioni (o la posizione) che realizza l'area massima
+	\`{e} proprio quella in cui il centro \`{e} equidistante dalle due
+	rette.  Ci\`{o} non dice che sia unica: ad esempio, per valori di
+	$\theta$ minori di $\theta_{0}$ (come nella
+	Figura~\ref{fig:quadrato-2}), una piccola traslazione
+	perpendicolare alla striscia lascia invariata l'area
+	dell'intersezione.
+
+	\item Considerando le posizioni in cui il centro \`{e}
+	equidistante dalle rette che delimitano la striscia, per quale
+	angolo di rotazione l'area dell'intersezione \`{e} \emph{minima}?
+	Poich\'{e} abbiamo visto che la funzione $\mbox{Area}(\theta)$
+	\`{e} sempre crescente, oppure prima crescente e poi decrescente,
+	il suo valore minimo si realizza necessariamente in uno degli
+	estremi dell'intervallo.  Per stabilire quale, basta confrontare
+	il valore in 0, e cio\`{e} $d$, con il valore in $\pi/4$ dato
+	dalla (\ref{intersezione-45}).  Risolvendo la semplice
+	disequazione risultante, si trova che il minimo si realizza per
+	$\theta=0$ quando $0<d<2(\sqrt{2}-1)$ e per $\theta=\pi/4$ quando
+	$2(\sqrt{2}-1)<d\leq 1$.
+
+	\item Dai grafici si intuisce che la funzione
+	$\mbox{Area}(\theta)$ \`{e} non solo continua in
+	$\theta=\theta_{0}$ (cosa che abbiamo gi\`{a} verificato), ma ha
+	anche derivata continua nello stesso punto.  Un po' di calcoli
+	elementari (che per brevit\`{a} non riportiamo) confermano questa
+	intuizione, stabilendo anche che
+	$$\mbox{Area}'(\theta_{0})=\tan\theta_{0}-\tan^{2}\theta_{0}.$$ 
+\end{itemize} 
+
+
+}
+
+\renewcommand{\Commenti}{
+}

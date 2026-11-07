@@ -1,0 +1,361 @@
+\renewcommand{\Anno}{1997}
+
+\renewcommand{\NumeroProblema}{5}
+
+\renewcommand{\Testo}{
+Costruire (con riga e compasso) un triangolo $ABC$ di cui sono dati la
+lunghezza $2p$ del perimetro, l'ampiezza $\alpha$ dell'angolo in $A$ e
+la lunghezza $h$ dell'altezza relativa al lato $BC$.
+}
+
+\renewcommand{\Risposta}{\ldots}
+
+\renewcommand{\Aiutino}{
+Disegniamo l'angolo con vertice in $A$.  La retta $BC$ deve essere
+\ldots\ alla circonferenza di centro $A$ e raggio $h$.  Fissato, su
+una delle semirette che delimitano l'angolo, un punto $T$ tale che
+$AT=p$, allora $T$ \`{e} il punto di tangenza tra una circonferenza
+ex-inscritta ad $ABC$ e la semiretta in questione \ldots.  Il problema
+si riconduce quindi alla costruzione delle bitangenti a due
+circonferenze date.  Per risolvere quest'ultimo problema, conviene
+intanto tracciare il punto in cui le bitangenti incontrano la
+congiungente i centri.
+}
+
+\renewcommand{\SoluzioneUfficiale}{\TitoloSoluzione Iniziamo
+ricordando alcune propriet\`{a} dei triangoli che ci serviranno nella
+costruzione.  Sia $ABC$ un triangolo, sia $H$ il piede dell'altezza
+uscente da $A$, sia $O$ il centro della circonferenza ex-inscritta
+tangente al lato $BC$ in $K$ ed ai prolungamenti di $AB$ e $BC$,
+rispettivamente, in $S$ e $T$.  Allora $BC$ \`{e} tangente alla
+circonferenza con centro in $A$ e raggio $AH$ (in quanto $BC$ \`{e}
+perpendicolare al raggio $AH$) ed inoltre $AS=AT=p$.  Per dimostrare
+quest'ultima uguaglianza (che \`{e} una ben nota propriet\`{a} delle
+circonferenze ex-inscritte) basta osservare che $BK=BS$, $CK=CT$, per
+cui
+\begin{eqnarray*}
+	2p & = & AB+BC+AC  \\
+	 & = & AB+BK+KC+AC  \\
+	 & = & AB+BS+CT+AC  \\
+	 & = & AS+AT,
+\end{eqnarray*}
+e concludere osservando che $AS=AT$.
+
+\begin{center}
+	\psset{unit=15mm}
+	\pspicture(0,-1.6)(6,3)
+	\rput(3,-1.2){Figura 1}
+	
+	\pstGeonode[PosAngle={-90,0,-90}](0,0){A}(2.5,1.5){B}(4,0){C}
+	\pstProjection{B}{C}{A}[H]
+	\pstHomO[HomCoef=2,PointSymbol=none]{A}{B}[B'']
+	\pstRotation[AngleCoef=0.5,RotAngle=\pstAngleAOB{C}{A}{B},PointSymbol=none]{A}{C}[A']
+	\pstRotation[AngleCoef=0.5,RotAngle=\pstAngleAOB{C}{B}{B''},PointSymbol=none]{B}{C}[B']
+	\pstInterLL{A}{A'}{B}{B'}{O}
+	\pstProjection{A}{B}{O}[S]
+	\pstProjection{A}{C}{O}[T]
+	\pstProjection[PosAngle=45]{B}{C}{O}[K]
+	\pstRotation[AngleCoef=1.8,RotAngle=\pstAngleAOB{C}{A}{H},PointSymbol=none]{A}{C}[H']
+	\pstRotation[AngleCoef=1.3,RotAngle=\pstAngleAOB{H}{A}{A},PointSymbol=none]{A}{H}[C']
+	\pstArcOAB[linecolor=green]{A}{C'}{H'}
+	
+	\pstCircleOA[linecolor=green]{O}{S}
+	\pstLineAB[nodesepB=-1.2]{A}{S}
+	\pstLineAB[nodesepB=-1.2]{A}{T}
+	\pstLineAB[nodesepB=-1.2]{C}{H}
+	
+	\pstLineAB[linewidth=1.5\pslinewidth]{A}{B}
+	\pstLineAB[linewidth=1.5\pslinewidth]{A}{C}
+	\pstLineAB[linewidth=1.5\pslinewidth]{C}{B}
+	
+	\pstLineAB[linecolor=blue,linestyle=dashed]{A}{H}
+	\pstRightAngle[linecolor=blue]{A}{H}{B}
+	
+	\endpspicture
+\end{center}
+
+
+Sfruttando tali propriet\`{a} possiamo ottenere il triangolo richiesto 
+mediante la seguente costruzione.
+\begin{itemize}
+	\item Supponiamo dato il punto $A$ e 2 semirette uscenti da $A$
+	che delimitano un angolo di ampiezza $\alpha$, e tracciamo la
+	circonferenza con centro in $A$ e raggio $h$ (Figura 2).
+
+	\item Segniamo su una delle 2 semirette un punto $S$ tale che
+	$AS=p$ e tracciamo la circonferenza passante per $P$ e tangente
+	alle due semirette (il suo centro \`{e} il punto d'incontro tra la
+	bisettice dell'angolo in $A$ e la perpendicolare ad $AS$ passante
+	per $S$, vedi Figura 3).
+
+	\item  Tracciamo una delle 2 rette tangenti ad entrambe le 
+	circonferenze e che lasciano i centri in semipiani diversi. Le 
+	intersezioni tra questa retta e le 2 semirette iniziali sono i 
+	rimanenti vertici del triangolo desiderato (Figura 4). 
+\end{itemize}
+
+\noindent
+\psset{unit=10mm}
+\pspicture(-1,-2)(6.8,4)
+\rput(2.9,-1.6){Figura 2}
+\psframe[linewidth=.6\pslinewidth](-1,-1.2)(6.8,4)
+
+\pstGeonode[PosAngle={-90,0,-90},PointSymbol={*,none}](0,0){A}(2.5,1.5){B}(4,0){C}
+\pstProjection[PointSymbol=none]{B}{C}{A}[H]
+\pstHomO[HomCoef=2,PointSymbol=none]{A}{B}[B'']
+\pstRotation[AngleCoef=0.5,RotAngle=\pstAngleAOB{C}{A}{B},PointSymbol=none]{A}{C}[A']
+\pstRotation[AngleCoef=0.5,RotAngle=\pstAngleAOB{C}{B}{B''},PointSymbol=none]{B}{C}[B']
+\pstInterLL[PointSymbol=none]{A}{A'}{B}{B'}{O}
+\pstProjection[PointSymbol=none]{A}{B}{O}[S]
+\pstProjection[PointSymbol=none]{A}{C}{O}[T]
+\pstProjection[PosAngle=45,PointSymbol=none]{B}{C}{O}[K]
+\pstRotation[AngleCoef=1.8,RotAngle=\pstAngleAOB{C}{A}{H},PointSymbol=none]{A}{C}[H']
+\pstRotation[AngleCoef=1.3,RotAngle=\pstAngleAOB{H}{A}{A},PointSymbol=none]{A}{H}[C']
+\pstArcOAB[linecolor=green]{A}{C'}{H'}
+\pstMarkAngle[MarkAngleRadius=0]{C}{A}{B}{$\alpha$}
+\pstRotation[RotAngle=15,PointSymbol=none]{A}{H}[H'']
+\pstLineAB[linecolor=blue,linestyle=dashed]{A}{H''}
+\Aput{$h$}
+
+%\pstCircleOA[linecolor=green]{O}{S}
+\pstLineAB[nodesepB=-1.2]{A}{S}
+\pstLineAB[nodesepB=-1.2]{A}{T}
+%\pstLineAB[nodesepB=-1.2]{C}{H}
+
+%\pstLineAB[linewidth=1.5\pslinewidth]{A}{B}
+%\pstLineAB[linewidth=1.5\pslinewidth]{A}{C}
+%\pstLineAB[linewidth=1.5\pslinewidth]{C}{B}
+
+%\pstLineAB[linecolor=blue,linestyle=dashed]{A}{H}
+%\pstRightAngle[linecolor=blue]{A}{H}{B}
+
+\endpspicture
+\hfill\psset{unit=10mm}
+\pspicture(-1,-2)(6.8,4)
+\rput(2.9,-1.6){Figura 3}
+\psframe[linewidth=.6\pslinewidth](-1,-1.2)(6.8,4)
+
+\pstGeonode[PosAngle={-90,90,-90},PointSymbol={*,none}](0,0){A}(2.5,1.5){B}(4,0){C}
+\pstProjection[PointSymbol=none]{B}{C}{A}[H]
+\pstHomO[HomCoef=2,PointSymbol=none]{A}{B}[B'']
+\pstRotation[AngleCoef=0.5,RotAngle=\pstAngleAOB{C}{A}{B},PointSymbol=none]{A}{C}[A']
+\pstRotation[AngleCoef=0.5,RotAngle=\pstAngleAOB{C}{B}{B''},PointSymbol=none]{B}{C}[B']
+\pstInterLL[PosAngle=-20]{A}{A'}{B}{B'}{O}
+\pstProjection[PosAngle=80]{A}{B}{O}[S]
+\pstProjection[PointSymbol=none]{A}{C}{O}[T]
+\pstProjection[PosAngle=45,PointSymbol=none]{B}{C}{O}[K]
+\pstRotation[AngleCoef=1.8,RotAngle=\pstAngleAOB{C}{A}{H},PointSymbol=none]{A}{C}[H']
+\pstRotation[AngleCoef=1.3,RotAngle=\pstAngleAOB{H}{A}{A},PointSymbol=none]{A}{H}[C']
+\pstArcOAB[linecolor=green]{A}{C'}{H'}
+\pstMarkAngle[MarkAngleRadius=0.5,linecolor=blue]{C}{A}{O}{}
+\pstMarkAngle[MarkAngleRadius=0.6,linecolor=blue]{C}{A}{O}{}
+\pstMarkAngle[MarkAngleRadius=0.7,linecolor=blue]{O}{A}{B}{}
+\pstMarkAngle[MarkAngleRadius=0.8,linecolor=blue]{O}{A}{B}{}
+
+\pstCircleOA[linecolor=green]{O}{S}
+\pstLineAB[nodesepB=-1.2]{A}{S}
+\pcline[offset=9pt,linecolor=blue,linewidth=.6\pslinewidth]{|-|}(A)(S)
+\lput*{:U}{$p$}
+\pstLineAB[nodesepB=-1.2]{A}{T}
+\pstLineAB[nodesepB=-0.5,linecolor=blue,linestyle=dashed]{A}{O}
+\pstLineAB[nodesepB=-0.5,linecolor=blue,linestyle=dashed]{S}{O}
+\pstRightAngle[linecolor=blue]{A}{S}{O}
+%\pstLineAB[nodesepB=-1.2]{C}{H}
+
+%\pstLineAB[linewidth=1.5\pslinewidth]{A}{B}
+%\pstLineAB[linewidth=1.5\pslinewidth]{A}{C}
+%\pstLineAB[linewidth=1.5\pslinewidth]{C}{B}
+
+%\pstLineAB[linecolor=blue,linestyle=dashed]{A}{H}
+%\pstRightAngle[linecolor=blue]{A}{H}{B}
+
+\endpspicture
+
+\begin{center}
+	\psset{unit=10mm}
+	\pspicture(-1,-2)(6.8,4)
+	\rput(2.9,-1.6){Figura 4}
+	\psframe[linewidth=.6\pslinewidth](-1,-1.2)(6.8,4)
+	
+	\pstGeonode[PosAngle={-90,90,-90}](0,0){A}(2.5,1.5){B}(4,0){C}
+	\pstProjection[PointSymbol=none]{B}{C}{A}[H]
+	\pstHomO[HomCoef=2,PointSymbol=none]{A}{B}[B'']
+	\pstRotation[AngleCoef=0.5,RotAngle=\pstAngleAOB{C}{A}{B},PointSymbol=none]{A}{C}[A']
+	\pstRotation[AngleCoef=0.5,RotAngle=\pstAngleAOB{C}{B}{B''},PointSymbol=none]{B}{C}[B']
+	\pstInterLL{A}{A'}{B}{B'}{O}
+	\pstProjection{A}{B}{O}[S]
+	\pstProjection[PointSymbol=none]{A}{C}{O}[T]
+	\pstProjection[PosAngle=45,PointSymbol=none]{B}{C}{O}[K]
+	\pstRotation[AngleCoef=1.8,RotAngle=\pstAngleAOB{C}{A}{H},PointSymbol=none]{A}{C}[H']
+	\pstRotation[AngleCoef=1.3,RotAngle=\pstAngleAOB{H}{A}{A},PointSymbol=none]{A}{H}[C']
+	\pstArcOAB[linecolor=green]{A}{C'}{H'}
+	
+	\pstCircleOA[linecolor=green]{O}{S}
+	\pstLineAB[nodesepB=-1.2]{A}{S}
+	\pstLineAB[nodesepB=-1.2]{A}{T}
+	\pstLineAB[nodesepA=-1.2,nodesepB=-1.2]{C}{H}
+	
+	\pstLineAB[linewidth=1.5\pslinewidth]{A}{B}
+	\pstLineAB[linewidth=1.5\pslinewidth]{A}{C}
+	\pstLineAB[linewidth=1.5\pslinewidth]{C}{B}
+	
+	%\pstLineAB[linecolor=blue,linestyle=dashed]{A}{H}
+	%\pstRightAngle[linecolor=blue]{A}{H}{B}
+	
+	\endpspicture
+\end{center}
+
+La condizione per l'esistenza delle rette bitangenti che ci
+interessano \`{e} che le 2 circonferenze non siano secanti (se sono
+tangenti, la retta tangente comune risolve il problema), e cio\`{e} 
+che la distanza tra i loro centri sia maggiore od uguale della somma 
+dei raggi. Nel nostro caso, con un po' di trigonometria elementare si 
+ricava che
+$$AO=\frac{AS}{\cos(\alpha/2)}=\frac{p}{\cos(\alpha/2)},
+\hspace{3em}
+AH=h,
+\hspace{3em}
+OS=AS\cdot\tan(\alpha/2)=p\tan(\alpha/2),$$
+e pertanto la condizione diventa che
+$$\frac{p}{\cos(\alpha/2)}\geq h+p\tan(\alpha/2),$$
+o equivalentemente
+$$h\cos(\alpha/2)\leq p(1-\sin(\alpha/2)).$$
+
+La costruzione delle bitangenti che lasciano i centri in semipiani 
+diversi \`{e} un esempio classico che ricordiamo qui per convenienza 
+del lettore.
+
+La propriet\`{a} alla base della costruzione segue dalla similitudine
+dei triangoli $OPQ$ e $OP'Q$ in Figura 8, da cui
+$$\frac{OQ}{O'Q}=\frac{OP}{O'P'}=\frac{r}{R}.$$
+Non resta dunque che costruire prima il punto $Q$ con tale 
+propriet\`{a} e poi le tangenti alle 2 circonferenze passanti per 
+$Q$. 
+\begin{center}
+	\hfill
+	\psset{unit=10mm}
+	\pspicture(-2,-2.4)(3,6)
+	\rput(0.5,-2){Figura 5}
+	\psframe[linewidth=.6\pslinewidth](-2,-1.5)(3,6)
+	
+	\pstGeonode[PointSymbol={*,*,none},PosAngle=180](0,0){O}(0,4){O'}(1,0){r}(1.5,4){R}(2.5,0){R'}
+	\pstCircleOA{O}{r}
+	\pstCircleOA{O'}{R}
+	\pstRotation[RotAngle=-10,PosAngle=-70]{O}{r}[A]
+	\pstRotation[RotAngle=-10,PosAngle=-90]{O}{R'}[B]
+	\pstLineAB[linecolor=blue]{O}{A}
+	\Aput[2pt]{$r$}
+	\pstLineAB[linecolor=blue]{A}{B}
+	\Aput[2pt]{$r'$}
+	\pstLineAB[linecolor=blue]{O'}{R}
+	\Aput[2pt]{$r'$}
+	
+	\endpspicture
+	\hfill
+	\psset{unit=10mm}
+	\pspicture(-2,-2.4)(3,6)
+	\rput(0.5,-2){Figura 6}
+	\psframe[linewidth=.6\pslinewidth](-2,-1.5)(3,6)
+	
+	\pstGeonode[PointSymbol={*,*,none},PosAngle=180](0,0){O}(0,4){O'}(1,0){r}(1.5,4){R}(2.5,0){R'}
+	\pstCircleOA{O}{r}
+	\pstCircleOA{O'}{R}
+	\pstRotation[RotAngle=-10,PosAngle=-90]{O}{r}[A]
+	\pstRotation[RotAngle=-10,PosAngle=-110]{O}{R'}[B]
+	\pstLineAB[linecolor=blue]{O}{A}
+	\Aput[2pt]{$r$}
+	\pstLineAB[linecolor=blue]{A}{B}
+	\Aput[2pt]{$r'$}
+	
+	\pstTranslation[PointSymbol=none]{B}{O'}{A}[A']
+	\pstInterLL{A}{A'}{O}{O'}{Q}
+	
+	\pstLineAB[nodesep=-1,linecolor=blue]{B}{O'}
+	\pstLineAB[nodesep=-1,linecolor=blue]{A}{Q}
+	\pstLineAB[nodesep=-0.8,linecolor=blue]{O}{O'}
+	
+	\endpspicture
+	\hfill\mbox{}
+	
+	\hfill\psset{unit=10mm}
+	\pspicture(-2,-2.4)(2,6)
+	\rput(0,-2){Figura 7}
+	\psframe[linewidth=.6\pslinewidth](-2,-1.5)(2,6)
+	
+	\pstGeonode[PointSymbol={*,*,none},PosAngle={-45,45}](0,0){O}(0,4){O'}(1,0){r}(1.5,4){R}(2.5,0){R'}
+	\pstCircleOA{O}{r}
+	\pstCircleOA{O'}{R}
+	\pstRotation[RotAngle=-10,PointSymbol=none]{O}{r}[A]
+	\pstRotation[RotAngle=-10,PointSymbol=none]{O}{R'}[B]
+	\pstTranslation[PointSymbol=none]{B}{O'}{A}[A']
+	\pstInterLL[PosAngle=50]{A}{A'}{O}{O'}{Q}
+	\pstCircleAB[linecolor=green]{O}{Q}
+	\pstCircleAB[linecolor=green]{O'}{Q}
+	\pstMiddleAB[PointSymbol=none]{O}{Q}{O''}
+	\pstMiddleAB[PointSymbol=none]{O'}{Q}{O'''}
+	\pstInterCC[PointName=none]{O}{r}{O''}{Q}{P}{S}
+	\pstInterCC[PointName=none]{O'}{R}{O'''}{Q}{P'}{S'}
+	\pstLineAB[nodesep=-0.8,linecolor=blue]{O}{O'}
+	
+	\endpspicture
+	\hfill
+	\psset{unit=10mm}
+	\pspicture(-2,-2.4)(2,6)
+	\rput(0,-2){Figura 8}
+	\psframe[linewidth=.6\pslinewidth](-2,-1.5)(2,6)
+	
+	\pstGeonode[PointSymbol={*,*,none},PosAngle={-45,45}](0,0){O}(0,4){O'}(1,0){r}(1.5,4){R}(2.5,0){R'}
+	\pstCircleOA{O}{r}
+	\pstCircleOA{O'}{R}
+	\pstRotation[RotAngle=-10,PointSymbol=none]{O}{r}[A]
+	\pstRotation[RotAngle=-10,PointSymbol=none]{O}{R'}[B]
+	\pstTranslation[PointSymbol=none]{B}{O'}{A}[A']
+	\pstInterLL{A}{A'}{O}{O'}{Q}
+	\pstCircleAB[linecolor=green]{O}{Q}
+	\pstCircleAB[linecolor=green]{O'}{Q}
+	\pstMiddleAB[PointSymbol=none]{O}{Q}{O''}
+	\pstMiddleAB[PointSymbol=none]{O'}{Q}{O'''}
+	\pstInterCC[PointNameB=none,PosAngle=180]{O}{r}{O''}{Q}{P}{S}
+	\pstInterCC[PointNameB=none]{O'}{R}{O'''}{Q}{P'}{S'}
+	
+	\pstLineAB[nodesep=-0.8,linecolor=blue]{O}{O'}
+	\pstLineAB[linecolor=blue]{O'}{P'}
+	\pstLineAB[linecolor=blue]{O}{P}
+	\pstRightAngle[linecolor=blue]{O'}{P'}{Q}
+	\pstRightAngle[linecolor=blue]{O}{P}{Q}
+	
+	\pstLineAB[nodesep=-1,linewidth=1.5\pslinewidth]{P}{P'}
+	\pstLineAB[nodesep=-1,linewidth=1.5\pslinewidth]{S}{S'}
+	
+	\endpspicture
+	\hfill\mbox{}
+\end{center}
+
+La costruzione \`{e} allora la seguente.
+\begin{itemize}
+	\item  Tracciamo una semiretta uscente da $O$, diversa da $OO'$, 
+	sulla quale segniamo 2 punti $A$ e $B$ tali che $OA=r$ e $AB=r'$ 
+	(Figura 5).
+
+	\item  Tracciamo la parallela ad $O'B$ passante per $A$. Tale retta 
+	incontra $OO'$ in un punto $Q$. Per il teorema di Talete si ha che
+	$$\frac{OQ}{QO'}=\frac{OA}{AB}=\frac{r}{r'}$$
+	e pertanto $Q$ \`{e} il punto in cui le bitangenti che ci interessano 
+	incontrano il segmento $OO'$ (Figura 6).
+
+	\item Tracciamo le 2 circonferenze di diametro $OQ$ e $O'Q$,
+	rispettivamente (Figura 7).  Le intersezioni tra queste 2
+	circonferenze e le 2 circonferenze iniziali individuano i punti di
+	tangenza delle bitangenti cercate (Figura 8).
+\end{itemize}
+
+}
+
+\renewcommand{\SoluzioniAlternative}{
+}
+
+\renewcommand{\Osservazioni}{
+}
+
+\renewcommand{\Commenti}{
+}

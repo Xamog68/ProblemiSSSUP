@@ -1,0 +1,168 @@
+\renewcommand{\Anno}{1996}
+
+\renewcommand{\NumeroProblema}{4}
+
+\renewcommand{\Testo}{
+Determinare le ultime cinque cifre (cio\`{e} quelle delle unit\`{a},
+decine, centinaia, migliaia e decine di migliaia) del numero
+$$5^{5^5}.$$}
+
+\renewcommand{\Risposta}{$03125$}
+
+\renewcommand{\Aiutino}{
+L'idea fondamentale \`{e} che le ultime 5 cifre 
+del numero dato coincidono con le ultime 5 cifre di $5^{5}$. Per 
+dimostrarlo, vi sono vari approcci possibili.
+\begin{itemize}
+	\item  Dimostrare che $5^{3125}-5^{5}$ \`{e} multiplo di $2^{5}$ e 
+	di $5^{5}$, dunque anche di $10^{5}$. Per dimostrarlo, basta 
+	fattorizzare $5^{3120}-1$ come prodotto di 4 fattori pari, di cui 
+	almeno uno \`{e} multiplo di 4.
+
+	\item Osservare che, a partire da $5^{5}$, le ultime 5 cifre delle
+	potenze di 5 si ripetono con periodo 8. Questo richiede il calcolo 
+	delle ultime 5 cifre di tutte le potenze di 5 fino alla tredicesima, 
+	cosa che si semplifica notevolmente notando che le ultime 5 cifre di 
+	$5k$ non dipendono da tutta la rappresentazione decimale del numero 
+	$k$, ma solo dalle sue ultime 5 cifre.
+
+	\item  Dimostrare che le potenze di 5 hanno periodo 8 modulo 32.
+\end{itemize}
+}
+
+\renewcommand{\SoluzioneUfficiale}{
+Dimostriamo che le ultime 5 cifre del numero dato coincidono con le
+ultime 5 cifre di $5^{5}$, e sono quindi $03125$.  Questo \`{e}
+equivalente a dimostrare che il numero $N=5^{3125}-5^{5}$ \`{e}
+divisibile per $10^{5}$, il che a sua volta si riduce a dimostrare che
+$N$ \`{e} divisibile sia per $5^{5}$ sia per $2^{5}$.
+
+Scrivendo 
+$$N=5^{5}\left(5^{3120}-1\right)$$
+la divisibilit\`{a} per $5^{5}$ \`{e} immediata.  Ci resta quindi da
+dimostrare che il secondo fattore \`{e} divisibile per $2^{5}$.
+Applicando pi\`{u} volte la formula per la differenza di quadrati, si 
+ha che
+\begin{eqnarray*}
+	5^{3120}-1 & = & (5^{1560}+1)(5^{1560}-1)\ =\ 
+	(5^{1560}+1)(5^{780}+1)(5^{780}-1)\ =\ \ldots  \\
+	 & = & (5^{1560}+1)(5^{780}+1)(5^{390}+1)(5^{195}+1)(5^{195}-1).
+\end{eqnarray*}
+
+Poich\'{e} i 5 fattori sono tutti pari (in quanto somma o differenza di
+numeri dispari), ne segue che $5^{3120}-1$ \`{e} multiplo di $2^{5}$,
+e questo completa la dimostrazione.  }
+
+\renewcommand{\SoluzioniAlternative}{\TitoloSoluzioneAlternativaA
+Determinare le ultime 5 cifre di un numero equivale a determinare la 
+sua classe di congruenza modulo $10^{5}$, il che per il teorema cinese 
+equivale a determinare la sua classe di congruenza modulo $5^{5}$ e 
+modulo $2^{5}$.
+
+Ora \`{e} chiaro che
+\begin{equation}
+	5^{3125}\equiv 5^{5}\equiv 0\pmod{5^{5}},
+	\label{eq:mod1}
+\end{equation}
+cos\`{\i} come avviene per ogni potenza di 5 con esponente maggiore 
+od uguale a 5.
+
+Passando alla congruenza modulo $2^{5}=32$, si ha che
+$$5^{8}\equiv 1\pmod{32},$$
+come si pu\`{o} dimostrare con una verifica diretta o pi\`{u} 
+generalmente ricordando che modulo 32 l'ordine moltiplicativo di ogni 
+numero dispari \`{e} un divisore di 8. Ne segue che
+\begin{equation}
+	5^{3125}\equiv 5^{3120}\cdot 5^{5}\equiv (5^{8})^{390}\cdot 
+	5^{5}\equiv 5^{5}\pmod{2^{5}}.
+	\label{eq:mod2}
+\end{equation}
+
+Dalla (\ref{eq:mod1}) e dalla (\ref{eq:mod2}) segue quindi che
+$$5^{3125}\equiv 5^{5}\equiv 3125\pmod{10^{5}},$$
+da cui il risultato cercato.
+
+\TitoloSoluzioneAlternativaB
+Calcoliamo le ultime 5 cifre delle prime potenze di 5.
+\begin{center}
+	\renewcommand{\arraystretch}{1.3}
+	\begin{tabular}{|c|c|}
+		\hline
+		Potenza & Ultime 5 cifre  \\
+		\hline\hline
+		$5^{1}$ & 00005  \\
+		\hline
+		$5^{2}$ & 00025  \\
+		\hline
+		$5^{3}$ & 00125  \\
+		\hline
+		$5^{4}$ & 00625  \\
+		\hline
+		$5^{5}$ & 03125  \\
+		\hline
+		$5^{6}$ & 15625  \\
+		\hline
+		$5^{7}$ & 78125  \\
+		\hline
+		$5^{8}$ & 90625  \\
+		\hline
+		$5^{9}$ & 53125  \\
+		\hline
+		$5^{10}$ & 65625  \\
+		\hline
+		$5^{11}$ & 28125  \\
+		\hline
+		$5^{12}$ & 40625  \\
+		\hline
+		$5^{13}$ & 03125  \\
+		\hline
+	\end{tabular}
+\end{center}
+
+Nel compilare la tabella non abbiamo dovuto calcolare tutte le 
+potenze, ma abbiamo seplicemente osservato che le ultime 5 cifre del 
+prodotto $5k$ non dipendono dall'intera scrittura decimale di $k$, ma 
+solo dalle sue ultime 5 cifre. In particolare, le 5 cifre scritte 
+nella seconda colonna di ogni riga si ottengono moltiplicando per 5 
+le 5 cifre della riga precedente e considerando a sua volta le ultime 
+5 cifre del prodotto.
+
+Pertanto, avendo ottenuto che le ultime 5 cifre di $5^{13}$ sono le
+stesse di $5^{5}$, avremo che anche le ultime 5 cifre di $5^{14}$ e
+$5^{6}$ sono le stesse, e cos\`{\i} via.  Questo sostanzialmente vuol
+dire che le ultime 5 cifre si ripetono con periodo $13-5=8$ a partire
+da quelle di $5^{5}$ (cos\`{\i} come si pu\`{o} notare che le ultime 3
+cifre si ripetono con periodo 2 e le ultime 4 cifre si ripetono con
+periodo 4).
+
+Ne segue che $5^{8k+5}$ ha le stesse 5 cifre finali di $5^{5}$ per 
+ogni intero positivo, dunque in particolare $5^{3125}=5^{8\cdot 
+390+5}$ termina con le stesse 5 cifre di $5^{5}$, quindi con $03125$.
+}
+
+\renewcommand{\Osservazioni}{\TitoloOsservazione La tecnica utilizzata
+nella prima soluzione permette in realt\`{a} di dimostrare che tutti i
+numeri della forma $5^{8k}-1$ sono multipli di $2^{5}$.  Infatti nella
+scomposizione 
+$$5^{8k}-1 =(5^{4k}+1)(5^{2k}+1)(5^{k}+1)(5^{k}-1)$$
+abbiamo 4 fattori pari (e questo assicura la divisibilit\`{a} per 
+$2^{4}$); inoltre la differenza tra gli ultimi 2 fattori \`{e} 2, e 
+questo ci dice che uno di loro \`{e} divisibile per 4 e ci permette 
+di guadagnare il fattore 2 mancante. }
+
+\renewcommand{\Commenti}{\TitoloCommenti 
+La prima soluzione usa solo scomposizioni elementari. Tuttavia l'idea 
+fondamentale, e cio\`{e} che le ultime 5 cifre di $5^{3125}$ e $5^{5}$ 
+sono le stesse, ``arriva un po' dall'alto''. Per questo motivo \`{e} 
+piuttosto improbabile che un solutore non esperto arrivi di primo 
+acchito ad un approccio del genere.
+
+La seconda soluzione \`{e} invece piuttosto standard per chi ha
+\emph{buona} familiarit\`{a} con le classi di resto, ma proprio per 
+questo rischia di ``tagliare le gambe'' agli altri.
+
+La terza soluzione, di sicuro meno brillante dal punto di vista 
+estetico, non prerequisisce nessuna conoscenza specifica, ma arriva 
+``sperimentalmente'' al punto fondamentale, cio\`{e} alla periodicit\`{a} 
+delle ultime 5 cifre.
+}

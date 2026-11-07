@@ -1,0 +1,56 @@
+\renewcommand{\Anno}{2001}
+
+\renewcommand{\NumeroProblema}{4}
+
+\renewcommand{\Testo}{Un dado perfettamente equilibrato con facce
+numerate da 1 a 6 viene lanciato pi\`{u} volte.
+\begin{enumerate}
+	\item Qual \`{e} la probabilit\`{a} che lanciandolo 3 volte la
+	somma dei punteggi ottenuti sia divi\-si\-bile per 6?
+	
+	\item Qual \`{e} la probabilit\`{a} che lanciandolo 3 volte la
+	somma dei punteggi ottenuti sia divi\-si\-bile per 7?
+	
+	\item Qual \`{e} la probabilit\`{a} che lanciandolo $n$ volte la
+	somma dei punteggi ottenuti sia divi\-si\-bile per 6?
+	
+	\item Qual \`{e} la probabilit\`{a} che lanciandolo $n$ volte la
+	somma dei punteggi ottenuti sia divi\-si\-bile per 7?
+\end{enumerate}}
+
+\renewcommand{\Risposta}{\begin{enumerate}
+		\item  $1/6$
+	
+		\item  $5/36$
+	
+		\item  Per ogni valore di $n$ la probabilit\`{a} \`{e} sempre $1/6$.
+	
+		\item  La probabilit\`{a} \`{e} data, in funzione di $n$, dalla 
+		formula
+		$$\frac{1}{7}+\frac{(-1)^{n}}{7\cdot 6^{n-1}}.$$
+	\end{enumerate}}
+
+\renewcommand{\Aiutino}{Nei casi in cui siamo interessati alla
+divisibilit\`{a} per 6 decide sempre l'ultimo tiro!
+
+Nei casi in cui siamo interessati alla divisibilit\`{a} per 7 decide
+sempre l'ultimo tiro, a condizione che al penultimo la somma non fosse
+gi\`{a} multipla di 7.  Detta $p_{n}$ la probabilit\`{a} che la somma
+sia divisibile per 7 dopo $n$ lanci, si ha quindi la ricorrenza
+$p_{n+1}=(1-p_{n})/6$, da cui si ottiene per induzione una formula
+esplicita per $p_{n}$.
+
+Il caso $n=3$ si pu\`{o} ovviamente anche trattare ``a mano'',
+determinando quanti sono i modi di ottenere 7 o 14 lanciando 3 dadi.}
+
+\renewcommand{\SoluzioneUfficiale}{
+}
+
+\renewcommand{\SoluzioniAlternative}{
+}
+
+\renewcommand{\Osservazioni}{
+}
+
+\renewcommand{\Commenti}{
+}

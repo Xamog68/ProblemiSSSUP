@@ -1,0 +1,15 @@
+/build/
+*.aux
+*.dvi
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.ps
+*.synctex.gz
+*.toc
+.DS_Store
+
+# Le fonti storiche integrali sono conservate fuori da Git.
+/fonti/*.zip
+

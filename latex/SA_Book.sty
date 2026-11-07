@@ -1,0 +1,136 @@
+\newcommand{\re}{{\mathbb{R}}}
+\newcommand{\n}{{\mathbb{N}}}
+\newcommand{\z}{{\mathbb{Z}}}
+\newcommand{\q}{{\mathbb{Q}}}
+\newcommand{\cassettina}[3]{\raisebox{0cm}[#1][#2]{${\displaystyle #3}$}}
+
+
+
+\newcommand{\A}{(\textbf{A})\ }
+\newcommand{\B}{\hfill(\textbf{B})\ }
+\newcommand{\C}{\hfill(\textbf{C})\ }
+\newcommand{\D}{\hfill(\textbf{D})\ }
+\newcommand{\E}{\hfill(\textbf{E})}
+\newcommand{\BB}{(\textbf{B})\ }
+\newcommand{\CC}{(\textbf{C})\ }
+\newcommand{\DD}{(\textbf{D})\ }
+
+\newcounter{NumeroTest}
+
+\newcommand{\Percorso}{}
+\newcommand{\sistema}{}
+\newcommand{\sBox}{}
+\newcommand{\NomeCapitolo}{}
+\newcommand{\inizio}{}
+\newcommand{\fine}{}
+\newcommand{\NomeIngegneria}{}
+\newcommand{\NomeEsame}{}
+\newcommand{\AnnoTest}{}
+
+\newcounter{Numero}
+
+\newcommand{\unostar}{$\star$}
+\newcommand{\duestar}{$\star\:\star$}
+\newcommand{\trestar}{$\star\star\star$}
+\newcommand{\quattrostar}{$\star\star\star\:\star$}
+\newcommand{\cinquestar}{$\star\star\star\star\star$}
+
+\newcommand{\RinnovaSubParagraph}
+{\renewcommand\subparagraph{\@startsection{subparagraph}{5}{\parindent}%
+									   {3.25ex \@plus1ex \@minus .2ex}%
+									   {-1em}%
+									  {\normalfont\normalsize\itshape}}}
+
+\newcommand{\RinnovaParagraph}
+{\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+                                    {3.25ex \@plus1ex \@minus.2ex}%
+                                    {-1em}%
+                                    {\normalfont\normalsize\scshape}}}
+									
+\newcommand{\IniziaGS}[2]{
+	\begin{center}
+		\underline{\parbox{\textwidth}{\vspace{-2ex}
+		\begin{center}
+			{\LARGE Prova di Ammissione -- Anno #1}
+		\end{center}
+% 		\begin{quote}
+% 			\textbf{Difficolt\`{a}}: #2
+% 		\end{quote}
+		}}
+	\end{center}
+	\medskip
+	\renewcommand{\Fondo}{$\overline{\parbox{\textwidth}{\mbox{}\rule{0ex}{2ex}
+	\hfill\textbf{Testo Prova di Ammissione alla SSSUP -- Anno #1}\hfill\mbox{}}}$}
+}
+
+\newcommand{\IniziaGSR}[1]{
+	\begin{center}
+		\underline{\parbox{\textwidth}{\vspace{-2ex}
+		\begin{center}
+			{\LARGE #1 -- Risposte}
+		\end{center}
+% 		\begin{quote}
+% 			\textbf{Tempo concesso}: 90 minuti\medskip\\
+% 			\textbf{Valutazione}: risposta errata $0$ punti, mancante
+% 			$+2$, esatta $+5$
+% 		\end{quote}
+		}}
+	\end{center}
+	\medskip
+	\renewcommand{\Fondo}{$\overline{\parbox{\textwidth}{\mbox{}\rule{0ex}{2ex}
+	\hfill\textbf{Prova di Ammissione -- Anno #1}\hfill\mbox{}}}$}
+}
+
+\newcommand{\AggiungiGS}[3]
+{ 
+	\IniziaGS{#2}{#3}
+	\input{\Percorso#1}
+}
+
+\newcommand{\AggiungiGSR}[2]
+{ 
+	\IniziaGSR{#2}
+	\input{\Percorso#1}
+}
+
+\renewcommand{\jot}{3mm}
+
+
+\newcommand{\Fondo}{}
+\newcommand{\TestaPari}
+{\underline{\parbox{\textwidth}{
+\thepage\rule[-0.5ex]{0ex}{0ex}\hfill\today\hfill\textit{Capitolo\ \thechapter}}}}
+\newcommand{\TestaDispari}
+{\underline{\parbox{\textwidth}{
+\textit{\NomeCapitolo}\rule[-0.5ex]{0ex}{0ex}\hfill\today\hfill\thepage}}}
+\renewcommand{\@oddfoot}{\hfil\Fondo\hfil}
+\renewcommand{\@evenfoot}{\hfil\Fondo\hfil}
+\renewcommand{\@evenhead}{\TestaPari}
+\renewcommand{\@oddhead}{\TestaDispari}
+
+\renewcommand\chapter{\if@openright\thispagestyle{empty}
+\cleardoublepage\else\clearpage\fi
+               \thispagestyle{plain}%
+               \global\@topnum\z@
+               \@afterindentfalse
+               \secdef\@chapter\@schapter}
+
+\renewcommand\contentsname{Indice}
+\renewcommand\partname{Parte}
+\renewcommand\chaptername{Capitolo}
+
+% \renewcommand\tableofcontents{%
+%     \if@twocolumn
+%       \@restonecoltrue\onecolumn
+%     \else
+%       \@restonecolfalse
+%     \fi
+%     \vspace*{50\p@}
+%     \thispagestyle{empty}
+%     \huge\bfseries\contentsname%
+%     \@starttoc{toc}%
+%     \if@restonecol\twocolumn\fi
+%     }
+
+% \newcommand{\Numera}[1]{\ifnum \c#1 > 9 \arabic{#1}\else 
+% 0\arabic{#1}\fi}

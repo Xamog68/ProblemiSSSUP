@@ -1,0 +1,336 @@
+\renewcommand{\Anno}{2007}
+
+\renewcommand{\NumeroProblema}{4}
+
+\renewcommand{\Testo}{
+La prossima edizione della ``Coppa America'' si svolger\`{a} nelle
+acque davanti al litorale toscano.  La Scuola S.\ Anna ha deciso di
+parteciparvi con la sua barca ``Mascalzone Pisano''.  I tecnici hanno
+calcolato che la barca, quando procede lungo una direzione che forma
+un angolo $\theta$ con la direzione contraria a quella del vento,
+procede a velocit\`{a} $v=v_{0}\sin^2(\theta/2)$, dove $v_{0}$ \`{e}
+la velocit\`{a} del vento.  Ad esempio, se $\theta=0^{\circ}$,
+cio\`{e} se la barca prova ad andare esattamente controvento, allora
+$v=0$ (dunque \`{e} impossibile andare esattamente controvento); se
+$\theta=180^{\circ}$, cio\`{e} se la barca procede con il vento il
+poppa, allora $v=v_{0}$.
+	
+La parte fondamentale delle regate \`{e} costituita dai tratti di
+\emph{bolina}, che consistono nel percorrere una certa distanza $L$ in
+direzione contraria a quella del vento.
+	
+Il percorso della barca \`{e} una spezzata costituita da un certo
+numero di tratti rettilinei, ognuno dei quali viene percorso con la
+velocit\`{a} costante data dalla formula calcolata dai tecnici.
+Inoltre ogni \emph{virata}, cio\`{e} ogni cambio di direzione della
+barca, fa perdere un certo tempo fisso $T_{0}$, indipendente
+dall'ampiezza del cambio di direzione.
+	\begin{center}
+		\psset{unit=5ex}
+		\pspicture(-2,-1.7)(11,0.7)
+		\psline(0,0)(10,0)
+		\psdots(0,0)(10,0)
+		\rput(5,-0.4){$L$}
+		\rput(10,0.5){Fine bolina}
+		\rput(0,0.5){Inizio bolina}
+		\psline[linecolor=blue]{<-}(9,-1)(11,-1)
+		\rput(10,-0.7){$v_{0}$}
+		\rput(10,-1.5){Dir. vento}
+		\psset{arrowsize=3pt 4.3}
+		\psline[linecolor=green]{->}(0,0)(2,-1)
+		\psline[linecolor=green]{->}(2,-1)(5,1)
+		\psline[linecolor=green]{->}(5,1)(8,-1.5)
+		\psline[linecolor=green]{->}(8,-1.5)(10,0)
+		\endpspicture
+	\end{center}
+	
+	\begin{enumerate}
+		\item Nel caso in cui lo skipper decida di suddividere la
+		bolina in 2 tratti di uguale lunghezza (dunque con una sola
+		virata in mezzo), determinare il minimo tempo necessario
+		per completare il percorso.
+	
+		\item Nel caso in cui lo skipper decida di suddividere la
+		bolina in 2 tratti, eventualmente di lunghezza differente,
+		determinare il minimo tempo necessario per completare il
+		percorso.
+	
+		\item Determinare il minimo tempo per completare il tratto di
+		bolina nel caso generale.
+	\end{enumerate}
+}
+
+\renewcommand{\Risposta}{
+In tutti e 3 i casi il tempo ottimale \`{e} $T_{0}+8L/v_{0}$,
+corrispondente a suddividere la bolina i 2 tratti di uguale lunghezza 
+inclinati di $60^{\circ}$ rispetto alla direzione del vento.
+}
+
+\renewcommand{\Aiutino}{
+Consideriamo la velocit\`{a} orizzontale della barca, cio\`{e} la
+proiezione della sua velocit\`{a} sulla congiungente Partenza/Arrivo. 
+Mostrare che la velocit\`{a} orizzontale \`{e} data da
+$v_{0}\cos\theta/\sin{\theta/2}$, dove $\theta$ indica l'angolo
+rispetto alla velocit\`{a} del vento. Per quale valore di $\theta$
+tale velocit\`{a} \`{e} massima?
+}
+
+\renewcommand{\SoluzioneUfficiale}{\TitoloSoluzione \DomandaA 
+Non potendo la barca andare completamente controvento, ed avendo lo
+skipper scelto di fare un'unica virata a met\`{a} percorso, la
+situazione \`{e} quella descritta nella seguente figura.
+\begin{center}
+			\psset{unit=5ex}
+			\pspicture(-2,-2)(12,0.7)
+			\psline(0,0)(10,0)
+			\psdots(0,0)(10,0)(5,0)
+			\rput[l](10.2,0){Fine bolina}
+			\rput[r](-0.2,0){Inizio bolina}
+			\rput(2.5,0.5){$L/2$}
+			\rput(7.5,0.5){$L/2$}
+			\psline[linecolor=blue]{<-}(9,-1)(11,-1)
+			\rput(10,-0.7){$v_{0}$}
+			\rput(10,-1.5){Dir. vento}
+			\psset{arrowsize=3pt 4.3}
+			\pnode(0,0){S}
+			\pnode(10,0){B}
+			\pnode(5,-2){P}
+			\psline[linecolor=green]{->}(S)(P)
+			\psline[linecolor=green]{->}(P)(B)
+			\psline[linecolor=blue,linestyle=dashed](5,0)(P)
+			\pstMarkAngle[LabelSep=1.5,MarkAngleRadius=0.8]{P}{S}{B}{$\theta$}
+			\pstMarkAngle[LabelSep=1.5,MarkAngleRadius=0.8]{S}{B}{P}{$\theta$}
+			\endpspicture
+\end{center}
+
+I 2 tratti, lunghi $L/(2\cos\theta)$, vengono percorsi a velocit\`{a} 
+$v_{0}\sin^{2}(\theta/2)$. Ne segue che il tempo di percorrenza \`{e} 
+dato da
+$$T=T_{0}+2\cdot\frac{L}{2\cos\theta}\cdot
+\frac{1}{v_{0}\sin^{2}(\theta/2)}.$$
+
+Minimizzare il tempo di percorrenza \`{e} pertanto equivalente a
+massimizzare la funzione
+$$f(\theta)=\cos\theta\cdot\sin^{2}\frac{\theta}{2}=\frac{1}{2}\cos\theta
+(1-\cos\theta)$$
+al variare di $\theta$ tra 0 e $\pi/2$.  In tale intervallo
+$\cos\theta$ varia tra 0 e 1.  Ci si riconduce quindi a considerare la
+funzione $x(1-x)/2$ per $x$ tra 0 e $1$.  Tale funzione rappresenta
+una parabola rivolta verso il basso con massimo nel vertice,
+corrispondente ad $x=1/2$, dove vale $1/8$.  Risalendo, abbiamo che
+$f(\theta)$ assume il massimo quando $\cos\theta=1/2$, cio\`{e}
+(tenendo conto del vincolo $\theta\in[0,\pi/2]$) quando
+$\theta=\pi/3$.
+
+Abbiamo pertanto dimostrato che 
+\begin{equation}
+    \cos\theta\cdot\sin^{2}(\theta/2)\leq\frac{1}{8}
+    \quad\quad\forall \theta\in[0,\pi/2],
+    \label{est-theta}
+\end{equation}
+con uguaglianza se e solo se $\theta=\pi/3$.  Ne segue che la
+strategia ottimale consiste nell'impostare i 2 tratti con un angolo di
+$60^{\circ}$ rispetto alla direzione del vento, completando la bolina
+in un tempo di $T_{0}+8L/v_{0}$.
+
+\DomandaB Se la bolina viene suddivisa in 2 tratti eventualmente di lunghezza
+diversa, la situazione \`{e} quella descritta nella seguente figura.
+\begin{center}
+			\psset{unit=5ex}
+			\pspicture(-2,-2)(12,0.7)
+			\psline(0,0)(10,0)
+			\psdots(0,0)(10,0)(3,0)
+			\rput[l](10.2,0){Fine bolina}
+			\rput[r](-0.2,0){Inizio bolina}
+			\rput(1.5,0.5){$\ell_{1}$}
+			\rput(6.5,0.5){$\ell_{2}$}
+			\psline[linecolor=blue]{<-}(9,-1)(11,-1)
+			\rput(10,-0.7){$v_{0}$}
+			\rput(10,-1.5){Dir. vento}
+			\psset{arrowsize=3pt 4.3}
+			\pnode(0,0){S}
+			\pnode(10,0){B}
+			\pnode(3,-2){P}
+			\psline[linecolor=green]{->}(S)(P)
+			\psline[linecolor=green]{->}(P)(B)
+			\psline[linecolor=blue,linestyle=dashed](3,0)(P)
+			\pstMarkAngle[LabelSep=1.2,MarkAngleRadius=0.8]{P}{S}{B}{$\theta_{1}$}
+			\pstMarkAngle[LabelSep=2,MarkAngleRadius=1.2]{S}{B}{P}{$\theta_{2}$}
+			\endpspicture
+\end{center}
+
+Gli stessi calcoli del caso precedente portano ora ad un tempo di
+percorrenza pari a 
+$$T=T_{0}+\frac{\ell_{1}}{\cos\theta_{1}}\cdot\frac{1}{v_{0}\sin^{2}\theta_{1}}+
+\frac{\ell_{2}}{\cos\theta_{2}}\cdot\frac{1}{v_{0}\sin^{2}\theta_{2}}.$$
+
+Ricordando la (\ref{est-theta}) possiamo minorare le 2 frazioni
+ottenendo che
+$$T\geq T_{0}+\frac{8\ell_{1}}{v_{0}}+\frac{8\ell_{2}}{v_{0}}\geq
+T_{0}+\frac{8L}{v_{0}},$$
+con uguaglianza se e solo se $\theta_{1}=\theta_{2}=60^{\circ}$,
+cio\`{e} se e solo se la rotta \`{e} quella descritta al punto (a).
+
+Ad essere rigorosi, bisognerebbe anche escludere strategie esotiche
+in cui uno dei 2 tratti va all'indietro o perpendicolarmente rispetto
+alla direzione del vento, come nella seguente figura. 
+\begin{center}
+		\psset{unit=5ex}
+		\pspicture(-2,-2)(12,0.7)
+		\pnode(0,0){S}
+		\pnode(10,0){B}
+		\pnode(-2,-2){P}
+		\psline(0,0)(10,0)
+		\psline[linecolor=blue](-2,0)(0,0)
+		\psdots(0,0)(10,0)(-2,0)
+		\rput[l](10.2,0){Fine bolina}
+		%\rput[r](-0.2,0){Inizio bolina}
+		\rput(-1,-0.3){$\ell_{1}$}
+		\psline[linecolor=blue]{<-}(9,-1)(11,-1)
+		\rput(10,-0.7){$v_{0}$}
+		\rput(10,-1.5){Dir. vento}
+		\pcline[offset=2ex,linewidth=0.5\pslinewidth,linecolor=cyan]{<->}(-2,0)(B)
+		\lput*{U}{$\ell_{2}$}
+		\psset{arrowsize=3pt 4.3}
+		\psline[linecolor=green]{->}(S)(P)
+		\psline[linecolor=green]{->}(P)(B)
+		\psline[linecolor=blue,linestyle=dashed](-2,0)(P)	
+		\pstMarkAngle[LabelSep=0.6,MarkAngleRadius=0.3]{P}{S}{B}{$\theta_{1}$}	
+		\pstMarkAngle[LabelSep=3,MarkAngleRadius=1.8]{S}{B}{P}{$\theta_{2}$}
+		\endpspicture
+\end{center}
+
+In tal caso comunque si ottiene la stima voluta considerando
+semplicemente i tratti in avanti.  Nel caso della figura, trascurando
+il tratto indietro, si ha comunque che 
+$$T>T_{0}+
+\frac{\ell_{2}}{\cos\theta_{2}}\cdot\frac{1}{v_{0}\sin^{2}\theta_{2}}
+\geq T_{0}+\frac{8\ell_{2}}{v_{0}}\geq T_{0}+\frac{8L}{v_{0}},$$
+dunque senza possibilit\`{a} di uguaglianza.
+
+\DomandaC Consideriamo ora il caso in cui la bolina \`{e} suddivisa in
+$k\geq 2$ tratti, che supponiamo per iniziare essere tutti ``in
+avanti''.
+\begin{center}
+			\psset{unit=5ex}
+			\pspicture(-2,-3)(11,2)
+			\psline(0,0)(10,0)
+			\psdots(0,0)(10,0)(2,0)(4,0)(7,0)(8,0)
+			\rput[l](10.2,0){Fine bolina}
+			\rput[r](-0.2,0){Inizio bolina}
+			\rput(1,-0.4){$\ell_{1}$}
+			\rput(3,-0.4){$\ell_{2}$}
+			\rput(5.5,0.4){$\ell_{3}$}
+			\rput(7.5,0.4){$\ell_{4}$}
+			\rput(9,0.4){$\ell_{5}$}
+			\psline[linecolor=blue]{<-}(9,-1)(11,-1)
+			\rput(10,-0.7){$v_{0}$}
+			\rput(10,-1.5){Dir. vento}
+			\psset{arrowsize=3pt 4.3}
+			\pnode(0,0){S}
+			\pnode(10,0){B}
+			\pnode(3,-2){P}
+			\psline[linecolor=green]{->}(0,0)(2,2)
+			\psline[linecolor=green]{->}(2,2)(4,-1)
+			\psline[linecolor=green]{->}(4,-1)(7,-3)
+			\psline[linecolor=green]{->}(7,-3)(8,-1)
+			\psline[linecolor=green]{->}(8,-1)(10,0)
+			\psline[linecolor=blue,linestyle=dashed](2,0)(2,2)
+			\psline[linecolor=blue,linestyle=dashed](4,0)(4,-1)
+			\psline[linecolor=blue,linestyle=dashed](7,0)(7,-3)
+			\psline[linecolor=blue,linestyle=dashed](8,0)(8,-1)
+			\endpspicture
+\end{center}
+
+Ragionando come nel caso precedente avremo che 
+\begin{eqnarray*}
+    T & =  & (k-1)T_{0}+\sum_{i=1}^{k}
+    \frac{\ell_{i}}{\cos\theta_{i}}\cdot\frac{1}{v_{0}\sin^{2}\theta_{i}}
+    \\
+     & \geq & (k-1)T_{0}+\frac{8}{v_{0}}\sum_{i=1}^{k}\ell_{i}  \\
+     & \geq & (k-1)T_{0}+\frac{8L}{v_{0}}  \\
+     & \geq & T_{0}+\frac{8L}{v_{0}}.
+\end{eqnarray*}
+
+Ancora una volta si ha uguaglianza se e solo se $k=2$ e
+$\theta_{1}=\theta_{2}=60^{\circ}$, cio\`{e} se e solo se siamo nella 
+situazione descritta al punto (a).
+
+Nel caso ci fossero tratti indietro o perpendicolari alla direzione
+del vento, basta ignorarli nella somma ed osservare che comunque la
+somma degli $\ell_{i}$ corrispondenti ai tratti in avanti \`{e}
+maggiore od uguale ad $L$.
+}
+
+\renewcommand{\SoluzioniAlternative}{\TitoloSoluzioneAlternativaA I
+tre punti del problema potevano essere trattati in maniera unitaria
+ricorrendo al concetto di ``velocit\`{a} orizzontale'', definita come
+la proiezione del vettore velocit\`{a} sulla congiungente
+Partenza/Arrivo.  
+
+Quando la barca procede su una rotta che forma un angolo $\theta$ con
+la congiungente (si intende ora che $\theta\in[0,\pi]$, in cui angoli
+tra $\pi/2$ e $\pi$ rappresentano direzioni che tendono ad allontanare
+dall'arrivo) tale velocit\`{a} orizzontale \`{e} un vettore di
+lunghezza $v_{0}\sin(\theta/2)\cos\theta$, dunque di lunghezza sempre
+minore od uguale di $v_{0}/8$ (e qui ancora una volta si utilizza che
+il massimo della funzione $f(\theta)$ \`{e} $1/8$).  \`{E} ora
+evidente che il tempo di percorrenza minimo si realizza quando tale
+vettore ha lunghezza $v_{0}/8$ durante tutto il tragitto, da cui si
+ricavano tutti i risultati precedenti in un colpo solo.
+
+In quest'ottica \`{e} ancora pi\`{u} evidente l'assurdit\`{a} delle
+strategie esotiche, le quali comprendono tratti in cui il vettore
+velocit\`{a} \`{e} negativo.
+
+}
+
+\renewcommand{\Osservazioni}{\TitoloOsservazione Il massimo della
+funzione $f(\theta)$ si poteva anche determinare ricorrendo al calcolo
+differenziale.  Calcolando la sua derivata prima si ha infatti che
+$$f'(\theta)=-\sin\theta\sin^{2}\frac{\theta}{2}+
+\cos\theta\cdot \sin\frac{\theta}{2}\cos\frac{\theta}{2}.$$
+
+Ricordando le formule di duplicazione
+$$\sin \theta=2\sin\frac{\theta}{2}\cos\frac{\theta}{2},
+\hspace{5em}
+\cos\theta=1-2\sin^{2}\frac{\theta}{2},$$
+possiamo riscrivere $f'(\theta)$ nella forma
+$$f'(\theta)=\sin\theta\left(\frac{1}{2}-
+2\sin^{2}\frac{\theta}{2}\right).$$
+
+Nell'intervallo $(0,\pi/2)$ tale derivata si annulla solo quando
+$\sin^{2}(\theta/2)=1/4$, e cio\`{e} per $\theta=\pi/3$.  Questo non
+basta per concludere che $\theta=\pi/3$ \`{e} il punto di massimo!
+Per esserne certi bisogna confrontare il valore in $\pi/3$ con i
+valori assunti agli estremi dell'intervallo.  Poich\'{e} $f$ vale 0
+agli estremi dell'intervallo, e $f(\pi/3)=1/8$, possiamo concludere
+che $\pi/3$ \`{e} effettivamente il punto di massimo.
+
+L'andamento di $f(\theta)$ \`{e} rappresentato nel seguente grafico.
+\begin{center}
+	\psset{xunit=2pt,yunit=10ex}
+	\pspicture(-20,-1)(100,2)
+	\psplot[linewidth=2\pslinewidth]{0}{90}{10 x cos x 2 div sin 2 exp mul mul}
+	\psline[linewidth=0.5\pslinewidth]{->}(-10,0)(100,0)
+	\psline[linewidth=0.5\pslinewidth]{->}(0,-0.5)(0,2)
+	\rput[t](90,-0.1){$90^{\circ}$}
+	\rput[t](60,-0.1){$60^{\circ}$}
+	\rput[r](-5,1.25){$1/8$}
+	\rput[tl](100,-0.1){$\theta$}
+	\rput[l](4,2){$f(\theta)$}
+	\psline[linecolor=magenta,linestyle=dashed](60,0)(60,1.25)
+	\psline[linecolor=magenta,linestyle=dashed](0,1.25)(60,1.25)
+	\endpspicture
+\end{center}
+
+Il calcolo risulta ancora pi\`{u} semplice se si scrive $f(\theta)$
+nella forma $\cos\theta(1-\cos\theta)/2$.  In tal caso la derivata si
+scrive infatti come $f'(\theta)=\sin\theta(1-2\cos\theta)/2$ e si vede
+immediatamente che nell'intervallo $(0,\pi/2)$ l'unico punto in cui si
+annulla \`{e} quello in cui $\cos\theta=1/2$, da cui ancora una volta
+$\theta=\pi/3$.  
+}
+
+\renewcommand{\Commenti}{
+}

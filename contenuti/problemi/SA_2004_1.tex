@@ -1,0 +1,93 @@
+\renewcommand{\Anno}{2004}
+
+\renewcommand{\NumeroProblema}{1}
+
+\renewcommand{\Testo}{Determinare tutte le coppie $(m,n)$ di interi
+positivi per cui
+$$\sqrt[60]{m^{n^{5}-n}}$$
+risulta a sua volta un intero.}
+
+\renewcommand{\Risposta}{Sono tutte le coppie in cui $m$ \`{e} un
+intero positivo qualunque ed $n$ \`{e} un intero positivo del tipo
+$4k$, $4k+1$ o $4k+3$, pi\`{u} tutte le coppie in cui $m=a^{2}$ \`{e}
+un quadrato perfetto ed $n$ \`{e} del tipo $4k+2$.}
+
+\renewcommand{\Aiutino}{Il termine $n^{5}-n=n(n+1)(n-1)(n^{2}+1)$
+\`{e} sempre pari, multiplo di 3 e di 5, dunque multiplo di 30.  Tale
+termine \`{e} anche multiplo di 4 (dunque di 60) tranne nel caso in
+cui $n=4k+2$.}
+
+\renewcommand{\SoluzioneUfficiale}{\TitoloSoluzione Fattorizziamo 
+l'esponente
+$$n^{5}-n=n(n^{4}-1)=n(n-1)(n+1)(n^{2}+1).$$
+
+Osserviamo ora che tale espressione 
+\begin{itemize}
+	\item  \`{e} sempre divisibile per 2, in quanto o $n$ o $n-1$ sono 
+	pari;
+
+	\item  \`{e} sempre divisibile per 3, in quanto uno dei 3 fattori 
+	consecutivi $n-1$, $n$, $n+1$ \`{e} sempre multiplo di 3; 
+
+	\item  \`{e} sempre divisibile per 5, in quanto se la scrittura 
+	decimale di $n$ termina con le cifre 0, 1, 4, 5, 6, 9, allora uno dei 
+	primi 3 fattori \`{e} multiplo di 5, se invece $n$ termina con 2, 3, 
+	7, 8, allora $n^{2}$ termina con 4 o 9 e quindi $n^{2}+1$ \`{e} 
+	multiplo di 5; 
+
+	\item  \`{e} divisibile per 4 se e solo se $n$ non \`{e} della 
+	forma $4k+2$: infatti se $n$ \`{e} del tipo $4k$, $4k+1$ o $4k+3$, 
+	allora uno dei 3 fattori 
+	consecutivi $n-1$, $n$, $n+1$ \`{e} multiplo di 4, se invece 
+	$n=4k+2$, allora dei 4 fattori l'unico pari \`{e} $n$, che per\`{o} 
+	non \`{e} multiplo di 4.
+\end{itemize}
+
+In conclusione
+\begin{itemize}
+	\item  se $n$ \`{e} della forma $4k$, $4k+1$ o $4k+3$, allora 
+	$n^{5}-n$ \`{e} multiplo di 60, quindi l'espressione data 
+	rappresenta un intero per ogni scelta dell'intero positivo $m$;
+
+	\item  se $n$ \`{e} della forma $4k+2$, allora $n^{5}-n$ \`{e} 
+	multiplo di 30 ma non di 60, quindi l'espressione data sar\`{a} un 
+	intero se e solo se $m$ \`{e} un quadrato perfetto.
+\end{itemize}
+
+Per dimostrare formalmente l'ultimo punto possiamo scrivere 
+$n^{5}-n$ nella forma $30d$, dove $d$ \`{e} dispari (altrimenti 
+$n^{5}-n$ sarebbe multiplo anche di 60). Siano ora $m$ ed $h$ interi 
+tali che
+$$\sqrt[60]{m^{30d}}=h.$$
+
+Elevando al quadrato otteniamo che
+$$m^{d}=h^{2}.$$
+
+Sia ora $p$ un primo che divide $m$. Allora $p$ divide anche $h$, e 
+detti $\alpha$ e $\beta$ gli esponenti con cui $p$ compare nella 
+scomposizione di $m$ ed $h$, rispettivamente, si avr\`{a} che
+$$\alpha d=2\beta.$$
+
+Pertanto $\alpha d$ \`{e} pari e quindi, essendo $d$ dispari, l'unica 
+possibilit\`{a} \`{e} che $\alpha$ sia pari. Abbiamo cos\`{\i} 
+dimostrato che nella scomposizione di $m$ tutti i fattori primi 
+compaiono con esponente pari, e da questo segue che $m$ \`{e} un 
+quadrato perfetto.
+
+\`{E} poi immediato verificare che tale condizione \`{e} pure 
+sufficiente.}
+
+\renewcommand{\SoluzioniAlternative}{
+}
+
+\renewcommand{\Osservazioni}{\TitoloOsservazione Abbiamo dimostrato
+che $n^{5}-n$ \`{e} sempre multiplo di 5 con un ragionamento
+elementare basato sull'ultima cifra della rappresentazione in base 10
+di $n$.  Vale per\`{o} la pena di ricordare che questo fatto \`{e}
+semplicemente il caso $p=5$ del \emph{piccolo Teorema di Fermat}.
+Analogamente, tutte le affermazioni che abbiamo fatto su $n^{5}-n$ si
+possono dimostrare sostituendo ad $n$ i rappresentanti delle classi di
+congruenza modulo 3, 4, 5.  }
+
+\renewcommand{\Commenti}{
+}

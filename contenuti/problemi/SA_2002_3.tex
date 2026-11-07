@@ -1,0 +1,65 @@
+\renewcommand{\Anno}{2002}
+
+\renewcommand{\NumeroProblema}{3}
+
+\renewcommand{\Testo}{Su una circonferenza vengono scritti quattro
+numeri 1 e cinque numeri $-1$, in un ordine qualsiasi.  Al passo
+successivo i nove numeri vengono cambiati simultaneamente in altri
+nove sostituendo ad ogni numero il suo prodotto con il numero
+immediatamente adiacente in senso orario.  Si continua a modificare i
+nove numeri per i passi successivi con la stessa regola.
+	
+Determinare se, scegliendo opportunamente la configurazione iniziale
+di quattro 1 e cinque $-1$, \`{e} possibile raggiungere una
+configurazione in cui i nove numeri sono tutti uguali.}
+
+\renewcommand{\Risposta}{\`{E} impossibile.}
+
+\renewcommand{\Aiutino}{Se ad un certo passo ci sono tutti $+1$, cosa
+c'era al passo precedente?  Se ad un certo passo ci sono tutti $-1$,
+cosa c'era al passo precedente?}
+
+\renewcommand{\SoluzioneUfficiale}{\TitoloSoluzione Supponiamo che ad
+una certa mossa ci siano tutti $-1$.  Allora necessariamente alla
+mossa precedente c'erano tutti $+1$ e $-1$ alternati, ma questo non
+\`{e} possibile essendo 9 un numero dispari.  Per convincercene,
+supponiamo di numerare da 1 a 9 (procedendo in senso orario) le varie
+posizioni sulla circonferenza in cui sono scritti i numeri: se nella
+prima posizione c'\`{e} un $+1$, allora nella seconda c'\`{e} un $-1$,
+nella terza c'\`{e} un $+1$, e cos\`{\i} via fino alla nona in cui
+viene ad esserci un $+1$, che si ritrova adiacente al $+1$ della prima
+posizione.  Discorso del tutto analogo vale se nella prima posizione
+c'\`{e} $-1$.
+
+Questo mostra che non \`{e} possibile arrivare ad avere tutti $-1$.
+
+Supponiamo allora che ad una certa mossa si arrivi ad avere tutti 
+$+1$, e consideriamo la prima mossa in cui ci\`{o} accade. Alla mossa 
+precedente o c'erano gi\`{a} tutti $+1$ (ma questo contraddice il 
+fatto che stiamo considerando la prima mossa con tutti $+1$), o 
+c'erano tutti $-1$, cosa che abbiamo appena dimostrato essere 
+impossibile.
+
+Se ne deduce che non \`{e} possibile raggiungere posizioni con tutti 
+i numeri uguali.
+}
+
+\renewcommand{\SoluzioniAlternative}{
+}
+
+\renewcommand{\Osservazioni}{\TitoloOsservazione Nella soluzione
+abbiamo in realt\`{a} dimostrato che l'unico modo di raggiungere prima
+o poi una configurazione con tutti i numeri uguali \`{e} di partire
+con tutti $+1$ (e fare quante mosse ci pare, che tanto non cambia mai
+nulla!), oppure di partire con tutti $-1$ e non fare nessuna mossa
+(altrimenti non si ritorna pi\`{u} in quella configurazione).
+L'informazione data nel testo (cio\`{e} che si partiva con quattro
+$+1$ e cinque $-1$) \`{e} quindi quasi del tutto irrilevante, in
+quanto serve solo per escludere che si parta con gi\`{a} tutti i
+numeri uguali.
+
+Abbiamo anche dimostrato che una situazione analoga si ha sostituendo
+il 9 con qualunque altro intero positivo dispari.}
+
+\renewcommand{\Commenti}{
+}

@@ -1,0 +1,23 @@
+versione: 1
+identificatore:
+  formato: "AAAA_N"
+  campi:
+    anno: intero
+    numero: intero
+macro:
+  obbligatorie:
+    - Anno
+    - NumeroProblema
+    - Testo
+    - Risposta
+    - Aiutino
+    - SoluzioneUfficiale
+    - SoluzioniAlternative
+    - Osservazioni
+  facoltative:
+    - Commenti
+note:
+  - Il file LaTeX del problema è la fonte canonica.
+  - Un campo presente può essere intenzionalmente vuoto o contenere soltanto \ldots.
+  - La struttura potrà essere estesa con metadati senza duplicare il testo matematico.
+

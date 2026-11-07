@@ -1,0 +1,572 @@
+\renewcommand{\Anno}{2013}
+
+\renewcommand{\NumeroProblema}{3}
+
+\renewcommand{\Testo}{
+Consideriamo un rombo inscritto in un rettangolo, cio\`{e} un rombo i
+cui 4 vertici stanno sui lati del rettangolo.
+\begin{enumerate}
+	\item[(a)] Supponiamo che ogni lato del rettangolo contenga
+	(all'interno o agli estremi) almeno un vertice del rombo.
+	Dimostrare che in tale ipotesi il centro del rombo coincide con il
+	centro del rettangolo (il centro di un rombo o di un rettangolo
+	\`{e} l'intersezione delle diagonali).
+	
+	\item[(b)] Determinare in quali rettangoli esistono rombi
+	inscritti il cui centro non coincide con il centro del rettangolo.
+
+	\item[(c)] Indicate con $a$ e $b$ le lunghezze dei lati del
+	rettangolo, con $a\geq b$, determinare i possibili valori della
+	lunghezza del lato di un qualunque rombo inscritto.
+\end{enumerate}
+}
+
+\renewcommand{\Risposta}{
+\begin{enumerate}
+	\renewcommand{\labelenumi}{(\alph{enumi})}
+	\item \ldots
+	
+	\item In tutti i rettangoli che non sono quadrati.
+	
+	\item Indicata con $\ell$ la lunghezza del lato del rombo, i
+	valori possibili di $\ell$ sono tutti e soli quelli tali che
+	$$\min\left\{b,\frac{\sqrt{a^{2}+b^{2}}}{2}\right\}
+	\leq\ell\leq\frac{a^{2}+b^{2}}{2a}.$$
+	
+\end{enumerate}
+}
+
+\renewcommand{\Aiutino}{
+\begin{enumerate}
+	\renewcommand{\labelenumi}{(\alph{enumi})} 
+	
+	\item Dimostrare che i 4 triangolini esterni al rombo sono a 2 a 
+	2 congruenti.
+	
+	\item Basta pensare ai quadrati inscritti.
+	
+	\item Dai punti precedenti sono emerse due categorie di rombi
+	inscritti.  Per quelli con il centro coincidente con il centro del
+	rettangolo conviene esprimere la lunghezza del lato in funzione
+	dell'angolo che le diagonali del rombo formano con i lati del
+	rettangolo.  Per gli altri si tratta di trovare una stima
+	dall'alto ed una dal basso per la lunghezza del lato.
+\end{enumerate}
+}
+
+\renewcommand{\SoluzioneUfficiale}{\TitoloSoluzione
+
+\DomandaA
+
+Con riferimento alla Figura~1a, mostriamo che i triangoli $APS$ e $CRQ$
+sono congruenti.  Infatti $PS=RQ$ in quanto lati dello stesso rombo,
+mentre $\angle APS=\angle CRQ$ e $\angle ASP=\angle CQR$ per via del
+parallelismo tra le rette $AB$ e $CD$ ed il parallelismo tra le rette
+$SP$ ed $RQ$. Questo mostra in particolare che $AP=CR$.
+
+Allo stesso modo si potrebbe dimostrare che i triangoli $BQP$ e $DSR$ 
+sono congruenti.
+
+Ora, con riferimento alla Figura~1b, sia $O$ il punto di intersezione
+tra le rette $AC$ e $PR$.  Mostriamo che i triangoli $OAP$ e $OCR$
+sono congruenti.  Infatti essi hanno i lati $AP$ e $CR$ congruenti,
+come appena dimostrato, ed inoltre $\angle OAP=\angle OCR$ e $\angle
+OPA=\angle ORC$ per via del parallelismo tra le rette $AB$ e $CD$.  Ne
+segue in particolare che $OA=OC$ e $OP=OR$, dunque il punto $O$ \`{e}
+il punto medio sia della diagonale $AC$ del rettangolo, sia della
+diagonale $PR$ del rombo. Ne segue che il punto $O$ \`{e} contemporaneamente
+il centro del rettangolo e del rombo.
+
+\hfill
+\psset{unit=9ex}
+\pspicture(-0.5,-1)(3.5,2.5)
+\pstGeonode[PosAngle={-135,-45,45,135}](0,0){A}(3,0){B}(3,2){C}(0,2){D}
+\psline(A)(B)(C)(D)(A)
+\pstInterLL[PointName=none,PointSymbol=none]{A}{C}{B}{D}{O}
+\pstMiddleAB[PointName=none,PointSymbol=none]{A}{D}{S'}
+\pstRotation[RotAngle=20,PointName=none,PointSymbol=none]{O}{S'}[S'']
+\pstInterLL[PosAngle=180]{A}{D}{O}{S''}{S}
+\pstInterLL{B}{C}{O}{S''}{Q}
+\pstRotation[RotAngle=90,PointName=none,PointSymbol=none]{O}{S''}[P'']
+\pstInterLL[PosAngle=270]{A}{B}{O}{P''}{P}
+\pstInterLL[PosAngle=90]{D}{C}{O}{P''}{R}
+\psline(P)(Q)(R)(S)(P)
+\pstMarkAngle[linecolor=magenta,MarkAngleRadius=0.4]{S}{P}{A}{}
+\pstMarkAngle[linecolor=magenta,MarkAngleRadius=0.5]{S}{P}{A}{}
+\pstMarkAngle[linecolor=magenta,MarkAngleRadius=0.2]{A}{S}{P}{}
+\pstMarkAngle[linecolor=magenta,MarkAngleRadius=0.4]{Q}{R}{C}{}
+\pstMarkAngle[linecolor=magenta,MarkAngleRadius=0.5]{Q}{R}{C}{}
+\pstMarkAngle[linecolor=magenta,MarkAngleRadius=0.2]{C}{Q}{R}{}
+\rput(1.5,-0.7){Figura 1a}
+\endpspicture
+\hfill
+\pspicture(-0.5,-1)(3.5,2.5)
+\pstGeonode[PosAngle={-135,-45,45,135}](0,0){A}(3,0){B}(3,2){C}(0,2){D}
+\psline(A)(B)(C)(D)(A)
+\pstInterLL{A}{C}{B}{D}{O}
+\pstMiddleAB[PointName=none,PointSymbol=none]{A}{D}{S'}
+\pstRotation[RotAngle=20,PointName=none,PointSymbol=none]{O}{S'}[S'']
+\pstInterLL[PosAngle=180]{A}{D}{O}{S''}{S}
+\pstInterLL{B}{C}{O}{S''}{Q}
+\pstRotation[RotAngle=90,PointName=none,PointSymbol=none]{O}{S''}[P'']
+\pstInterLL[PosAngle=270]{A}{B}{O}{P''}{P}
+\pstInterLL[PosAngle=90]{D}{C}{O}{P''}{R}
+\psline[linecolor=cyan](P)(Q)(R)(S)(P)
+\psline(R)(P)
+\psline(A)(C)
+\pstMarkAngle[linecolor=magenta,MarkAngleRadius=0.4]{P}{A}{O}{}
+\pstMarkAngle[linecolor=magenta,MarkAngleRadius=0.35]{P}{A}{O}{}
+\pstMarkAngle[linecolor=magenta,MarkAngleRadius=0.2]{O}{P}{A}{}
+\pstMarkAngle[linecolor=magenta,MarkAngleRadius=0.4]{R}{C}{O}{}
+\pstMarkAngle[linecolor=magenta,MarkAngleRadius=0.35]{R}{C}{O}{}
+\pstMarkAngle[linecolor=magenta,MarkAngleRadius=0.2]{O}{R}{C}{}
+\rput(1.5,-0.7){Figura 1b}
+\endpspicture
+\hfill\mbox{}
+
+\DomandaB 
+
+Se il rettangolo non \`{e} un quadrato, cio\`{e} ha i lati di
+lunghezza diversa, allora esistono sempre dei rombi inscritti il cui
+centro non coincide con il centro del rettangolo.  Basta infatti
+considerare i quadrati inscritti con i lati paralleli ai lati del
+rettangolo.  Uno di tali quadrati ha il centro coincidente con il
+centro del rettangolo (vedi Figura~2a), ma basta traslare il quadrato 
+per fare in modo che il centro non coincida pi\`{u} con quello
+del rettangolo (vedi Figura~2b e Figura~2c).\bigskip
+
+{\centering
+\hfill
+\psset{unit=6ex}
+\pspicture(0,-1)(3,2)
+\pstGeonode[PointName=none](0,0){A}(3,0){B}(3,2){C}(0,2){D}
+\pstGeonode[PointName=none](0.5,0){P}(2.5,0){Q}(2.5,2){R}(0.5,2){S}
+\psline(A)(B)(C)(D)(A)
+\psline[linecolor=cyan](P)(Q)(R)(S)(P)
+\psline[linecolor=magenta,linestyle=dashed](A)(C)
+\psline[linecolor=magenta,linestyle=dashed](B)(D)
+\psline[linecolor=blue,linestyle=dashed](P)(R)
+\psline[linecolor=blue,linestyle=dashed](Q)(S)
+\pstInterLL[PointName=none]{A}{C}{B}{D}{O}
+\rput(1.5,-0.7){Figura 2a}
+\endpspicture
+\hfill
+\pspicture(0,-1)(3,2)
+\pstGeonode[PointName=none](0,0){A}(3,0){B}(3,2){C}(0,2){D}
+\pstGeonode[PointName=none](0.8,0){P}(2.8,0){Q}(2.8,2){R}(0.8,2){S}
+\psline(A)(B)(C)(D)(A)
+\psline[linecolor=cyan](P)(Q)(R)(S)(P)
+\psline[linecolor=magenta,linestyle=dashed](A)(C)
+\psline[linecolor=magenta,linestyle=dashed](B)(D)
+\psline[linecolor=blue,linestyle=dashed](P)(R)
+\psline[linecolor=blue,linestyle=dashed](Q)(S)
+\pstInterLL[PointName=none]{A}{C}{B}{D}{O}
+\pstInterLL[PointName=none]{P}{R}{Q}{S}{O'}
+\rput(1.5,-0.7){Figura 2b}
+\endpspicture
+\hfill
+\pspicture(0,-1)(3,2)
+\pstGeonode[PointName=none](0,0){A}(3,0){B}(3,2){C}(0,2){D}
+\pstGeonode[PointName=none](0.3,0){P}(2.3,0){Q}(2.3,2){R}(0.3,2){S}
+\psline(A)(B)(C)(D)(A)
+\psline[linecolor=cyan](P)(Q)(R)(S)(P)
+\psline[linecolor=magenta,linestyle=dashed](A)(C)
+\psline[linecolor=magenta,linestyle=dashed](B)(D)
+\psline[linecolor=blue,linestyle=dashed](P)(R)
+\psline[linecolor=blue,linestyle=dashed](Q)(S)
+\pstInterLL[PointName=none]{A}{C}{B}{D}{O}
+\pstInterLL[PointName=none]{P}{R}{Q}{S}{O'}
+\rput(1.5,-0.7){Figura 2c}
+\endpspicture
+\hfill
+\mbox{}}
+
+Se invece il rettangolo \`{e} un quadrato, allora tutti i rombi
+inscritti hanno il centro coincidente con il centro del quadrato.  Se
+infatti cos\`{i} non fosse, dal punto~(a) sapremmo che esiste un lato
+del quadrato che non contiene vertici del rombo, e di conseguenza
+esisterebbe un lato del quadrato che contiene almeno due vertici del
+rombo, non entrambi agli estremi.  
+
+Supponiamo dunque, senza perdita di
+generalit\`{a}, che il lato $AB$ del quadrato contenga i vertici $P$ e
+$Q$ del rombo (si tratta di vertici consecutivi, ovviamente, come 
+indicato nella Figura~3a).
+
+Consideriamo allora i restanti vertici $R$ ed $S$ del rombo.
+Poich\'{e} il lato $RS$ del rombo deve essere parallelo al lato $PQ$,
+ci sono solo due possibilit\`{a}.
+\begin{itemize}
+	\item Possibilit\`{a} 1: $R$ sta sul lato $BC$ ed $S$ sta sul lato
+	$DA$ (vedi Figura~3b).  Questo non \`{e} possibile perch\'{e} si
+	avrebbe che
+	$$AB>PQ=RS= AB.$$
+
+	\item Possibilit\`{a} 2: $R$ ed $S$ stanno entrambi sul lato $CD$
+	del quadrato (vedi Figura~3c).  Anche questo per\`{o} non \`{e}
+	possibile in quanto si avrebbe che
+	$$PQ=QR\geq BC=AB>PQ.$$
+\end{itemize}
+
+{\centering
+\hfill
+\psset{unit=7ex}
+\pspicture(0,-1)(2,2.5)
+\pstGeonode[PosAngle={-135,-45,45,135}](0,0){A}(2,0){B}(2,2){C}(0,2){D}
+\pstGeonode[PosAngle={270,270}](0.4,0){P}(1.8,0){Q}
+\psline(A)(B)(C)(D)(A)
+\rput(1,-0.9){Figura 3a}
+\endpspicture
+\hfill
+\pspicture(0,-1)(2,2.5)
+\pstGeonode[PosAngle={-135,-45,45,135}](0,0){A}(2,0){B}(2,2){C}(0,2){D}
+\pstGeonode[PosAngle={270,270,0,180}](0.4,0){P}(1.8,0){Q}(2,1.5){R}(0,1.5){S}
+\psline(A)(B)(C)(D)(A)
+\psline[linecolor=cyan](P)(Q)(R)(S)(P)
+\rput(1,-0.9){Figura 3b}
+\endpspicture
+\hfill
+\pspicture(0,-1)(2,2.5)
+\pstGeonode[PosAngle={-135,-45,45,135}](0,0){A}(2,0){B}(2,2){C}(0,2){D}
+\pstGeonode[PosAngle={270,270,90}](0.4,0){P}(1.8,0){Q}(1.7,2){R}(0.3,2){S}
+\psline(A)(B)(C)(D)(A)
+\psline[linecolor=cyan](P)(Q)(R)(S)(P)
+\rput(1,-0.9){Figura 3c}
+\endpspicture
+\hfill
+\mbox{}}
+
+\DomandaC 
+
+Dalle discussioni svolte ai punti precedenti, sappiamo che in un
+generico rettangolo ci sono due tipi di rombi inscritti: quelli per
+cui ogni lato del rettangolo contiene un vertice del rombo e quelli
+con due vertici su uno stesso lato del rettangolo.  Dai punti precedenti
+sappiamo che i primi hanno il centro coincidente con il centro del
+rettangolo, mentre i secondi hanno necessariamente due vertici su un
+lato lungo del rettangolo e due vertici sul lato opposto.
+
+Mostreremo ora che per i primi la lunghezza $\ell$ del lato varia tra
+il minimo assunto quando i vertici del rombo sono i punti medi dei
+lati del rettangolo (vedi Figura~4a) ed il massimo assunto quando due
+vertici del rombo coincidono con i vertici del rettangolo (vedi
+Figura~4b).  Per i rombi del secondo tipo, la lunghezza $\ell$ del
+lato varia tra il minimo assunto quando il rombo \`{e} uno dei
+quadrati inscritti con lati paralleli ai lati del rettangolo (vedi
+Figure~4c) ed il massimo assunto ancora una volta nella configurazione
+della Figura~4b.  Il rombo della configurazione della Figura~4b
+appartiene ad entrambe le tipologie, di cui rappresenta il caso
+limite.\bigskip
+
+{\centering
+\hfill
+\psset{unit=7ex}
+\pspicture(0,-1)(3,2)
+\pstGeonode[PointName=none](0,0){A}(3,0){B}(3,2){C}(0,2){D}
+\pstMiddleAB[PointName=none]{A}{B}{P}
+\pstMiddleAB[PointName=none]{B}{C}{Q}
+\pstMiddleAB[PointName=none]{C}{D}{R}
+\pstMiddleAB[PointName=none]{D}{A}{S}
+\psline(A)(B)(C)(D)(A)
+\psline[linecolor=cyan](P)(Q)(R)(S)(P)
+\rput(1.5,-0.5){Figura 4a}
+\endpspicture
+\hfill
+\pspicture(0,-1)(3,2)
+\pstGeonode[PointName=none](0,0){A}(3,0){B}(3,2){C}(0,2){D}
+\pstInterLL[PointName=none,PointSymbol=none]{A}{C}{B}{D}{O}
+\pstRotation[RotAngle=90,PointName=none,PointSymbol=none]{O}{A}[A']
+\pstInterLL[PointName=none]{A}{B}{O}{A'}{Q}
+\pstInterLL[PointName=none]{C}{D}{O}{A'}{S}
+\psline(A)(B)(C)(D)(A)
+\psline[linecolor=cyan](A)(Q)(C)(S)(A)
+\rput(1.5,-0.5){Figura 4b}
+\endpspicture
+\hfill
+\pspicture(0,-1)(3,2)
+\pstGeonode[PointName=none](0,0){A}(3,0){B}(3,2){C}(0,2){D}
+\pstGeonode[PointName=none](0.3,0){P}(2.3,0){Q}(2.3,2){R}(0.3,2){S}
+\psline(A)(B)(C)(D)(A)
+\psline[linecolor=cyan](P)(Q)(R)(S)(P)
+\rput(1.5,-0.5){Figura 4c}
+\endpspicture
+\hfill
+\mbox{}}
+
+Ora \`{e} facile vedere che la lunghezza del lato del rombo della
+Figura~4a \`{e} met\`{a} della diagonale del rettangolo, cio\`{e}
+$\sqrt{a^{2}+b^{2}}/2$, mentre \`{e} banalmente $b$ nel caso della
+Figura~4c.  Mostreremo che nel caso della Figura~4b la lunghezza del
+lato \`{e} $(a^{2}+b^{2})/(2a)$, da cui seguir\`{a} immediatamente che
+la lunghezza $\ell$ del lato di ogni rombo inscritto verifica
+$$\min\left\{b,\frac{\sqrt{a^{2}+b^{2}}}{2}\right\}
+\leq\ell\leq\frac{a^{2}+b^{2}}{2a}.$$
+
+Consideriamo dunque un generico rombo del primo tipo, cio\`{e} con un
+vertice su ogni lato del rettangolo.  Con riferimento alla Figura~5a,
+indichiamo con $\theta$ l'angolo che le diagonali del rombo formano
+con i lati del rettangolo.  Detto $O$ il centro del rettangolo (e del
+rombo), e detti $M$ e $K$ i punti medi dei lati $AB$ ed $AD$,
+rispettivamente, con un po' di trigonometria elementare si ha
+che 
+$$OS=\frac{OK}{\cos\theta}=\frac{a}{2\cos\theta},
+\hspace{3em}
+OP=\frac{OM}{\cos\theta}=\frac{b}{2\cos\theta},$$
+da cui
+\begin{equation}
+	\ell=\sqrt{OS^{2}+OP^{2}}=\frac{\sqrt{a^{2}+b^{2}}}{2\cos\theta}.
+	\label{rombi:ell}
+\end{equation}
+
+{\centering
+\hfill
+\psset{unit=9ex}
+\pspicture(-0.3,-1)(3.3,2.5)
+\pstGeonode[PosAngle={-135,-45,45,135}](0,0){A}(3,0){B}(3,2){C}(0,2){D}
+\pstMiddleAB[PosAngle=270]{A}{B}{M}
+\pstMiddleAB{A}{D}{K}
+\psline(A)(B)(C)(D)(A)
+\pstInterLL[PosAngle=-20]{A}{C}{B}{D}{O}
+\pstMiddleAB[PointName=none,PointSymbol=none]{A}{D}{S'}
+\pstRotation[RotAngle=20,PointName=none,PointSymbol=none]{O}{S'}[S'']
+\pstInterLL[PosAngle=180]{A}{D}{O}{S''}{S}
+\pstInterLL{B}{C}{O}{S''}{Q}
+\pstRotation[RotAngle=90,PointName=none,PointSymbol=none]{O}{S''}[P'']
+\pstInterLL[PosAngle=270]{A}{B}{O}{P''}{P}
+\pstInterLL[PosAngle=90]{D}{C}{O}{P''}{R}
+\psline[linecolor=cyan](P)(Q)(R)(S)(P)
+\psline[linecolor=blue,linestyle=dashed](S)(Q)
+\psline[linecolor=blue,linestyle=dashed](P)(R)
+\psline[linecolor=blue,linestyle=dashed](K)(O)(M)
+\pstMarkAngle[linecolor=magenta,MarkAngleRadius=0.35,LabelSep=0.7]{K}{O}{S}{$\theta$}
+\pstMarkAngle[linecolor=magenta,MarkAngleRadius=0.3]{K}{O}{S}{}
+\pstMarkAngle[linecolor=magenta,MarkAngleRadius=0.35,LabelSep=0.6]{M}{O}{P}{$\theta$}
+\pstMarkAngle[linecolor=magenta,MarkAngleRadius=0.3]{M}{O}{P}{}
+\rput(1.5,-0.7){Figura 5a}
+\endpspicture
+\hfill
+\pspicture(-0.3,-1)(3.8,2.5)
+\pstGeonode[PosAngle={-135,-45,45,135}](0,0){A}(3.5,0){B}(3.5,2){C}(0,2){D}
+\psline(A)(B)(C)(D)(A)
+\pstGeonode[PosAngle=270](0.2,0){P}(2.3,0){Q}
+\pstInterLC[PosAngle=90,PointNameA=none,PointSymbolA=none]{D}{C}{P}{Q}{S'}{S}
+\pstTranslation[PosAngle=90]{P}{Q}{S}[R]
+\psline[linecolor=cyan](P)(Q)(R)(S)(P)
+\pstProjection{A}{B}{R}[R']
+\psline[linecolor=magenta,linestyle=dashed](R)(R')
+\rput(1.75,-0.7){Figura 5b}
+\endpspicture
+\hfill
+\mbox{}}
+
+\`{E} pertanto evidente che $\ell$ assume il valore minimo quando 
+$\cos\theta$ \`{e} massimo, cio\`{e} quando $\theta=0$, cio\`{e} 
+nella configurazione della Figura~4a. Analogamente, $\ell$ assume il 
+valore massimo quando $\cos\theta$ \`{e} il minimo possibile, 
+cio\`{e} quando $\theta$ \`{e} il massimo possibile, il che accade 
+quando $S$ coincide con $A$. Siamo dunque nella configurazione della 
+Figura~4b, in cui
+$$\cos\theta=\frac{OK}{OA}=\frac{a}{\sqrt{a^{2}+b^{2}}}.$$
+
+Sostituendo tale valore nella (\ref{rombi:ell}) si ottiene
+$$\ell=\frac{a^{2}+b^{2}}{2a},$$
+che \`{e} la lunghezza del lato del rombo nella configurazione della 
+Figura~4b (che gi\`{a} sappiamo essere la massima lunghezza possibile).
+
+Potendo $\theta$ assumere tutti i valori intermedi, \`{e} evidente 
+che anche $\ell$ potr\`{a} assumere tutti i valori intermedi.
+
+Consideriamo infine un generico rombo del secondo tipo, cio\`{e} con 
+i vertici sui lati lunghi del rettangolo. Con riferimento alla 
+Figura~5b, indichiamo con $R'$ la proiezione di $R$ su $AB$. \`{E} 
+ora evidente che
+$$\ell=RQ\geq RR'=CB=b,$$
+da cui $\ell\geq b$, con uguaglianza se e solo se $RQ$ \`{e} 
+parallelo a $CB$, cio\`{e} se e solo se il rombo \`{e} un quadrato 
+con i lati paralleli a quelli del rettangolo. Inoltre 
+$$\ell+\sqrt{\ell^{2}-b^{2}}=PQ+QR'\leq AB=a.$$
+
+Si ottiene cos\`{i} la disequazione $\ell+\sqrt{\ell^{2}-b^{2}}=a$, 
+la quale (limitandosi ai valori $\ell\geq b$) ha come soluzione
+$$\ell\leq\frac{a^{2}+b^{2}}{2a}.$$
+
+L'uguaglianza si ha proprio quando $PQ+QR'= AB$, cio\`{e} nella 
+configurazione della Figura~4b. Non \`{e} difficile mostrare che 
+tutti i valori intermendi di $\ell$ sono effettivamente realizzabili: 
+basta prendere $P$ coincidente con $A$, tracciare la circonferenza 
+con centro in $P$ e raggio $\ell$, definire $Q$ ed $S$ come le 
+intersezioni tra la circonferenza ed i lati $AB$ e $CD$, ed infine 
+definire $R$ ``completando il parallelogrammo''. Le restrizioni su 
+$\ell$ assicurano proprio che $Q$ ed $S$ esistono, e che $R$ sta 
+ancora sul lato $CD$ del rettangolo.
+}
+
+\renewcommand{\SoluzioniAlternative}{
+Presentiamo una soluzione alternativa per il punto~(a). Con 
+riferimento alla Figura~1a, consideriamo un sistema cartesiano 
+con l'origine in $A$ e gli assi paralleli ai lati del rettangolo. 
+Dette $a$ e $b$ le lunghezze dei lati del rettangolo, le coordinate 
+dei vertici del rettangolo saranno quindi
+$$A=(0,0),
+\hspace{3em}
+B=(a,0),
+\hspace{3em}
+C=(a,b),
+\hspace{3em}
+D=(0,b).$$
+
+Le coordinate dei vertici del rombo saranno invece
+$$P=(p,0),
+\hspace{3em}
+Q=(a,q),
+\hspace{3em}
+R=(r,b),
+\hspace{3em}
+S=(0,s)$$
+per opportuni valori dei parametri $p$, $q$, $r$, $s$. Calcoliamo ora 
+le coordinate del centro $O$ del rombo. Essendo $O$ il punto medio 
+del segmento $SQ$, la sua ascissa sar\`{a} la media delle ascisse di 
+$S$ e $Q$, quindi $a/2$. Essendo $O$ il punto medio 
+del segmento $PR$, la sua ordinata sar\`{a} la media delle ordinate di 
+$P$ ed $R$, quindi $b/2$. Ne segue che $O=(a/2,b/2)$, che coincide 
+quindi con il centro del rettangolo. 
+
+Si noti che il trucco consiste nell'usare il segmento $SQ$ per il
+calcolo dell'ascissa ed il segmento $PQ$ per il calcolo dell'ordinata
+del centro.  In questo modo i parametri $p$, $q$, $r$, $s$ non entrano
+in gioco in questa prima fase.  A posteriori, usando ora il segmento
+$SQ$ per il calcolo dell'ordinata ed il segmento $PQ$ per il calcolo
+dell'ascissa, si ottiene che $s+q=a$ e $p+r=b$, che \`{e} proprio la
+simmetria alla base della soluzione per via sintetica.
+
+
+
+\bigskip
+
+Segnaliamo ora un modo alternativo per trattare nel punto~(c) il caso dei 
+rombi con un vertice su ogni lato del rettangolo. Con riferimento 
+alla Figura~6a, poniamo $AP=x$ e $AS=y$. Grazie alla simmetria 
+dimostrata al punto~(a), tutte le restanti lunghezze risulteranno 
+determinate come in figura. In particolare avremo che
+$$PS^{2}=\ell^{2}=x^{2}+y^{2},$$
+$$PQ^{2}=\ell^{2}=(a-x)^{2}+(b-y)^{2},$$
+il che porta al sistema
+$$\left\{
+\begin{array}{l}
+	x^{2}+y^{2}=\ell^{2},  \\
+	x^{2}+y^{2}-2ax-2by+a^{2}+b^{2}=\ell^{2}.
+\end{array}
+\right.$$
+
+Sostituendo la prima equazione nella seconda, il sistema diventa
+$$\left\{
+\begin{array}{l}
+	x^{2}+y^{2}=\ell^{2},  \\
+	2ax+2by=a^{2}+b^{2}.
+\end{array}
+\right.$$
+
+{\centering
+\hfill
+\psset{unit=9ex}
+\pspicture(-0.5,-1)(3.5,2.5)
+\pstGeonode[PosAngle={-135,-45,45,135}](0,0){A}(3,0){B}(3,2){C}(0,2){D}
+\psline(A)(B)(C)(D)(A)
+\pstInterLL[PointName=none,PointSymbol=none]{A}{C}{B}{D}{O}
+\pstMiddleAB[PointName=none,PointSymbol=none]{A}{D}{S'}
+\pstRotation[RotAngle=15,PointName=none,PointSymbol=none]{O}{S'}[S'']
+\pstInterLL[PosAngle=180]{A}{D}{O}{S''}{S}
+\pstInterLL{B}{C}{O}{S''}{Q}
+\pstRotation[RotAngle=90,PointName=none,PointSymbol=none]{O}{S''}[P'']
+\pstInterLL[PosAngle=270]{A}{B}{O}{P''}{P}
+\pstInterLL[PosAngle=90]{D}{C}{O}{P''}{R}
+\psline[linecolor=cyan](P)(Q)(R)(S)(P)
+\pcline[linestyle=none](A)(P)
+\bput{:U}{\magenta $x$}
+\pcline[linestyle=none](P)(B)
+\bput{:U}{\magenta $a-x$}
+\pcline[linestyle=none](D)(R)
+\aput{:U}{\magenta $a-x$}
+\pcline[linestyle=none](R)(C)
+\aput{:U}{\magenta $x$}
+\pcline[linestyle=none](A)(S)
+\aput{0}{\magenta $y$}
+\pcline[linestyle=none](S)(D)
+\aput{0}{\magenta $b-y$}
+\pcline[linestyle=none](B)(Q)
+\bput{0}{\magenta $b-y$}
+\pcline[linestyle=none](Q)(C)
+\bput{0}{\magenta $y$}
+\pcline[linestyle=none](S)(P)
+\aput{0}{\magenta $\ell$}
+\pcline[linestyle=none](P)(Q)
+\aput{0}{\magenta $\ell$}
+\rput(1.5,-0.7){Figura 6a}
+\endpspicture
+\hfill\hfill
+\pspicture(-0.5,-1)(2.5,2.5)
+\psline[linewidth=0.7\pslinewidth,linecolor=cyan]{->}(-0.5,0)(2.5,0)
+\psline[linewidth=0.7\pslinewidth,linecolor=cyan]{->}(0,-0.5)(0,2.3)
+\pstGeonode[PosAngle={225,180,230}](0,0){O}(0,2){B'}(1.5,0){A'}
+\pstProjection[PosAngle=200]{A'}{B'}{O}[K]
+\pstSymO[PosAngle=200]{K}{A'}[C]
+\psclip{\psframe[linestyle=none](-0.5,-0.5)(2.5,2.3)}
+\pstLineAB[nodesep=-1]{A'}{B'}
+\pstCircleOA[linecolor=magenta]{O}{K}
+\pstCircleOA[linecolor=magenta]{O}{A'}
+\pscircle[linecolor=magenta,linestyle=dashed](O){1.7}
+\endpsclip
+
+\rput(1,-0.7){Figura 6b}
+\endpspicture
+\hfill
+\mbox{}}
+
+Ora si tratta di capire per quali valori del parametro $\ell$ il
+sistema ammette una soluzione $(x,y)$ con $0\leq x\leq a$ e $0\leq
+y\leq b$.  Nel piano cartesiano (vedi Figura~6b), la prima equazione
+rappresenta la circonferenza con centro nell'origine e raggio $\ell$,
+la seconda equazione rappresenta la retta passante per i punti
+$$A'=\left(\frac{a^{2}+b^{2}}{2a},0\right), \hspace{4em}
+B'=\left(0,\frac{a^{2}+b^{2}}{2b}\right).$$
+
+Si noti che, tenendo conto dell'ipotesi $a\geq b$, la distanza di 
+$B'$ dall'origine \`{e} maggiore od uguale della distanza di $A'$ 
+dall'origine.
+
+Affinch\'{e} ci sia intersenzione, $\ell$ deve essere maggiore della 
+distanza dell'origine dalla retta. Tale distanza si calcola con una 
+nota formula e ci permette di concludere che
+$$\ell\geq\frac{\sqrt{a^{2}+b^{2}}}{2}.$$
+
+Quando c'\`{e} uguaglianza, la soluzione del sistema \`{e} la 
+proiezione dell'origine sulla retta, che si verifica essere il punto 
+$K=(a/2,b/2)$. Questa scelta corrisponde alla 
+configurazione della Figura~4a.
+
+Viceversa, il massimo valore di $\ell$ per cui c'\`{e} intersezione
+con $0\leq x\leq a$ e $0\leq y\leq b$ \`{e} quello per cui la
+circonferenza passa per $A'$. In tal caso si  ha
+$$\ell=\frac{a^{2}+b^{2}}{2a},$$
+ed il sistema ammette 2 soluzioni: $(x,y)=A'$, che corrisponde alla 
+configurazione della Figura~4b, e $(x,y)=C$, con
+$$C=\left(\frac{a^{2}-b^{2}}{2a},b\right),$$
+che corrisponde al simmetrico della Figura~4b rispetto all'asse 
+verticale del rettangolo. \`{E} evidente che per valori maggiori di 
+$\ell$ le soluzioni del sistema hanno $y<0$ oppure $y>b$.
+}
+
+\renewcommand{\Osservazioni}{\TitoloOsservazione
+
+Abbiamo dimostrato che il massimo valore possibile per la lunghezza 
+$\ell$ del lato del rombo inscritto si ottiene sempre nella 
+configurazione della Figura~4b. Al contrario, il valore minimo di 
+$\ell$ si ottiene nella configurazione della Figura~4a o della 
+Figura~4c a seconda del rapporto tra $a$ e $b$. In particolare, il 
+minimo \`{e} rappresentato dalla  Figura~4c se e solo se $a\geq 
+b\sqrt{3}$, cio\`{e} se e solo se il rettangolo \`{e} 
+``sufficientemente allungato''.
+
+}
+
+\renewcommand{\Commenti}{}

@@ -1,0 +1,165 @@
+\renewcommand{\Anno}{1997}
+
+\renewcommand{\NumeroProblema}{6}
+
+\renewcommand{\Testo}{
+La figura sottostante rappresenta la piantina di un quartiere,
+costituito da un reticolo ortogonale di strade equispaziate.
+	\begin{center}
+		\psset{unit=7mm}
+		\pspicture(0,0)(3,3)
+	
+		\psset{linecolor=blue}
+		\psline{-}(1,0)(1,3)
+		\psline{-}(2,0)(2,3)
+		\psline{-}(0,1)(3,1)
+		\psline{-}(0,2)(3,2)
+		\psline{-}(0,0)(3,0)(3,3)(0,3)(0,0)
+	
+		\psset{linecolor=black}
+		\psdots[dotscale=1.5,dotstyle=square](3,3)
+		\psdots[dotscale=1.5,dotstyle=o](0,0)
+	
+		\endpspicture
+	\end{center}
+
+Tizio abita al vertice Nord-Est (indicato con un quadratino), ed ha
+l'ufficio al vertice Sud-Ovest (indicato con un cerchietto).  Caio
+abita dove Tizio ha l'ufficio ed ha l'ufficio dove abita Tizio.
+
+Tizio e Caio escono ogni mattina alla stessa ora e si recano al lavoro
+camminando alla stessa velocit\`{a}: Tizio, ad ogni incrocio, procede
+o verso Sud o verso Ovest; Caio, ad ogni incrocio, procede o verso
+Nord o verso Est.  Ad ogni incrocio la scelta fra le possibili strade
+che verificano la richiesta precedente \`{e} equiprobabile.
+
+Determinare la probabilit\`{a} che Tizio e Caio si incontrino.
+}
+
+\renewcommand{\Risposta}{$41/100$}
+
+\renewcommand{\Aiutino}{
+In quali punti pu\`{o} avvenire l'incontro? Quanti sono in totale i 
+possibili cammini? Quanti sono quindi i casi possibili? Quanti sono i 
+cammini che passano per i possibili punti d'incontro? Quanti sono 
+quindi i casi favorevoli?
+}
+
+\renewcommand{\SoluzioneUfficiale}{
+Assumendo convenzionalmente che ogni quadratino della griglia abbia 
+lato unitario, tutti i possibili percorsi di Tizio e Caio hanno 
+lunghezza 6. Procedendo alla stessa velocit\`{a}, l'eventuale incontro 
+potr\`{a} avvenire solo a distanza 3 dalle rispettive abitazioni, 
+dunque solo nei 4 punti indicati nella figura con un triangolino.
+\begin{center}
+	\psset{unit=7mm}
+	\pspicture(0,0)(3,3)
+
+	\psset{linecolor=blue}
+	\psline{-}(1,0)(1,3)
+	\psline{-}(2,0)(2,3)
+	\psline{-}(0,1)(3,1)
+	\psline{-}(0,2)(3,2)
+	\psline{-}(0,0)(3,0)(3,3)(0,3)(0,0)
+
+	\psset{linecolor=black}
+	\psdots[dotscale=1.5,dotstyle=square](3,3)
+	\psdots[dotscale=1.5,dotstyle=o](0,0)
+	\psdots[dotscale=1.5,dotstyle=triangle](0,3)(1,2)(2,1)(3,0)
+
+	\endpspicture
+\end{center}
+
+Determiniamo quanti sono i cammini possibili per Tizio e per Caio.
+Ogni cammino consiste in 6 tratti, di cui 3 orizzontali e 3 verticali.
+Non \`{e} difficile quindi notare che i possibili cammini sono in
+corrispondenza biunivoca con le sequenze di 6 lettere, di cui 3 sono V
+e 3 sono O, quindi con i modi di scegliere 3 oggetti su 6, e sono
+pertanto
+$$\binom{6}{3}=20.$$
+
+Determiniamo ora quanti sono i possibili cammini che passano per
+ciascuno dei triangolini.  Per quelli ``esterni'' (ai vertici
+Nord-Ovest e Sud-Est del quadrato) vi \`{e} un unico cammino.
+Consideriamo dunque i 2 triangolini ``interni''.  \`{E} facile vedere
+che, partendo ad esempio dal vertice Sud-Ovest ci sono 3 modi di
+arrivarci, poi altri 3 modi per andare al vertice Nord-Est.  In tutto
+ci sono quindi $3\cdot 3=9$ cammini che passano per ciascuno dei
+triangolini interni.
+
+Calcoliamo ora la probabilit\`{a} richiesta come rapporto tra casi 
+favorevoli e casi possibili.
+
+I casi possibili sono tutte le coppie (cammino di Tizio, cammino di 
+Caio) e sono pertanto $20^{2}$. I casi favorevoli sono, tra le coppie 
+precedenti, tutte e sole quelle in cui entrambi i cammini passano per 
+uno stesso triangolino, e cio\`{e} $1^{2}$ per quelli esterni e 
+$9^{2}$ per quelli interni.
+
+Pertanto la probabilit\`{a} richiesta \`{e}
+$$\frac{1^{2}+9^{2}+9^{2}+1^{2}}{20^{2}}=\frac{162}{400}=\frac{41}{100},$$
+e cio\`{e} del 41\%.
+}
+
+\renewcommand{\SoluzioniAlternative}{
+}
+
+\renewcommand{\Osservazioni}{\TitoloOss{1} \`{E} possibile contare i
+cammini senza ricorrere all'interpretazione combinatoria ed ai
+coefficienti binomiali.  Supponiamo di partire dal vertice Sud-Ovest e
+segniamo in ogni incrocio quanti sono i possibili cammini che vi
+passano.
+
+\`{E} chiaro che tale numero \`{e} 1 per tutti gli incroci sul lato
+Sud e sul lato Ovest.  Per ogni altro incrocio, il numero dei cammini
+che vi passano \`{e} uguale alla somma dei cammini passanti per
+l'incrocio immediatamente ad Ovest pi\`{u} quelli passanti per
+l'incrocio immediatamente a Sud.  Mediante questa regola possiamo
+quindi pian piano riempire le rimanenti caselle, fino al vertice
+Nord-Est.
+
+\begin{center}
+	\psset{unit=3mm}
+	\pspicture(-1,-1)(13,13)
+	
+	\multips(0,0)(0,4){4}{\multips(0,0)(4,0){3}{
+	\psline[linecolor=blue]{->}(1,0)(3,0)}}
+	
+	\multips(0,0)(0,4){3}{\multips(0,0)(4,0){4}{
+	\psline[linecolor=blue]{->}(0,1)(0,3)}}
+	
+	\multips(0,0)(0,4){4}{\multips(0,0)(4,0){4}{\pscircle(0,0){1}}}
+	
+	\rput(0,0){1}
+	\rput(4,0){1}
+	\rput(8,0){1}
+	\rput(12,0){1}
+	
+	\rput(0,4){1}
+	\rput(4,4){2}
+	\rput(8,4){3}
+	\rput(12,4){4}
+	
+	\rput(0,8){1}
+	\rput(4,8){3}
+	\rput(8,8){6}
+	\rput(12,8){10}
+	
+	\rput(0,12){1}
+	\rput(4,12){4}
+	\rput(8,12){10}
+	\rput(12,12){20}
+	
+	\endpspicture
+\end{center}
+
+
+Si verifica cos\`{\i} che i possibili cammini da Sud-Ovest a Nord-Est sono 20, 
+cos\`{\i} come i cammini da Sud-Ovest fino ad un triangolino interno sono 3.
+
+\TitoloOss{2} Si noti l'analogia tra il procedimento descritto nella
+precedente osservazione e la costruzione del triangolo di Tartaglia.
+}
+
+\renewcommand{\Commenti}{
+}

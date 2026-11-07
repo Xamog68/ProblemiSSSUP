@@ -1,0 +1,187 @@
+\renewcommand{\Anno}{2012}
+
+\renewcommand{\NumeroProblema}{3}
+
+\renewcommand{\Testo}{ In una strada rettilinea ci sono $n$ lampioni.
+Uno \`{e} posto all'inizio, un altro alla fine, e la distanza tra due
+lampioni consecutivi \`{e} sempre di 10 metri.  Ogni lampione illumina
+un cerchio con raggio di 12 metri centrato alla sua base.
+
+In una notte, ogni lampione ha una probabilit\`a $p$ di spegnersi. 
+Indichiamo con $P_{n}(p)$ la probabilit\`{a} che al termine della
+notte esista almeno un punto della strada non illuminato da lampioni
+(si trascuri l'ampiezza della carreggiata e la distanza dei lampioni
+dalla stessa).  
+% {\cyan [Ogni altra soluzione mi sembra peggiore del
+% male: non e' di certo credibile che la zona illuminata sia un
+% rettangolo!  e poi c'e' il problema del lampioni ai lati che non 
+% illuminano in entrambe le direzioni \ldots non vorrei far venire dei 
+% dubbi a chi non li aveva \ldots]}
+
+\begin{enumerate}
+	\renewcommand{\labelenumi}{(\alph{enumi})}
+	\item Determinare $P_{4}(p)$.
+
+	\item  Determinare una formula che permetta di calcolare 
+	$P_{n+1}(p)$ in funzione di $P_{n}(p)$ e $P_{n-1}(p)$.
+\end{enumerate}
+
+% {\cyan [Ho scelto la strada con il massimo del suggerimento. Diversamente mi 
+% sembra un esercizio che rischia di andare deserto o riservato ai 
+% ``professionisti'' (che poi non prendono il posto).]}
+}
+
+\renewcommand{\Risposta}{
+\begin{enumerate}
+	\renewcommand{\labelenumi}{(\alph{enumi})}
+	\item $P_{4}(p)=3p^{2}-2p^{3}$.
+
+	\item  $P_{n+1}(p)=p^{2}+(1-p)P_{n}(p)+p(1-p)P_{n-1}(p)$.
+\end{enumerate}
+}
+
+\renewcommand{\Aiutino}{
+\begin{enumerate}
+	\renewcommand{\labelenumi}{(\alph{enumi})}
+	\item Quali sono le possibili configurazioni? Qual \`{e} la 
+	probabilit\`{a} di ognuna di esse?
+
+	\item Consideriamo una configurazione con $(n+1)$ lampioni.  Se
+	l'ultimo \`{e} acceso, decidono i precedenti, quindi \ldots\ Se
+	invece l'ultimo \`{e} spento, si guarda il penultimo: se \`{e}
+	spento, allora \ldots; se \`{e} acceso, allora \ldots
+\end{enumerate}
+}
+
+\renewcommand{\SoluzioneUfficiale}{\TitoloSoluzione
+Osserviamo preliminarmente che al termine della notte ci sar\`{a} un 
+punto della strada al buio se e solo se si saranno spenti almeno 2 
+lampioni consecutivi. Possiamo dunque pensare $P_{n}(p)$ come la 
+probabilit\`{a} che almeno 2 lampioni consecutivi siano spenti.
+
+Mostriamo direttamente che
+\begin{equation}
+	P_{n+1}(p)=p^{2}+(1-p)P_{n}(p)+p(1-p)P_{n-1}(p),
+	\label{ricorrenza-Pn(p)}
+\end{equation}
+il che risponde al punto~(b). 
+
+Poich\'{e} ovviamente $P_{1}(p)=0$ (se c'\`{e} un solo lampione, non 
+ce ne possono essere 2 consecutivi spenti) e $P_{2}(p)=p^{2}$ (se ci 
+sono 2 lampioni, questi devono essere entrambi spenti), utilizzando 
+la (\ref{ricorrenza-Pn(p)}) ricaviamo facilmente che
+$$P_{3}(p)=p^{2}+(1-p)P_{2}(p)+p(1-p)P_{1}(p)=p^{2}+(1-p)p^{2}=2p^{2}-p^{3}$$
+e
+\begin{eqnarray*}
+	P_{4}(p) & = & p^{2}+(1-p)P_{3}(p)+p(1-p)P_{2}(p)  \\
+	 & = & p^{2}+(1-p)(2p^{2}-p^{3}) +p(1-p)p^{2} \\
+	 & = & 3p^{2}-2p^{3},
+\end{eqnarray*}
+il che risponde al punto~(a).
+
+Per dimostrare la (\ref{ricorrenza-Pn(p)}), prendiamo una 
+configurazione con $(n+1)$ lampioni, e fissiamo l'attenzione sul 
+lampione $(n+1)$-esimo.
+\begin{itemize}
+	\item Se il lampione $(n+1)$-esimo \`{e} acceso, cosa che accade
+	con probabilit\`{a} $(1-p)$, avremo che i 2 lampioni consecutivi
+	spenti dovranno eventualmente stare tra i primi $n$, cosa che
+	accade con probabilit\`{a} $P_{n}(p)$.  Mettendo insieme le 2
+	cose, questo caso contribuisce con $(1-p)P_{n}(p)$ al calcolo di
+	$P_{n+1}(p)$.
+
+	\item  Se il lampione $(n+1)$-esimo \`{e} spento, cosa che accade
+	con probabilit\`{a} $p$, spostiamo l'attenzione sull'$n$-esimo, 
+	il che ci porta a distinguere 2 sottocasi.
+	\begin{itemize}
+		\item Se anche il lampione $n$-esimo \`{e} spento, allora
+		abbiamo gi\`{a} trovato 2 lampioni consecutivi spenti, e non
+		dobbiamo cercare oltre.  Questo sottocaso contribuisce con
+		$p^{2}$ (cio\`{e} la probabilit\`{a} che siano spenti sia
+		l'$n$-esimo, sia l'$(n+1)$-esimo) al calcolo di $P_{n+1}(p)$.
+	
+		\item Se il lampione $n$-esimo \`{e} acceso, allora i 2
+		lampioni consecutivi spenti dovranno eventualmente stare tra i
+		primi $(n-1)$, cosa che accade con probabilit\`{a}
+		$P_{n-1}(p)$.  Pertanto questo ultimo sottocaso contribuisce
+		con $p(1-p)P_{n-1}(p)$ al calcolo di $P_{n+1}(p)$.  Il fattore
+		$p$ rappresenta la probabilit\`{a} che l'$(n+1)$-esimo
+		lampione sia spento, il fattore $(1-p)$ la probabilit\`{a} che
+		l'$n$-esimo lampione sia acceso, il fattore $P_{n-1}(p)$ la 
+		probabilit\`{a} che almeno 2 lampioni consecutivi tra i primi 
+		$(n-1)$ siano spenti. 
+	\end{itemize}
+\end{itemize}
+
+Poich\'{e} i 3 casi o sottocasi considerati sono disgiunti ed 
+esauriscono tutte le possibilit\`{a}, non resta che sommare i 3 
+contributi per ottenere la (\ref{ricorrenza-Pn(p)}).
+}
+
+\renewcommand{\SoluzioniAlternative}{
+\`{E} possibile rispondere al punto~(a) con un argomento diretto che 
+non passa per la ricorrenza~(\ref{ricorrenza-Pn(p)}). Essendo $n=4$, 
+ci basta infatti considerare separatamente i seguenti pochi casi disgiunti.
+\begin{itemize}
+	\item  Se tutti e 4 i lampioni sono spenti, allora sicuramente 
+	c'\`{e} un punto della strada al buio. La probabilit\`{a} che
+	questo accada \`{e} chiaramente $p^{4}$.
+
+	\item  Se esattamente 3 lampioni sono spenti, sicuramente almeno 
+	2 consecutivi sono spenti, quindi c'\`{e} comunque un punto della 
+	strada al buio. La probabilit\`{a} di questo caso \`{e} $4p^{3}(1-p)$, in 
+	cui il fattore $p^{3}$ rappresenta la probabilit\`{a} che 3 
+	lampioni ben determinati siano spenti, $(1-p)$ la probabilit\`{a} 
+	che il restante lampione sia acceso, 4 il numero di 
+	configurazioni con 3 lampioni spenti e uno acceso.
+
+	\item Se esattamente 2 lampioni sono spenti, allora questi devono
+	essere consecutivi.  La probabilit\`{a} di questo caso \`{e}
+	$3p^{2}(1-p)^{2}$, in cui il fattore $p^{2}$ rappresenta la
+	probabilit\`{a} che 2 lampioni ben determinati siano spenti,
+	$(1-p)^{2}$ la probabilit\`{a} che i restanti 2 lampioni siano
+	accesi, 3 il numero di configurazioni con 2 lampioni spenti
+	consecutivi su 4.
+
+	\item  Se i lampioni spenti sono 0 o 1, allora non ci sono punti 
+	della strada al buio, dunque questo caso non contribuisce al 
+	calcolo di $P_{4}(p)$.
+\end{itemize}
+
+Mettendo insieme il contributo dei primi 3 casi, e svolgendo i 
+calcoli, otteniamo che
+$$P_{4}(p)=p^{4}+4p^{3}(1-p)+3p^{2}(1-p)^{2}=3p^{2}-2p^{3},$$
+il che risponde direttamente al punto~(a).
+}
+
+\renewcommand{\Osservazioni}{
+Grazie alla teoria generale delle successioni per ricorrenza lineari 
+di ordine 2, \`{e} possibile passare dalla relazione ricorrente 
+(\ref{ricorrenza-Pn(p)}) ad una formula esplicita per $P_{n}(p)$ che 
+permette di calcolarne il valore per un certo $n$ senza bisogno di 
+calcolare tutti i valori precedenti. La formula che si ottiene \`{e}
+$$P_{n}(p)=1+\frac{1+p-\Delta}{2\Delta}
+\left[\frac{1-p+\Delta}{2}\right]^{n}-\frac{1+p+\Delta}{2\Delta}
+\left[\frac{1-p-\Delta}{2}\right]^{n},$$
+dove $\Delta=\sqrt{1+2p-3p^{2}}$.
+
+Una volta scritta, la formula pu\`{o} essere verificata elementarmente
+per induzione.  Per ricavarla, la teoria generale indica che, nel caso
+di una ricorrenza del tipo (\ref{ricorrenza-Pn(p)}), la formula per il
+termine generico \`{e} del tipo
+$$P_{n}=aR_{1}^{n}+bR_{2}^{n}+c,$$
+dove $R_{1}$ ed $R_{2}$ sono le radici del polinomio
+$$x^{2}-(1-p)x-p(1-p),$$
+detto polinomio caratteristico della (\ref{ricorrenza-Pn(p)}), ed $a$,
+$b$ e $c$ sono opportuni coefficienti (in questo caso sia le 2 radici,
+sia i 3 coefficienti sono funzioni di $p$).
+
+Vale la pena notare l'analogia formale con la formula per i numeri di
+Fibonacci, anch'essi definiti mediante una ricorrenza lineare di
+ordine 2.  Da notare infine che, nonostante l'abbondante presenza di
+radicali, la formula deve fornire sempre dei polinomi nella variabile
+$p$, come si pu\`{o} verificare per induzione partendo dalla
+solita~(\ref{ricorrenza-Pn(p)}).  }
+
+\renewcommand{\Commenti}{
+}

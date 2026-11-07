@@ -1,0 +1,240 @@
+\renewcommand{\Anno}{2008}
+
+\renewcommand{\NumeroProblema}{3}
+
+\renewcommand{\Testo}{ 
+	Una colonna dell'Enalotto \`e una sequenza
+	di $12$ simboli, scelti tra \texttt{1}, \texttt{X}, \texttt{2}.
+	\begin{enumerate}
+		\item Quante sono le colonne dell'Enalotto che presentano una
+		ed una sola volta due simboli consecutivi uguali?
+
+		\item Quante sono le differenti colonne dell'Enalotto che
+		cominciano e finiscono con $1$, e che non presentano mai due
+		simboli consecutivi uguali? 
+	\end{enumerate}
+}
+
+\renewcommand{\Risposta}{
+\begin{enumerate}
+	\renewcommand{\labelenumi}{(\alph{enumi})} 
+	\item  33792
+
+	\item  682
+\end{enumerate}
+}
+
+\renewcommand{\Aiutino}{
+\begin{enumerate}
+\renewcommand{\labelenumi}{(\alph{enumi})} 
+	\item Trovare quante sono le colonne con 11 simboli che
+	non presentano mai 2 simboli consecutivi uguali: in quanti modi
+	possiamo scegliere il primo simbolo? In quanti modi possiamo
+	scegliere ciascuno dei simboli successivi?
+	
+	A questo punto non resta che scegliere uno degli 11 simboli e
+	raddoppiarlo. In quanti modi possiamo farlo?
+
+	\item Indichiamo con $U_{n}$ il numero di colonne che iniziano e
+	terminano per \texttt{1} e non hanno due simboli uguali
+	consecutivi.  Indichiamo con $D_{n}$ il numero di colonne che
+	iniziano per \texttt{1}, terminano per \texttt{X} o \texttt{2}, e
+	non hanno due simboli uguali consecutivi.  Segnaliamo 2 possibili
+	modi di procedere.
+	\begin{itemize}
+		\item  	Mostrare che valgono le relazioni ricorrenti
+		$$U_{n+1}=D_{n},
+		\hspace{3em}
+		D_{n+1}=D_{n}+2U_{n}.$$
+		
+		Calcolati $U_{3}$ e $D_{3}$ si pu\`{o} ripetere la doppia
+		iterazione fino ad arrivare a $U_{12}$.
+		
+		\item  Mostrare che $U_{n}+D_{n}=2^{n-1}$ e quindi
+		$U_{n+1}=D_{n}=2^{n-1}-U_{n}$. Da questa si deduce che
+		$$U_{12}=2^{10}-2^{9}+2^{8}-2^{7}+\ldots-2.$$
+	\end{itemize}
+	
+	Entrambi i procedimenti permettono anche di arrivare alla formula
+	generale per $U_{n}$, che risulta essere 
+	$$U_{n}=\frac{2^{n-1}+2\cdot(-1)^{n-1}}{3}.$$
+
+\end{enumerate}
+}
+
+\renewcommand{\SoluzioneUfficiale}{\DomandaA Le colonne richieste sono
+$11\cdot 3\cdot 2^{10}=33792$.  Infatti una colonna che contiene una
+ed una sola volta due simboli consecutivi uguali si ottiene in modo
+unico prendendo una successione di 11 simboli, che non ha mai due
+simboli consecutivi uguali, e raddoppiando uno dei simboli.  Si hanno
+evidentemente 11 possibili scelte per il simbolo da raddoppiare,
+dunque basta trovare il numero delle successioni di lunghezza 11 che
+non hanno mai due simboli consecutivi uguali.  Si hanno ovviamente 3
+scelte per il primo simbolo, e 2 scelte per ognuno dei simboli
+successivi, per un totale di $3\cdot 2^{10}$ possibilit\`{a}.
+
+\DomandaB Indichiamo con $U_{n}$ il numero di colonne che iniziano e
+terminano per \texttt{1} e non hanno due simboli uguali consecutivi.
+Indichiamo con $D_{n}$ il numero di colonne che iniziano per
+\texttt{1}, terminano per \texttt{X} o \texttt{2}, e non hanno due
+simboli uguali consecutivi.
+
+Mostriamo che per ogni intero $n\geq 2$ si ha che
+\begin{eqnarray}
+    D_{n+1} & = & D_{n}+2U_{n},
+    \label{eq:ric-dn}  \\
+    U_{n+1} & = & D_{n}.
+    \label{eq:ric-un}
+\end{eqnarray}
+
+Per dimostrare tali formule iniziamo ad indicare con $\mathcal{D}_{n}$
+l'insieme delle sequenze che vengono conteggiate da $D_{n}$, e con
+$\mathcal{U}_{n}$ l'insieme delle sequenze che vengono conteggiate
+da $U_{n}$. Un elemento di $\mathcal{D}_{n+1}$ pu\`{o} essere ottenuto
+in due modi:
+\begin{itemize}
+    \item  prendendo un elemento di $\mathcal{U}_{n}$ e aggiungendo un
+    simbolo a scelta tra \texttt{X} e \texttt{2};
+
+    \item  prendendo un elemento di $\mathcal{D}_{n}$ e aggiungendo
+    l'unico simbolo possibile (non possiamo n\'{e} mettere \texttt{1},
+    n\'{e} ripetere l'ultimo simbolo).
+\end{itemize}
+
+In questo modo si ottengono tutti gli elementi di $\mathcal{D}_{n+1}$,
+e quelli prodotti nel primo modo sono diversi da quelli prodotti nel
+secondo modo. Questo giustifica la (\ref{eq:ric-dn}).
+
+Un elemento di $\mathcal{U}_{n+1}$ pu\`{o} invece essere ottenuto in
+un solo modo:
+\begin{itemize}
+    \item prendendo un elemento di $\mathcal{D}_{n}$ e aggiungendo
+    \texttt{1} in fondo.
+\end{itemize}
+
+Questo giustifica la (\ref{eq:ric-un}). 
+
+\`{E} ora evidente che gli elementi di $\mathcal{U}_{3}$ sono
+\texttt{1X1} e \texttt{121}, mentre quelli di $\mathcal{D}_{3}$ sono
+\texttt{12X} e \texttt{1X2}, e pertanto $U_{3}=D_{3}=2$.  Applicando
+con pazienza le relazioni ricorrenti troviamo pian piano i valori di
+$U_{n}$ e di $D_{n}$ indicati nella seguente tabella.
+\begin{center}
+	\renewcommand{\arraystretch}{1.2}
+	\begin{tabular}{|c||c|c|c|c|c|c|c|c|c|c|}
+		\hline
+		$n$ & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12  \\
+		\hline\hline
+		$U_{n}$ & 2 & 2 & 6 & 10 & 22 & 42 & 86 & 170 & 342 & 682  \\
+		\hline
+		$D_{n}$ & 2 & 6 & 10 & 22 & 42 & 86 & 170 & 342 & 682 &   \\
+		\hline
+	\end{tabular}
+\end{center}
+
+In conclusione $U_{12}=682$.
+}
+
+\renewcommand{\SoluzioniAlternative}{\TitoloSoluzioneAlternativaA
+\DomandaB 
+
+Utilizziamo le stesse notazioni della soluzione precedente.
+Osserviamo preliminarmente che $U_{n}+D_{n}=2^{n-1}$, in quanto
+$\mathcal{U}_{n}\cup\mathcal{D}_{n}$ \`{e} l'insieme di tutte le
+colonne di $n$ simboli che iniziano con \texttt{1} e non hanno mai 2
+simboli consecutivi (e queste sono appunto $2^{n-1}$ poich\'{e} ci
+sono 2 possibilit\`{a} per tutti i simboli successivi al primo).
+Inoltre $U_{n+1}=D_{n}$, cos\`{i} come dimostrato nella soluzione
+precedente.
+
+Mettendo insieme le 2 relazioni troviamo che 
+\begin{equation}
+	U_{n+1}=2^{n-1}-U_{n}, 
+	\label{eq:ric-somma}
+\end{equation}
+e pertanto
+$$U_{12}=2^{10}-U_{11}=2^{10}-2^{9}+U_{10}=
+2^{10}-2^{9}+2^{8}-U_{9}=\ldots$$
+
+Procedendo in questo modo fino ad arrivare ad $U_{3}$, che fa 2, si ha
+la formula
+$$U_{12}=2^{10}-2^{9}+2^{8}-2^{7}+\ldots+2^{2}-2,$$
+che si calcola facilmente.
+% 
+% \TitoloSoluzioneAlternativaB \DomandaB Spezziamo una colonna da 12 in
+% 2 semicolonne da 6.  Indichiamo con $S_{1}$, $S_{x}$, $S_{2}$ il
+% numero di (semi)colonne, composte da 6 simboli, che iniziano con
+% \texttt{1}, non contengono mai 2 simboli consecutivi uguali, e
+% finiscono con \texttt{1}, \texttt{X}, \texttt{2}, rispettivamente.
+% 
+% Allora il numero richiesto \`{e}
+% $$2(S_{1}S_{x}+S_{x}S_{2}+S_{2}S_{1}),$$
+% in quanto ognuno dei tre tipi di semicolonna pu`o essere preso come
+% parte iniziale o come parte finale (rovesciata).
+% 
+% Per calcolare $S_{1}$ si pu\`{o} ripetere il ragionamento precedente,
+% cio\`{e} spezzare la colonna da 6 in due semicolonne da 3.  Poich\'{e}
+% le possibili semicolonne di lunghezza 3 sono soltanto 4 (\texttt{1X2},
+% \texttt{1X1}, \texttt{121}, \texttt{12X}) si ottiene facilmente che
+% $$S_{1}=2(2\cdot 1+1\cdot 1+1\cdot 2)=10.$$
+% 
+% Per calcolare $S_{x}$ ed $S_{2}$ osserviamo intanto che
+% 
+% 
+% 
+% 
+% Per calcolare i valori di s1, sx, s2 si osservi anzitutto che per s1
+% si pu`o ripetere il ragionamento precedente, tenendo conto che le
+% semicolonne di lunghezza 3 che cominciano per 1 e non presentano mai
+% due simboli consecutivi uguali sono soltanto 
+}
+
+\renewcommand{\Osservazioni}{\TitoloOsservazione 
+
+Questo problema offre parecchi spunti.
+\begin{enumerate}
+	\item Manipolando algebricamente la (\ref{eq:ric-un}) e la
+	(\ref{eq:ric-dn}) otteniamo che
+	\begin{equation}
+		U_{n+2}=D_{n+1}=D_{n}+2U_{n}=U_{n+1}+2U_{n}.
+		\label{eq:ric2-un}
+	\end{equation}
+	
+	Questa \`{e} una ricorrenza che coinvolge una sola delle 2
+	successioni.  Dalla teoria generale delle successioni per
+	ricorrenza lineari segue immediatamente che $U_{n}=\alpha
+	2^{n}+\beta(-1)^{n}$ (dove $2$ e $-1$ sono le soluzioni di
+	$x^{2}=x+2$).  A questo punto $\alpha$ e $\beta$ si ricavano
+	imponendo che $U_{2}=0$ e $U_{3}=2$.  Si ottiene cos\`{i} la
+	formula generale
+	\begin{equation}
+		U_{n}=\frac{2^{n-1}+2\cdot(-1)^{n-1}}{3}.
+		\label{eq:un}
+	\end{equation}
+	
+	\item Dalla (\ref{eq:ric-somma}) si ottiene, con una facile
+	induzione, la formula
+	$$U_{n}=2^{n-2}-2^{n-3}+2^{n-4}-\ldots+(-1)^{n+1}\cdot 2,$$
+	e questa si calcola esplicitamente come somma di una progressione
+	geometrica di ragione $-2$. Ovviamente in questo modo si riottiene
+	la (\ref{eq:un}).
+
+	\item La formula (\ref{eq:ric2-un}) ammette, oltre alla
+	giustificazione algebrica presentata, anche una giustificazione
+	diretta di tipo combinatorio.  Infatti un elemento di
+	$\mathcal{U}_{n+2}$ pu\`{o} essere ottenuto in due modi (che si
+	escludono a vicenda):
+	\begin{itemize}
+		\item prendendo un elemento di $\mathcal{U}_{n+1}$, sostituendo
+		l'\texttt{1} finale con l'unico altro simbolo possibile, e
+		aggiungendo un \texttt{1} alla fine;
+
+		\item prendendo un elemento di $\mathcal{U}_{n}$ e aggiungendo
+		prima un simbolo a scelta tra \texttt{X} e \texttt{2}, e poi
+		un \texttt{1}.
+	\end{itemize}
+\end{enumerate}
+}
+
+\renewcommand{\Commenti}{
+}

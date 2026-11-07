@@ -1,0 +1,73 @@
+\renewcommand{\Anno}{1996}
+
+\renewcommand{\NumeroProblema}{3}
+
+\renewcommand{\Testo}{ 
+Determinare le soluzioni intere dell'equazione
+$$x^3+2y^3=4z^3.$$}
+
+\renewcommand{\Risposta}{L'unica soluzione \`{e} $(0,0,0)$.}
+
+\renewcommand{\Aiutino}{
+Intanto $x$ deve essere pari, quindi $x=2a$. 
+Andando a sostituire e semplificando si ha che anche $y$ deve essere 
+pari, quindi $y=2b$. Analogamente si arriva a $z=2c$ e si nota che 
+$(a,b,c)$ sono soluzioni della stessa equazione risolta da $(x,y,z)$. 
+Questo dice che ogni soluzione non nulla produce una soluzione 
+pi\`{u} piccola, ma allora \ldots 
+}
+
+\renewcommand{\SoluzioneUfficiale}{\TitoloSoluzione
+Iniziamo dimostrando il seguente risultato preliminare: se $(x,y,z)$ 
+\`{e} una soluzione intera dell'equazione proposta, allora $x$, $y$ 
+e $z$ sono necessariamente numeri pari e la terna $(x/2,y/2,z/2)$ 
+\`{e} ancora una soluzione intera della stessa equazione. 
+
+Infatti, dall'equazione segue immediatamente che $x$ \`{e} un numero
+pari.  Posto $x=2a$, sostituendo e semplificando un fattore 2 si
+ricava che
+$$4a^{3}+y^{3}=2z^{3}.$$
+Pertanto anche $y$ deve essere pari: posto $y=2b$, 
+sostituendo e semplificando si ricava che
+$$2a^{3}+4b^{3}=z^{3}.$$
+Di conseguenza anche $z$ deve essere pari: posto $z=2c$, 
+sostituendo e semplificando si ricava che
+$$a^{3}+2b^{3}=4c^{3}.$$
+Questo mostra che la terna $(a,b,c)=(x/2,y/2,z/2)$ \`{e} soluzione
+intera della stessa equazione.
+
+Utilizzando il risultato preliminare mostriamo ora che $(0,0,0)$ \`{e}
+l'unica soluzione intera.  Intanto \`{e} evidente che tale terna \`{e}
+effettivamente una soluzione.  Supponiamo ora per assurdo che esista
+una soluzione $(x,y,z)$ in cui le 3 variabili non sono tutte nulle.
+Per quanto appena detto, $x$, $y$ e $z$ sono tutti pari e la terna
+$(x/2,y/2,z/2)$ \`{e} ancora una soluzione intera.  Iterando il
+procedimento si trova che anche $(x/4,y/4,z/4)$ \`{e} ancora una
+soluzione intera, e cos\`{\i} via.  Tuttavia, a forza di dividere per
+2, uno dei 3 elementi prima o poi diventer\`{a} dispari e avremo
+cos\`{\i} una soluzione in cui $x$, $y$ e $z$ non sono tutti pari, il
+che contraddice quanto dimostrato precedentemente.
+
+Ne segue che $(0,0,0)$ \`{e} l'unica soluzione intera dell'equazione 
+data.
+}
+
+\renewcommand{\SoluzioniAlternative}{}
+
+\renewcommand{\Osservazioni}{\TitoloOsservazione
+I lettori pi\`{u} esperti avranno riconosciuto nell'ultima parte della 
+soluzione un'applicazione del \emph{principio della discesa infinita}. In 
+alternativa, la dimostrazione si poteva concludere con il \emph{principio 
+del minimo intero}, ragionando come segue. 
+
+Supponiamo che esistano delle soluzioni in cui le 3 variabili non sono
+tutte nulle e consideriamo una (o la) soluzione per cui la somma
+$|x|+|y|+|z|$ risulta minima (questa esiste appunto per il principio
+del minimo intero).  Ma noi sappiamo che $(x,y,z)=(2a,2b,2c)$ e che
+$(a,b,c)$ \`{e} ancora una soluzione con 
+$$|a|+|b|+|c|=\frac{|x|+|y|+|z|}{2}<|x|+|y|+|z|.$$
+
+Questo contraddice la minimalit\`{a} di $(x,y,z)$ e quindi esclude
+l'esistenza di soluzioni oltre quella banale $(0,0,0)$.  }
+
+

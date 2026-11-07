@@ -1,0 +1,78 @@
+\renewcommand{\Anno}{2004}
+
+\renewcommand{\NumeroProblema}{2}
+
+\renewcommand{\Testo}{\`E ben noto che in Svizzera la benzina costa
+meno che in Italia, e che il suo prezzo sale man mano che ci si
+avvicina alla frontiera.  Un automobilista, diretto in Italia, fa il
+pieno a Zurigo e decide che nel tragitto in Svizzera si fermer\`a al
+pi\`{u} una volta per fare rifornimento.  Arrivato alla frontiera
+italiana far\`a poi nuovamente il pieno, al prezzo italiano.
+	
+Supponendo che il consumo di benzina dell'automobile sia costante, che
+la capacit\`{a} del serbatoio sia tale da consentire di completare il
+percorso anche senza soste, che ci sia un distributore in ogni punto
+del percorso, e che il prezzo al litro aumenti linearmente
+avvicinandosi alla frontiera italiana, determinare il punto
+economicamente pi\`u favorevole in cui fermarsi.}
+
+\renewcommand{\Risposta}{Conviene fare una sosta a met\`{a} del percorso.}
+
+\renewcommand{\Aiutino}{Occorre matematizzare il problema.
+Consideriamo il percorso come un segmento di estremi $Z$ ed $I$ e
+lunghezza $l$.  Indichiamo con $c$ il consumo per unit\`{a} di
+lunghezza, con $P_{Z}$ e $P_{I}$ i prezzi a Zurigo ed in Italia, e con
+$x$ la distanza da $Z$ del punto in cui si fa la sosta ($x=0$
+corrisponde a non rifornire).  Calcolato il prezzo in $x$, si ha che
+il costo totale dell'operazione \`{e}
+$$c\left\{(P_{I}-P_{Z})\left(\frac{x^{2}}{l}-x\right)+lP_{I}\right\}.$$
+
+Il minimo di tale espressione si ha per $x=\ldots$}
+
+\renewcommand{\SoluzioneUfficiale}{\TitoloSoluzione Indichiamo con $l$ 
+la lunghezza del percorso, con $c$ il consumo in litri per unit\`{a} 
+di lunghezza, con $P_{Z}$ e $P_{I}$, rispettivamente, i prezzi in euro 
+di un litro di benzina a Zurigo ed al confine italiano. Indichiamo con 
+$x$ la distanza da Zurigo del punto in cui si fa la sosta.
+
+Determiniamo ora il prezzo $P(x)$ di un litro di benzina in funzione 
+di $x$. Per ipotesi sappiamo che deve essere una funzione del tipo 
+$P(x)=mx+n$ che deve valere $P_{Z}$ per $x=0$ e $P_{I}$ per $x=l$. 
+Queste condizioni si traducono nel sistema 
+$$n=P_{Z},\hspace{4em}ml+n=P_{I},$$
+da cui
+$$P(x)=\frac{P_{I}-P_{Z}}{l}\,x+P_{Z}.$$
+
+Quando giunge in $x$, l'automobilista ha consumato $cx$ litri di 
+carburante, che rabbocca al prezzo di $P(x)$ euro al litro; nella 
+rimanente parte del viaggio consumer\`{a} ancora $c(l-x)$ litri che 
+poi rifornir\`{a} in Italia al prezzo di $P_{I}$ euro al litro. Il 
+costo totale dell'operazione risulta pertanto
+$$cxP(x)+c(l-x)P_{I}=c\left\{(P_{I}-P_{Z})
+\left(\frac{x^{2}}{l}-x\right)+lP_{I}\right\}.$$
+
+Si noti che il caso $x=0$ corrisponde a non fare nessuna sosta lungo 
+il percorso. Poich\'{e} il coefficiente di $x^{2}$ \`{e}  
+positivo, il grafico di questa funzione della $x$ \`{e} una 
+parabola con la concavit\`{a} rivolta verso l'alto, che assume valori 
+uguali per $x=0$ e $x=l$ ed ha minimo nel vertice, corrispondente ad 
+$x=l/2$.
+
+Ne segue che conviene fare una sosta a met\`{a} del percorso, 
+indipendentemente da tutti gli altri parametri.}
+
+\renewcommand{\SoluzioniAlternative}{
+}
+
+\renewcommand{\Osservazioni}{\TitoloOsservazione Ci sono ovviamente 
+molti metodi per determinare l'ascissa del vertice di una parabola: 
+utilizzare le apposite formule della geometria analitica, oppure 
+ricorrere al calcolo differenziale (basta vedere dove si annulla la 
+derivata prima), oppure sfruttare la simmetria come abbiamo fatto 
+nella soluzione: se un trinomio di secondo grado assume lo stesso 
+valore in 2 punti $x_{1}$ e $x_{2}$, allora l'ascissa del vertice \`{e} 
+il punto medio $(x_{1}+x_{2})/2$.
+}
+
+\renewcommand{\Commenti}{
+}

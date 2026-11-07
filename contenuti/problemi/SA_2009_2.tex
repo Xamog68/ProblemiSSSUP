@@ -1,0 +1,137 @@
+\renewcommand{\Anno}{2009}
+
+\renewcommand{\NumeroProblema}{2}
+
+\renewcommand{\Testo}{
+Per cercare di arginare il download di musica illegale le major
+discografiche hanno messo a punto un pericoloso virus informatico: una
+volta installatosi su un computer, quando l'utente tenta di scaricare
+un brano musicale, il virus con probabilit\`a $p$ (con $0<p<1$)
+permette lo scaricamento senza alcuna conseguenza, altrimenti lo
+scaricamento non avviene, compare una scritta minacciosa ed il virus
+memorizza un ``tag''.  Ovviamente l'utente pu\`{o} ritentare lo
+scaricamento, ma al terzo tag memorizzato (anche su tentativi
+effettuati per brani diversi) il virus formatta l'hard disk.
+
+Tullio vorrebbe scaricare dei brani musicali, ma il suo computer \`e
+stato infettato dal virus.  
+\begin{enumerate}
+    \item Determinare, in funzione di $p$, la probabilit\`{a} che
+    Tullio riesca a scaricare 2 brani in \emph{esattamente} 4
+    tentativi.
+
+    \item  Determinare, in funzione di $p$, la probabilit\`{a} che
+    Tullio riesca a scaricare 2 brani.
+
+    \item Determinare, in funzione di $p$ ed $n$, la probabilit\`{a}
+    che Tullio riesca a scaricare $n$ brani.
+\end{enumerate}
+}
+
+\renewcommand{\Risposta}{\begin{enumerate}
+		\item   $3p^{2}(1-p)^{2}$
+	
+		\item  $p^{2}(3p^{2}-8p+6)$
+		
+		\item $\displaystyle{p^{n}+np^{n}(1-p)+\frac{n(n+1)}{2}p^{n}(1-p)^{2}}$
+	\end{enumerate}}
+
+\renewcommand{\Aiutino}{\begin{enumerate}
+	\renewcommand{\labelenumi}{(\alph{enumi})} 
+	\item  Quanti tentativi non sono andati a buon fine? In quale
+	posizione possono trovarsi questi tentativi?
+
+	\item Si tratta di calcolare e poi sommare le probabilit\`{a} che
+	Tullio ce la faccia in 2, 3 o 4 tentativi.
+	
+	\item Si tratta di calcolare e poi sommare le probabilit\`{a} che
+	Tullio ce la faccia in $n$, $(n+1)$ o $(n+2)$ tentativi. Prestare 
+	particolare attenzione alle possibili posizioni del tentativo (o
+	dei tentativi) andati male.
+\end{enumerate}}
+
+\renewcommand{\SoluzioneUfficiale}{\TitoloSoluzione\DomandaA
+La probabilit\`{a} richiesta \`{e} $3p^{2}(1-p)^{2}$.
+
+Se Tullio riesce a scaricare 2 brani in esattamente 4 tentativi, vuol 
+dire che esattamente 2 dei primi 3 tentativi non sono andati a buon
+fine, con conseguente memorizzazione del tag. Abbiamo quindi 3
+possibili sequenze che realizzano la situazione proposta, e
+precisamente
+$$\mbox{ok--no--no--ok},
+\hspace{3em}
+\mbox{no--ok--no--ok},
+\hspace{3em}
+\mbox{no--no--ok--ok}.$$
+
+Si noti in particolare che il quarto tentativo \`{e} andato
+necessariamente bene. Ciascuna delle 3 sequenze ha probabilit\`{a}
+$p^{2}(1-p)^{2}$, in quanto contiene 2 successi e 2 insuccessi.
+Trattandosi di eventi disgiunti, non resta che sommare le
+probabilit\`{a}, ottenendo appunto $3p^{2}(1-p)^{2}$.
+
+\DomandaB 
+La probabilit\`{a} richiesta \`{e}
+$$p^{2}+2p^{2}(1-p)+3p^{2}(1-p)^{2}=p^{2}(3p^{2}-8p+6).$$
+
+Il primo addendo, $p^{2}$, rappresenta la probabilit\`{a} che Tullio
+riesca a scaricare i 2 brani in soli 2 tentativi (2 successi
+consecutivi).
+
+Il secondo addendo, $2p^{2}(1-p)$, rappresenta la probabilit\`{a} 
+che Tullio riesca a scaricare i 2 brani in \emph{esattamente} 3
+tentativi. In tal caso infatti sono possibili 2 situazioni disgiunte
+(ok--no--ok e no--ok--ok), le quali hanno entrambe probabilit\`{a}
+$p^{2}(1-p)$ perch\'{e} contengono 2 successi ed un mancato
+scaricamento.
+
+Il terzo addendo, $3p^{2}(1-p)^{2}$, rappresenta la probabilit\`{a}
+che Tullio riesca a scaricare i 2 brani in \emph{esattamente} 4
+tentativi.  Tale probabilit\`{a} \`{e} stata calcolata
+precedentemente.
+
+\`{E} chiaro infine che Tullio non pu\`{o} impiegare pi\`{u} di 4
+tentativi per scaricare 2 brani, in quanto questo comporterebbe la
+memorizzazione di 3 o pi\`{u} tag, con conseguente formattazione
+dell'hard disk.
+
+
+\DomandaC 
+La probabilit\`{a} richiesta \`{e}
+$$p^{n}+np^{n}(1-p)+\frac{n(n+1)}{2}p^{n}(1-p)^{2}.$$
+
+Per dimostrarlo osserviamo preliminarmente che lo scaricamento di $n$
+brani pu\`{o} avvenire soltanto in $n$, $n+1$, o $n+2$ tentativi.
+
+La probabilit\`{a} che Tullio ce la faccia in $n$ tentativi \`{e}
+$p^{n}$, perch\'{e} devono essere tutti successi.
+
+La probabilit\`{a} che Tullio ce la faccia in \emph{esattamente}
+$(n+1)$ tentativi \`{e} $np^{n}(1-p)$.  Si devono infatti realizzare
+$n$ successi ed un insuccesso, il quale pu\`{o} situarsi in uno
+qualunque dei primi $n$ tentativi (ma non nell'ultimo!).
+
+Calcoliamo infine la probabilit\`{a} che Tullio ce la faccia in
+\emph{esattamente} $(n+2)$ tentativi. In tal caso servono $n$ successi e
+2 insuccessi, i quali possono situarsi in 2 qualsiasi dei primi $(n+1)$ 
+tentativi (ma non nell'ultimo!). I modi di scegliere 2 tentativi
+infruttuosi su $(n+1)$ sono $\binom{n+1}{2}$. Ne segue che quest'ultima 
+probabilit\`{a} \`{e} data da
+$$\binom{n+1}{2}p^{n}(1-p)^{2}=\frac{n(n+1)}{2}p^{n}(1-p)^{2}.$$
+}
+
+\renewcommand{\SoluzioniAlternative}{}
+
+\renewcommand{\Osservazioni}{\TitoloOsservazione
+Pu\`{o} essere interessante considerare il caso pi\`{u} generale in
+cui la formattazione dell'hard disk avviene al $k$-esimo tag.
+Ragionando come nella soluzione proposta si ottiene che la
+probabilit\`{a} di scaricare $n$ brani \`{e} in tal caso data dalla
+formula
+$$p^{n}\sum_{i=0}^{k-1}\binom{n+i-1}{i}(1-p)^{i}.$$
+
+Per $k=3$ si riottiene ovviamente quanto dimostrato precedentemente.
+}
+
+\renewcommand{\Commenti}{
+}

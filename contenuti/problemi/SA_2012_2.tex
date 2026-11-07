@@ -1,0 +1,214 @@
+\renewcommand{\Anno}{2012}
+
+\renewcommand{\NumeroProblema}{2}
+
+\renewcommand{\Testo}{
+La figura sottostante rappresenta i 7 tetramini possibili (i pezzi 
+del classico gioco del Tetris).
+\begin{center}
+	\psset{unit=3ex}
+	\pspicture(0,0)(4,2)
+	\psline[linewidth=1.5\pslinewidth](0,0)(4,0)(4,1)(0,1)(0,0)
+	\psline[linestyle=dashed,linewidth=0.7\pslinewidth](1,0)(1,1)
+	\psline[linestyle=dashed,linewidth=0.7\pslinewidth](2,0)(2,1)
+	\psline[linestyle=dashed,linewidth=0.7\pslinewidth](3,0)(3,1)
+	\endpspicture
+	\hfill
+	\pspicture(0,0)(2,2)
+	\psline[linewidth=1.5\pslinewidth](0,0)(2,0)(2,2)(0,2)(0,0)
+	\psline[linestyle=dashed,linewidth=0.7\pslinewidth](1,0)(1,2)
+	\psline[linestyle=dashed,linewidth=0.7\pslinewidth](0,1)(2,1)
+	\endpspicture
+	\hfill
+	\pspicture(0,0)(3,2)
+	\psline[linewidth=1.5\pslinewidth](0,0)(3,0)(3,1)(2,1)(2,2)(1,2)(1,1)(0,1)(0,0)
+	\psline[linestyle=dashed,linewidth=0.7\pslinewidth](1,0)(1,1)(2,1)(2,0)
+	\endpspicture
+	\hfill
+	\pspicture(0,0)(3,2)
+	\psline[linewidth=1.5\pslinewidth](0,0)(3,0)(3,2)(2,2)(2,1)(0,1)(0,0)
+	\psline[linestyle=dashed,linewidth=0.7\pslinewidth](1,0)(1,1)
+	\psline[linestyle=dashed,linewidth=0.7\pslinewidth](2,0)(2,1)(3,1)
+	\endpspicture
+	\hfill
+	\pspicture(0,0)(3,2)
+	\psline[linewidth=1.5\pslinewidth](0,0)(3,0)(3,1)(1,1)(1,2)(0,2)(0,0)
+	\psline[linestyle=dashed,linewidth=0.7\pslinewidth](2,0)(2,1)
+	\psline[linestyle=dashed,linewidth=0.7\pslinewidth](1,0)(1,1)(0,1)
+	\endpspicture
+	\hfill
+	\pspicture(0,0)(3,2)
+	\psline[linewidth=1.5\pslinewidth](0,0)(2,0)(2,1)(3,1)(3,2)(1,2)(1,1)(0,1)(0,0)
+	\psline[linestyle=dashed,linewidth=0.7\pslinewidth](1,0)(1,1)(2,1)(2,2)
+	\endpspicture
+	\hfill
+	\pspicture(0,0)(3,2)
+	\psline[linewidth=1.5\pslinewidth](3,0)(3,1)(2,1)(2,2)(0,2)(0,1)(1,1)(1,0)(3,0)
+	\psline[linestyle=dashed,linewidth=0.7\pslinewidth](1,2)(1,1)(2,1)(2,0)
+	\endpspicture
+\end{center}
+
+\begin{enumerate}
+	\renewcommand{\labelenumi}{(\alph{enumi})}
+	\item Determinare per quale o quali dei pezzi precedenti vale la
+	seguente propriet\`{a}: ``scartando quel pezzo, \`{e} possibile
+	utilizzare i restanti 6 pezzi una ed una sola volta in modo da
+	comporre un rettangolo $6\times 4$''.
+
+	\item  Stessa domanda, nel caso di rettangoli $8\times 3$.
+\end{enumerate}
+
+{\small Nota: si intende che nel comporre il rettangolo \`{e}
+possibile traslare, ruotare ed accostare i pezzi a piacimento, ma non
+\`{e} possibile tagliarli o ruotarli nello spazio uscendo dal piano
+(cos\`{i}, per esempio, non \`{e} possibile trasformare l'uno
+nell'altro i 2 pezzi a forma di L).}
+}
+
+\renewcommand{\Risposta}{
+In entrambi i casi la costruzione \`{e} possibile se e solo se si 
+scarta il pezzo a T.}
+
+\renewcommand{\Aiutino}{
+Esibire esplicitamente una costruzione dei 2 rettangoli ottenuta 
+utilizzando tutti i pezzi, tranne quello a T.
+
+Supponiamo poi di colorare i rettangoli a scacchiera. Quando andiamo 
+a disporre i pezzi, quanti quadrettini occupano dell'uno e dell'altro 
+colore? Cosa ha di speciale il pezzo a T?
+}
+
+\renewcommand{\SoluzioneUfficiale}{\TitoloSoluzione 
+\`{E} possibile costruire i 2 rettangoli in questione se e solo se si 
+scarta il pezzo a T.
+
+Per mostrare che scartando il pezzo a T la costruzione \`{e}
+possibile, basta esibire 2 esempi espliciti di costruzione, come nella
+figura seguente.
+\begin{center}
+	\psset{unit=3ex}
+	\hfill
+	\pspicture(0,0)(6,4)
+	\multips(1,0)(1,0){5}{
+	\psline[linestyle=dashed,linewidth=0.7\pslinewidth](0,0)(0,4)
+	}
+	\multips(0,1)(0,1){3}{
+	\psline[linestyle=dashed,linewidth=0.7\pslinewidth](0,0)(6,0)
+	}
+	\psline[linewidth=1.5\pslinewidth](0,0)(6,0)(6,4)(0,4)(0,0)
+	\psline[linewidth=1.5\pslinewidth](1,0)(1,1)(5,1)(5,0)
+	\psline[linewidth=1.5\pslinewidth](0,2)(1,2)(1,3)(5,3)(5,2)(6,2)
+	\psline[linewidth=1.5\pslinewidth](2,1)(2,3)
+	\psline[linewidth=1.5\pslinewidth](4,1)(4,3)
+	\psline[linewidth=1.5\pslinewidth](3,4)(3,3)
+	\endpspicture
+	\hfill
+	\pspicture(0,0)(8,3)
+	\psline[linewidth=1.5\pslinewidth](0,0)(8,0)(8,3)(0,3)(0,0)
+	\multips(1,0)(1,0){7}{
+	\psline[linestyle=dashed,linewidth=0.7\pslinewidth](0,0)(0,3)
+	}
+	\multips(0,1)(0,1){2}{
+	\psline[linestyle=dashed,linewidth=0.7\pslinewidth](0,0)(8,0)
+	}
+	\psline[linewidth=1.5\pslinewidth](2,0)(2,1)(6,1)(6,0)
+	\psline[linewidth=1.5\pslinewidth](3,1)(3,3)
+	\psline[linewidth=1.5\pslinewidth](5,1)(5,3)
+	\psline[linewidth=1.5\pslinewidth](0,1)(1,1)(1,2)(3,2)
+	\psline[linewidth=1.5\pslinewidth](8,1)(7,1)(7,2)(5,2)
+	\endpspicture
+	\hfill\mbox{}
+\end{center}
+
+Per mostrare che la costruzione non \`{e} possibile se si 
+scartano altri pezzi, ricorriamo ad una tecnica di colorazione. 
+Supponiamo di colorare a scacchiera, nel modo classico, i rettangoli 
+finali. Ogni rettangolo conterr\`{a} un ugual numero di quadratini 
+dei 2 colori. \`{E} inoltre abbastanza semplice verificare che i 
+tetramini diversi da quello a T, comunque disposti nel rettangolo 
+finale, occuperanno sempre 2 caselle di un colore e 2 caselle 
+dell'altro, mentre il tetramino a~T occuper\`{a} sempre 3 caselle di 
+un colore ed una sola dell'altro. La figura sottostante mostra solo 
+alcune delle possibili disposizioni dei pezzi, ma la sostanza non 
+cambia se anche i pezzi vengono traslati o ruotati.
+\begin{center}
+	\psset{unit=3ex}
+	\pspicture(0,0)(4,2)
+	\psframe*[linecolor=green](0,0)(1,1)
+	\psframe*[linecolor=green](2,0)(3,1)
+	\psline[linewidth=1.5\pslinewidth](0,0)(4,0)(4,1)(0,1)(0,0)
+	\psline[linestyle=dashed,linewidth=0.7\pslinewidth](1,0)(1,1)
+	\psline[linestyle=dashed,linewidth=0.7\pslinewidth](2,0)(2,1)
+	\psline[linestyle=dashed,linewidth=0.7\pslinewidth](3,0)(3,1)
+	\endpspicture
+	\hfill
+	\pspicture(0,0)(2,2)
+	\psframe*[linecolor=green](0,0)(1,1)
+	\psframe*[linecolor=green](1,1)(2,2)
+	\psline[linewidth=1.5\pslinewidth](0,0)(2,0)(2,2)(0,2)(0,0)
+	\psline[linestyle=dashed,linewidth=0.7\pslinewidth](1,0)(1,2)
+	\psline[linestyle=dashed,linewidth=0.7\pslinewidth](0,1)(2,1)
+	\endpspicture
+	\hfill
+	\pspicture(0,0)(3,2)
+	\psframe*[linecolor=green](0,0)(1,1)
+	\psframe*[linecolor=green](2,0)(3,1)
+	\psframe*[linecolor=green](1,1)(2,2)
+	\psline[linewidth=1.5\pslinewidth](0,0)(3,0)(3,1)(2,1)(2,2)(1,2)(1,1)(0,1)(0,0)
+	\psline[linestyle=dashed,linewidth=0.7\pslinewidth](1,0)(1,1)(2,1)(2,0)
+	\endpspicture
+	\hfill
+	\pspicture(0,0)(3,2)
+	\psframe*[linecolor=green](0,0)(1,1)
+	\psframe*[linecolor=green](2,0)(3,1)
+	\psline[linewidth=1.5\pslinewidth](0,0)(3,0)(3,2)(2,2)(2,1)(0,1)(0,0)
+	\psline[linestyle=dashed,linewidth=0.7\pslinewidth](1,0)(1,1)
+	\psline[linestyle=dashed,linewidth=0.7\pslinewidth](2,0)(2,1)(3,1)
+	\endpspicture
+	\hfill
+	\pspicture(0,0)(3,2)
+	\psframe*[linecolor=green](0,0)(1,1)
+	\psframe*[linecolor=green](2,0)(3,1)
+	\psline[linewidth=1.5\pslinewidth](0,0)(3,0)(3,1)(1,1)(1,2)(0,2)(0,0)
+	\psline[linestyle=dashed,linewidth=0.7\pslinewidth](2,0)(2,1)
+	\psline[linestyle=dashed,linewidth=0.7\pslinewidth](1,0)(1,1)(0,1)
+	\endpspicture
+	\hfill
+	\pspicture(0,0)(3,2)
+	\psframe*[linecolor=green](0,0)(1,1)
+	\psframe*[linecolor=green](1,1)(2,2)
+	\psline[linewidth=1.5\pslinewidth](0,0)(2,0)(2,1)(3,1)(3,2)(1,2)(1,1)(0,1)(0,0)
+	\psline[linestyle=dashed,linewidth=0.7\pslinewidth](1,0)(1,1)(2,1)(2,2)
+	\endpspicture
+	\hfill
+	\pspicture(0,0)(3,2)
+	\psframe*[linecolor=green](1,1)(2,2)
+	\psframe*[linecolor=green](2,0)(3,1)
+	\psline[linewidth=1.5\pslinewidth](3,0)(3,1)(2,1)(2,2)(0,2)(0,1)(1,1)(1,0)(3,0)
+	\psline[linestyle=dashed,linewidth=0.7\pslinewidth](1,2)(1,1)(2,1)(2,0)
+	\endpspicture
+\end{center}
+
+Se dunque fosse possibile comporre un rettangolo usando il tetramino 
+a~T pi\`{u} altri 5 tetramini, quel rettangolo finirebbe 
+necessariamente per avere pi\`{u} caselle di un colore che di un 
+altro, il che \`{e} assurdo.
+}
+
+\renewcommand{\SoluzioniAlternative}{
+}
+
+\renewcommand{\Osservazioni}{
+La soluzione presentata assume che la costruzione del rettangolo
+avvenga con i pezzi che ``rispettano la quadrettatura''.  Si pu\`{o}
+dimostrare che tale ipotesi, oltre ad essere sicuramente intuitiva,
+\`{e} in realt\`{a} proprio una condizione necessaria, nel senso che
+la costruzione non pu\`{o} avvenire altrimenti. Ad esempio si pu\`{o} 
+osservare che i pezzi che occupano i vertici del rettangolo dovranno 
+necessariamente rispettare la quadrettatura, e poi ripetere il 
+ragionamento per i pezzi che occuperanno i vertici della parte 
+rimanente.  
+}
+
+\renewcommand{\Commenti}{
+}

@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.tex text eol=lf
+*.sty text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+

@@ -1,0 +1,128 @@
+\renewcommand{\Anno}{2012}
+
+\renewcommand{\NumeroProblema}{1}
+
+\renewcommand{\Testo}{
+L'interno della vasca di un acquario ha la forma di un
+parallelepipedo.  Sul fondo dell'acquario \`{e} appoggiato un prisma
+(si intende che l'acquario \`{e} a sua volta appoggiato su un piano
+orizzontale e la base del prisma \`{e} totalmente a contatto con la
+base dell'interno dell'acquario).  Non sono note le misure interne
+della vasca, n\'{e} l'altezza del prisma, n\'{e} la forma o le misure
+della base del prisma.
+
+Inizialmente l'acquario \`{e} vuoto.  Successivamente, Paolo versa 10
+litri di acqua nell'acquario, e nota che il livello sale a 12~cm.  Poi
+versa altri 10 litri di acqua, ed il livello sale a 22~cm.  Infine
+versa altri 10 litri di acqua, ed il livello sale a 30~cm (tutti i 
+livelli sono riferiti alla parte interna del fondo della vasca).
+
+\begin{enumerate}
+	\renewcommand{\labelenumi}{(\alph{enumi})}
+	\item  Determinare quale livello raggiungerebbe l'acqua se 
+	Paolo versasse altri 10 litri di acqua (supponendo ovviamente che 
+	ci stiano nell'acquario). 
+
+	\item Determinare quanti litri di acqua avrebbe dovuto versare
+	inizialmente Paolo per fare arrivare l'acqua esattamente in
+	corrispondenza della base superiore del prisma.
+\end{enumerate}
+}
+
+\renewcommand{\Risposta}{
+\begin{enumerate}
+	\renewcommand{\labelenumi}{(\alph{enumi})}
+	\item  38 cm.
+
+	\item  15 litri
+\end{enumerate}
+}
+
+\renewcommand{\Aiutino}{
+Durante quale dei 3 versamenti di Paolo avviene che l'acqua ricopre
+completamente il prisma?  Di quanto cresce il livello dell'acqua dopo
+il superamento della sommit\`{a} del prisma?  Di quanto cresce il
+livello dell'acqua prima del superamento della sommit\`{a} del 
+prisma? Quale o quali formule descrivono il volume dell'acqua in 
+funzione del livello raggiunto?}
+
+\renewcommand{\SoluzioneUfficiale}{\TitoloSoluzione 
+Sia $h$ l'altezza del prisma. Fino a quando non raggiunge la 
+sommit\`{a} del prisma, il livello dell'acqua cresce linearmente con 
+il volume versato, con una costante di proporzionalit\`{a} dipendente 
+dalla differenza tra l'area base $S_{V}$ della vasca e l'area base 
+$S_{P}$ del prisma. In formule, il volume $V$ ed il livello $\ell$ 
+sono legati dalla relazione
+\begin{equation}
+	V=(S_{V}-S_{P})\ell
+	\hspace{3em}
+	0\leq\ell\leq h.
+	\label{eqn:vol-sotto}
+\end{equation} 
+
+Non appena il livello supera la quota $h$, la costante di 
+proporzionalit\`{a} dipende solo pi\`{u} da $S_{V}$, e si ha che
+\begin{equation}
+	V=(S_{V}-S_{P})h+S_{V}(\ell-h)
+	\hspace{3em}
+	\ell\geq h.
+	\label{eqn:vol-sopra}
+\end{equation}
+
+Dai dati del problema \`{e} chiaro quindi che la sommit\`{a} del 
+prisma \`{e} stata raggiunta tra il decimo ed il ventesimo litro. Da 
+quel punto in poi, la crescita del livello \`{e} proporzionale 
+all'aumento di volume, e la costante di proporzionalit\`{a} non 
+cambia pi\`{u}. Se dunque il livello sale di 8~cm passando da 20 a 30 
+litri, esso salir\`{a} di 8~cm anche passando da 30 a 40 litri. 
+Pertanto, se si versassero 40 litri di acqua, il livello totale 
+sarebbe di 38~cm, il che risponde al punto~(a).
+
+Per rispondere al punto~(b), indichiamo con $x$ il numero di litri
+richiesto, che sappiamo gi\`{a} essere compreso tra 10 e 20.
+Dai dati del problema, deduciamo che prima del raggiungimento della
+sommit\`{a} del prisma il livello cresce di 12~cm ogni 10 litri di
+acqua versati, e dopo cresce di 8~cm ogni 10 litri di acqua versati. 
+Pertanto, dopo 20 litri di acqua il livello in cm sar\`{a}
+$$22=\frac{12}{10}x+\frac{8}{10}(20-x),$$
+da cui $x=15$.
+}
+
+\renewcommand{\SoluzioniAlternative}{\TitoloSoluzioneAlternativaA
+Usando le equazioni (\ref{eqn:vol-sotto}) e (\ref{eqn:vol-sopra}) per 
+i 3 valori dati di volume (tradotto in cm$^{3}$) e livello (in cm), 
+si ottiene il sistema
+$$\left\{
+\begin{array}{l}
+	(S_{V}-S_{P})12=10.000,  \\
+	\noalign{\vspace{0.5ex}}
+	(S_{V}-S_{P})h+S_{V}(22-h)=20.000,  \\
+	\noalign{\vspace{0.5ex}}
+	(S_{V}-S_{P})h+S_{V}(30-h)=30.000,
+\end{array}
+\right.$$
+da cui con semplici calcoli si ricavano le 3 incognite
+$$h=18\mbox{ cm},
+\quad\quad
+S_{V}=1.250\mbox{ cm}^{2},
+\quad\quad
+S_{P}=\frac{1.250}{3}\mbox{ cm}^{2}.$$
+
+Da qui \`{e} facile rispondere ai punti~(a) e~(b). Per il punto~(a), 
+basta applicare la (\ref{eqn:vol-sopra}) con $V=40.000$. Si ottiene 
+cos\`{i} che
+$$40.000=\left(1.250-\frac{1.250}{3}\right)\cdot 18+
+1.250(\ell-18),$$
+da cui con semplici calcoli si ottiene $\ell=38$.
+
+Per il punto~(b), basta applicare la (\ref{eqn:vol-sotto}) o la 
+(\ref{eqn:vol-sopra}), che in questo caso sono equivalenti, con 
+$\ell=18$. Si ottiene cos\`{i} che
+$$V=\left(1.250-\frac{1.250}{3}\right)\cdot 18=15.000,$$
+che corrisponde a 15 litri.
+}
+
+\renewcommand{\Osservazioni}{}
+
+\renewcommand{\Commenti}{
+}

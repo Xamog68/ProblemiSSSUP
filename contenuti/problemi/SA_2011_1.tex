@@ -1,0 +1,110 @@
+\renewcommand{\Anno}{2011}
+
+\renewcommand{\NumeroProblema}{1}
+
+\renewcommand{\Testo}{
+Consideriamo la somma
+$$\frac{1}{2}+\frac{1}{3}+\ldots+\frac{1}{11}+\frac{1}{12},$$
+in cui compaiono tutte le frazioni con numeratore 1 e denominatore
+compreso tra 2 e 12.  Dalla somma si vogliono eliminare alcuni degli
+addendi, in modo che la somma dei restanti sia esattamente 1.
+
+Determinare tutti i modi in cui si pu\`{o} fare questa operazione.
+}
+
+\renewcommand{\Risposta}{
+Il problema ammette 2 soluzioni:
+$$\frac{1}{2}+\frac{1}{3}+\frac{1}{6}=1,
+\hspace{3em}
+\frac{1}{2}+\frac{1}{4}+\frac{1}{6}+\frac{1}{12}=1.$$
+}
+
+\renewcommand{\Aiutino}{ 
+\`{E} possibile che in una soluzione compaiano la frazione 1/7 o la
+frazione 1/11?  \`{E} possibile che in una soluzione compaiano la
+frazione 1/5 o la frazione 1/10?  \`{E} possibile che in una soluzione
+compaiano la frazione 1/9 o la frazione 1/8?  \`{E} possibile che in una
+soluzione compaia la frazione 1/4 ma non la frazione 1/12 (o
+viceversa)?  A questo punto non restano molti casi \ldots
+}
+
+\renewcommand{\SoluzioneUfficiale}{\TitoloSoluzione 
+Il problema ha le seguenti 2 soluzioni:
+$$\frac{1}{2}+\frac{1}{3}+\frac{1}{6}=1,
+\hspace{3em}
+\frac{1}{2}+\frac{1}{4}+\frac{1}{6}+\frac{1}{12}=1.$$
+
+Resta da dimostrare che non ci sono altre possibilit\`{a}, cosa che 
+facciamo in 5 passi.
+
+\subparagraph{\textmd{Passo 1}}
+
+Mostriamo che in una soluzione del problema non possono comparire le 
+frazioni con denominatore 7 e 11.
+
+Supponiamo infatti che in una soluzione compaia la frazione 1/7. 
+Allora la somma delle restanti frazioni deve essere uguale a 6/7. 
+Questo non \`{e} possibile perch\'{e} tutte le frazioni rimaste hanno 
+un denominatore che non contiene fattori 7, quindi la loro somma non 
+pu\`{o} avere il denominatore divisibile per 7.
+
+Stesso discorso vale per il fattore 11.
+
+\subparagraph{\textmd{Passo 2}}
+
+Mostriamo che in una soluzione del problema non possono comparire le 
+frazioni con denominatore 5 e 10.
+
+Se infatti in una soluzione compare una sola delle 2, allora si 
+ragiona come nel passo precedente considerando il fattore 5. Se 
+invece sono presenti tutte e 2, allora la loro somma \`{e} 3/10, 
+quindi la somma delle restanti deve essere 7/10, e ancora una volta 
+questo non \`{e} possibile perch\'{e} non ci sono pi\`{u} 
+denominatori divisibili per 5.
+
+\subparagraph{\textmd{Passo 3}}
+
+Mostriamo che in una soluzione del problema non possono comparire le 
+frazioni con denominatore 8 e 9.
+
+Supponiamo infatti che in una soluzione compaia la frazione 1/9.
+Allora la somma delle restanti frazioni deve essere uguale a 8/9.  Le
+restanti frazioni per\`{o} hanno al massimo un fattore 3 al
+denominatore, quindi il loro denominatore comune conterr\`{a} al
+massimo un fattore 3.
+
+Il discorso per l'8 \`{e} analogo, basta contare i fattori 2 al 
+denominatore.
+
+\subparagraph{\textmd{Passo 4}}
+
+Mostriamo che in una soluzione c'\`{e} la frazione 1/4 se e solo c'\`{e} 
+la frazione 1/12.
+
+Infatti gi\`{a} sappiamo che 1/8 non c'\`{e}, quindi per lo stesso
+ragionamento di prima non pu\`{o} esserci una soluzione che coinvolge
+una sola frazione con denominatore divisibile per 4.
+
+\subparagraph{\textmd{Passo 5}}
+
+Nei passi precedenti ci siamo ridotti a considerare le frazioni con
+denominatori 2, 3, 4, 6, 12.  Inoltre sappiamo che c'\`{e} 1/4 se e
+solo se c'\`{e} 1/12.  Ci restano quindi 2 casi.
+\begin{itemize}
+	\item  Se non ci sono 1/4 e 1/12, allora la somma delle frazioni 
+	restanti \`{e} esattamente 1, quindi abbiamo la prima soluzione.
+
+	\item  Se ci sono 1/4 e 1/12, che come somma fanno 1/3, allora 
+	l'unica possibilit\`{a} \`{e} di rinunciare alla frazione 1/3, 
+	ottenendo cos\`{i} la seconda soluzione.
+\end{itemize}
+
+
+}
+
+\renewcommand{\SoluzioniAlternative}{}
+
+\renewcommand{\Osservazioni}{}
+
+\renewcommand{\Commenti}{
+}

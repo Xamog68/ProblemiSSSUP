@@ -1,0 +1,155 @@
+\renewcommand{\Anno}{2002}
+
+\renewcommand{\NumeroProblema}{2}
+
+\renewcommand{\Testo}{Lungo un corridoio della Scuola Sant'Anna vi
+sono $n$ aule.  Ognuna di esse \`{e} contrassegnata con un numero
+intero compreso fra 1 ed $n$ (naturalmente aule differenti sono
+contrassegnate da numeri differenti).  Dario osserva che la somma dei
+numeri delle aule sul lato destro coincide con la somma dei numeri
+delle aule sul lato sinistro.
+	
+Tornando l'anno successivo Dario nota che, in seguito a lavori di
+ristrutturazione, un'aula \`{e} stata spostata da uno dei due lati
+all'altro, mentre tutte le altre hanno conservato la loro
+collocazione.  Inoltre tutte le aule, compresa quella spostata, hanno
+conservato la loro numerazione.  Dario nota poi che ora la somma dei
+numeri delle aule su uno dei due lati \`{e} il doppio della somma dei
+numeri delle aule sull'altro lato.
+	
+Determinare per quali valori di $n$ si pu\`{o} avere questa
+situazione.}
+
+\renewcommand{\Risposta}{I possibili valori di $n$ sono 3, 8, 11.}
+
+\renewcommand{\Aiutino}{Quanto vale all'inizio la somma dei numeri
+delle aule su ciascuno dei 2 corridoi?  Sia ora $k$ l'aula che si
+sposta: calcolando le nuove somme, ed imponendo che una sia il doppio
+dell'altra, si ottiene che $k=n(n+1)/12$.  Ricordando che $k$ deve
+essere intero e minore od uguale a $n$, si trovano i possibili valori
+di $k$.  Per tali valori occorre poi esibire una disposizione delle
+aule che soddisfi l'ipotesi.}
+
+\renewcommand{\SoluzioneUfficiale}{\TitoloSoluzione La somma dei 
+numeri di tutte le aule vale
+$$1+2+\ldots+n=\frac{n(n+1)}{2},$$
+dunque all'inizio la somma dei numeri delle aule su ciascuno dei 2 
+lati del corridoio vale
+$$\frac{n(n+1)}{4}.$$
+
+Sia ora $k$ il numero dell'aula che si sposta. Al termine dei lavori 
+le somme dei numeri delle aule sui 2 lati del corridoio saranno
+$$\frac{n(n+1)}{4}-k
+\hspace{3em}
+\mbox{e}
+\hspace{3em}
+\frac{n(n+1)}{4}+k.$$
+
+Imponendo ora che la seconda somma sia il doppio della prima, e 
+semplificando, otteniamo che
+\begin{equation}
+	k=\frac{n(n+1)}{12}
+	\label{eq:aulefranzoni}
+\end{equation}
+
+Ora facciamo due considerazioni.
+\begin{itemize}
+	\item  Dovendo essere $k\leq n$, sostituendo la 
+	(\ref{eq:aulefranzoni}) otteniamo la disequazione $n(n-11)\leq 0$, da 
+	cui $n\leq 11$.
+
+	\item  Dovendo $k$ essere intero, dalla (\ref{eq:aulefranzoni}) 
+	ricaviamo che $n(n+1)$ deve essere divisibile per 12. Per verifica 
+	diretta, gli unici valori interi di $n$, compresi tra 1 e 11, per 
+	cui ci\`{o} accade sono $n=3$ (da cui $k=1$), $n=8$ (da cui $k=6$) 
+	e $n=11$ (da cui $k=11$).
+\end{itemize}
+
+Non ci resta ora che fornire, per tali valori di $n$, degli esempi di 
+disposizione e spostamento delle aule che verificano le condizioni 
+richieste (i corrispondenti valori di $k$ ci dicono, nei vari casi, 
+quale aula deve spostarsi).
+
+\begin{center}
+	\psset{unit=.8ex}
+	\pspicture(-25,-32)(72,14)
+	
+	\rput[l](-2,12){\textbf{Prima\ldots}}
+	\rput[l](38,12){\textbf{Dopo\ldots}}
+	\rput(-20,2.5){$n=3$}
+	
+	\rput(0,0){
+	\rput(-20,2.5){$n=3$}
+	\aulagialla{0,0}{1}
+	\aula{4,0}{2}
+	\aula{0,5}{3}}
+	
+	\rput(40,0){
+	\aulagialla{4,5}{1}
+	\aula{4,0}{2}
+	\aula{0,5}{3}}
+	
+	\rput(0,-15){
+	\rput(-20,2.5){$n=8$}
+	\aulagialla{0,0}{6}
+	\aula{4,0}{7}
+	\aula{8,0}{5}
+	\aula{0,5}{1}
+	\aula{4,5}{2}
+	\aula{8,5}{3}
+	\aula{12,5}{4}
+	\aula{16,5}{8}
+	}
+	
+	\rput(40,-15){
+	\aulagialla{20,5}{6}
+	\aula{4,0}{7}
+	\aula{8,0}{5}
+	\aula{0,5}{1}
+	\aula{4,5}{2}
+	\aula{8,5}{3}
+	\aula{12,5}{4}
+	\aula{16,5}{8}
+	}
+	
+	\rput(0,-30){
+	\rput(-20,2.5){$n=11$}
+	\aulagialla{0,0}{11}
+	\aula{4,0}{4}
+	\aula{8,0}{8}
+	\aula{12,0}{10}
+	\aula{0,5}{1}
+	\aula{4,5}{2}
+	\aula{8,5}{3}
+	\aula{12,5}{5}
+	\aula{16,5}{6}
+	\aula{20,5}{7}
+	\aula{24,5}{9}
+	}
+	
+	\rput(40,-30){
+	\aulagialla{28,5}{11}
+	\aula{4,0}{4}
+	\aula{8,0}{8}
+	\aula{12,0}{10}
+	\aula{0,5}{1}
+	\aula{4,5}{2}
+	\aula{8,5}{3}
+	\aula{12,5}{5}
+	\aula{16,5}{6}
+	\aula{20,5}{7}
+	\aula{24,5}{9}
+	}
+	
+	\endpspicture
+\end{center}
+}
+
+\renewcommand{\SoluzioniAlternative}{
+}
+
+\renewcommand{\Osservazioni}{
+}
+
+\renewcommand{\Commenti}{
+}

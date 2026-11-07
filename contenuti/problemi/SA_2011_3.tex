@@ -1,0 +1,101 @@
+\renewcommand{\Anno}{2011}
+
+\renewcommand{\NumeroProblema}{3}
+
+\renewcommand{\Testo}{ 
+Paolo dispone di un lungo bastone cilindrico a sezione circolare.
+Sezionando il bastone mediante opportuni piani, Paolo ricava tre pezzi
+che poi, ricomposti opportunamente, costituiscono una cornice a forma
+di triangolo equilatero.
+
+Indichiamo con $r$ il raggio della sezione del bastone, e con $L$ il 
+lato del triangolo equilatero i cui lati stanno sugli assi dei 3 
+pezzi di bastone che costituiscono la cornice.
+
+Determinare, in funzione di $r$ ed $L$, il volume e l'area della 
+superficie della cornice.
+}
+
+\renewcommand{\Risposta}{
+$\mbox{Volume}=3\pi Lr^{2}$, $\mbox{Area superficie}=6\pi Lr$.
+}
+
+\renewcommand{\Aiutino}{
+Smontando i 3 ``lati'' della cornice, e rimontandoli opportunamente, 
+si ottiene un cilindro~\ldots
+}
+
+\renewcommand{\SoluzioneUfficiale}{\TitoloSoluzione
+Il volume $V$ e l'area $S$ della superficie della cornice sono uguali 
+a
+$$V=3\pi Lr^{2},
+\hspace{4em}
+S=6\pi Lr.$$
+
+L'idea fondamentale \`{e} che, smontando i 3 pezzi che compongono la 
+cornice, e rimontandoli opportunamente, si ottiene un cilindro di 
+altezza $3L$ e sezione di raggio $r$. A quel punto il volume e la 
+superficie della cornice coincidono, rispettivamente, con il volume e 
+la superficie laterale del cilindro, da cui le formule di sopra.
+
+La scomposizione ed il successivo rimontaggio sono illustrati nella 
+figura seguente.
+
+\begin{center}
+	\psset{unit=2.5ex}
+	\pspicture(-8,-5.5)(8,8)
+	\pstGeonode[PointName=none,PointSymbol=none](4;90){A}(4;210){B}(4;330){C}
+	\pstGeonode[PointName=none,PointSymbol=none](5.5;90){A'}(5.5;210){B'}(5.5;330){C'}
+	\pstGeonode[PointName=none,PointSymbol=none](7;90){A''}(7;210){B''}(7;330){C''}
+	\pspolygon[linewidth=1.5\pslinewidth](A)(B)(C)
+	\pspolygon[linecolor=cyan](A')(B')(C')
+	\pcline[linecolor=cyan]{<->}(B')(C')
+	\lput*{:U}{$L$}
+	\pspolygon[linewidth=1.5\pslinewidth](A'')(B'')(C'')
+	\psline(A)(A'')
+	\psline(B)(B'')
+	\psline(C)(C'')
+	\endpspicture
+	
+	\pspicture(-3,-3)(29,1)
+	\pspolygon*[linecolor=green](0,0)(0,-1.5)(!-1.5 3 sqrt mul -1.5)
+	\pspolygon(0,0)(!15 3 sqrt mul 0)(!16.5 3 sqrt mul -1.5)(!-1.5 3 sqrt 
+	mul -1.5)
+	\psline(!4 3 sqrt mul 0)(!5.5 3 sqrt mul -1.5)
+	\psline(!11 3 sqrt mul 0)(!9.5 3 sqrt mul -1.5)
+	\psline[linecolor=cyan](!-0.75 3 sqrt mul -0.75)(!15.75 3 sqrt mul -0.75)
+	\psline[linestyle=dashed](0,1)(0,-2.5)
+	\endpspicture
+
+	\pspicture(-3,-3)(29,1)
+	\pspolygon*[linecolor=green](!15 3 sqrt mul 0)(!16.5 3 sqrt mul 0)
+	(!16.5 3 sqrt mul -1.5)
+	\pspolygon(0,0)(!16.5 3 sqrt mul 0)(!16.5 3 sqrt mul -1.5)(0,-1.5)
+	\psline(!4 3 sqrt mul 0)(!5.5 3 sqrt mul -1.5)
+	\psline(!11 3 sqrt mul 0)(!9.5 3 sqrt mul -1.5)
+	\psline[linecolor=cyan](0,-0.75)(!16.5 3 sqrt mul -0.75)
+	\psline(!15 3 sqrt mul 0)(!16.5 3 sqrt mul -1.5)
+	\pcline[linecolor=cyan,offset=-2ex]{|<->|}(0,-1.5)(!16.5 3 sqrt mul -1.5)
+	\lput*{:U}{$3L$}
+	\pcline[linecolor=cyan,offset=-2ex]{|<->|}(0,0)(0,-0.75)
+	\Bput{$r$}
+	% \psline[linestyle=dashed](!16.5 3 sqrt mul 1)(!16.5 3 sqrt mul -2.5)
+	\endpspicture
+\end{center}
+
+Nell'ultimo passaggio abbiamo ``tagliato un angolo'' per ``rimontarlo 
+dall'altra parte''. Si noti che i 3 pezzi della cornice sono ottenuti
+tagliando mediante piani che formano angoli di $30^{\circ}$ con 
+l'asse del cilindro, ma questo non \`{e} rilevante ai fini del 
+successivo rimontaggio.
+
+}
+
+\renewcommand{\SoluzioniAlternative}{
+}
+
+\renewcommand{\Osservazioni}{
+}
+
+\renewcommand{\Commenti}{
+}

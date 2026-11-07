@@ -1,0 +1,115 @@
+\renewcommand{\Anno}{2006}
+
+\renewcommand{\NumeroProblema}{4}
+
+\renewcommand{\Testo}{Si consideri il gioco seguente: su una
+scacchiera $n\times n$ si mette una moneta nella casella in alto a
+sinistra e due giocatori $A$ e $B$ muovono a turno, cominciando da
+$A$, la moneta.  Ogni mossa consiste nello spostare la moneta di una
+casella, in orizzontale oppure in verticale, evitando di occupare le
+caselle gi\`a occupate in precedenza (sia da $A$ che da $B$).  Perde
+chi non riesce pi\`u a muovere la moneta in una casella ammissibile.
+
+Determinare, in funzione del numero $n$, quale tra i 2 giocatori ha
+una strategia vincente.}
+
+\renewcommand{\Risposta}{Se $n$ \`{e} pari il giocatore $A$ ha una
+strategia vincente, se $n$ \`{e} dispari il giocatore $B$ ha una
+strategia vincente.}
+
+\renewcommand{\Aiutino}{Supponiamo la scacchiera colorata nel modo
+usuale e disposta in modo che la casella iniziale sia bianca.  Per $n$
+pari \`{e} possibile costruire una corrisponenza biunivoca che ad ogni
+casella bianca associa una casella nera ad essa adiacente (con un lato
+in comune). In questo modo dopo ogni mossa di $B$ la pedina si trova
+su una casella nera ed $A$ pu\`{o} muovere nella bianca corrispondente.
+
+Per $n$ dispari \`{e} possibile costruire una corrisponenza biunivoca
+che ad ogni casella nera associa una casella bianca (diversa da quella
+iniziale) ad essa adiacente.
+
+In entrambi i casi la corrispondenza pu\`{o} essere ottenuta pensando 
+ad una tassellazione della scacchiera.}
+
+\renewcommand{\SoluzioneUfficiale}{\TitoloSoluzione Dimostreremo che
+per $n$ pari il giocatore $A$ ha una strategia vincente, mentre per
+$n$ dispari \`{e} il giocatore $B$ ad avere una strategia vincente.
+
+Supponiamo intanto la scacchiera colorata nel modo usuale e disposta
+in modo che la casella iniziale sia bianca.  Il giocatore $A$
+sposter\`{a} sempre la pedina da una casella bianca ad una casella
+nera, mentre il giocatore $B$ trover\`{a} sempre la pedina su una
+casella nera e la sposter\`{a} in una casella bianca.
+
+Supponiamo ora che $n$ sia pari.  Allora \`{e} possibile ricoprire
+completamente la scacchiera usando delle mattonelle $2\times 1$,
+ciascuna delle quali occupa una casella bianca ed una casella nera.
+In questo caso il giocatore $A$ pu\`{o}, quando tocca a lui muovere,
+spostare la pedina dalla casella bianca in cui si trova alla casella
+nera che fa parte della stessa mattonella. Tale casella \`{e}
+sicuramente ammissibile perch\'{e} essendo nera pu\`{o} essere
+raggiunta solo da $A$, e $A$ la raggiunge solo nel momento in cui $B$ 
+decide di entrare in quella mattonella.
+
+Supponiamo invece che $n$ sia dispari. Allora \`{e} possibile
+tassellare con mattonelle $2\times 1$ tutta la scacchiera meno la
+casella iniziale (basta ad esempio disporre le mattonelle in verticale nella
+prima colonna ed in orizzontale altrove). In questo caso i ruoli sono 
+invertiti: $A$ sar\`{a} sempre il primo ad entrare in una casella nera
+di una certa mattonella, e $B$ potr\`{a} sempre replicare spostando
+la pedina nella casella bianca della mattonella stessa, fino alla
+vittoria.
+
+Le seguenti figure rappresentano esempi di tassellazione per $n=6$ ed 
+$n=7$.
+
+\hfill
+\psset{unit=5mm}
+\pspicture(0,0)(6,6)
+\psset{linewidth=0.6pt}
+\newrgbcolor{scacchiera}{0.4 1 0.6}
+	
+\multips(0,0)(2,0){3}{\pspolygon*[linecolor=scacchiera](0,0)(1,0)(1,1)(0,1)(0,0)}
+\multips(1,1)(2,0){3}{\pspolygon*[linecolor=scacchiera](0,0)(1,0)(1,1)(0,1)(0,0)}
+\multips(0,2)(2,0){3}{\pspolygon*[linecolor=scacchiera](0,0)(1,0)(1,1)(0,1)(0,0)}
+\multips(1,3)(2,0){3}{\pspolygon*[linecolor=scacchiera](0,0)(1,0)(1,1)(0,1)(0,0)}
+\multips(0,4)(2,0){3}{\pspolygon*[linecolor=scacchiera](0,0)(1,0)(1,1)(0,1)(0,0)}
+\multips(1,5)(2,0){3}{\pspolygon*[linecolor=scacchiera](0,0)(1,0)(1,1)(0,1)(0,0)}
+
+\multido{\n=0+1}{7}{
+\psline{-}(\n,0)(\n,6)
+\psline{-}(0,\n)(6,\n)
+}
+\multips(0,0)(0,1){6}{\multips(0,0)(2,0){3}{\psframe[linewidth=1.5\pslinewidth](0.1,0.1)(1.9,0.9)}}
+\endpspicture
+\hfill
+\pspicture(0,0)(7,8)
+\psset{linewidth=0.6pt}
+\newrgbcolor{scacchiera}{0.4 1 0.6}
+	
+\multips(1,0)(2,0){3}{\pspolygon*[linecolor=scacchiera](0,0)(1,0)(1,1)(0,1)(0,0)}
+\multips(0,1)(2,0){4}{\pspolygon*[linecolor=scacchiera](0,0)(1,0)(1,1)(0,1)(0,0)}
+\multips(1,2)(2,0){3}{\pspolygon*[linecolor=scacchiera](0,0)(1,0)(1,1)(0,1)(0,0)}
+\multips(0,3)(2,0){4}{\pspolygon*[linecolor=scacchiera](0,0)(1,0)(1,1)(0,1)(0,0)}
+\multips(1,4)(2,0){3}{\pspolygon*[linecolor=scacchiera](0,0)(1,0)(1,1)(0,1)(0,0)}
+\multips(0,5)(2,0){4}{\pspolygon*[linecolor=scacchiera](0,0)(1,0)(1,1)(0,1)(0,0)}
+\multips(1,6)(2,0){3}{\pspolygon*[linecolor=scacchiera](0,0)(1,0)(1,1)(0,1)(0,0)}
+
+\multido{\n=0+1}{8}{
+\psline{-}(\n,0)(\n,7)
+\psline{-}(0,\n)(7,\n)
+}
+\multips(1,0)(0,1){7}{\multips(0,0)(2,0){3}{\psframe[linewidth=1.5\pslinewidth](0.1,0.1)(1.9,0.9)}
+}
+
+\multips(0,0)(0,2){3}{\psframe[linewidth=1.5\pslinewidth](0.1,0.1)(0.9,1.9)}
+\endpspicture
+\hfill\mbox{}
+}
+
+\renewcommand{\SoluzioniAlternative}{\TitoloSoluzioneAlternativaA }
+
+\renewcommand{\Osservazioni}{\TitoloOsservazione }
+
+\renewcommand{\Commenti}{
+}

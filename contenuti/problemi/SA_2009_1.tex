@@ -1,0 +1,74 @@
+\renewcommand{\Anno}{2009}
+
+\renewcommand{\NumeroProblema}{1}
+
+\renewcommand{\Testo}{
+Consideriamo l'equazione
+$$x^{2}-y^{2}=2^{k}.$$
+
+Determinare i valori \emph{interi} del parametro $k$ per cui esistono
+esattamente 2009 coppie $(x,y)$ di \emph{interi positivi} che
+soddisfano l'equazione.}
+
+\renewcommand{\Risposta}{
+$k=4019$ e $k=4010$
+}
+
+\renewcommand{\Aiutino}{
+Per prima cosa conviene riscrivere l'equazione nella forma
+$(x+y)(x-y)=2^{k}$. Ora i due fattori devono essere potenze di 2,
+diciamo $x-y=2^{a}$ e $x+y=2^{b}$ (con quali limitazioni su $a$ e
+$b$?). Da qui si ricavano i valori di $x$ e $y$.
+}
+
+\renewcommand{\SoluzioneUfficiale}{\TitoloSoluzione 
+Gli unici valori di $k$ per cui l'equazione ammette esattamente 2009
+coppie di soluzioni $(x,y)$ positive sono $k=4019$ e $k=4020$.
+
+Intanto \`{e} facile vedere che l'equazione non ha soluzioni intere
+positive quando $k<0$ (in tal caso infatti $x^{2}-y^{2}$ \`{e} intero,
+mentre $2^{k}$ non lo \`{e}) e quando $k=0$ (non ci sono infatti due
+quadrati positivi che distano 1).  Possiamo pertanto supporre $k>0$.
+In tal caso, fattorizzando l'equazione
+$$(x+y)(x-y)=2^{k},$$
+deduciamo che $x+y$ e $x-y$ devono essere entrambi potenze di 2.
+Possiamo pertanto scrivere
+\begin{equation}
+	x-y=2^{a},
+	\hspace{3em}
+	x+y=2^{k-a}.
+	\label{eq:sum-sub}
+\end{equation}
+
+Essendo $x$ e $y$ positivi, sar\`{a} $x-y<x+y$, da cui $a<k-a$,
+cio\`{e} $a<k/2$. Risolvendo il sistema (\ref{eq:sum-sub}) si ricava
+facilmente che
+\begin{equation}
+	x=\frac{2^{k-a}+2^{a}}{2},
+	\hspace{3em}
+	y=\frac{2^{k-a}-2^{a}}{2}.
+	\label{eq:xy}
+\end{equation}
+
+Il termine $2^{k-a}$ \`{e} sicuramente pari in quanto $k-a$ \`{e}
+positivo. Affinch\'{e} $x$ ed $y$ siano interi serve quindi che
+$2^{a}$ sia pari, da cui $a\geq 1$. Abbiamo cos\`{\i} dimostrato che, 
+per un certo $k>0$ fissato, le soluzioni sono tutte e sole quelle date
+dalla (\ref{eq:xy}) con
+$$1\leq a<\frac{k}{2}.$$
+
+Per avere esattamente 2009 soluzioni serve quindi che esistano
+esattamente 2009 valori di $a$ con questa propriet\`{a}, il che accade
+se e solo se
+$$2009<\frac{k}{2}\leq 2010,$$
+cio\`{e} se e solo se $k=2009\cdot 2+1=4019$ oppure $k=2010\cdot
+2=4020$.
+}
+
+\renewcommand{\SoluzioniAlternative}{}
+
+\renewcommand{\Osservazioni}{
+}
+
+\renewcommand{\Commenti}{
+}
