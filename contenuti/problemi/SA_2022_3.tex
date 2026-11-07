@@ -1,0 +1,74 @@
+\renewcommand{\Anno}{2022}
+
+\renewcommand{\NumeroProblema}{3}
+
+\renewcommand{\Testo}{
+Nella figura seguente il punto $A$ ha coordinate $(-2, 0)$, il punto $B$ ha coordinate $(2, 0)$, il cerchio colorato è centrato nell’origine ed ha raggio~1, il cerchio bianco è centrato nel punto $(0, 2)$ ed ha raggio~1. Il costo per percorrere un’unita di lunghezza è uguale a
+\begin{itemize}
+
+\item  $\alpha$ se si è nel cerchio bianco (incluso il bordo);
+
+\item  $\beta$ se si è nel cerchio colorato (escluso il bordo);
+
+\item  1 in tutto il resto del piano.
+
+\end{itemize}
+
+\begin{center}
+\psset{unit=8ex}
+\pspicture(-2,-1)(2,3)
+
+\psdots[dotscale=1.2](-2,0)(2,0)
+\rput(-2,0.3){$A$}
+\rput(2,0.3){$B$}
+
+\pscircle[linewidth=2\pslinewidth,linestyle=dashed,fillstyle=solid,fillcolor=green](0,0){1}
+\pscircle[linewidth=2\pslinewidth](0,2){1}
+
+\endpspicture
+
+\end{center}
+
+Determinare il percorso che unisce il punto $A$ al punto $B$ con il minimo costo totale
+\begin{enumerate}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+
+\item nel caso $\alpha = 0$ e $\beta = 1$,
+
+\item nel caso $\alpha = 1$ e $\beta = 2$,
+
+\item nel caso $\alpha = 1$, in funzione del parametro $\beta\geq 0$ variabile.
+
+\end{enumerate}
+
+
+
+%\clearpage
+
+%\clearpage
+
+
+
+%\begin{enumerate}
+%\renewcommand{\labelenumi}{(\alph{enumi})}
+%
+%\item  Nel caso $\alpha = 0$ e $\beta = 1$, determinare il percorso che unisce il punto $A$ al punto $B$ con il minimo costo totale e calcolare tale costo minimo totale.
+%
+%\item Nel caso $\alpha = 1$ e $\beta = 2$ determinare il percorso che unisce il punto $A$ al punto $B$ con il minimo costo totale e calcolare tale costo minimo totale.
+%
+%\item Nel caso $\alpha = 1$ determinare, in funzione del parametro $\beta$, il tragitto di minimo costo totale e calcolare tale costo minimo totale.
+%
+%\end{enumerate}
+}
+
+\renewcommand{\Risposta}{}
+
+\renewcommand{\Aiutino}{}
+
+\renewcommand{\SoluzioneUfficiale}{}
+
+\renewcommand{\SoluzioniAlternative}{}
+
+\renewcommand{\Osservazioni}{}
+
+\renewcommand{\Commenti}{}
