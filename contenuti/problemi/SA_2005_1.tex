@@ -1,3 +1,36 @@
+% Macro locali del problema; estratte da latex/SA_Book.tex.
+\providecommand{\IniziaSudoku}[8]
+{\psset{unit=3mm}
+\pspicture(0,0)(8,8)
+\psline(0,0)(0,8)(8,8)(8,0)(0,0)
+\psline(0,4)(8,4)
+\psline(4,0)(4,8)
+\psline[linestyle=dotted,dotsep=1pt](2,0)(2,8)
+\psline[linestyle=dotted,dotsep=1pt](6,0)(6,8)
+\psline[linestyle=dotted,dotsep=1pt](0,2)(8,2)
+\psline[linestyle=dotted,dotsep=1pt](0,6)(8,6)
+\rput{0}(1,7){$#1$}
+\rput{0}(3,7){$#2$}
+\rput{0}(5,7){$#3$}
+\rput{0}(7,7){$#4$}
+\rput{0}(1,5){$#5$}
+\rput{0}(3,5){$#6$}
+\rput{0}(5,5){$#7$}
+\rput{0}(7,5){$#8$}
+}
+
+\providecommand{\FinisciSudoku}[8]
+{\rput{0}(1,3){$#1$}
+\rput{0}(3,3){$#2$}
+\rput{0}(5,3){$#3$}
+\rput{0}(7,3){$#4$}
+\rput{0}(1,1){$#5$}
+\rput{0}(3,1){$#6$}
+\rput{0}(5,1){$#7$}
+\rput{0}(7,1){$#8$}
+\endpspicture
+}
+
 \renewcommand{\Anno}{2005}
 
 \renewcommand{\NumeroProblema}{1}

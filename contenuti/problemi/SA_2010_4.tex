@@ -1,3 +1,58 @@
+% Macro locali del problema; estratte da latex/SA_Book.tex.
+\providecommand{\distanza}{}
+
+\providecommand{\thetazero}{}
+
+\providecommand{\phis}{}
+
+\providecommand{\AreaIntPost}[1]{
+\psset{unit=5ex}
+\pspicture(-0.6,-2.5)(5.3,2.5)
+\renewcommand{\distanza}{#1}
+\renewcommand{\thetazero}{4.5 \distanza\space 2 \distanza\space 2 exp sub
+sqrt atan 10 div sub}
+\renewcommand{\phis}{4.5 \distanza\space 2 exp 2 mul 1 sub sqrt 1 atan
+10 div sub}
+\psplot[linewidth=2\pslinewidth]{\thetazero}{4.5}{10 x mul cos 10 x
+mul sin add \distanza\space sub 2 exp 20 x mul sin 2 mul div neg 1 add
+\distanza\space sub 60 mul}
+\psplot[linewidth=2\pslinewidth]{0}{\thetazero}{\distanza\space 10 x
+mul cos div \distanza\space sub 60 mul}
+\psline[linewidth=0.7\pslinewidth]{->}(-0.3,0)(4.9,0)
+\psline[linewidth=0.7\pslinewidth]{->}(0,-1)(0,2)
+\psdots[dotstyle=|](!\thetazero\space 0)
+\psdots[dotstyle=|](!\phis\space 0)
+\psdots[dotstyle=|](4.5,0)
+\uput[-90](!\thetazero\space 0){$\theta_{0}$}
+\uput[-90](!\phis\space 0){$\theta_{s}$}
+\uput[-90](4.5,0){$\pi/4$}
+\rput(2,-2){$d=#1$}
+\psframe[linecolor=cyan](-0.6,-1.5)(5.3,2.5)
+\endpspicture
+}
+
+\providecommand{\AreaIntPre}[1]{
+\psset{unit=5ex}
+\pspicture(-0.6,-2.5)(5.3,5.5)
+\renewcommand{\distanza}{#1}
+\renewcommand{\thetazero}{4.5 \distanza\space 2 \distanza\space 2 exp sub
+sqrt atan 10 div sub}
+\psplot[linewidth=2\pslinewidth]{\thetazero}{4.5}{10 x mul cos 10 x
+mul sin add \distanza\space sub 2 exp 20 x mul sin 2 mul div neg 1 add
+\distanza\space sub 60 mul}
+\psplot[linewidth=2\pslinewidth]{0}{\thetazero}{\distanza\space 10 x
+mul cos div \distanza\space sub 60 mul}
+\psline[linewidth=0.7\pslinewidth]{->}(-0.3,0)(4.9,0)
+\psline[linewidth=0.7\pslinewidth]{->}(0,-1)(0,5)
+\psdots[dotstyle=|](!\thetazero\space 0)
+\psdots[dotstyle=|](4.5,0)
+\uput[-90](!\thetazero\space 0){$\theta_{0}$}
+\uput[-90](4.5,0){$\pi/4$}
+\rput(2,-2){$d=#1$}
+\psframe[linecolor=cyan](-0.6,-1.5)(5.3,5.5)
+\endpspicture
+}
+
 \renewcommand{\Anno}{2010}
 
 \renewcommand{\NumeroProblema}{4}

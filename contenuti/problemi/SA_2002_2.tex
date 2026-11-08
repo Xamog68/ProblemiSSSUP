@@ -1,3 +1,14 @@
+% Macro locali del problema; estratte da latex/SA_Book.tex.
+\providecommand{\aula}[2]{
+\rput(#1){#2}
+\rput(#1){\psframe(-2,-2)(2,2)}
+}
+
+\providecommand{\aulagialla}[2]{
+\rput(#1){\psframe[fillstyle=solid,fillcolor=cyan](-2,-2)(2,2)}
+\rput(#1){#2}
+}
+
 \renewcommand{\Anno}{2002}
 
 \renewcommand{\NumeroProblema}{2}
