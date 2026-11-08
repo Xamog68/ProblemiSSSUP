@@ -153,48 +153,42 @@ def validate_url(url: str) -> str:
     return url
 
 
-def render_catalog(data: dict, years: set[int], fields: list[str], url: str) -> tuple[str,dict]:
+def render_catalog(data: dict, years: set[int], fields: list[str], url: str) -> tuple[str, dict]:
+    """Primi tre capitoli per campo; approfondimenti riuniti per problema.
+
+    L'ordine delle parti di un problema e' fissato da FIELDS, anche se --campi
+    seleziona un sottoinsieme. Nessun sorgente canonico viene alterato.
+    """
     lines = [r'% Catalogo generato automaticamente: non modificare.',
              r'% Gli elenchi vengono dalle directory contenuti/problemi/.']
     if url:
         lines += [r'\BookWebtrue', r'\def\BookBaseURL{\detokenize{' + url + r'}}']
-    counts = {}
-    for field in fields:
+
+    counts = {field: 0 for field in fields}
+    for field in ('Testo', 'Risposta', 'Aiutino'):
+        if field not in fields:
+            continue
         entries = defaultdict(list)
-        for y,n in sorted(data):
+        for y, n in sorted(data):
             if y not in years:
                 continue
-            src = data[y,n]
-            body = src['fields']
-            if field == 'Soluzioni':
-                old = has_content(body['SoluzioneUfficiale'])
-                ai = has_content(body['SoluzioneRedazionale'])
-                if old and ai:
-                    raise ValueError(f'{y}.{n}: ha entrambe le soluzioni; da decidere la precedenza')
-                command = 'BookSoluzioneArchivio' if old else ('BookSoluzioneAI' if ai else '')
-            elif has_content(body[TEX_MACRO[field]]):
-                command = 'Book' + field
-                if field in ('Risposta','Aiutino') and src['ai'][field]:
-                    command += 'AI'
-                if field == 'SoluzioniAlternative':
-                    command = 'BookAlternativa'
-            else:
-                command = ''
-            if command:
-                entries[y].append('\\'+command+'{'+str(y)+'}{'+str(n)+'}')
+            body = data[y, n]['fields'][TEX_MACRO[field]]
+            if not has_content(body):
+                continue
+            command = 'Book' + field
+            if field in ('Risposta', 'Aiutino') and data[y, n]['ai'][field]:
+                command += 'AI'
+            entries[y].append(f'\\{command}{{{y}}}{{{n}}}')
         if not entries:
             continue
-        lines.append(r'\BookCapitolo{'+TITLES[field]+'}')
+        lines.append(r'\BookCapitolo{' + TITLES[field] + '}')
         if field == 'Risposta':
             lines.append(r'\BookIniziaRisposte')
         for y in sorted(entries):
             if field == 'Testo':
-                lines.append(r'\BookAnnoTesto{'+str(y)+'}')
-                lines.append(r'\BookIniziaTesti')
-            elif field in ('Soluzioni', 'SoluzioniAlternative'):
-                lines.append(r'\BookAnnoDaInserire{'+str(y)+'}')
+                lines += [r'\BookAnnoTesto{' + str(y) + '}', r'\BookIniziaTesti']
             else:
-                lines.append(r'\BookAnnoIndice{'+str(y)+'}')
+                lines.append(r'\BookAnnoIndice{' + str(y) + '}')
             lines.extend(entries[y])
             if field == 'Testo':
                 lines.append(r'\BookFinisciTesti')
@@ -202,7 +196,54 @@ def render_catalog(data: dict, years: set[int], fields: list[str], url: str) -> 
         if field == 'Risposta':
             lines.append(r'\BookFinisciRisposte')
         counts[field] = sum(map(len, entries.values()))
-    return '\n'.join(lines)+'\n', counts
+
+    # Soluzioni, alternative, osservazioni e commenti NON formano capitoli
+    # distinti: ogni problema occupa un'unica scheda, su pagina nuova.
+    selected_details = [field for field in FIELDS[3:] if field in fields]
+    details = defaultdict(list)
+    for y, n in sorted(data):
+        if y not in years:
+            continue
+        body = data[y, n]['fields']
+        parts = []
+        for field in selected_details:
+            command = ''
+            if field == 'Soluzioni':
+                old = has_content(body['SoluzioneUfficiale'])
+                ai = has_content(body['SoluzioneRedazionale'])
+                if old and ai:
+                    raise ValueError(f'{y}.{n}: ha entrambe le soluzioni; da decidere la precedenza')
+                command = 'BookSoluzioneArchivio' if old else ('BookSoluzioneAI' if ai else '')
+            elif has_content(body[TEX_MACRO[field]]):
+                command = {
+                    'SoluzioniAlternative': 'BookAlternativa',
+                    'Osservazioni': 'BookOsservazioni',
+                    'Commenti': 'BookCommenti',
+                }[field]
+                # Nei sorgenti antichi i titoli delle parti sono solitamente
+                # gia' inclusi. Aggiungerli solo quando mancano evita doppioni.
+                prefix = {
+                    'SoluzioniAlternative': r'\TitoloSoluzioneAlternativa',
+                    'Osservazioni': r'\TitoloOss',
+                    'Commenti': r'\TitoloCommenti',
+                }[field]
+                if prefix not in body[TEX_MACRO[field]]:
+                    command += 'SenzaTitolo'
+            if command:
+                parts.append(f'\\{command}{{{y}}}{{{n}}}')
+                counts[field] += 1
+        if parts:
+            details[y].append((n, parts))
+
+    if details:
+        lines.append(r'\BookCapitolo{Soluzioni e approfondimenti}')
+        for y in sorted(details):
+            lines.append(r'\BookAnnoDaInserire{' + str(y) + '}')
+            for n, parts in details[y]:
+                lines.append(f'\\BookTitoloProblema{{{y}}}{{{n}}}')
+                lines.extend(parts)
+                lines.append('')
+    return '\n'.join(lines) + '\n', counts
 
 
 def run(args: list[str], *, cwd: Path) -> None:

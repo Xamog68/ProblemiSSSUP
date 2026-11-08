@@ -1,4 +1,4 @@
-# ProblemiSSSUP — Libro modulare v2.1
+# ProblemiSSSUP — Libro modulare v2.2
 
 **Stato all'8 novembre 2026:** versione integrata nel repository e collaudata
 per struttura e impaginazione; restano aperte la revisione matematica dei
@@ -14,8 +14,10 @@ contenuti e la verifica completa delle figure. Questo file documenta il libro
 - `scripts/libro.mk`: ricetta Make modulare, senza cambiare il Makefile storico;
 - `contenuti/problemi/SA_AAAA_N.tex`: sorgenti matematici canonici.
 
-Il libro è organizzato **per campo** (testi, risposte, aiutini, soluzioni,
-soluzioni alternative, osservazioni, commenti), non per singolo problema.
+Il libro ha quattro capitoli: **Testi**, **Risposte**, **Aiutini** e
+**Soluzioni e approfondimenti**. I primi tre sono organizzati per campo; nel
+quarto, ciascun problema appare una sola volta, seguito da tutti i contenuti
+presenti nell'ordine: soluzione, soluzione alternativa, osservazioni, commenti.
 Le annate e i problemi presenti sono scoperti automaticamente dal generatore.
 
 ## Impaginazione
@@ -25,8 +27,9 @@ Le annate e i problemi presenti sono scoperti automaticamente dal generatore.
   Le domande interne sono indicate con (a), (b), (c).
 - **Risposte:** identificatore `AAAA.N` a sinistra, testo sulla medesima riga.
 - **Aiutini:** intestazioni brevi `\paragraph` *run-in*.
-- **Soluzioni:** ogni problema comincia su una pagina nuova, anche nel capitolo
-  delle soluzioni alternative.
+- **Soluzioni e approfondimenti:** ogni problema comincia su una pagina nuova;
+  soluzione, alternative, osservazioni e commenti seguono senza un nuovo salto
+  di pagina. Le intestazioni gia' presenti nei sorgenti restano inalterate.
 - **Intestazioni e footer:** riprendono lo stile di `SA_Book.sty` e `\Fondo`,
   mostrando anno nei testi e capitolo negli altri campi.
 - **Indice:** rimandi interni al PDF; i collegamenti al sito web sono facoltativi.
@@ -42,6 +45,7 @@ make -f scripts/libro.mk libro
 make -f scripts/libro.mk libro CAMPI=Testo,Risposta,Aiutino ANNI=2024-2026
 make -f scripts/libro.mk libro CAMPI=Testo ANNI=1996-1998,2025
 make -f scripts/libro.mk libro CAMPI=Soluzioni ANNI=2025
+make -f scripts/libro.mk libro CAMPI=Soluzioni,SoluzioniAlternative,Osservazioni ANNI=1996-1998
 ```
 
 Campi disponibili: `Testo`, `Risposta`, `Aiutino`, `Soluzioni`,
@@ -68,12 +72,15 @@ link esterni. Il PDF mantiene comunque i collegamenti interni.
 
 ## Collaudo e limiti
 
-Il collaudo completo della v2.1, eseguito l'8 novembre 2026 sui 96 sorgenti
-con le integrazioni AI, ha prodotto un PDF di **263 pagine**, 7 capitoli,
-24 annate, 96 testi, 96 risposte, 96 aiutini e 96 soluzioni (56 preesistenti
-e 40 redazionali AI). Sono state controllate le pagine iniziali delle 96
-soluzioni, tutte distinte, e campioni delle altre sezioni. È stata provata
-anche la compilazione selettiva del 2025 con collegamenti web.
+Il collaudo completo della v2.2, eseguito l'8 novembre 2026 sui 96 sorgenti
+con le integrazioni AI e le nuove figure PSTricks, ha prodotto un PDF di
+**250 pagine**, con **4 capitoli**, 24 annate, 96 testi, 96 risposte,
+96 aiutini e 96 soluzioni (56 preesistenti e 40 redazionali AI), insieme a
+21 campi di soluzioni alternative, 33 di osservazioni e 2 di commenti.
+Le 96 soluzioni hanno 96 pagine iniziali distinte. È stata provata anche la
+compilazione selettiva e la produzione di collegamenti al sito.
+La precedente v2.1, con i capitoli degli approfondimenti separati, aveva
+263 pagine e 7 capitoli.
 
 **Questi sono controlli tipografici e strutturali:** non certificano le prove,
 la provenienza di tutti i contenuti, né la completezza delle figure.

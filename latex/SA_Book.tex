@@ -1,4 +1,4 @@
-% ProblemiSSSUP: libro modulare v2.1, con impaginazione storica recuperata.
+% ProblemiSSSUP: libro modulare v2.2, con impaginazione storica recuperata.
 % Catalogo automatico generato da scripts/compila_libro.py.
 % Nessun problema canonico viene modificato dal generatore.
 \documentclass[12pt,twoside]{book}
@@ -145,8 +145,8 @@
   {\footnotesize\itshape [Bozza AI da verificare]}\enspace\Aiutino\BookChiudi
 }
 
-% Ogni soluzione inizia su pagina propria. Gli indici degli anni
-% sono inseriti sulla pagina della prima soluzione di ciascun anno.
+% Un'unica pagina iniziale per problema nella sezione degli approfondimenti.
+% Le parti presenti seguono senza interruzioni e con i titoli storici interni.
 \newif\ifBookAnnoPendente
 \BookAnnoPendentefalse
 \newcommand{\BookAnnoDaInserire}[1]{%
@@ -160,7 +160,7 @@
     \BookAnnoPendentefalse
   \fi
 }
-\newcommand{\BookTitoloSoluzione}[2]{%
+\newcommand{\BookTitoloProblema}[2]{%
   \BookNuovaPaginaProblema
   \subsubsection*{Problema \BookLabelWeb{#1}{#2}}%
 }
@@ -169,28 +169,32 @@
   \par\smallskip
 }
 \newcommand{\BookSoluzioneArchivio}[2]{%
-  \BookTitoloSoluzione{#1}{#2}%
   \BookApri{#1}{#2}\SoluzioneUfficiale\BookChiudi\par
 }
 \newcommand{\BookSoluzioneAI}[2]{%
-  \BookTitoloSoluzione{#1}{#2}%
   \BookBozza
   \BookApri{#1}{#2}\SoluzioneRedazionale\BookChiudi\par
 }
 \newcommand{\BookAlternativa}[2]{%
-  \BookTitoloSoluzione{#1}{#2}%
   \BookApri{#1}{#2}\SoluzioniAlternative\BookChiudi\par
 }
-
-% Osservazioni/commenti: resta il layout della prova precedente.
-\newcommand{\BookIntestazione}[2]{%
-  \par\medskip\noindent\textbf{Problema \BookLabelWeb{#1}{#2}}\par\nobreak\smallskip
+\newcommand{\BookAlternativaSenzaTitolo}[2]{%
+  \paragraph{Soluzione alternativa}%
+  \BookAlternativa{#1}{#2}%
 }
 \newcommand{\BookOsservazioni}[2]{%
-  \BookIntestazione{#1}{#2}\BookApri{#1}{#2}\Osservazioni\BookChiudi\par
+  \BookApri{#1}{#2}\Osservazioni\BookChiudi\par
+}
+\newcommand{\BookOsservazioniSenzaTitolo}[2]{%
+  \paragraph{Osservazioni}%
+  \BookOsservazioni{#1}{#2}%
 }
 \newcommand{\BookCommenti}[2]{%
-  \BookIntestazione{#1}{#2}\BookApri{#1}{#2}\Commenti\BookChiudi\par
+  \BookApri{#1}{#2}\Commenti\BookChiudi\par
+}
+\newcommand{\BookCommentiSenzaTitolo}[2]{%
+  \paragraph{Commenti}%
+  \BookCommenti{#1}{#2}%
 }
 
 \RinnovaParagraph
