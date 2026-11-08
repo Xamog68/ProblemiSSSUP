@@ -65,13 +65,27 @@ def main():
         raise AssertionError('Una macro locale ignota non ha prodotto errore')
 
     t=source(2021,1)
-    for name in ('Risposta','Aiutino'):
+    for name in ('Risposta','Aiutino','SoluzioneRedazionale'):
         require(mod.AI_DRAFT_RE.search(field(t,name)) is not None,
                 f'Bozza AI {name} non riconosciuta')
-    require('SoluzioneRedazionale' not in mod.FIELDS,
-            'Le soluzioni AI non devono essere pubblicate senza etichetta')
+        require(mod.field_provenance(field(t,name),name)['tipo']=='ai',
+                f'Bozza AI {name} senza provenienza esplicita')
+    require('SoluzioneRedazionale' in mod.FIELDS,
+            'Le soluzioni AI devono essere esportate con etichette')
+    original=source(2005,1)
+    require(mod.field_provenance(field(original,'SoluzioneUfficiale'),
+                                 'SoluzioneUfficiale')['tipo']=='preesistente',
+            'Una soluzione preesistente e stata classificata AI')
+    # In caso di marcatori AI incompleti il convertitore deve fermarsi.
+    try:
+        mod.field_provenance('% SSSUP-BOZZA-AI: Risposta; stato=INCERTO\nProva',
+                             'Risposta')
+    except ValueError:
+        pass
+    else:
+        raise AssertionError('Marcatore AI incompleto non rifiutato')
     print('VERIFICA MACRO WEB SUPERATA: 31 Sudoku, 53 tessere domino, '
-          '6 grafici locali segnalati; bozze AI riconosciute ed escluse.')
+          '6 grafici locali segnalati; bozze AI riconosciute con provenienza.')
 
 
 if __name__ == '__main__':

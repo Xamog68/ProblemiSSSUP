@@ -10,8 +10,8 @@ Richiede Pandoc. I sorgenti del repository NON vengono modificati.
 Ogni file web contiene impronte SHA-256 per verificare sorgente e convertitore.
 È una prima implementazione sperimentale: verificare sempre PSTricks,
 macro storiche, figure ed eventuali riferimenti incrociati.
- Le bozze AI di Risposta e Aiutino restano escluse dai dati web finche'
- l'interfaccia non ne indica esplicitamente la provenienza.
+ Le bozze AI vengono pubblicate soltanto con metadati di provenienza
+ che l'interfaccia puo' mostrare anche nelle fisarmoniche chiuse.
 """
 from __future__ import annotations
 import argparse
@@ -27,7 +27,7 @@ import sys
 JS_PREFIX = "window.SSSUP.registerProblem("
 JS_SUFFIX = ");"
 
-FIELDS=['Testo','Risposta','Aiutino','SoluzioneUfficiale','SoluzioniAlternative','Osservazioni','Commenti']
+FIELDS=['Testo','Risposta','Aiutino','SoluzioneUfficiale','SoluzioneRedazionale','SoluzioniAlternative','Osservazioni','Commenti']
 
 # I commenti-marcatori appartengono ai sorgenti canonici e non vengono
 # mostrati da TeX. Nel sito diventano segnaposto nello stesso punto.
@@ -51,7 +51,28 @@ LOCAL_USE_RE = re.compile(
     r'\\(?:IniziaSudoku|FinisciSudoku|domino|AreaIntPre|AreaIntPost|'
     r'aula|aulagialla)\b'
 )
-AI_DRAFT_RE = re.compile(r'SSSUP-BOZZA-AI:\s*(Risposta|Aiutino|SoluzioneRedazionale)\b')
+AI_DRAFT_RE = re.compile(
+    r'(?m)^[ \t]*%[ \t]*SSSUP-BOZZA-AI:[ \t]*'
+    r'(Risposta|Aiutino|SoluzioneRedazionale)\s*;[^\r\n]*'
+    r'\bstato=DA-VERIFICARE\b'
+)
+AI_SOURCE_RE = re.compile(r'(?m)^[ \t]*%[ \t]*SSSUP-PROVENIENZA:[ \t]*(.+?)\s*$')
+
+
+def field_provenance(value: str, field: str) -> dict:
+    """Classifica il campo dalla sua intestazione, mai per somiglianza testuale."""
+    markers = list(AI_DRAFT_RE.finditer(value))
+    if not markers:
+        if field == 'SoluzioneRedazionale' or 'SSSUP-BOZZA-AI:' in value:
+            raise ValueError('Marcatore AI assente o incompleto in ' + field)
+        return {'tipo': 'preesistente'}
+    if len(markers) != 1 or markers[0].group(1) != field:
+        raise ValueError('Marcatori AI ambigui o incoerenti in ' + field)
+    source = AI_SOURCE_RE.search(value)
+    if source is None:
+        raise ValueError('Bozza AI senza nota di provenienza in ' + field)
+    return {'tipo': 'ai', 'stato': 'da_verificare', 'fonte': source.group(1).strip()}
+
 LOCAL_DEF_RE = re.compile(r'\\(?:providecommand|newcommand)\s*\{\\([A-Za-z@]+)\}')
 
 
@@ -344,6 +365,11 @@ def conversion_status(src: Path, output: Path, title: str,
     figures=data.get('figure_issues')
     if not isinstance(figures,dict) or meta.get('figures_sha256')!=sections_sha256(figures):
         return 'OBSOLETO','metadati sulle figure assenti o da rigenerare'
+    provenance=data.get('provenance')
+    if not isinstance(provenance,dict) or set(provenance)!=set(data['sections']):
+        return 'OBSOLETO','provenienza dei campi assente o incompleta'
+    if meta.get('provenance_sha256')!=sections_sha256(provenance):
+        return 'ERRORE','metadati di provenienza modificati dopo la conversione'
     if meta.get('latex_sha256')!=digest:
         return 'OBSOLETO','il sorgente LaTeX e cambiato'
     if meta.get('generator_sha256')!=version_hash:
@@ -381,7 +407,7 @@ def main():
     selected=[(y,n,f) for y,n,f in all_files if (args.anno is None or y==args.anno) and (args.problema is None or n==args.problema)]
     if not selected:p.error('Nessun problema canonico corrispondente alla selezione')
     changed=skipped=0
-    total_ai_omesse=0
+    total_ai_esposte=0
     for y,n,f in selected:
         key=f'{y}_{n}'
         digest=hashlib.sha256(f.read_bytes()).hexdigest()
@@ -393,20 +419,19 @@ def main():
             continue
         tex=f.read_text(encoding='utf8')
         fields={}
+        provenance={}
         pictures=0
         issues=inspect_figure_issues(tex)
         local_defs=set(LOCAL_DEF_RE.findall(tex))
-        ai_omesse=[]
         for field in FIELDS:
             v=extract_macro(tex,field)
             if not has_content(v):continue
-            # La provenienza AI vive nei commenti LaTeX. Senza etichette
-            # nell'interfaccia, non pubblicare risposte o aiutini nuovi.
-            if field in ('Risposta','Aiutino') and AI_DRAFT_RE.search(v or ''):
-                ai_omesse.append(field)
-                continue
+            origin=field_provenance(v or '',field)
             html,nfig=convert(v or '',f'{f.name}/{field}',local_defs)
-            if html:fields[field]=html
+            if html:
+                fields[field]=html
+                provenance[field]=origin
+                total_ai_esposte+=int(origin['tipo']=='ai')
             pictures+=nfig
         if not fields.get('Testo'):
             print('ERRORE: testo mancante o vuoto in',f.name,file=sys.stderr)
@@ -420,14 +445,14 @@ def main():
                 f"conversione={pictures}, inventario={issues['pstricks']}"
             )
         problem={'year':y,'number':n,'title':title,'source':f.name,
-                 'sections':fields,'figure_issues':issues}
+                 'sections':fields,'provenance':provenance,'figure_issues':issues}
         problem['_build']={
             'latex_sha256':digest,
             'generator_sha256':gen_id,
             'pandoc_version':pandoc_id,
             'sections_sha256':sections_sha256(fields),
             'figures_sha256':sections_sha256(issues),
-            'bozze_ai_omesse':ai_omesse,
+            'provenance_sha256':sections_sha256(provenance),
         }
         warnings=[]
         if pictures:
@@ -439,7 +464,6 @@ def main():
         payload='window.SSSUP.registerProblem('+json.dumps(problem,ensure_ascii=False,separators=(',',':'))+');\n'
         path.write_text(payload,encoding='utf8')
         changed+=1
-        total_ai_omesse+=len(ai_omesse)
         print('CONVERTITO',f.name,':',len(fields),'campi')
     count_by_year={}
     for y,n,f in all_files:count_by_year[y]=count_by_year.get(y,0)+1
@@ -451,9 +475,9 @@ def main():
     manifest={'range':[rows[0]['year'],rows[-1]['year']],'years':rows}
     (dest/'manifest.js').write_text('window.SSSUP_CATALOG='+json.dumps(manifest,ensure_ascii=False,separators=(',',':'))+';\n',encoding='utf8')
     print(f'Fine. Convertiti {changed}, gia aggiornati {skipped}. Interfaccia HTML/CSS/JS non modificata.')
-    if total_ai_omesse:
-        print(f'NON PUBBLICATE: {total_ai_omesse} bozze AI di Risposta/Aiutino; '
-              'SoluzioneRedazionale ancora esclusa dal formato web.')
+    if total_ai_esposte:
+        print(f'Bozze AI esposte nei dati web: {total_ai_esposte} '
+              '(ciascuna con metadati di provenienza).')
     return 0
 
 if __name__=='__main__':raise SystemExit(main())

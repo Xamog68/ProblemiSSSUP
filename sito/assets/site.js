@@ -14,7 +14,8 @@
   const pending = new Map();
   const sections = [
     ['Risposta','Risposta breve'], ['Aiutino','Aiutino'],
-    ['SoluzioneUfficiale','Soluzione ufficiale'],
+    ['SoluzioneUfficiale','Soluzione'],
+    ['SoluzioneRedazionale','Soluzione'],
     ['SoluzioniAlternative','Soluzioni alternative'],
     ['Osservazioni','Osservazioni'], ['Commenti','Commenti']
   ];
@@ -96,10 +97,14 @@
     updateStats();
   }
   function onlyField(field) {
+    const wanted = field === 'Soluzioni'
+      ? new Set(['SoluzioneUfficiale','SoluzioneRedazionale'])
+      : new Set([field]);
     for(const panel of allPanels()) {
-      setPanel(panel,!!panel.querySelector(`details.extra[data-field="${field}"]`));
+      setPanel(panel,Array.from(panel.querySelectorAll('details.extra'))
+        .some(d=>wanted.has(d.dataset.field)));
     }
-    for(const d of allDetails())d.open=d.dataset.field===field;
+    for(const d of allDetails())d.open=wanted.has(d.dataset.field);
     updateStats();
   }
   function height() {void document.body.offsetHeight;return document.documentElement.scrollHeight;}
@@ -150,7 +155,7 @@
       ['Chiudi tutte le sezioni',()=>setAll(false)],
       ['Solo risposte',()=>onlyField('Risposta')],
       ['Solo aiutini',()=>onlyField('Aiutino')],
-      ['Solo soluzioni',()=>onlyField('SoluzioneUfficiale')],
+      ['Solo soluzioni',()=>onlyField('Soluzioni')],
       ['Confronta lunghezze',compareLengths]
     ];
     for(const [label,handler] of actions){
@@ -161,13 +166,46 @@
     controls.append(body);row.append(controls);dock.append(row);
     return dock;
   }
+  // Icona Sparkles inline: non richiede font, librerie o servizi esterni.
+  function aiSparkles() {
+    const ns='http://www.w3.org/2000/svg';
+    const svg=document.createElementNS(ns,'svg');
+    svg.setAttribute('viewBox','0 0 24 24');
+    svg.setAttribute('class','extra-ai-icon');
+    svg.setAttribute('aria-hidden','true');
+    svg.setAttribute('focusable','false');
+    for(const d of [
+      'M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3Z',
+      'M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8L19 16Z',
+      'M4 2l.55 1.45L6 4l-1.45.55L4 6l-.55-1.45L2 4l1.45-.55L4 2Z'
+    ]) {
+      const path=document.createElementNS(ns,'path');
+      path.setAttribute('d',d);
+      svg.append(path);
+    }
+    return svg;
+  }
   function makeDetails(data) {
     const extras=el('div','extra-zone');
     let count=0;
     for(const [key,label] of sections) {
       const html=data.sections?.[key];if(!html||!html.trim())continue;
+      const provenance=data.provenance?.[key];
+      const isAI=provenance?.tipo==='ai';
+      if(key==='SoluzioneRedazionale' && !isAI) {
+        throw new Error('Soluzione redazionale priva di provenienza AI');
+      }
+      const provenanceLabel=isAI?'Bozza AI · Da verificare':
+        provenance?.tipo==='preesistente'?'Contenuto preesistente':
+        'Provenienza non disponibile';
       const d=el('details','extra');d.dataset.field=key;
-      const summary=el('summary','',label);d.append(summary);
+      const summary=el('summary');
+      const summaryMain=el('span','extra-summary-main');
+      summaryMain.append(el('span','extra-summary-name',label));
+      if(isAI)summaryMain.append(aiSparkles());
+      summaryMain.append(el('span',isAI?'extra-provenance ai':'extra-provenance',
+        provenanceLabel));
+      summary.append(summaryMain);d.append(summary);
       const inner=el('div','extra-body');inner.innerHTML=html;d.append(inner);
       d.addEventListener('toggle',()=>requestAnimationFrame(updateStats));
       extras.append(d);count++;

@@ -102,3 +102,17 @@ main{min-height:380px;padding-top:30px;padding-bottom:110px}
 .standalone-materials-head p{margin:0;color:var(--quiet);font-size:12px}
 .standalone-problem .extra-zone{padding-top:13px}
 @media(max-width:620px){.dock-caption{display:none}.nav-dock{right:10px;bottom:10px}.nav-dock-row{padding:5px;gap:4px}.dock-problem{min-width:29px;height:31px}.dock-tools summary{padding:7px}.standalone-materials-head{padding:13px 14px}}
+
+/* Provenienza visibile anche quando la fisarmonica e' chiusa. */
+.extra-summary-main{display:inline-flex;align-items:center;gap:8px;flex-wrap:wrap;min-width:0}
+.extra-summary-name{font-weight:650}
+.extra-provenance{font:500 11px/1.45 system-ui,-apple-system,sans-serif;color:#697986}
+.extra-provenance.ai{color:#596d7b}
+.extra-ai-icon{width:16px;height:16px;flex:0 0 16px;fill:none;stroke:#607883;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.extra summary:after{margin-left:auto;flex:0 0 auto}
+
+/* Nei Testi, la lista dei quesiti corrisponde a enumii del libro LaTeX:
+   (a), (b), (c). Solo gli elenchi ordinati di primo livello del testo,
+   senza alterare quelli interni e le liste delle risposte/soluzioni. */
+.math-body > ol { list-style-type: lower-alpha; }
+.math-body > ol > li::marker { content: "(" counter(list-item, lower-alpha) ") "; }
