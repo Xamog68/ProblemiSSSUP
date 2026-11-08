@@ -1,107 +1,36 @@
+% ProblemiSSSUP: libro modulare v2.1, con impaginazione storica recuperata.
+% Catalogo automatico generato da scripts/compila_libro.py.
+% Nessun problema canonico viene modificato dal generatore.
 \documentclass[12pt,twoside]{book}
 \usepackage{amsfonts,amsmath,latexsym,graphicx,SA_Book,pstricks,multido,pst-eucl,pst-plot}
-
 \usepackage[italian]{babel}
 \usepackage[a4paper]{geometry}
-\renewcommand{\Percorso}{../contenuti/problemi/}
+\usepackage[dvips,unicode]{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,bookmarksopen=true}
 
+\renewcommand{\Percorso}{../contenuti/problemi/}
 \topmargin -0.1cm
 \oddsidemargin -0.5cm
-\evensidemargin	-0.5cm
-\textwidth 17cm 
-\textheight 22.5cm 
+\evensidemargin -0.5cm
+\textwidth 17cm
+\textheight 22.5cm
 
+% Interfaccia canonica: i nomi dei campi non dipendono dal problema.
 \newcommand{\Anno}{}
 \newcommand{\NumeroProblema}{}
 \newcommand{\Testo}{}
 \newcommand{\Risposta}{}
 \newcommand{\Aiutino}{}
 \newcommand{\SoluzioneUfficiale}{}
+\newcommand{\SoluzioneRedazionale}{}
 \newcommand{\SoluzioniAlternative}{}
 \newcommand{\Osservazioni}{}
 \newcommand{\Commenti}{}
-\newcommand{\stringa}{}
 
-% \newcommand{\Definisci}[2]{\renewcommand{#1}{#2}}
-% \newcommand{\Prova}[1]{
-% \input{\Percorso SA_1996_2}
-% \edef\temp{\Soluzioni#1}
-% show\temp
-%\newcommand{}{\SoluzioniAlternative}
-%}
-%
-
-\renewcommand{\theequation}{\arabic{equation}}
-
-\newcommand{\AggiungiProblema}[2]{
-\input{\Percorso SA_#1_#2}
-\Testo}
-
-\newcommand{\TitoloAmmissione}[1]{
-\begin{center}
-		\underline{\parbox{\textwidth}{\vspace{-2ex}
-		\begin{center}
-			{\LARGE Prova di Ammissione -- Anno #1}
-		\end{center}
-		}}
-\end{center}
-\medskip
-\renewcommand{\Fondo}{$\overline{\parbox{\textwidth}{\mbox{}\rule{0ex}{2ex}
-\hfill\textbf{Testo Prova di Ammissione alla SSSUP -- Anno 
-#1}\hfill\mbox{}}}$}
-}
-
-\newcommand{\AggiungiAmmissioneSei}[1]{
-\TitoloAmmissione{#1}
-
-\begin{enumerate}
-	\item  \AggiungiProblema{#1}{1}
-
-	\item  \AggiungiProblema{#1}{2}
-
-	\item  \AggiungiProblema{#1}{3}
-
-	\item  \AggiungiProblema{#1}{4}
-
-	\item  \AggiungiProblema{#1}{5}
-
-	\item  \AggiungiProblema{#1}{6}
-\end{enumerate}	
-\clearpage
-}
-
-\newcommand{\AggiungiAmmissioneQuattro}[1]{
-\TitoloAmmissione{#1}
-
-\begin{enumerate}
-	\item  \AggiungiProblema{#1}{1}
-
-	\item  \AggiungiProblema{#1}{2}
-
-	\item  \AggiungiProblema{#1}{3}
-
-	\item  \AggiungiProblema{#1}{4}
-\end{enumerate}	
-\clearpage
-}
-
-\newcommand{\IniziaRisposte}{\addtolength{\leftmargini}{1.5em}
-\begin{enumerate}}
-
-\newcommand{\AggiungiRisposta}[2]{\input{\Percorso SA_#1_#2}\item 
-[\textbf{#1.#2}]\Risposta}
-
-\newcommand{\FinisciRisposte}{\end{enumerate}\addtolength{\leftmargini}{-1.5em}}
-								
-\newcommand{\AggiungiAiutino}[2]{\input{\Percorso SA_#1_#2}
-\paragraph{#1.#2}
-\Aiutino}
-
+% Macro condivise usate nei sorgenti canonici.
 \newcommand{\TitoloSoluzione}{}
-\newcommand{\TitoloSoluzioneAlternativaA}{\paragraph{Soluzione 
-Alternativa}}
-\newcommand{\TitoloSoluzioneAlternativaB}{\paragraph{Seconda soluzione 
-Alternativa}}
+\newcommand{\TitoloSoluzioneAlternativaA}{\paragraph{Soluzione alternativa}}
+\newcommand{\TitoloSoluzioneAlternativaB}{\paragraph{Seconda soluzione alternativa}}
 \newcommand{\TitoloOsservazione}{\paragraph{Osservazioni}}
 \newcommand{\TitoloCommenti}{\paragraph{Commenti}}
 \newcommand{\TitoloOss}[1]{\paragraph{Osservazione #1}}
@@ -110,589 +39,171 @@ Alternativa}}
 \newcommand{\DomandaC}{\subparagraph{Punto (c)}}
 \newcommand{\DomandaD}{\subparagraph{Punto (d)}}
 
-\newcommand{\AggiungiSoluzione}[2]{
-\input{\Percorso SA_#1_#2}
-\CreaSoluzione}
+% Nel testo gli enumerati annidati sono (a), (b), (c), ...
+\renewcommand{\labelenumii}{(\alph{enumii})}
 
-\newcommand{\CreaSoluzione}{
-\subsubsection{Problema \Anno.\NumeroProblema}
-\setcounter{equation}{0}
-\SoluzioneUfficiale
+% Link web opzionali: --sito URL sul generatore.
+\newif\ifBookWeb
+\BookWebfalse
+\def\BookBaseURL{}
+\newcommand{\BookAnnoWeb}[1]{%
+  \ifBookWeb\href{\BookBaseURL?anno=#1}{Prova di Ammissione -- Anno #1}%
+  \else Prova di Ammissione -- Anno #1\fi}
+\newcommand{\BookNumeroWeb}[2]{%
+  \ifBookWeb\href{\BookBaseURL?anno=#1&problema=#2}{\textbf{#2.}}%
+  \else\textbf{#2.}\fi}
+\newcommand{\BookLabelWeb}[2]{%
+  \ifBookWeb\href{\BookBaseURL?anno=#1&problema=#2}{#1.#2}%
+  \else #1.#2\fi}
 
-\SoluzioniAlternative
+% Caricatore isolato: ogni problema ha campi locali e non eredita il precedente.
+\newcommand{\BookApri}[2]{%
+  \begingroup
+  \renewcommand{\Anno}{}%
+  \renewcommand{\NumeroProblema}{}%
+  \renewcommand{\Testo}{}%
+  \renewcommand{\Risposta}{}%
+  \renewcommand{\Aiutino}{}%
+  \renewcommand{\SoluzioneUfficiale}{}%
+  \renewcommand{\SoluzioneRedazionale}{}%
+  \renewcommand{\SoluzioniAlternative}{}%
+  \renewcommand{\Osservazioni}{}%
+  \renewcommand{\Commenti}{}%
+  \setcounter{equation}{0}%
+  \input{\Percorso SA_#1_#2.tex}%
+}
+\newcommand{\BookChiudi}{\endgroup}
 
-\Osservazioni
-
-\Commenti
-\clearpage
+% Footer: recupera l'impostazione originale basata su \Fondo (SA_Book.sty).
+\newcommand{\BookFondoCapitolo}[1]{%
+  \renewcommand{\Fondo}{$\overline{\parbox{\textwidth}{\mbox{}\rule{0ex}{2ex}%
+  \hfill\textbf{Problemi di Ammissione alla SSSUP -- #1}\hfill\mbox{}}}$}%
+}
+\newcommand{\BookFondoAnno}[1]{%
+  \renewcommand{\Fondo}{$\overline{\parbox{\textwidth}{\mbox{}\rule{0ex}{2ex}%
+  \hfill\textbf{Testo Prova di Ammissione alla SSSUP -- Anno #1}\hfill\mbox{}}}$}%
+}
+\newcommand{\BookCapitolo}[1]{%
+  \chapter{#1}%
+  \renewcommand{\NomeCapitolo}{#1}%
+  \BookFondoCapitolo{#1}%
 }
 
-\newcommand{\IniziaSudoku}[8]
-{\psset{unit=3mm}
-\pspicture(0,0)(8,8)
-\psline(0,0)(0,8)(8,8)(8,0)(0,0)
-\psline(0,4)(8,4)
-\psline(4,0)(4,8)
-\psline[linestyle=dotted,dotsep=1pt](2,0)(2,8)
-\psline[linestyle=dotted,dotsep=1pt](6,0)(6,8)
-\psline[linestyle=dotted,dotsep=1pt](0,2)(8,2)
-\psline[linestyle=dotted,dotsep=1pt](0,6)(8,6)
-\rput{0}(1,7){$#1$}
-\rput{0}(3,7){$#2$}
-\rput{0}(5,7){$#3$}
-\rput{0}(7,7){$#4$}
-\rput{0}(1,5){$#5$}
-\rput{0}(3,5){$#6$}
-\rput{0}(5,5){$#7$}
-\rput{0}(7,5){$#8$}
+% I titoli nell'indice sono link interni; sul corpo del testo gli anni
+% possono essere link esterni, senza conflitto fra le due destinazioni.
+\newcommand{\BookAnnoIndice}[1]{%
+  \phantomsection\addcontentsline{toc}{section}{Anno #1}%
 }
 
-\newcommand{\FinisciSudoku}[8]
-{\rput{0}(1,3){$#1$}
-\rput{0}(3,3){$#2$}
-\rput{0}(5,3){$#3$}
-\rput{0}(7,3){$#4$}
-\rput{0}(1,1){$#5$}
-\rput{0}(3,1){$#6$}
-\rput{0}(5,1){$#7$}
-\rput{0}(7,1){$#8$}
-\endpspicture
+% Nei Testi ogni anno comincia su una pagina NUOVA, con doppia riga.
+\newcommand{\BookAnnoTesto}[1]{%
+  \clearpage
+  \BookAnnoIndice{#1}%
+  \BookFondoAnno{#1}%
+  \par\noindent\rule{\linewidth}{0.5pt}%
+  \begin{center}
+    {\LARGE\BookAnnoWeb{#1}}%
+  \end{center}%
+  \vspace{-0.5em}%
+  \noindent\rule{\linewidth}{0.5pt}%
+  \par\medskip
+}
+\newcommand{\BookIniziaTesti}{\begin{enumerate}}
+\newcommand{\BookFinisciTesti}{\end{enumerate}}
+\newcommand{\BookTesto}[2]{%
+  \item[\BookNumeroWeb{#1}{#2}]%
+  \BookApri{#1}{#2}\Testo\BookChiudi
 }
 
-\newcommand{\IniziaSchemino}[4]{\psset{unit=8ex}
-\pspicture(0,0)(3,2.7)
-\SpecialCoor
-\pnode(0,0){A}
-\pnode([angle=60,nodesep=1]A){A'}
-\pnode([angle=60,nodesep=2]A){A''}
-\pnode([angle=60,nodesep=3]A){B}
-\pnode([angle=-60,nodesep=1]B){B'}
-\pnode([angle=-60,nodesep=2]B){B''}
-\pnode([angle=0,nodesep=3]A){C}
-\pnode([angle=0,nodesep=1]A){C''}
-\pnode([angle=0,nodesep=2]A){C'}
-\pnode([angle=0,nodesep=1]A'){G}
-\psline[fillstyle=solid,fillcolor=green,linestyle=none](A)(C'')(A')
-\psline[fillstyle=solid,fillcolor=green,linestyle=none](C'')(C')(G)
-\psline[fillstyle=solid,fillcolor=green,linestyle=none](A')(G)(A'')
-\psline[fillstyle=solid,fillcolor=green,linestyle=none](C')(C)(B'')
-\psline[fillstyle=solid,fillcolor=green,linestyle=none](B')(G)(B'')
-\psline[fillstyle=solid,fillcolor=green,linestyle=none](B')(B)(A'')
-\pscircle[fillcolor=white,fillstyle=solid](A){0.2}
-\pscircle[fillcolor=white,fillstyle=solid](A'){0.2}
-\pscircle[fillcolor=white,fillstyle=solid](A''){0.2}
-\pscircle[fillcolor=white,fillstyle=solid](B){0.2}
-\pscircle[fillcolor=white,fillstyle=solid](B'){0.2}
-\pscircle[fillcolor=white,fillstyle=solid](B''){0.2}
-\pscircle[fillcolor=white,fillstyle=solid](C){0.2}
-\pscircle[fillcolor=white,fillstyle=solid](C'){0.2}
-\pscircle[fillcolor=white,fillstyle=solid](C''){0.2}
-\pscircle[fillcolor=white,fillstyle=solid](G){0.2}
-\rput(A){#1}
-\rput(C''){#2}
-\rput(C'){#3}
-\rput(C){#4}}
-
-\newcommand{\FinisciSchemino}[6]{
-\rput(A'){#1}
-\rput(G){#2}
-\rput(B''){#3}
-\rput(A''){#4}
-\rput(B'){#5}
-\rput(B){#6}\endpspicture}
-
-
-\newcommand{\aula}[2]{
-\rput(#1){#2}
-\rput(#1){\psframe(-2,-2)(2,2)}
+% Risposte: la vecchia lista con etichetta 1996.1 nel margine sinistro.
+\newcommand{\BookIniziaRisposte}{%
+  \addtolength{\leftmargini}{1.5em}%
+  \begin{enumerate}%
+}
+\newcommand{\BookFinisciRisposte}{%
+  \end{enumerate}%
+  \addtolength{\leftmargini}{-1.5em}%
+}
+\newcommand{\BookRisposta}[2]{%
+  \BookApri{#1}{#2}%
+  \item[\textbf{\BookLabelWeb{#1}{#2}}]\Risposta\BookChiudi
+}
+\newcommand{\BookRispostaAI}[2]{%
+  \BookApri{#1}{#2}%
+  \item[\textbf{\BookLabelWeb{#1}{#2}}]%
+  {\footnotesize\itshape [Bozza AI da verificare]}\enspace\Risposta\BookChiudi
 }
 
-\newcommand{\aulagialla}[2]{
-\rput(#1){\psframe[fillstyle=solid,fillcolor=cyan](-2,-2)(2,2)}
-\rput(#1){#2}
+% Aiutini: titolo run-in \paragraph, come nel libro storico.
+\newcommand{\BookAiutino}[2]{%
+  \BookApri{#1}{#2}%
+  \paragraph{\BookLabelWeb{#1}{#2}}\Aiutino\BookChiudi
+}
+\newcommand{\BookAiutinoAI}[2]{%
+  \BookApri{#1}{#2}%
+  \paragraph{\BookLabelWeb{#1}{#2}}%
+  {\footnotesize\itshape [Bozza AI da verificare]}\enspace\Aiutino\BookChiudi
 }
 
-\newcommand{\domino}[2]{\begin{array}{|c|c|}
-    \hline
-    #1 & #2  \\
-    \hline
-\end{array}
+% Ogni soluzione inizia su pagina propria. Gli indici degli anni
+% sono inseriti sulla pagina della prima soluzione di ciascun anno.
+\newif\ifBookAnnoPendente
+\BookAnnoPendentefalse
+\newcommand{\BookAnnoDaInserire}[1]{%
+  \gdef\BookAnnoPendenteValore{#1}%
+  \BookAnnoPendentetrue
+}
+\newcommand{\BookNuovaPaginaProblema}{%
+  \clearpage
+  \ifBookAnnoPendente
+    \BookAnnoIndice{\BookAnnoPendenteValore}%
+    \BookAnnoPendentefalse
+  \fi
+}
+\newcommand{\BookTitoloSoluzione}[2]{%
+  \BookNuovaPaginaProblema
+  \subsubsection*{Problema \BookLabelWeb{#1}{#2}}%
+}
+\newcommand{\BookBozza}{%
+  \par\smallskip\noindent{\small\itshape Bozza redazionale AI: contenuto da verificare.}%
+  \par\smallskip
+}
+\newcommand{\BookSoluzioneArchivio}[2]{%
+  \BookTitoloSoluzione{#1}{#2}%
+  \BookApri{#1}{#2}\SoluzioneUfficiale\BookChiudi\par
+}
+\newcommand{\BookSoluzioneAI}[2]{%
+  \BookTitoloSoluzione{#1}{#2}%
+  \BookBozza
+  \BookApri{#1}{#2}\SoluzioneRedazionale\BookChiudi\par
+}
+\newcommand{\BookAlternativa}[2]{%
+  \BookTitoloSoluzione{#1}{#2}%
+  \BookApri{#1}{#2}\SoluzioniAlternative\BookChiudi\par
 }
 
-\newcommand{\distanza}{}
-\newcommand{\thetazero}{}
-\newcommand{\phis}{}
-
-\newcommand{\AreaIntPost}[1]{
-\psset{unit=5ex}
-\pspicture(-0.6,-2.5)(5.3,2.5)
-\renewcommand{\distanza}{#1}
-\renewcommand{\thetazero}{4.5 \distanza\space 2 \distanza\space 2 exp sub
-sqrt atan 10 div sub}
-\renewcommand{\phis}{4.5 \distanza\space 2 exp 2 mul 1 sub sqrt 1 atan 
-10 div sub}
-\psplot[linewidth=2\pslinewidth]{\thetazero}{4.5}{10 x mul cos 10 x
-mul sin add \distanza\space sub 2 exp 20 x mul sin 2 mul div neg 1 add
-\distanza\space sub 60 mul}
-\psplot[linewidth=2\pslinewidth]{0}{\thetazero}{\distanza\space 10 x
-mul cos div \distanza\space sub 60 mul}
-\psline[linewidth=0.7\pslinewidth]{->}(-0.3,0)(4.9,0)
-\psline[linewidth=0.7\pslinewidth]{->}(0,-1)(0,2)
-\psdots[dotstyle=|](!\thetazero\space 0)
-\psdots[dotstyle=|](!\phis\space 0)
-\psdots[dotstyle=|](4.5,0)
-\uput[-90](!\thetazero\space 0){$\theta_{0}$}
-\uput[-90](!\phis\space 0){$\theta_{s}$}
-\uput[-90](4.5,0){$\pi/4$}
-\rput(2,-2){$d=#1$}
-\psframe[linecolor=cyan](-0.6,-1.5)(5.3,2.5)
-\endpspicture
+% Osservazioni/commenti: resta il layout della prova precedente.
+\newcommand{\BookIntestazione}[2]{%
+  \par\medskip\noindent\textbf{Problema \BookLabelWeb{#1}{#2}}\par\nobreak\smallskip
 }
-
-\newcommand{\AreaIntPre}[1]{
-\psset{unit=5ex}
-\pspicture(-0.6,-2.5)(5.3,5.5)
-\renewcommand{\distanza}{#1}
-\renewcommand{\thetazero}{4.5 \distanza\space 2 \distanza\space 2 exp sub
-sqrt atan 10 div sub}
-\psplot[linewidth=2\pslinewidth]{\thetazero}{4.5}{10 x mul cos 10 x
-mul sin add \distanza\space sub 2 exp 20 x mul sin 2 mul div neg 1 add
-\distanza\space sub 60 mul}
-\psplot[linewidth=2\pslinewidth]{0}{\thetazero}{\distanza\space 10 x
-mul cos div \distanza\space sub 60 mul}
-\psline[linewidth=0.7\pslinewidth]{->}(-0.3,0)(4.9,0)
-\psline[linewidth=0.7\pslinewidth]{->}(0,-1)(0,5)
-\psdots[dotstyle=|](!\thetazero\space 0)
-\psdots[dotstyle=|](4.5,0)
-\uput[-90](!\thetazero\space 0){$\theta_{0}$}
-\uput[-90](4.5,0){$\pi/4$}
-\rput(2,-2){$d=#1$}
-\psframe[linecolor=cyan](-0.6,-1.5)(5.3,5.5)
-\endpspicture
+\newcommand{\BookOsservazioni}[2]{%
+  \BookIntestazione{#1}{#2}\BookApri{#1}{#2}\Osservazioni\BookChiudi\par
 }
-
-
-
-
-% \renewcommand{\Percorso}{:SA_Files:}
-
-\title{{\Huge \textbf{Problemi di Matematica}}\medskip\\
-{\LARGE alla SSSUP}}
-\author{{\Large Authors to be decided}}
-\date{\today}
-
-
-\begin{document}
-
-\maketitle
-
-Aggiornamenti:
-	\begin{itemize}
-		\item  18 Dicembre 2004: Nascita del progetto di questo libro.
-		
-		\item  6 Giugno 2005: risistemazione grafica e completamento 
-		risposte.
-		
-		\item  14 Agosto 2005: completamento aiutini.
-		
-		\item  3 Settembre 2005: aggiunta e sistemazione testi 1996 e 2005.
-		
-		\item 17 Settembre 2005: aggiunta testi 1997.  Completamento
-		risposte ed aiutini 1996 e 2005.
-		
-		\item 18 Settembre 2005: aggiunta risposte ed aiutini 1997.
-		
-		\item 30 Ottobre 2005: ricontrollo e correzione testi, risposte, aiutini.
-		
-		\item Autunno 2006: aggiunta materiale anno 2006.
-		
-		\item 2 Novembre 2007: aggiunta materiale 2007.
-	\end{itemize}
-
-\chapter{Testi}
-\renewcommand{\NomeCapitolo}{Testi}
-
-
-
-\clearpage
-
-\AggiungiAmmissioneSei{1996}
-
-\AggiungiAmmissioneSei{1997}
-
-\AggiungiAmmissioneSei{1998}
-
-\AggiungiAmmissioneQuattro{1999}
-
-\AggiungiAmmissioneQuattro{2000}
-
-\AggiungiAmmissioneQuattro{2001}
-
-\AggiungiAmmissioneQuattro{2002}
-
-\AggiungiAmmissioneQuattro{2003}
-
-\AggiungiAmmissioneQuattro{2004}
-
-\AggiungiAmmissioneQuattro{2005}
-
-\AggiungiAmmissioneQuattro{2006}
-
-\AggiungiAmmissioneQuattro{2007}
- 
-\AggiungiAmmissioneQuattro{2008}
- 
-\AggiungiAmmissioneQuattro{2009}
- 
-\AggiungiAmmissioneQuattro{2010}
- 
-\AggiungiAmmissioneQuattro{2011}
- 
-\AggiungiAmmissioneQuattro{2012}
-
-\AggiungiAmmissioneQuattro{2013}
-% 
-% \clearpage
-% % 
-% % \chapter{Classificazione}
-% % \renewcommand{\NomeCapitolo}{Classificazione}
-% % 
-% % \renewcommand{\Fondo}{$\overline{\parbox{\textwidth}{\mbox{}\rule{0ex}{2ex}
-% % \hfill\textbf{Problemi di Ammissione alla SSSUP -- Classificazione}\hfill\mbox{}}}$}
-% % 
-% % \clearpage
-% % 
-% % \input{\Percorso SA_Classificazione}
-% % 
-% % \clearpage
-
-\chapter{Risposte}
-\renewcommand{\NomeCapitolo}{Risposte}
-
-\renewcommand{\Fondo}{$\overline{\parbox{\textwidth}{\mbox{}\rule{0ex}{2ex}
-\hfill\textbf{Problemi di Ammissione alla SSSUP -- Risposte}\hfill\mbox{}}}$}
-
-\clearpage
-
-\IniziaRisposte
-
-\AggiungiRisposta{1996}{1}
-\AggiungiRisposta{1996}{2}
-\AggiungiRisposta{1996}{3}
-\AggiungiRisposta{1996}{4}
-\AggiungiRisposta{1996}{5}
-\AggiungiRisposta{1996}{6}
-
-\AggiungiRisposta{1997}{1}
-\AggiungiRisposta{1997}{2}
-\AggiungiRisposta{1997}{3}
-\AggiungiRisposta{1997}{4}
-\AggiungiRisposta{1997}{5}
-\AggiungiRisposta{1997}{6}
-
-\AggiungiRisposta{1998}{1}
-\AggiungiRisposta{1998}{2}
-\AggiungiRisposta{1998}{3}
-\AggiungiRisposta{1998}{4}
-\AggiungiRisposta{1998}{5}
-\AggiungiRisposta{1998}{6}
-
-\AggiungiRisposta{1999}{1}
-\AggiungiRisposta{1999}{2}
-\AggiungiRisposta{1999}{3}
-\AggiungiRisposta{1999}{4}
-
-\AggiungiRisposta{2000}{1}
-\AggiungiRisposta{2000}{2}
-\AggiungiRisposta{2000}{3}
-\AggiungiRisposta{2000}{4}
- 
-\AggiungiRisposta{2001}{1}
-\AggiungiRisposta{2001}{2}
-\AggiungiRisposta{2001}{3}
-\AggiungiRisposta{2001}{4}
-
-\AggiungiRisposta{2002}{1}
-\AggiungiRisposta{2002}{2}
-\AggiungiRisposta{2002}{3}
-\AggiungiRisposta{2002}{4}
-
-\AggiungiRisposta{2003}{1}
-\AggiungiRisposta{2003}{2}
-\AggiungiRisposta{2003}{3}
-\AggiungiRisposta{2003}{4}
-
-\AggiungiRisposta{2004}{1}
-\AggiungiRisposta{2004}{2}
-\AggiungiRisposta{2004}{3}
-\AggiungiRisposta{2004}{4}
-
-\AggiungiRisposta{2005}{1}
-\AggiungiRisposta{2005}{2}
-\AggiungiRisposta{2005}{3}
-\AggiungiRisposta{2005}{4}
-
-\AggiungiRisposta{2006}{1}
-\AggiungiRisposta{2006}{2}
-\AggiungiRisposta{2006}{3}
-\AggiungiRisposta{2006}{4}
-
-\AggiungiRisposta{2007}{1}
-\AggiungiRisposta{2007}{2}
-\AggiungiRisposta{2007}{3}
-\AggiungiRisposta{2007}{4}
-
-\AggiungiRisposta{2008}{1}
-\AggiungiRisposta{2008}{2}
-\AggiungiRisposta{2008}{3}
-\AggiungiRisposta{2008}{4}
-
-\AggiungiRisposta{2009}{1}
-\AggiungiRisposta{2009}{2}
-\AggiungiRisposta{2009}{3}
-\AggiungiRisposta{2009}{4}
-
-\AggiungiRisposta{2010}{1}
-\AggiungiRisposta{2010}{2}
-\AggiungiRisposta{2010}{3}
-\AggiungiRisposta{2010}{4}
-
-\AggiungiRisposta{2011}{1}
-\AggiungiRisposta{2011}{2}
-\AggiungiRisposta{2011}{3}
-\AggiungiRisposta{2011}{4}
-
-\AggiungiRisposta{2012}{1}
-\AggiungiRisposta{2012}{2}
-\AggiungiRisposta{2012}{3}
-\AggiungiRisposta{2012}{4}
-
-\AggiungiRisposta{2013}{1}
-\AggiungiRisposta{2013}{2}
-\AggiungiRisposta{2013}{3}
-\AggiungiRisposta{2013}{4}
-
-\FinisciRisposte
-
-\clearpage
-
-\chapter{``Aiutini''}
-\renewcommand{\NomeCapitolo}{``Aiutini''}
-
-\renewcommand{\Fondo}{$\overline{\parbox{\textwidth}{\mbox{}\rule{0ex}{2ex}
-\hfill\textbf{Problemi di Ammissione alla SSSUP -- ``Aiutini''}\hfill\mbox{}}}$}
-
-\clearpage
-
-\AggiungiAiutino{1996}{1}	
-\AggiungiAiutino{1996}{2}	
-\AggiungiAiutino{1996}{3}	
-\AggiungiAiutino{1996}{4}	
-\AggiungiAiutino{1996}{5}	
-\AggiungiAiutino{1996}{6}	
-	
-\AggiungiAiutino{1997}{1}	
-\AggiungiAiutino{1997}{2}	
-\AggiungiAiutino{1997}{3}	
-\AggiungiAiutino{1997}{4}	
-\AggiungiAiutino{1997}{5}	
-\AggiungiAiutino{1997}{6}	
-	
-\AggiungiAiutino{1998}{1}	
-\AggiungiAiutino{1998}{2}	
-\AggiungiAiutino{1998}{3}	
-\AggiungiAiutino{1998}{4}	
-\AggiungiAiutino{1998}{5}	
-\AggiungiAiutino{1998}{6}	
-	
-\AggiungiAiutino{1999}{1}
-\AggiungiAiutino{1999}{2}
-\AggiungiAiutino{1999}{3}
-\AggiungiAiutino{1999}{4}
-
-\AggiungiAiutino{2000}{1}
-\AggiungiAiutino{2000}{2}
-\AggiungiAiutino{2000}{3}
-\AggiungiAiutino{2000}{4}
-
-\AggiungiAiutino{2001}{1}
-\AggiungiAiutino{2001}{2}
-\AggiungiAiutino{2001}{3}
-\AggiungiAiutino{2001}{4}
-
-\AggiungiAiutino{2002}{1}
-\AggiungiAiutino{2002}{2}
-\AggiungiAiutino{2002}{3}
-\AggiungiAiutino{2002}{4}
-
-\AggiungiAiutino{2003}{1}
-\AggiungiAiutino{2003}{2}
-\AggiungiAiutino{2003}{3}
-\AggiungiAiutino{2003}{4}
-
-\AggiungiAiutino{2004}{1}
-\AggiungiAiutino{2004}{2}
-\AggiungiAiutino{2004}{3}
-\AggiungiAiutino{2004}{4}
-
-\AggiungiAiutino{2005}{1}
-\AggiungiAiutino{2005}{2}
-\AggiungiAiutino{2005}{3}
-\AggiungiAiutino{2005}{4}
-
-\AggiungiAiutino{2006}{1}
-\AggiungiAiutino{2006}{2}
-\AggiungiAiutino{2006}{3}
-\AggiungiAiutino{2006}{4}
-
-\AggiungiAiutino{2007}{1}
-\AggiungiAiutino{2007}{2}
-\AggiungiAiutino{2007}{3}
-\AggiungiAiutino{2007}{4}
-
-\AggiungiAiutino{2008}{1}
-\AggiungiAiutino{2008}{2}
-\AggiungiAiutino{2008}{3}
-\AggiungiAiutino{2008}{4}
-
-\AggiungiAiutino{2009}{1}
-\AggiungiAiutino{2009}{2}
-\AggiungiAiutino{2009}{3}
-\AggiungiAiutino{2009}{4}
-
-\AggiungiAiutino{2010}{1}
-\AggiungiAiutino{2010}{2}
-\AggiungiAiutino{2010}{3}
-\AggiungiAiutino{2010}{4}
-
-\AggiungiAiutino{2011}{1}
-\AggiungiAiutino{2011}{2}
-\AggiungiAiutino{2011}{3}
-\AggiungiAiutino{2011}{4}
-
-\AggiungiAiutino{2012}{1}
-\AggiungiAiutino{2012}{2}
-\AggiungiAiutino{2012}{3}
-\AggiungiAiutino{2012}{4}
-
-\AggiungiAiutino{2013}{1}
-\AggiungiAiutino{2013}{2}
-\AggiungiAiutino{2013}{3}
-\AggiungiAiutino{2013}{4}
-
-\clearpage
-
-\chapter{Soluzioni e commenti}
-\renewcommand{\NomeCapitolo}{Soluzioni e commenti}
+\newcommand{\BookCommenti}[2]{%
+  \BookIntestazione{#1}{#2}\BookApri{#1}{#2}\Commenti\BookChiudi\par
+}
 
 \RinnovaParagraph
 \RinnovaSubParagraph
 
-\renewcommand{\Fondo}{$\overline{\parbox{\textwidth}{\mbox{}\rule{0ex}{2ex}
-	\hfill\textbf{Problemi di Ammissione alla SSSUP -- Soluzioni e 
-	commenti}\hfill\mbox{}}}$}
-% \include{\Percorso SA_Soluzioni}
+\title{{\Huge\textbf{Problemi di Matematica}}\\[1ex]{\LARGE alla SSSUP}}
+\author{}
+\date{\today}
 
-% \Prova{A}
-% 
-% \Soluzioni
+\begin{document}
+\maketitle
+\pdfbookmark[0]{Indice}{indice}
+\tableofcontents
 \clearpage
-
-
-\AggiungiSoluzione{1996}{1}
-\AggiungiSoluzione{1996}{2}
-\AggiungiSoluzione{1996}{3}
-\AggiungiSoluzione{1996}{4}
-\AggiungiSoluzione{1996}{5}
-\AggiungiSoluzione{1996}{6}
-
-\AggiungiSoluzione{1997}{1}
-\AggiungiSoluzione{1997}{2}
-\AggiungiSoluzione{1997}{3}
-\AggiungiSoluzione{1997}{4}
-\AggiungiSoluzione{1997}{5}
-\AggiungiSoluzione{1997}{6}
-
-\AggiungiSoluzione{1998}{1}
-\AggiungiSoluzione{1998}{2}
-\AggiungiSoluzione{1998}{3}
-\AggiungiSoluzione{1998}{4}
-\AggiungiSoluzione{1998}{5}
-\AggiungiSoluzione{1998}{6}
-
-\AggiungiSoluzione{1999}{1}
-\AggiungiSoluzione{1999}{2}
-\AggiungiSoluzione{1999}{3}
-\AggiungiSoluzione{1999}{4}
-
-\AggiungiSoluzione{2000}{1}
-\AggiungiSoluzione{2000}{2}
-\AggiungiSoluzione{2000}{3}
-\AggiungiSoluzione{2000}{4}
-
-\AggiungiSoluzione{2001}{1}
-\AggiungiSoluzione{2001}{2}
-\AggiungiSoluzione{2001}{3}
-\AggiungiSoluzione{2001}{4}
-
-\AggiungiSoluzione{2002}{1}
-\AggiungiSoluzione{2002}{2}
-\AggiungiSoluzione{2002}{3}
-\AggiungiSoluzione{2002}{4}
-
-\AggiungiSoluzione{2003}{1}
-\AggiungiSoluzione{2003}{2}
-\AggiungiSoluzione{2003}{3}
-\AggiungiSoluzione{2003}{4}
-
-\AggiungiSoluzione{2004}{1}
-\AggiungiSoluzione{2004}{2}
-\AggiungiSoluzione{2004}{3}
-\AggiungiSoluzione{2004}{4}
-
-\AggiungiSoluzione{2005}{1}
-\AggiungiSoluzione{2005}{2}
-\AggiungiSoluzione{2005}{3}
-\AggiungiSoluzione{2005}{4}
-
-\AggiungiSoluzione{2006}{1}
-\AggiungiSoluzione{2006}{2}
-\AggiungiSoluzione{2006}{3}
-\AggiungiSoluzione{2006}{4}
-
-\AggiungiSoluzione{2007}{1}
-\AggiungiSoluzione{2007}{2}
-\AggiungiSoluzione{2007}{3}
-\AggiungiSoluzione{2007}{4}
-
-\AggiungiSoluzione{2008}{1}
-\AggiungiSoluzione{2008}{2}
-\AggiungiSoluzione{2008}{3}
-\AggiungiSoluzione{2008}{4}
-
-\AggiungiSoluzione{2009}{1}
-\AggiungiSoluzione{2009}{2}
-\AggiungiSoluzione{2009}{3}
-\AggiungiSoluzione{2009}{4}
-
-\AggiungiSoluzione{2010}{1}
-\AggiungiSoluzione{2010}{2}
-\AggiungiSoluzione{2010}{3}
-\AggiungiSoluzione{2010}{4}
-
-\AggiungiSoluzione{2011}{1}
-\AggiungiSoluzione{2011}{2}
-\AggiungiSoluzione{2011}{3}
-\AggiungiSoluzione{2011}{4}
-
-\AggiungiSoluzione{2012}{1}
-\AggiungiSoluzione{2012}{2}
-\AggiungiSoluzione{2012}{3}
-\AggiungiSoluzione{2012}{4}
-
-\AggiungiSoluzione{2013}{1}
-\AggiungiSoluzione{2013}{2}
-\AggiungiSoluzione{2013}{3}
-\AggiungiSoluzione{2013}{4}
-
+\input{../build/SA_Book_catalogo.tex}
 \end{document}
