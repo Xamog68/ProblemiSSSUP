@@ -11,9 +11,13 @@ confuse con le verifiche matematiche ancora aperte.
       **1998.6** e **2000.2** prima di considerarle concordanti con le nuove
       soluzioni. Altri casi sensibili sono elencati in
       `INTEGRAZIONE_AI_20261108.md`.
-- [ ] Completare le figure del sito: 31 problemi segnalati, 156 disegni
-      PSTricks non convertiti, e due figure esterne da ricostruire
-      (2024.2 e 2026.1). Distinguere sempre gli avvisi per campo.
+- [x] Convertire e inserire sul sito **156 SVG vettoriali** da PSTricks,
+      con zero errori di generazione e verifica dell'associazione per campo.
+- [ ] Ricostruire le **due figure esterne** ancora mancanti (2024.2 e 2026.1).
+- [ ] Correggere gradualmente le etichette geometriche mal posizionate
+      (spesso già nel PDF), senza alterare le immagini generate a mano.
+- [ ] Valutare i **25 disegni candidati a tabelle/griglie HTML**, senza
+      sostituire automaticamente gli SVG approvati.
 - [ ] Controllare visivamente formule, riferimenti, figure e impaginazione
       del sito su Firefox, altri browser e dispositivi mobili.
 - [ ] Chiarire paternità e attribuzioni dei materiali preesistenti,
@@ -74,8 +78,11 @@ confuse con le verifiche matematiche ancora aperte.
 - [ ] Sviluppare una procedura più semplice per la conversione periodica dei
       dati e il controllo visivo prima del push; il **deployment** da GitHub
       è automatico, la rigenerazione dei dati non lo è.
-- [ ] Migliorare progressivamente la resa delle figure e verificare che gli
-      avvisi siano riferiti soltanto ai campi incompleti.
+- [x] Integrare gli SVG mediante manifesto e impronte dei sorgenti,
+      mantenendo le figure nella sezione corretta di ogni problema.
+- [ ] Verificare progressivamente ritagli, etichette e ingrandimento degli
+      SVG su browser e dispositivi diversi; gli avvisi devono riguardare
+      soltanto i campi realmente incompleti.
 
 ## Manutenzione e documentazione
 

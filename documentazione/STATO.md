@@ -37,9 +37,15 @@ Francaviglia e Franzoni (Zanichelli, 1995), che copre le prove fino al 1995.
 - Il test `make sito-check` ha restituito **ALLINEATO 96, OBSOLETO 0,
   MANCANTE 0, ERRORE 0** l'8 novembre 2026.
 
-**Figure web incomplete:** 31 problemi segnalati, 156 disegni PSTricks non
-convertiti, due figure esterne da ricostruire (2024.2 e 2026.1). Il controllo
-tecnico non attesta completezza grafica o validità matematica.
+**Figure web:** i **156 disegni PSTricks** sono stati convertiti in
+SVG vettoriali e integrati nel sito con commit `e519325` (8 novembre 2026).
+Il lotto sul Mac ha prodotto 156 SVG OK, zero errori e zero figure non
+provate; il collaudo dei dati web ha trovato 156 SVG inseriti e nessun
+PSTricks pendente. La vecchia segnalazione di 31 problemi incompleti
+riguardava lo stato anteriore a questo intervento. Restano **due figure
+esterne da ricostruire** (2024.2 e 2026.1) e possibili correzioni
+visive delle figure già prodotte. La riuscita tecnica non attesta fedeltà
+grafica o validità matematica.
 
 ### Libro
 
@@ -64,7 +70,9 @@ completare la ricognizione delle attribuzioni e dei diritti.
 
 1. Verifica matematica delle bozze AI e delle parti preesistenti problematiche
    (priorità documentate in `INTEGRAZIONE_AI_20261108.md`).
-2. Figure PSTricks e due figure esterne da ricostruire.
+2. Completare le due figure esterne (2024.2 e 2026.1) e rifinire
+   progressivamente le etichette dei disegni PSTricks già convertiti;
+   valutare le figure che potrebbero essere tabelle HTML.
 3. Recupero delle prove 2014–2020 e verifica filologica dei testi moderni.
 4. Autori, attribuzioni, condizioni di riutilizzo e licenze.
 5. Ulteriore collaudo su browser/dispositivi e perfezionamento editoriale.

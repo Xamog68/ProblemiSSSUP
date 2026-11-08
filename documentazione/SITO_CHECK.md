@@ -1,7 +1,8 @@
 # Controllo di allineamento dei problemi web
 
-**Stato all'8 novembre 2026:** sito distribuito pubblicamente; ultimo
-controllo noto `make sito-check`:
+**Stato all'8 novembre 2026, dopo l'integrazione SVG:** sito pubblico,
+con tutti i 96 problemi tecnicamente allineati e le 156 figure PSTricks
+presenti come SVG. Restano 2 figure esterne da ricostruire.
 
 ```text
 Problemi canonici esaminati: 96
@@ -10,10 +11,13 @@ OBSOLETO  : 0
 MANCANTE  : 0
 ERRORE    : 0
 
-INCOMPLETO (figure segnalate): 31 problemi
-Disegni PSTricks non convertiti: 156
-Figure da ricostruire: 2
+Verifica SVG dedicata: 156 SVG inseriti, 0 PSTricks pendenti,
+                      2 figure esterne da ricostruire.
 ```
+
+I vecchi conteggi «31 problemi incompleti» e «156 PSTricks non convertiti»
+sono **antecedenti** al commit `e519325` e non vanno più usati per
+fotografare lo stato corrente.
 
 ## Che cosa viene controllato
 
@@ -42,6 +46,10 @@ python3 scripts/sito_check.py
 python3 scripts/sito_check.py --anno 2013 --problema 1
 python3 scripts/sito_check.py --dettagli
 
+# Controllo specifico della collocazione dei 156 SVG
+# (richiede l'inventario locale build/figure-svg/inventario.json):
+python3 scripts/installa_figure_svg.py --verifica-sito
+
 # Rigenerazione dei problemi non allineati:
 python3 scripts/genera_dati_sito.py --sito sito
 
@@ -63,15 +71,20 @@ problemi selezionati sono tutti allineati; altrimenti 1.
 - **ALLINEATO** significa che il file web corrisponde al sorgente e alle
   regole di conversione attuali: non implica revisione matematica,
   correttezza delle formule, delle figure o delle attribuzioni.
-- **INCOMPLETO** segnala i problemi con figure da ricostruire o disegni
-  PSTricks ancora sostituiti da segnaposto. Un problema può risultare
-  contemporaneamente ALLINEATO e INCOMPLETO.
+- **INCOMPLETO** segnala figure esterne ancora da ricostruire (o eventuali
+  segnaposto PSTricks in caso di future conversioni mancanti/obsolete).
+  Un problema può risultare contemporaneamente ALLINEATO e INCOMPLETO.
+- La correttezza del **lotto SVG** richiede anche il controllo dedicato
+  `installa_figure_svg.py --verifica-sito`: legge inventario e impronte
+  locali, quindi non è eseguibile soltanto dal sito pubblicato.
 - Anche in assenza di segnaposto una conversione richiede controllo visivo.
   Le figure segnalate sono documentate in `FIGURE_SITO.md`.
 - Le nuove sezioni AI possono comparire sul sito in stato **DA VERIFICARE**;
   non diventano corrette perché superano il test tecnico.
-- Se in futuro il convertitore dipenderà da risorse LaTeX esterne, macro
-  condivise o filtri Pandoc, le impronte andranno estese a tali dipendenze.
+- Le impronte dei sorgenti vengono utilizzate anche dal manifesto SVG;
+  un cambiamento al LaTeX richiede rigenerazione delle figure interessate,
+  reinstallazione e nuova generazione dei dati web. Altre dipendenze esterne
+  dovranno essere considerate qualora vengano introdotte.
 
 Il sito è stato pubblicato con queste limitazioni dichiarate, non perché
 siano state risolte tutte le verifiche editoriali.

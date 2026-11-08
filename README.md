@@ -50,10 +50,10 @@ l'indicazione `noindex` per scoraggiare l'indicizzazione: **non è una misura
 di riservatezza**. È possibile che il repository GitHub o singoli URL siano
 comunque reperibili nei motori di ricerca.
 
-**Limite noto:** 31 problemi hanno figure segnalate come incomplete nel web;
-il controllo rileva 156 disegni PSTricks non convertiti e due figure esterne
-da ricostruire. I segnaposto sono dichiarazioni di incompletezza, non
-disegni equivalenti. Cfr. `documentazione/FIGURE_SITO.md`.
+**Figure:** i 156 disegni PSTricks sono stati convertiti e integrati nel
+sito come SVG vettoriali, generabili nuovamente dai sorgenti canonici. Restano
+da ricostruire due figure esterne (2024.2 e 2026.1) e da perfezionare alcuni
+dettagli tipografici delle figure. Cfr. `documentazione/FIGURE_SITO.md`.
 
 ## Comandi essenziali
 
@@ -72,6 +72,8 @@ Il libro v2.1 richiede inoltre una distribuzione TeX con PSTricks, `dvips`
 e `ps2pdf`. La compilazione modulare genera `build/SA_Book.pdf`; la ricetta
 storica `make libro` è distinta. Istruzioni: `LEGGIMI.md`,
 `documentazione/SITO.md` e `documentazione/SITO_CHECK.md`.
+Il procedimento per gli SVG è descritto in
+`documentazione/FIGURE_SITO.md`.
 
 Il controllo `sito-check` verifica **l'allineamento tecnico** fra i sorgenti
 e i dati web; non verifica correttezza matematica, fedeltà delle figure o

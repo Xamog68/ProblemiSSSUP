@@ -19,6 +19,9 @@ non una seconda redazione indipendente.
 | `sito/dati/titoli.json` | 96 titoli descrittivi redazionali, distinti dai testi canonici. |
 | `scripts/genera_dati_sito.py` | Generazione dei dati LaTeX → HTML con Pandoc. |
 | `scripts/sito_check.py` | Verifica di allineamento tecnico dei file web. |
+| `scripts/genera_figure_svg_massivo.py` | Conversione isolata PSTricks → SVG con log e timeout per figura. |
+| `scripts/installa_figure_svg.py` | Preflight, installazione degli SVG e verifica della loro collocazione. |
+| `sito/assets/figure/` | 156 SVG vettoriali e `manifest.json` delle impronte; risorse versionate. |
 | `.github/workflows/pages.yml` | Distribuzione di `sito/` su GitHub Pages. |
 
 Il sito usa MathJax per la matematica; le formule sono caricate da CDN.
@@ -47,8 +50,11 @@ nelle fisarmoniche chiuse**. Questo riguarda 24 risposte, 18 aiutini e
 «ufficiali» soltanto per il nome tecnico della macro LaTeX.
 
 I titoli sono etichette editoriali e non modificano `\Testo`.
-Le figure PSTricks non convertibili vengono segnalate con segnaposto;
-si veda `FIGURE_SITO.md`.
+I **156 disegni PSTricks** sono mostrati come SVG vettoriali, ottenuti senza
+modificare il codice LaTeX dei problemi. Il convertitore li associa a
+problema, campo e numero progressivo; le impronte impediscono l'uso
+silenzioso di SVG obsoleti. Restano segnalate due figure esterne da
+ricostruire (2024.2 e 2026.1); si veda `FIGURE_SITO.md`.
 
 ## Prova locale
 
@@ -71,7 +77,9 @@ https://xamog68.github.io/ProblemiSSSUP/?anno=2025&problema=3
 ## Rigenerazione e controllo
 
 Quando si modifica un file LaTeX canonico, una regola del convertitore o il
-file dei titoli, rigenerare i dati web interessati. Dalla radice:
+file dei titoli, rigenerare i dati web interessati. Se la modifica coinvolge
+una figura PSTricks, seguire prima la procedura SVG riportata sotto.
+Dalla radice:
 
 ```sh
 python3 scripts/genera_dati_sito.py --sito sito
@@ -88,13 +96,29 @@ python3 scripts/sito_check.py --anno 2013 --problema 2
 
 Il generatore aggiorna `sito/dati/`; non modifica i sorgenti canonici.
 I dati derivati sono versionati affinché il sito funzioni senza Pandoc
-sul server. Un aggiornamento soltanto di CSS o JS non richiede riconversione
+sul server. La produzione degli SVG è un passaggio **separato**, necessario
+quando si modificano sorgenti che contengono figure PSTricks:
+
+```sh
+python3 scripts/genera_figure_svg_massivo.py
+python3 scripts/installa_figure_svg.py --applica
+python3 scripts/genera_dati_sito.py --sito sito
+make sito-check
+python3 scripts/installa_figure_svg.py --verifica-sito
+```
+
+Gli SVG si generano **localmente** con TeX, `dvisvgm` e Ghostscript;
+GitHub Pages distribuisce soltanto i file già convertiti. L'installatore
+richiede il catalogo completo in `build/figure-svg/` e blocca l'operazione
+se qualche figura manca o ha un'impronta obsoleta. Le istruzioni dettagliate
+sono in `FIGURE_SITO.md`. Un aggiornamento soltanto di CSS o JS non richiede riconversione
 matematica. Si raccomanda un controllo visivo dei problemi modificati.
 
 Il test `make sito-check` dell'8 novembre 2026 ha restituito 96 problemi
-`ALLINEATO`, 0 `OBSOLETO`, 0 `MANCANTE`, 0 `ERRORE`. La conversione può
-comunque perdere la resa originale di figure e alcune macro: **allineato
-non significa matematicamente o graficamente completo**.
+`ALLINEATO`, 0 `OBSOLETO`, 0 `MANCANTE`, 0 `ERRORE`. Dopo l'integrazione
+sono presenti 156 SVG e nessun segnaposto PSTricks residuo; rimangono
+2 figure esterne mancanti. **Allineato non significa matematicamente o
+graficamente verificato**: servono anche controlli visivi.
 
 ## Pubblicazione tramite GitHub Pages
 
@@ -123,8 +147,9 @@ Non creare sitemap a fini promozionali senza una nuova decisione editoriale.
   perché sono ospitati sul sito.
 - Il footer segnala il lavoro editoriale originale; non risolve da solo
   attribuzioni o diritti sui materiali di terzi.
-- Figure non convertite, 82 integrazioni AI ancora da verificare e differenze
-  filologiche restano lavori aperti.
+- Due figure esterne da ricostruire, 82 integrazioni AI ancora da
+  verificare e differenze filologiche restano lavori aperti. La revisione
+  tipografica dei 156 SVG è distinta dalla loro conversione tecnica.
 
 Si vedano `DECISIONI.md`, `TODO.md`, `SITO_CHECK.md` e
 `INTEGRAZIONE_AI_20261108.md`.

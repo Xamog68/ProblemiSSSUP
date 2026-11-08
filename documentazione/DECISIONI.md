@@ -169,3 +169,28 @@ senza cancellarne il valore storico.
     con commit distinti (bozze AI, macro locali, convertitore, libro v2.1,
     successivi miglioramenti web e pubblicazione). Le nuove revisioni
     devono mantenere commit mirati.
+
+## 2026-11-08 — Recupero vettoriale dei disegni PSTricks
+
+1. **Conversione automatica:** le 156 figure PSTricks individuate nei
+   96 sorgenti sono convertite in SVG con `latex`, `dvisvgm` e Ghostscript;
+   il lotto sul Mac è riuscito senza errori. Gli SVG sono derivati,
+   mentre i file LaTeX restano canonici e continuano a servire al libro.
+2. **Tolleranza ai guasti:** la compilazione è isolata figura per figura;
+   errori e timeout vengono registrati senza interrompere il lotto.
+3. **Tracciabilità:** il sito usa identificativi problema/campo/figura,
+   manifesto e impronte dei sorgenti per impedire sostituzioni o riusi
+   involontari di file obsoleti. Le 156 immagini vengono pubblicate
+   insieme ai dati web, non generate da GitHub Pages.
+4. **Qualità editoriale:** la riuscita tecnica non equivale a verifica
+   tipografica. Le etichette geometriche talvolta risultano mal posizionate
+   già nel PDF; vanno corrette, quando opportuno, nei sorgenti LaTeX,
+   con modifiche documentate e rigenerazione dei derivati.
+5. **Alternative HTML:** 25 figure sono candidate (20 tabelle e 5 griglie),
+   ma restano SVG finché una valutazione editoriale non ne giustifichi la
+   sostituzione. Sudoku e domino già resi in HTML rimangono invariati.
+6. **Lavori residui:** due figure esterne (2024.2 e 2026.1) restano da
+   ricostruire; non sono parte dei 156 PSTricks convertiti.
+
+Questa decisione **supera lo stato provvisorio** riportato al punto 9 della
+sezione precedente, relativo al momento della prima pubblicazione.
