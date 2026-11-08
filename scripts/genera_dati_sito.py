@@ -7,7 +7,7 @@ Esecuzione dalla radice di ProblemiSSSUP:
   python3 scripts/genera_dati_sito.py --anno 2013 --problema 2
 
 Richiede Pandoc. I sorgenti del repository NON vengono modificati.
-La cache SHA-256 evita di convertire nuovamente i problemi invariati.
+Ogni file web contiene impronte SHA-256 per verificare sorgente e convertitore.
 È una prima implementazione sperimentale: verificare sempre PSTricks,
 macro storiche, figure ed eventuali riferimenti incrociati.
 """
@@ -21,6 +21,9 @@ import re
 import shutil
 import subprocess
 import sys
+
+JS_PREFIX = "window.SSSUP.registerProblem("
+JS_SUFFIX = ");"
 
 FIELDS=['Testo','Risposta','Aiutino','SoluzioneUfficiale','SoluzioniAlternative','Osservazioni','Commenti']
 
@@ -118,6 +121,69 @@ def convert(text: str, provenance: str) -> tuple[str,int]:
     return h,figures
 
 
+
+def generator_sha256() -> str:
+    """Impronta delle regole effettive di conversione, inclusa la configurazione."""
+    return hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
+
+
+def pandoc_version() -> str:
+    """La versione di Pandoc fa parte dell'identita del convertitore."""
+    out=subprocess.run(['pandoc','--version'],text=True,capture_output=True,check=True).stdout
+    return out.splitlines()[0]
+
+
+def sections_sha256(sections: dict) -> str:
+    b=json.dumps(sections,sort_keys=True,ensure_ascii=False,separators=(',',':')).encode('utf-8')
+    return hashlib.sha256(b).hexdigest()
+
+
+def read_problem(path: Path) -> dict | None:
+    """Legge soltanto il JSON del wrapper JS generato; non esegue JavaScript."""
+    try:
+        raw=path.read_text(encoding='utf-8').strip()
+        if not (raw.startswith(JS_PREFIX) and raw.endswith(JS_SUFFIX)):
+            return None
+        payload=json.loads(raw[len(JS_PREFIX):-len(JS_SUFFIX)])
+        return payload if isinstance(payload,dict) else None
+    except (OSError,ValueError,UnicodeError):
+        return None
+
+
+def conversion_status(src: Path, output: Path, title: str,
+                      version_hash: str, pandoc_id: str) -> tuple[str,str]:
+    """Verifica indipendente dalla cache locale e senza scrivere nulla."""
+    if not output.exists():
+        return 'MANCANTE','nessun file web generato'
+    data=read_problem(output)
+    if data is None:
+        return 'ERRORE','file web illeggibile o formato imprevisto'
+    m=re.fullmatch(r'SA_(\d{4})_(\d+)\.tex',src.name)
+    if not m or data.get('year')!=int(m.group(1)) or data.get('number')!=int(m.group(2)):
+        return 'ERRORE','identificativo anno/problema incoerente'
+    if data.get('source')!=src.name:
+        return 'ERRORE','nome del sorgente incoerente'
+    if not isinstance(data.get('sections'),dict) or not data['sections'].get('Testo'):
+        return 'ERRORE','manca il testo web'
+    try:
+        digest=hashlib.sha256(src.read_bytes()).hexdigest()
+    except OSError as e:
+        return 'ERRORE',f'sorgente non leggibile: {e}'
+    meta=data.get('_build')
+    if not isinstance(meta,dict):
+        return 'OBSOLETO','conversione legacy priva di impronte verificabili'
+    if meta.get('sections_sha256')!=sections_sha256(data['sections']):
+        return 'ERRORE','frammenti HTML modificati dopo la conversione'
+    if meta.get('latex_sha256')!=digest:
+        return 'OBSOLETO','il sorgente LaTeX e cambiato'
+    if meta.get('generator_sha256')!=version_hash:
+        return 'OBSOLETO','regole del generatore modificate'
+    if meta.get('pandoc_version')!=pandoc_id:
+        return 'OBSOLETO','versione Pandoc cambiata'
+    if data.get('title')!=title:
+        return 'OBSOLETO','titolo modificato'
+    return 'ALLINEATO','impronte corrispondenti (non equivale a revisione matematica)'
+
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--sorgenti',type=Path,default=Path('contenuti/problemi'))
@@ -131,8 +197,10 @@ def main():
     if not shutil.which('pandoc'):p.error('Pandoc non e installato: puoi comunque aprire l\'anteprima HTML gia generata.')
     dest=args.sito/'dati'
     (dest/'problemi').mkdir(parents=True,exist_ok=True)
-    cache_path=dest/'build_cache.json'
-    cache=json.loads(cache_path.read_text(encoding='utf8')) if cache_path.exists() else {}
+    # La vecchia build_cache.json non e piu usata: le impronte
+    # viaggiano insieme a ciascun file web, anche su GitHub.
+    gen_id=generator_sha256()
+    pandoc_id=pandoc_version()
     title_path=dest/'titoli.json'
     titles=json.loads(title_path.read_text(encoding='utf8')) if title_path.exists() else {}
     files=sorted(args.sorgenti.glob('SA_????_*.tex'))
@@ -147,7 +215,9 @@ def main():
         key=f'{y}_{n}'
         digest=hashlib.sha256(f.read_bytes()).hexdigest()
         path=dest/'problemi'/f'{key}.js'
-        if not args.force and cache.get(key)==digest and path.exists():
+        title=titles.get(key,f'Problema {n}')
+        state,why=conversion_status(f,path,title,gen_id,pandoc_id)
+        if not args.force and state=='ALLINEATO':
             skipped+=1
             continue
         tex=f.read_text(encoding='utf8')
@@ -163,14 +233,18 @@ def main():
         if not fields.get('Testo'):
             print('ERRORE: testo mancante o vuoto in',f.name,file=sys.stderr)
             return 2
-        problem={'year':y,'number':n,'title':titles.get(key,f'Problema {n}'),'source':f.name,'sections':fields}
+        problem={'year':y,'number':n,'title':title,'source':f.name,'sections':fields}
+        problem['_build']={
+            'latex_sha256':digest,
+            'generator_sha256':gen_id,
+            'pandoc_version':pandoc_id,
+            'sections_sha256':sections_sha256(fields),
+        }
         if pictures:problem['warning']=f'{pictures} disegni PSTricks sono segnaposto: verificare la resa grafica prima di pubblicare.'
         payload='window.SSSUP.registerProblem('+json.dumps(problem,ensure_ascii=False,separators=(',',':'))+');\n'
         path.write_text(payload,encoding='utf8')
-        cache[key]=digest
         changed+=1
         print('CONVERTITO',f.name,':',len(fields),'campi')
-    cache_path.write_text(json.dumps(cache,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
     count_by_year={}
     for y,n,f in all_files:count_by_year[y]=count_by_year.get(y,0)+1
     rows=[]

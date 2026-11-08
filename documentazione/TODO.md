@@ -79,3 +79,16 @@
 - [ ] Definire metadati editoriali e provenienza dei materiali.
 - [ ] Preparare il deploy su GitHub Pages.
 - [ ] Attivare la pubblicazione soltanto dopo la revisione.
+
+## Normalizzazione editoriale dei sorgenti LaTeX
+
+- [ ] Uniformare la codifica UTF-8 dei sorgenti canonici.
+- [ ] Utilizzare caratteri Unicode per gli accenti nel testo italiano.
+- [ ] Eliminare le interruzioni di riga artificiali nella prosa.
+- [ ] Conservare righe vuote fra paragrafi distinti.
+- [ ] Non modificare formule, comandi e struttura matematica.
+- [ ] Verificare con Git diff e compilazione la normalizzazione.
+- [ ] Rigenerare successivamente i contenuti web interessati.
+
+Questo intervento e distinto dallo sviluppo del convertitore.
+Gli originali storici devono rimanere conservati.
