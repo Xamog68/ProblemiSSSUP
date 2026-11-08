@@ -1,5 +1,12 @@
 # Recupero dei testi 2024-2026
 
+> **Nota storica (8 novembre 2026).** Questo documento registra il recupero
+> iniziale dei testi del 7 novembre. I nove problemi 2024–2026 sono stati
+> successivamente importati nei sorgenti canonici del repository. Le frasi
+> «non sono ancora canonici» e i «prossimi passi» sottostanti descrivono
+> soltanto la situazione **al momento del recupero**. Gli originali in
+> `fonti-locali/` rimangono esclusi da Git.
+
 Data: 7 novembre 2026.
 
 ## Stato

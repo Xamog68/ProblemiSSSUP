@@ -1,5 +1,13 @@
 # ProblemiSSSUP - Integrazione dei campi mancanti
 
+> **Aggiornamento dell'8 novembre 2026.** Le 82 aggiunte descritte in
+> questo rapporto sono state integrate nel repository (`67ec49f`) e sono
+> ora visibili nel libro modulare v2.1 e nel sito pubblico, con avvertenze
+> di bozza AI da verificare. Le sezioni che parlano di «pacchetto non ancora
+> integrato» e di «sito non collaudato» fotografano **la fase precedente**
+> all'integrazione; i controlli e le criticità matematiche restano pertinenti.
+> Il sito mostra la provenienza anche sulle fisarmoniche chiuse.
+
 **Data:** 8 novembre 2026. **Autore delle nuove redazioni:** ChatGPT. **Stato di tutte le aggiunte:** bozze AI da verificare.
 
 ## 1. Risultato

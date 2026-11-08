@@ -1,5 +1,10 @@
 # Figure da completare nel sito SSSUP
 
+**Stato all'8 novembre 2026:** il sito è pubblico, con 31 problemi
+segnalati come incompleti per figure, 156 disegni PSTricks non convertiti
+e 2 figure esterne da ricostruire (2024.2 e 2026.1). Questo cantiere
+rimane aperto, indipendentemente dall'esito `ALLINEATO 96/96`.
+
 ## Marcatori nei sorgenti canonici
 
 Quando una figura esterna presente negli originali non e ancora stata

@@ -1,113 +1,130 @@
-# Sito web SSSUP — infrastruttura sperimentale B+C
+# Sito web ProblemiSSSUP
 
-*Stato: prototipo locale, 7 novembre 2026. Non pubblicato su GitHub Pages.*
+**Stato all'8 novembre 2026:** sito pubblico su GitHub Pages, con 96 problemi
+in 24 annate. URL: https://xamog68.github.io/ProblemiSSSUP/
 
-## Scopo e separazione delle responsabilita
+## Fonte canonica e componenti
 
 I file `contenuti/problemi/SA_AAAA_N.tex` sono l'unica fonte canonica
-per testi e materiali matematici. Il sito ne mostra una copia derivata per
-il web, ma non introduce una seconda fonte editoriale modificata a mano.
+per testi e materiali matematici. La versione HTML è un **derivato**,
+non una seconda redazione indipendente.
 
-- `sito/index.html`: struttura HTML, intestazione e caricamento risorse.
-- `sito/assets/site.css`: aspetto grafico e impaginazione.
-- `sito/assets/site.js`: interazione, navigazione e presentazione dei dati.
-- `sito/dati/manifest.js`: elenco anni 1996–2026 e disponibilita dei problemi.
-- `sito/dati/problemi/AAAA_N.js`: contenuti matematici gia convertiti,
-  registrati con `window.SSSUP.registerProblem(...)`.
-- `sito/dati/titoli.json`: etichette descrittive sperimentali; non sono
-  necessariamente titoli originali della prova.
-- `scripts/genera_dati_sito.py`: convertitore incrementale dei contenuti,
-  separato dal codice di interfaccia; richiede Pandoc.
+| Elemento | Ruolo |
+|---|---|
+| `sito/index.html` | Contenitore HTML e caricamento delle risorse. |
+| `sito/assets/site.css` | Grafica, fisarmoniche, numerazione delle domande e responsive. |
+| `sito/assets/site.js` | Navigazione, viste anno/problema, materiali e metadati. |
+| `sito/dati/manifest.js` | Elenco degli anni e dei problemi disponibili. |
+| `sito/dati/problemi/AAAA_N.js` | Contenuti convertiti, registrati con `window.SSSUP.registerProblem(...)`. |
+| `sito/dati/titoli.json` | 96 titoli descrittivi redazionali, distinti dai testi canonici. |
+| `scripts/genera_dati_sito.py` | Generazione dei dati LaTeX → HTML con Pandoc. |
+| `scripts/sito_check.py` | Verifica di allineamento tecnico dei file web. |
+| `.github/workflows/pages.yml` | Distribuzione di `sito/` su GitHub Pages. |
 
-Le due viste del medesimo problema usano gli stessi file di dati:
+Il sito usa MathJax per la matematica; le formule sono caricate da CDN.
+La resa in assenza di connessione non è garantita.
 
-1. **Vista anno (B)**: tutti i testi visibili subito; un pulsante
-   "Mostra materiali aggiuntivi" per problema, che apre le fisarmoniche
-   delle sole sezioni realmente presenti.
-2. **Vista separata (C)**: nuova scheda con testo del problema e materiali
-   tutti aperti inizialmente, richiudibili singolarmente.
+## Interfaccia e contenuti
 
-Nella pagina dell'anno una navigazione fissa per i problemi rimane
-accessibile durante lo scorrimento. I controlli globali di apertura,
-filtraggio e misura della lunghezza sono raccolti sotto "Strumenti" e
-sono soprattutto ausili di prova, non una scelta editoriale definitiva.
+L'indice mostra le annate dal 1996 al 2026, distinguendo quelle mancanti.
+Sono consultabili i 96 problemi degli anni 1996–2013 e 2021–2026;
+le prove 2014–2020 restano da recuperare.
 
-## Contenuti del prototipo
+- **Vista anno (B):** tutti i testi visibili; un pulsante per ciascun problema
+  mostra i materiali aggiuntivi nelle fisarmoniche corrispondenti ai soli
+  campi presenti. La navigazione fissa resta disponibile durante lo scroll.
+- **Vista problema/materiali (C):** scheda dedicata al problema con materiali
+  consultabili individualmente, inizialmente aperti quando previsto.
+- È disponibile un comando evidente per tornare all'elenco degli anni.
+- Le domande dei testi sono visualizzate come (a), (b), (c), coerentemente
+  con il livello `enumii` del libro; risposte e soluzioni non sono forzate
+  alla stessa numerazione.
 
-- Anni indicizzati: 1996–2026 (31 anni).
-- Dati web disponibili: 2013 (4 problemi con 18 sezioni aggiuntive)
-  e 2021–2026 (18 problemi con soli testi canonici).
-- Anni 1996–2012: i 74 file LaTeX canonici esistono ma non sono ancora
-  convertiti per questa anteprima.
-- Anni 2014–2020: testi delle prove scritte non ancora recuperati.
+I campi aggiunti dall'AI conservano metadati di provenienza e appaiono con
+l'icona delle stelline e la dicitura **«Bozza AI · Da verificare» già
+nelle fisarmoniche chiuse**. Questo riguarda 24 risposte, 18 aiutini e
+40 soluzioni redazionali. I materiali preesistenti non vengono chiamati
+«ufficiali» soltanto per il nome tecnico della macro LaTeX.
 
-Le conversioni di questa anteprima **non sono un'edizione verificata**.
-In particolare PSTricks, le figure mancanti, le macro non standard e i
-riferimenti LaTeX devono essere controllati prima della pubblicazione.
-Il sito utilizza MathJax da CDN per le formule: una connessione Internet
-puo essere necessaria anche usando l'anteprima locale.
+I titoli sono etichette editoriali e non modificano `\Testo`.
+Le figure PSTricks non convertibili vengono segnalate con segnaposto;
+si veda `FIGURE_SITO.md`.
 
-## Prova locale (senza Pandoc)
+## Prova locale
 
 Dalla radice del repository:
 
 ```sh
-open sito/index.html
+python3 -m http.server 8000 --directory sito
 ```
 
-Se Firefox limita il caricamento dei file locali, usare un server statico:
+Aprire `http://localhost:8000/` in Firefox e arrestare il server con `Ctrl+C`.
+Non servono Node.js né un server applicativo per consultare il sito.
 
-```sh
-cd sito
-python3 -m http.server 8765
-```
-
-Aprire `http://localhost:8765/` e fermare il server con `Ctrl+C`.
-
-Esempi di collegamento diretto:
+Esempi di URL pubblici:
 
 ```text
-sito/index.html?anno=2013
-sito/index.html?anno=2013&problema=2
-sito/index.html?anno=2013&problema=2&vista=materiali
-sito/index.html?anno=2013&problema=2&sezione=SoluzioneUfficiale
+https://xamog68.github.io/ProblemiSSSUP/?anno=2025
+https://xamog68.github.io/ProblemiSSSUP/?anno=2025&problema=3
 ```
 
-## Aggiornamento incrementale dei dati
+## Rigenerazione e controllo
 
-Quando Pandoc sara disponibile, dalla radice del repository:
+Quando si modifica un file LaTeX canonico, una regola del convertitore o il
+file dei titoli, rigenerare i dati web interessati. Dalla radice:
 
 ```sh
-python3 scripts/genera_dati_sito.py --anno 2013 --problema 2
+python3 scripts/genera_dati_sito.py --sito sito
+make sito-check
+git diff --check
 ```
 
-Per convertire tutti i problemi disponibili:
+Per un solo problema:
 
 ```sh
-python3 scripts/genera_dati_sito.py
+python3 scripts/genera_dati_sito.py --anno 2013 --problema 2 --sito sito
+python3 scripts/sito_check.py --anno 2013 --problema 2
 ```
 
-Il generatore scrive/aggiorna i file in `sito/dati/` e
-`sito/dati/manifest.js`, senza toccare `sito/assets/` o i sorgenti `.tex`.
-La cache locale `sito/dati/build_cache.json` non si versiona.
-I file `AAAA_N.js` sono prodotti derivati e possono essere versionati
-per rendere il sito consultabile senza dover installare Pandoc.
+Il generatore aggiorna `sito/dati/`; non modifica i sorgenti canonici.
+I dati derivati sono versionati affinché il sito funzioni senza Pandoc
+sul server. Un aggiornamento soltanto di CSS o JS non richiede riconversione
+matematica. Si raccomanda un controllo visivo dei problemi modificati.
 
-**Attenzione:** la conversione e sperimentale. Il generatore può perdere
-macro LaTeX speciali, sostituire disegni PSTricks con segnaposto e non
-riprodurre fedelmente tutte le formule. Controllare i risultati prima di
-pubblicare il sito. Per ora non e configurato alcun deploy automatico
-su GitHub Pages.
+Il test `make sito-check` dell'8 novembre 2026 ha restituito 96 problemi
+`ALLINEATO`, 0 `OBSOLETO`, 0 `MANCANTE`, 0 `ERRORE`. La conversione può
+comunque perdere la resa originale di figure e alcune macro: **allineato
+non significa matematicamente o graficamente completo**.
 
-## Decisioni editoriali e lavoro futuro
+## Pubblicazione tramite GitHub Pages
 
-- Unica fonte LaTeX per libro PDF e sito; presentazione e dati separati.
-- Un aggiornamento solo CSS/JS non richiede conversioni matematiche.
-- Risposta, aiutino, soluzioni, alternative e osservazioni appaiono solo
-  se realmente disponibili.
-- In futuro potranno essere aggiunti contenuti AI provvisori, etichettati
-  esplicitamente e distinti dalle soluzioni storiche o verificate.
-- Verificare il convertitore su tutti i 96 problemi; gestire robustamente
-  disegni, conversioni mancanti e la presenza di sottoinsiemi sparsi.
-- Prima del sito pubblico: verifica matematica e grafica, provenienza,
-  diritti di distribuzione, accessibilita, mobile e deploy GitHub Pages.
+Il repository GitHub è pubblico; il sito viene pubblicato dalla **sola
+cartella `sito/`**, tramite il workflow `.github/workflows/pages.yml`.
+In **Settings → Pages → Build and deployment**, la sorgente deve essere
+**GitHub Actions**, non *Deploy from a branch*. In caso contrario potrebbe
+essere mostrato l'`index.html` della radice del repository, cioè la roadmap,
+anziché il sito dei problemi.
+
+Per aggiornare il sito: rigenerare i dati se necessario, eseguire i controlli,
+creare un commit e fare `git push origin main`. Seguire l'esecuzione nella
+scheda **Actions** di GitHub. Il primo deploy corretto è stato ottenuto
+rilanciando il workflow dedicato dopo la configurazione di Pages.
+
+La pagina contiene una direttiva `noindex` per scoraggiare la comparsa del
+sito nei risultati di ricerca; **non è un controllo d'accesso**. Il repository
+pubblico, gli URL conosciuti e le pagine accessibili restano consultabili.
+Non creare sitemap a fini promozionali senza una nuova decisione editoriale.
+
+## Provenienza, licenze e limiti
+
+- I titoli e le integrazioni redazionali sono distinti dai testi d'esame.
+- Non esiste una licenza unica adottata per tutto il materiale.
+- I testi e le soluzioni preesistenti non diventano opera del curatore
+  perché sono ospitati sul sito.
+- Il footer segnala il lavoro editoriale originale; non risolve da solo
+  attribuzioni o diritti sui materiali di terzi.
+- Figure non convertite, 82 integrazioni AI ancora da verificare e differenze
+  filologiche restano lavori aperti.
+
+Si vedano `DECISIONI.md`, `TODO.md`, `SITO_CHECK.md` e
+`INTEGRAZIONE_AI_20261108.md`.

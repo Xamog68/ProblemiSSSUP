@@ -1,94 +1,76 @@
-# Da fare
+# Da fare — ProblemiSSSUP
 
-## Prima fase
+**Aggiornato l'8 novembre 2026.** Le attività completate non devono essere
+confuse con le verifiche matematiche ancora aperte.
 
-- [x] Verificare la compilazione completa sul Mac: 205 pagine con MacTeX 2025.
-- [ ] Confrontare visivamente il nuovo PDF con `SA_Book.pdf` del 2013.
-- [ ] Chiarire autori, contributori e condizioni di pubblicazione.
-- [ ] Decidere il nome definitivo del progetto e del libro.
-- [ ] Recuperare la classificazione 1996–1998 come metadati strutturati.
+## Prossime priorità
 
-## Contenuti
+- [ ] Revisionare matematicamente le 82 integrazioni AI (24 risposte,
+      18 aiutini, 40 soluzioni redazionali) e registrare l'esito per campo.
+- [ ] Riesaminare i conflitti con le risposte preesistenti nei problemi
+      **1998.6** e **2000.2** prima di considerarle concordanti con le nuove
+      soluzioni. Altri casi sensibili sono elencati in
+      `INTEGRAZIONE_AI_20261108.md`.
+- [ ] Completare le figure del sito: 31 problemi segnalati, 156 disegni
+      PSTricks non convertiti, e due figure esterne da ricostruire
+      (2024.2 e 2026.1). Distinguere sempre gli avvisi per campo.
+- [ ] Controllare visivamente formule, riferimenti, figure e impaginazione
+      del sito su Firefox, altri browser e dispositivi mobili.
+- [ ] Chiarire paternità e attribuzioni dei materiali preesistenti,
+      condizioni di riutilizzo e scelta di eventuali licenze distinte per
+      codice, testi d'esame e contributi originali.
 
-- [ ] Verificare le sei risposte brevi mancanti.
-- [ ] Valutare il completamento delle 22 soluzioni ufficiali mancanti.
-- [ ] Classificare tutti i problemi per area, argomento e difficoltà.
-- [ ] Registrare in modo esplicito autori e provenienza delle singole soluzioni.
+## Archivio e contenuti
 
-## Evoluzione tecnica
+- [x] Importare 78 problemi storici 1996–2013 e 18 problemi 2021–2026.
+- [x] Normalizzare UTF-8, accenti e paragrafi nei sorgenti LaTeX.
+- [x] Integrare le 82 bozze AI senza sovrascrivere i campi preesistenti.
+- [ ] Recuperare i problemi mancanti del 2014–2020.
+- [ ] Verificare editorialmente i 18 testi 2021–2026 contro le prove originali.
+- [ ] Importare la classificazione storica 1996–1998 e classificare gli altri
+      problemi per area, argomento e difficoltà.
+- [ ] Associare in modo sistematico gli autori e le fonti delle soluzioni
+      preesistenti e degli appunti moderni ai singoli problemi.
+- [ ] Valutare le trascrizioni degli appunti 2024–2026 in rapporto alle bozze
+      già integrate, prima di considerarli materiale definitivo.
+- [ ] Valutare se introdurre i 96 titoli redazionali nei sorgenti canonici;
+      per ora restano separati in `sito/dati/titoli.json`.
 
-- [ ] Separare progressivamente contenuto e impaginazione senza duplicare il
-      LaTeX.
-- [ ] Progettare la generazione di un sito statico dagli stessi sorgenti.
-- [ ] Valutare la sostituzione o l'isolamento di PSTricks.
-- [ ] Aggiungere controlli automatici e confronto degli artefatti generati.
+## Libro PDF
 
-## Ampliamento dell'archivio
+- [x] Compilare il libro storico sul Mac (205 pagine, 7 novembre 2026).
+- [x] Creare e collaudare il libro modulare v2.1, con selezione di annate
+      e campi, collegamenti e 96 soluzioni su pagine iniziali distinte.
+- [ ] Confrontare sistematicamente il PDF storico e il libro modulare,
+      verificando impaginazione, formule e figure (il collaudo finora non
+      è una revisione esaustiva).
+- [ ] Decidere nome definitivo, frontespizio e attribuzioni del libro.
 
-- [x] Importare i nove problemi del 2021-2023.
-- [x] Recuperare e conservare i testi del 2024-2026.
-- [x] Importare i nove problemi del 2024-2026.
-- [x] Adeguare il verificatore all'archivio ampliato.
-- [ ] Verificare editorialmente i 18 testi rispetto alle fonti.
-- [ ] Ricostruire in LaTeX la figura del problema 2024.2.
-- [ ] Ricostruire in LaTeX la figura del problema 2026.1.
-- [ ] Recuperare i problemi degli anni 2014-2020.
-- [ ] Progettare il libro ampliato senza modificare quello storico.
+## Sito web
 
-## Obiettivo finale: libro e sito GitHub Pages
+- [x] Convertire i 96 problemi e introdurre controllo di allineamento
+      LaTeX/web tramite impronte.
+- [x] Implementare navigazione per anno e problema, vista materiali e
+      fisarmoniche per i contenuti presenti.
+- [x] Mostrare le bozze AI con diciture e icona delle stelline prima
+      dell'apertura delle fisarmoniche.
+- [x] Introdurre 96 titoli redazionali e domande (a), (b), (c) nei testi.
+- [x] Pubblicare tramite GitHub Pages dalla cartella `sito/` usando
+      GitHub Actions, senza pubblicare la roadmap al posto del sito.
+- [x] Aggiungere ritorno visibile agli anni, footer di provenienza e `noindex`.
+- [ ] Sviluppare una procedura più semplice per la conversione periodica dei
+      dati e il controllo visivo prima del push; il **deployment** da GitHub
+      è automatico, la rigenerazione dei dati non lo è.
+- [ ] Migliorare progressivamente la resa delle figure e verificare che gli
+      avvisi siano riferiti soltanto ai campi incompleti.
 
-### Consolidamento dell'archivio
+## Manutenzione e documentazione
 
-- [ ] Recuperare le prove scritte del 2014-2020.
-- [ ] Completare l'inventario editoriale per singolo problema.
-- [ ] Associare le fonti di soluzione ai rispettivi problemi.
-- [ ] Trascrivere e verificare gli appunti di soluzione 2024-2026.
-- [ ] Ricostruire in LaTeX le figure ancora mancanti.
-- [ ] Chiarire paternità e condizioni di pubblicazione.
-
-### Generazione del libro
-
-- [ ] Progettare un nuovo master senza alterare quello storico.
-- [ ] Consentire la selezione di anni e problemi.
-- [ ] Consentire la selezione dei campi da pubblicare.
-- [ ] Generare automaticamente il PDF dai sorgenti canonici.
-- [ ] Verificare impaginazione, formule e figure.
-
-### Generazione del sito
-
-- [ ] Definire la struttura di navigazione per anno e problema.
-- [ ] Scegliere la tecnologia di conversione LaTeX-web.
-- [ ] Gestire formule, macro storiche e disegni.
-- [ ] Generare pagine statiche dai sorgenti canonici.
-- [ ] Mostrare su richiesta soltanto i contenuti disponibili.
-- [ ] Configurare la pubblicazione mediante GitHub Pages.
-- [ ] Automatizzare gli aggiornamenti del sito.
-
-### Manutenzione
-
-- [ ] Versionare il generatore dell'inventario generale.
-- [ ] Aggiungere controlli automatici sui prodotti generati.
-- [ ] Documentare il procedimento per riprenderlo in Codex.
-
-## Sito web - Prossimi passi
-
-- [ ] Verificare la resa matematica delle conversioni del 2013.
-- [ ] Convertire e controllare i problemi del 1996-2012.
-- [ ] Migliorare il trattamento delle figure PSTricks.
-- [ ] Verificare i collegamenti e la leggibilita su dispositivi mobili.
-- [ ] Definire metadati editoriali e provenienza dei materiali.
-- [ ] Preparare il deploy su GitHub Pages.
-- [ ] Attivare la pubblicazione soltanto dopo la revisione.
-
-## Normalizzazione editoriale dei sorgenti LaTeX
-
-- [ ] Uniformare la codifica UTF-8 dei sorgenti canonici.
-- [ ] Utilizzare caratteri Unicode per gli accenti nel testo italiano.
-- [ ] Eliminare le interruzioni di riga artificiali nella prosa.
-- [ ] Conservare righe vuote fra paragrafi distinti.
-- [ ] Non modificare formule, comandi e struttura matematica.
-- [ ] Verificare con Git diff e compilazione la normalizzazione.
-- [ ] Rigenerare successivamente i contenuti web interessati.
-
-Questo intervento e distinto dallo sviluppo del convertitore.
-Gli originali storici devono rimanere conservati.
+- [x] Versionare le regole di conversione e i controlli di integrità.
+- [x] Documentare l'architettura e il procedimento di aggiornamento.
+- [ ] Aggiungere controlli automatici in CI oltre al workflow di deployment,
+      se utili, senza confondere l'allineamento con la verifica matematica.
+- [ ] Registrare formalmente gli esiti della revisione matematica mano a mano
+      che le bozze vengono approvate o corrette.
+- [ ] Conservare il materiale originale e gli inventari locali fuori da Git
+      finché non ne sia definita l'eventuale pubblicabilità.

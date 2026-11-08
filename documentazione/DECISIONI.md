@@ -124,3 +124,48 @@ La navigazione rapida rimane accessibile durante lo scorrimento.
 
 I dati web gia convertiti possono essere aggiornati singolarmente,
 senza rigenerare l'interfaccia.
+
+## 2026-11-08 — Consolidamento, libro v2.1 e sito pubblico
+
+Queste decisioni **aggiornano** le ipotesi e le intenzioni del 7 novembre
+senza cancellarne il valore storico.
+
+1. **Copertura:** 96 sorgenti canonici (1996–2013, 2021–2026); restano
+   mancanti le prove 2014–2020. La partenza dal 1996 è deliberata: il volume
+   di Guido Torrigiani, Sebastiano Francaviglia e Tullio Franzoni
+   (Zanichelli, 1995) copre la raccolta precedente, fino al 1995.
+2. **Bozze AI:** sono state integrate 82 aggiunte in 43 problemi, marcate
+   con `SSSUP-BOZZA-AI` e accompagnate da un manifesto di provenienza.
+   Possono essere pubblicate **purché chiaramente identificate come da
+   verificare**. Nel sito la distinzione è visibile anche nelle
+   fisarmoniche chiuse (icona stelline e testo). Nel libro v2.1 la
+   provenienza è segnalata nella sezione interessata. La denominazione
+   storica `SoluzioneUfficiale` non deve suggerire un'approvazione.
+3. **Titoli:** tutti i 96 problemi hanno un titolo descrittivo redazionale,
+   conservato in `sito/dati/titoli.json`. Per ora non viene trasferito al
+   sorgente LaTeX canonico; la possibilità rimane aperta.
+4. **Rappresentazione:** nei testi web le sottodomande sono (a), (b), (c),
+   come gli `enumii` del libro. La numerazione dei contenuti aggiuntivi
+   non è modificata per analogia.
+5. **Libro:** la versione modulare v2.1 è adottata come base: inventario
+   automatico, selezione annate/campi, rimandi, organizzazione per campi,
+   ripresa della tipografia storica e pagina nuova per ciascuna soluzione.
+   Il libro storico rimane distinto.
+6. **Pubblicazione:** il repository è pubblico; GitHub Pages distribuisce
+   la cartella `sito/` tramite `.github/workflows/pages.yml` e GitHub
+   Actions. La roadmap della radice non è la homepage pubblicata.
+7. **Ricercabilità:** il sito include `noindex` per scoraggiare i motori
+   di ricerca. Questo non rende privato il sito né garantisce che il
+   repository GitHub non sia indicizzato.
+8. **Diritti:** footer e attribuzioni si riferiscono al lavoro editoriale
+   originale senza appropriarsi dei testi d'esame o di contributi altrui.
+   La ricognizione giuridica e bibliografica resta incompleta; **non è
+   stata scelta una licenza generale** per tutto il repository.
+9. **Figure:** la pubblicazione è avvenuta dichiarando i limiti della
+   conversione grafica (31 problemi segnalati, 156 disegni PSTricks non
+   convertiti, 2 figure esterne da ricostruire). L'allineamento tecnico
+   non implica completezza matematica o grafica.
+10. **Git:** i cantieri dell'8 novembre sono stati consolidati in `main`
+    con commit distinti (bozze AI, macro locali, convertitore, libro v2.1,
+    successivi miglioramenti web e pubblicazione). Le nuove revisioni
+    devono mantenere commit mirati.
