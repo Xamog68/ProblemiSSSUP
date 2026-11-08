@@ -48,12 +48,13 @@ def inspect_figure_issues(tex: str) -> dict:
         value = extract_macro(tex, field)
         if value is None:
             continue
-        for match in MISSING_FIGURE_RE.finditer(value):
-            missing.append({'campo': field, 'riferimento': match.group('ref').strip()})
-        clean = no_comments(value)
-        pst += len(PSTRICKS_INLINE_RE.findall(clean))
-        clean = PSTRICKS_INLINE_RE.sub('', clean)
-        pst += len(PSTRICKS_ENV_RE.findall(clean))
+        # Un unico riconoscitore per inventario e conversione.
+        _, nfig, refs = preprocess(value)
+        pst += nfig
+        missing.extend(
+            {'campo': field, 'riferimento': ref}
+            for ref in refs
+        )
     return {'pstricks': pst, 'da_ricostruire': missing}
 
 
@@ -121,8 +122,47 @@ def preprocess(text: str) -> tuple[str,int,list[str]]:
         nonlocal figure_count
         figure_count+=1
         return 'SSSUPFIGURASEGNAPOSTO'+str(figure_count)+'FINE'
-    text=PSTRICKS_INLINE_RE.sub(figure,text)
-    text=PSTRICKS_ENV_RE.sub(figure,text)
+    # Riconosce blocchi PSTricks completi, anche se annidati.
+    # Conta soltanto i disegni esterni.
+    commands = re.compile(
+        r'\\(?:begin\{pspicture\*?\}|end\{pspicture\*?\}|'
+        r'endpspicture(?![A-Za-z@])|pspicture\*?(?![A-Za-z@]))'
+    )
+
+    parts = []
+    last = 0
+    start = None
+    depth = 0
+
+    for match in commands.finditer(text):
+        command = match.group()
+
+        closing = (
+            command.startswith(r'\endpspicture')
+            or command.startswith(r'\end{pspicture')
+        )
+
+        if closing:
+            if depth == 0:
+                raise ValueError("PSTricks: chiusura senza apertura")
+
+            depth -= 1
+
+            if depth == 0:
+                parts.append(text[last:start])
+                parts.append(figure(match))
+                last = match.end()
+                start = None
+        else:
+            if depth == 0:
+                start = match.start()
+            depth += 1
+
+    if depth != 0:
+        raise ValueError("PSTricks: disegno non chiuso")
+
+    parts.append(text[last:])
+    text = ''.join(parts)
     text=re.sub(r'\\psset\{[^{}]*\}','',text)
     return text,figure_count,missing
 
@@ -282,10 +322,14 @@ def main():
         if not fields.get('Testo'):
             print('ERRORE: testo mancante o vuoto in',f.name,file=sys.stderr)
             return 2
-        # Controllo di coerenza fra inventario e conversione dei PSTricks.
+        # Il preprocessore conta i disegni esterni, senza contare
+        # separatamente gli eventuali pspicture annidati.
+        # Questo e' il numero di segnaposto effettivamente prodotti.
         if pictures != issues['pstricks']:
-            raise RuntimeError(f'Conteggio PSTricks incoerente in {f.name}: '
-                               f"conversione={pictures}, inventario={issues['pstricks']}")
+            raise RuntimeError(
+                f'Conteggio PSTricks incoerente in {f.name}: '
+                f"conversione={pictures}, inventario={issues['pstricks']}"
+            )
         problem={'year':y,'number':n,'title':title,'source':f.name,
                  'sections':fields,'figure_issues':issues}
         problem['_build']={
