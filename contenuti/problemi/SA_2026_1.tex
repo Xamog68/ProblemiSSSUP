@@ -10,8 +10,31 @@ Tre ingegneri, Marco, Pasquale e Thomas, devono calcolare l'area di un quadrilat
     \item Thomas sceglie un vertice del quadrilatero, e poi moltiplica tra di loro la media dei due lati che hanno quel vertice come estremo e la media dei restanti due lati.
 \end{itemize}
 
-% SSSUP-FIGURA-DA-RICOSTRUIRE: es1.pdf
-% Riferimento storico (non importare): fonti-locali/2026/es1.pdf
+% SSSUP-FIGURA-RICOSTRUITA: es1.pdf, schema redazionale PSTricks.
+% Fonte di confronto: fonti-locali/2026/es1.pdf (conservata senza modifiche).
+% Le coordinate sono illustrative; i numeri sui lati sono i dati del problema.
+\begin{center}
+\newrgbcolor{SSSUPGriglia}{0.30 0.78 0.77}
+\psset{unit=0.88cm}
+\begin{pspicture}(-0.62,-0.45)(4.54,5.60)
+  \multido{\nx=0+1}{5}{%
+    \psline[linecolor=SSSUPGriglia,linewidth=0.4pt](\nx,0)(\nx,5)%
+  }
+  \multido{\ny=0+1}{6}{%
+    \psline[linecolor=SSSUPGriglia,linewidth=0.4pt](0,\ny)(4,\ny)%
+  }
+  \pspolygon[fillstyle=solid,fillcolor=lightgray,linewidth=1.4pt]%
+    (0,2)(0,4)(4,5)(2.5,0.25)
+  \rput[r](-0.10,2){$A$}
+  \rput[r](-0.10,4){$B$}
+  \rput[bl](4.04,5.00){$C$}
+  \rput[t](2.58,0.17){$D$}
+  \rput[r](-0.18,3){$2$}
+  \rput[b](1.8,5.12){$4$}
+  \rput[l](3.38,2.66){$5$}
+  \rput[b](1.43,0.82){$3$}
+\end{pspicture}
+\end{center}
 
 Per esempio, se le lunghezze dei lati, presi in senso orario a partire dal vertice scelto da Thomas, sono 2, 4, 5, 3 (come mostrato in figura a partire dal vertice A), Marco, Pasquale e Thomas rispondono, rispettivamente,
 $$

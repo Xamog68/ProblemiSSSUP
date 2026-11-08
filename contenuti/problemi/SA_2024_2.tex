@@ -2,11 +2,97 @@
 
 \renewcommand{\NumeroProblema}{2}
 
+% Ricostruzione redazionale dal riferimento squares.pdf (2024.2).
+% Nove quadrati unitari incernierati: figura redazionale integrata.
+% Angolo in gradi, 0 <= AngoloA <= 45.
+\newcommand{\SSSUPAngoloA}{22.5}
+
+% Richiede pstricks, multido e \fpeval (LaTeX moderno).
+% Pone i centri dei quadrati su un reticolo di passo cos(a)+sin(a)
+% e ruota alternatamente i quadrati di +a e -a.
+\newcommand{\SSSUPConfigurazioneQuadrati}[1]{%
+  \begingroup
+  \edef\cRot{\fpeval{cosd(#1)}}%
+  \edef\tRot{\fpeval{sind(#1)}}%
+  \edef\passoRot{\fpeval{\cRot+\tRot}}%
+  \edef\limiteRot{\fpeval{1.5*\passoRot}}%
+  % Tracciamento dei singoli quadrati, con coordinate già calcolate da TeX.
+  \multido{\ri=-1+1}{3}{%
+    \multido{\rj=-1+1}{3}{%
+      \edef\sRot{\fpeval{cosd(180*(\ri+\rj))*\tRot}}%
+      \edef\centerX{\fpeval{\ri*\passoRot}}%
+      \edef\centerY{\fpeval{\rj*\passoRot}}%
+      \edef\qxa{\fpeval{\centerX-0.5*\cRot+0.5*\sRot}}%
+      \edef\qya{\fpeval{\centerY-0.5*\sRot-0.5*\cRot}}%
+      \edef\qxb{\fpeval{\centerX+0.5*\cRot+0.5*\sRot}}%
+      \edef\qyb{\fpeval{\centerY+0.5*\sRot-0.5*\cRot}}%
+      \edef\qxc{\fpeval{\centerX+0.5*\cRot-0.5*\sRot}}%
+      \edef\qyc{\fpeval{\centerY+0.5*\sRot+0.5*\cRot}}%
+      \edef\qxd{\fpeval{\centerX-0.5*\cRot-0.5*\sRot}}%
+      \edef\qyd{\fpeval{\centerY-0.5*\sRot+0.5*\cRot}}%
+      \pspolygon[fillstyle=solid,fillcolor=lightgray,linewidth=.48pt]%
+        (\qxa,\qya)(\qxb,\qyb)(\qxc,\qyc)(\qxd,\qyd)%
+    }%
+  }%
+  % Elastico convesso esterno: un ottagono.
+  \edef\xaTopR{\fpeval{\limiteRot-\tRot}}%
+  \edef\xaTopL{\fpeval{-\limiteRot+\cRot}}%
+  \edef\yaLeftT{\fpeval{\limiteRot-\tRot}}%
+  \edef\yaLeftB{\fpeval{-\limiteRot+\cRot}}%
+  \edef\xaBotL{\fpeval{-\limiteRot+\tRot}}%
+  \edef\xaBotR{\fpeval{\limiteRot-\cRot}}%
+  \edef\yaRightB{\fpeval{-\limiteRot+\tRot}}%
+  \edef\yaRightT{\fpeval{\limiteRot-\cRot}}%
+  \edef\negL{\fpeval{-\limiteRot}}%
+  \pspolygon[linestyle=dashed,dash=3pt 2.2pt,linewidth=1.1pt,linecolor=black]%
+    (\xaTopR,\limiteRot)(\xaTopL,\limiteRot)%
+    (\negL,\yaLeftT)(\negL,\yaLeftB)%
+    (\xaBotL,\negL)(\xaBotR,\negL)%
+    (\limiteRot,\yaRightB)(\limiteRot,\yaRightT)%
+  % Cerniere (puntini neri), sopra le linee.
+  \multido{\ri=-1+1}{3}{%
+    \multido{\rj=-1+1}{3}{%
+      \edef\sRot{\fpeval{cosd(180*(\ri+\rj))*\tRot}}%
+      \edef\centerX{\fpeval{\ri*\passoRot}}%
+      \edef\centerY{\fpeval{\rj*\passoRot}}%
+      \edef\qxa{\fpeval{\centerX-0.5*\cRot+0.5*\sRot}}%
+      \edef\qya{\fpeval{\centerY-0.5*\sRot-0.5*\cRot}}%
+      \edef\qxb{\fpeval{\centerX+0.5*\cRot+0.5*\sRot}}%
+      \edef\qyb{\fpeval{\centerY+0.5*\sRot-0.5*\cRot}}%
+      \edef\qxc{\fpeval{\centerX+0.5*\cRot-0.5*\sRot}}%
+      \edef\qyc{\fpeval{\centerY+0.5*\sRot+0.5*\cRot}}%
+      \edef\qxd{\fpeval{\centerX-0.5*\cRot-0.5*\sRot}}%
+      \edef\qyd{\fpeval{\centerY-0.5*\sRot+0.5*\cRot}}%
+      \psdots[dotsize=2.7pt](\qxa,\qya)(\qxb,\qyb)(\qxc,\qyc)(\qxd,\qyd)%
+    }%
+  }%
+  \endgroup
+}
+
+
 \renewcommand{\Testo}{
 Ispirato alla pavimentazione di Ljubljana (come in figura (A) sotto), Giulio pensa al seguente problema. Nove quadrati di lato unitario sono collegati tra di loro mediante cerniere che permettono loro di ruotare. Le figure sottostanti, in cui i punti neri sono le cerniere, rappresentano tre possibili configurazioni.
 
-% SSSUP-FIGURA-DA-RICOSTRUIRE: squares.pdf
-% Riferimento storico (non importare): fonti-locali/2024/squares.pdf
+% SSSUP-FIGURA-RICOSTRUITA: squares.pdf; tre schemi redazionali PSTricks.
+% Fonte di confronto: fonti-locali/2024/squares.pdf (conservata senza modifiche).
+% Per la figura (A), modificare soltanto \SSSUPAngoloA, definito sopra.
+\begin{center}
+\psset{unit=1.0cm}
+\begin{tabular}{@{}c@{\qquad}c@{\qquad}c@{}}
+  \begin{pspicture}(-2.28,-2.28)(2.28,2.28)
+    \SSSUPConfigurazioneQuadrati{\SSSUPAngoloA}
+  \end{pspicture}
+  &
+  \begin{pspicture}(-2.28,-2.28)(2.28,2.28)
+    \SSSUPConfigurazioneQuadrati{0}
+  \end{pspicture}
+  &
+  \begin{pspicture}(-2.28,-2.28)(2.28,2.28)
+    \SSSUPConfigurazioneQuadrati{45}
+  \end{pspicture} \\
+  \textbf{(A)} & \textbf{(B)} & \textbf{(C)}
+\end{tabular}
+\end{center}
 
 Per ogni configurazione, chiamiamo \emph{rombo incluso} ciascuno dei 4 rombi bianchi racchiusi dai 9~quadrati, e chiamiamo \emph{cerchio circoscritto} il più piccolo cerchio che contiene tutti i nove quadrati in quella configurazione.
 

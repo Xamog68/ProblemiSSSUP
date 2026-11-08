@@ -1092,6 +1092,34 @@
       "sha256_sorgente": "d66e49a447dd98d1481923b48d154cd00cebdc07a258620905c4d2b16375da1d",
       "sha256_svg": "e2bb0600b5c31139f3f0e051c68c0618c79645a42f1c77191d169c4a0dfc0a90",
       "categoria": "svg"
+    },
+    {
+      "id": "SA_2024_2__Testo__01",
+      "campo": "Testo",
+      "sha256_sorgente": "e0c6f5d98f3c0eb3c75e38695d222789ee16fb4a186202ec98db70619f0ba0fa",
+      "sha256_svg": "dfda001e0c8b366933ea02157ebe64a062e7a663adc9f1d5097ea9a8bb1c9822",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2024_2__Testo__02",
+      "campo": "Testo",
+      "sha256_sorgente": "e0c6f5d98f3c0eb3c75e38695d222789ee16fb4a186202ec98db70619f0ba0fa",
+      "sha256_svg": "cb8f140d3c6fcbb8c01cce1cc9feac3ad021c19ca6602dbe7ae60b726ccf3bba",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2024_2__Testo__03",
+      "campo": "Testo",
+      "sha256_sorgente": "e0c6f5d98f3c0eb3c75e38695d222789ee16fb4a186202ec98db70619f0ba0fa",
+      "sha256_svg": "4aeaba4f4a2f33580460c19851298c2c702a3597711a0a5cab85af2d2a3f57d6",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2026_1__Testo__01",
+      "campo": "Testo",
+      "sha256_sorgente": "c54baa5dd2f637f2e1de542224276693c0898d255e4128d1bf86e32501cdffae",
+      "sha256_svg": "2633f8a44597d2b330ad8e93a48efbc8cc6e8b3556a17c384777d7935b7f4908",
+      "categoria": "svg"
     }
   ]
 }
