@@ -5,31 +5,24 @@
 \renewcommand{\Testo}{
 Dato un numero intero $n\geq 2$, sia $n=p_{1}^{a_{1}}\cdot
 p_{2}^{a_{2}}\cdot\ldots\cdot p_{k}^{a_{k}}$ la sua scomposizione in
-fattori primi (si intende che $p_{1}$, $p_{2}$, \ldots, $p_{k}$ sono
-numeri primi distinti), e sia $f(n)$ il numero intero ottenuto
-``scambiando basi ed esponenti nella fattorizzazione'', cio\`{e}
+fattori primi (si intende che $p_{1}$, $p_{2}$, \ldots, $p_{k}$ sono numeri primi distinti), e sia $f(n)$ il numero intero ottenuto ``scambiando basi ed esponenti nella fattorizzazione'', cioè
 $$f(n)=a_{1}^{p_{1}}\cdot a_{2}^{p_{2}}\cdot\ldots\cdot a_{k}^{p_{k}}.$$
 
-Cos\`{i}, per esempio, abbiamo che $f(200)=f(2^{3}\cdot
+Così, per esempio, abbiamo che $f(200)=f(2^{3}\cdot
 5^{2})=3^{2}\cdot 2^{5}=288$ ed analogamente $f(720)=f(2^{4}\cdot 3^{2}\cdot
 5^{1})=4^{2}\cdot 2^{3}\cdot 1^{5}=128$.
 
 \begin{enumerate}
 	\renewcommand{\labelenumi}{(\alph{enumi})}
-	\item  Determinare tutti gli interi positivi $n$, nella cui 
-	fattorizzazione compare un solo numero primo, tali che 
-	$f(n)=2012^{2012}$.
+	\item  Determinare tutti gli interi positivi $n$, nella cui fattorizzazione compare un solo numero primo, tali che $f(n)=2012^{2012}$.
 	
-	\item Dimostrare che esistono 3 interi positivi $a$, $b$, $c$, a
-	due a due privi di fattori primi in comune, tali che
-	$f(a)=f(b)=f(c)=2012^{2012}$.
+	\item Dimostrare che esistono 3 interi positivi $a$, $b$, $c$, a due a due privi di fattori primi in comune, tali che $f(a)=f(b)=f(c)=2012^{2012}$.
 	
-	\item  Caratterizzare tutti gli interi positivi $m$ per cui 
-	esiste almeno un intero $n\geq 2$ tale che $f(n)=m$.
+	\item  Caratterizzare tutti gli interi positivi $m$ per cui esiste almeno un intero $n\geq 2$ tale che $f(n)=m$.
 	
 \end{enumerate}
 
-{\small Nota: 503 \`{e} un numero primo.}
+{\small Nota: 503 è un numero primo.}
 }
 
 \renewcommand{\Risposta}{
@@ -39,8 +32,7 @@ Cos\`{i}, per esempio, abbiamo che $f(200)=f(2^{3}\cdot
 	
 	\item  \ldots
 	
-	\item  Sono tutti e soli gli interi $m$ nella cui fattorizzazione 
-	tutti i primi compaiono con esponente maggiore od uguale a 2.
+	\item  Sono tutti e soli gli interi $m$ nella cui fattorizzazione tutti i primi compaiono con esponente maggiore od uguale a 2.
 	
 \end{enumerate}
 }
@@ -49,74 +41,40 @@ Cos\`{i}, per esempio, abbiamo che $f(200)=f(2^{3}\cdot
 \begin{enumerate}
 	\renewcommand{\labelenumi}{(\alph{enumi})} 
 	
-	\item Si tratta di risolvere $k^{p}=2012^{2012}$, con $p$ primo. 
-	Quali sono i possibili valori di $p$? Perch\'{e}? Quali sono i 
-	corrispondenti valori di $k$?
+	\item Si tratta di risolvere $k^{p}=2012^{2012}$, con $p$ primo. Quali sono i possibili valori di $p$? Perché? Quali sono i corrispondenti valori di $k$?
 	
-	\item Basta trovare una soluzione di $f(n)=2012^{2012}$ che non 
-	sia divisibile per 2 o per 503. Perch\'{e}? Per far questo basta 
-	scrivere il 2012 all'esponente come somma di 2 interi ciascuno 
-	dei quali abbia almeno un fattore diverso da 2 e 503. Perch\'{e}?
+	\item Basta trovare una soluzione di $f(n)=2012^{2012}$ che non sia divisibile per 2 o per 503. Perché? Per far questo basta scrivere il 2012 all'esponente come somma di 2 interi ciascuno dei quali abbia almeno un fattore diverso da 2 e 503. Perché?
 	
-	\item Per tutti gli $m$ buoni c'\`{e} sempre una soluzione del
-	tipo $n=2^{A}\cdot 3^{B}$.  Come si potrebbe trovare una soluzione
-	se nella fattorizzazione di $m$ ci fossero solo esponenti pari?
-	Cosa accade se sottraiamo 3 a tutti gli esponenti dispari?
+	\item Per tutti gli $m$ buoni c'è sempre una soluzione del tipo $n=2^{A}\cdot 3^{B}$.  Come si potrebbe trovare una soluzione se nella fattorizzazione di $m$ ci fossero solo esponenti pari? Cosa accade se sottraiamo 3 a tutti gli esponenti dispari?
 \end{enumerate}
 }
 
 \renewcommand{\SoluzioneUfficiale}{\TitoloSoluzione\DomandaA
 
-Mostriamo che le soluzioni del tipo richiesto sono 
-$n=2^{2012^{1006}}$ e $n=503^{2012^{4}}$.  
+Mostriamo che le soluzioni del tipo richiesto sono $n=2^{2012^{1006}}$ e $n=503^{2012^{4}}$.
 
-Dal momento che cerchiamo soluzioni del tipo $n=p^{k}$, con $p$ primo 
-e $k$ intero positivo, avremo che $f(n)=k^{p}$. Si tratta quindi di 
-risolvere l'equazione
+Dal momento che cerchiamo soluzioni del tipo $n=p^{k}$, con $p$ primo e $k$ intero positivo, avremo che $f(n)=k^{p}$. Si tratta quindi di risolvere l'equazione
 $$k^{p}=2012^{2012},$$
-cio\`{e} di trovare tutte le radici $p$-esime intere di 
-$2012^{2012}$, con $p$ primo. Dal momento che $2012=2^{2}\cdot 503$, 
-fattorizzando la base possiamo riscrivere l'equazione come
+cioè di trovare tutte le radici $p$-esime intere di $2012^{2012}$, con $p$ primo. Dal momento che $2012=2^{2}\cdot 503$, fattorizzando la base possiamo riscrivere l'equazione come
 $$k^{p}=2^{4024}\cdot 503^{2012}.$$
 
-\`{E} chiaro ora che $k$ deve avere come fattori primi solo il 2 ed 
-il 503, e l'esponente $p$ deve dividere sia 4024, sia 2012. Le uniche 
-possibilit\`{a} sono quindi $p=2$ e $p=503$.
-Se $p=2$, l'equazione diventa $k^{2}=2012^{2012}$, da cui 
-$k=2012^{1006}$.
-Se $p=503$, l'equazione diventa $k^{503}=2012^{2012}$, da cui 
-$k=2012^{4}$. Si trovano cos\`{i} le 2 soluzioni indicate.
+È chiaro ora che $k$ deve avere come fattori primi solo il 2 ed il 503, e l'esponente $p$ deve dividere sia 4024, sia 2012. Le uniche possibilità sono quindi $p=2$ e $p=503$. Se $p=2$, l'equazione diventa $k^{2}=2012^{2012}$, da cui $k=2012^{1006}$. Se $p=503$, l'equazione diventa $k^{503}=2012^{2012}$, da cui $k=2012^{4}$. Si trovano così le 2 soluzioni indicate.
 
 \DomandaB Scegliamo come $a$ e $b$ le due soluzioni dell'equazione 
-$f(n)=2012^{2012}$ trovate al punto~(a). Per rispondere 
-affermativamente a questo punto, ci basta trovare una terza soluzione 
-$c$ che non sia divisibile n\'{e} per 2, n\'{e} per 503.  
+$f(n)=2012^{2012}$ trovate al punto~(a). Per rispondere affermativamente a questo punto, ci basta trovare una terza soluzione $c$ che non sia divisibile né per 2, né per 503.
 
-Per far questo ci sono davvero tante possibilit\`{a}. Per esempio, 
-possiamo partire dall'identit\`{a}
+Per far questo ci sono davvero tante possibilità. Per esempio, possiamo partire dall'identità
 $$2012^{2012}=2012^{2000}\cdot 2012^{12}=
 \left(2012^{400}\right)^{5}\cdot\left(2012^{4}\right)^{3}.$$
 
-Questo basta per dimostrare che $c=5^{2012^{400}}\cdot 3^{2012^{4}}$ 
-ha le propriet\`{a} richieste.
+Questo basta per dimostrare che $c=5^{2012^{400}}\cdot 3^{2012^{4}}$ ha le proprietà richieste.
 
 \DomandaC Mostriamo che l'equazione $f(n)=m$ ammette almeno una 
-soluzione $n$ se e solo se nella fattorizzazione di $m$ tutti i primi 
-compaiono con esponente maggiore od uguale a 2.
+soluzione $n$ se e solo se nella fattorizzazione di $m$ tutti i primi compaiono con esponente maggiore od uguale a 2.
 
-Che si tratti di una condizione necessaria \`{e} abbastanza semplice: 
-dalla formula per $f(n)$ risulta infatti che $m$ \`{e} un prodotto di 
-potenze perfette, dunque tutti i suoi fattori primi devono avere 
-necessariamente un esponente maggiore od uguale a 2.
+Che si tratti di una condizione necessaria è abbastanza semplice: dalla formula per $f(n)$ risulta infatti che $m$ è un prodotto di potenze perfette, dunque tutti i suoi fattori primi devono avere necessariamente un esponente maggiore od uguale a 2.
 
-Viceversa, prendiamo un $m$ di questa forma.  Per comodit\`{a},
-indichiamo con $p_{1}$, \ldots, $p_{k}$ i fattori primi di $m$ che
-hanno espenente pari, e con $q_{1}$, \ldots, $q_{k}$ i fattori primi
-di $m$ che hanno espenente dispari.  Indichiamo con $2a_{1}$, \ldots,
-$2a_{k}$ gli esponenti pari corrispondenti a $p_{1}$, \ldots, $p_{k}$,
-e con $2b_{1}+3$, \ldots, $2b_{h}+3$ gli esponenti dispari (dunque 
-maggiori od uguali a 3)
-corrispondenti a $q_{1}$, \ldots, $q_{h}$.  Possiamo pertanto scrivere
+Viceversa, prendiamo un $m$ di questa forma.  Per comodità, indichiamo con $p_{1}$, \ldots, $p_{k}$ i fattori primi di $m$ che hanno espenente pari, e con $q_{1}$, \ldots, $q_{k}$ i fattori primi di $m$ che hanno espenente dispari.  Indichiamo con $2a_{1}$, \ldots, $2a_{k}$ gli esponenti pari corrispondenti a $p_{1}$, \ldots, $p_{k}$, e con $2b_{1}+3$, \ldots, $2b_{h}+3$ gli esponenti dispari (dunque maggiori od uguali a 3) corrispondenti a $q_{1}$, \ldots, $q_{h}$.  Possiamo pertanto scrivere
 $$m=p_{1}^{2a_{1}}\cdot\ldots\cdot p_{k}^{2a_{k}}\cdot
 q_{1}^{2b_{1}+3}\cdot\ldots\cdot q_{h}^{2b_{h}+3}=
 \left(p_{1}^{a_{1}}\cdot\ldots\cdot p_{k}^{a_{k}}
@@ -128,24 +86,17 @@ $$A=p_{1}^{a_{1}}\cdot\ldots\cdot p_{k}^{a_{k}}
 \cdot q_{1}^{b_{1}}\cdot\ldots\cdot q_{h}^{b_{h}},
 \hspace{3em}
 B=q_{1}\cdot\ldots\cdot q_{h},$$
-avremo cos\`{i} che $n=2^{A}\cdot 3^{B}$ \`{e} una soluzione di 
-$f(n)=m$. Si noti che \`{e} possibile che $A$ o $B$ siano uguali ad 1, 
-ma non entrambi contemporaneamente.
+avremo così che $n=2^{A}\cdot 3^{B}$ è una soluzione di $f(n)=m$. Si noti che è possibile che $A$ o $B$ siano uguali ad 1, ma non entrambi contemporaneamente.
 }
 
 \renewcommand{\SoluzioniAlternative}{}
 
 \renewcommand{\Osservazioni}{\TitoloOsservazione
-In linea puramente teorica, \`{e} possibile trovare tutte le 
-soluzioni dell'equazione $f(n)=2012^{2012}$. 
+In linea puramente teorica, è possibile trovare tutte le soluzioni dell'equazione $f(n)=2012^{2012}$.
 
-Limitiamo la ricerca ai valori di $n$ nella cui fattorizzazione tutti
-i primi compaiono con esponente maggiore od uguale a 2.  Questo non
-\`{e} restrittivo in quanto si possono poi sempre aggiungere ulteriori
-fattori primi con esponente 1 senza cambiare $f(n)$.
+Limitiamo la ricerca ai valori di $n$ nella cui fattorizzazione tutti i primi compaiono con esponente maggiore od uguale a 2.  Questo non è restrittivo in quanto si possono poi sempre aggiungere ulteriori fattori primi con esponente 1 senza cambiare $f(n)$.
 
-Scritto dunque $n=p_{1}^{e_{1}}\cdot\ldots\cdot p_{k}^{e_{k}}$, si 
-tratta di risolvere
+Scritto dunque $n=p_{1}^{e_{1}}\cdot\ldots\cdot p_{k}^{e_{k}}$, si tratta di risolvere
 $$e_{1}^{p_{1}}\cdot\ldots\cdot e_{k}^{p_{k}}=2012^{2012}.$$
 
 Questo ci dice che gli $e_{i}$ hanno come fattori primi solo il 2 ed
@@ -154,28 +105,16 @@ il 503, dunque si scrivono nella forma $e_{i}=2^{a_{i}}\cdot
 l'equazione precedente diventa 
 $$2^{a_{1}p_{1}+\ldots+a_{k}p_{k}}\cdot
 503^{b_{1}p_{1}+\ldots+b_{k}p_{k}}=2^{4024}\cdot 503^{2012},$$
-la quale \`{e} verificata se e solo se
+la quale è verificata se e solo se
 $$a_{1}p_{1}+\ldots+a_{k}p_{k}=4024,
 \hspace{3em}
 b_{1}p_{1}+\ldots+b_{k}p_{k}=2012.$$
 
-Si tratta quindi di scrivere 4024 e 2012 come somma di numeri primi
-(eventualmente ripetuti) in tutti i modi possibili.  Si noti che non
-\`{e} necessario che i primi che compaiono nelle 2 scritture siano gli
-stessi (\`{e} ammesso infatti che alcuni $a_{i}$ o $b_{i}$ siano
-nulli), cos\`{i} come ovviamente non \`{e} detto che $a_{i}=2b_{i}$
-per ogni $i$.
+Si tratta quindi di scrivere 4024 e 2012 come somma di numeri primi (eventualmente ripetuti) in tutti i modi possibili.  Si noti che non è necessario che i primi che compaiono nelle 2 scritture siano gli stessi (è ammesso infatti che alcuni $a_{i}$ o $b_{i}$ siano nulli), così come ovviamente non è detto che $a_{i}=2b_{i}$ per ogni $i$.
 
-\`{E} chiaro quindi che l'equazione ha tantissime soluzioni, ed ogni 
-primo minore di 4024 \`{e} coinvolto in almeno una di tali soluzioni.
+È chiaro quindi che l'equazione ha tantissime soluzioni, ed ogni primo minore di 4024 è coinvolto in almeno una di tali soluzioni.
 
-Si noti che lo stesso approccio permette di ottenere tutte le
-soluzioni per un $m$ generico: ``basta'' scrivere gli esponenti che
-compaiono nella fattorizzazione di $m$ come somma di primi
-(eventualmente ripetuti) in tutti i modi possibili.  Nella soluzione
-presentata tale scrittura \`{e} stata ottenuta utilizzando il solo
-primo 2, ripetuto finch\'{e} serve, per gli esponenti pari, ed
-utilizzando un 3 pi\`{u} tutti i 2 che servono per gli esponenti
+Si noti che lo stesso approccio permette di ottenere tutte le soluzioni per un $m$ generico: ``basta'' scrivere gli esponenti che compaiono nella fattorizzazione di $m$ come somma di primi (eventualmente ripetuti) in tutti i modi possibili.  Nella soluzione presentata tale scrittura è stata ottenuta utilizzando il solo primo 2, ripetuto finché serve, per gli esponenti pari, ed utilizzando un 3 più tutti i 2 che servono per gli esponenti
 dispari.  }
 
 \renewcommand{\Commenti}{}

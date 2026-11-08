@@ -3,43 +3,19 @@
 \renewcommand{\NumeroProblema}{4}
 
 \renewcommand{\Testo}{
-I Vigili del Fuoco di Pisa devono ogni anno combattere la piaga degli
-incendi estivi.  Per ottimizzare la gestione di uomini e mezzi hanno
-chiesto agli studenti della scuola Sant'Anna di elaborare un modello
-matematico.
+I Vigili del Fuoco di Pisa devono ogni anno combattere la piaga degli incendi estivi.  Per ottimizzare la gestione di uomini e mezzi hanno chiesto agli studenti della scuola Sant'Anna di elaborare un modello matematico.
 
-Nel modello proposto dagli studenti il fuoco si sviluppa
-in un punto di un piano ed in ogni istante si espande con velocit\`{a}
-unitaria in tutte le direzioni.  Lo scopo dei pompieri \`{e} di
-costruire delle barriere che circondino il fuoco, limitandone la
-propagazione.  Al termine dell'operazione le barriere dovranno formare
-un poligono, anche irregolare, che contenga il fuoco al suo interno.
+Nel modello proposto dagli studenti il fuoco si sviluppa in un punto di un piano ed in ogni istante si espande con velocità unitaria in tutte le direzioni.  Lo scopo dei pompieri è di costruire delle barriere che circondino il fuoco, limitandone la propagazione.  Al termine dell'operazione le barriere dovranno formare un poligono, anche irregolare, che contenga il fuoco al suo interno.
 
-Per la costruzione delle barriere i pompieri dispongono di un certo
-numero di squadre, ciascuna delle quali pu\`{o} costruire in un tempo
-$t$ un tratto di barriera lungo $t$.  Le varie squadre iniziano a
-lavorare nel momento in cui il fuoco si sviluppa.  Ogni squadra parte
-dal punto che preferisce e squadre diverse possono lavorare
-indipendentemente alla costruzione di tratti diversi della barriera.
-In ogni istante una squadra pu\`{o} anche decidere di interrompere la
-costruzione che sta eseguendo ed iniziare a costruire da un'altra
-parte.  In questo caso si assume per semplicit\`{a} che il tempo
-necessario per lo spostamento sia trascurabile.
+Per la costruzione delle barriere i pompieri dispongono di un certo numero di squadre, ciascuna delle quali può costruire in un tempo $t$ un tratto di barriera lungo $t$.  Le varie squadre iniziano a lavorare nel momento in cui il fuoco si sviluppa.  Ogni squadra parte dal punto che preferisce e squadre diverse possono lavorare indipendentemente alla costruzione di tratti diversi della barriera. In ogni istante una squadra può anche decidere di interrompere la costruzione che sta eseguendo ed iniziare a costruire da un'altra parte.  In questo caso si assume per semplicità che il tempo necessario per lo spostamento sia trascurabile.
 
-La regola essenziale \`{e} che \emph{i pompieri non devono mai venire
-a contatto con il fuoco}. Non accade nulla di male, invece, se il
-fuoco tocca dei tratti di barriera gi\`{a} costruiti, mentre i
-pompieri stanno lavorando altrove: semplicemente il fuoco non
-oltrepassa la barriera.
+La regola essenziale è che \emph{i pompieri non devono mai venire a contatto con il fuoco}. Non accade nulla di male, invece, se il fuoco tocca dei tratti di barriera già costruiti, mentre i pompieri stanno lavorando altrove: semplicemente il fuoco non oltrepassa la barriera.
 \begin{enumerate}
-	\item Determinare se esiste una strategia per arginare
-	l'incendio utilizzando 8 squadre.
+	\item Determinare se esiste una strategia per arginare l'incendio utilizzando 8 squadre.
 
-	\item Determinare se esiste una strategia per arginare
-	l'incendio utilizzando 6 squadre.
+	\item Determinare se esiste una strategia per arginare l'incendio utilizzando 6 squadre.
 
-	\item Determinare se esiste una strategia per arginare
-	l'incendio utilizzando 4 squadre.
+	\item Determinare se esiste una strategia per arginare l'incendio utilizzando 4 squadre.
 \end{enumerate}
 }
 
@@ -49,36 +25,22 @@ La strategia esiste in tutti i 3 casi.}
 \renewcommand{\Aiutino}{
 \begin{enumerate}
 	\renewcommand{\labelenumi}{(\alph{enumi})} 
-	\item Utilizzare le 8 squadre per costruire i lati di un quadrato 
-	$2\times 2$ con il centro nell'origine del fuoco.
+	\item Utilizzare le 8 squadre per costruire i lati di un quadrato $2\times 2$ con il centro nell'origine del fuoco.
 
-	\item Le 6 squadre possono lavorare a costruire un opportuno
-	rettangolo in cui l'origine del fuoco \`{e} decisamente pi\`{u}
-	vicina ad uno dei lati corti (quello da cui la costruzione
-	inizia).
+	\item Le 6 squadre possono lavorare a costruire un opportuno rettangolo in cui l'origine del fuoco è decisamente più vicina ad uno dei lati corti (quello da cui la costruzione inizia).
 	
-	In alternativa, le 6 squadre possono costruire i lati di un
-	triangolo equilatero con centro nell'origine del fuoco (ma
-	attenzione: il fuoco raggiunge i lati \emph{prima} che il lavoro
-	sia completo, dunque bisogna verificare bene perch\'{e} i pompieri
-	si salvano).
+	In alternativa, le 6 squadre possono costruire i lati di un triangolo equilatero con centro nell'origine del fuoco (ma attenzione: il fuoco raggiunge i lati \emph{prima} che il lavoro sia completo, dunque bisogna verificare bene perché i pompieri si salvano).
 
-	\item Sostanzialmente si pu\`{o} usare la stessa idea del
-	rettangolo descritta nel caso precedente, solo che dimostrare che
-	il fuoco non arriva ai pompieri \`{e} pi\`{u} delicato.
+	\item Sostanzialmente si può usare la stessa idea del rettangolo descritta nel caso precedente, solo che dimostrare che il fuoco non arriva ai pompieri è più delicato.
 \end{enumerate}
 }
 
 \renewcommand{\SoluzioneUfficiale}{\TitoloSoluzione \DomandaA
-\`{E} possibile circoscrivere l'incendio disponendo di 8 squadre. 
+È possibile circoscrivere l'incendio disponendo di 8 squadre.
 
-Una possibile strategia \`{e} quella descritta nella
+Una possibile strategia è quella descritta nella
 Figura~\ref{fig:8squadre}.  All'inizio le squadre si piazzano a 2 a 2
-a ``croce'' a distanza unitaria dal punto di origine del fuoco, e da
-l\`{i} si muovono nelle direzioni indicate in figura.  Al tempo $t=1$
-le squadre avranno costruito un quadrato di lato 2 che circonda il
-fuoco, e si troveranno in posizione di sicurezza ai vertici del
-quadrato stesso.
+a ``croce'' a distanza unitaria dal punto di origine del fuoco, e da lì si muovono nelle direzioni indicate in figura.  Al tempo $t=1$ le squadre avranno costruito un quadrato di lato 2 che circonda il fuoco, e si troveranno in posizione di sicurezza ai vertici del quadrato stesso.
 \begin{figure}[htb]
 	\centering
 	\psset{unit=6ex}
@@ -118,23 +80,16 @@ quadrato stesso.
 \end{figure}
 
 \DomandaB 
-\`{E} possibile circoscrivere l'incendio disponendo di 6 squadre. 
+È possibile circoscrivere l'incendio disponendo di 6 squadre.
 
 Una possibile strategia, descritta nella Figura~\ref{fig:6squadre},
-\`{e} la seguente.
+è la seguente.
 \begin{itemize}
-	\item  Dal tempo $t=0$ al tempo $t=1$ le 6 squadre costruiscono 3 
-	lati di un quadrato di lato 2.
+	\item  Dal tempo $t=0$ al tempo $t=1$ le 6 squadre costruiscono 3 lati di un quadrato di lato 2.
 
-	\item  Dal tempo $t=1$ al tempo $t=2$ le 6 squadre prolungano di 3
-	ciascuno dei 2 lati rimasti ``aperti''. In questa fase anche le 2 
-	squadre pi\`{u} a Sud lavorano comunque alla massima ``altezza'' del
-	fuoco, ma spostate lateralmente, per cui non c'\`{e} pericolo di
-	contatto. 
+	\item  Dal tempo $t=1$ al tempo $t=2$ le 6 squadre prolungano di 3 ciascuno dei 2 lati rimasti ``aperti''. In questa fase anche le 2 squadre più a Sud lavorano comunque alla massima ``altezza'' del fuoco, ma spostate lateralmente, per cui non c'è pericolo di contatto.
 
-	\item Dal tempo $t=2$ in poi bastano 2 squadre per completare il
-	rettangolo in tutta sicurezza entro il tempo $t=3$ (o anche una
-	sola squadra entro il tempo $t=4$).
+	\item Dal tempo $t=2$ in poi bastano 2 squadre per completare il rettangolo in tutta sicurezza entro il tempo $t=3$ (o anche una sola squadra entro il tempo $t=4$).
 \end{itemize}
 \begin{figure}[htb]
 	\centering
@@ -213,41 +168,22 @@ Una possibile strategia, descritta nella Figura~\ref{fig:6squadre},
 	\label{fig:6squadre}
 \end{figure}
 
-\DomandaC \`{E} possibile circoscrivere l'incendio anche disponendo di
+\DomandaC È possibile circoscrivere l'incendio anche disponendo di
 sole 4 squadre.
 
-Una possibile strategia, descritta nella Figura~\ref{fig:4squadre}, \`{e} la 
-seguente (si noti che la scala della figura \`{e} 1/4 della scala
-delle figure precedenti).
+Una possibile strategia, descritta nella Figura~\ref{fig:4squadre}, è la
+seguente (si noti che la scala della figura è 1/4 della scala delle figure precedenti).
 \begin{itemize}
-	\item Dal tempo $t=0$ al tempo $t=2$ le 4 squadre costruiscono
-	una ``barriera Sud''. In questa fase nessuno rischia: anche le 2
-	squadre che lavorano pi\`{u} internamente vanno comunque alla
-	stessa velocit\`{a} del fuoco.
+	\item Dal tempo $t=0$ al tempo $t=2$ le 4 squadre costruiscono una ``barriera Sud''. In questa fase nessuno rischia: anche le 2 squadre che lavorano più internamente vanno comunque alla stessa velocità del fuoco.
 
-	\item Dal tempo $t=2$ al tempo $t=4$ le 4 squadre iniziano la
-	costruzione dei 2 lati verso Nord. In questa fase nessuno rischia 
-	perch\'{e} il fuoco arriva a toccare le barriere solo al tempo
-	$t=4$, quando le squadre sono pi\`{u} a Nord del punto di contatto.
+	\item Dal tempo $t=2$ al tempo $t=4$ le 4 squadre iniziano la costruzione dei 2 lati verso Nord. In questa fase nessuno rischia perché il fuoco arriva a toccare le barriere solo al tempo $t=4$, quando le squadre sono più a Nord del punto di contatto.
 	
-	\item Dal tempo $t=4$ al tempo $t=8$ le 4 squadre prolungano i
-	lati verso Nord.  In questa fase non \`{e} ovvio a priori che le 2
-	squadre che lavorano pi\`{u} a Sud siano al sicuro.  Per
-	verificarlo, supponiamo di aver fissato coordinate cartesiane nel
-	piano con origine nel punto in cui si \`{e} sviluppato il fuoco.
-	All'istante $t=4$ le 2 squadre a rischio si trovano nei punti
-	$(\pm 4,3)$.  Dal momento che proseguono verso Nord a velocit\`{a}
-	unitaria, per valori di $t$ successivi tali squadre si troveranno
-	nei punti $(\pm 4,t-1)$.  Per sapere se questi punti sono al
-	sicuro dobbiamo calcolarne la distanza dall'origine, ed imporre
-	che sia maggiore di $t$.  Troviamo cos\`{i} la disequazione
+	\item Dal tempo $t=4$ al tempo $t=8$ le 4 squadre prolungano i lati verso Nord.  In questa fase non è ovvio a priori che le 2 squadre che lavorano più a Sud siano al sicuro.  Per verificarlo, supponiamo di aver fissato coordinate cartesiane nel piano con origine nel punto in cui si è sviluppato il fuoco. All'istante $t=4$ le 2 squadre a rischio si trovano nei punti $(\pm 4,3)$.  Dal momento che proseguono verso Nord a velocità unitaria, per valori di $t$ successivi tali squadre si troveranno nei punti $(\pm 4,t-1)$.  Per sapere se questi punti sono al sicuro dobbiamo calcolarne la distanza dall'origine, ed imporre che sia maggiore di $t$.  Troviamo così la disequazione
 	$$\sqrt{16+(t-1)^{2}}>t.$$
 	
-	Risolvendo si ottiene $t<17/2$, dunque fino al tempo $t=8$ non ci 
-	sono problemi.
+	Risolvendo si ottiene $t<17/2$, dunque fino al tempo $t=8$ non ci sono problemi.
 	
-	\item A questo punto \`{e} decisamente semplice chiudere il
-	rettangolo entro il tempo $t=10$. 
+	\item A questo punto è decisamente semplice chiudere il rettangolo entro il tempo $t=10$.
 \end{itemize}
 \begin{figure}[htb]
 	\centering
@@ -335,57 +271,28 @@ delle figure precedenti).
 \renewcommand{\SoluzioniAlternative}{}
 
 \renewcommand{\Osservazioni}{\TitoloOsservazione
-\`{E} chiaro che la strategia proposta nel caso di 4 squadre va bene
-anche nel caso di 6 od 8 squadre: basta lasciarne qualcuna a riposo!
-Tuttavia abbiamo voluto presentare prima alcune strategie pi\`{u}
-semplici che sono possibili solo con un numero maggiore di squadre.
+È chiaro che la strategia proposta nel caso di 4 squadre va bene anche nel caso di 6 od 8 squadre: basta lasciarne qualcuna a riposo! Tuttavia abbiamo voluto presentare prima alcune strategie più semplici che sono possibili solo con un numero maggiore di squadre.
 
-Vale la pena osservare che \`{e} possibile arginare l'incendio anche
-disponendo di sole 3 squadre.  La strategia \`{e} una generalizzazione
-di quella descritta nel caso di 4 squadre. Ne diamo qui una
-descrizione per sommi capi, senza entrare nei dettagli.
+Vale la pena osservare che è possibile arginare l'incendio anche disponendo di sole 3 squadre.  La strategia è una generalizzazione di quella descritta nel caso di 4 squadre. Ne diamo qui una descrizione per sommi capi, senza entrare nei dettagli.
 \begin{itemize}
-	\item Nella prima fase i pompieri tracciano una barriera Sud.
-	Lavorando opportunamente, le 3 squadre possono in media procedere a
-	velocit\`{a} 1.5 sia verso Est, sia verso Ovest.  Dunque pi\`{u}
-	passa il tempo, e pi\`{u} si avvantaggiano rispetto al fuoco.
+	\item Nella prima fase i pompieri tracciano una barriera Sud. Lavorando opportunamente, le 3 squadre possono in media procedere a velocità 1.5 sia verso Est, sia verso Ovest.  Dunque più passa il tempo, e più si avvantaggiano rispetto al fuoco.
 
-	\item Ad un certo punto le squadre iniziano a procedere verso
-	Nord.  Qui il lavoro si fa rischioso, e bisogna impostare la
-	disequazione cos\`{i} come si \`{e} fatto nel caso di 4 squadre.
-	Tuttavia, se nella fase precedente si \`{e} guadagnato un
-	sufficiente vantaggio nelle direzioni Est/Ovest, le squadre
-	riescono a superare il fuoco a Nord.
+	\item Ad un certo punto le squadre iniziano a procedere verso Nord.  Qui il lavoro si fa rischioso, e bisogna impostare la disequazione così come si è fatto nel caso di 4 squadre. Tuttavia, se nella fase precedente si è guadagnato un sufficiente vantaggio nelle direzioni Est/Ovest, le squadre riescono a superare il fuoco a Nord.
 
-	\item  Da questo punto in poi, pi\`{u} le squadre procedono verso Nord,  
-	pi\`{u} guadagnano del vantaggio rispetto al fuoco (perch\'{e}
-	salgono con velocit\`{a} 1.5 sui 2 lati, mentre il fuoco sale con 
-	velocit\`{a} unitaria).
+	\item  Da questo punto in poi, più le squadre procedono verso Nord, più guadagnano del vantaggio rispetto al fuoco (perché salgono con velocità 1.5 sui 2 lati, mentre il fuoco sale con velocità unitaria).
 
-	\item  Quando il vantaggio \`{e} sufficiente, le squadre chiudono 
-	il rettangolo a Nord.
+	\item  Quando il vantaggio è sufficiente, le squadre chiudono il rettangolo a Nord.
 \end{itemize}
 
-Lo stesso procedimento funziona anche se si dispone di 2 squadre
-regolari, pi\`{u} una squadra junior che lavora ad una velocit\`{a}
-minore di 1, ma comunque positiva.  Il punto fondamentale nella
-strategia proposta \`{e} infatti di potersi avvantaggiare su due
-fronti rispetto al fuoco.
+Lo stesso procedimento funziona anche se si dispone di 2 squadre regolari, più una squadra junior che lavora ad una velocità minore di 1, ma comunque positiva.  Il punto fondamentale nella strategia proposta è infatti di potersi avvantaggiare su due fronti rispetto al fuoco.
 
-Sembra abbastanza evidente che 2 squadre non sono sufficienti, ma
-\emph{questo risultato non \`{e} mai stato dimostrato rigorosamente}.
-Anzi, non \`{e} mai stato dimostrato rigorosamente nemmeno che non
-bastano una squadra regolare ed una squadra junior lentissima!  \`{E}
-stato invece dimostrato che una squadra sola non basta, ma la
-dimostrazione \`{e} tutt'altro che ovvia.
+Sembra abbastanza evidente che 2 squadre non sono sufficienti, ma \emph{questo risultato non è mai stato dimostrato rigorosamente}. Anzi, non è mai stato dimostrato rigorosamente nemmeno che non bastano una squadra regolare ed una squadra junior lentissima!  È stato invece dimostrato che una squadra sola non basta, ma la dimostrazione è tutt'altro che ovvia.
 
-Gli interessati ad approfondire l'argomento possono consultare
-il seguente articolo, da cui questo problema ha tratto
+Gli interessati ad approfondire l'argomento possono consultare il seguente articolo, da cui questo problema ha tratto
 spunto:\smallskip
 
 \noindent\textsc{A.\ Bressan}, \textsc{C.\ De Lellis}; Existence of
-optimal strategies for a fire confinement problem.  \emph{Comm.\ Pure
-Appl.\ Math.}\  \textbf{62} (2009), 789--830.
+optimal strategies for a fire confinement problem.  \emph{Comm.\ Pure Appl.\ Math.}\  \textbf{62} (2009), 789--830.
 
 
 

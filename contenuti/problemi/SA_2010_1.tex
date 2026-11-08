@@ -5,34 +5,25 @@
 \renewcommand{\Testo}{
 Siano $A$ e $B$ due punti distinti su una retta.
 
-Determinare per quali interi positivi $n$ esistono $n$ punti distinti sulla 
-retta, esterni rispetto al segmento $AB$, tali che la somma delle 
-loro distanze da $A$ \`{e} uguale alla somma delle loro distanze da $B$.
+Determinare per quali interi positivi $n$ esistono $n$ punti distinti sulla retta, esterni rispetto al segmento $AB$, tali che la somma delle loro distanze da $A$ è uguale alla somma delle loro distanze da $B$.
 }
 
 \renewcommand{\Risposta}{
-Esistono se e solo se $n$ \`{e} pari.
+Esistono se e solo se $n$ è pari.
 }
 
 \renewcommand{\Aiutino}{
-Per $n$ pari basta disporre opportunamente (come?) met\`{a} dei punti 
-da una parte e met\`{a} dall'altra.
+Per $n$ pari basta disporre opportunamente (come?) metà dei punti da una parte e metà dall'altra.
 
-Per $n$ dispari consideriamo un punto qualunque $P$ esterno al
-segmento.  Quali valori pu\`{o} assumere la differenza tra la sua
-distanza da $A$ e la sua distanza da $B$? Cosa succede quando 
-sommiamo questi valori su tutti i $P$?
+Per $n$ dispari consideriamo un punto qualunque $P$ esterno al segmento.  Quali valori può assumere la differenza tra la sua distanza da $A$ e la sua distanza da $B$? Cosa succede quando sommiamo questi valori su tutti i $P$?
 }
 
 \renewcommand{\SoluzioneUfficiale}{\TitoloSoluzione 
-Gli $n$ punti con la propriet\`{a} richiesta esistono se e solo se 
-$n$ \`{e} pari. Per dimostrarlo distinguiamo due casi.
+Gli $n$ punti con la proprietà richiesta esistono se e solo se $n$ è pari. Per dimostrarlo distinguiamo due casi.
 
 \subparagraph{\textmd{Caso $n$ pari}}
 
-Sia $n=2k$.  Scegliamo $k$ punti distinti a caso $P_{1},\ldots,P_{k}$
-esterni rispetto al segmento $AB$ dalla parte di $A$.  Indichiamo con
-$Q_{1},\ldots,Q_{k}$ i simmetrici di tali punti rispetto al punto
+Sia $n=2k$.  Scegliamo $k$ punti distinti a caso $P_{1},\ldots,P_{k}$ esterni rispetto al segmento $AB$ dalla parte di $A$.  Indichiamo con $Q_{1},\ldots,Q_{k}$ i simmetrici di tali punti rispetto al punto
 medio del segmento $AB$, come nella Figura~\ref{fig:puntini-PQ}.
 
 \begin{figure}[htbp]
@@ -57,47 +48,32 @@ medio del segmento $AB$, come nella Figura~\ref{fig:puntini-PQ}.
 	\label{fig:puntini-PQ}
 \end{figure}
 
-Mostriamo che i $2k$ punti $P_{1},\ldots,P_{k},Q_{1},\ldots,Q_{k}$
-soddisfano le propriet\`{a} richieste.  \`{E} intanto evidente che i
-$Q_{1},\ldots,Q_{k}$ sono esterni rispetto al segmento $AB$ dalla
-parte di $B$.  Inoltre, per ragioni di simmetria, per ogni
-$i=1,\ldots,k$ si ha che
+Mostriamo che i $2k$ punti $P_{1},\ldots,P_{k},Q_{1},\ldots,Q_{k}$ soddisfano le proprietà richieste.  È intanto evidente che i $Q_{1},\ldots,Q_{k}$ sono esterni rispetto al segmento $AB$ dalla parte di $B$.  Inoltre, per ragioni di simmetria, per ogni $i=1,\ldots,k$ si ha che
 $$\mathrm{dist}(P_{i},A)=\mathrm{dist}(Q_{i},B) \quad\mbox{e}\quad
 \mathrm{dist}(P_{i},B)=\mathrm{dist}(Q_{i},A),$$
 e di conseguenza
 $$\sum_{i=1}^{k}\mathrm{dist}(P_{i},A)+\sum_{i=1}^{k}\mathrm{dist}(Q_{i},A)=
 \sum_{i=1}^{k}\mathrm{dist}(Q_{i},B)+\sum_{i=1}^{k}\mathrm{dist}(P_{i},B).$$
 
-Abbiamo cos\`{i} mostrato che la somma delle distanze dei $2k$ punti
-da $A$ \`{e} uguale alla somma delle distanze dei $2k$ punti da $B$,
-il che completa la dimostrazione.
+Abbiamo così mostrato che la somma delle distanze dei $2k$ punti da $A$ è uguale alla somma delle distanze dei $2k$ punti da $B$, il che completa la dimostrazione.
 
 \subparagraph{\textmd{Caso $n$ dispari}}
 
-Sia ora $n=2k+1$ un intero dispari.  Osserviamo che per ogni punto $P$
-esterno rispetto al segmento $AB$ si ha che
+Sia ora $n=2k+1$ un intero dispari.  Osserviamo che per ogni punto $P$ esterno rispetto al segmento $AB$ si ha che
 $$\mathrm{dist}(P,A)-\mathrm{dist}(P,B)=\pm\mathrm{dist}(A,B),$$
-dove si ha il segno $+$ od il segno $-$ a seconda che $P$ stia dalla 
-parte di $B$ o dalla parte di $A$. Se ora abbiamo $2k+1$ punti 
-$P_{1},\ldots,P_{2k+1}$, esterni rispetto al segmento $AB$, avremo 
-che
+dove si ha il segno $+$ od il segno $-$ a seconda che $P$ stia dalla parte di $B$ o dalla parte di $A$. Se ora abbiamo $2k+1$ punti $P_{1},\ldots,P_{2k+1}$, esterni rispetto al segmento $AB$, avremo che
 $$\sum_{i=1}^{2k+1}\mathrm{dist}(P_{i},A)-
 \sum_{i=1}^{2k+1}\mathrm{dist}(P_{i},B)=
 \sum_{i=1}^{2k+1}\left(\mathrm{dist}(P_{i},A)-\mathrm{dist}(P_{i},B)\right).$$
 
-Quella scritta al secondo membro \`{e} una somma con un numero 
-dispari di addendi, ciascuno dei quali \`{e} uguale a 
-$\pm\mathrm{dist}(A,B)$. \`{E} pertanto evidente che tale somma non 
-potr\`{a} mai essere uguale a zero, e quindi le due sommatorie al 
-primo membro non potranno mai essere uguali.
+Quella scritta al secondo membro è una somma con un numero dispari di addendi, ciascuno dei quali è uguale a $\pm\mathrm{dist}(A,B)$. È pertanto evidente che tale somma non potrà mai essere uguale a zero, e quindi le due sommatorie al primo membro non potranno mai essere uguali.
 }
 
 \renewcommand{\SoluzioniAlternative}{}
 
 \renewcommand{\Osservazioni}{\TitoloOsservazione
 
-Si noti che la condizione che i punti richiesti sono distinti \`{e}
-irrilevante nella dimostrazione dell'impossibilit\`{a} per $n$
+Si noti che la condizione che i punti richiesti sono distinti è irrilevante nella dimostrazione dell'impossibilità per $n$
 dispari.  }
 
 \renewcommand{\Commenti}{

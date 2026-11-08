@@ -3,48 +3,26 @@
 \renewcommand{\NumeroProblema}{2}
 
 \renewcommand{\Testo}{ 
-La Scuola Superiore S. Anna possiede un
-auditorium a forma di triangolo equilatero in cui pareti, pavimento e
-soffitto assorbono perfettamente i suoni.  Ai vertici del triangolo
-sono disposte tre casse acustiche le cui potenze (misurate in
-centinaia di Watt) sono $1$, $1$, $k$, rispettivamente.
+La Scuola Superiore S. Anna possiede un auditorium a forma di triangolo equilatero in cui pareti, pavimento e soffitto assorbono perfettamente i suoni.  Ai vertici del triangolo sono disposte tre casse acustiche le cui potenze (misurate in centinaia di Watt) sono $1$, $1$, $k$, rispettivamente.
 
-Come \`{e} ben noto, l'intensit\`{a} del suono percepito in un punto
-\`{e} direttamente proporzionale alla potenza della sorgente ed
-inversamente proporzionale al quadrato della distanza dalla sorgente.
+Come è ben noto, l'intensità del suono percepito in un punto è direttamente proporzionale alla potenza della sorgente ed inversamente proporzionale al quadrato della distanza dalla sorgente.
 	
-Determinare i valori di $k$ per cui esiste un punto della stanza in
-cui il suono emesso da ogni cassa \`{e} sentito alla stessa
-intensit\`{a} e, per tali valori di $k$, determinare il punto.
+Determinare i valori di $k$ per cui esiste un punto della stanza in cui il suono emesso da ogni cassa è sentito alla stessa intensità e, per tali valori di $k$, determinare il punto.
 }
 
 \renewcommand{\Risposta}{
-Esiste il punto se e solo se $k\leq 3$.  In tal caso il punto cercato
-appartiene all'asse del segmento che ha per estremi le 2 casse da 1, e
-la sua distanza dal segmento \`{e} data da
+Esiste il punto se e solo se $k\leq 3$.  In tal caso il punto cercato appartiene all'asse del segmento che ha per estremi le 2 casse da 1, e la sua distanza dal segmento è data da
 $$\frac{-\sqrt{3}+\sqrt{k(4-k)}}{2(k-1)}.$$
 }
 
 \renewcommand{\Aiutino}{
-Consideriamo solo le 2 casse da 100 watt.  In quali punti il suono da
-loro emesso viene percepito con la stessa intensit\`{a}?  Come varia
-in tale luogo l'intensit\`{a} percepita del suono delle 3 casse?
-Questo basta per dire quando esiste il punto richiesto.  Per
-individuarlo esattamente, occorre poi impostare un'equazione
-opportuna.
+Consideriamo solo le 2 casse da 100 watt.  In quali punti il suono da loro emesso viene percepito con la stessa intensità?  Come varia in tale luogo l'intensità percepita del suono delle 3 casse? Questo basta per dire quando esiste il punto richiesto.  Per individuarlo esattamente, occorre poi impostare un'equazione opportuna.
 }
 
 \renewcommand{\SoluzioneUfficiale}{
-Indichiamo con $A$, $B$, $C$ i vertici del triangolo, che possiamo 
-supporre di lato unitario in qualche opportuna unit\`{a} di misura, e 
-supponiamo che le 2 casse da 1 stiano nei vertici $B$ e $C$. Avendo 
-la stessa potenza, il suono emesso da queste 2 casse si percepir\`{a} 
-con uguale intensit\`{a} nei punti equidistanti da $B$ e $C$, 
-cio\`{e} nei punti dell'asse del segmento $BC$, la cui intersezione 
-con il triangolo \`{e} la mediana $AM$.
+Indichiamo con $A$, $B$, $C$ i vertici del triangolo, che possiamo supporre di lato unitario in qualche opportuna unità di misura, e supponiamo che le 2 casse da 1 stiano nei vertici $B$ e $C$. Avendo la stessa potenza, il suono emesso da queste 2 casse si percepirà con uguale intensità nei punti equidistanti da $B$ e $C$, cioè nei punti dell'asse del segmento $BC$, la cui intersezione con il triangolo è la mediana $AM$.
 
-Consideriamo ora un punto $P$ variabile su tale mediana, ed 
-indichiamo con $x$ la sua distanza da $M$, come nella figura qui sotto. 
+Consideriamo ora un punto $P$ variabile su tale mediana, ed indichiamo con $x$ la sua distanza da $M$, come nella figura qui sotto.
 \begin{center}
 	\psset{unit=10mm}
 	\pspicture(0,-0.4)(4,3.8)
@@ -62,37 +40,23 @@ indichiamo con $x$ la sua distanza da $M$, come nella figura qui sotto.
 	\endpspicture
 \end{center}
 
-Indichiamo con $I_{A}(x)$, $I_{B}(x)$, $I_{C}(x)$, rispettivamente, le
-intensit\`{a} con cui viene percepito in $P$ il suono proveniente
-dalle casse poste in $A$, $B$, $C$.  Tenendo conto che $BM=CM=1/2$,
-$AM=\sqrt{3}/2$, quindi $AP=\sqrt{3}/2-x$, e per il teorema di
-Pitagora
+Indichiamo con $I_{A}(x)$, $I_{B}(x)$, $I_{C}(x)$, rispettivamente, le intensità con cui viene percepito in $P$ il suono proveniente dalle casse poste in $A$, $B$, $C$.  Tenendo conto che $BM=CM=1/2$, $AM=\sqrt{3}/2$, quindi $AP=\sqrt{3}/2-x$, e per il teorema di Pitagora
 $$BP^{2}=CP^{2}=x^{2}+\frac{1}{4},$$
 avremo che
 $$I_{B}(x)=I_{C}(x)=\frac{\alpha}{\displaystyle{x^{2}+\frac{1}{4}}},
 \hspace{4em}
 I_{A}(x)=\frac{\alpha k}{\displaystyle{\left(
 \frac{\sqrt{3}}{2}-x\right)^{2}}},$$
-dove $\alpha$ \`{e} un'opportuna costante di proporzionalit\`{a}.
+dove $\alpha$ è un'opportuna costante di proporzionalità.
 
-Da queste formule segue immediatamente che l'intensit\`{a} del suono
-proveniente da $B$ e $C$ diminuisce con continuit\`{a} all'aumentare
-di $x$, mentre l'intensit\`{a} del suono proveniente da $A$ cresce con
-continuit\`{a} all'aumentare di $x$, e tende a $+\infty$ quando $P$ si
-avvicina ad $A$ (qui stiamo supponendo, per ovvie ragioni fisiche, che 
-sia $k>0$).
+Da queste formule segue immediatamente che l'intensità del suono proveniente da $B$ e $C$ diminuisce con continuità all'aumentare di $x$, mentre l'intensità del suono proveniente da $A$ cresce con continuità all'aumentare di $x$, e tende a $+\infty$ quando $P$ si avvicina ad $A$ (qui stiamo supponendo, per ovvie ragioni fisiche, che sia $k>0$).
 
-Pertanto un punto in cui le 3 intensit\`{a} coincidono esister\`{a} (e
-sar\`{a} unico) se e solo se in $M$ il suono proveniente da $A$ giunge
-con intensit\`{a} minore od uguale del suono proveniente da $B$ e $C$.
-Poich\'{e} $M$ corrisponde ad $x=0$, questa condizione equivale a
+Pertanto un punto in cui le 3 intensità coincidono esisterà (e sarà unico) se e solo se in $M$ il suono proveniente da $A$ giunge con intensità minore od uguale del suono proveniente da $B$ e $C$. Poiché $M$ corrisponde ad $x=0$, questa condizione equivale a
 $$\frac{\alpha k}{\left(\sqrt{3}/2\right)^{2}}\leq \frac{\alpha}{1/4},
 $$
-da cui con semplici calcoli si ottiene la condizione $k\leq 3$, da 
-aggiungere alla condizione fisica $k>0$.
+da cui con semplici calcoli si ottiene la condizione $k\leq 3$, da aggiungere alla condizione fisica $k>0$.
 
-Il grafico seguente riporta l'andamento di $I_{A}(x)$ e $I_{B}(x)$ 
-per alcuni valori del parametro $k$ (abbiamo supposto $\alpha=1$).
+Il grafico seguente riporta l'andamento di $I_{A}(x)$ e $I_{B}(x)$ per alcuni valori del parametro $k$ (abbiamo supposto $\alpha=1$).
 \begin{center}
 	\psset{xunit=25ex,yunit=5ex} 
 	\pspicture(0,-1)(2,9.5) 
@@ -122,40 +86,30 @@ per alcuni valori del parametro $k$ (abbiamo supposto $\alpha=1$).
 	\endpspicture
 \end{center}
 
-Nel caso in cui $0<k\leq 3$, si pu\`{o} trovare il valore esatto di 
-$x$ risolvendo l'equazione $I_{B}(x)=I_{C}(x)=I_{A}(x)$, e cio\`{e}
+Nel caso in cui $0<k\leq 3$, si può trovare il valore esatto di $x$ risolvendo l'equazione $I_{B}(x)=I_{C}(x)=I_{A}(x)$, e cioè
 $$\frac{\alpha k}{\displaystyle{\left(
 \frac{\sqrt{3}}{2}-x\right)^{2}}}=
 \frac{\alpha}{\displaystyle{x^{2}+\frac{1}{4}}},$$
 la quale con qualche calcolo si trasforma nell'equazione
 $$(k-1)x^{2}+\sqrt{3}\,x+\frac{k-3}{4}=0.$$
 
-Se $k=1$, tale equazione \`{e} di primo grado ed ha l'unica 
-soluzione $x=\sqrt{3}/6$ che corrisponde, come potevamo aspettarci, al 
-centro del triangolo.
+Se $k=1$, tale equazione è di primo grado ed ha l'unica soluzione $x=\sqrt{3}/6$ che corrisponde, come potevamo aspettarci, al centro del triangolo.
 
-Se $k\neq 1$, tale equazione \`{e} di secondo grado ed ha le soluzioni
+Se $k\neq 1$, tale equazione è di secondo grado ed ha le soluzioni
 $$x_{1}=\frac{-\sqrt{3}-\sqrt{k(4-k)}}{2(k-1)},
 \hspace{6em}
 x_{2}=\frac{-\sqrt{3}+\sqrt{k(4-k)}}{2(k-1)}.$$
 
-Per quanto detto sopra, noi gi\`{a} sappiamo che per $0<k\leq 3$ una 
-ed una sola di tali soluzioni appartiene all'intervallo 
-$[0,\sqrt{3}/2)$, dunque rappresenta un punto $P$ accettabile. 
-Dimostriamo che tale soluzione \`{e} $x_{2}$.
+Per quanto detto sopra, noi già sappiamo che per $0<k\leq 3$ una ed una sola di tali soluzioni appartiene all'intervallo $[0,\sqrt{3}/2)$, dunque rappresenta un punto $P$ accettabile. Dimostriamo che tale soluzione è $x_{2}$.
 
-Infatti, moltiplicando numeratore e denominatore per 
-$\sqrt{3}+\sqrt{k(4-k)}$, possiamo riscrivere $x_{2}$ nella forma
+Infatti, moltiplicando numeratore e denominatore per $\sqrt{3}+\sqrt{k(4-k)}$, possiamo riscrivere $x_{2}$ nella forma
 $$x_{2}=\frac{-k^{2}+4k-3}{2(k-1)(\sqrt{3}+\sqrt{k(4-k)})}=
 \frac{3-k}{2(\sqrt{3}+\sqrt{k(4-k)})}.$$
 
-Ora \`{e} evidente che $x_{2}\geq 0$ per $k\leq 3$. Per dimostrare che 
-$x_{2}$ \`{e} anche minore di $\sqrt{3}/2$, dobbiamo risolvere 
-la disequazione
+Ora è evidente che $x_{2}\geq 0$ per $k\leq 3$. Per dimostrare che $x_{2}$ è anche minore di $\sqrt{3}/2$, dobbiamo risolvere la disequazione
 $$\frac{3-k}{2(\sqrt{3}+\sqrt{k(4-k)})}<\frac{\sqrt{3}}{2}.$$
 
-Moltiplicando per il denominatore (sicuramente positivo) e svolgendo i 
-calcoli, si ritrova la disequazione
+Moltiplicando per il denominatore (sicuramente positivo) e svolgendo i calcoli, si ritrova la disequazione
 $$-k< \sqrt{3k(4-k)},$$
 banalmente verificata per tutti i valori $0<k\leq 3$.
 }
@@ -164,22 +118,9 @@ banalmente verificata per tutti i valori $0<k\leq 3$.
 }
 
 \renewcommand{\Osservazioni}{\TitoloOsservazione
-Nella soluzione presentata abbiamo ottenuto la condizione su $k$ 
-ragionando sulla crescenza e decrescenza delle intensit\`{a} percepite. 
-Avremmo anche potuto limitarci ad impostare l'equazione 
-$I_{A}(x)=I_{B}(x)=I_{C}(x)$ e, \emph{dopo} aver ottenuto le 
-soluzioni $x_{1}$ e $x_{2}$, discutere al variare di $k$ la loro 
-appartenenza all'intervallo di accettabilit\`{a} $[0,\sqrt{3}/2)$. 
-Questo per\`{o} ci avrebbe portato a discutere ben 4 disequazioni 
-irrazionali. 
+Nella soluzione presentata abbiamo ottenuto la condizione su $k$ ragionando sulla crescenza e decrescenza delle intensità percepite. Avremmo anche potuto limitarci ad impostare l'equazione $I_{A}(x)=I_{B}(x)=I_{C}(x)$ e, \emph{dopo} aver ottenuto le soluzioni $x_{1}$ e $x_{2}$, discutere al variare di $k$ la loro appartenenza all'intervallo di accettabilità $[0,\sqrt{3}/2)$. Questo però ci avrebbe portato a discutere ben 4 disequazioni irrazionali.
 
-Per i lettori interessati a questo approccio, enunciamo le conclusioni
-di tale discussione senza riportarne i passaggi: ferme restando le
-condizioni $k\neq 1$ (altrimenti l'equazione \`{e} di primo grado e va
-studiata a parte) e $k\in[0,4]$ (altrimenti il discriminante \`{e}
-negativo), abbiamo che $x_{1}<0$ per ogni $k>1$ e $x_{1}>\sqrt{3}/2$
-per ogni $k<1$ (quindi in particolare $x_{1}$ non sta mai
-nell'intervallo considerato), mentre $x_{2}\geq 0$ per $k\leq 3$ e
+Per i lettori interessati a questo approccio, enunciamo le conclusioni di tale discussione senza riportarne i passaggi: ferme restando le condizioni $k\neq 1$ (altrimenti l'equazione è di primo grado e va studiata a parte) e $k\in[0,4]$ (altrimenti il discriminante è negativo), abbiamo che $x_{1}<0$ per ogni $k>1$ e $x_{1}>\sqrt{3}/2$ per ogni $k<1$ (quindi in particolare $x_{1}$ non sta mai nell'intervallo considerato), mentre $x_{2}\geq 0$ per $k\leq 3$ e
 $x_{2}<\sqrt{3}/2$ per $k>0$.  }
 
 \renewcommand{\Commenti}{

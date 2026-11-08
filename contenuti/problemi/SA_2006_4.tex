@@ -3,65 +3,33 @@
 \renewcommand{\NumeroProblema}{4}
 
 \renewcommand{\Testo}{Si consideri il gioco seguente: su una
-scacchiera $n\times n$ si mette una moneta nella casella in alto a
-sinistra e due giocatori $A$ e $B$ muovono a turno, cominciando da
-$A$, la moneta.  Ogni mossa consiste nello spostare la moneta di una
-casella, in orizzontale oppure in verticale, evitando di occupare le
-caselle gi\`a occupate in precedenza (sia da $A$ che da $B$).  Perde
-chi non riesce pi\`u a muovere la moneta in una casella ammissibile.
+scacchiera $n\times n$ si mette una moneta nella casella in alto a sinistra e due giocatori $A$ e $B$ muovono a turno, cominciando da $A$, la moneta.  Ogni mossa consiste nello spostare la moneta di una casella, in orizzontale oppure in verticale, evitando di occupare le caselle già occupate in precedenza (sia da $A$ che da $B$).  Perde chi non riesce più a muovere la moneta in una casella ammissibile.
 
 Determinare, in funzione del numero $n$, quale tra i 2 giocatori ha
 una strategia vincente.}
 
-\renewcommand{\Risposta}{Se $n$ \`{e} pari il giocatore $A$ ha una
-strategia vincente, se $n$ \`{e} dispari il giocatore $B$ ha una
+\renewcommand{\Risposta}{Se $n$ è pari il giocatore $A$ ha una
+strategia vincente, se $n$ è dispari il giocatore $B$ ha una
 strategia vincente.}
 
 \renewcommand{\Aiutino}{Supponiamo la scacchiera colorata nel modo
-usuale e disposta in modo che la casella iniziale sia bianca.  Per $n$
-pari \`{e} possibile costruire una corrisponenza biunivoca che ad ogni
-casella bianca associa una casella nera ad essa adiacente (con un lato
-in comune). In questo modo dopo ogni mossa di $B$ la pedina si trova
-su una casella nera ed $A$ pu\`{o} muovere nella bianca corrispondente.
+usuale e disposta in modo che la casella iniziale sia bianca.  Per $n$ pari è possibile costruire una corrisponenza biunivoca che ad ogni casella bianca associa una casella nera ad essa adiacente (con un lato in comune). In questo modo dopo ogni mossa di $B$ la pedina si trova su una casella nera ed $A$ può muovere nella bianca corrispondente.
 
-Per $n$ dispari \`{e} possibile costruire una corrisponenza biunivoca
-che ad ogni casella nera associa una casella bianca (diversa da quella
-iniziale) ad essa adiacente.
+Per $n$ dispari è possibile costruire una corrisponenza biunivoca che ad ogni casella nera associa una casella bianca (diversa da quella iniziale) ad essa adiacente.
 
-In entrambi i casi la corrispondenza pu\`{o} essere ottenuta pensando 
+In entrambi i casi la corrispondenza può essere ottenuta pensando
 ad una tassellazione della scacchiera.}
 
 \renewcommand{\SoluzioneUfficiale}{\TitoloSoluzione Dimostreremo che
-per $n$ pari il giocatore $A$ ha una strategia vincente, mentre per
-$n$ dispari \`{e} il giocatore $B$ ad avere una strategia vincente.
+per $n$ pari il giocatore $A$ ha una strategia vincente, mentre per $n$ dispari è il giocatore $B$ ad avere una strategia vincente.
 
-Supponiamo intanto la scacchiera colorata nel modo usuale e disposta
-in modo che la casella iniziale sia bianca.  Il giocatore $A$
-sposter\`{a} sempre la pedina da una casella bianca ad una casella
-nera, mentre il giocatore $B$ trover\`{a} sempre la pedina su una
-casella nera e la sposter\`{a} in una casella bianca.
+Supponiamo intanto la scacchiera colorata nel modo usuale e disposta in modo che la casella iniziale sia bianca.  Il giocatore $A$ sposterà sempre la pedina da una casella bianca ad una casella nera, mentre il giocatore $B$ troverà sempre la pedina su una casella nera e la sposterà in una casella bianca.
 
-Supponiamo ora che $n$ sia pari.  Allora \`{e} possibile ricoprire
-completamente la scacchiera usando delle mattonelle $2\times 1$,
-ciascuna delle quali occupa una casella bianca ed una casella nera.
-In questo caso il giocatore $A$ pu\`{o}, quando tocca a lui muovere,
-spostare la pedina dalla casella bianca in cui si trova alla casella
-nera che fa parte della stessa mattonella. Tale casella \`{e}
-sicuramente ammissibile perch\'{e} essendo nera pu\`{o} essere
-raggiunta solo da $A$, e $A$ la raggiunge solo nel momento in cui $B$ 
-decide di entrare in quella mattonella.
+Supponiamo ora che $n$ sia pari.  Allora è possibile ricoprire completamente la scacchiera usando delle mattonelle $2\times 1$, ciascuna delle quali occupa una casella bianca ed una casella nera. In questo caso il giocatore $A$ può, quando tocca a lui muovere, spostare la pedina dalla casella bianca in cui si trova alla casella nera che fa parte della stessa mattonella. Tale casella è sicuramente ammissibile perché essendo nera può essere raggiunta solo da $A$, e $A$ la raggiunge solo nel momento in cui $B$ decide di entrare in quella mattonella.
 
-Supponiamo invece che $n$ sia dispari. Allora \`{e} possibile
-tassellare con mattonelle $2\times 1$ tutta la scacchiera meno la
-casella iniziale (basta ad esempio disporre le mattonelle in verticale nella
-prima colonna ed in orizzontale altrove). In questo caso i ruoli sono 
-invertiti: $A$ sar\`{a} sempre il primo ad entrare in una casella nera
-di una certa mattonella, e $B$ potr\`{a} sempre replicare spostando
-la pedina nella casella bianca della mattonella stessa, fino alla
-vittoria.
+Supponiamo invece che $n$ sia dispari. Allora è possibile tassellare con mattonelle $2\times 1$ tutta la scacchiera meno la casella iniziale (basta ad esempio disporre le mattonelle in verticale nella prima colonna ed in orizzontale altrove). In questo caso i ruoli sono invertiti: $A$ sarà sempre il primo ad entrare in una casella nera di una certa mattonella, e $B$ potrà sempre replicare spostando la pedina nella casella bianca della mattonella stessa, fino alla vittoria.
 
-Le seguenti figure rappresentano esempi di tassellazione per $n=6$ ed 
-$n=7$.
+Le seguenti figure rappresentano esempi di tassellazione per $n=6$ ed $n=7$.
 
 \hfill
 \psset{unit=5mm}

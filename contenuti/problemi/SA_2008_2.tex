@@ -7,22 +7,15 @@ forma di triangolo equilatero nella maniera seguente:
 \begin{itemize}
     \item  Marco sceglie per primo un punto $P$ del triangolo;
 
-	\item Tullio taglia la torta secondo una retta passante per $P$,
-	dopo di che sceglie la pi\`u grossa delle due parti in cui la
-	torta \`e stata tagliata, lasciando a Marco la parte restante.
+	\item Tullio taglia la torta secondo una retta passante per $P$, dopo di che sceglie la più grossa delle due parti in cui la torta è stata tagliata, lasciando a Marco la parte restante.
 \end{itemize}
 
 \begin{enumerate}
-    \item Supponiamo che Marco scelga il centro del triangolo.
-    Determinare quale percentuale della torta gli toccher\`{a}, come
-    minimo.
+    \item Supponiamo che Marco scelga il centro del triangolo. Determinare quale percentuale della torta gli toccherà, come minimo.
 
-    \item Supponiamo che Marco scelga un punto diverso dal centro.
-    Dimostrare che, se Tullio gioca bene, a Marco rester\`{a} una
-    percentuale di torta inferiore al minimo garantito al punto (a).
+    \item Supponiamo che Marco scelga un punto diverso dal centro. Dimostrare che, se Tullio gioca bene, a Marco resterà una percentuale di torta inferiore al minimo garantito al punto (a).
 
-    \item Estendere l'analisi al caso di torte a forma di triangolo
-    qualsiasi.
+    \item Estendere l'analisi al caso di torte a forma di triangolo qualsiasi.
 \end{enumerate}
 }
 
@@ -31,17 +24,12 @@ forma di triangolo equilatero nella maniera seguente:
 	
 		\item  \ldots
 		
-		\item Il punto pi\`{u} conveniente per Marco \`{e} il
-		baricentro.
+		\item Il punto più conveniente per Marco è il baricentro.
 	\end{enumerate}}
 
 \renewcommand{\Aiutino}{\begin{enumerate}
 	\renewcommand{\labelenumi}{(\alph{enumi})} 
-	\item  Se Tullio taglia parallelamente ad un lato, quale
-	percentuale della torta tocca a Tullio ed a Marco? Occorre ora mostrare che
-	ogni altra retta garantisce a Tullio una percentuale di torta
-	inferiore. A tal fine pu\`{o} essere utile considerare la seguente
-	figura:
+	\item  Se Tullio taglia parallelamente ad un lato, quale percentuale della torta tocca a Tullio ed a Marco? Occorre ora mostrare che ogni altra retta garantisce a Tullio una percentuale di torta inferiore. A tal fine può essere utile considerare la seguente figura:
 	\begin{center}
 		\psset{unit=5ex}
 		\pspicture(-2.5,-1)(2.5,2)
@@ -60,32 +48,19 @@ forma di triangolo equilatero nella maniera seguente:
 	    \endpspicture
 	\end{center}
 
-	Attenzione: occorre dimostrare anche che la fetta migliore per
-	Tullio \`{e} sempre il quadrilatero.
+	Attenzione: occorre dimostrare anche che la fetta migliore per Tullio è sempre il quadrilatero.
 
-	\item Dimostrare che, se Marco sceglie un punto diverso dal
-	centro, allora Tullio ottiene un risultato migliore del punto
+	\item Dimostrare che, se Marco sceglie un punto diverso dal centro, allora Tullio ottiene un risultato migliore del punto
 	precedente tagliando secondo la parallela ad un \emph{opportuno}
 	lato.
 	
-	\item Quale punto notevole del triangolo permette di ripetere i
-	ragionamenti dei punti precedenti?
+	\item Quale punto notevole del triangolo permette di ripetere i ragionamenti dei punti precedenti?
 \end{enumerate}}
 
 \renewcommand{\SoluzioneUfficiale}{\TitoloSoluzione\DomandaA
-Dimostriamo che, se Marco sceglie il centro del triangolo, Tullio
-avr\`{a} al massimo i 5/9 della torta (il che avviene se e solo se
-taglia secondo una retta parallela ad uno dei lati), e di conseguenza
-Marco avr\`{a} come minimo i 4/9 della torta.
+Dimostriamo che, se Marco sceglie il centro del triangolo, Tullio avrà al massimo i 5/9 della torta (il che avviene se e solo se taglia secondo una retta parallela ad uno dei lati), e di conseguenza Marco avrà come minimo i 4/9 della torta.
 
-Per dimostrarlo consideriamo intanto il caso in cui il taglio di
-Tullio \`{e} parallelo ad un lato.  In tal caso, con riferimento alla
-Figura 1, avremo che i triangoli $AB'C'$ ed $ABC$ sono simili con
-rapporto di similitudine 2/3 (infatti per una ben nota propriet\`{a}
-$AP$ \`{e} i 2/3 dell'altezza $AH$), dunque l'area di $AB'C'$ \`{e} i
-4/9 dell'area di $ABC$.  Ne segue che Tullio si mangia il trapezio
-$BCC'B'$, cio\`{e} 5/9 della torta, lasciando a Marco il triangolo
-$AB'C'$, cio\`{e} i 4/9 della torta.
+Per dimostrarlo consideriamo intanto il caso in cui il taglio di Tullio è parallelo ad un lato.  In tal caso, con riferimento alla Figura 1, avremo che i triangoli $AB'C'$ ed $ABC$ sono simili con rapporto di similitudine 2/3 (infatti per una ben nota proprietà $AP$ è i 2/3 dell'altezza $AH$), dunque l'area di $AB'C'$ è i 4/9 dell'area di $ABC$.  Ne segue che Tullio si mangia il trapezio $BCC'B'$, cioè 5/9 della torta, lasciando a Marco il triangolo $AB'C'$, cioè i 4/9 della torta.
 \begin{center}
     \psset{unit=6ex}
     \pspicture(-2.5,-2.3)(2.5,2.5)
@@ -99,16 +74,7 @@ $AB'C'$, cio\`{e} i 4/9 della torta.
     \endpspicture
 \end{center}
 
-Ci resta solo da dimostrare che ogni taglio non parallelo ad un lato
-produce due fette, entrambe inferiori ai 5/9 del totale.  Intanto
-questo \`{e} evidente se il taglio passa per un vertice, in quanto
-divide il triangolo in due parti uguali.  Se il taglio non passa per
-un vertice, allora interseca esattamente due lati.  Supponiamo, senza
-perdita di generalit\`{a}, che intersechi $AB$ ed $AC$ in $B''$ e
-$C''$, rispettivamente.  Con riferimento alla Figura 2, dobbiamo
-pertanto dimostrare che, tra le due fette, quella pi\`{u} grossa \`{e}
-sempre quella corrispondente al quadrilatero ($BCC''B''$ nella
-figura), e che la sua area \`{e} sempre minore dei 5/9 del totale.
+Ci resta solo da dimostrare che ogni taglio non parallelo ad un lato produce due fette, entrambe inferiori ai 5/9 del totale.  Intanto questo è evidente se il taglio passa per un vertice, in quanto divide il triangolo in due parti uguali.  Se il taglio non passa per un vertice, allora interseca esattamente due lati.  Supponiamo, senza perdita di generalità, che intersechi $AB$ ed $AC$ in $B''$ e $C''$, rispettivamente.  Con riferimento alla Figura 2, dobbiamo pertanto dimostrare che, tra le due fette, quella più grossa è sempre quella corrispondente al quadrilatero ($BCC''B''$ nella figura), e che la sua area è sempre minore dei 5/9 del totale.
 \begin{center}
     \psset{unit=6ex}
     \hfill\pspicture(-2.5,-2.2)(2.5,2.5)
@@ -140,11 +106,7 @@ figura), e che la sua area \`{e} sempre minore dei 5/9 del totale.
 \end{center}
 
 
-Consideriamo la Figura 3, in cui abbiamo anche tracciato la parallela
-ad $AC$ passante per $B'$.  I triangoli $PC'C''$ e $PB'D$ sono
-congruenti in quanto $PC'=PB'$, gli angoli in $P$ sono uguali in
-quanto opposti al vertice, e $\angle PC'C''=\angle PB'D=60^{\circ}$.
-Ne segue che
+Consideriamo la Figura 3, in cui abbiamo anche tracciato la parallela ad $AC$ passante per $B'$.  I triangoli $PC'C''$ e $PB'D$ sono congruenti in quanto $PC'=PB'$, gli angoli in $P$ sono uguali in quanto opposti al vertice, e $\angle PC'C''=\angle PB'D=60^{\circ}$. Ne segue che
 $$\mbox{Area}(PC'C'')=\mbox{Area}(PB'D)<\mbox{Area}(PB'B''),$$
 e pertanto
 \begin{eqnarray*}
@@ -154,35 +116,21 @@ e pertanto
      & = & \mbox{Area}(BCC'B')=\frac{5}{9}\mbox{Area}(ABC).
 \end{eqnarray*}
 
-In realt\`{a} abbiamo cos\`{\i} dimostrato che 
+In realtà abbiamo cos\`{\i} dimostrato che
 \begin{eqnarray*}
 	\mbox{Area}(BCC'B')-\mbox{Area}(BCC''B'') & = &
 	\mbox{Area}(PB'B'')-\mbox{Area}(PC'C'')  \\
 	 & = & \mbox{Area}(B'B''D).
 \end{eqnarray*}
 
-Poich\'{e} la retta $B'D$ non dipende dalla posizione del punto $B''$,
-\`{e} facile osservare che l'area di $B'B''D$ \`{e} tanto maggiore
-quanto pi\`{u} il punto $B''$ \`{e} vicino a $B$.
+Poiché la retta $B'D$ non dipende dalla posizione del punto $B''$, è facile osservare che l'area di $B'B''D$ è tanto maggiore quanto più il punto $B''$ è vicino a $B$.
 
-Possiamo pertanto concludere che l'area del quadrilatero $BCC''B''$
-decresce man mano che $B''$ si sposta da $B'$ a $B$, variando da un
-massimo di 5/9 (corrispondente a $B''=B'$) ad un minimo di 1/2
-(corrispondente a $B''=B$) dell'area di $ABC$.  Quindi in ogni caso
-tale quadrilatero rappresenta la fetta pi\`{u} grossa.
+Possiamo pertanto concludere che l'area del quadrilatero $BCC''B''$ decresce man mano che $B''$ si sposta da $B'$ a $B$, variando da un massimo di 5/9 (corrispondente a $B''=B'$) ad un minimo di 1/2 (corrispondente a $B''=B$) dell'area di $ABC$.  Quindi in ogni caso tale quadrilatero rappresenta la fetta più grossa.
 
 \DomandaB Tracciamo le tre rette parallele ai lati e passanti per il
 centro, ed indichiamo le intersezioni con i lati come nella Figura 4.
 
-Supponiamo che Marco scelga un punto $P$ diverso dal centro del
-triangolo.  In tal caso \`{e} facile verificare che $P$ sta
-all'interno (e non sul bordo) di \emph{almeno} uno dei triangoli
-$AB'C''$, $BC'A''$, $CA'B''$.  Supponiamo, senza perdita di
-generalit\`{a}, che $P$ stia in $AB'C''$.  Allora Tullio, tagliando
-secondo la parallela a $BC$ passante per $P$, ottiene un trapezio di
-area maggiore dei 5/9 dell'area di $ABC$, lasciando dunque a Marco
-meno dei 4/9 che avrebbe ottenuto di sicuro scegliendo come $P$ il
-centro del triangolo.
+Supponiamo che Marco scelga un punto $P$ diverso dal centro del triangolo.  In tal caso è facile verificare che $P$ sta all'interno (e non sul bordo) di \emph{almeno} uno dei triangoli $AB'C''$, $BC'A''$, $CA'B''$.  Supponiamo, senza perdita di generalità, che $P$ stia in $AB'C''$.  Allora Tullio, tagliando secondo la parallela a $BC$ passante per $P$, ottiene un trapezio di area maggiore dei 5/9 dell'area di $ABC$, lasciando dunque a Marco meno dei 4/9 che avrebbe ottenuto di sicuro scegliendo come $P$ il centro del triangolo.
 \begin{center}
     \hfill
     \psset{unit=6ex}
@@ -223,27 +171,12 @@ centro del triangolo.
     \hfill\mbox{}
 \end{center}
 
-\DomandaC Nel caso di un triangolo generico il punto pi\`{u}
-conveniente per Marco \`{e} il baricentro.  Infatti tutti i
-ragionamenti precedenti si possono ripetere parola per parola pur di
-sostituire il centro con il baricentro.  In particolare sono ancora
-vere le seguenti affermazioni.
+\DomandaC Nel caso di un triangolo generico il punto più
+conveniente per Marco è il baricentro.  Infatti tutti i ragionamenti precedenti si possono ripetere parola per parola pur di sostituire il centro con il baricentro.  In particolare sono ancora vere le seguenti affermazioni.
 \begin{itemize}
-    \item Se Marco fissa il punto $P$ nel baricentro, e Tullio taglia
-    secondo una retta parallela ad un lato, allora Tullio ottiene i
-    5/9 della torta e lascia i 4/9 a Marco (vedi Figura $1'$).  Il
-    punto essenziale \`{e} ancora che i triangoli $AB'C'$ ed $ABC$
-    sono simili con rapporto di similitudine 2/3 (per una ben nota
-    propriet\`{a} del baricentro).
+    \item Se Marco fissa il punto $P$ nel baricentro, e Tullio taglia secondo una retta parallela ad un lato, allora Tullio ottiene i 5/9 della torta e lascia i 4/9 a Marco (vedi Figura $1'$).  Il punto essenziale è ancora che i triangoli $AB'C'$ ed $ABC$ sono simili con rapporto di similitudine 2/3 (per una ben nota proprietà del baricentro).
 
-    \item Se Marco fissa il punto $P$ nel baricentro, e Tullio taglia
-    secondo una retta non parallela ai lati, allora la parte pi\`{u}
-    grossa \`{e} sempre il quadrilatero, ma la sua area \`{e} comunque
-    meno dei 5/9 del totale (vedi Figura $3'$).  La dimostrazione si
-    basa ancora sulla congruenza dei triangoli $PC'C''$ e $PB'D$, dove
-    $D$ \`{e} stato ottenuto tracciando per $B'$ la parallela ad $AC$
-    (l'uguaglianza $PC'=PB'$ segue dal fatto che $P$ sta sulla mediana
-    relativa al lato $BC$).
+    \item Se Marco fissa il punto $P$ nel baricentro, e Tullio taglia secondo una retta non parallela ai lati, allora la parte più grossa è sempre il quadrilatero, ma la sua area è comunque meno dei 5/9 del totale (vedi Figura $3'$).  La dimostrazione si basa ancora sulla congruenza dei triangoli $PC'C''$ e $PB'D$, dove $D$ è stato ottenuto tracciando per $B'$ la parallela ad $AC$ (l'uguaglianza $PC'=PB'$ segue dal fatto che $P$ sta sulla mediana relativa al lato $BC$).
 
 \begin{center}
     \hfill
@@ -275,12 +208,7 @@ vere le seguenti affermazioni.
     \endpspicture\hfill\mbox{}
 \end{center}
 
-    \item Se Marco sceglie un punto $P$ diverso dal baricentro, allora
-    $P$ sta nell'interno (e non sul bordo) di almeno uno dei triangoli
-    $AB'C''$, $BC'A''$, $CA'B''$ (vedi Figura $4'$).  Se, per esempio,
-    $P$ sta nell'interno di $AB'C''$ (Figura $5'$) Tullio riesce,
-    tracciando la parallela a $BC$, a garantirsi pi\`{u} dei 5/9 della
-    torta.
+    \item Se Marco sceglie un punto $P$ diverso dal baricentro, allora $P$ sta nell'interno (e non sul bordo) di almeno uno dei triangoli $AB'C''$, $BC'A''$, $CA'B''$ (vedi Figura $4'$).  Se, per esempio, $P$ sta nell'interno di $AB'C''$ (Figura $5'$) Tullio riesce, tracciando la parallela a $BC$, a garantirsi più dei 5/9 della torta.
 \end{itemize}
 \begin{center}
     \hfill
@@ -325,12 +253,7 @@ vere le seguenti affermazioni.
 }
 
 \renewcommand{\SoluzioniAlternative}{\TitoloSoluzioneAlternativaA Il
-punto fondamentale per la soluzione della prima parte del problema, e
-cio\`{e} il fatto che l'area del trapezio $BCC''B''$ cresce man mano
-che $B''$ si sposta da $B'$ verso $B$, si pu\`{o} dimostrare anche per
-via computazionale.  Con riferimento alla Figura~3, indichiamo con
-$\theta$ l'angolo $\angle C'PC''$, che pu\`{o} variare da $0^{\circ}$
-a $30^{\circ}$. Si ha allora che
+punto fondamentale per la soluzione della prima parte del problema, e cioè il fatto che l'area del trapezio $BCC''B''$ cresce man mano che $B''$ si sposta da $B'$ verso $B$, si può dimostrare anche per via computazionale.  Con riferimento alla Figura~3, indichiamo con $\theta$ l'angolo $\angle C'PC''$, che può variare da $0^{\circ}$ a $30^{\circ}$. Si ha allora che
 $$\mbox{Area}(PC'C'')=\frac{1}{2}\left[PC'\right]^{2}
 \frac{\sin\theta\cdot\sin 60^{\circ}}{\sin(60^{\circ}+\theta)},$$
 $$\mbox{Area}(PC'C'')=\frac{1}{2}\left[PB'\right]^{2}
@@ -346,9 +269,7 @@ e pertanto
 	 \sin(60^{\circ}-\theta)\cdot\sin(60^{\circ}+\theta)}.
 \end{eqnarray*}
 
-Tale espressione pu\`{o} essere studiata ricorrendo al calcolo
-differenziale oppure, pi\`{u} semplicemente, utilizzando le formule
-trigonometriche
+Tale espressione può essere studiata ricorrendo al calcolo differenziale oppure, più semplicemente, utilizzando le formule trigonometriche
 $$\sin(60^{\circ}+\theta)-\sin(60^{\circ}-\theta)=
 2\cos 60^{\circ}\cdot\sin\theta=\sin\theta,$$
 $$\sin(60^{\circ}-\theta)\cdot\sin(60^{\circ}+\theta)=
@@ -359,9 +280,7 @@ $$\mbox{Area}(BCC'B')-\mbox{Area}(BCC''B'')=
 \frac{\sqrt{3}}{2}\left[PC'\right]^{2}\frac{\sin^{2}\theta}{
 3-4\sin^{2}\theta}.$$
 
-Quando $\theta$ varia da $0^{\circ}$ a $30^{\circ}$ il numeratore
-aumenta ed il denominatore diminuisce (rimanendo sempre positivo),
-dunque il rapporto cresce.
+Quando $\theta$ varia da $0^{\circ}$ a $30^{\circ}$ il numeratore aumenta ed il denominatore diminuisce (rimanendo sempre positivo), dunque il rapporto cresce.
 }
 
 \renewcommand{\Osservazioni}{

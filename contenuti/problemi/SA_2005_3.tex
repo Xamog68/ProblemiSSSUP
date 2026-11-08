@@ -3,100 +3,64 @@
 \renewcommand{\NumeroProblema}{3}
 
 \renewcommand{\Testo}{La Scuola Sant'Anna ha deciso di partecipare al
-campionato di Formula Uno con una vettura, e si sta preparando per il
-prossimo gran premio che si svolger\`{a} sul circuito di Montecarlo
-(comune della provincia di Lucca).  I suoi ingegneri hanno a
-disposizione i seguenti dati:
+campionato di Formula Uno con una vettura, e si sta preparando per il prossimo gran premio che si svolgerà sul circuito di Montecarlo (comune della provincia di Lucca).  I suoi ingegneri hanno a disposizione i seguenti dati:
 	\begin{itemize}
 		\item  la gara consiste in 120 giri di pista;
 		
-		\item la capacit\`{a} del serbatoio della vettura permette, se
-		necessario, di completare la gara senza alcun pit-stop;
+		\item la capacità del serbatoio della vettura permette, se necessario, di completare la gara senza alcun pit-stop;
 	
-		\item per un pit-stop si impiegano 30 secondi in totale,
-		compresi i tempi di rallentamento ed accelerazione, 
-		indipendentemente dalla quantit\`a di carburante immessa;
+		\item per un pit-stop si impiegano 30 secondi in totale, compresi i tempi di rallentamento ed accelerazione, indipendentemente dalla quantità di carburante immessa;
 	
-		\item per ogni giro si consumano, indipendentemente da ogni
-		altro parametro, 3 kg di carburante;
+		\item per ogni giro si consumano, indipendentemente da ogni altro parametro, 3 kg di carburante;
 		
-		\item il tempo di percorrenza di un giro aumenta di 3
-		centesimi di secondo per ogni kg di carburante in
-		pi\`u presente nel serbatotio all'inizio del giro stesso.
+		\item il tempo di percorrenza di un giro aumenta di 3 centesimi di secondo per ogni kg di carburante in più presente nel serbatotio all'inizio del giro stesso.
 	\end{itemize}
 	
-Determinare la strategia (cio\`{e} il numero dei pit-stop da
-effettuare ed i giri nei quali effettuarli) che permette di terminare
+Determinare la strategia (cioè il numero dei pit-stop da effettuare ed i giri nei quali effettuarli) che permette di terminare
 la gara nel minor tempo possibile.}
 
 \renewcommand{\Risposta}{Conviene fare 4 pit-stop equispaziati,
-cio\`{e} al termine dei giri 24, 48, 72, 96.}
+cioè al termine dei giri 24, 48, 72, 96.}
 
 \renewcommand{\Aiutino}{Indichiamo preliminarmente con $T$ il tempo (in centesimi di secondo)
-che serve per percorrere un giro iniziandolo con soli 3 kg di
-carburante.  Nella risoluzione si pu\`{o} procedere secondo i seguenti
-passi.
+che serve per percorrere un giro iniziandolo con soli 3 kg di carburante.  Nella risoluzione si può procedere secondo i seguenti passi.
 \begin{itemize}
-	\item  Dimostrare che il tempo necessario per percorrere $k$ giri 
-	\`{e} maggiore od uguale di
+	\item  Dimostrare che il tempo necessario per percorrere $k$ giri è maggiore od uguale di
 	$$kT+\frac{9}{2}k(k-1),$$
-	con uguaglianza se e solo se si arriva alla fine con il serbatoio
-	scarico.
+	con uguaglianza se e solo se si arriva alla fine con il serbatoio scarico.
 
-	\item Supponendo di suddividere la gara in $n$ tratti di lunghezza
-	$k_{1},\ldots,k_{n}$, dimostrare che il tempo totale di percorrenza \`{e}
-	maggiore od uguale di
+	\item Supponendo di suddividere la gara in $n$ tratti di lunghezza $k_{1},\ldots,k_{n}$, dimostrare che il tempo totale di percorrenza è maggiore od uguale di
 	$$120\left(T-\frac{9}{2}\right)-3000+\frac{9}{2}
 	\sum_{i=1}^{n}k_{i}^{2}+3000n,$$
-	con uguaglianza se e solo se si arriva alla fine di ogni tratto
-	con il serbatoio scarico. Non resta dunque che minimizzare la somma 
-	degli ultimi 2 termini con il vincolo che $k_{1}+\ldots+k_{n}=120$.
+	con uguaglianza se e solo se si arriva alla fine di ogni tratto con il serbatoio scarico. Non resta dunque che minimizzare la somma degli ultimi 2 termini con il vincolo che $k_{1}+\ldots+k_{n}=120$.
 
-	\item Dimostrare che tale somma \`{e} maggiore od uguale di
+	\item Dimostrare che tale somma è maggiore od uguale di
 	$$600\left(\frac{108}{n}+5n\right),$$
-	con uguaglianza se e solo se i $k_{i}$ sono tutti uguali, a costo di 
-	non essere interi.
+	con uguaglianza se e solo se i $k_{i}$ sono tutti uguali, a costo di non essere interi.
 
-	\item  Dimostrare (mediante uno studio di funzione od una 
-	disuguaglianza elementare) che tale espressione, al variare di $n$ tra gli 
-	interi positivi, assume minimo per $n=5$.
+	\item  Dimostrare (mediante uno studio di funzione od una disuguaglianza elementare) che tale espressione, al variare di $n$ tra gli interi positivi, assume minimo per $n=5$.
 
-	\item  Osservare che dividendo la gara in 5 tratti di ugual 
-	lunghezza (quindi 4 pit-stop) si hanno tutte uguaglianze, dunque la 
-	scelta ottimale. 
+	\item  Osservare che dividendo la gara in 5 tratti di ugual lunghezza (quindi 4 pit-stop) si hanno tutte uguaglianze, dunque la scelta ottimale.
 \end{itemize}}
 
 \renewcommand{\SoluzioneUfficiale}{Conveniamo di indicare tutti i 
-tempi in centesimi di secondo, e sia $T$ il tempo che serve per 
-percorrere un giro iniziandolo con 3 soli kg di carburante nel 
-serbatotio (cio\`{e} il minimo che serve per completarlo). Dividiamo 
+tempi in centesimi di secondo, e sia $T$ il tempo che serve per percorrere un giro iniziandolo con 3 soli kg di carburante nel serbatotio (cioè il minimo che serve per completarlo). Dividiamo
 ora la soluzione in vari passi.\medskip
 
-\emph{Passo 1}. Determiniamo il tempo minimo necessario per 
-percorrere $k$ giri consecutivi senza soste. \`{E} chiaro che tale 
-tempo minimo si avr\`{a} se si imbarca il minimo di carburante 
-necessario. In base alle informazioni date, sappiamo che il tempo di 
-percorrenza diminuisce di 9 centesimi ogni giro (3 centesimi per 
-ciascuno dei 3 kg di carburante che si consumano). Pertanto, se 
-l'ultimo giro viene percorso in $T$ centesimi, il penultimo richiede 
-$T+9$ centesimi, il terz'utlimo $T+18$ centesimi, e cos\`{\i} via. Ne 
-segue che il tempo minimo per percorrere $k$ giri \`{e}
+\emph{Passo 1}. Determiniamo il tempo minimo necessario per percorrere $k$ giri consecutivi senza soste. È chiaro che tale tempo minimo si avrà se si imbarca il minimo di carburante necessario. In base alle informazioni date, sappiamo che il tempo di percorrenza diminuisce di 9 centesimi ogni giro (3 centesimi per ciascuno dei 3 kg di carburante che si consumano). Pertanto, se l'ultimo giro viene percorso in $T$ centesimi, il penultimo richiede $T+9$ centesimi, il terz'utlimo $T+18$ centesimi, e cos\`{\i} via. Ne segue che il tempo minimo per percorrere $k$ giri è
 \begin{eqnarray}
 	T+(T+9)+(T+18)+\ldots+(T+(k-1)) & = & kT+9(1+2+\ldots+(k-1))
 	\nonumber  \\
 	 & = & kT+9\frac{k(k-1)}{2}
 	 \label{stimatempi1}
 \end{eqnarray}
-centesimi di secondo, con uguaglianza se e solo se si imbarca la 
-quantit\`{a} esatta di carburante.
+centesimi di secondo, con uguaglianza se e solo se si imbarca la quantità esatta di carburante.
 \medskip
 
-\emph{Passo 2}. Supponiamo di suddividere la gara in $n$ tratti di 
-lunghezza $k_{1},\ldots,k_{n}$, con $k_{1}+\ldots+k_{n}=120$, 
-compiendo quindi $n-1$ rifornimenti.
+\emph{Passo 2}. Supponiamo di suddividere la gara in $n$ tratti di lunghezza $k_{1},\ldots,k_{n}$, con $k_{1}+\ldots+k_{n}=120$, compiendo quindi $n-1$ rifornimenti.
 
 Applicando la (\ref{stimatempi1}) su ogni tratto, e tenendo conto che 
-ogni rifornimento dura 3000 centesimi, il tempo totale sar\`{a} allora 
+ogni rifornimento dura 3000 centesimi, il tempo totale sarà allora
 \begin{eqnarray}
 	\mbox{Tempo Totale} & \geq & \sum_{i=1}^{n}
 	\left(k_{i}T+\frac{9}{2}k_{i}^{2}-\frac{9}{2}k_{i}\right)
@@ -109,19 +73,15 @@ ogni rifornimento dura 3000 centesimi, il tempo totale sar\`{a} allora
 	\frac{9}{2}\sum_{i=1}^{n}k_{i}^{2}+3000n,
 	\label{stimatempi2}
 \end{eqnarray}
-con uguaglianza se e solo se la vettura arriva scarica al termine di 
-ogni tratto.
+con uguaglianza se e solo se la vettura arriva scarica al termine di ogni tratto.
 
 I primi due addendi non dipendono dalla strategia: non ci resta 
 dunque che minimizzare la somma degli ultimi due addendi.\medskip
 
-\emph{Passo 3}. Per la disuguaglianza tra media quadratica e media 
-aritmetica (valida per ogni $n$-upla di numeri reali
-$k_{1},\ldots,k_{n}$) si ha che
+\emph{Passo 3}. Per la disuguaglianza tra media quadratica e media aritmetica (valida per ogni $n$-upla di numeri reali $k_{1},\ldots,k_{n}$) si ha che
 $$\left(\frac{1}{n}\sum_{i=1}^{n}k_{i}^{2}\right)^{1/2}\geq
 \frac{1}{n}\sum_{i=1}^{n}k_{i},$$
-con uguaglianza se e solo se i $k_{i}$ sono tutti uguali. Ricordando 
-che $k_{1}+\ldots+k_{n}=120$, otteniamo pertanto che
+con uguaglianza se e solo se i $k_{i}$ sono tutti uguali. Ricordando che $k_{1}+\ldots+k_{n}=120$, otteniamo pertanto che
 \begin{eqnarray}
 	\frac{9}{2}\sum_{i=1}^{n}k_{i}^{2}+3000n & \geq & 
 	\frac{9}{2}\cdot\frac{1}{n}\left(\sum_{i=1}^{n}k_{i}\right)^{2}+3000n
@@ -131,16 +91,11 @@ che $k_{1}+\ldots+k_{n}=120$, otteniamo pertanto che
 	 & = & 600\left(\frac{108}{n}+5n\right),
 	\label{stimatempi3}
 \end{eqnarray}
-con uguaglianza se e solo se $k_{1}=\ldots=k_{n}=120/n$ (cosa che,
-dovendo nel nostro caso i $k_{i}$ essere tutti interi, non pu\`{o}
-accadere se $n$ non \`{e} un divisore di 120). \medskip
+con uguaglianza se e solo se $k_{1}=\ldots=k_{n}=120/n$ (cosa che, dovendo nel nostro caso i $k_{i}$ essere tutti interi, non può
+accadere se $n$ non è un divisore di 120). \medskip
 
 \emph{Passo 4}. L'espressione (\ref{stimatempi3}), al variare di $n$ 
-tra gli interi positivi, assume minimo per $n=5$. Questo si 
-congettura facilmente provando a sostituire i primi valori di $n$, 
-rappresentati nel diagramma seguente (in cui non abbiamo considerato 
-il fattore moltiplicativo 600: si noti che per $n=4$ l'espressione 
-vale 47 e per $n=5$ vale $46.6$).
+tra gli interi positivi, assume minimo per $n=5$. Questo si congettura facilmente provando a sostituire i primi valori di $n$, rappresentati nel diagramma seguente (in cui non abbiamo considerato il fattore moltiplicativo 600: si noti che per $n=4$ l'espressione vale 47 e per $n=5$ vale $46.6$).
 
 \begin{center}
 	\psset{xunit=5ex,yunit=0.2ex}
@@ -162,10 +117,9 @@ Per dimostrarlo formalmente, consideriamo la disequazione
 	\frac{108}{n}+5n\geq\frac{108}{5}+25,
 	\label{stimatempi4}
 \end{equation}
-la quale si pu\`{o} riscrivere nella forma
+la quale si può riscrivere nella forma
 $$\left(5n-\frac{108}{5}\right)(n-5)\geq 0,$$
-da cui segue immediatamente che \`{e} verificata per ogni $n\geq 5$ e 
-per ogni $n\leq 108/25=4.32$, quindi per ogni valore intero positivo 
+da cui segue immediatamente che è verificata per ogni $n\geq 5$ e per ogni $n\leq 108/25=4.32$, quindi per ogni valore intero positivo
 di $n$. \medskip
 
 \emph{Passo 5}.  Mettendo insieme la (\ref{stimatempi2}), la
@@ -180,23 +134,18 @@ di $n$. \medskip
 	 600\left(\frac{108}{5}+25\right).
 \end{eqnarray*}
 
-Per avere le varie uguaglianze deve essere $n=5$, 
-$k_{1}=\ldots=k_{5}=120/5=24$, e dobbiamo arrivare con la vettura 
-scarica ad ogni pit-stop.
+Per avere le varie uguaglianze deve essere $n=5$, $k_{1}=\ldots=k_{5}=120/5=24$, e dobbiamo arrivare con la vettura scarica ad ogni pit-stop.
 
-La strategia ottimale prevede pertanto di suddividere la gara in 5 
-tratti di ugual lunghezza, effettuando quindi 4 pit-stop al termine 
+La strategia ottimale prevede pertanto di suddividere la gara in 5 tratti di ugual lunghezza, effettuando quindi 4 pit-stop al termine
 dei giri 24, 48, 72, 96.}
 
 \renewcommand{\SoluzioniAlternative}{
 }
 
 \renewcommand{\Osservazioni}{\TitoloOsservazione Per dimostare la tesi
-del Passo 4, potevamo anche ricorrere al calcolo differenziale.
-Infatti, da uno studio della funzione
+del Passo 4, potevamo anche ricorrere al calcolo differenziale. Infatti, da uno studio della funzione
 $$f(x)=\frac{108}{x}+5x$$
-si vede che essa \`{e} decrescente nell'intervallo
-$0<x\leq\sqrt{108/5}$ e crescente per $x\geq \sqrt{108/5}$. 
+si vede che essa è decrescente nell'intervallo $0<x\leq\sqrt{108/5}$ e crescente per $x\geq \sqrt{108/5}$.
 \begin{center}
 	\psset{xunit=5ex,yunit=0.2ex}
 	\pspicture(0,-20)(8,125)
@@ -212,11 +161,8 @@ $0<x\leq\sqrt{108/5}$ e crescente per $x\geq \sqrt{108/5}$.
 	\endpspicture
 \end{center}
 
-Poich\'{e} $4<\sqrt{108/5}<5$, il minimo di tale funzione sugli interi
-positivi sar\`{a} assunto in 4 o 5: non resta quindi che sostituire
-questi due valori. Vale la pena di sottolineare che \`{e} comunque 
-necessario sostituire entrambi i valori, e \emph{non} basta osservare 
-che $\sqrt{108/5}$ \`{e} pi\`{u} vicino a 5 che a 4. }
+Poiché $4<\sqrt{108/5}<5$, il minimo di tale funzione sugli interi positivi sarà assunto in 4 o 5: non resta quindi che sostituire questi due valori. Vale la pena di sottolineare che è comunque necessario sostituire entrambi i valori, e \emph{non} basta osservare
+che $\sqrt{108/5}$ è più vicino a 5 che a 4. }
 
 \renewcommand{\Commenti}{
 }

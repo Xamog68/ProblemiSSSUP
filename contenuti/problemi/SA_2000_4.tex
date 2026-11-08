@@ -2,44 +2,33 @@
 
 \renewcommand{\NumeroProblema}{4}
 
-\renewcommand{\Testo}{La serratura della valigia di Anna \`{e} dotata
-di una combinazione composta da cinque cilindri affiancati, ognuno dei
-quali pu\`{o} assumere ciclicamente 10 posizioni, contrassegnate
-nell'ordine dalle lettere \texttt{A}, \texttt{B}, \texttt{C},
+\renewcommand{\Testo}{La serratura della valigia di Anna è dotata
+di una combinazione composta da cinque cilindri affiancati, ognuno dei quali può assumere ciclicamente 10 posizioni, contrassegnate nell'ordine dalle lettere \texttt{A}, \texttt{B}, \texttt{C},
 \texttt{D}, \texttt{E}, \texttt{F}, \texttt{M}, \texttt{N},
 \texttt{O}, \texttt{P}.
 	
-Il congegno dovrebbe permettere lo spostamento di ogni singolo
-cilindro dalla lettera su cui \`{e} posizio\-na\-to alla lettera
-successiva o precedente.
+Il congegno dovrebbe permettere lo spostamento di ogni singolo cilindro dalla lettera su cui è posizio\-na\-to alla lettera successiva o precedente.
 	
-Esso per\`{o} non \`{e} perfettamente funzionante, e quando viene
-spostato di una posizione un qualsiasi cilindro, allora anche uno (e
-solo uno) di quelli adiacenti si sposta di una posizione nello stesso
-verso (per esempio supponiamo che la serratura sia posizionata sulla
-parola \texttt{NONNA}, e che si sposti il quarto cilindro dalla
+Esso però non è perfettamente funzionante, e quando viene spostato di una posizione un qualsiasi cilindro, allora anche uno (e solo uno) di quelli adiacenti si sposta di una posizione nello stesso verso (per esempio supponiamo che la serratura sia posizionata sulla parola \texttt{NONNA}, e che si sposti il quarto cilindro dalla
 \texttt{N} alla \texttt{M}: allora anche il terzo cilindro si sposta
 dalla \texttt{N} alla \texttt{M}, o il quinto cilindro si sposta dalla
 \texttt{A} alla \texttt{P}).  Ovviamente se ad essere spostati sono il
-primo od il quinto cilindro, allora a muoversi saranno il secondo od
-il quarto, rispettivamente.
+primo od il quinto cilindro, allora a muoversi saranno il secondo od il quarto, rispettivamente.
 	
-Attualmente la serratura \`{e} posizionata sulla parola \texttt{AAAAA}.
+Attualmente la serratura è posizionata sulla parola \texttt{AAAAA}.
 \begin{itemize}
 	\item Sapendo che la serratura si libera solo sulla parola
-	\texttt{BABBO}, riuscir\`{a} Anna ad aprire la valigia?
+	\texttt{BABBO}, riuscirà Anna ad aprire la valigia?
 	
 	\item E se la serratura si liberasse solo sulla parola
 	\texttt{MAMMA}?
 \end{itemize}}
 
-\renewcommand{\Risposta}{In entrambi i casi \`{e} impossibile aprire
+\renewcommand{\Risposta}{In entrambi i casi è impossibile aprire
 la valigia.}
 
 \renewcommand{\Aiutino}{Intanto conviene matematizzare il problema
-sostituendo alle lettere i numeri 1, 2, \ldots, 9, 0.  Ora non resta
-che trovare degli invarianti rispetto alle mosse possibili.  Dette
-$a$, $b$, $c$, $d$, $e$ le 5 cifre della combinazione, due invarianti
+sostituendo alle lettere i numeri 1, 2, \ldots, 9, 0.  Ora non resta che trovare degli invarianti rispetto alle mosse possibili.  Dette $a$, $b$, $c$, $d$, $e$ le 5 cifre della combinazione, due invarianti
 utili sono $a+b+c+d+e$ modulo \ldots\ e $a-b+c-d+e$ modulo \ldots.}
 
 \renewcommand{\SoluzioneUfficiale}{

@@ -3,15 +3,14 @@
 \renewcommand{\NumeroProblema}{3}
 
 \renewcommand{\Testo}{
-La seguente figura rappresenta una scacchiera con le caselle 
-	colorate nel modo usuale.
+La seguente figura rappresenta una scacchiera con le caselle colorate nel modo usuale.
 \begin{center}
 		\psset{unit=5mm}
 		\psset{linewidth=0.6pt}
 		\newrgbcolor{scacchiera}{0.4 1 0.6}
-	
+
 		\pspicture(0,0)(8,8)
-	
+
 		\multips(0,0)(2,0){4}{\pspolygon*[linecolor=scacchiera](0,0)(1,0)(1,1)(0,1)(0,0)}
 		\multips(1,1)(2,0){4}{\pspolygon*[linecolor=scacchiera](0,0)(1,0)(1,1)(0,1)(0,0)}
 		\multips(0,2)(2,0){4}{\pspolygon*[linecolor=scacchiera](0,0)(1,0)(1,1)(0,1)(0,0)}
@@ -20,27 +19,25 @@ La seguente figura rappresenta una scacchiera con le caselle
 		\multips(1,5)(2,0){4}{\pspolygon*[linecolor=scacchiera](0,0)(1,0)(1,1)(0,1)(0,0)}
 		\multips(0,6)(2,0){4}{\pspolygon*[linecolor=scacchiera](0,0)(1,0)(1,1)(0,1)(0,0)}
 		\multips(1,7)(2,0){4}{\pspolygon*[linecolor=scacchiera](0,0)(1,0)(1,1)(0,1)(0,0)}
-	
+
 		\multido{\n=0+1}{9}{
 		\psline{-}(\n,0)(\n,8)
 		\psline{-}(0,\n)(8,\n)
 		}
-	
+
 		\endpspicture
 \end{center}
 
-	Dalla posizione iniziale si possono ottenere altre configurazioni
-	della scacchiera scambiando tra loro due righe o due colonne
-	qualsiasi, ripetendo l'operazione quante volte si vuole.
+	Dalla posizione iniziale si possono ottenere altre configurazioni della scacchiera scambiando tra loro due righe o due colonne qualsiasi, ripetendo l'operazione quante volte si vuole.
 
-	Determinare quali delle seguenti configurazioni 
+	Determinare quali delle seguenti configurazioni
 \begin{center}
 		\hfill
 % 		\psset{unit=5mm}
 % 		\psset{linewidth=0.6pt}
 % 		\newrgbcolor{scacchiera}{0.4 1 0.6}
 % 		\pspicture(0,0)(8,8)
-% 	
+%
 % 		\multips(1,0)(2,0){4}{\pspolygon*[linecolor=scacchiera](0,0)(1,0)(1,1)(0,1)(0,0)}
 % 		\multips(0,1)(2,0){4}{\pspolygon*[linecolor=scacchiera](0,0)(1,0)(1,1)(0,1)(0,0)}
 % 		\multips(1,2)(2,0){4}{\pspolygon*[linecolor=scacchiera](0,0)(1,0)(1,1)(0,1)(0,0)}
@@ -49,75 +46,70 @@ La seguente figura rappresenta una scacchiera con le caselle
 % 		\multips(0,5)(2,0){4}{\pspolygon*[linecolor=scacchiera](0,0)(1,0)(1,1)(0,1)(0,0)}
 % 		\multips(1,6)(2,0){3}{\pspolygon*[linecolor=scacchiera](0,0)(1,0)(1,1)(0,1)(0,0)}
 % 		\multips(0,7)(2,0){3}{\pspolygon*[linecolor=scacchiera](0,0)(1,0)(1,1)(0,1)(0,0)}
-% 	
+%
 % 		\multido{\n=0+1}{9}{
 % 		\psline{-}(\n,0)(\n,8)
 % 		\psline{-}(0,\n)(8,\n)
 % 		}
-% 	
+%
 % 		\endpspicture
 		\psset{unit=5mm}
 		\psset{linewidth=0.6pt}
 		\newrgbcolor{scacchiera}{0.4 1 0.6}
 		\pspicture(0,0)(8,8)
-	
+
 		\pspolygon*[linecolor=scacchiera](0,8)(0,4)(8,4)(8,0)(5,0)(5,8)(0,8)
-	
+
 		\multido{\n=0+1}{9}{
 		\psline{-}(\n,0)(\n,8)
 		\psline{-}(0,\n)(8,\n)
 		}
-	
+
 		\endpspicture
 		\hfill
 		\pspicture(0,0)(8,8)
-	
+
 		\pspolygon*[linecolor=scacchiera](0,8)(0,4)(1,4)(1,3)(2,3)(2,2)(3,2)(3,1)
 		(4,1)(4,0)(8,0)(8,1)(7,1)(7,2)(6,2)(6,3)(5,3)(5,4)(4,4)(4,5)(3,5)
 		(3,6)(2,6)(2,7)(1,7)(1,8)(0,8)
 		\pspolygon*[linecolor=scacchiera](5,8)(5,7)(6,7)(6,6)(7,6)(7,5)(8,5)(8,8)(6,8)
-	
+
 		\multido{\n=0+1}{9}{
 		\psline{-}(\n,0)(\n,8)
 		\psline{-}(0,\n)(8,\n)
 		}
-	
+
 		\endpspicture
 		\hfill
 		\pspicture(0,0)(8,8)
-	
+
 		\pspolygon*[linecolor=scacchiera](0,0)(2,0)(2,2)(0,2)(0,0)
 		\pspolygon*[linecolor=scacchiera](0,6)(2,6)(2,8)(0,8)(0,6)
 		\pspolygon*[linecolor=scacchiera](6,0)(8,0)(8,2)(6,2)(6,0)
 		\pspolygon*[linecolor=scacchiera](6,6)(8,6)(8,8)(6,8)(6,6)
 		\pspolygon*[linecolor=scacchiera](2,2)(6,2)(6,6)(2,6)(2,2)
-	
+
 		\multido{\n=0+1}{9}{
 		\psline{-}(\n,0)(\n,8)
 		\psline{-}(0,\n)(8,\n)
 		}
-	
+
 		\endpspicture
 		\hfill\mbox{}
 \end{center}
 	si possono ottenere e quali non si possono ottenere.
 }
 
-\renewcommand{\Risposta}{ 
-La scacchiera di sinistra e quella centrale non sono ottenibili,
-quella di destra \`{e} ottenibile.
+\renewcommand{\Risposta}{
+La scacchiera di sinistra e quella centrale non sono ottenibili, quella di destra è ottenibile.
 }
 
 \renewcommand{\Aiutino}{
-Procedere per tentativi per familiarizzare con il gioco e scoprire 
-invarianti.
+Procedere per tentativi per familiarizzare con il gioco e scoprire invarianti.
 \begin{itemize}
-	\item  Per la scacchiera di sinistra: quante caselle colorate ci 
-	devono essere in ogni riga ed ogni colonna dopo ogni mossa?
+	\item  Per la scacchiera di sinistra: quante caselle colorate ci devono essere in ogni riga ed ogni colonna dopo ogni mossa?
 
-	\item  Per la scacchiera centrale: quanti tipi diversi di riga o di 
-	colonna possono/devono essere presenti contemporaneamente sulla scacchiera 
-	al termine di ogni mossa?
+	\item  Per la scacchiera centrale: quanti tipi diversi di riga o di colonna possono/devono essere presenti contemporaneamente sulla scacchiera al termine di ogni mossa?
 
 	\item  Provare, provare, provare.
 \end{itemize}
@@ -126,39 +118,22 @@ invarianti.
 \renewcommand{\SoluzioneUfficiale}{
 Consideriamo i seguenti due invarianti del problema.
 \begin{itemize}
-	\item  Primo invariante: dopo qualunque successione di mosse, in ogni 
-	riga ci sono sempre 4 caselle bianche e 4 caselle colorate (lo stesso 
-	vale ovviamente per le colonne). Se infatti si fa uno scambio di 
-	righe, queste rimangono le stesse del passo precedente, mentre 
-	quando si fa uno scambio di colonne, quella che pu\`{o} cambiare 
-	\`{e} la disposizione delle caselle colorate all'interno di ogni 
-	riga, ma non il loro numero.
-	
-	Questo invariante basta per escludere che si possa ottenere la 
-	scacchiera di sinistra, nella quale sono presenti righe con 3 o 5 
-	caselle colorate.
+	\item  Primo invariante: dopo qualunque successione di mosse, in ogni riga ci sono sempre 4 caselle bianche e 4 caselle colorate (lo stesso vale ovviamente per le colonne). Se infatti si fa uno scambio di righe, queste rimangono le stesse del passo precedente, mentre quando si fa uno scambio di colonne, quella che può cambiare è la disposizione delle caselle colorate all'interno di ogni riga, ma non il loro numero.
 
-	\item  Secondo invariante: dopo qualunque successione di mosse, 
-	sulla scacchiera le righe sono uguali a 4 a 4 (stesso discorso per 
-	le colonne). Se infatti si fa uno scambio di righe, queste rimangono 
-	le stesse del passo precedente, se invece si fa uno scambio di 
-	colonne, le 4 righe che erano uguali prima dello spostamento 
-	cambieranno allo stesso modo, rimanendo dunque uguali al termine 
-	della mossa.
-	
-	Questo basta per escludere che si possa ottenere la scacchiera 
-	centrale, nella quale le righe sono addirittura tutte diverse.
+	Questo invariante basta per escludere che si possa ottenere la scacchiera di sinistra, nella quale sono presenti righe con 3 o 5 caselle colorate.
+
+	\item  Secondo invariante: dopo qualunque successione di mosse, sulla scacchiera le righe sono uguali a 4 a 4 (stesso discorso per le colonne). Se infatti si fa uno scambio di righe, queste rimangono le stesse del passo precedente, se invece si fa uno scambio di colonne, le 4 righe che erano uguali prima dello spostamento cambieranno allo stesso modo, rimanendo dunque uguali al termine della mossa.
+
+	Questo basta per escludere che si possa ottenere la scacchiera centrale, nella quale le righe sono addirittura tutte diverse.
 \end{itemize}
 
-La scacchiera di destra si pu\`{o} invece ottenere, ad esempio con il
-procedimento descritto nella seguente figura (vengono eseguiti 2
-scambi di colonne e 2 scambi di righe).
+La scacchiera di destra si può invece ottenere, ad esempio con il procedimento descritto nella seguente figura (vengono eseguiti 2 scambi di colonne e 2 scambi di righe).
 \begin{center}
 	\hfill
 	\psset{unit=5mm}
 	\newrgbcolor{scacchiera}{0.4 1 0.6}
 	\pspicture(0,-0.8)(8,8)
-	
+
 	\multips(0,0)(2,0){4}{\pspolygon*[linecolor=scacchiera](0,0)(1,0)(1,1)(0,1)(0,0)}
 	\multips(1,1)(2,0){4}{\pspolygon*[linecolor=scacchiera](0,0)(1,0)(1,1)(0,1)(0,0)}
 	\multips(0,2)(2,0){4}{\pspolygon*[linecolor=scacchiera](0,0)(1,0)(1,1)(0,1)(0,0)}
@@ -167,44 +142,44 @@ scambi di colonne e 2 scambi di righe).
 	\multips(1,5)(2,0){4}{\pspolygon*[linecolor=scacchiera](0,0)(1,0)(1,1)(0,1)(0,0)}
 	\multips(0,6)(2,0){4}{\pspolygon*[linecolor=scacchiera](0,0)(1,0)(1,1)(0,1)(0,0)}
 	\multips(1,7)(2,0){4}{\pspolygon*[linecolor=scacchiera](0,0)(1,0)(1,1)(0,1)(0,0)}
-	
+
 	\multido{\n=0+1}{9}{
 	\psline{-}(\n,0)(\n,8)
 	\psline{-}(0,\n)(8,\n)
 	\psarc[linewidth=0.6\pslinewidth]{<->}(2,0){0.7}{200}{340}
 	\psarc[linewidth=0.6\pslinewidth]{<->}(6,2){2.7}{235}{305}
 	}
-	
+
 	\endpspicture
 	\hfill
 	\pspicture(0,-0.8)(9,8)
-	
+
 	\multips(0,0)(0,2){4}{\pspolygon*[linecolor=scacchiera](0,0)(2,0)(2,1)(0,1)(0,0)}
 	\multips(6,0)(0,2){4}{\pspolygon*[linecolor=scacchiera](0,0)(2,0)(2,1)(0,1)(0,0)}
 	\multips(2,1)(0,2){4}{\pspolygon*[linecolor=scacchiera](0,0)(4,0)(4,1)(0,1)(0,0)}
-	
+
 	\multido{\n=0+1}{9}{
 	\psline{-}(\n,0)(\n,8)
 	\psline{-}(0,\n)(8,\n)
 	\psarc[linewidth=0.6\pslinewidth]{<->}(8,2){0.7}{-70}{70}
 	\psarc[linewidth=0.6\pslinewidth]{<->}(6,6){2.7}{-35}{35}
 	}
-	
+
 	\endpspicture
 	\hfill
 	\pspicture(0,-0.8)(8,8)
-	
+
 	\pspolygon*[linecolor=scacchiera](0,0)(2,0)(2,2)(0,2)(0,0)
 	\pspolygon*[linecolor=scacchiera](0,6)(2,6)(2,8)(0,8)(0,6)
 	\pspolygon*[linecolor=scacchiera](6,0)(8,0)(8,2)(6,2)(6,0)
 	\pspolygon*[linecolor=scacchiera](6,6)(8,6)(8,8)(6,8)(6,6)
 	\pspolygon*[linecolor=scacchiera](2,2)(6,2)(6,6)(2,6)(2,2)
-	
+
 	\multido{\n=0+1}{9}{
 	\psline{-}(\n,0)(\n,8)
 	\psline{-}(0,\n)(8,\n)
 	}
-	
+
 	\endpspicture
 	\hfill\mbox{}
 \end{center}
@@ -214,26 +189,15 @@ scambi di colonne e 2 scambi di righe).
 }
 
 \renewcommand{\Osservazioni}{\TitoloOss{1}
-Il primo invariante non bastava per escludere la scacchiera centrale,
-nella quale tutte le righe e tutte le colonne contengono 4 caselle
-colorate.
+Il primo invariante non bastava per escludere la scacchiera centrale, nella quale tutte le righe e tutte le colonne contengono 4 caselle colorate.
 
-Il secondo invariante, applicato alle colonne, bastava invece anche 
-per escludere la casella di sinistra, nella quale abbiamo 5 colonne di 
-un tipo e 3 colonne di un altro tipo.
+Il secondo invariante, applicato alle colonne, bastava invece anche per escludere la casella di sinistra, nella quale abbiamo 5 colonne di un tipo e 3 colonne di un altro tipo.
 
 \TitoloOss{2} Nel dimostrare che quelli che abbiamo introdotto sono
-effettivamente invarianti, abbiamo usato il \emph{principio di
-induzione} senza dirlo esplicitamente.  Abbiamo infatti mostrato che
-una certa propriet\`{a}, valida nella configurazione iniziale, non
-viene alterata dalle mosse possibili, e da questo \`{e} facile dedurre
-(formalmente andrebbe dimostrato per induzione sul numero delle mosse
-eseguite) che la propriet\`{a} resta valida in \emph{tutte} le
-configurazioni successive.
+effettivamente invarianti, abbiamo usato il \emph{principio di induzione} senza dirlo esplicitamente.  Abbiamo infatti mostrato che una certa proprietà, valida nella configurazione iniziale, non viene alterata dalle mosse possibili, e da questo è facile dedurre (formalmente andrebbe dimostrato per induzione sul numero delle mosse eseguite) che la proprietà resta valida in \emph{tutte} le configurazioni successive.
 
 \TitoloOss{3} Ci sono ovviamente molti altri modi, diversi da quello
-mostrato, per ottenere la scacchiera di destra.  Non \`{e} comunque
-difficile dimostrare che sono necessari almeno 2 scambi di riga ed
+mostrato, per ottenere la scacchiera di destra.  Non è comunque difficile dimostrare che sono necessari almeno 2 scambi di riga ed
 almeno 2 scambi di colonna.  }
 
 \renewcommand{\Commenti}{

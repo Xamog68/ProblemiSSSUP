@@ -5,28 +5,14 @@
 \renewcommand{\Testo}{Ad un torneo di tennis ad eliminazione diretta
 partecipano 16 giocatori.  Il tabellone viene sorteggiato.
 	
-Si suppone che fra i giocatori esista una graduatoria di bravura nota
-a priori, che viene sempre rispettata, nel senso che in ogni incontro
-del torneo il giocatore migliore batte sempre quello peggiore (e non
-esistono giocatori della stessa bravura).
+Si suppone che fra i giocatori esista una graduatoria di bravura nota a priori, che viene sempre rispettata, nel senso che in ogni incontro del torneo il giocatore migliore batte sempre quello peggiore (e non esistono giocatori della stessa bravura).
 	\begin{enumerate}
-		\item  Determinare la probabilit\`{a} che tutti i 4 migliori 
-		giocatori accedano alle semifinali.
+		\item  Determinare la probabilità che tutti i 4 migliori giocatori accedano alle semifinali.
 	
-		\item  Determinare la probabilit\`{a} che il giocatore sesto per 
-		bravura acceda alle semifinali.
+		\item  Determinare la probabilità che il giocatore sesto per bravura acceda alle semifinali.
 	\end{enumerate}
 	
-{\small Nota.  Il tabellone viene formato nel seguente modo: i nomi
-dei 16 giocatori vengono tirati a sorte, senza tener conto della
-bravura, e scritti di fila: a questo punto il primo sorteggiato sfida
-il secondo sorteggiato, il terzo sfida il quarto e cos\`{i} via.  I
-giocatori che hanno vinto questi primi 8 incontri si sfidano a loro
-volta nei quarti di finale, nel senso che il giocatore che ha vinto il
-primo incontro sfida il vincente del secondo incontro, e cos\`{i} via.
-I 4 giocatori che vincono i quarti di finale si incontrano nelle
-semifinali, sempre con lo stesso metodo (i vincitori dei primi due
-quarti vanno alla prima semifinale).  Infine i vincitori delle
+{\small Nota.  Il tabellone viene formato nel seguente modo: i nomi dei 16 giocatori vengono tirati a sorte, senza tener conto della bravura, e scritti di fila: a questo punto il primo sorteggiato sfida il secondo sorteggiato, il terzo sfida il quarto e così via.  I giocatori che hanno vinto questi primi 8 incontri si sfidano a loro volta nei quarti di finale, nel senso che il giocatore che ha vinto il primo incontro sfida il vincente del secondo incontro, e così via. I 4 giocatori che vincono i quarti di finale si incontrano nelle semifinali, sempre con lo stesso metodo (i vincitori dei primi due quarti vanno alla prima semifinale).  Infine i vincitori delle
 semifinali disputano la finale.}}
 
 \renewcommand{\Risposta}{\begin{enumerate}
@@ -36,27 +22,17 @@ semifinali disputano la finale.}}
 	\end{enumerate}}
 
 \renewcommand{\Aiutino}{Disegniamo il tabellone nel modo usuale, con i
-sedici giocatori uno sotto l'altro in modo che i primi 4 producono il
-primo semifinalista, quelli dal quinto all'ottavo il secondo
-semifinalista, e cos\`{\i} via.
+sedici giocatori uno sotto l'altro in modo che i primi 4 producono il primo semifinalista, quelli dal quinto all'ottavo il secondo semifinalista, e cos\`{\i} via.
 
 \begin{enumerate}
 	\renewcommand{\labelenumi}{(\alph{enumi})} 
-	\item In questo caso i
-	4 migliori devono trovarsi in 4 quartine diverse.  Una volta
-	piazzato il primo, quanti posti abbiamo a disposizione per i
-	secondo?  Se va bene, quanti posti abbiamo per il terzo?  E per il
-	quarto?
+	\item In questo caso i 4 migliori devono trovarsi in 4 quartine diverse.  Una volta piazzato il primo, quanti posti abbiamo a disposizione per i secondo?  Se va bene, quanti posti abbiamo per il terzo?  E per il quarto?
 
-	\item Se il sesto non arriva in semifinale, vuol dire che nella
-	sua quartina non c'\`{e} nessuno dei primi 5.  Scegliamo quindi il
-	secondo giocatore da mettere nella quartina del sesto: in quanti
-	modi possiamo farlo?  E il terzo?  E il quarto?
+	\item Se il sesto non arriva in semifinale, vuol dire che nella sua quartina non c'è nessuno dei primi 5.  Scegliamo quindi il secondo giocatore da mettere nella quartina del sesto: in quanti modi possiamo farlo?  E il terzo?  E il quarto?
 \end{enumerate}}
 
 \renewcommand{\SoluzioneUfficiale}{\TitoloSoluzione Disegnando il 
-tabellone nel modo usuale, i giocatori risultano suddivisi in 4 
-quartine, ciascuna delle quali produce un semifinalista.
+tabellone nel modo usuale, i giocatori risultano suddivisi in 4 quartine, ciascuna delle quali produce un semifinalista.
 \begin{center}
 	\psset{unit=1.5ex}
 	\pspicture(0,0)(20,33)
@@ -107,64 +83,37 @@ quartine, ciascuna delle quali produce un semifinalista.
 \end{center}
 
 \DomandaA Se i primi 4 per bravura accedono tutti alle semifinali, 
-vuol dire che sono stati sorteggiati uno per quartina. Fissata la 
-posizione del primo per bravura, abbiamo quindi 12 posizioni buone per il 
-secondo in bravura sulle 15 disponibili. Fissato anche il secondo, 
-rimangono 8 posizioni buone su 14 per il terzo in bravura ed infine 4 
-posizioni buone su 13 per il quarto in bravura.
+vuol dire che sono stati sorteggiati uno per quartina. Fissata la posizione del primo per bravura, abbiamo quindi 12 posizioni buone per il secondo in bravura sulle 15 disponibili. Fissato anche il secondo, rimangono 8 posizioni buone su 14 per il terzo in bravura ed infine 4 posizioni buone su 13 per il quarto in bravura.
 
-Ne segue che la probabilit\`{a} richiesta \`{e}
+Ne segue che la probabilità richiesta è
 $$\frac{12}{15}\cdot\frac{8}{14}\cdot\frac{4}{13}=\frac{64}{455},$$
-cio\`{e} circa del 14\%.
+cioè circa del 14\%.
 \DomandaB
-Se il sesto per bravura arriva in semifinale, vuol dire che nella sua 
-quartina non c'\`{e} nessuno dei primi 5. Possiamo dunque scegliere 
-in 10 modi su 15 il secondo componente della sua quartina, poi in 9 modi 
-su 14 il terzo, ed infine in 8 modi su 13 il quarto.
+Se il sesto per bravura arriva in semifinale, vuol dire che nella sua quartina non c'è nessuno dei primi 5. Possiamo dunque scegliere in 10 modi su 15 il secondo componente della sua quartina, poi in 9 modi su 14 il terzo, ed infine in 8 modi su 13 il quarto.
 
-La probabilit\`{a} richiesta \`{e} pertanto
+La probabilità richiesta è pertanto
 $$\frac{10}{15}\cdot\frac{9}{14}\cdot\frac{8}{13}=\frac{24}{91},$$
-cio\`{e} circa del 26\%.}
+cioè circa del 26\%.}
 
 \renewcommand{\SoluzioniAlternative}{\TitoloSoluzioneAlternativaA In 
-entrambi i casi possiamo calcolare la probabilit\`{a} richiesta come 
-rapporto tra casi favorevoli e casi possibili.
+entrambi i casi possiamo calcolare la probabilità richiesta come rapporto tra casi favorevoli e casi possibili.
 
-Per il punto (a), una possibilit\`{a} \`{e} di considerare le 
-posizioni occupate nel tabellone dai 4 pi\`{u} bravi. I casi 
-possibili, ovviamente equiprobabili, sono
+Per il punto (a), una possibilità è di considerare le posizioni occupate nel tabellone dai 4 più bravi. I casi possibili, ovviamente equiprobabili, sono
 $$\binom{16}{4}=1820,$$
-e cio\`{e} tanti quanti i modi di scegliere 4 oggetti su 16. I casi 
-favorevoli sono quelli in cui le 4 posizioni si trovano in quartine 
-diverse, e sono quindi $4^{4}=256$, in quanto si tratta di scegliere 
-una casella dalla prima quartina, una dalla seconda, una dalla terza 
-ed una dalla quarta. Pertanto la probabilit\`{a} richiesta nel punto 
-(a) \`{e}
+e cioè tanti quanti i modi di scegliere 4 oggetti su 16. I casi favorevoli sono quelli in cui le 4 posizioni si trovano in quartine diverse, e sono quindi $4^{4}=256$, in quanto si tratta di scegliere una casella dalla prima quartina, una dalla seconda, una dalla terza ed una dalla quarta. Pertanto la probabilità richiesta nel punto (a) è
 $$\frac{256}{1820}=\frac{64}{455}.$$
 
-Nel punto (b) possiamo considerare fissata la posizione del sesto in 
-bravura e considerare le posizioni occupate dai 5 pi\`{u} bravi. I 
-casi possibili, ovviamente equiprobabili, sono i modi di scegliere 5 
-oggetti su 15, mentre quelli favorevoli sono i modi di scegliere 5 
-oggetti su 12 (tanti sono i posti nelle 3 quartine che non contengono 
-il sesto). Pertanto la probabilit\`{a} richiesta nel punto 
-(b) \`{e}
+Nel punto (b) possiamo considerare fissata la posizione del sesto in bravura e considerare le posizioni occupate dai 5 più bravi. I casi possibili, ovviamente equiprobabili, sono i modi di scegliere 5 oggetti su 15, mentre quelli favorevoli sono i modi di scegliere 5 oggetti su 12 (tanti sono i posti nelle 3 quartine che non contengono il sesto). Pertanto la probabilità richiesta nel punto (b) è
 $$\frac{\displaystyle{\binom{12}{5}}}{\displaystyle{\binom{15}{5}}}=
 \frac{12\cdot 11\cdot 10\cdot 9\cdot 8}{5!}\cdot
 \frac{5!}{15\cdot 14\cdot 13\cdot 12\cdot 11}=\frac{24}{91}.$$
 
-In alternativa, sempre per il punto (b), possiamo considerare come
-casi possibili i modi di scegliere i 3 ``compagni di quartina'' del
-sesto in bravura (che sono i modi di scegliere 3 giocatori su 15) e
-come casi favorevoli i modi di scegliere i 3 giocatori tra i 10 che
-per bravura occupano i posti dal settimo in gi\`{u}.  In questo modo
-la probabilit\`{a} si calcola come
+In alternativa, sempre per il punto (b), possiamo considerare come casi possibili i modi di scegliere i 3 ``compagni di quartina'' del sesto in bravura (che sono i modi di scegliere 3 giocatori su 15) e come casi favorevoli i modi di scegliere i 3 giocatori tra i 10 che per bravura occupano i posti dal settimo in giù.  In questo modo la probabilità si calcola come
 $$\frac{\displaystyle{\binom{10}{3}}}{\displaystyle{\binom{15}{3}}}=
 \frac{10\cdot 9\cdot 8}{3!}\cdot
 \frac{3!}{15\cdot 14\cdot 13}=\frac{24}{91}.$$
 
-Si noti che quest'ultimo \`{e} semplicemente un modo alternativo di
-ottenere lo stesso calcolo fatto nella prima soluzione (tolti i $3!$,
+Si noti che quest'ultimo è semplicemente un modo alternativo di ottenere lo stesso calcolo fatto nella prima soluzione (tolti i $3!$,
 il numeratore ed il denominatore sono gli stessi).}
 
 \renewcommand{\Osservazioni}{

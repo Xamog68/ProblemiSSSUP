@@ -3,52 +3,39 @@
 \renewcommand{\NumeroProblema}{2}
 
 \renewcommand{\Testo}{
-Si vuole circoscrivere ad un cerchio di raggio
-$r$ un triangolo isoscele di perimetro $kr$.  Determinare per quali
-valori del parametro $k$ il problema \`{e} risolubile.
+Si vuole circoscrivere ad un cerchio di raggio $r$ un triangolo isoscele di perimetro $kr$.  Determinare per quali valori del parametro $k$ il problema è risolubile.
 }
 
 \renewcommand{\Risposta}{$k\geq 6\sqrt{3}$}
 
 \renewcommand{\Aiutino}{Occorre dimostrare due punti:
 \begin{itemize}
-	\item  che il perimetro minimo \`{e} quello del triangolo equilatero;
+	\item  che il perimetro minimo è quello del triangolo equilatero;
 
-	\item che ogni perimetro superiore \`{e} raggiunto da qualche 
-	triangolo isoscele.
+	\item che ogni perimetro superiore è raggiunto da qualche triangolo isoscele.
 \end{itemize}
 
-La prima affermazione si riduce alla disuguaglianza $p\geq 
-3\sqrt{3}\,r$ ($p$ indica il semiperimetro) e pu\`{o} essere dimostrata 
-ricorrendo alla formula $r=S/p$, dove $S$ indica l'area, e applicando 
-successivamente la formula di Erone per l'area e la disuguaglianza 
-tra media geometrica e media aritmetica. Per la seconda affermazione 
-basta mostrare che esistono triangoli isosceli con perimetro grande a 
-piacere e concludere con un argomento di continuit\`{a}.}
+La prima affermazione si riduce alla disuguaglianza $p\geq
+3\sqrt{3}\,r$ ($p$ indica il semiperimetro) e può essere dimostrata
+ricorrendo alla formula $r=S/p$, dove $S$ indica l'area, e applicando successivamente la formula di Erone per l'area e la disuguaglianza tra media geometrica e media aritmetica. Per la seconda affermazione basta mostrare che esistono triangoli isosceli con perimetro grande a
+piacere e concludere con un argomento di continuità.}
 
 \renewcommand{\SoluzioneUfficiale}{\TitoloSoluzione
-Siano $a$, $b$, $c$ le lunghezze dei lati di un triangolo, sia 
-$P=2p=a+b+c$ il suo perimetro, e sia $r$ il raggio della circonferenza 
-inscritta. Dimostreremo che 
+Siano $a$, $b$, $c$ le lunghezze dei lati di un triangolo, sia $P=2p=a+b+c$ il suo perimetro, e sia $r$ il raggio della circonferenza inscritta. Dimostreremo che
 \begin{equation}
 	P\geq 6\sqrt{3}\,r
 	\label{eq:disug-Pr}
 \end{equation}
-con uguaglianza se e solo se il triangolo \`{e} equilatero, e che, per 
-ogni coppia di numeri reali positivi $P$ ed $r$ soddisfacenti tale 
-disuguaglianza, esiste un triangolo isoscele con perimetro $P$ e 
-circonferenza inscritta di raggio $r$.
+con uguaglianza se e solo se il triangolo è equilatero, e che, per ogni coppia di numeri reali positivi $P$ ed $r$ soddisfacenti tale disuguaglianza, esiste un triangolo isoscele con perimetro $P$ e circonferenza inscritta di raggio $r$.
 
-Questo baster\`{a} per concludere che il triangolo richiesto esiste se 
-e solo se $k\geq 6\sqrt{3}$.
+Questo basterà per concludere che il triangolo richiesto esiste se e solo se $k\geq 6\sqrt{3}$.
 
 Per dimostrare la disuguaglianza (\ref{eq:disug-Pr}), ricordiamo che
 \begin{equation}
 	r=\frac{S}{p},
 	\label{eq:r}
 \end{equation}
-dove $S$ indica l'area del triangolo, la quale per la formula di Erone 
-\`{e} data da
+dove $S$ indica l'area del triangolo, la quale per la formula di Erone è data da
 \begin{equation}
 	S=\sqrt{p(p-a)(p-b)(p-c)}.
 	\label{eq:Erone}
@@ -61,11 +48,9 @@ Dalla (\ref{eq:r}) e dalla (\ref{eq:Erone}) abbiamo pertanto che
 	\label{eq:rsup}
 \end{equation}
 
-Ricordiamo ora la disuguaglianza tra media geometrica e media 
-aritmetica
+Ricordiamo ora la disuguaglianza tra media geometrica e media aritmetica
 $$\sqrt[3]{xyz}\leq\frac{x+y+z}{3},$$
-valida per ogni terna di numeri reali positivi $x$, $y$, $z$, con 
-uguaglianza se e solo se $x=y=z$. Applicandola con
+valida per ogni terna di numeri reali positivi $x$, $y$, $z$, con uguaglianza se e solo se $x=y=z$. Applicandola con
 $$x=1-\frac{a}{p},
 \hspace{3em}
 y=1-\frac{b}{p},
@@ -73,26 +58,21 @@ y=1-\frac{b}{p},
 z=1-\frac{c}{p},$$
 ed osservando che
 $$x+y+z=3-\frac{a+b+c}{p}=3-\frac{2p}{p}=1,$$
-otteniamo che 
+otteniamo che
 $$\left(1-\frac{a}{p}\right)\left(1-\frac{b}{p}\right)
 \left(1-\frac{c}{p}\right)\leq\frac{1}{27}.$$
-	
+
 Inserendo tale stima nella (\ref{eq:rsup}) troviamo infine che
 $$\frac{r}{2p}\leq\frac{1}{2}\sqrt{\frac{1}{27}}=\frac{1}{6\sqrt{3}},$$
-da cui la (\ref{eq:disug-Pr}). Inoltre si ha uguaglianza se e solo 
-se $x=y=z$, cio\`{e} se e solo se $a=b=c$, cio\`{e} se e solo se il 
-triangolo \`{e} equilatero.
+da cui la (\ref{eq:disug-Pr}). Inoltre si ha uguaglianza se e solo
+se $x=y=z$, cioè se e solo se $a=b=c$, cioè se e solo se il triangolo è equilatero.
 
-Viceversa, consideriamo ora un triangolo equilatero circoscritto ad un 
-cerchio di raggio $r$. Il perimetro di tale triangolo \`{e} 
-$6\sqrt{3}\,r$. Allontanando un vertice dal cerchio, \`{e} chiaro 
-che possiamo costruire triangoli isosceli con perimetro 
-arbitrariamente grande, come nella seguente figura.
+Viceversa, consideriamo ora un triangolo equilatero circoscritto ad un cerchio di raggio $r$. Il perimetro di tale triangolo è $6\sqrt{3}\,r$. Allontanando un vertice dal cerchio, è chiaro che possiamo costruire triangoli isosceli con perimetro arbitrariamente grande, come nella seguente figura.
 
 \begin{center}
 	\psset{unit=10mm}
 	\pspicture(-1,-1)(1,5)
-	
+
 	\pstGeonode[PointSymbol=none](0,0){0}(0,1){H}
 	\pstCircleOA[linecolor=green]{O}{H}
 	\pstGeonode[PointSymbol={*,none},PointName=none](0,2){C}(-1,-1){A'}(1,-1){B'}
@@ -103,12 +83,12 @@ arbitrariamente grande, come nella seguente figura.
 	\pstLineAB{A}{B}
 	\pstLineAB{A}{C}
 	\pstLineAB{B}{C}
-	
+
 	\endpspicture
 	\hspace{6em}
 	\psset{unit=10mm}
 	\pspicture(-1,-1)(1,5)
-	
+
 	\pstGeonode[PointSymbol=none](0,0){0}(0,1){H}
 	\pstCircleOA[linecolor=green]{O}{H}
 	\pstGeonode[PointSymbol={*,none},PointName=none](0,3.5){C}(-1,-1){A'}(1,-1){B'}
@@ -119,12 +99,12 @@ arbitrariamente grande, come nella seguente figura.
 	\pstLineAB{A}{B}
 	\pstLineAB{A}{C}
 	\pstLineAB{B}{C}
-	
+
 	\endpspicture
 	\hspace{6em}
 	\psset{unit=10mm}
 	\pspicture(-1,-1)(1,5)
-	
+
 	\pstGeonode[PointSymbol=none](0,0){0}(0,1){H}
 	\pstCircleOA[linecolor=green]{O}{H}
 	\pstGeonode[PointSymbol={*,none},PointName=none](0,5){C}(-1,-1){A'}(1,-1){B'}
@@ -135,14 +115,11 @@ arbitrariamente grande, come nella seguente figura.
 	\pstLineAB{A}{B}
 	\pstLineAB{A}{C}
 	\pstLineAB{B}{C}
-	
+
 	\endpspicture
 \end{center}
 
-Poich\'{e} il perimetro dipende in modo continuo dalla distanza dal
-centro del vertice che stiamo allontanando, con un argomento di
-continuit\`{a} si conclude quindi che ogni valore maggiore od uguale a
-$6\sqrt{3}\,r$ \`{e} il perimetro di un triangolo isoscele
+Poiché il perimetro dipende in modo continuo dalla distanza dal centro del vertice che stiamo allontanando, con un argomento di continuità si conclude quindi che ogni valore maggiore od uguale a $6\sqrt{3}\,r$ è il perimetro di un triangolo isoscele
 circoscritto al cerchio dato.  }
 
 \renewcommand{\SoluzioniAlternative}{\TitoloSoluzioneAlternativaA
@@ -150,7 +127,7 @@ Siano $\alpha$, $\beta$, $x$, $y$ come nella seguente figura.
 \begin{center}
 	\psset{unit=10mm}
 	\pspicture(0,-0.5)(4,7)
-	
+
 	\pstTriangle[PointName=none](0,0){A}(4,0){B}(2,7){C}
 	\pstRotation[AngleCoef=0.5,RotAngle=\pstAngleAOB{B}{A}{C},PointSymbol=none]
 	{A}{B}[A']
@@ -169,14 +146,14 @@ Siano $\alpha$, $\beta$, $x$, $y$ come nella seguente figura.
 	\pstLineAB{H}{I}
 	\pstLineAB{K}{I}
 	\pstLineAB{L}{I}
-	
+
 	\pstMarkAngle[MarkAngleRadius=0,LabelSep=0.7]{B}{A}{I}{$\alpha$}
 	\pstMarkAngle[MarkAngleRadius=0,LabelSep=0.7]{I}{A}{C}{$\alpha$}
 	\pstMarkAngle[MarkAngleRadius=0,LabelSep=0.7]{I}{B}{A}{$\alpha$}
 	\pstMarkAngle[MarkAngleRadius=0,LabelSep=0.7]{C}{B}{I}{$\alpha$}
 	\pstMarkAngle[MarkAngleRadius=0,LabelSep=1.3]{A}{C}{I}{$\beta$}
 	\pstMarkAngle[MarkAngleRadius=0,LabelSep=1.3]{I}{C}{B}{$\beta$}
-	
+
 	\rput[t](1,-0.2){$x$}
 	\rput[t](3,-0.2){$x$}
 	\rput(0,1.1){$x$}
@@ -186,7 +163,7 @@ Siano $\alpha$, $\beta$, $x$, $y$ come nella seguente figura.
 	\rput(1.3,2){$r$}
 	\rput(2.7,2){$r$}
 	\rput[l](2.15,0.8){$r$}
-	
+
 	\endpspicture
 \end{center}
 
@@ -195,9 +172,7 @@ $$x=\frac{r}{\tan\alpha},
 \hspace{4em}
 y=\frac{r}{\tan\beta}.$$
 
-Poich\'{e} $2\alpha+\beta=\pi/2$, usando l'opportuna formula per gli 
-archi associati e la formula di duplicazione 
-della tangente possiamo riscrivere $y$ nella forma
+Poiché $2\alpha+\beta=\pi/2$, usando l'opportuna formula per gli archi associati e la formula di duplicazione della tangente possiamo riscrivere $y$ nella forma
 $$y=\frac{r}{\tan\beta}=
 \frac{r}{\displaystyle{\tan\left(\frac{\pi}{2}-2\alpha\right)}}=
 r\tan(2\alpha)=2r\cdot\frac{\tan\alpha}{1-\tan^{2}\alpha}.$$
@@ -206,26 +181,14 @@ Indicato con $P$ il perimetro del triangolo, abbiamo pertanto che
 $$P=4x+2y=\frac{4r}{\tan\alpha}+4r\frac{\tan\alpha}{1-\tan^{2}\alpha}=
 \frac{4r}{\tan\alpha(1-\tan^{2}\alpha)}.$$
 
-Per determinare i possibili valori del perimetro ci siamo quindi 
-ricondotti a determinare i valori assunti dalla funzione 
-$\tan\alpha(1-\tan^{2}\alpha)$ quando $\alpha$ varia tra $0$ e 
-$\pi/4$ (infatti l'angolo alla base del triangolo isoscele, 
-$2\alpha$, deve essere acuto). Posto $z=\tan\alpha$, ci riconduciamo a 
-sua volta a determinare i valori assunti dalla funzione 
-$f(z)=z(1-z^{2})$ al variare di $z$ in $(0,1)$ (quando $\alpha$ varia 
-in $(0,\pi/4)$, $\tan\alpha$ assume tutti e soli i valori in $(0,1)$). 
+Per determinare i possibili valori del perimetro ci siamo quindi ricondotti a determinare i valori assunti dalla funzione $\tan\alpha(1-\tan^{2}\alpha)$ quando $\alpha$ varia tra $0$ e $\pi/4$ (infatti l'angolo alla base del triangolo isoscele, $2\alpha$, deve essere acuto). Posto $z=\tan\alpha$, ci riconduciamo a sua volta a determinare i valori assunti dalla funzione $f(z)=z(1-z^{2})$ al variare di $z$ in $(0,1)$ (quando $\alpha$ varia in $(0,\pi/4)$, $\tan\alpha$ assume tutti e soli i valori in $(0,1)$).
 
-Per questo possiamo ricorrere al calcolo differenziale: dallo studio
-del segno di $f'(z)=1-3z^{2}$, ricaviamo che nell'intervallo
-considerato la funzione risulter\`{a} crescente in $[0,1/\sqrt{3}]$ e
-decrescente in $[1/\sqrt{3},1]$.  Poich\'{e} $f(0)=f(1)=0$ e
-$f(1/\sqrt{3})=2/3\sqrt{3}$, l'andamento della funzione sar\`{a} dato
-dal seguente grafico.
+Per questo possiamo ricorrere al calcolo differenziale: dallo studio del segno di $f'(z)=1-3z^{2}$, ricaviamo che nell'intervallo considerato la funzione risulterà crescente in $[0,1/\sqrt{3}]$ e decrescente in $[1/\sqrt{3},1]$.  Poiché $f(0)=f(1)=0$ e $f(1/\sqrt{3})=2/3\sqrt{3}$, l'andamento della funzione sarà dato dal seguente grafico.
 
 \begin{center}
 	\psset{unit=30mm}
 	\pspicture(-0.4,-0.4)(1.2,1)
-	
+
 	\psline[linewidth=0.7\pslinewidth]{->}(-0.2,0)(1.2,0)
 	\psline[linewidth=0.7\pslinewidth]{->}(0,-0.2)(0,1)
 	\psplot[linewidth=1.7\pslinewidth]{0}{1}{x x 3 exp sub}
@@ -237,37 +200,22 @@ dal seguente grafico.
 	\rput[t](!1 3 sqrt div 0.05 neg){$\displaystyle{\frac{1}{\sqrt{3}}}$}
 	\rput[t](1,-0.05){1}
 	\rput[tr](-0.05,-0.05){0}
-	
+
 	\endpspicture
 \end{center}
 
-Ne segue che $f(z)$ assume in $(0,1)$ tutti i valori maggiori di $0$ 
-e minori od uguali di $2/3\sqrt{3}$, di conseguenza anche 
-$\tan\alpha(1-\tan^{2}\alpha)$ assume gli stessi valori per 
-$\alpha\in(0,\pi/4)$ e passando al reciproco si ha che $P$ assume 
-tutti i valori maggiori od uguali di
+Ne segue che $f(z)$ assume in $(0,1)$ tutti i valori maggiori di $0$ e minori od uguali di $2/3\sqrt{3}$, di conseguenza anche $\tan\alpha(1-\tan^{2}\alpha)$ assume gli stessi valori per $\alpha\in(0,\pi/4)$ e passando al reciproco si ha che $P$ assume tutti i valori maggiori od uguali di
 $$4r\cdot \frac{3\sqrt{3}}{2}=6\sqrt{3}\,r,$$
-che \`{e} quanto volevamo dimostrare.}
+che è quanto volevamo dimostrare.}
 
 \renewcommand{\Osservazioni}{\TitoloOss{1} Nella seconda soluzione si
-poteva dimostrare che il massimo di $f(z)$ al variare di $z$ in
-$(0,1)$ si ha per $z=1/\sqrt{3}$ senza ricorrere al calcolo
-differenziale.  Intanto si poteva congetturare che il
-massimo si ha proprio per $z=1/\sqrt{3}$ con argomenti di tipo
-geometrico: infatti \`{e} plausibile aspettarsi il minimo del
-perimetro nel caso del triangolo equilatero ($\alpha=\pi/6$), dunque
-il massimo di $\tan\alpha(1-\tan^{2}\alpha)$ per $\alpha=\pi/6$, e
-quindi il massimo di $z(1-z^{2})$ per $z=\tan(\pi/6)=1/\sqrt{3}$.  A
-questo punto non resta che dimostrare che
+poteva dimostrare che il massimo di $f(z)$ al variare di $z$ in $(0,1)$ si ha per $z=1/\sqrt{3}$ senza ricorrere al calcolo differenziale.  Intanto si poteva congetturare che il massimo si ha proprio per $z=1/\sqrt{3}$ con argomenti di tipo geometrico: infatti è plausibile aspettarsi il minimo del perimetro nel caso del triangolo equilatero ($\alpha=\pi/6$), dunque il massimo di $\tan\alpha(1-\tan^{2}\alpha)$ per $\alpha=\pi/6$, e quindi il massimo di $z(1-z^{2})$ per $z=\tan(\pi/6)=1/\sqrt{3}$.  A questo punto non resta che dimostrare che
 $$z(1-z^{2})\leq f\left(\frac{1}{\sqrt{3}}\right)=\frac{2}{3\sqrt{3}}$$
-per ogni $z\in[0,1]$, e questo segue immediatamente se si osserva che, 
-con qualche passaggio algebrico, tale disequazione pu\`{o} essere 
-riscritta nella forma
+per ogni $z\in[0,1]$, e questo segue immediatamente se si osserva che, con qualche passaggio algebrico, tale disequazione può essere riscritta nella forma
 $$(\sqrt{3}\,x-1)^{2}(\sqrt{3}\,x+2)\geq 0.$$
 
 \TitoloOss{2}
-L'approccio trigonometrico della seconda soluzione pu\`{o} anche
-portare ad una dimostrazione alternativa della disuguaglianza
+L'approccio trigonometrico della seconda soluzione può anche portare ad una dimostrazione alternativa della disuguaglianza
 (\ref{eq:disug-Pr}) per un generico triangolo.  Infatti, indicati gli
 angoli con $2\alpha$, $2\beta$, $2\gamma$, si ha che
 \begin{equation}
@@ -276,10 +224,7 @@ angoli con $2\alpha$, $2\beta$, $2\gamma$, si ha che
 	\label{eq:Ptrig}
 \end{equation}
 
-Ora la funzione $\varphi(x)=(\tan x)^{-1}$ \`{e} convessa in 
-$(0,\pi/2)$, in quanto la sua derivata seconda 
-$\varphi"(x)=2(\tan x)^{-3}(1+\tan^{2}x)$ \`{e} positiva in detto 
-intervallo. Dalla disuguaglianza di Jensen segue pertanto che
+Ora la funzione $\varphi(x)=(\tan x)^{-1}$ è convessa in $(0,\pi/2)$, in quanto la sua derivata seconda $\varphi"(x)=2(\tan x)^{-3}(1+\tan^{2}x)$ è positiva in detto intervallo. Dalla disuguaglianza di Jensen segue pertanto che
 $$\frac{1}{3}\left(\frac{1}{\tan\alpha}+\frac{1}{\tan\beta}+
 \frac{1}{\tan\gamma}\right)\geq
 \frac{1}{\displaystyle{\tan\left(\frac{\alpha+\beta+\gamma}{3}\right)}}=

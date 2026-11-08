@@ -3,8 +3,7 @@
 \renewcommand{\NumeroProblema}{1}
 
 \renewcommand{\Testo}{
-Siano $x$ e $y$ numeri reali positivi tali che $x+y<\pi/2$.
-Dimostrare che 
+Siano $x$ e $y$ numeri reali positivi tali che $x+y<\pi/2$. Dimostrare che
 $$\sin (x+y) < \sin x + \sin y < \tan (x+y).$$}
 
 \renewcommand{\Risposta}{\ldots}
@@ -15,40 +14,30 @@ $$\sin (x+y) < \sin x + \sin y < \tan (x+y).$$}
 	della tangente, e sulle ovvie disuguaglianze $\cos x<1$ e $\sin x<\tan 
 	x$ (e analoghe per $y$, ovviamente nella zona in questione);
 
-	\item  uno geometrico, basato sull'interpretazione del seno e della 
-	tangente sulla circonferenza trigonometrica.
+	\item  uno geometrico, basato sull'interpretazione del seno e della tangente sulla circonferenza trigonometrica.
 \end{itemize}
 }
 
 \renewcommand{\SoluzioneUfficiale}{
 Dalla formula di addizione del seno abbiamo che
 $$\sin(x+y)=\sin x\cos y+\sin y\cos x<\sin x+\sin y,$$
-dove l'ultima maggiorazione segue dal fatto che i due seni sono
-positivi ed i due coseni sono minori di 1 (per le ipotesi fatte $x$ e
-$y$ appartengono all'intervallo $(0,\pi/2)$).  Questo dimostra la
-prima disuguaglianza richiesta.
+dove l'ultima maggiorazione segue dal fatto che i due seni sono positivi ed i due coseni sono minori di 1 (per le ipotesi fatte $x$ e $y$ appartengono all'intervallo $(0,\pi/2)$).  Questo dimostra la prima disuguaglianza richiesta.
 
 Dalla formula di addizione della tangente abbiamo invece che
 $$\tan(x+y)=\frac{\tan x+\tan y}{1-\tan x\tan y}>
 \frac{\tan x+\tan y}{1}>\sin x+\sin y,$$
-dove la prima minorazione segue dal fatto che $0<1-\tan x\tan y<1$
-(questo perch\`{e} nelle ipotesi date $\tan x$, $\tan y$ e $\tan(x+y)$
-sono quantit\`{a} positive), e la seconda segue dal fatto che le
-tangenti sono maggiori dei rispettivi seni (e qui si usa ancora una
-volta che $x$ e $y$ appartengono all'intervallo $(0,\pi/2)$).  Questo
+dove la prima minorazione segue dal fatto che $0<1-\tan x\tan y<1$ (questo perchè nelle ipotesi date $\tan x$, $\tan y$ e $\tan(x+y)$ sono quantità positive), e la seconda segue dal fatto che le tangenti sono maggiori dei rispettivi seni (e qui si usa ancora una volta che $x$ e $y$ appartengono all'intervallo $(0,\pi/2)$).  Questo
 dimostra la seconda disuguaglianza richiesta.  }
 
 \renewcommand{\SoluzioniAlternative}{\TitoloSoluzioneAlternativaA 
-Con riferimento alla Figura 1, sia $OA=1$, sia $x$ la misura 
-dell'arco $AP$ e $y$ la misura dell'arco $PQ$: allora
+Con riferimento alla Figura 1, sia $OA=1$, sia $x$ la misura dell'arco $AP$ e $y$ la misura dell'arco $PQ$: allora
 $$QL=\sin(x+y),
 \hspace{3em}
 QK=\sin y,
 \hspace{3em}
 NL=PH=\sin x.$$
 
-D'altra parte $QM<QK$ (in quanto, rispettivamente, cateto ed 
-ipotenusa nel triangolo rettangolo $QMK$) e quindi
+D'altra parte $QM<QK$ (in quanto, rispettivamente, cateto ed ipotenusa nel triangolo rettangolo $QMK$) e quindi
 $$\sin(x+y)=QL<QM+NL<QK+PH=\sin y+\sin x.$$
 
 Questo dimostra la prima disuguaglianza.
@@ -116,15 +105,13 @@ Questo dimostra la prima disuguaglianza.
 \endpspicture
 \hfill\mbox{}
 
-Nella Figura 2, in cui gli archi $AP$ e $PQ$ misurano ancora, 
-rispettivamente, $x$ e $y$, abbiamo invece che 
+Nella Figura 2, in cui gli archi $AP$ e $PQ$ misurano ancora, rispettivamente, $x$ e $y$, abbiamo invece che
 \begin{itemize}
 	\item  $PH<BA$ (per similitudine tra i triangoli $OPH$ e $OBA$);
 
 	\item  $QK<CD$ (per similitudine tra i triangoli $OQK$ e $OCD$);
 
-	\item $CD<CB$ (in quanto, rispettivamente, cateto ed ipotenusa nel
-	triangolo rettangolo $ODC$).
+	\item $CD<CB$ (in quanto, rispettivamente, cateto ed ipotenusa nel triangolo rettangolo $ODC$).
 \end{itemize}
 Ne segue che
 $$\sin x+\sin y=QK+PH<CD+BA<CB+BA=CA=\tan(x+y),$$

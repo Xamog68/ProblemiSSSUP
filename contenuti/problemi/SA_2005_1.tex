@@ -3,11 +3,7 @@
 \renewcommand{\NumeroProblema}{1}
 
 \renewcommand{\Testo}{\begin{minipage}[t]{12cm} Un piccolo Sudoku
-\`{e} una tabella $4\times 4$, a sua volta suddivisa in quattro
-piccole tabelle $2\times 2$: ciascuna delle 16 caselle della tabella
-contiene una cifra (scelta tra 1, 2, 3, 4), in modo che nessuna
-delle 4 righe, delle 4 colonne, e delle 4 tabelle $2\times2$ contenga
-pi\`{u} di una volta la stessa cifra.  La tabella qui accanto
+è una tabella $4\times 4$, a sua volta suddivisa in quattro piccole tabelle $2\times 2$: ciascuna delle 16 caselle della tabella contiene una cifra (scelta tra 1, 2, 3, 4), in modo che nessuna delle 4 righe, delle 4 colonne, e delle 4 tabelle $2\times2$ contenga più di una volta la stessa cifra.  La tabella qui accanto
 rappresenta un esempio di piccolo Sudoku.  \end{minipage}\hfill
 	\begin{minipage}[t]{3cm}
 		\mbox{}\vspace{-1ex}\\
@@ -16,12 +12,9 @@ rappresenta un esempio di piccolo Sudoku.  \end{minipage}\hfill
 	\end{minipage}
 	
 \begin{enumerate}
-	\item Supponiamo che una delle diagonali del piccolo Sudoku
-	contenga 4 cifre diverse.  Dimostrare che anche l'altra diagonale
-	contiene 4 cifre diverse.
+	\item Supponiamo che una delle diagonali del piccolo Sudoku contenga 4 cifre diverse.  Dimostrare che anche l'altra diagonale contiene 4 cifre diverse.
 	
-	\item Determinare quanti sono i piccoli Sudoku in cui anche le
-	diagonali contengono 4 cifre diverse.
+	\item Determinare quanti sono i piccoli Sudoku in cui anche le diagonali contengono 4 cifre diverse.
 	
 	\item  Determinare quanti sono i possibili piccoli Sudoku.
 \end{enumerate}}
@@ -36,37 +29,21 @@ rappresenta un esempio di piccolo Sudoku.  \end{minipage}\hfill
 
 \renewcommand{\Aiutino}{\begin{enumerate}
 	\renewcommand{\labelenumi}{(\alph{enumi})} 
-	\item Indichiamo con $A$, $B$, $C$, $D$ i 4 numeri sulla diagonale
-	NW-SE. Quale numero pu\`{o} stare al secondo posto della prima
-	riga?  Ci sono 2 possibilit\`{a}.  In ciascuno dei 2 casi, il
-	piccolo Sudoku si completa in maniera unica.  In entrambi i casi
-	tutti i numeri appaiono anche sull'altra diagonale.
+	\item Indichiamo con $A$, $B$, $C$, $D$ i 4 numeri sulla diagonale NW-SE. Quale numero può stare al secondo posto della prima riga?  Ci sono 2 possibilità.  In ciascuno dei 2 casi, il piccolo Sudoku si completa in maniera unica.  In entrambi i casi tutti i numeri appaiono anche sull'altra diagonale.
 
-	\item  Abbiamo appena visto che ci sono 2 casi, oltre alla 
-	possibilit\`{a} di permutare i simboli.
+	\item  Abbiamo appena visto che ci sono 2 casi, oltre alla possibilità di permutare i simboli.
 
-	\item  Indichiamo con $A$, $B$, $C$, $D$ i 4 numeri nel primo 
-	quadrato $2\times 2$. Scambiando eventualmente la terza e la quarta 
-	riga, e scambiando eventualmente la terza e la quarta colonna, 
-	possiamo assumere che nella terza casella della diagonale NW-SE ci 
-	sia una $A$. A questo punto nell'ultimo posto libero della diagonale 
-	ci possono essere $B$, $C$ o $D$, ed in ogni caso il piccolo Sudoku 
-	si completa in modo unico.
+	\item  Indichiamo con $A$, $B$, $C$, $D$ i 4 numeri nel primo quadrato $2\times 2$. Scambiando eventualmente la terza e la quarta riga, e scambiando eventualmente la terza e la quarta colonna, possiamo assumere che nella terza casella della diagonale NW-SE ci sia una $A$. A questo punto nell'ultimo posto libero della diagonale ci possono essere $B$, $C$ o $D$, ed in ogni caso il piccolo Sudoku si completa in modo unico.
 \end{enumerate}}
 
 \renewcommand{\SoluzioneUfficiale}{\TitoloSoluzione \DomandaA Per simmetria 
-possiamo supporre che 4 numeri distinti (che indicheremo con $A$, 
-$B$, $C$, $D$) stiano sulla diagonale NW-SE.
+possiamo supporre che 4 numeri distinti (che indicheremo con $A$, $B$, $C$, $D$) stiano sulla diagonale NW-SE.
 \begin{center}
 	\IniziaSudoku{A}{}{}{}{}{B}{}{}
 	\FinisciSudoku{}{}{C}{}{}{}{}{D}
 \end{center}
 
-Nel primo quadrato, a destra della $A$, pu\`{o} esserci una $C$ o 
-una $D$. In entrambi i casi, il Sudoku si completa facilmente in modo 
-unico, come indicato qui sotto (si noti che, come avremmo potuto 
-aspettarci, i due Sudoku ottenuti sono l'uno il simmetrico dell'altro 
-rispetto alla diagonale considerata).
+Nel primo quadrato, a destra della $A$, può esserci una $C$ o una $D$. In entrambi i casi, il Sudoku si completa facilmente in modo unico, come indicato qui sotto (si noti che, come avremmo potuto aspettarci, i due Sudoku ottenuti sono l'uno il simmetrico dell'altro rispetto alla diagonale considerata).
 \begin{center}
 	\hfill
 	\IniziaSudoku{A}{C}{D}{B}{D}{B}{A}{C}
@@ -77,13 +54,10 @@ rispetto alla diagonale considerata).
 	\hfill\mbox{}
 \end{center}
 
-Poich\'{e} in entrambi i casi anche la diagonale NE-SW contiene 
-tutti i simboli, la tesi \`{e} dimostrata.
+Poiché in entrambi i casi anche la diagonale NE-SW contiene tutti i simboli, la tesi è dimostrata.
 
 \DomandaB Ci sono $4!=24$ modi di disporre 4 numeri diversi sulla
-diagonale NW-SE. Fissati questi, dal punto precedente sappiamo che ci
-sono 2 modi di completare il Sudoku.  Pertanto i possibili Sudoku con
-4 numeri diversi sulle diagonali sono $24\cdot 2=48$.
+diagonale NW-SE. Fissati questi, dal punto precedente sappiamo che ci sono 2 modi di completare il Sudoku.  Pertanto i possibili Sudoku con 4 numeri diversi sulle diagonali sono $24\cdot 2=48$.
 
 \DomandaC Indichiamo con $A$, $B$, $C$, $D$ i numeri del primo
 quadrato $2\times 2$, come in figura.
@@ -92,16 +66,7 @@ quadrato $2\times 2$, come in figura.
 	\FinisciSudoku{}{}{}{}{}{}{}{}
 \end{center}
 
-Ci sono ora 4 possibili posizioni per la lettera $A$ all'interno del 
-quadrato $2\times 2$ in basso a destra. Tuttavia, per non dover 
-esaminare tutti e 4 i casi, possiamo eventualmente scambiare tra di 
-loro la terza e quarta colonna, ed eventualmente scambiare tra di 
-loro la terza e quarta riga, in modo che la $A$ venga a trovarsi in 
-alto a sinistra in tale quadrato. Si noti che gli scambi che abbiamo 
-eventualmente fatto mantengono la propriet\`{a} dei piccoli Sudoku, 
-per cui se partiamo da un piccolo Sudoku alla fine ci troviamo ancora 
-un piccolo Sudoku. Completando nei 3 modi possibili la diagonale, ci 
-siamo quindi ricondotti ad esaminare i seguenti 3 casi.
+Ci sono ora 4 possibili posizioni per la lettera $A$ all'interno del quadrato $2\times 2$ in basso a destra. Tuttavia, per non dover esaminare tutti e 4 i casi, possiamo eventualmente scambiare tra di loro la terza e quarta colonna, ed eventualmente scambiare tra di loro la terza e quarta riga, in modo che la $A$ venga a trovarsi in alto a sinistra in tale quadrato. Si noti che gli scambi che abbiamo eventualmente fatto mantengono la proprietà dei piccoli Sudoku, per cui se partiamo da un piccolo Sudoku alla fine ci troviamo ancora un piccolo Sudoku. Completando nei 3 modi possibili la diagonale, ci siamo quindi ricondotti ad esaminare i seguenti 3 casi.
 \begin{center}
 	\hfill
 	\IniziaSudoku{A}{B}{}{}{C}{D}{}{}
@@ -116,10 +81,7 @@ siamo quindi ricondotti ad esaminare i seguenti 3 casi.
 	\hfill\mbox{}
 \end{center}
 
-\`{E} ora facile vedere che tutti quanti si possono completare in modo 
-unico come segue (conviene partire piazzando ovunque possibile le 
-lettere che abbiamo gi\`{a} messo nel quadrato $2\times 2$ in fondo a 
-destra).
+È ora facile vedere che tutti quanti si possono completare in modo unico come segue (conviene partire piazzando ovunque possibile le lettere che abbiamo già messo nel quadrato $2\times 2$ in fondo a destra).
 \begin{center}
 	\hfill
 	\IniziaSudoku{A}{B}{D}{C}{C}{D}{B}{A}
@@ -133,17 +95,11 @@ destra).
 	\hfill\mbox{}
 \end{center}
 
-In conclusione, abbiamo 4 possibili posizioni per la $A$ all'interno
-del quadrato $2\times 2$ in fondo a destra, 3 modi di concludere una 
-volta fissata tale $A$, pi\`{u} ovviamente le 24 possibili 
-permutazioni dei simboli: i possibili piccoli Sudoku sono pertanto 
+In conclusione, abbiamo 4 possibili posizioni per la $A$ all'interno del quadrato $2\times 2$ in fondo a destra, 3 modi di concludere una volta fissata tale $A$, più ovviamente le 24 possibili permutazioni dei simboli: i possibili piccoli Sudoku sono pertanto
 $3\cdot 4\cdot 24=288$.}
 
 \renewcommand{\SoluzioniAlternative}{\TitoloSoluzioneAlternativaA Per 
-il punto (c), esistono ovviamente molti altri modi di contare i 
-piccoli Sudoku. Una possibilit\`{a} \`{e} la seguente. Siano $A$, 
-$B$, $C$, $D$ i numeri della prima riga. Abbiamo allora 4 possibili 
-modi di completare la seconda riga.
+il punto (c), esistono ovviamente molti altri modi di contare i piccoli Sudoku. Una possibilità è la seguente. Siano $A$, $B$, $C$, $D$ i numeri della prima riga. Abbiamo allora 4 possibili modi di completare la seconda riga.
 \begin{center}
 	\hfill
 	\IniziaSudoku{A}{B}{C}{D}{C}{D}{A}{B}
@@ -160,10 +116,7 @@ modi di completare la seconda riga.
 	\hfill\mbox{}	
 \end{center}
 
-Consideriamo il primo, ed esaminiamo il quadrato $2\times 2$ in basso 
-a sinistra. La prima colonna deve contenere $B$ e $D$, la seconda $A$ 
-e $C$: abbiamo quindi 4 possibilit\`{a}, che si completano tutte in 
-modo unico come segue.
+Consideriamo il primo, ed esaminiamo il quadrato $2\times 2$ in basso a sinistra. La prima colonna deve contenere $B$ e $D$, la seconda $A$ e $C$: abbiamo quindi 4 possibilità, che si completano tutte in modo unico come segue.
 \begin{center}
 	\hfill
 	\IniziaSudoku{A}{B}{C}{D}{C}{D}{A}{B}
@@ -180,8 +133,7 @@ modo unico come segue.
 	\hfill\mbox{}	
 \end{center}
 
-Ragionando allo stesso modo a partire dalla seconda possibilit\`{a}, 
-otteniamo i seguenti 4 piccoli Sudoku.
+Ragionando allo stesso modo a partire dalla seconda possibilità, otteniamo i seguenti 4 piccoli Sudoku.
 \begin{center}
 	\hfill
 	\IniziaSudoku{A}{B}{C}{D}{D}{C}{B}{A}
@@ -198,10 +150,7 @@ otteniamo i seguenti 4 piccoli Sudoku.
 	\hfill\mbox{}	
 \end{center}
 
-Consideriamo ora la terza possibilit\`{a}. Ancora una volta abbiamo 4 
-possibili modi di riempire il quadrato $2\times 2$ in basso a 
-sinistra, ma di questi 2 si completano in modo unico e 2 non si 
-possono completare.
+Consideriamo ora la terza possibilità. Ancora una volta abbiamo 4 possibili modi di riempire il quadrato $2\times 2$ in basso a sinistra, ma di questi 2 si completano in modo unico e 2 non si possono completare.
 \begin{center}
 	\hfill
 	\IniziaSudoku{A}{B}{C}{D}{C}{D}{B}{A}
@@ -218,7 +167,7 @@ possono completare.
 	\hfill\mbox{}	
 \end{center}
 
-Discorso analogo per la quarta possibilit\`{a}.
+Discorso analogo per la quarta possibilità.
 
 \begin{center}
 	\hfill
@@ -236,8 +185,7 @@ Discorso analogo per la quarta possibilit\`{a}.
 	\hfill\mbox{}	
 \end{center}
 
-Abbiamo quindi ottenuto 12 piccoli Sudoku, da moltiplicare per le 24 
-permutazioni dei simboli, per un totale di $12\cdot 24=288$ piccoli 
+Abbiamo quindi ottenuto 12 piccoli Sudoku, da moltiplicare per le 24 permutazioni dei simboli, per un totale di $12\cdot 24=288$ piccoli
 Sudoku.}
 
 \renewcommand{\Osservazioni}{

@@ -3,44 +3,26 @@
 \renewcommand{\NumeroProblema}{4}
 
 \renewcommand{\Testo}{Paolo e Francesca, due studenti della Scuola S.
-Anna, decidono di giocare nel seguente modo.  Detto $X$ l'insieme
-$\{1,2,3,4,5,6\}$, Paolo sceglie un elemento $n_1$ di $X$; poi
-Francesca sceglie un elemento $n_2$ di $X$ (non necessariamente
-diverso dal precedente), poi ancora Paolo sceglie un elemento $n_3$ ed
-infine Francesca un elemento $n_{4}$.  Francesca vince se l'intero
+Anna, decidono di giocare nel seguente modo.  Detto $X$ l'insieme $\{1,2,3,4,5,6\}$, Paolo sceglie un elemento $n_1$ di $X$; poi Francesca sceglie un elemento $n_2$ di $X$ (non necessariamente diverso dal precedente), poi ancora Paolo sceglie un elemento $n_3$ ed infine Francesca un elemento $n_{4}$.  Francesca vince se l'intero
 $$N=n_1+n_2+n_3+n_{4}$$
 risulta divisibile per 9, altrimenti vince Paolo.
 \begin{enumerate}
 	\item  Determinare quale dei due giocatori ha una strategia vincente.
 	
-	\item Stessa domanda nel caso in cui i due giocatori scelgano
-	alternativamente $k$ elementi di $X$ ciascuno (e quindi $N$ \`{e}
-	la somma di $2k$ interi).
+	\item Stessa domanda nel caso in cui i due giocatori scelgano alternativamente $k$ elementi di $X$ ciascuno (e quindi $N$ è la somma di $2k$ interi).
 \end{enumerate}}
 
 \renewcommand{\Risposta}{\begin{enumerate}
 		\item  Paolo ha una strategia vincente.
 	
-		\item  Se $k$ \`{e} multiplo di 9, Francesca ha una strategia 
-		vincente; se $k$ non \`{e} multiplo di 9, Paolo ha una strategia 
-		vincente.
+		\item  Se $k$ è multiplo di 9, Francesca ha una strategia vincente; se $k$ non è multiplo di 9, Paolo ha una strategia vincente.
 	\end{enumerate}}
 
 \renewcommand{\Aiutino}{\begin{enumerate}
 	\renewcommand{\labelenumi}{(\alph{enumi})} 
-	\item Se Paolo alla sua seconda mossa riesce a far s\`{\i} che
-	$n_{1}+n_{2}+n_{3}=9$, per Francesca non ci sono pi\`{u} speranze. 
-	Quale prima mossa assicura a Paolo di raggiungere tale obiettivo?
+	\item Se Paolo alla sua seconda mossa riesce a far s\`{\i} che $n_{1}+n_{2}+n_{3}=9$, per Francesca non ci sono più speranze. Quale prima mossa assicura a Paolo di raggiungere tale obiettivo?
 
-	\item Il trucco \`{e} sempre quello di rispondere ad $x$ giocando
-	$7-x$, in modo che la somma cresca di 7 ogni due giocate.  Se $k$
-	\`{e} multiplo di 9, Francesca utilizza tale tattica e dopo $2k$
-	numeri la somma sar\`{a} \ldots.  Se $k$ non \`{e} multiplo di 9,
-	allora $7k=9m+r$, con $r$ diverso da 0.  Paolo parte allora con un
-	numero $a$ e poi comincia ad attuare la tattica del $7-x$: dopo
-	l'ultima mossa di Paolo la somma sar\`{a} $a+9m+r-7$.  Si tratta
-	ora di vedere che Paolo pu\`{o} scegliere bene $a$ in modo che
-	tale somma risulti ``a distanza di sicurezza'' dai multipli di 9.
+	\item Il trucco è sempre quello di rispondere ad $x$ giocando $7-x$, in modo che la somma cresca di 7 ogni due giocate.  Se $k$ è multiplo di 9, Francesca utilizza tale tattica e dopo $2k$ numeri la somma sarà \ldots.  Se $k$ non è multiplo di 9, allora $7k=9m+r$, con $r$ diverso da 0.  Paolo parte allora con un numero $a$ e poi comincia ad attuare la tattica del $7-x$: dopo l'ultima mossa di Paolo la somma sarà $a+9m+r-7$.  Si tratta ora di vedere che Paolo può scegliere bene $a$ in modo che tale somma risulti ``a distanza di sicurezza'' dai multipli di 9.
 \end{enumerate}}
 
 \renewcommand{\SoluzioneUfficiale}{

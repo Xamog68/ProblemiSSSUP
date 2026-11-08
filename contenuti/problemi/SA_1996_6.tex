@@ -3,41 +3,26 @@
 \renewcommand{\NumeroProblema}{6}
 
 \renewcommand{\Testo}{Vi sono tre sacchetti: il primo contiene $3$
-palline nere e $5$ bianche, il secondo ne contiene $2$ nere e $4$
-bianche ed il terzo $3$ nere e $5$ bianche.
+palline nere e $5$ bianche, il secondo ne contiene $2$ nere e $4$ bianche ed il terzo $3$ nere e $5$ bianche.
 
-	Viene scelto, a caso, uno dei tre sacchetti, e da questo, sempre a
-	caso, viene estratta una pallina.
+	Viene scelto, a caso, uno dei tre sacchetti, e da questo, sempre a caso, viene estratta una pallina.
 
-	Sapendo che il colore di quest'ultima \`{e} nero, determinare la
-	probabilt\`{a} che il sacchetto scelto fosse il secondo.
+	Sapendo che il colore di quest'ultima è nero, determinare la probabiltà che il sacchetto scelto fosse il secondo.
 }
 
 \renewcommand{\Risposta}{$4/13$}
 
 \renewcommand{\Aiutino}{
-All'inizio \`{e} come se ci fossero 6 eventi, a seconda dell'urna e
-della pallina estratta, ognuno con la sua probabilit\`{a}.  Una volta
-che si sa che \`{e} uscita una nera, gli eventi possibili rimangono 3,
-di cui uno solo favorevole. Non resta dunque che calcolare la 
-probabilit\`{a} del favorevole diviso la somma delle probabilit\`{a} 
-dei 3 possibili.
+All'inizio è come se ci fossero 6 eventi, a seconda dell'urna e della pallina estratta, ognuno con la sua probabilità.  Una volta che si sa che è uscita una nera, gli eventi possibili rimangono 3, di cui uno solo favorevole. Non resta dunque che calcolare la probabilità del favorevole diviso la somma delle probabilità dei 3 possibili.
 }
 
 \renewcommand{\SoluzioneUfficiale}{
-Eseguendo la procedura descritta, gli esiti possibili sono 6, a 
-seconda del sacchetto scelto e del colore della pallina estratta. 
-Non \`{e} difficile calcolare la probabilit\`{a} di ciascuno di questi 
-eventi: ad esempio la probabilit\`{a} che il sacchetto sia il primo e 
-la pallina estratta sia nera \`{e} (nel primo sacchetto ci sono 3 
-palline nere su 8)
+Eseguendo la procedura descritta, gli esiti possibili sono 6, a seconda del sacchetto scelto e del colore della pallina estratta. Non è difficile calcolare la probabilità di ciascuno di questi eventi: ad esempio la probabilità che il sacchetto sia il primo e la pallina estratta sia nera è (nel primo sacchetto ci sono 3 palline nere su 8)
 $$\frac{1}{3}\cdot\frac{3}{8}=\frac{1}{8};$$
-la probabilit\`{a} che il sacchetto sia il primo e 
-la pallina estratta sia bianca \`{e}
+la probabilità che il sacchetto sia il primo e la pallina estratta sia bianca è
 $$\frac{1}{3}\cdot\frac{5}{8}=\frac{5}{24}.$$
 
-Ragionando analogamente, si determinano le probabilit\`{a} di tutti i 
-6 eventi a priori possibili, riassunte nella seguente tabella.
+Ragionando analogamente, si determinano le probabilità di tutti i 6 eventi a priori possibili, riassunte nella seguente tabella.
 \begin{center}
 	\renewcommand{\arraystretch}{1.3}
 	\begin{tabular}{|c||c|c|c|}
@@ -60,13 +45,7 @@ Ragionando analogamente, si determinano le probabilit\`{a} di tutti i
 	\end{tabular}
 \end{center}
 
-A posteriori (cio\`{e} nel momento in cui sappiamo che la pallina 
-estratta \`{e} nera), gli eventi possibili sono solo i 3 della riga 
-superiore, e di questi solo uno \`{e} favorevole (quello centrale, visto 
-che viene richiesta la probabilit\`{a} che il sacchetto scelto sia il 
-secondo). La probabilit\`{a} richiesta sar\`{a} quindi data dal 
-rapporto tra la probabilit\`{a} dell'evento favorevole e la somma 
-delle probabilit\`{a} dei 3 eventi possibili, e quindi
+A posteriori (cioè nel momento in cui sappiamo che la pallina estratta è nera), gli eventi possibili sono solo i 3 della riga superiore, e di questi solo uno è favorevole (quello centrale, visto che viene richiesta la probabilità che il sacchetto scelto sia il secondo). La probabilità richiesta sarà quindi data dal rapporto tra la probabilità dell'evento favorevole e la somma delle probabilità dei 3 eventi possibili, e quindi
 $$\frac{1}{9}:\left(\frac{1}{8}+\frac{1}{8}+\frac{1}{9}\right)=
 \frac{1}{9}:\frac{26}{72}=\frac{4}{13}.$$
 }
@@ -75,38 +54,23 @@ $$\frac{1}{9}:\left(\frac{1}{8}+\frac{1}{8}+\frac{1}{9}\right)=
 }
 
 \renewcommand{\Osservazioni}{\TitoloOsservazione
-I lettori che hanno familiarit\`{a} con la teoria della probabilit\`{a} 
-avranno notato che si tratta dell'esempio classico in cui intervengono 
-la definizione di probabilit\`{a} condizionata, la formula di Bayes ed 
-il teorema delle probabilit\`{a} totali.
+I lettori che hanno familiarità con la teoria della probabilità avranno notato che si tratta dell'esempio classico in cui intervengono la definizione di probabilità condizionata, la formula di Bayes ed il teorema delle probabilità totali.
 
-Sia infatti $S_{i}$ l'evento ``viene scelto il sacchetto $i$-esimo'', 
-e sia $N$ l'evento ``la pallina estratta \`{e} nera''. Dal testo 
-sappiamo che
+Sia infatti $S_{i}$ l'evento ``viene scelto il sacchetto $i$-esimo'', e sia $N$ l'evento ``la pallina estratta è nera''. Dal testo sappiamo che
 $$p(S_{1})=p(S_{2})=p(S_{3})=\frac{1}{3},$$
 ed inoltre
 $$p(N|S_{1})=p(N|S_{3})=\frac{3}{8},
 \hspace{3em}
 p(N|S_{2})=\frac{1}{3},$$
-dove $p(N|S_{i})$ indica la probabilit\`{a} di estrarre una pallina 
-nera condizionata al fatto che l'estrazione avvenga dall'$i$-esimo 
-sacchetto.
+dove $p(N|S_{i})$ indica la probabilità di estrarre una pallina nera condizionata al fatto che l'estrazione avvenga dall'$i$-esimo sacchetto.
 
-Il testo chiede di calcolare la probabilit\`{a} condizionata 
-$p(S_{2}|N)$, che per la formula di Bayes \`{e} data da
+Il testo chiede di calcolare la probabilità condizionata $p(S_{2}|N)$, che per la formula di Bayes è data da
 $$p(S_{2}|N)=\frac{p(N|S_{2})\cdot 
 p(S_{2})}{\sum_{i=1}^{3}p(N|S_{i})p(S_{i})}.$$
 
-Andando a sostituire i valori forniti, otteniamo lo stesso numeratore, 
-e gli stessi addendi al denominatore trovati precedentemente. Questo 
-non deve stupire: la formula di Bayes \`{e} infatti solo una 
-formalizzazione del ragionamento intuitivo presentato nella prima 
-soluzione.
+Andando a sostituire i valori forniti, otteniamo lo stesso numeratore, e gli stessi addendi al denominatore trovati precedentemente. Questo non deve stupire: la formula di Bayes è infatti solo una formalizzazione del ragionamento intuitivo presentato nella prima soluzione.
 
-Per completezza ricordiamo che il teorema delle probabilit\`{a} 
-totali afferma che il denominatore \`{e} la probabilit\`{a} che alla 
-fine della doppia procedura (scelta del sacchetto, estrazione della 
-pallina) si abbia una pallina nera.
+Per completezza ricordiamo che il teorema delle probabilità totali afferma che il denominatore è la probabilità che alla fine della doppia procedura (scelta del sacchetto, estrazione della pallina) si abbia una pallina nera.
 }
 
 \renewcommand{\Commenti}{

@@ -3,42 +3,26 @@
 \renewcommand{\NumeroProblema}{3}
 
 \renewcommand{\Testo}{ 
-Marco ha costruito 21 tessere simili a quelle del domino.  Ogni
-tessera \`{e} un rettangolo suddiviso in due quadratini, ed ogni
-quadratino contiene un numero di puntini colorati compreso tra 0 e 5
-(estremi inclusi).  Non ci sono due tessere uguali (come numero di
-puntini nei due quadratini), ed ogni coppia di numeri
-rappresenta il numero dei puntini di esattamente una tessera.
+Marco ha costruito 21 tessere simili a quelle del domino.  Ogni tessera è un rettangolo suddiviso in due quadratini, ed ogni quadratino contiene un numero di puntini colorati compreso tra 0 e 5 (estremi inclusi).  Non ci sono due tessere uguali (come numero di puntini nei due quadratini), ed ogni coppia di numeri rappresenta il numero dei puntini di esattamente una tessera.
 
-Ora Marco vorrebbe disporre alcune di queste tessere in una fila
-orizzontale, facendo in modo che 
+Ora Marco vorrebbe disporre alcune di queste tessere in una fila orizzontale, facendo in modo che
 \begin{itemize}
-    \item due tessere consecutive abbiano lo stesso numero di puntini
-    sui quadratini che si toccano,
+    \item due tessere consecutive abbiano lo stesso numero di puntini sui quadratini che si toccano,
 
-    \item i due quadratini all'estrema destra ed all'estrema sinistra
-    della fila abbiano lo stesso numero di puntini.
+    \item i due quadratini all'estrema destra ed all'estrema sinistra della fila abbiano lo stesso numero di puntini.
 \end{itemize}
 
-Quello che segue \`{e} un esempio di una fila orizzontale costituita
-da 7 tessere che rispetta entrambe le condizioni (i numeri
-rappresentano i puntini presenti in quel quadratino).
+Quello che segue è un esempio di una fila orizzontale costituita da 7 tessere che rispetta entrambe le condizioni (i numeri rappresentano i puntini presenti in quel quadratino).
 $$
 \domino{0}{1}-\domino{1}{1}-\domino{1}{3}-\domino{3}{5}-\domino{5}{4}-
 \domino{4}{3}-\domino{3}{0}$$
 \begin{enumerate}
-    \item Determinare quante tessere al massimo possono far parte di
-    una fila che rispetta entrambe le condizioni.
+    \item Determinare quante tessere al massimo possono far parte di una fila che rispetta entrambe le condizioni.
 
-    \item Rispondere alla stessa domanda nel caso in cui le tessere,
-    invece di essere tutte quelle possibili con numero di puntini da 0
-    a 5, siano tutte quelle possibili con numero di puntini da 0 a
-    2009.
+    \item Rispondere alla stessa domanda nel caso in cui le tessere, invece di essere tutte quelle possibili con numero di puntini da 0 a 5, siano tutte quelle possibili con numero di puntini da 0 a 2009.
 \end{enumerate}
 
-{\small Nota bene: c'\`{e} un'unica tessera, per esempio, che ha 3 e 4
-puntini; tale tessera pu\`{o} essere utilizzata sia in versione
-$\domino{3}{4}$, sia in versione $\domino{4}{3}$. 
+{\small Nota bene: c'è un'unica tessera, per esempio, che ha 3 e 4 puntini; tale tessera può essere utilizzata sia in versione $\domino{3}{4}$, sia in versione $\domino{4}{3}$.
 }}
 
 \renewcommand{\Risposta}{
@@ -53,93 +37,46 @@ $\domino{3}{4}$, sia in versione $\domino{4}{3}$.
 \renewcommand{\Aiutino}{
 \begin{enumerate}
 	\renewcommand{\labelenumi}{(\alph{enumi})} 
-	\item Quanti sono complessivamente i quadratini che contengono
-	ciascuno dei numeri da 0 a 5? In ogni fila con le propriet\`{a}
-	richieste ogni quadratino compare un numero pari di volte
-	(perch\'{e}?). Ne segue che un po' di quadratini devono restare
-	esclusi. In questo modo si dimostra che al massimo 18 tessere
-	possono far parte della fila. Non bisogna poi dimenticare di
-	fornire un esempio di fila con 18 tessere.
+	\item Quanti sono complessivamente i quadratini che contengono ciascuno dei numeri da 0 a 5? In ogni fila con le proprietà richieste ogni quadratino compare un numero pari di volte (perché?). Ne segue che un po' di quadratini devono restare esclusi. In questo modo si dimostra che al massimo 18 tessere possono far parte della fila. Non bisogna poi dimenticare di fornire un esempio di fila con 18 tessere.
 
-	\item Per dimostrare che un certo numero di tessere devono essere
-	escluse basta estendere il ragionamento del caso precedente.  Per
-	fornire una costruzione si pu\`{o} procedere per induzione,
-	mostrando come una una fila massinale per un certo numero dispari
-	$2n+1$ pu\`{o} essere allungata per produrre una fila massimale
-	per il dispari $2n+3$.
+	\item Per dimostrare che un certo numero di tessere devono essere escluse basta estendere il ragionamento del caso precedente.  Per fornire una costruzione si può procedere per induzione, mostrando come una una fila massinale per un certo numero dispari $2n+1$ può essere allungata per produrre una fila massimale per il dispari $2n+3$.
 
 \end{enumerate}
 }
 
-\renewcommand{\SoluzioneUfficiale}{\DomandaA La pi\`{u} lunga fila
+\renewcommand{\SoluzioneUfficiale}{\DomandaA La più lunga fila
 possibile che soddisfi entrambe le condizioni contiene 18 tessere.
 
-Fissiamo un qualunque intero $k$ da 0 a 5.  Il numero totale di
-quadratini con $k$ punti colorati nelle varie tessere \`{e} 7 (non
-bisogna dimenticare la tessera con i 2 quadratini uguali, la quale
-conta doppio).  Inoltre, in una qualunque fila orizzontale che
-rispetti i vincoli, il numero totale di quadratini con $k$ punti
-colorati \`{e} pari.  Infatti per costruzione i quadratini compaiono
-sempre ``accoppiati'', sia quelli lungo la fila, sia quelli ai 2
-bordi.
+Fissiamo un qualunque intero $k$ da 0 a 5.  Il numero totale di quadratini con $k$ punti colorati nelle varie tessere è 7 (non bisogna dimenticare la tessera con i 2 quadratini uguali, la quale conta doppio).  Inoltre, in una qualunque fila orizzontale che rispetti i vincoli, il numero totale di quadratini con $k$ punti colorati è pari.  Infatti per costruzione i quadratini compaiono sempre ``accoppiati'', sia quelli lungo la fila, sia quelli ai 2 bordi.
 
-Ne segue che almeno uno dei 7 quadratini con $k$ punti colorati deve
-non comparire nella fila.  Questo ragionamento vale per tutti i 6
-possibili valori di $k$.  Pertanto almeno 6 quadratini, uno per
-numero, dovranno mancare dalla fila, il che vuol dire che almeno 3
-tessere resteranno inutilizzate.
+Ne segue che almeno uno dei 7 quadratini con $k$ punti colorati deve non comparire nella fila.  Questo ragionamento vale per tutti i 6 possibili valori di $k$.  Pertanto almeno 6 quadratini, uno per numero, dovranno mancare dalla fila, il che vuol dire che almeno 3 tessere resteranno inutilizzate.
 
-Questo ragionamento mostra che la fila pi\`{u} lunga potr\`{a}
-contenere al pi\`{u} $21-3=18$ tessere.  Per concludere dobbiamo ora
-esibire un esempio di fila lunga 18.  Scartate le tessere
+Questo ragionamento mostra che la fila più lunga potrà contenere al più $21-3=18$ tessere.  Per concludere dobbiamo ora esibire un esempio di fila lunga 18.  Scartate le tessere
 $$\domino{0}{1}\quad \domino{2}{3}\quad \domino{4}{5}$$ 
-(si noti che ogni numero compare una ed una sola volta), le restanti
-possono essere disposte ad esempio nel seguente modo:
+(si noti che ogni numero compare una ed una sola volta), le restanti possono essere disposte ad esempio nel seguente modo:
 $$\domino{0}{5}-\domino{5}{5}-\domino{5}{1}-\domino{1}{4}-\domino{4}{4}
 -\domino{4}{2}-\domino{2}{5}-\domino{5}{3}-\domino{3}{4}-
 \domino{4}{0}-\mbox{}$$
 $$\mbox{}-\domino{0}{0}-\domino{0}{2}-\domino{2}{2}-\domino{2}{1}-
 \domino{1}{1}-\domino{1}{3}-\domino{3}{3}-\domino{3}{0}$$
 
-\DomandaB Mostriamo pi\`{u} in generale che, se le tessere contengono 
-i numeri da 0 a $2n+1$ (dispari!), la pi\`{u} lunga fila compatibile
-con i vincoli contiene $2(n+1)^{2}$ tessere. Nel caso $n=2$ si
-ritrovano le 18 tessere precedenti. Nel caso $n=1004$ (che corrisponde
-ad avere i numeri da 1 fino a 2009) si trovano $2\cdot 1005^{2}$
-tessere.
+\DomandaB Mostriamo più in generale che, se le tessere contengono
+i numeri da 0 a $2n+1$ (dispari!), la più lunga fila compatibile con i vincoli contiene $2(n+1)^{2}$ tessere. Nel caso $n=2$ si ritrovano le 18 tessere precedenti. Nel caso $n=1004$ (che corrisponde ad avere i numeri da 1 fino a 2009) si trovano $2\cdot 1005^{2}$ tessere.
 
-Ragionando come nel punto (a) si ha che ogni $k$ compare in $(2n+3)$
-quadratini, quindi, trattandosi di un numero dispari, almeno uno di
-tali quadratini non potr\`{a} comparire nella fila.  Poich\'{e} il
-ragionamento vale per tutti i $(2n+2)$ valori possibili di $k$,
-abbiamo che dalla fila dovranno mancare almeno $(2n+2)$ quadratini,
-dunque almeno $(n+1)$ tessere.
+Ragionando come nel punto (a) si ha che ogni $k$ compare in $(2n+3)$ quadratini, quindi, trattandosi di un numero dispari, almeno uno di tali quadratini non potrà comparire nella fila.  Poiché il ragionamento vale per tutti i $(2n+2)$ valori possibili di $k$, abbiamo che dalla fila dovranno mancare almeno $(2n+2)$ quadratini, dunque almeno $(n+1)$ tessere.
 
-Non resta che contare le tessere totali.  Ce ne sono $(2n+2)$ con i 2
-quadratini uguali, pi\`{u} $(2n+2)(2n+1)/2$ con i 2 quadratini diversi
-(abbiamo diviso per 2 perch\'{e} ogni coppia di numeri distinti
-compare una sola volta). Dunque le tessere in totale sono
+Non resta che contare le tessere totali.  Ce ne sono $(2n+2)$ con i 2 quadratini uguali, più $(2n+2)(2n+1)/2$ con i 2 quadratini diversi (abbiamo diviso per 2 perché ogni coppia di numeri distinti compare una sola volta). Dunque le tessere in totale sono
 $$(2n+2)-\frac{(2n+2)(2n+1)}{2}=2n^{2}+5n+3.$$
 
-Togliendo le $(n+1)$ tessere che di sicuro non possono far parte della
-fila, restano al pi\`{u} 
+Togliendo le $(n+1)$ tessere che di sicuro non possono far parte della fila, restano al più
 $$2n^{2}+5n+3-(n+1)=2(n+1)^{2}$$ 
 tessere nella fila.
 
-Per concludere bisogna ora esibire un esempio di fila con questa
-lunghezza. Per far questo procediamo per induzione. Per $n=1$ abbiamo 
-la fila
+Per concludere bisogna ora esibire un esempio di fila con questa lunghezza. Per far questo procediamo per induzione. Per $n=1$ abbiamo la fila
 $$\domino{0}{0}-\domino{0}{2}-\domino{2}{2}-\domino{2}{1}-
 \domino{1}{1}-\domino{1}{3}-\domino{3}{3}-\domino{3}{0}$$
 
-Supponiamo ora di avere una fila corrispondente ad un certo $n$
-(contenente quindi $2(n+1)^{2}$ tessere con numeri da $1$ a $2n+1$), e
-mostriamo come costruire una fila corrispondente ad $(n+1)$
-(contenente quindi $2(n+2)^{2}$ tessere con numeri da $1$ a $2n+3$).
-A tal fine supponiamo, senza perdita di generalit\`{a}, che la fila da
-cui partiamo inizi e termini con uno 0, ed aggiungiamo
-\emph{all'inizio} tutte le tessere con i numeri $(2n+2)$ e $(2n+3)$
-meno una.
+Supponiamo ora di avere una fila corrispondente ad un certo $n$ (contenente quindi $2(n+1)^{2}$ tessere con numeri da $1$ a $2n+1$), e mostriamo come costruire una fila corrispondente ad $(n+1)$ (contenente quindi $2(n+2)^{2}$ tessere con numeri da $1$ a $2n+3$). A tal fine supponiamo, senza perdita di generalità, che la fila da cui partiamo inizi e termini con uno 0, ed aggiungiamo \emph{all'inizio} tutte le tessere con i numeri $(2n+2)$ e $(2n+3)$ meno una.
 
 Iniziamo dunque la fila con il seguente schema
 $$\domino{0}{2n+3}-\domino{2n+3}{1}-\domino{1}{2n+2}-\domino{2n+2}{2}-\mbox{}$$
@@ -149,92 +86,36 @@ e ripetiamo lo schema di 4 in 4 fino a concludere con
 $$\mbox{}-\domino{2n}{2n+3}-\domino{2n+3}{2n+1}-
 \domino{2n+1}{2n+2}-\domino{2n+2}{0}-\mbox{}$$
 
-Da qui in poi procediamo come nel caso $n$. In questo modo abbiamo
-piazzato tutte le tessere con i numeri $(2n+2)$ e $(2n+3)$,
-escluse le 3 tessere
+Da qui in poi procediamo come nel caso $n$. In questo modo abbiamo piazzato tutte le tessere con i numeri $(2n+2)$ e $(2n+3)$, escluse le 3 tessere
 $$\domino{2n+2}{2n+3}\quad\domino{2n+2}{2n+2}\quad\domino{2n+3}{2n+3}$$
 
-La prima \`{e} quella che decidiamo di ``sacrificare'', le restanti 2
-si possono agevolmente inserire in molti modi nella prima parte della
-fila.
+La prima è quella che decidiamo di ``sacrificare'', le restanti 2 si possono agevolmente inserire in molti modi nella prima parte della fila.
 
-Per fare un esempio di come funziona la costruzione in un caso
-concreto, passando da $n=1$ ad $n=2$ si ottiene la fila di 18 tessere 
-che abbiamo esibito al termine della soluzione della parte~(a).
+Per fare un esempio di come funziona la costruzione in un caso concreto, passando da $n=1$ ad $n=2$ si ottiene la fila di 18 tessere che abbiamo esibito al termine della soluzione della parte~(a).
 }
 
 \renewcommand{\SoluzioniAlternative}{\TitoloSoluzioneAlternativaA
-Risolviamo direttamente il caso dispari generale, cio\`{e} quello in
-cui nei quadratini sono rappresentati tutti i possibili numeri da 0 a 
-$2n+1$. Osserviamo intanto che le tessere con 2 quadratini uguali non 
-sono influenti, in quanto si possono facilmente aggiungere o togliere 
-da una fila senza alterarne le propriet\`{a}. Il problema \`{e}
-pertanto equivalente a trovare la fila massimale che utilizza solo
-tessere composte da quadratini con numeri di punti diversi.
+Risolviamo direttamente il caso dispari generale, cioè quello in cui nei quadratini sono rappresentati tutti i possibili numeri da 0 a $2n+1$. Osserviamo intanto che le tessere con 2 quadratini uguali non sono influenti, in quanto si possono facilmente aggiungere o togliere da una fila senza alterarne le proprietà. Il problema è pertanto equivalente a trovare la fila massimale che utilizza solo tessere composte da quadratini con numeri di punti diversi.
 
-Interpretiamo ora il problema in termini di teoria dei grafi.
-Costruiamo un grafo in cui i vertici sono i numeri da 0 a $(2n+1)$, e 
-2 vertici sono collegati da un lato se e solo se c'\`{e} una tessera
-che ha quei 2 numeri rappresentati. Avendo escluso le tessere con 2
-quadratini uguali, sappiamo che ogni lato connette 2 vertici distinti,
-come nella definizione standard di grafo. Sapendo poi che abbiamo
-tutte le tessere possibili, abbiamo che nel grafo ci sono tutti i
-lati possibili. Abbiamo quindi quello che si chiama un \emph{grafo
-completo}, con $(2n+2)$ vertici e $\binom{2n+2}{2}$ lati.
+Interpretiamo ora il problema in termini di teoria dei grafi. Costruiamo un grafo in cui i vertici sono i numeri da 0 a $(2n+1)$, e 2 vertici sono collegati da un lato se e solo se c'è una tessera che ha quei 2 numeri rappresentati. Avendo escluso le tessere con 2 quadratini uguali, sappiamo che ogni lato connette 2 vertici distinti, come nella definizione standard di grafo. Sapendo poi che abbiamo tutte le tessere possibili, abbiamo che nel grafo ci sono tutti i lati possibili. Abbiamo quindi quello che si chiama un \emph{grafo completo}, con $(2n+2)$ vertici e $\binom{2n+2}{2}$ lati.
 
-Una fila di tessere con le 2 propriet\`{a} proposte corrisponde nel
-grafo ad un cammino che parte da un vertice e torna a quello stesso
-vertice dopo aver percorso un certo numero di lati del grafo (ogni lato 
-viene percorso al pi\`{u} una volta). 
+Una fila di tessere con le 2 proprietà proposte corrisponde nel grafo ad un cammino che parte da un vertice e torna a quello stesso vertice dopo aver percorso un certo numero di lati del grafo (ogni lato viene percorso al più una volta).
 
-Ora \`{e} ben noto che in un grafo un cammino chiuso passa sempre per 
-un numero \emph{pari} di lati uscenti da ogni vertice (questo perch\'{e} ogni
-volta che un cammino arriva in un vertice mediante un certo lato, poi 
-riparte seguendo un altro lato). Nel nostro caso in ogni vertice
-concorrono $(2n+1)$ lati, dunque almeno uno di essi non far\`{a} parte
-del cammino. Ripetendo lo stesso ragionamento per tutti i $(2n+2)$
-vertici, abbiamo l'esclusione di almeno $(n+1)$ lati (abbiamo diviso
-per 2 perch\'{e} ogni lato escluso ``accontenta'' 2 vertici).
+Ora è ben noto che in un grafo un cammino chiuso passa sempre per un numero \emph{pari} di lati uscenti da ogni vertice (questo perché ogni volta che un cammino arriva in un vertice mediante un certo lato, poi riparte seguendo un altro lato). Nel nostro caso in ogni vertice concorrono $(2n+1)$ lati, dunque almeno uno di essi non farà parte del cammino. Ripetendo lo stesso ragionamento per tutti i $(2n+2)$ vertici, abbiamo l'esclusione di almeno $(n+1)$ lati (abbiamo diviso per 2 perché ogni lato escluso ``accontenta'' 2 vertici).
 
-Resta ora da fare la seconda parte, cio\`{e} mostrare che esiste un
-cammino chiuso che esclude soltanto $(n+1)$ lati.  Per far questo
-osserviamo intanto che \`{e} possibile eliminare $(n+1)$ lati in modo
-da coinvolgere una ed una sola volta tutti i vertici: basta ad esempio
-eliminare il lato da 0 a 1, quello da 2 a 3, e cos\`{i} via.  Al
-termine dell'operazione ci resta un grafo in cui \emph{da ogni vertice
-parte un numero pari di lati}.  Un ben noto teorema (non banale) della
-teoria dei grafi ci dice che questa \`{e} la condizione necessaria e
-sufficiente per l'esistenza di un cammino chiuso che passa una ed una
-sola volta per tutti i lati del grafo (circuito hamiltoniano). Questo 
-teorema generale ci permette quindi di concludere la dimostrazione
-sostanzialmente gratis!
+Resta ora da fare la seconda parte, cioè mostrare che esiste un cammino chiuso che esclude soltanto $(n+1)$ lati.  Per far questo osserviamo intanto che è possibile eliminare $(n+1)$ lati in modo da coinvolgere una ed una sola volta tutti i vertici: basta ad esempio eliminare il lato da 0 a 1, quello da 2 a 3, e così via.  Al termine dell'operazione ci resta un grafo in cui \emph{da ogni vertice parte un numero pari di lati}.  Un ben noto teorema (non banale) della teoria dei grafi ci dice che questa è la condizione necessaria e sufficiente per l'esistenza di un cammino chiuso che passa una ed una sola volta per tutti i lati del grafo (circuito hamiltoniano). Questo teorema generale ci permette quindi di concludere la dimostrazione sostanzialmente gratis!
 }
 
 \renewcommand{\Osservazioni}{\TitoloOsservazione
-\`{E} interessante esaminare il caso in cui le tessere contengono i
-numeri da 1 a $2n$ (pari!). In tal caso ogni $k$ compare in $(2n+2)$
-quadratini, che \`{e} un numero pari. Cade dunque l'ostruzione alla
-presenza di tutti i quadratini nella fila che c'era nel caso dispari.
+È interessante esaminare il caso in cui le tessere contengono i numeri da 1 a $2n$ (pari!). In tal caso ogni $k$ compare in $(2n+2)$ quadratini, che è un numero pari. Cade dunque l'ostruzione alla presenza di tutti i quadratini nella fila che c'era nel caso dispari.
 
-In effetti nel caso pari esiste sempre una fila che rispetta le 2
-condizioni e contiene tutte le possibili tessere.  La dimostrazione
-dell'esistenza di tale fila si pu\`{o} fare per induzione riadattando,
-con minime modifiche, la stessa costruzione proposta nel caso dispari
-(in questo caso non serve nemmeno ``sacrificare'' una tessera nel
-passo induttivo).
+In effetti nel caso pari esiste sempre una fila che rispetta le 2 condizioni e contiene tutte le possibili tessere.  La dimostrazione dell'esistenza di tale fila si può fare per induzione riadattando, con minime modifiche, la stessa costruzione proposta nel caso dispari (in questo caso non serve nemmeno ``sacrificare'' una tessera nel passo induttivo).
 
-In termini di teoria dei grafi, in questo caso abbiamo il grafo
-completo su $(2n+1)$ vertici.  In ogni vertice concorrono $2n$ lati,
+In termini di teoria dei grafi, in questo caso abbiamo il grafo completo su $(2n+1)$ vertici.  In ogni vertice concorrono $2n$ lati,
 dunque un numero pari, e pertanto esiste un circuito hamiltoniano.  }
 
-\renewcommand{\Commenti}{\TitoloCommenti \`{E} importante notare che
-questo \`{e} un classico esempio di problema in cui ci sono 2
-disuguaglianze da dimostrare.  Nella parte (a), ad esempio, bisogna
-sia dimostrare che la fila pi\`{u} lunga contiene \emph{al massimo} 18
-tessere (ad esempio con l'argomento di parit\`{a} che abbiamo
-proposto), sia dimostrare che la fila pi\`{u} lunga contiene
-\emph{almeno} 18 tessere (per questo basta esibire un esempio).
+\renewcommand{\Commenti}{\TitoloCommenti È importante notare che
+questo è un classico esempio di problema in cui ci sono 2 disuguaglianze da dimostrare.  Nella parte (a), ad esempio, bisogna sia dimostrare che la fila più lunga contiene \emph{al massimo} 18 tessere (ad esempio con l'argomento di parità che abbiamo proposto), sia dimostrare che la fila più lunga contiene \emph{almeno} 18 tessere (per questo basta esibire un esempio).
 
-Entrambe queste parti sono necessarie per la risoluzione completa
-della parte (a). Stesso discorso vale per la parte (b).
+Entrambe queste parti sono necessarie per la risoluzione completa della parte (a). Stesso discorso vale per la parte (b).
 }

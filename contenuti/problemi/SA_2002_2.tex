@@ -3,50 +3,33 @@
 \renewcommand{\NumeroProblema}{2}
 
 \renewcommand{\Testo}{Lungo un corridoio della Scuola Sant'Anna vi
-sono $n$ aule.  Ognuna di esse \`{e} contrassegnata con un numero
-intero compreso fra 1 ed $n$ (naturalmente aule differenti sono
-contrassegnate da numeri differenti).  Dario osserva che la somma dei
-numeri delle aule sul lato destro coincide con la somma dei numeri
-delle aule sul lato sinistro.
+sono $n$ aule.  Ognuna di esse è contrassegnata con un numero intero compreso fra 1 ed $n$ (naturalmente aule differenti sono contrassegnate da numeri differenti).  Dario osserva che la somma dei numeri delle aule sul lato destro coincide con la somma dei numeri delle aule sul lato sinistro.
 	
-Tornando l'anno successivo Dario nota che, in seguito a lavori di
-ristrutturazione, un'aula \`{e} stata spostata da uno dei due lati
-all'altro, mentre tutte le altre hanno conservato la loro
-collocazione.  Inoltre tutte le aule, compresa quella spostata, hanno
-conservato la loro numerazione.  Dario nota poi che ora la somma dei
-numeri delle aule su uno dei due lati \`{e} il doppio della somma dei
-numeri delle aule sull'altro lato.
+Tornando l'anno successivo Dario nota che, in seguito a lavori di ristrutturazione, un'aula è stata spostata da uno dei due lati all'altro, mentre tutte le altre hanno conservato la loro collocazione.  Inoltre tutte le aule, compresa quella spostata, hanno conservato la loro numerazione.  Dario nota poi che ora la somma dei numeri delle aule su uno dei due lati è il doppio della somma dei numeri delle aule sull'altro lato.
 	
-Determinare per quali valori di $n$ si pu\`{o} avere questa
+Determinare per quali valori di $n$ si può avere questa
 situazione.}
 
 \renewcommand{\Risposta}{I possibili valori di $n$ sono 3, 8, 11.}
 
 \renewcommand{\Aiutino}{Quanto vale all'inizio la somma dei numeri
-delle aule su ciascuno dei 2 corridoi?  Sia ora $k$ l'aula che si
-sposta: calcolando le nuove somme, ed imponendo che una sia il doppio
-dell'altra, si ottiene che $k=n(n+1)/12$.  Ricordando che $k$ deve
-essere intero e minore od uguale a $n$, si trovano i possibili valori
-di $k$.  Per tali valori occorre poi esibire una disposizione delle
+delle aule su ciascuno dei 2 corridoi?  Sia ora $k$ l'aula che si sposta: calcolando le nuove somme, ed imponendo che una sia il doppio dell'altra, si ottiene che $k=n(n+1)/12$.  Ricordando che $k$ deve essere intero e minore od uguale a $n$, si trovano i possibili valori di $k$.  Per tali valori occorre poi esibire una disposizione delle
 aule che soddisfi l'ipotesi.}
 
 \renewcommand{\SoluzioneUfficiale}{\TitoloSoluzione La somma dei 
 numeri di tutte le aule vale
 $$1+2+\ldots+n=\frac{n(n+1)}{2},$$
-dunque all'inizio la somma dei numeri delle aule su ciascuno dei 2 
-lati del corridoio vale
+dunque all'inizio la somma dei numeri delle aule su ciascuno dei 2 lati del corridoio vale
 $$\frac{n(n+1)}{4}.$$
 
-Sia ora $k$ il numero dell'aula che si sposta. Al termine dei lavori 
-le somme dei numeri delle aule sui 2 lati del corridoio saranno
+Sia ora $k$ il numero dell'aula che si sposta. Al termine dei lavori le somme dei numeri delle aule sui 2 lati del corridoio saranno
 $$\frac{n(n+1)}{4}-k
 \hspace{3em}
 \mbox{e}
 \hspace{3em}
 \frac{n(n+1)}{4}+k.$$
 
-Imponendo ora che la seconda somma sia il doppio della prima, e 
-semplificando, otteniamo che
+Imponendo ora che la seconda somma sia il doppio della prima, e semplificando, otteniamo che
 \begin{equation}
 	k=\frac{n(n+1)}{12}
 	\label{eq:aulefranzoni}
@@ -59,16 +42,10 @@ Ora facciamo due considerazioni.
 	cui $n\leq 11$.
 
 	\item  Dovendo $k$ essere intero, dalla (\ref{eq:aulefranzoni}) 
-	ricaviamo che $n(n+1)$ deve essere divisibile per 12. Per verifica 
-	diretta, gli unici valori interi di $n$, compresi tra 1 e 11, per 
-	cui ci\`{o} accade sono $n=3$ (da cui $k=1$), $n=8$ (da cui $k=6$) 
-	e $n=11$ (da cui $k=11$).
+	ricaviamo che $n(n+1)$ deve essere divisibile per 12. Per verifica diretta, gli unici valori interi di $n$, compresi tra 1 e 11, per cui ciò accade sono $n=3$ (da cui $k=1$), $n=8$ (da cui $k=6$) e $n=11$ (da cui $k=11$).
 \end{itemize}
 
-Non ci resta ora che fornire, per tali valori di $n$, degli esempi di 
-disposizione e spostamento delle aule che verificano le condizioni 
-richieste (i corrispondenti valori di $k$ ci dicono, nei vari casi, 
-quale aula deve spostarsi).
+Non ci resta ora che fornire, per tali valori di $n$, degli esempi di disposizione e spostamento delle aule che verificano le condizioni richieste (i corrispondenti valori di $k$ ci dicono, nei vari casi, quale aula deve spostarsi).
 
 \begin{center}
 	\psset{unit=.8ex}

@@ -3,25 +3,15 @@
 \renewcommand{\NumeroProblema}{3}
 
 \renewcommand{\Testo}{Per poter usufruire di una borsa di studio, uno
-studente deve superare un test costituito da 10 domande.  Per ogni
-domanda il punteggio \`{e} $+1$ se lo studente risponde correttamente,
-$-1$ se lo studente risponde in modo errato, $0$ se lo studente non
-risponde.  Il test si considera superato se il punteggio totale,
-ottenuto sommando i punteggi ottenuti nelle 10 domande, \`{e} maggiore
-od uguale a $5$.
+studente deve superare un test costituito da 10 domande.  Per ogni domanda il punteggio è $+1$ se lo studente risponde correttamente, $-1$ se lo studente risponde in modo errato, $0$ se lo studente non risponde.  Il test si considera superato se il punteggio totale, ottenuto sommando i punteggi ottenuti nelle 10 domande, è maggiore od uguale a $5$.
 	
-Diciamo che uno studente ha preparazione $p$ (con $0\leq p\leq 1$) se,
-per ogni domanda a cui prova a rispondere, egli ha probabilit\`{a} $p$
-di fornire la risposta giusta.
+Diciamo che uno studente ha preparazione $p$ (con $0\leq p\leq 1$) se, per ogni domanda a cui prova a rispondere, egli ha probabilità $p$ di fornire la risposta giusta.
 	
-Determinare, in funzione di $p$, la strategia che lo studente deve
-seguire (cio\`{e} il numero di domande alle quali provare a
-rispondere) per massimizzare la sua probabilit\`{a} di superare il
-test.  Calcolare anche tale probabilit\`{a} (sempre in funzione di
+Determinare, in funzione di $p$, la strategia che lo studente deve seguire (cioè il numero di domande alle quali provare a rispondere) per massimizzare la sua probabilità di superare il test.  Calcolare anche tale probabilità (sempre in funzione di
 $p$).}
 
-\renewcommand{\Risposta}{La probabilit\`{a} di superare il test, in funzione 
-	di $p$, \`{e} data da 
+\renewcommand{\Risposta}{La probabilità di superare il test, in funzione
+	di $p$, è data da
 	$$\mbox{Probabilit\`{a} }(p)=\left\{
 	\renewcommand{\arraystretch}{1.4}
 	\begin{array}{l@{\hspace{10mm}}l}
@@ -37,27 +27,20 @@ Per quanto riguarda la strategia:
 	
 	\item  se $0<p<1/6$ conviene rispondere a 5 domande;
 	
-	\item se $p=1/6$ conviene indifferentemente rispondere a 5 o 7
-	domande;
+	\item se $p=1/6$ conviene indifferentemente rispondere a 5 o 7 domande;
 	
 	\item  se $1/6<p<1/4$ conviene rispondere a 7 domande;
 	
-	\item se $p=1/4$ conviene indifferentemente rispondere a 7 o 9
-	domande;
+	\item se $p=1/4$ conviene indifferentemente rispondere a 7 o 9 domande;
 	
 	\item se $1/4<p<1$ conviene rispondere a 9 domande; 
 			
-	\item se $p=1$ \`{e} indifferente rispondere ad un qualunque
-	numero maggiore od uguale a 5 di domande.
+	\item se $p=1$ è indifferente rispondere ad un qualunque numero maggiore od uguale a 5 di domande.
 \end{itemize} 
 }
 
 \renewcommand{\Aiutino}{Dato un intero $n$, maggiore od uguale a 5 e
-minore od uguale a 10, indichiamo con $f_{n}(p)$ la probabilit\`{a} di
-superare il test rispondendo ad esattamente $n$ domande ed avendo
-preparazione $p$.  Il problema chiede di determinare, al variare di
-$p$, il massimo tra tutte le $f_{n}$.  Con qualche calcolo si ottiene
-che tali funzioni sono
+minore od uguale a 10, indichiamo con $f_{n}(p)$ la probabilità di superare il test rispondendo ad esattamente $n$ domande ed avendo preparazione $p$.  Il problema chiede di determinare, al variare di $p$, il massimo tra tutte le $f_{n}$.  Con qualche calcolo si ottiene che tali funzioni sono
 \begin{eqnarray*}
 	f_{5}(p) & = & p^{5},  \\
 	f_{6}(p) & = & p^{6},  \\
@@ -67,9 +50,7 @@ che tali funzioni sono
 	f_{10}(p) & = & p^{10}+10p^{9}(1-p)+45p^{8}(1-p)^{2}.
 \end{eqnarray*}
 
-Si verifica ora con semplici disequazioni che $f_{6}\leq f_{5}$, 
-$f_{8}\leq f_{7}$ e $f_{10}\leq f_{9}$, con uguaglianza se e solo se 
-$p=0$ oppure $p=1$. Ci si riduce cos\`{\i} a determinare il massimo 
+Si verifica ora con semplici disequazioni che $f_{6}\leq f_{5}$, $f_{8}\leq f_{7}$ e $f_{10}\leq f_{9}$, con uguaglianza se e solo se $p=0$ oppure $p=1$. Ci si riduce cos\`{\i} a determinare il massimo
 tra le $f_{n}$ di indice dispari.}
 
 \renewcommand{\SoluzioneUfficiale}{

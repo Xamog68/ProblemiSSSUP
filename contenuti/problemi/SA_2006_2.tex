@@ -2,110 +2,53 @@
 
 \renewcommand{\NumeroProblema}{2}
 
-\renewcommand{\Testo}{Al Casin\`{o} di Montecarlo (comune della provincia di
-	Lucca) va di moda il ``Gioco dei Pacchi''.  Un giocatore paga 35
-	euro per una partita.  Di fronte al giocatore vengono posti 4
-	pacchi chiusi, contenenti rispettivamente 10, 20, 30, 40 euro.
-	Ovviamente il giocatore non sa il contenuto di ciascun pacco.  A
-	questo punto il giocatore pu\`{o} aprire un pacco a sua scelta e,
-	una volta visto il contenuto, pu\`{o} accettarlo o rifiutarlo: se
-	accetta incassa la cifra contenuta nel pacco stesso e la partita
-	finisce, se rinuncia pu\`{o} aprire un secondo pacco a sua scelta.
-	Visto il contenuto del secondo pacco, il giocatore pu\`{o} ancora
-	una volta accettare o rifiutare.  Se accetta incassa la cifra
-	contenuta nel secondo pacco e la partita finisce, se rifiuta apre
-	un terzo pacco, e questa volta \`{e} obbligato ad accettarne il
-	contenuto.
+\renewcommand{\Testo}{Al Casinò di Montecarlo (comune della provincia di
+	Lucca) va di moda il ``Gioco dei Pacchi''.  Un giocatore paga 35 euro per una partita.  Di fronte al giocatore vengono posti 4 pacchi chiusi, contenenti rispettivamente 10, 20, 30, 40 euro. Ovviamente il giocatore non sa il contenuto di ciascun pacco.  A questo punto il giocatore può aprire un pacco a sua scelta e, una volta visto il contenuto, può accettarlo o rifiutarlo: se accetta incassa la cifra contenuta nel pacco stesso e la partita finisce, se rinuncia può aprire un secondo pacco a sua scelta. Visto il contenuto del secondo pacco, il giocatore può ancora una volta accettare o rifiutare.  Se accetta incassa la cifra contenuta nel secondo pacco e la partita finisce, se rifiuta apre un terzo pacco, e questa volta è obbligato ad accettarne il contenuto.
 	
-	Due amici, Marco e Tullio, si apprestano a trascorrere una serata
-	al Casin\`{o}, durante la quale giocheranno pi\`{u} volte al Gioco
-	dei Pacchi.  Discutendo sulle strategie da attuare, Tullio
-	afferma: ``Potendo aprire 3 pacchi, prima o poi quello da 30 o
-	quello da 40 euro lo trovo.  Appena esce uno di questi 2 pacchi io
-	accetto''.  Marco invece afferma: ``Io accetto solo se mi arriva
-	il pacco da 40 euro, se proprio non esce vorr\`{a} dire che mi
-	tengo il contenuto del terzo pacco''.
+	Due amici, Marco e Tullio, si apprestano a trascorrere una serata al Casinò, durante la quale giocheranno più volte al Gioco dei Pacchi.  Discutendo sulle strategie da attuare, Tullio afferma: ``Potendo aprire 3 pacchi, prima o poi quello da 30 o quello da 40 euro lo trovo.  Appena esce uno di questi 2 pacchi io accetto''.  Marco invece afferma: ``Io accetto solo se mi arriva il pacco da 40 euro, se proprio non esce vorrà dire che mi tengo il contenuto del terzo pacco''.
 	
 	\begin{enumerate}
-		\item  Determinare, alla lunga, che cosa possono aspettarsi i 
-		2 amici dalle loro strategie. 
+		\item  Determinare, alla lunga, che cosa possono aspettarsi i 2 amici dalle loro strategie.
 	
 		\item  E voi, come giochereste?
 	\end{enumerate}}
 
 \renewcommand{\Risposta}{\begin{enumerate}
-		\item  Sia Tullio sia Marco incassano in media 35 euro a
-		partita. Considerando il costo della partita, le 2 strategie
-		risultano equivalenti e permettono ai 2 amici di concludere la
-		serata in pareggio.
+		\item  Sia Tullio sia Marco incassano in media 35 euro a partita. Considerando il costo della partita, le 2 strategie risultano equivalenti e permettono ai 2 amici di concludere la serata in pareggio.
 	
-		\item  Esiste una strategia che consente un incasso medio
-		superiore a 35 euro a partita: occorre accettare il primo
-		pacco se e solo se \`{e} quello da 40 euro e poi eventualmente
-		accettare il secondo pacco se e solo se \`{e} quello da 30 o
-		40 euro.
+		\item  Esiste una strategia che consente un incasso medio superiore a 35 euro a partita: occorre accettare il primo pacco se e solo se è quello da 40 euro e poi eventualmente accettare il secondo pacco se e solo se è quello da 30 o 40 euro.
 	\end{enumerate}}
 
 \renewcommand{\Aiutino}{\begin{enumerate}
 	\renewcommand{\labelenumi}{(\alph{enumi})} 
-	\item  Calcolare, sia per Tullio sia per Marco, la probabilit\`{a}
-	di terminare la partita con 10, 20, 30, 40 euro. Calcolare quindi 
-	l'incasso medio a partita facendo la media pesata dei vari incassi
-	possibili.
+	\item  Calcolare, sia per Tullio sia per Marco, la probabilità di terminare la partita con 10, 20, 30, 40 euro. Calcolare quindi l'incasso medio a partita facendo la media pesata dei vari incassi possibili.
 
-	\item  Provare a vedere cosa succede se si rifiuta al primo colpo 
-	il pacco da 30 euro.
+	\item  Provare a vedere cosa succede se si rifiuta al primo colpo il pacco da 30 euro.
 \end{enumerate}}
 
 \renewcommand{\SoluzioneUfficiale}{\TitoloSoluzione\DomandaA Tullio
-statisticamente terminer\`{a} met\`{a} delle sue partite accettando il
-pacco da 30 euro e met\`{a} delle sue partite accettando il pacco da
-40 euro. Di conseguenza incasser\`{a} in media 35 euro a partita, pari
-al costo della partita stessa. Pertanto, alla lunga, Tullio rimarr\`{a}
-in pareggio.
+statisticamente terminerà metà delle sue partite accettando il pacco da 30 euro e metà delle sue partite accettando il pacco da 40 euro. Di conseguenza incasserà in media 35 euro a partita, pari al costo della partita stessa. Pertanto, alla lunga, Tullio rimarrà in pareggio.
 
-Passiamo ora alla strategia di Marco. La probabilit\`{a} di non
-trovare il pacco da 40 euro in 3 estrazioni \`{e} 1/4. Di conseguenza 
-statisticamente Marco terminer\`{a} 3/4 delle sue partite incassando
-40 euro. Nel rimanente 1/4 delle partite Marco incasser\`{a} con
-uguale probabilit\`{a} 10, 20 o 30 euro, dunque in media 20 euro. Di
-conseguenza, l'incasso medio di Marco sar\`{a} di
+Passiamo ora alla strategia di Marco. La probabilità di non trovare il pacco da 40 euro in 3 estrazioni è 1/4. Di conseguenza statisticamente Marco terminerà 3/4 delle sue partite incassando 40 euro. Nel rimanente 1/4 delle partite Marco incasserà con uguale probabilità 10, 20 o 30 euro, dunque in media 20 euro. Di conseguenza, l'incasso medio di Marco sarà di
 $$40\cdot\frac{3}{4}+20\cdot\frac{1}{4}=\frac{140}{4}=35$$
-euro a partita, e cio\`{e} esattamente uguale a quello di Tullio.
-Pertanto anche Marco, pur attuando una strategia diversa da quella di 
-Tullio, alla lunga rimarr\`{a} in pareggio.
+euro a partita, e cioè esattamente uguale a quello di Tullio. Pertanto anche Marco, pur attuando una strategia diversa da quella di Tullio, alla lunga rimarrà in pareggio.
 
 \DomandaB Mostriamo che esiste una strategia che consente un incasso
-medio superiore ai 35 euro: tale strategia consiste nell'accettare il
-primo pacco se e solo se contiene 40 euro, e poi eventualmente
-accettare il secondo pacco se e solo se contiene 30 o 40 euro.
+medio superiore ai 35 euro: tale strategia consiste nell'accettare il primo pacco se e solo se contiene 40 euro, e poi eventualmente accettare il secondo pacco se e solo se contiene 30 o 40 euro.
 
 Calcoliamo l'incasso medio con questa strategia. 
 \begin{itemize}
-	\item  In 1/4 dei casi si incassano subito 40 euro con il primo
-	pacco.
+	\item  In 1/4 dei casi si incassano subito 40 euro con il primo pacco.
 
-	\item  In 1/2 dei casi il primo pacco contiene 10 o 20 euro. La
-	partita si concluder\`{a} dunque con il secondo o il terzo pacco
-	non appena esce il pacco da 30 o quello da 40. Poich\'{e} i 2
-	finali sono equiprobabili in questi casi l'incasso medio \`{e} di 
-	35 euro.
+	\item  In 1/2 dei casi il primo pacco contiene 10 o 20 euro. La partita si concluderà dunque con il secondo o il terzo pacco non appena esce il pacco da 30 o quello da 40. Poiché i 2 finali sono equiprobabili in questi casi l'incasso medio è di 35 euro.
 
-	\item  Nel rimanente 1/4 dei casi il primo pacco contiene 30 euro.
-	Dopo averlo rifiutato si aprono 3 possibilit\`{a}.
+	\item  Nel rimanente 1/4 dei casi il primo pacco contiene 30 euro. Dopo averlo rifiutato si aprono 3 possibilità.
 	\begin{itemize}
-		\item  In 1/3 dei casi il secondo pacco sar\`{a} quello da 40 
-		euro, che si incassano all'instante.
+		\item  In 1/3 dei casi il secondo pacco sarà quello da 40 euro, che si incassano all'instante.
 	
-		\item  In 1/3 dei casi il secondo pacco sar\`{a} quello da 10 
-		euro, che si rifiuta: a questo punto l'incasso sar\`{a} il
-		valore del terzo pacco, che contiene in media (40+20)/2=30
-		euro.
+		\item  In 1/3 dei casi il secondo pacco sarà quello da 10 euro, che si rifiuta: a questo punto l'incasso sarà il valore del terzo pacco, che contiene in media (40+20)/2=30 euro.
 	
-		\item  In 1/3 dei casi il secondo pacco sar\`{a} quello da 20 
-		euro, che si rifiuta: a questo punto l'incasso sar\`{a} il
-		valore del terzo pacco, che contiene in media (40+10)/2=25
-		euro.
+		\item  In 1/3 dei casi il secondo pacco sarà quello da 20 euro, che si rifiuta: a questo punto l'incasso sarà il valore del terzo pacco, che contiene in media (40+10)/2=25 euro.
 	\end{itemize}
 \end{itemize}
 
@@ -113,30 +56,15 @@ Mettendo tutto insieme l'incasso medio risulta quindi
 $$\frac{1}{4}\cdot 40+\frac{1}{2}\cdot 35+\frac{1}{4}\left(
 \frac{1}{3}\cdot 40+\frac{1}{3}\cdot 30+\frac{1}{3}\cdot 25\right)=
 \frac{425}{12},$$
-e cio\`{e} poco pi\`{u} di 35.4 euro, ma in ogni caso pi\`{u} del
-costo della partita.
+e cioè poco più di 35.4 euro, ma in ogni caso più del costo della partita.
 
-Dimostriamo ora che questa strategia non \`{e} ulteriormente
-migliorabile.
+Dimostriamo ora che questa strategia non è ulteriormente migliorabile.
 
-Intanto \`{e} evidente che il primo pacco va sicuramente accettato se 
-contiene 40 euro, e rifiutato se contiene 10 o 20 euro. L'unico dubbio
-sorge dunque di fronte ad un primo pacco da 30 euro.
+Intanto è evidente che il primo pacco va sicuramente accettato se contiene 40 euro, e rifiutato se contiene 10 o 20 euro. L'unico dubbio sorge dunque di fronte ad un primo pacco da 30 euro.
 
-Se si decide di accettarlo, si ricade sostanzialmente nella strategia 
-di Tullio. Infatti in tal caso il secondo pacco si accetta se \`{e} da
-40 (ovviamente), si rifiuta se \`{e} da 10 o 20 (infatti in tal caso
-rimangono ancora i 2 pacchi da 30 e 40), e anche con il 30 si accetta 
-(infatti in tal caso i 2 pacchi rimasti sono 10-40 oppure 20-40, ed in
-entrambi i casi l'incasso medio al terzo tentativo sarebbe minore od
-uguale di 30 euro).
+Se si decide di accettarlo, si ricade sostanzialmente nella strategia di Tullio. Infatti in tal caso il secondo pacco si accetta se è da 40 (ovviamente), si rifiuta se è da 10 o 20 (infatti in tal caso rimangono ancora i 2 pacchi da 30 e 40), e anche con il 30 si accetta (infatti in tal caso i 2 pacchi rimasti sono 10-40 oppure 20-40, ed in entrambi i casi l'incasso medio al terzo tentativo sarebbe minore od uguale di 30 euro).
 
-Se invece si decide di rifiutare un primo pacco da 30 euro, la strategia \`{e}
-sostanzialmente obbligata: \`{e} infatti evidente che un secondo pacco
-da 40 euro va sicuramente accettato, mentre il calcolo svolto
-precedentemente mostra che rifiutare un secondo pacco da 10 o 20 euro
-porta ad incassarne in media, rispettivamente, 30 e 25 al terzo
-tentativo, dunque di pi\`{u}. 
+Se invece si decide di rifiutare un primo pacco da 30 euro, la strategia è sostanzialmente obbligata: è infatti evidente che un secondo pacco da 40 euro va sicuramente accettato, mentre il calcolo svolto precedentemente mostra che rifiutare un secondo pacco da 10 o 20 euro porta ad incassarne in media, rispettivamente, 30 e 25 al terzo tentativo, dunque di più.
 
 }
 

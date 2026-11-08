@@ -3,148 +3,92 @@
 \renewcommand{\NumeroProblema}{3}
 
 \renewcommand{\Testo}{
-La Scuola S.\ Anna organizza da anni l'operazione ``Turisti
-d'Eccellenza'': chiunque, pagando 300 euro, pu\`{o} trascorrere 24 ore
-insieme a docenti e studenti della Scuola.  Per il momento, al massimo
-una persona al giorno \`{e} ammessa a questa attivit\`{a}: per questo
-motivo occorre prenotare per tempo e pagare in anticipo.
-Inspiegabilmente, negli ultimi anni \`{e} accaduto spesso che alcuni
-aspiranti turisti, pur avendo regolarmente prenotato e pagato, non si
-sono poi presentati alla giornata designata, anche se questo ha
-comportato per loro la perdita della quota di partecipazione.
+La Scuola S.\ Anna organizza da anni l'operazione ``Turisti d'Eccellenza'': chiunque, pagando 300 euro, può trascorrere 24 ore insieme a docenti e studenti della Scuola.  Per il momento, al massimo una persona al giorno è ammessa a questa attività: per questo motivo occorre prenotare per tempo e pagare in anticipo. Inspiegabilmente, negli ultimi anni è accaduto spesso che alcuni aspiranti turisti, pur avendo regolarmente prenotato e pagato, non si sono poi presentati alla giornata designata, anche se questo ha comportato per loro la perdita della quota di partecipazione.
 	
-Elaborando i dati acquisiti, gli statistici hanno calcolato che il
-turista che ha pagato e prenotato si presenta con una certa
-probabilit\`{a} $p$.
+Elaborando i dati acquisiti, gli statistici hanno calcolato che il turista che ha pagato e prenotato si presenta con una certa probabilità $p$.
 
-Per minimizzare i posti vuoti e massimizzare i profitti, si \`{e}
-deciso da quest'anno di seguire una politica di \emph{overbooking}.
-La Scuola pertanto, pur avendo un solo posto disponibile per ogni
-giorno, si riserva di venderne anche 2 o 3 (non di pi\`{u}, perch\'{e}
-una legge regionale lo vieta).  Come sempre, chi non si presenta perde
-la quota di partecipazione gi\`{a} versata; se invece in un dato
-giorno arrivano in 2 o pi\`{u}, solo uno trascorrer\`{a} la giornata
-alla Scuola (chi arriva primo), mentre gli altri avranno diritto alla
-restituzione della quota versata pi\`{u} un indennizzo pari a 500
-euro.
+Per minimizzare i posti vuoti e massimizzare i profitti, si è deciso da quest'anno di seguire una politica di \emph{overbooking}. La Scuola pertanto, pur avendo un solo posto disponibile per ogni giorno, si riserva di venderne anche 2 o 3 (non di più, perché una legge regionale lo vieta).  Come sempre, chi non si presenta perde la quota di partecipazione già versata; se invece in un dato giorno arrivano in 2 o più, solo uno trascorrerà la giornata alla Scuola (chi arriva primo), mentre gli altri avranno diritto alla restituzione della quota versata più un indennizzo pari a 500 euro.
 	
-Determinare, in funzione di $p$, la strategia ottimale per la Scuola,
-e cio\`{e} il numero di posti da mettere in vendita per ogni giorno
-(1, 2 o 3) in modo da assicurarsi, in media, il maggior guadagno
-possibile.
+Determinare, in funzione di $p$, la strategia ottimale per la Scuola, e cioè il numero di posti da mettere in vendita per ogni giorno (1, 2 o 3) in modo da assicurarsi, in media, il maggior guadagno possibile.
 }
 
 \renewcommand{\Risposta}{
-La situazione in funzione di $p$ \`{e} la seguente.
+La situazione in funzione di $p$ è la seguente.
 \begin{itemize}
-	\item Se $0\leq p<1/2$, allora alla Scuola conviene mettere in
-	vendita 3 posti al giorno.
+	\item Se $0\leq p<1/2$, allora alla Scuola conviene mettere in vendita 3 posti al giorno.
 
-	\item Se $1/2<p<\frac{1}{2}\sqrt{3/2}$, allora alla Scuola
-	conviene mettere in vendita 2 posti al giorno.
+	\item Se $1/2<p<\frac{1}{2}\sqrt{3/2}$, allora alla Scuola conviene mettere in vendita 2 posti al giorno.
 
-	\item Se $\frac{1}{2}\sqrt{3/2}<p\leq 1$, allora alla Scuola
-	conviene mettere in vendita un solo posto al giorno.
+	\item Se $\frac{1}{2}\sqrt{3/2}<p\leq 1$, allora alla Scuola conviene mettere in vendita un solo posto al giorno.
 	
-	\item Nel caso limite $p=1/2$ \`{e} indifferente mettere in
-	vendita 2 o 3 posti. Nel caso limite
-	$p=\frac{1}{2}\sqrt{3/2}$ \`{e} indifferente mettere in
-	vendita 1 o 2 posti.
+	\item Nel caso limite $p=1/2$ è indifferente mettere in vendita 2 o 3 posti. Nel caso limite $p=\frac{1}{2}\sqrt{3/2}$ è indifferente mettere in vendita 1 o 2 posti.
 \end{itemize}
 }
 
 \renewcommand{\Aiutino}{
-Indichiamo con $G_{k}(p)$ il guadagno medio della Scuola quando questa
-mette in vendita $k$ posti (con $k=1,2,3$). Dimostrare che
+Indichiamo con $G_{k}(p)$ il guadagno medio della Scuola quando questa mette in vendita $k$ posti (con $k=1,2,3$). Dimostrare che
 $$G_{1}(p)=3,
 \hspace{3em}
 G_{2}(p)=6-8p^{2},
 \hspace{3em}
 G_{3}(p)=9-24p^{2}+8p^{3}.$$
 
-Resta da calcolare, al variare di $p$, il massimo tra le 3 funzioni.
-Per far questo occorre confrontare $G_{1}$ e $G_{2}$, quindi $G_{2}$ e
-$G_{3}$. Il confronto tra $G_{1}$ e $G_{3}$ non serve.
+Resta da calcolare, al variare di $p$, il massimo tra le 3 funzioni. Per far questo occorre confrontare $G_{1}$ e $G_{2}$, quindi $G_{2}$ e $G_{3}$. Il confronto tra $G_{1}$ e $G_{3}$ non serve.
 }
 
 \renewcommand{\SoluzioneUfficiale}{Calcoliamo il guadagno medio per la Scuola nel caso in cui metta in
-vendita 1, 2 o 3 posti per giorno. Per comodit\`{a} esprimiamo i
-prezzi in centinaia di euro.
+vendita 1, 2 o 3 posti per giorno. Per comodità esprimiamo i prezzi in centinaia di euro.
 
-Se la Scuola mette in vendita un solo posto, allora non vi \`{e}
-incertezza, ed il guadagno medio \`{e} 
+Se la Scuola mette in vendita un solo posto, allora non vi è incertezza, ed il guadagno medio è
 $$G_{1}(p)=3.$$
 
-Se la Scuola mette in vendita 2 posti, allora incassa 6, a cui bisogna
-togliere 
+Se la Scuola mette in vendita 2 posti, allora incassa 6, a cui bisogna togliere
 \begin{itemize}
-	\item 8 (3 di restituzione e 5 di indennizzo) nel caso in cui i
-	turisti si presentino entrambi, cosa che accade con
-	probabilit\`{a} $p^{2}$;
+	\item 8 (3 di restituzione e 5 di indennizzo) nel caso in cui i turisti si presentino entrambi, cosa che accade con probabilità $p^{2}$;
 
-	\item  0 nel restante caso, cio\`{e} se i turisti presentano in 0 o 1.
+	\item  0 nel restante caso, cioè se i turisti presentano in 0 o 1.
 \end{itemize}
 
-Ne segue che il guadagno medio \`{e} dato da
+Ne segue che il guadagno medio è dato da
 $$G_{2}(p)=6-8p^{2}.$$
 
-Se la Scuola mette in vendita 3 posti, allora incassa 9, a cui bisogna
-togliere
+Se la Scuola mette in vendita 3 posti, allora incassa 9, a cui bisogna togliere
 \begin{itemize}
-	\item  16 (cio\`{e} $8\times 2$) se si presentano in 3, cosa che accade con
-	probabilit\`{a} $p^{3}$;
+	\item  16 (cioè $8\times 2$) se si presentano in 3, cosa che accade con probabilità $p^{3}$;
 
-	\item 8 se si presentano in 2, cosa che accade con probabilit\`{a}
-	$3p^{2}(1-p)$ (infatti $p^{2}$ \`{e} la probabilit\`{a} che in 2
-	si presentino, $1-p$ la probabilit\`{a} che il restante non si
-	presenti, 3 sono i modi di scegliere quello che non si presenta);
+	\item 8 se si presentano in 2, cosa che accade con probabilità $3p^{2}(1-p)$ (infatti $p^{2}$ è la probabilità che in 2 si presentino, $1-p$ la probabilità che il restante non si presenti, 3 sono i modi di scegliere quello che non si presenta);
 	
 	\item  0 nei restanti casi.
 \end{itemize}
 
-Ne segue che in questo caso il guadagno medio \`{e} dato da
+Ne segue che in questo caso il guadagno medio è dato da
 $$G_{3}(p)=9-16p^{3}-8\cdot 3p^{2}(1-p)=9-24p^{2}+8p^{3}.$$
 
 Non resta quindi che stabilire, al variare di $p$, quale delle 3
-funzioni \`{e} pi\`{u} grande. Ricordando che comunque $0\leq p\leq
+funzioni è più grande. Ricordando che comunque $0\leq p\leq
 1$, abbiamo che
 $$G_{2}(p)\geq G_{1}(p)\ \Longleftrightarrow\ 8p^{2}\leq 3\ \Longleftrightarrow\ 
 p\leq \frac{1}{2}\sqrt{\frac{3}{2}},$$
-con uguaglianza se e solo se $p=\frac{1}{2}\sqrt{3/2}$.
-Inoltre
+con uguaglianza se e solo se $p=\frac{1}{2}\sqrt{3/2}$. Inoltre
 $$G_{3}(p)\geq G_{2}(p)\ \Longleftrightarrow\ 8p^{3}-16p^{2}+3\geq 0
 \ \Longleftrightarrow\ (2p-1)(4p^{2}-6p-3)\geq 0.$$
 
-Non \`{e} difficile vedere che $4p^{2}-6p-3<0$ per ogni $p\in[0,1]$
-(trattandosi di una parabola rivolta verso l'alto basta in realt\`{a}
-controllare la disuguaglianza per $p=0$ e $p=1$) e quindi tutto
-dipende dal fattore di primo grado $2p-1$.  Ne segue che
+Non è difficile vedere che $4p^{2}-6p-3<0$ per ogni $p\in[0,1]$ (trattandosi di una parabola rivolta verso l'alto basta in realtà controllare la disuguaglianza per $p=0$ e $p=1$) e quindi tutto dipende dal fattore di primo grado $2p-1$.  Ne segue che
 $$G_{3}(p)\geq G_{2}(p)\ \Longleftrightarrow\ p\leq\frac{1}{2},$$
 con uguaglianza se e solo se $p=1/2$.
 
 Siamo dunque pronti per trarre le conclusioni.
 \begin{itemize}
-	\item  Se $0\leq p<1/2$, allora $G_{3}(p)>G_{2}(p)>G_{1}(p)$. Ne segue
-	che alla Scuola conviene mettere in vendita 3 posti al giorno.
+	\item  Se $0\leq p<1/2$, allora $G_{3}(p)>G_{2}(p)>G_{1}(p)$. Ne segue che alla Scuola conviene mettere in vendita 3 posti al giorno.
 
-	\item  Se $1/2<p<\frac{1}{2}\sqrt{3/2}$, allora $G_{2}(p)>G_{3}(p)$ e
-	$G_{2}(p)>G_{1}(p)$. Ne segue che alla Scuola conviene mettere in 
-	vendita 2 posti al giorno.
+	\item  Se $1/2<p<\frac{1}{2}\sqrt{3/2}$, allora $G_{2}(p)>G_{3}(p)$ e $G_{2}(p)>G_{1}(p)$. Ne segue che alla Scuola conviene mettere in vendita 2 posti al giorno.
 
-	\item Se $\frac{1}{2}\sqrt{3/2}<p\leq 1$, allora
-	$G_{1}(p)>G_{2}(p)>G_{3}(p)$.  Ne segue che conviene mettere in
-	vendita un solo posto al giorno.
+	\item Se $\frac{1}{2}\sqrt{3/2}<p\leq 1$, allora $G_{1}(p)>G_{2}(p)>G_{3}(p)$.  Ne segue che conviene mettere in vendita un solo posto al giorno.
 	
-	\item Nel caso limite $p=1/2$ \`{e} indifferente mettere in
-	vendita 2 o 3 posti. Nel caso limite
-	$p=\frac{1}{2}\sqrt{3/2}$ \`{e} indifferente mettere in
-	vendita 1 o 2 posti.
+	\item Nel caso limite $p=1/2$ è indifferente mettere in vendita 2 o 3 posti. Nel caso limite $p=\frac{1}{2}\sqrt{3/2}$ è indifferente mettere in vendita 1 o 2 posti.
 \end{itemize}
 
-Il seguente grafico rappresenta le funzioni $G_{1}(p)$, $G_{2}(p)$,
-$G_{3}(p)$ al variare di $p$ in $[0,1]$.  La linea spessa rappresenta
-il massimo tra le 3 funzioni, cio\`{e} il guadagno medio della Scuola
-scegliendo la strategia ottimale in funzione di $p$.
+Il seguente grafico rappresenta le funzioni $G_{1}(p)$, $G_{2}(p)$, $G_{3}(p)$ al variare di $p$ in $[0,1]$.  La linea spessa rappresenta il massimo tra le 3 funzioni, cioè il guadagno medio della Scuola scegliendo la strategia ottimale in funzione di $p$.
 
 \begin{center}
 	\psset{xunit=30ex,yunit=2ex}
@@ -181,28 +125,16 @@ scegliendo la strategia ottimale in funzione di $p$.
 	\endpspicture
 \end{center}
 
-Come era intuitivo prevedere, pi\`{u} la probabilit\`{a} $p$ \`{e}
-bassa, pi\`{u} \`{e} facile che i turisti non si presentino, dunque
-pi\`{u} \`{e} conveniente aumentare il numero di posti venduti.
+Come era intuitivo prevedere, più la probabilità $p$ è bassa, più è facile che i turisti non si presentino, dunque più è conveniente aumentare il numero di posti venduti.
 }
 
 \renewcommand{\SoluzioniAlternative}{
 }
 
 \renewcommand{\Osservazioni}{\TitoloOsservazione 
-Nella soluzione presentata non abbiamo avuto bisogno di confrontare
-$G_{3}(p)$ e $G_{1}(p)$. Tale confronto produce una disequazione di terzo 
-grado senza radici razionali, dunque non risolubile per via del tutto 
-elementare.
+Nella soluzione presentata non abbiamo avuto bisogno di confrontare $G_{3}(p)$ e $G_{1}(p)$. Tale confronto produce una disequazione di terzo grado senza radici razionali, dunque non risolubile per via del tutto elementare.
 
-Sarebbe molto interessante generalizzare il problema ammettendo che la
-Scuola possa mettere in vendita $k$ posti (o ancora pi\`{u} in
-generale che per ogni giorno ci siano $m$ posti disponibili e $k$
-messi in vendita). Intuitivamente si direbbe che pi\`{u} $p$ \`{e}
-piccola e pi\`{u} \`{e} conveniente aumentare il numero di posti in
-vendita. Tuttavia una dimostrazione di questi fatti sembra tutt'altro 
-che ovvia. Il problema \`{e} che le (dis)equazioni coinvolte hanno un grado
-sempre maggiore all'aumentare di $k$ (e di $m$).
+Sarebbe molto interessante generalizzare il problema ammettendo che la Scuola possa mettere in vendita $k$ posti (o ancora più in generale che per ogni giorno ci siano $m$ posti disponibili e $k$ messi in vendita). Intuitivamente si direbbe che più $p$ è piccola e più è conveniente aumentare il numero di posti in vendita. Tuttavia una dimostrazione di questi fatti sembra tutt'altro che ovvia. Il problema è che le (dis)equazioni coinvolte hanno un grado sempre maggiore all'aumentare di $k$ (e di $m$).
 }
 
 \renewcommand{\Commenti}{
