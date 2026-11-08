@@ -10,6 +10,8 @@ Richiede Pandoc. I sorgenti del repository NON vengono modificati.
 Ogni file web contiene impronte SHA-256 per verificare sorgente e convertitore.
 È una prima implementazione sperimentale: verificare sempre PSTricks,
 macro storiche, figure ed eventuali riferimenti incrociati.
+ Le bozze AI di Risposta e Aiutino restano escluse dai dati web finche'
+ l'interfaccia non ne indica esplicitamente la provenienza.
 """
 from __future__ import annotations
 import argparse
@@ -35,6 +37,77 @@ MISSING_FIGURE_RE = re.compile(
 )
 PSTRICKS_INLINE_RE = re.compile(r'\\pspicture\b.*?\\endpspicture\b', flags=re.S)
 PSTRICKS_ENV_RE = re.compile(r'\\begin\{pspicture\}.*?\\end\{pspicture\}', flags=re.S)
+
+# Rendering web esplicito per le macro locali dei problemi storici.
+# Il convertitore non esegue il preambolo LaTeX: gli usi di queste macro
+# devono essere tradotti, o segnalati; mai abbandonati a Pandoc.
+SUDOKU_PAIR_RE = re.compile(
+    r'\\IniziaSudoku((?:\s*\{[^{}]*\}){8})\s*'
+    r'\\FinisciSudoku((?:\s*\{[^{}]*\}){8})'
+)
+DOMINO_RE = re.compile(r'\\domino\s*\{([^{}]*)\}\s*\{([^{}]*)\}')
+AREA_RE = re.compile(r'\\AreaInt(?:Pre|Post)\s*\{[^{}]*\}')
+LOCAL_USE_RE = re.compile(
+    r'\\(?:IniziaSudoku|FinisciSudoku|domino|AreaIntPre|AreaIntPost|'
+    r'aula|aulagialla)\b'
+)
+AI_DRAFT_RE = re.compile(r'SSSUP-BOZZA-AI:\s*(Risposta|Aiutino|SoluzioneRedazionale)\b')
+LOCAL_DEF_RE = re.compile(r'\\(?:providecommand|newcommand)\s*\{\\([A-Za-z@]+)\}')
+
+
+def render_sudoku(cells: list[str]) -> str:
+    """Rende le 16 caselle nell'ordine originale (righe dall'alto)."""
+    if len(cells) != 16:
+        raise ValueError('Sudoku: attese esattamente 16 caselle')
+    rows = []
+    for r in range(4):
+        cols = []
+        for c in range(4):
+            value = cells[4*r+c].strip()
+            # In questi problemi le caselle contengono cifre, A-D, ?, o vuoto.
+            if not re.fullmatch(r'[A-Za-z0-9?]*', value):
+                raise ValueError(f'Sudoku: casella non supportata: {value!r}')
+            top = '2px solid' if r in (0, 2) else '1px dotted'
+            left = '2px solid' if c in (0, 2) else '1px dotted'
+            style = (f'width:1.8em;height:1.8em;text-align:center;'
+                     f'border-top:{top};border-left:{left};'
+                     f'border-right:{"2px solid" if c==3 else "0"};'
+                     f'border-bottom:{"2px solid" if r==3 else "0"};')
+            cols.append(f'<td style="{style}">{escape(value)}</td>')
+        rows.append('<tr>'+''.join(cols)+'</tr>')
+    return ('<table class="sssup-sudoku" aria-label="Sudoku 4 per 4" '
+            'style="display:inline-table;border-collapse:collapse;vertical-align:middle;'
+            'margin:.3em .6em;">'
+            +'<tbody>'+''.join(rows)+'</tbody></table>')
+
+
+def render_local_macros(text: str, local_defs=()) -> tuple[str, dict[str, str]]:
+    """Sostituisce le macro locali con HTML differito o LaTeX standard."""
+    sudoku: dict[str,str] = {}
+    def replace_sudoku(match: re.Match) -> str:
+        cells = re.findall(r'\{([^{}]*)\}', match.group())
+        token = f'SSSUPSUDOKURENDER{len(sudoku):04d}FINE'
+        sudoku[token] = render_sudoku(cells)
+        return '\n\n'+token+'\n\n'
+    text = SUDOKU_PAIR_RE.sub(replace_sudoku, text)
+
+    def replace_domino(match: re.Match) -> str:
+        a,b = match.groups()
+        # La macro originale e' una tabella matematica 1x2 con bordi.
+        # Ora la formula MathJax contiene solo comandi LaTeX standard.
+        return (r'\begin{array}{|c|c|}\hline '
+                + a + ' & ' + b + r' \\ \hline\end{array}')
+    text = DOMINO_RE.sub(replace_domino, text)
+    remaining = LOCAL_USE_RE.search(text)
+    if remaining:
+        raise ValueError(f'Macro locale non convertita: {remaining.group(0)}')
+    # Anche una macro locale aggiunta in futuro non deve sparire nel nulla.
+    # Le macro delle figure PSTricks sono gia' state rimosse con il disegno.
+    for name in local_defs:
+        if re.search(r'\\' + re.escape(name) + r'(?![A-Za-z@])', text):
+            raise ValueError('Macro locale senza conversione web: ' + chr(92) + name)
+    return text,sudoku
+
 
 
 def inspect_figure_issues(tex: str) -> dict:
@@ -114,6 +187,9 @@ def preprocess(text: str) -> tuple[str,int,list[str]]:
 
     text=MISSING_FIGURE_RE.sub(mark_missing,text)
     text=no_comments(text)
+    # Le sei invocazioni nel 2010.4 generano ciascuna un intero pspicture
+    # nella macro locale. Segnalarle come disegno anziche' farle sparire.
+    text=AREA_RE.sub(r'\\pspicture\\endpspicture', text)
     for letter in 'ABCDEFG':
         text=re.sub(r'\\Domanda'+letter+r'\b',r'\\textbf{Punto ('+letter.lower()+r').} ',text)
     text=re.sub(r'\\TitoloSoluzione\b','',text)
@@ -167,8 +243,9 @@ def preprocess(text: str) -> tuple[str,int,list[str]]:
     return text,figure_count,missing
 
 
-def convert(text: str, provenance: str) -> tuple[str,int]:
+def convert(text: str, provenance: str, local_defs=()) -> tuple[str,int]:
     text, figures, missing=preprocess(text)
+    text, sudoku_html = render_local_macros(text, local_defs)
 
     # Protegge ambienti numerati e riferimenti prima di Pandoc.
     protected = {}
@@ -188,13 +265,17 @@ def convert(text: str, provenance: str) -> tuple[str,int]:
         preserve, text
     )
 
-    run=subprocess.run(['pandoc','--from=latex','--to=html5','--math-method=mathjax','--wrap=none'],input=text,text=True,capture_output=True)
+    run=subprocess.run(['pandoc','--from=latex','--to=html5','--mathjax','--wrap=none'],input=text,text=True,capture_output=True)
     if run.returncode:
         raise RuntimeError(f'Pandoc {provenance}: {run.stderr[-1800:]}')
     h=run.stdout.strip()
     for token, latex in protected.items():
         h=h.replace(token, escape(latex))
     if not h and has_content(text):raise RuntimeError(f'Conversione vuota per {provenance}')
+    for token, table in sudoku_html.items():
+        if token not in h:
+            raise RuntimeError(f'Sudoku non reso da Pandoc in {provenance}: {token}')
+        h=h.replace('<p>'+token+'</p>',table).replace(token,table)
     for n in range(1,figures+1):
         token='SSSUPFIGURASEGNAPOSTO'+str(n)+'FINE'
         marker='<span class="figure-placeholder">Disegno PSTricks non ancora convertito (figura '+str(n)+').</span>'
@@ -300,6 +381,7 @@ def main():
     selected=[(y,n,f) for y,n,f in all_files if (args.anno is None or y==args.anno) and (args.problema is None or n==args.problema)]
     if not selected:p.error('Nessun problema canonico corrispondente alla selezione')
     changed=skipped=0
+    total_ai_omesse=0
     for y,n,f in selected:
         key=f'{y}_{n}'
         digest=hashlib.sha256(f.read_bytes()).hexdigest()
@@ -313,10 +395,17 @@ def main():
         fields={}
         pictures=0
         issues=inspect_figure_issues(tex)
+        local_defs=set(LOCAL_DEF_RE.findall(tex))
+        ai_omesse=[]
         for field in FIELDS:
             v=extract_macro(tex,field)
             if not has_content(v):continue
-            html,nfig=convert(v or '',f'{f.name}/{field}')
+            # La provenienza AI vive nei commenti LaTeX. Senza etichette
+            # nell'interfaccia, non pubblicare risposte o aiutini nuovi.
+            if field in ('Risposta','Aiutino') and AI_DRAFT_RE.search(v or ''):
+                ai_omesse.append(field)
+                continue
+            html,nfig=convert(v or '',f'{f.name}/{field}',local_defs)
             if html:fields[field]=html
             pictures+=nfig
         if not fields.get('Testo'):
@@ -338,6 +427,7 @@ def main():
             'pandoc_version':pandoc_id,
             'sections_sha256':sections_sha256(fields),
             'figures_sha256':sections_sha256(issues),
+            'bozze_ai_omesse':ai_omesse,
         }
         warnings=[]
         if pictures:
@@ -349,6 +439,7 @@ def main():
         payload='window.SSSUP.registerProblem('+json.dumps(problem,ensure_ascii=False,separators=(',',':'))+');\n'
         path.write_text(payload,encoding='utf8')
         changed+=1
+        total_ai_omesse+=len(ai_omesse)
         print('CONVERTITO',f.name,':',len(fields),'campi')
     count_by_year={}
     for y,n,f in all_files:count_by_year[y]=count_by_year.get(y,0)+1
@@ -360,6 +451,9 @@ def main():
     manifest={'range':[rows[0]['year'],rows[-1]['year']],'years':rows}
     (dest/'manifest.js').write_text('window.SSSUP_CATALOG='+json.dumps(manifest,ensure_ascii=False,separators=(',',':'))+';\n',encoding='utf8')
     print(f'Fine. Convertiti {changed}, gia aggiornati {skipped}. Interfaccia HTML/CSS/JS non modificata.')
+    if total_ai_omesse:
+        print(f'NON PUBBLICATE: {total_ai_omesse} bozze AI di Risposta/Aiutino; '
+              'SoluzioneRedazionale ancora esclusa dal formato web.')
     return 0
 
 if __name__=='__main__':raise SystemExit(main())
