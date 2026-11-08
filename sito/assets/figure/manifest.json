@@ -1,0 +1,1097 @@
+{
+  "schema": 1,
+  "figures": [
+    {
+      "id": "SA_1996_1__SoluzioniAlternative__01",
+      "campo": "SoluzioniAlternative",
+      "sha256_sorgente": "e522733c0d2d230882ef7b3cece71cf55a926e42890b9b674c227b9bc4113c2c",
+      "sha256_svg": "1439d0d58647f423c9029206d55168dabad049e8ff64ebde923c9df47bd5fde7",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_1996_1__SoluzioniAlternative__02",
+      "campo": "SoluzioniAlternative",
+      "sha256_sorgente": "e522733c0d2d230882ef7b3cece71cf55a926e42890b9b674c227b9bc4113c2c",
+      "sha256_svg": "d8bd7d7a88082d1dc7fe4ac92f1a3cf969053e6c9c257128ffc4c2c393355122",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_1996_2__SoluzioneUfficiale__01",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "2aa3967ab4369ad66a99d2d08f7e6b33ade79248eb0f8e7132412efa80225074",
+      "sha256_svg": "d08bca81643cc445f1667df3876e6ce3257fa7482fc05ca61c8db4b40301534b",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_1996_2__SoluzioneUfficiale__02",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "2aa3967ab4369ad66a99d2d08f7e6b33ade79248eb0f8e7132412efa80225074",
+      "sha256_svg": "8e771bb17040ba1cdcaa98968f19fa6982df1279966b4bb2ee7a1945d2c4d9ef",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_1996_2__SoluzioneUfficiale__03",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "2aa3967ab4369ad66a99d2d08f7e6b33ade79248eb0f8e7132412efa80225074",
+      "sha256_svg": "53cd000b336c7823e194410c5e6df07c917bfafc818382afe96d683beb68627f",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_1996_2__SoluzioniAlternative__01",
+      "campo": "SoluzioniAlternative",
+      "sha256_sorgente": "2aa3967ab4369ad66a99d2d08f7e6b33ade79248eb0f8e7132412efa80225074",
+      "sha256_svg": "b2519e76f8e01ad350dbd06c540f1cf7a21dd1e223b67960df4f00a5aae157d5",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_1996_2__SoluzioniAlternative__02",
+      "campo": "SoluzioniAlternative",
+      "sha256_sorgente": "2aa3967ab4369ad66a99d2d08f7e6b33ade79248eb0f8e7132412efa80225074",
+      "sha256_svg": "666736b5a8775876df28dc8340c0ac0b91c69b157a5f43b5fd65eb43c852ebc4",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_1997_2__SoluzioneUfficiale__01",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "fe20f65b09871c660fde215d50e1caae1bcd116af86e0262ef18472d75ff1f92",
+      "sha256_svg": "e46b4fc8250ec3065fc4985fcf7aeb7390be990a27833a4ea9dcc19fa8072037",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_1997_2__SoluzioneUfficiale__02",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "fe20f65b09871c660fde215d50e1caae1bcd116af86e0262ef18472d75ff1f92",
+      "sha256_svg": "c818242f9436db342fa3e122c4fd2b461cea5e5c35692a7fb69c00907d42de18",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_1997_3__SoluzioneUfficiale__01",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "3dc42ddc8660975150c2c24adac867ca3e10444799595547a61ed78c57c61fef",
+      "sha256_svg": "979021066a278aaad164e2612c90a10670f2a1d74b664823135c036eda7ce37d",
+      "categoria": "tabella-candidata"
+    },
+    {
+      "id": "SA_1997_3__SoluzioneUfficiale__02",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "3dc42ddc8660975150c2c24adac867ca3e10444799595547a61ed78c57c61fef",
+      "sha256_svg": "c50d3da1dbf9ca8ad8a1df91b51d8e47078815d73a9f66ddda66c8f237c862bd",
+      "categoria": "tabella-candidata"
+    },
+    {
+      "id": "SA_1997_3__SoluzioneUfficiale__03",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "3dc42ddc8660975150c2c24adac867ca3e10444799595547a61ed78c57c61fef",
+      "sha256_svg": "0f4de4307aef585fd40801031c637ac7a25312a1817cf45e6234a1c312a63e37",
+      "categoria": "tabella-candidata"
+    },
+    {
+      "id": "SA_1997_3__Testo__01",
+      "campo": "Testo",
+      "sha256_sorgente": "3dc42ddc8660975150c2c24adac867ca3e10444799595547a61ed78c57c61fef",
+      "sha256_svg": "1e25e8f8d51a684b76a3dee80cee357675dbe2a28ae3bdbc13bbff0c657bc7e7",
+      "categoria": "tabella-candidata"
+    },
+    {
+      "id": "SA_1997_3__Testo__02",
+      "campo": "Testo",
+      "sha256_sorgente": "3dc42ddc8660975150c2c24adac867ca3e10444799595547a61ed78c57c61fef",
+      "sha256_svg": "a16c1e9eae5fb96a98a5df8011a5d619e49313faa512df51189aac89ad76607e",
+      "categoria": "tabella-candidata"
+    },
+    {
+      "id": "SA_1997_3__Testo__03",
+      "campo": "Testo",
+      "sha256_sorgente": "3dc42ddc8660975150c2c24adac867ca3e10444799595547a61ed78c57c61fef",
+      "sha256_svg": "28bee7f76a2dc8d39ff0bc1372ddfecd36e1b33a248ff02281dab503f130b041",
+      "categoria": "tabella-candidata"
+    },
+    {
+      "id": "SA_1997_3__Testo__04",
+      "campo": "Testo",
+      "sha256_sorgente": "3dc42ddc8660975150c2c24adac867ca3e10444799595547a61ed78c57c61fef",
+      "sha256_svg": "0907998e963d9e19e66f2db8d0f04c478311972cdd5dfcee426d4d6598a66657",
+      "categoria": "tabella-candidata"
+    },
+    {
+      "id": "SA_1997_4__SoluzioneUfficiale__01",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "d6b6e26d5d1c0c8eac4c580dd985e233e6aa2d649d529f8988552ab8f128fe63",
+      "sha256_svg": "f6fd57f0c0f9065bd5867da878ead21e129ae2dac9e92344519b4d7619f4958e",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_1997_4__SoluzioneUfficiale__02",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "d6b6e26d5d1c0c8eac4c580dd985e233e6aa2d649d529f8988552ab8f128fe63",
+      "sha256_svg": "8b449a760ecc928662f9923a9f63c668561fb8dc28d5a0ad6c0da537c4e9fdc4",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_1997_4__SoluzioneUfficiale__03",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "d6b6e26d5d1c0c8eac4c580dd985e233e6aa2d649d529f8988552ab8f128fe63",
+      "sha256_svg": "83646c167dcc1968bb221794918ac168a44e07974f8a6dabb360e07438a229f0",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_1997_4__SoluzioneUfficiale__04",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "d6b6e26d5d1c0c8eac4c580dd985e233e6aa2d649d529f8988552ab8f128fe63",
+      "sha256_svg": "8dd95f171e364d867154e4092547e872897f12ab76278f54e8e5c8b8247214c5",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_1997_5__SoluzioneUfficiale__01",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "c7ad2382633111e8879a88595271b7c9b4bf5887ac072ba538a86b87588f07d2",
+      "sha256_svg": "889e620895adb61342c571a9fd19da1d55e6b538a62d4ba673969c57b7d6ba73",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_1997_5__SoluzioneUfficiale__02",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "c7ad2382633111e8879a88595271b7c9b4bf5887ac072ba538a86b87588f07d2",
+      "sha256_svg": "22278eb5ea93637f49952ba6d0cd391817feb25b3303c10f2e100edbb832b63a",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_1997_5__SoluzioneUfficiale__03",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "c7ad2382633111e8879a88595271b7c9b4bf5887ac072ba538a86b87588f07d2",
+      "sha256_svg": "13b3a210de401a060df1e8648b013a3e26ef86530e8a354de2a053eaa8efb422",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_1997_5__SoluzioneUfficiale__04",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "c7ad2382633111e8879a88595271b7c9b4bf5887ac072ba538a86b87588f07d2",
+      "sha256_svg": "8fad95ef81f91e8e3be91743aa687d96f0f7ef191b74eabd576f171913effe37",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_1997_5__SoluzioneUfficiale__05",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "c7ad2382633111e8879a88595271b7c9b4bf5887ac072ba538a86b87588f07d2",
+      "sha256_svg": "ac0dac24c8ef12211ff41bbad56677f4cf5954723754883f0d4d1e757da5c365",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_1997_5__SoluzioneUfficiale__06",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "c7ad2382633111e8879a88595271b7c9b4bf5887ac072ba538a86b87588f07d2",
+      "sha256_svg": "d7a48262c0641c636a70f1fd1a83b4b057891e33e0a4ea7123ab23559ad12d67",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_1997_5__SoluzioneUfficiale__07",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "c7ad2382633111e8879a88595271b7c9b4bf5887ac072ba538a86b87588f07d2",
+      "sha256_svg": "a43f385b2d2e035494f6d111fdf663e5035ddb8e70d570fbf3b257c1ee901d24",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_1997_5__SoluzioneUfficiale__08",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "c7ad2382633111e8879a88595271b7c9b4bf5887ac072ba538a86b87588f07d2",
+      "sha256_svg": "75d5ebce22fcd473997795d543d16c2e4f3fbc96e67ce273e864c37bd41d26f7",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_1997_6__Osservazioni__01",
+      "campo": "Osservazioni",
+      "sha256_sorgente": "d2cc2cf136eb4957cb7b9861860ae73262edbea1f38c0f05b643b55fa16dfc86",
+      "sha256_svg": "166aec8b3384d4b08380e1d1d011630f4e05385bf2da0be1d895a64116bacc07",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_1997_6__SoluzioneUfficiale__01",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "d2cc2cf136eb4957cb7b9861860ae73262edbea1f38c0f05b643b55fa16dfc86",
+      "sha256_svg": "e58a99d60d1e997c71b7d47800ee51fd46543196c087cc933c98b19bafef792c",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_1997_6__Testo__01",
+      "campo": "Testo",
+      "sha256_sorgente": "d2cc2cf136eb4957cb7b9861860ae73262edbea1f38c0f05b643b55fa16dfc86",
+      "sha256_svg": "5c57b45264f56ee8a64cebf80e8fc48e608e968b5b49738b06b283669db62043",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2002_1__SoluzioneUfficiale__01",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "5f5390e7b6f8ecd54f4f67d022d2e3d378e01efece277c4e0d922c690c7d6066",
+      "sha256_svg": "b049fe3e0b214251152753514081ead99d44bc831007ed32cb15f18a522a8aa8",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2002_1__SoluzioneUfficiale__02",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "5f5390e7b6f8ecd54f4f67d022d2e3d378e01efece277c4e0d922c690c7d6066",
+      "sha256_svg": "4b815ef79197c4157411b9f54f064960d773d932bf349a9ae086d420e38588c3",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2002_1__SoluzioneUfficiale__03",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "5f5390e7b6f8ecd54f4f67d022d2e3d378e01efece277c4e0d922c690c7d6066",
+      "sha256_svg": "f6455c691aa09029c6fb1301547e9517f9a48198237d12ef45a6afd119a52533",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2002_1__SoluzioneUfficiale__04",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "5f5390e7b6f8ecd54f4f67d022d2e3d378e01efece277c4e0d922c690c7d6066",
+      "sha256_svg": "7a8ada79c3af838d2ed8e0cee5c91fd551f254a47a3c21fe8ac0f2004f88cfff",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2002_1__SoluzioneUfficiale__05",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "5f5390e7b6f8ecd54f4f67d022d2e3d378e01efece277c4e0d922c690c7d6066",
+      "sha256_svg": "09c911b0d973c118ec8a4e8762569b9c66f46f69c22bdfe4b1f49b47cd97e26d",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2002_2__SoluzioneUfficiale__01",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "db312427f705e1e40e9d7d69dfbb1665d05cbaef9bfe13ae68718e25d3da06ad",
+      "sha256_svg": "cf0cde6e7355cb4e577aa773d0b392f49942666792144fae2c5101f706363323",
+      "categoria": "tabella-candidata"
+    },
+    {
+      "id": "SA_2004_3__SoluzioneUfficiale__01",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "42f3f94addd42825d909912e1e90e464f6aa9266ff8a1b05820f56b8d24b2ccc",
+      "sha256_svg": "1266f3e49c34ede36d5eafbf55d5f688275b1ebdbc2d3f2ca8f5e3cdf63d4018",
+      "categoria": "griglia-da-valutare"
+    },
+    {
+      "id": "SA_2004_4__SoluzioneUfficiale__01",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "99a5564e8ba29d119b9ab1082132773b5a3a3b0ad0c7ebca562c1d6f4be2b8ba",
+      "sha256_svg": "fa48ca8820ddad94748bc96bdd2cb6369b8e3dbc693d051d9a17f773c1aea15c",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2004_4__SoluzioneUfficiale__02",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "99a5564e8ba29d119b9ab1082132773b5a3a3b0ad0c7ebca562c1d6f4be2b8ba",
+      "sha256_svg": "a37e20c6b9dca11b0193f0547f47641f9754adcef159bc084f48ff852d94968b",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2004_4__SoluzioneUfficiale__03",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "99a5564e8ba29d119b9ab1082132773b5a3a3b0ad0c7ebca562c1d6f4be2b8ba",
+      "sha256_svg": "35129e971e6966fbbf0348079e7598ef3c47da823f6dbdf24a8fefb76b8b8ba9",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2004_4__SoluzioneUfficiale__04",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "99a5564e8ba29d119b9ab1082132773b5a3a3b0ad0c7ebca562c1d6f4be2b8ba",
+      "sha256_svg": "c79f3fb8599c4a50ffbe83b9df03c85ed789965ec686ed7789675bc3bdf498d2",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2004_4__SoluzioneUfficiale__05",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "99a5564e8ba29d119b9ab1082132773b5a3a3b0ad0c7ebca562c1d6f4be2b8ba",
+      "sha256_svg": "0771b54c25ad6283384c215bcde97561be2fb1438d346f8eca298539485ac036",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2004_4__SoluzioneUfficiale__06",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "99a5564e8ba29d119b9ab1082132773b5a3a3b0ad0c7ebca562c1d6f4be2b8ba",
+      "sha256_svg": "0adaea445bbb9e2bba37e5ab4380b0ecd137befe9faa0c7a64401f2aea7bae22",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2004_4__SoluzioneUfficiale__07",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "99a5564e8ba29d119b9ab1082132773b5a3a3b0ad0c7ebca562c1d6f4be2b8ba",
+      "sha256_svg": "01a5477ea732ccc275a98bc70d8d398c463c8102de416daa9749c12de1338357",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2004_4__SoluzioneUfficiale__08",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "99a5564e8ba29d119b9ab1082132773b5a3a3b0ad0c7ebca562c1d6f4be2b8ba",
+      "sha256_svg": "041c23aa17b665e19bb3b3fcb983ff7e89d8cadc5ca5cdd538a1166d886d0ba2",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2005_2__SoluzioneUfficiale__01",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "028c373e4fb41cef2cf2e29b0d2d6cb974077878a838665f39e34ea27f7bcdc0",
+      "sha256_svg": "8de08b26793a1fbfd7affe04022793f0125da31be73879a59f01937888d6a5f6",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2005_2__SoluzioneUfficiale__02",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "028c373e4fb41cef2cf2e29b0d2d6cb974077878a838665f39e34ea27f7bcdc0",
+      "sha256_svg": "d4854dbe6c2b6a23dbeab91f3d8c2fb517451f80242c1b5e8702ec332a902798",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2005_2__SoluzioneUfficiale__03",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "028c373e4fb41cef2cf2e29b0d2d6cb974077878a838665f39e34ea27f7bcdc0",
+      "sha256_svg": "3a710c05eaacce5937948c0e6ec9c61336420616f67b561f60d9748e10f0a69d",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2005_2__SoluzioneUfficiale__04",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "028c373e4fb41cef2cf2e29b0d2d6cb974077878a838665f39e34ea27f7bcdc0",
+      "sha256_svg": "3da265d51e92932b571cc960e726229fd21788b0cdd2f409c22fdd7a08411215",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2005_2__SoluzioniAlternative__01",
+      "campo": "SoluzioniAlternative",
+      "sha256_sorgente": "028c373e4fb41cef2cf2e29b0d2d6cb974077878a838665f39e34ea27f7bcdc0",
+      "sha256_svg": "2ec6a5271676bbe79e6599d01d3f19b754a610efdcec906c22aad956d98bed99",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2005_2__SoluzioniAlternative__02",
+      "campo": "SoluzioniAlternative",
+      "sha256_sorgente": "028c373e4fb41cef2cf2e29b0d2d6cb974077878a838665f39e34ea27f7bcdc0",
+      "sha256_svg": "3232f311027a8b57b1853114e241e50c346e2391a201ba62c03aad6b2d790558",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2005_2__Testo__01",
+      "campo": "Testo",
+      "sha256_sorgente": "028c373e4fb41cef2cf2e29b0d2d6cb974077878a838665f39e34ea27f7bcdc0",
+      "sha256_svg": "33aab61e86495dc0e31dc919f795e1798858362100eaa419325aec9f503b8819",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2005_3__Osservazioni__01",
+      "campo": "Osservazioni",
+      "sha256_sorgente": "0925088f86e1845afb7df0d38b23793b1fec0007fe8aaf7d5f3804231adbf758",
+      "sha256_svg": "8051e93d1226c587b207f4ab132332f65e8d5cde1bd058f848efcb9cb1ce7674",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2005_3__SoluzioneUfficiale__01",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "0925088f86e1845afb7df0d38b23793b1fec0007fe8aaf7d5f3804231adbf758",
+      "sha256_svg": "e843c695bc7eeb65119ba05799c26a60662ec75db1c8660b0108b61116a9cf5b",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2006_3__Aiutino__01",
+      "campo": "Aiutino",
+      "sha256_sorgente": "9127bf60a20d02ab3db0e2e8ea8a7eae1105baf8e5a3c6f42e13383fce9e1751",
+      "sha256_svg": "f2966bbbf9de5717cdd9f1b05e1bd649103b9636e543e4a583a54b6130454953",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2006_3__SoluzioneUfficiale__01",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "9127bf60a20d02ab3db0e2e8ea8a7eae1105baf8e5a3c6f42e13383fce9e1751",
+      "sha256_svg": "ee4aae0668f93e547068e40b69fcf25bf070be91521d282f709d63f7fa2d9030",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2006_3__SoluzioneUfficiale__02",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "9127bf60a20d02ab3db0e2e8ea8a7eae1105baf8e5a3c6f42e13383fce9e1751",
+      "sha256_svg": "0a84957dfc16b5261bd8acdd2c3d2470368f6e316a3ae3d692153170d776a543",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2006_3__SoluzioneUfficiale__03",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "9127bf60a20d02ab3db0e2e8ea8a7eae1105baf8e5a3c6f42e13383fce9e1751",
+      "sha256_svg": "c67805ca430faf6e6dbcdc7578dc1dc0e1740c583c9726fbefbd8c54cff663f9",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2006_4__SoluzioneUfficiale__01",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "91c63fe437565065634a3e53d3cfe1a66acd8ed876dfb96c904ed7e51e93fd11",
+      "sha256_svg": "9e7b55b03120c0f760e9fdb7bec453eb954294e228fa3663ff0f6a9e2f3600c7",
+      "categoria": "tabella-candidata"
+    },
+    {
+      "id": "SA_2006_4__SoluzioneUfficiale__02",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "91c63fe437565065634a3e53d3cfe1a66acd8ed876dfb96c904ed7e51e93fd11",
+      "sha256_svg": "771638be3fd67e888b2ee11b6cf7b18e9abf0b817078e763ccc0836bbf46023d",
+      "categoria": "tabella-candidata"
+    },
+    {
+      "id": "SA_2007_1__Aiutino__01",
+      "campo": "Aiutino",
+      "sha256_sorgente": "86022af069a0690295936615774c23b1b6eae5fdc8bda90fb0ddf99b74728174",
+      "sha256_svg": "d9dde1164dc00ee035648687134778f73df19a67f3eb13b2e07147e3d28527be",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2007_1__Aiutino__02",
+      "campo": "Aiutino",
+      "sha256_sorgente": "86022af069a0690295936615774c23b1b6eae5fdc8bda90fb0ddf99b74728174",
+      "sha256_svg": "8f566d6b0822eb7efd370b22be6ff150f8a4c229bbbecce8d5172262a56198d6",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2007_1__SoluzioneUfficiale__01",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "86022af069a0690295936615774c23b1b6eae5fdc8bda90fb0ddf99b74728174",
+      "sha256_svg": "598bcdf1bd7a41cb8812c0333cd6b77322d86f2e27b10cb136407a6d41a82990",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2007_1__SoluzioneUfficiale__02",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "86022af069a0690295936615774c23b1b6eae5fdc8bda90fb0ddf99b74728174",
+      "sha256_svg": "54437e195f1d10c032674295944586b5388227a159e4cb86317cf0f2143b7935",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2007_1__SoluzioneUfficiale__03",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "86022af069a0690295936615774c23b1b6eae5fdc8bda90fb0ddf99b74728174",
+      "sha256_svg": "719130c0424edf80c091e7e4d80bd746dd7b189e2876743aaf3c7883004b6c1c",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2007_1__SoluzioneUfficiale__04",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "86022af069a0690295936615774c23b1b6eae5fdc8bda90fb0ddf99b74728174",
+      "sha256_svg": "ebd548b0997fc020dddf1556dd732541cfd5ca0aca225ad9bc3620158acd0499",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2007_1__SoluzioniAlternative__01",
+      "campo": "SoluzioniAlternative",
+      "sha256_sorgente": "86022af069a0690295936615774c23b1b6eae5fdc8bda90fb0ddf99b74728174",
+      "sha256_svg": "8576269a044b94d19b2059954a6da262182ed4de68605fe085c4169224e7a145",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2007_1__SoluzioniAlternative__02",
+      "campo": "SoluzioniAlternative",
+      "sha256_sorgente": "86022af069a0690295936615774c23b1b6eae5fdc8bda90fb0ddf99b74728174",
+      "sha256_svg": "5b6e783b3e307f0bcead5151ebd2a7f232bf39db49793644ce1eab6bc26309af",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2007_1__Testo__01",
+      "campo": "Testo",
+      "sha256_sorgente": "86022af069a0690295936615774c23b1b6eae5fdc8bda90fb0ddf99b74728174",
+      "sha256_svg": "329be6757ebac36562e3ad6a84ad55f74d9dc432859bbac989c52cf360dc5a29",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2007_2__SoluzioneUfficiale__01",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "387ba6612143dda8249a5e2f83f626d0fcc4beda18179e3a34a103b2404dacef",
+      "sha256_svg": "d3dff3de570fa1084212c97fb003a0777143cbc9419e4f8271584b356cea0fac",
+      "categoria": "tabella-candidata"
+    },
+    {
+      "id": "SA_2007_2__SoluzioneUfficiale__02",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "387ba6612143dda8249a5e2f83f626d0fcc4beda18179e3a34a103b2404dacef",
+      "sha256_svg": "4920617f38cdb6a14cf8f987115c8f9b80d754cdceca74805ae638e7070449df",
+      "categoria": "tabella-candidata"
+    },
+    {
+      "id": "SA_2007_2__SoluzioneUfficiale__03",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "387ba6612143dda8249a5e2f83f626d0fcc4beda18179e3a34a103b2404dacef",
+      "sha256_svg": "d612a4c5ec692d7eed4af43e2baf4a3b4a0873eb924143c6d1c3b5507b67cb24",
+      "categoria": "tabella-candidata"
+    },
+    {
+      "id": "SA_2007_2__SoluzioneUfficiale__04",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "387ba6612143dda8249a5e2f83f626d0fcc4beda18179e3a34a103b2404dacef",
+      "sha256_svg": "de9adedd9b4f0543d20bc14712b7775dc1cc1c4e925e81a9c58858bf330bccce",
+      "categoria": "tabella-candidata"
+    },
+    {
+      "id": "SA_2007_2__SoluzioniAlternative__01",
+      "campo": "SoluzioniAlternative",
+      "sha256_sorgente": "387ba6612143dda8249a5e2f83f626d0fcc4beda18179e3a34a103b2404dacef",
+      "sha256_svg": "2f439c4e035ae60d645d0588893116e825de770742cb30bc86cf70d49dee25c1",
+      "categoria": "tabella-candidata"
+    },
+    {
+      "id": "SA_2007_2__SoluzioniAlternative__02",
+      "campo": "SoluzioniAlternative",
+      "sha256_sorgente": "387ba6612143dda8249a5e2f83f626d0fcc4beda18179e3a34a103b2404dacef",
+      "sha256_svg": "d612a4c5ec692d7eed4af43e2baf4a3b4a0873eb924143c6d1c3b5507b67cb24",
+      "categoria": "tabella-candidata"
+    },
+    {
+      "id": "SA_2007_2__SoluzioniAlternative__03",
+      "campo": "SoluzioniAlternative",
+      "sha256_sorgente": "387ba6612143dda8249a5e2f83f626d0fcc4beda18179e3a34a103b2404dacef",
+      "sha256_svg": "3f4efa30be30832320a5347dbc9145e2d9e6ae8053f5dbacc38c5cd2df3e5559",
+      "categoria": "tabella-candidata"
+    },
+    {
+      "id": "SA_2007_3__SoluzioneUfficiale__01",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "dfe461e8ddc6fd8092a3d7842701e42f287f434ba929f60a1b11b6161cee12ab",
+      "sha256_svg": "687edb985a3bd15fb2952d450818c7add5785a689fa80ab26b9c4dde32e09725",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2007_4__Osservazioni__01",
+      "campo": "Osservazioni",
+      "sha256_sorgente": "270dbdbe90f1bbb3d0aff1ee16a74477802a9532eed65a26228b1a571f924d90",
+      "sha256_svg": "d19e47545ec5b4af8bf80f293a27ec935298ef651890eb8ab053b16dbc4a5bd2",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2007_4__SoluzioneUfficiale__01",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "270dbdbe90f1bbb3d0aff1ee16a74477802a9532eed65a26228b1a571f924d90",
+      "sha256_svg": "514ed656f7a1cdac18b8cdeb228444f96bc871a027d06dc338418e4efad121c5",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2007_4__SoluzioneUfficiale__02",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "270dbdbe90f1bbb3d0aff1ee16a74477802a9532eed65a26228b1a571f924d90",
+      "sha256_svg": "a0fac94f1d1ea1a8e3c4a2ad9f343d7836b086611d06f4a51e0349b6d2a8235c",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2007_4__SoluzioneUfficiale__03",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "270dbdbe90f1bbb3d0aff1ee16a74477802a9532eed65a26228b1a571f924d90",
+      "sha256_svg": "b72fd9335622b39cb6148f690213559ccb7517a99c1ffa7a050ac648bcea3461",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2007_4__SoluzioneUfficiale__04",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "270dbdbe90f1bbb3d0aff1ee16a74477802a9532eed65a26228b1a571f924d90",
+      "sha256_svg": "a869f981db1cc172be421839b1998f0422468823b72e9459bf33f2f465ed5d1c",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2007_4__Testo__01",
+      "campo": "Testo",
+      "sha256_sorgente": "270dbdbe90f1bbb3d0aff1ee16a74477802a9532eed65a26228b1a571f924d90",
+      "sha256_svg": "bfcfdb013c40c422dbae714ad1a26f22b770c5a5f9e27bc85c405403e0f1fb2b",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2008_2__Aiutino__01",
+      "campo": "Aiutino",
+      "sha256_sorgente": "0993d1547fe1456b5838648224b905a99433946b1dfc19d961b9086e4f5ee284",
+      "sha256_svg": "44ae09b39e5a5aecd62363d214cb1be569d184447425b9a2f1a640074093629b",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2008_2__SoluzioneUfficiale__01",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "0993d1547fe1456b5838648224b905a99433946b1dfc19d961b9086e4f5ee284",
+      "sha256_svg": "10c2e1b6ec283a399e37e949f8bc79e249ad87a6b62609fe1d562151212e8933",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2008_2__SoluzioneUfficiale__02",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "0993d1547fe1456b5838648224b905a99433946b1dfc19d961b9086e4f5ee284",
+      "sha256_svg": "1fc16938c5b72046dee3d2f6d1da51b42c58618ba58e2948c1b2a5225459de24",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2008_2__SoluzioneUfficiale__03",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "0993d1547fe1456b5838648224b905a99433946b1dfc19d961b9086e4f5ee284",
+      "sha256_svg": "e6add801b1c31d537648e98869483ced237261fb890f26f0dd327eddb56e4ecd",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2008_2__SoluzioneUfficiale__04",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "0993d1547fe1456b5838648224b905a99433946b1dfc19d961b9086e4f5ee284",
+      "sha256_svg": "78c5c456597bc20e37f38c338111cf0ddbcdc63b78759f30561c61bb7e0ea55a",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2008_2__SoluzioneUfficiale__05",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "0993d1547fe1456b5838648224b905a99433946b1dfc19d961b9086e4f5ee284",
+      "sha256_svg": "169260917bfc82d9b9c354fa10aabf4fbc71f5dd6016fea3aa8334af8c3edc70",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2008_2__SoluzioneUfficiale__06",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "0993d1547fe1456b5838648224b905a99433946b1dfc19d961b9086e4f5ee284",
+      "sha256_svg": "6cbfe233b72a6fbdb3123cfd2e7c3766489af339979f76eb6d42746442e64c23",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2008_2__SoluzioneUfficiale__07",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "0993d1547fe1456b5838648224b905a99433946b1dfc19d961b9086e4f5ee284",
+      "sha256_svg": "295c75658ec682444ec9f5170ed004e051a3689b3c29cb656d18e64913444f85",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2008_2__SoluzioneUfficiale__08",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "0993d1547fe1456b5838648224b905a99433946b1dfc19d961b9086e4f5ee284",
+      "sha256_svg": "fcdc92c54a316710305bd3cb33b628e7792f67053163bb0184323112d60c4b71",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2008_2__SoluzioneUfficiale__09",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "0993d1547fe1456b5838648224b905a99433946b1dfc19d961b9086e4f5ee284",
+      "sha256_svg": "7c98022c0250c00466fc8ecf68dfbafdc260dd01f87db6245cba8459d033fb74",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2009_4__SoluzioneUfficiale__01",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "e991fbb1dd3b177daadff5fe346763ca417c583420adec5811392b1fc75d0314",
+      "sha256_svg": "2cbc82a2f8cec4d071e44b55d618a55e9331490bc0ac6f0a5dbde2a1efa58758",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2009_4__SoluzioneUfficiale__02",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "e991fbb1dd3b177daadff5fe346763ca417c583420adec5811392b1fc75d0314",
+      "sha256_svg": "9c3d06be8e41a2338a4e7a77c46111ae582911699181bd20d2799b5c814ce9a4",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2009_4__SoluzioneUfficiale__03",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "e991fbb1dd3b177daadff5fe346763ca417c583420adec5811392b1fc75d0314",
+      "sha256_svg": "0e2e34757dfd3d52eb57098e25f247a21b7ab8e8af913c729b9d794289fd1e41",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2009_4__SoluzioneUfficiale__04",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "e991fbb1dd3b177daadff5fe346763ca417c583420adec5811392b1fc75d0314",
+      "sha256_svg": "720744502505eb523399fbdcd0d454af5314ad129f9963d91d4077486c38c37f",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2009_4__SoluzioneUfficiale__05",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "e991fbb1dd3b177daadff5fe346763ca417c583420adec5811392b1fc75d0314",
+      "sha256_svg": "a475b0f70f80a6882fd65f552559ce6473abaf5f21d23ebb479e2940e6aa193a",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2009_4__SoluzioneUfficiale__06",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "e991fbb1dd3b177daadff5fe346763ca417c583420adec5811392b1fc75d0314",
+      "sha256_svg": "aedda76f15f6da814e587a1257c5d49adac37c89f1e7792dfd60a19876d88930",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2009_4__SoluzioneUfficiale__07",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "e991fbb1dd3b177daadff5fe346763ca417c583420adec5811392b1fc75d0314",
+      "sha256_svg": "e947bba14d5f4a4041f49bede3cbe777d101fb0d9cd34e5caf7721be417a54ba",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2009_4__SoluzioneUfficiale__08",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "e991fbb1dd3b177daadff5fe346763ca417c583420adec5811392b1fc75d0314",
+      "sha256_svg": "537629d127626cac3dcafe699f23991a2464838e0e67163934013e0fdd093afd",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2009_4__SoluzioneUfficiale__09",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "e991fbb1dd3b177daadff5fe346763ca417c583420adec5811392b1fc75d0314",
+      "sha256_svg": "36ff24ad95cacb148cefb40764b39ae2dff641cabccbd87bc8d32ea4c3d36bf5",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2009_4__SoluzioneUfficiale__10",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "e991fbb1dd3b177daadff5fe346763ca417c583420adec5811392b1fc75d0314",
+      "sha256_svg": "30f73450f80b505ac2078f47cffe4fc48ec72c9f105a3c5a3e92284fd12abe19",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2009_4__SoluzioneUfficiale__11",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "e991fbb1dd3b177daadff5fe346763ca417c583420adec5811392b1fc75d0314",
+      "sha256_svg": "e215a730afff7fa788207376c482a95982c7d1171ad29c1353949c0225aef790",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2009_4__SoluzioneUfficiale__12",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "e991fbb1dd3b177daadff5fe346763ca417c583420adec5811392b1fc75d0314",
+      "sha256_svg": "4ec955959df43628256e4d4290f934cac851320acbacfa4a50fac268ddee8a7b",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2010_1__SoluzioneUfficiale__01",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "1987c5726e0c9a91e2b98bb88eebd8bc28b5864e4882e72b8300b52172825a00",
+      "sha256_svg": "00822832b041c8f39c87c5297e044a3398036320e9335edbfc9d80c8e85329c5",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2010_4__Osservazioni__01",
+      "campo": "Osservazioni",
+      "sha256_sorgente": "15a2f40c2aca51368f55cd7e58675237e6c2aee5425c7c874826cdf1329842e0",
+      "sha256_svg": "b2f127980901c748761e24335d012b22e8865071ee10910284cbcc84d1bcf36a",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2010_4__Osservazioni__02",
+      "campo": "Osservazioni",
+      "sha256_sorgente": "15a2f40c2aca51368f55cd7e58675237e6c2aee5425c7c874826cdf1329842e0",
+      "sha256_svg": "a5a54d6cfce01bd2fe322e192eab427f62f3e9b373e37355df1446acf5c9d846",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2010_4__Osservazioni__03",
+      "campo": "Osservazioni",
+      "sha256_sorgente": "15a2f40c2aca51368f55cd7e58675237e6c2aee5425c7c874826cdf1329842e0",
+      "sha256_svg": "818e456f52ad0c6d00ea4c3f3f49e6e54c0bf9a0aa9613514c92f6a4e338bdef",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2010_4__Osservazioni__04",
+      "campo": "Osservazioni",
+      "sha256_sorgente": "15a2f40c2aca51368f55cd7e58675237e6c2aee5425c7c874826cdf1329842e0",
+      "sha256_svg": "20fc2eeb8ef857b96eff2df444caafbfcdbc57ee52e00b64cf33f1625928cfcf",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2010_4__Osservazioni__05",
+      "campo": "Osservazioni",
+      "sha256_sorgente": "15a2f40c2aca51368f55cd7e58675237e6c2aee5425c7c874826cdf1329842e0",
+      "sha256_svg": "904543706eefe7a73e6b84a109a408cdcdeccf14206083eb6985f183cb64cace",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2010_4__Osservazioni__06",
+      "campo": "Osservazioni",
+      "sha256_sorgente": "15a2f40c2aca51368f55cd7e58675237e6c2aee5425c7c874826cdf1329842e0",
+      "sha256_svg": "1c0419229b9412fed979bf01afc5ad733e45ae38161eaa5b633981b38f9edb24",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2010_4__SoluzioneUfficiale__01",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "15a2f40c2aca51368f55cd7e58675237e6c2aee5425c7c874826cdf1329842e0",
+      "sha256_svg": "a8d03e5c73bb587dab7dfa39b4a50b77ac51b3a70941fd8f3d78ebded65c06e7",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2010_4__SoluzioneUfficiale__02",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "15a2f40c2aca51368f55cd7e58675237e6c2aee5425c7c874826cdf1329842e0",
+      "sha256_svg": "b0241e517a9da5679a8ea9d678a9e7bf19bc9979ee13d5c2cf3dec9b409f10b4",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2010_4__SoluzioneUfficiale__03",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "15a2f40c2aca51368f55cd7e58675237e6c2aee5425c7c874826cdf1329842e0",
+      "sha256_svg": "af39bdb07b1a45580811a55eaae8069c54568f2f5a3b5ce8313af0393860ddee",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2010_4__SoluzioneUfficiale__04",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "15a2f40c2aca51368f55cd7e58675237e6c2aee5425c7c874826cdf1329842e0",
+      "sha256_svg": "1c032aa7f993dd490c015df31bdbc83b03b543c0d3089563610c210430b3e765",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2010_4__SoluzioniAlternative__01",
+      "campo": "SoluzioniAlternative",
+      "sha256_sorgente": "15a2f40c2aca51368f55cd7e58675237e6c2aee5425c7c874826cdf1329842e0",
+      "sha256_svg": "1ada8a42a5ecb16d89d861449dc60b1dd6bf8d5ccf280cd4596f5a24c74eb9fb",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2011_3__SoluzioneUfficiale__01",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "ba50f0be48cbd67fa82b14cad846a9603cd1d876166301934d9db125ac1910b4",
+      "sha256_svg": "55de0fffc4c6fae70feec0916879d4e2e3a99422403ffc1ed8da2fab64f680a6",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2011_3__SoluzioneUfficiale__02",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "ba50f0be48cbd67fa82b14cad846a9603cd1d876166301934d9db125ac1910b4",
+      "sha256_svg": "d4750b118a4fa0d42e61e874c788922a254c0b44768709574c170c07cd1f7801",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2011_3__SoluzioneUfficiale__03",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "ba50f0be48cbd67fa82b14cad846a9603cd1d876166301934d9db125ac1910b4",
+      "sha256_svg": "070086ad6181bf4750f2f729e3b54f4e2c1914e6406ab29d3b2f0c544e37c0cf",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2012_2__SoluzioneUfficiale__01",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "79cbef82628962e7819d1580ed8c98cca0064023de787cef2f783936bd12149d",
+      "sha256_svg": "1dbd7b711259c1568dba03d8cd67dee53926294e12adb5f33cf7a96fa4840f2a",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2012_2__SoluzioneUfficiale__02",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "79cbef82628962e7819d1580ed8c98cca0064023de787cef2f783936bd12149d",
+      "sha256_svg": "f9cbdafd044f0b92555c0f8ce01299756ef9d6c9451d82f0e07c6937b6c428c5",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2012_2__SoluzioneUfficiale__03",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "79cbef82628962e7819d1580ed8c98cca0064023de787cef2f783936bd12149d",
+      "sha256_svg": "db5fe8d27da0a128603f27d57d6d29237ec5afd27e78772e446b43df8221f214",
+      "categoria": "griglia-da-valutare"
+    },
+    {
+      "id": "SA_2012_2__SoluzioneUfficiale__04",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "79cbef82628962e7819d1580ed8c98cca0064023de787cef2f783936bd12149d",
+      "sha256_svg": "db2745d4e930c181af972d2b5aae8ddbea1e448efbb1eacad1bf94a0c28d1f25",
+      "categoria": "griglia-da-valutare"
+    },
+    {
+      "id": "SA_2012_2__SoluzioneUfficiale__05",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "79cbef82628962e7819d1580ed8c98cca0064023de787cef2f783936bd12149d",
+      "sha256_svg": "cf1b9bf8f86e2b339b3a8e8445b31475723fc982284763ed5f26ceab30bb4a2f",
+      "categoria": "tabella-candidata"
+    },
+    {
+      "id": "SA_2012_2__SoluzioneUfficiale__06",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "79cbef82628962e7819d1580ed8c98cca0064023de787cef2f783936bd12149d",
+      "sha256_svg": "405edf8ac56ec78ad8e9f59e3eaa9fbe32f6d683cd7764f0e3580dcd05400f87",
+      "categoria": "griglia-da-valutare"
+    },
+    {
+      "id": "SA_2012_2__SoluzioneUfficiale__07",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "79cbef82628962e7819d1580ed8c98cca0064023de787cef2f783936bd12149d",
+      "sha256_svg": "3a868781ee76e6972a815c91f2baac66345b37e451bbcca2dd9293de0950ebe4",
+      "categoria": "griglia-da-valutare"
+    },
+    {
+      "id": "SA_2012_2__SoluzioneUfficiale__08",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "79cbef82628962e7819d1580ed8c98cca0064023de787cef2f783936bd12149d",
+      "sha256_svg": "9b323ca709c269915e2e1e1f90b43b110b27aee8fa01441e914ec53e8e2a6b17",
+      "categoria": "tabella-candidata"
+    },
+    {
+      "id": "SA_2012_2__SoluzioneUfficiale__09",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "79cbef82628962e7819d1580ed8c98cca0064023de787cef2f783936bd12149d",
+      "sha256_svg": "6c503d982637aab996416a55ed03221d4e29eed5bda16fabc96043afbb8fb135",
+      "categoria": "tabella-candidata"
+    },
+    {
+      "id": "SA_2012_2__Testo__01",
+      "campo": "Testo",
+      "sha256_sorgente": "79cbef82628962e7819d1580ed8c98cca0064023de787cef2f783936bd12149d",
+      "sha256_svg": "636d69008ebc9b6501a768d75c80d8c3d56b7b1a943bf47a17c6398fed3dc245",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2012_2__Testo__02",
+      "campo": "Testo",
+      "sha256_sorgente": "79cbef82628962e7819d1580ed8c98cca0064023de787cef2f783936bd12149d",
+      "sha256_svg": "b52b9fa3a37ac026be31a759f2ebbe9f55d7c2a42e6d2dc87984f3f5f4fc772f",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2012_2__Testo__03",
+      "campo": "Testo",
+      "sha256_sorgente": "79cbef82628962e7819d1580ed8c98cca0064023de787cef2f783936bd12149d",
+      "sha256_svg": "a7c5736615ec4354c638b78b0c7ef4bf184ea574a86ae6d38543d39ee5b55ea0",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2012_2__Testo__04",
+      "campo": "Testo",
+      "sha256_sorgente": "79cbef82628962e7819d1580ed8c98cca0064023de787cef2f783936bd12149d",
+      "sha256_svg": "bcac1bdcd4e01b8bf20f0e6c1b3b2e63764a790e05c3d34f4cacdfca75e066c1",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2012_2__Testo__05",
+      "campo": "Testo",
+      "sha256_sorgente": "79cbef82628962e7819d1580ed8c98cca0064023de787cef2f783936bd12149d",
+      "sha256_svg": "f3cef108517c94d6c70153d73eeedafb64eea4390b139a926dd89dabef13721a",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2012_2__Testo__06",
+      "campo": "Testo",
+      "sha256_sorgente": "79cbef82628962e7819d1580ed8c98cca0064023de787cef2f783936bd12149d",
+      "sha256_svg": "f7ca8e6f33b69bf89370631cd087849d8ac3c968762ae5dff90be58079c921b0",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2012_2__Testo__07",
+      "campo": "Testo",
+      "sha256_sorgente": "79cbef82628962e7819d1580ed8c98cca0064023de787cef2f783936bd12149d",
+      "sha256_svg": "8b8825d90d89366228d28525bfb283d9ed9d2e82220efae513296a6e3e791fa4",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2013_1__Osservazioni__01",
+      "campo": "Osservazioni",
+      "sha256_sorgente": "46e1ba2d2f1d6f7613a2ad97239c034848d44472488c12cec41422b22bef00b3",
+      "sha256_svg": "c388af8ef5797f823aaa3c934769e349fb7df7269609d637bcaaaa377db8e694",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2013_1__Osservazioni__02",
+      "campo": "Osservazioni",
+      "sha256_sorgente": "46e1ba2d2f1d6f7613a2ad97239c034848d44472488c12cec41422b22bef00b3",
+      "sha256_svg": "2be549cbc319699efe0c65b340cf5909f639aead48222ace19203d95b0061465",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2013_3__SoluzioneUfficiale__01",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "09a1f5d9fa7e7a62a9279cb3aa967e04611a71c37ca7d52c2266c1f664ca8669",
+      "sha256_svg": "e245b493df9c7bd8cf9e52239cf2969979377f7d9a4bb44dd66f67e877c287ea",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2013_3__SoluzioneUfficiale__02",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "09a1f5d9fa7e7a62a9279cb3aa967e04611a71c37ca7d52c2266c1f664ca8669",
+      "sha256_svg": "c935946585fdff69890da65d9cccbec09daafbe249a3da55879ccaab6353b3c0",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2013_3__SoluzioneUfficiale__03",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "09a1f5d9fa7e7a62a9279cb3aa967e04611a71c37ca7d52c2266c1f664ca8669",
+      "sha256_svg": "12b146e4bbbcdac29b40a5c0c96bdef21e131f6c649d6a86e6345c019ee27f68",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2013_3__SoluzioneUfficiale__04",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "09a1f5d9fa7e7a62a9279cb3aa967e04611a71c37ca7d52c2266c1f664ca8669",
+      "sha256_svg": "121c872064f6e67a82c1931ff5e2bf0d489b105eddbdde91a8e95b780eb2ffe2",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2013_3__SoluzioneUfficiale__05",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "09a1f5d9fa7e7a62a9279cb3aa967e04611a71c37ca7d52c2266c1f664ca8669",
+      "sha256_svg": "ebd4e29a99c6aff6702c3ade3d7eba14bf9fd8a342c835bd9652d1b7670c3e80",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2013_3__SoluzioneUfficiale__06",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "09a1f5d9fa7e7a62a9279cb3aa967e04611a71c37ca7d52c2266c1f664ca8669",
+      "sha256_svg": "7f2b69fb9515a2a20ddc17d6447747cc0fb2cf7a5f70a81ec82829255a2a6e3d",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2013_3__SoluzioneUfficiale__07",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "09a1f5d9fa7e7a62a9279cb3aa967e04611a71c37ca7d52c2266c1f664ca8669",
+      "sha256_svg": "c0dbda29f6837979670cb98d6f0e891fa4d0b8aeeff36057bff390b1a0e570cd",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2013_3__SoluzioneUfficiale__08",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "09a1f5d9fa7e7a62a9279cb3aa967e04611a71c37ca7d52c2266c1f664ca8669",
+      "sha256_svg": "cdde6aa34403b73b9fd7ad14d2728e102fff98d3987d0171dc13e50d8416bffb",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2013_3__SoluzioneUfficiale__09",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "09a1f5d9fa7e7a62a9279cb3aa967e04611a71c37ca7d52c2266c1f664ca8669",
+      "sha256_svg": "2dad279d1b63d38952bab68b1cf93177e720b09316c377fff6b46b7b7be5f4d7",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2013_3__SoluzioneUfficiale__10",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "09a1f5d9fa7e7a62a9279cb3aa967e04611a71c37ca7d52c2266c1f664ca8669",
+      "sha256_svg": "d5df5d3b63abfbd24088f8a52e9768d5f928f80fec06784efa0017c713291bc3",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2013_3__SoluzioneUfficiale__11",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "09a1f5d9fa7e7a62a9279cb3aa967e04611a71c37ca7d52c2266c1f664ca8669",
+      "sha256_svg": "fd89509b702ee45c08417586f46735eb28b8ed6527b7da35d452b8dbfe042e25",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2013_3__SoluzioneUfficiale__12",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "09a1f5d9fa7e7a62a9279cb3aa967e04611a71c37ca7d52c2266c1f664ca8669",
+      "sha256_svg": "f29434e321a1cc3a7a2f6768fbd15e46083fa44b08c7f50d1b731df917c85e71",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2013_3__SoluzioneUfficiale__13",
+      "campo": "SoluzioneUfficiale",
+      "sha256_sorgente": "09a1f5d9fa7e7a62a9279cb3aa967e04611a71c37ca7d52c2266c1f664ca8669",
+      "sha256_svg": "0683087b1310f0c73ef00e433bf552af8b9f491f0cfdd2e2e248b81820578c65",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2013_3__SoluzioniAlternative__01",
+      "campo": "SoluzioniAlternative",
+      "sha256_sorgente": "09a1f5d9fa7e7a62a9279cb3aa967e04611a71c37ca7d52c2266c1f664ca8669",
+      "sha256_svg": "90869c18535f23f83e37c5e304a2348a9de2a88230ebd4bd20cad744897c03f5",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2013_3__SoluzioniAlternative__02",
+      "campo": "SoluzioniAlternative",
+      "sha256_sorgente": "09a1f5d9fa7e7a62a9279cb3aa967e04611a71c37ca7d52c2266c1f664ca8669",
+      "sha256_svg": "9994a1aa9da711a50acedf9f63eb7a6bf3c74b2caa4a8d22a4764dc6cc2fcf15",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2022_1__Testo__01",
+      "campo": "Testo",
+      "sha256_sorgente": "8a01f366938017f68a16e2908eb589ed5c728622d75e4860307008e1afde75ac",
+      "sha256_svg": "d94df48c8fea9653b43cd873dc33014fd2ef776a82af2a36a555306e4f2e712e",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2022_3__Testo__01",
+      "campo": "Testo",
+      "sha256_sorgente": "d66e49a447dd98d1481923b48d154cd00cebdc07a258620905c4d2b16375da1d",
+      "sha256_svg": "e2bb0600b5c31139f3f0e051c68c0618c79645a42f1c77191d169c4a0dfc0a90",
+      "categoria": "svg"
+    }
+  ]
+}

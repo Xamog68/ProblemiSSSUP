@@ -218,7 +218,9 @@ def preprocess(text: str) -> tuple[str,int,list[str]]:
     def figure(m):
         nonlocal figure_count
         figure_count+=1
-        return 'SSSUPFIGURASEGNAPOSTO'+str(figure_count)+'FINE'
+        # Spazi essenziali: evitiamo che \hfill immediatamente precedente
+        # inglobi il segnaposto nel nome del comando LaTeX letto da Pandoc.
+        return ' SSSUPFIGURASEGNAPOSTO'+str(figure_count)+'FINE '
     # Riconosce blocchi PSTricks completi, anche se annidati.
     # Conta soltanto i disegni esterni.
     commands = re.compile(
@@ -264,7 +266,7 @@ def preprocess(text: str) -> tuple[str,int,list[str]]:
     return text,figure_count,missing
 
 
-def convert(text: str, provenance: str, local_defs=()) -> tuple[str,int]:
+def convert(text: str, provenance: str, local_defs=(), svg_index=None, source_hash=None) -> tuple[str,int]:
     text, figures, missing=preprocess(text)
     text, sudoku_html = render_local_macros(text, local_defs)
 
@@ -299,7 +301,21 @@ def convert(text: str, provenance: str, local_defs=()) -> tuple[str,int]:
         h=h.replace('<p>'+token+'</p>',table).replace(token,table)
     for n in range(1,figures+1):
         token='SSSUPFIGURASEGNAPOSTO'+str(n)+'FINE'
-        marker='<span class="figure-placeholder">Disegno PSTricks non ancora convertito (figura '+str(n)+').</span>'
+        file_name, field = provenance.split('/', 1)
+        figure_id = Path(file_name).stem + '__' + field + '__' + f'{n:02d}'
+        asset = (svg_index or {}).get(figure_id)
+        if asset and asset.get('sha256_sorgente') == source_hash:
+            url = 'assets/figure/' + figure_id + '.svg'
+            alt = f'Figura {n} del problema {Path(file_name).stem[3:].replace("_", ".")}, campo {field}'
+            marker = (f'<a class="pstricks-figure-link" href="{escape(url, quote=True)}" '
+                      f'target="_blank" rel="noopener noreferrer" title="Apri la figura vettoriale" '
+                      f'style="display:inline-block;vertical-align:middle;max-width:100%;margin:.55em .25em;text-align:center">'
+                      f'<img class="pstricks-svg" loading="lazy" decoding="async" '
+                      f'style="display:block;max-width:100%;max-height:520px;width:auto;height:auto" '
+                      f'src="{escape(url, quote=True)}" alt="{escape(alt, quote=True)}"></a>')
+        else:
+            marker = ('<span class="figure-placeholder">Disegno PSTricks non ancora '
+                      'convertito o da rigenerare (figura ' + str(n) + ').</span>')
         h=h.replace('<p>'+token+'</p>',marker).replace(token,marker)
     for n, reference in enumerate(missing, 1):
         token='SSSUPFIGURAMANCANTE'+str(n)+'FINE'
@@ -308,6 +324,36 @@ def convert(text: str, provenance: str, local_defs=()) -> tuple[str,int]:
         h=h.replace('<p>'+token+'</p>',marker).replace(token,marker)
     return h,figures
 
+
+
+
+def carica_svg(sito: Path) -> dict[str, dict]:
+    """SVG pubblicabili solo se file e impronte concordano con il catalogo.
+
+    L'installatore genera manifest.json dopo il controllo degli SVG. Se
+    manca, il comportamento precedente (segnaposto) e' invariato.
+    """
+    directory = sito / 'assets' / 'figure'
+    manifesto = directory / 'manifest.json'
+    if not manifesto.is_file():
+        return {}
+    data = json.loads(manifesto.read_text(encoding='utf-8'))
+    if data.get('schema') != 1 or not isinstance(data.get('figures'), list):
+        raise RuntimeError(f'Manifest SVG non valido: {manifesto}')
+    figures: dict[str, dict] = {}
+    for item in data['figures']:
+        name = item.get('id', '')
+        if not re.fullmatch(r'SA_\d{4}_\d+__[A-Za-z]+__\d{2}', name):
+            raise RuntimeError(f'Identificativo SVG sospetto: {name!r}')
+        if name in figures:
+            raise RuntimeError(f'SVG duplicato: {name}')
+        path = directory / (name + '.svg')
+        # Un file mancante o cambiato non puo' essere pubblicato come valido.
+        if path.is_file() and hashlib.sha256(path.read_bytes()).hexdigest() == item.get('sha256_svg'):
+            figures[name] = item
+        else:
+            print(f'AVVISO SVG mancante o non valido: {name}', file=sys.stderr)
+    return figures
 
 
 def generator_sha256() -> str:
@@ -339,8 +385,13 @@ def read_problem(path: Path) -> dict | None:
 
 
 def conversion_status(src: Path, output: Path, title: str,
-                      version_hash: str, pandoc_id: str) -> tuple[str,str]:
+                      version_hash: str, pandoc_id: str, svg_index_hash: str | None=None) -> tuple[str,str]:
     """Verifica indipendente dalla cache locale e senza scrivere nulla."""
+    # sito_check usa questa funzione senza passare il valore esplicito.
+    if svg_index_hash is None:
+        manifest = output.parent.parent.parent / 'assets' / 'figure' / 'manifest.json'
+        svg_index_hash = (hashlib.sha256(manifest.read_bytes()).hexdigest()
+                          if manifest.is_file() else '')
     if not output.exists():
         return 'MANCANTE','nessun file web generato'
     data=read_problem(output)
@@ -362,6 +413,25 @@ def conversion_status(src: Path, output: Path, title: str,
         return 'OBSOLETO','conversione legacy priva di impronte verificabili'
     if meta.get('sections_sha256')!=sections_sha256(data['sections']):
         return 'ERRORE','frammenti HTML modificati dopo la conversione'
+    # Verifica anche i file SVG fisici, non soltanto le impronte dei dati web.
+    svg_links = [rel for body in data['sections'].values()
+                 for rel in re.findall(
+                     r'src="(assets/figure/SA_\d{4}_\d+__[A-Za-z]+__\d{2}\.svg)"', body)]
+    if svg_links:
+        svg_manifest = output.parent.parent.parent / 'assets' / 'figure' / 'manifest.json'
+        try:
+            svg_metadata = json.loads(svg_manifest.read_text(encoding='utf-8'))
+            asset_hashes = {item['id']: item['sha256_svg']
+                            for item in svg_metadata['figures']}
+        except (OSError, ValueError, KeyError, TypeError):
+            return 'ERRORE', 'manifest SVG mancante o malformato'
+        for rel in svg_links:
+            full_path = output.parent.parent.parent / rel
+            fig_id = full_path.stem
+            if not full_path.is_file():
+                return 'OBSOLETO', f'immagine SVG mancante: {rel}'
+            if hashlib.sha256(full_path.read_bytes()).hexdigest() != asset_hashes.get(fig_id):
+                return 'OBSOLETO', f'immagine SVG alterata: {rel}'
     figures=data.get('figure_issues')
     if not isinstance(figures,dict) or meta.get('figures_sha256')!=sections_sha256(figures):
         return 'OBSOLETO','metadati sulle figure assenti o da rigenerare'
@@ -374,6 +444,9 @@ def conversion_status(src: Path, output: Path, title: str,
         return 'OBSOLETO','il sorgente LaTeX e cambiato'
     if meta.get('generator_sha256')!=version_hash:
         return 'OBSOLETO','regole del generatore modificate'
+    # L'indice SVG cambia quando aggiorniamo una figura senza toccare il LaTeX.
+    if meta.get('svg_index_sha256') != svg_index_hash:
+        return 'OBSOLETO','inventario SVG aggiornato'
     if meta.get('pandoc_version')!=pandoc_id:
         return 'OBSOLETO','versione Pandoc cambiata'
     if data.get('title')!=title:
@@ -399,6 +472,10 @@ def main():
     pandoc_id=pandoc_version()
     title_path=dest/'titoli.json'
     titles=json.loads(title_path.read_text(encoding='utf8')) if title_path.exists() else {}
+    svg_index=carica_svg(args.sito)
+    svg_manifest=args.sito/'assets'/'figure'/'manifest.json'
+    svg_index_hash=(hashlib.sha256(svg_manifest.read_bytes()).hexdigest()
+                    if svg_manifest.is_file() else '')
     files=sorted(args.sorgenti.glob('SA_????_*.tex'))
     all_files=[]
     for f in files:
@@ -413,7 +490,7 @@ def main():
         digest=hashlib.sha256(f.read_bytes()).hexdigest()
         path=dest/'problemi'/f'{key}.js'
         title=titles.get(key,f'Problema {n}')
-        state,why=conversion_status(f,path,title,gen_id,pandoc_id)
+        state,why=conversion_status(f,path,title,gen_id,pandoc_id,svg_index_hash)
         if not args.force and state=='ALLINEATO':
             skipped+=1
             continue
@@ -427,7 +504,7 @@ def main():
             v=extract_macro(tex,field)
             if not has_content(v):continue
             origin=field_provenance(v or '',field)
-            html,nfig=convert(v or '',f'{f.name}/{field}',local_defs)
+            html,nfig=convert(v or '',f'{f.name}/{field}',local_defs,svg_index,digest)
             if html:
                 fields[field]=html
                 provenance[field]=origin
@@ -444,19 +521,25 @@ def main():
                 f'Conteggio PSTricks incoerente in {f.name}: '
                 f"conversione={pictures}, inventario={issues['pstricks']}"
             )
+        converted=sum(html.count('class="pstricks-svg"') for html in fields.values())
+        issues['pstricks_totali']=pictures
+        issues['pstricks_svg']=converted
+        # Compatibilita' con sito_check: pstricks indica i disegni irrisolti.
+        issues['pstricks']=pictures-converted
         problem={'year':y,'number':n,'title':title,'source':f.name,
                  'sections':fields,'provenance':provenance,'figure_issues':issues}
         problem['_build']={
             'latex_sha256':digest,
             'generator_sha256':gen_id,
+            'svg_index_sha256':svg_index_hash,
             'pandoc_version':pandoc_id,
             'sections_sha256':sections_sha256(fields),
             'figures_sha256':sections_sha256(issues),
             'provenance_sha256':sections_sha256(provenance),
         }
         warnings=[]
-        if pictures:
-            warnings.append(f'{pictures} figure PSTricks non convertite')
+        if issues['pstricks']:
+            warnings.append(f"{issues['pstricks']} figure PSTricks da convertire o rigenerare")
         if issues['da_ricostruire']:
             warnings.append(f"{len(issues['da_ricostruire'])} figure da ricostruire in LaTeX")
         if warnings:
