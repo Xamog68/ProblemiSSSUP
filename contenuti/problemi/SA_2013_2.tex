@@ -2,151 +2,93 @@
 
 \renewcommand{\NumeroProblema}{2}
 
-\renewcommand{\Testo}{ 
-In un gruppo di 9 studenti, tra cui ci sono i tre amici Alberto,
-Barbara e Cristina, bisogna sorteggiare 4 fortunati che parteciperanno
-ad un soggiorno all'estero.  Per far questo l'organizzatore prepara
-un'urna con 9 palline, ciascuna delle quali contiene un numero intero da 1
-a 9, non visibile dall'esterno (ovviamente ogni numero sta in una ed
-una sola pallina).  Ogni studente pesca una pallina (dunque studenti
-diversi pescano palline diverse) ed i 4 studenti con i numeri pi\`{u}
-alti saranno i 4 prescelti.
+\renewcommand{\Testo}{
+In un gruppo di 9 studenti, tra cui ci sono i tre amici Alberto, Barbara e Cristina, bisogna sorteggiare 4 fortunati che parteciperanno a un soggiorno all'estero. Per far questo l'organizzatore prepara un'urna con 9 palline, ciascuna delle quali reca un numero intero da 1 a 9, non visibile dall'esterno (ogni numero compare su una e una sola pallina). Ogni studente pesca una pallina (dunque studenti diversi pescano palline diverse) e i 4 studenti con i numeri più alti saranno i prescelti.
 
 \begin{enumerate}
-	\item[(a)]  Determinare la probabilit\`{a} che nessuno dei 3 amici 
-	(Alberto, Barbara e Cristina) sia tra i prescelti. 
+    \item[(a)] Determinare la probabilità che nessuno dei 3 amici (Alberto, Barbara e Cristina) sia tra i prescelti.
 
-	\item[(b)] Determinare la probabilit\`{a} che esattamente uno tra
-	Alberto, Barbara e Cristina sia tra i prescelti.
+    \item[(b)] Determinare la probabilità che esattamente uno tra Alberto, Barbara e Cristina sia tra i prescelti.
 
-	\item[(c)] Dopo che gli studenti hanno estratto le palline, ma non
-	ancora visto i numeri in esse contenuti, l'organizzatore del
-	soggiorno si fa dare le palline e, senza comunicare i numeri
-	estratti, afferma che ``il numero di Alberto \`{e} pi\`{u} grande
-	del numero di Barbara, il quale a sua volta \`{e} pi\`{u} grande
-	del numero di Cristina''.
-	
-	Avuta questa informazione, determinare la
-	probabilit\`{a} di Alberto, la probabilit\`{a} di Barbara e 
-	probabilit\`{a} di Cristina di essere tra i prescelti.
+    \item[(c)] Dopo che gli studenti hanno estratto le palline, ma non hanno ancora visto i numeri in esse contenuti, l'organizzatore del soggiorno si fa dare le palline e, senza comunicare i numeri estratti, afferma che ``il numero di Alberto è più grande del numero di Barbara, il quale a sua volta è più grande del numero di Cristina''.
+
+    Avuta questa informazione, determinare la probabilità che ciascuno dei tre amici sia tra i prescelti.
 \end{enumerate}
 }
 
 \renewcommand{\Risposta}{
 \begin{enumerate}
-	\renewcommand{\labelenumi}{(\alph{enumi})}
-	\item  $5/42$
+    \item[(a)] $5/42$.
 
-	\item  $10/21$
-	
-	\item  $\mbox{Alberto}=37/42$, $\mbox{Barbara}=17/42$, 
-	$\mbox{Cristina}=1/21$.
+    \item[(b)] $10/21$.
+
+    \item[(c)] $\mbox{Alberto}=37/42$, $\mbox{Barbara}=17/42$, $\mbox{Cristina}=1/21$.
 \end{enumerate}
 }
 
 \renewcommand{\Aiutino}{
-I casi possibili sono sempre tanti quanti i modi di scegliere 3
-oggetti su 9.  Perch\'{e}?  
-Per quanto riguarda i casi favorevoli, dipende dai vari punti.
-\begin{enumerate}
-	\renewcommand{\labelenumi}{(\alph{enumi})}
-	\item  I casi favorevoli sono i modi di scegliere 3 oggetti su 5. 
-	Perch\'{e}?
+I casi possibili sono sempre tanti quanti i modi di scegliere 3 oggetti su 9. Perché? Per quanto riguarda i casi favorevoli, dipende dai vari punti.
 
-	\item I casi favorevoli sono i modi di scegliere 1 oggetto su 4 e
-	2 oggetti su 5.  Perch\'{e}?
-	
-	\item Il modo di procedere \`{e} diverso a seconda del personaggio
-	che si considera.
-	\begin{itemize}
-		\item  Nel caso di Alberto, qual \`{e} l'evento complementare? 
-	
-		\item Nel caso di Cristina, \`{e} come chiedere che i 3 amici
-		siano tutti prescelti.  Chi sono i casi favorevoli in questo
-		caso?  
-	
-		\item  Nel caso di Barbara, conviene distinguere il caso in 
-		cui tutti sono prescelti ed il caso in cui solo Alberto e 
-		Barbara sono prescelti.
-	\end{itemize}
+\begin{enumerate}
+    \item[(a)] I casi favorevoli sono i modi di scegliere 3 oggetti su 5. Perché?
+
+    \item[(b)] I casi favorevoli sono i modi di scegliere 1 oggetto su 4 e 2 oggetti su 5. Perché?
+
+    \item[(c)] Il modo di procedere è diverso a seconda del personaggio che si considera.
+    \begin{itemize}
+        \item Nel caso di Alberto, qual è l'evento complementare?
+
+        \item Nel caso di Cristina, è come chiedere che i 3 amici siano tutti prescelti. Quali sono i casi favorevoli?
+
+        \item Nel caso di Barbara, conviene distinguere il caso in cui tutti sono prescelti e il caso in cui solo Alberto e Barbara sono prescelti.
+    \end{itemize}
 \end{enumerate}
 }
 
-\renewcommand{\SoluzioneUfficiale}{\TitoloSoluzione 
-In tutto l'esercizio possiamo pensare che i casi possibili, tutti 
-equiprobabili, siano i modi di scegliere 3 oggetti su 9, cio\`{e} i 3 
-numeri sorteggiati dai 3 amici, indipendentemente dall'ordine. I casi 
-possibili sono dunque
+\renewcommand{\SoluzioneUfficiale}{\TitoloSoluzione
+In tutto l'esercizio possiamo pensare che i casi possibili, tutti equiprobabili, siano i modi di scegliere 3 oggetti su 9, cioè i 3 numeri sorteggiati dai 3 amici, indipendentemente dall'ordine. Nel punto~(c), una volta fissato l'ordine dei tre amici, ogni scelta di 3 numeri corrisponde a un'unica assegnazione compatibile con l'informazione ricevuta. I casi possibili sono dunque, in tutti e tre i punti,
 $$\binom{9}{3}=84.$$
 
 \DomandaA
-Se nessuno dei 3 amici viene prescelto, vuol dire che i 3 numeri che 
-hanno sorteggiato stanno tra i 5 pi\`{u} piccoli. I casi favorevoli 
-sono dunque
+
+Se nessuno dei 3 amici viene prescelto, vuol dire che i 3 numeri che hanno sorteggiato stanno tra i 5 più piccoli. I casi favorevoli sono dunque
 $$\binom{5}{3}=10.$$
 
-La probabilit\`{a} richiesta \`{e} quindi $10/84=5/42$.
+La probabilità richiesta è quindi $10/84=5/42$.
 
 \DomandaB
-Se esattamente uno dei 3 viene prescelto, vuol dire che i 3 numeri 
-sorteggiati dai 3 amici sono 1 tra i 4 vincenti, e 2 tra i 5 pi\`{u} 
-bassi. I casi favorevoli sono dunque
+
+Se esattamente uno dei 3 viene prescelto, vuol dire che i 3 numeri sorteggiati dai 3 amici sono 1 tra i 4 vincenti e 2 tra i 5 più bassi. I casi favorevoli sono dunque
 $$4\cdot\binom{5}{2}=4\cdot 10=40,$$
-da cui la probabilit\`{a} richiesta risulta $40/84=10/21$.
+da cui la probabilità richiesta risulta $40/84=10/21$.
 
 \DomandaC
-Nel caso di Alberto, consideriamo l'evento complementare, cio\`{e} 
-quello in cui Alberto non viene selezionato. Essendo lui il meglio 
-messo tra i 3 amici, questo \`{e} equivalente a dire che nessuno dei 
-3 viene selezionato. Ora dal punto~(a) sappiamo che ci\`{o} accade 
-con probabilit\`{a} 5/42. Passando al complementare, la 
-probabilit\`{a} che Alberto sia selezionato sar\`{a} dunque
-$$\mbox{Probabilit\`{a}}(\mbox{Alberto})=1-\frac{5}{42}=\frac{37}{42}.$$
 
-Passiamo ora a Cristina, la quale sar\`{a} selezionata se e solo se i 
-numeri estratti dai 3 amici stanno tra i 4 pi\`{u} grandi. I casi 
-favorevoli sono dunque 
-$$\binom{4}{3}=4,$$ 
+Nel caso di Alberto, consideriamo l'evento complementare, cioè quello in cui Alberto non viene selezionato. Essendo lui il meglio messo tra i 3 amici, questo è equivalente a dire che nessuno dei 3 viene selezionato. Ora dal punto~(a) sappiamo che ciò accade con probabilità $5/42$. Passando al complementare, la probabilità che Alberto sia selezionato sarà dunque
+$$\mbox{Probabilità}(\mbox{Alberto})=1-\frac{5}{42}=\frac{37}{42}.$$
+
+Passiamo ora a Cristina, la quale sarà selezionata se e solo se i numeri estratti dai 3 amici stanno tra i 4 più grandi. I casi favorevoli sono dunque
+$$\binom{4}{3}=4,$$
 da cui
-$$\mbox{Probabilit\`{a}}(\mbox{Cristina})=\frac{4}{84}=\frac{1}{21}.$$
+$$\mbox{Probabilità}(\mbox{Cristina})=\frac{4}{84}=\frac{1}{21}.$$
 
-Consideriamo infine Barbara.  Possiamo dividere i casi in cui viene
-selezionata in due sottoclassi: i casi in cui anche Cristina viene
-selezionata, che abbiamo gi\`{a} contato e sono 4, e quelli in cui
-solo Alberto e Barbara sono selezionati.  Questi ultimi sono tanti
-quanti i modi di scegliere 2 oggetti su 4 (i punteggi vincenti di
-Albetto e Barbara) ed un oggetto su 5 (il punteggio perdente di
-Cristina), e cio\`{e}
+Consideriamo infine Barbara. Possiamo dividere i casi in cui viene selezionata in due sottoclassi: i casi in cui anche Cristina viene selezionata, che abbiamo già contato e sono 4, e quelli in cui solo Alberto e Barbara sono selezionati. Questi ultimi sono tanti quanti i modi di scegliere 2 oggetti su 4 (i punteggi vincenti di Alberto e Barbara) e un oggetto su 5 (il punteggio perdente di Cristina), e cioè
 $$\binom{4}{2}\cdot 5=6\cdot 5=30.$$
 
 In conclusione avremo che
-$$\mbox{Probabilit\`{a}}(\mbox{Barbara})=\frac{4+30}{84}=
-\frac{34}{84}=\frac{17}{42}.$$
-
+$$\mbox{Probabilità}(\mbox{Barbara})=\frac{4+30}{84}=\frac{34}{84}=\frac{17}{42}.$$
 }
 
 \renewcommand{\SoluzioniAlternative}{
 }
 
 \renewcommand{\Osservazioni}{
-Nei punti~(a) e~(b) possiamo pensare che i casi possibili, sempre 
-equiprobabili, siano i modi di assegnare 9 numeri a 9 persone, dunque 
-$9!$. A questo punto, per\`{o}, bisogner\`{a} tenere conto 
-dell'ordine anche nel calcolo dei casi favorevoli. Ad esempio, per 
-contare i casi favorevoli per il punto~(a), bisogner\`{a} scegliere i 
-3 numeri su 5 che spettano ai 3 amici e poi moltiplicare per $3!$ (i 
-modi di assegnare i 3 numeri scelti ai 3 amici) e per $6!$ (i modi di 
-assegnare i restanti 6 numeri ai restanti 6 studenti).
+Nei punti~(a) e~(b) possiamo pensare che i casi possibili, sempre equiprobabili, siano i modi di assegnare 9 numeri a 9 persone, dunque $9!$. A questo punto, però, bisognerà tenere conto dell'ordine anche nel calcolo dei casi favorevoli. Ad esempio, per contare i casi favorevoli per il punto~(a), bisognerà scegliere i 3 numeri su 5 che spettano ai 3 amici e poi moltiplicare per $3!$ (i modi di assegnare i 3 numeri scelti ai 3 amici) e per $6!$ (i modi di assegnare i restanti 6 numeri ai restanti 6 studenti).
 
-In poche parole, si finisce per moltiplicare numeratore e 
-denominatore per $3!\cdot 6!$, il che ovviamente non cambia i 
-risultati.
+In poche parole, si finisce per moltiplicare numeratore e denominatore per $3!\cdot 6!$, il che ovviamente non cambia i risultati.
 
-Nei calcoli del punto~(c), volendo tenere conto dell'ordine, bisogna
-moltiplicare numeratori e denominatori per $6!$, perch\'{e} ora
-l'ordinamento dei punteggi sui 3 amici \`{e} fisso e si pu\`{o}
-scegliere liberamente l'ordinamento dei punteggi solo sui restanti 6
-studenti.  }
+Nei calcoli del punto~(c), volendo tenere conto dell'ordine, bisogna moltiplicare numeratori e denominatori per $6!$, perché ora l'ordinamento dei punteggi sui 3 amici è fisso e si può scegliere liberamente l'ordinamento dei punteggi solo sui restanti 6 studenti.
+}
 
 \renewcommand{\Commenti}{
 }

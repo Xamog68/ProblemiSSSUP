@@ -2,156 +2,85 @@
 
 \renewcommand{\NumeroProblema}{4}
 
-\renewcommand{\Testo}{ 
-Gli studenti della Scuola Sant'Anna sono
-riusciti a produrre tre ottime birre, tutte dello stesso gusto ma con
-gradazioni alcoliche diverse: una completamente analcolica, una con
-gradazione alcolica di $5^{\circ}$, una con gradazione alcolica di
-$10^{\circ}$.  Al bar della Scuola l'ordinazione standard \`{e}: ``un
-litro di birra con gradazione di $g$ gradi''.  Le gradazioni richieste
-dai clienti sono numeri reali $g$ distribuiti nell'intervallo $[0,10]$
-in maniera completamente casuale.  Il barman, miscelando i tre tipi di
-birra, cerca di soddisfare la richiesta.
+\renewcommand{\Testo}{
+Gli studenti della Scuola Sant'Anna sono riusciti a produrre tre ottime birre, tutte dello stesso gusto ma con gradazioni alcoliche diverse: una completamente analcolica, una con gradazione alcolica di $5^{\circ}$, una con gradazione alcolica di $10^{\circ}$.  Al bar della Scuola l'ordinazione standard è: ``un litro di birra con gradazione di $g$ gradi''.  Le gradazioni richieste dai clienti sono numeri reali $g$ distribuiti nell'intervallo $[0,10]$ in maniera completamente casuale.  Il barman, miscelando i tre tipi di birra, cerca di soddisfare la richiesta.
 
-Ad un certo istante, nel bar restano 1 litro di birra a
-$0^{\circ}$, 1 litro di birra a $5^{\circ}$ ed 1 litro di birra a
-$10^{\circ}$. Entra un cliente e chiede 1 litro di birra a $2.5^{\circ}$.
+Ad un certo istante, nel bar restano 1 litro di birra a $0^{\circ}$, 1 litro di birra a $5^{\circ}$ ed 1 litro di birra a $10^{\circ}$. Entra un cliente e chiede 1 litro di birra a $2.5^{\circ}$.
 \begin{enumerate}
-	\item[(a)] Determinare in che modo il barman dovr\`{a} miscelare le tre
-	birre per avere la \emph{massima} probabilit\`{a} di poter
-	soddisfare anche il cliente successivo.  Determinare anche, posto
-	che il barman opti per tale strategia ottimale, per quali valori
-	di $g$ il cliente successivo potr\`{a} essere accontentato.
+	\item[(a)] Determinare in che modo il barman dovrà miscelare le tre birre per avere la \emph{massima} probabilità di poter soddisfare anche il cliente successivo.  Determinare anche, posto che il barman opti per tale strategia ottimale, per quali valori di $g$ il cliente successivo potrà essere accontentato.
 
-	\item[(b)] Viceversa, determinare in che modo il barman dovr\`{a}
-	miscelare le tre birre per avere la \emph{minima} probabilit\`{a}
-	di poter soddisfare anche il cliente successivo, precisando anche
-	in questa ipotesi pessimistica per quali valori di $g$ il cliente
-	successivo potr\`{a} essere accontentato.
+	\item[(b)] Viceversa, determinare in che modo il barman dovrà miscelare le tre birre per avere la \emph{minima} probabilità di poter soddisfare anche il cliente successivo, precisando anche in questa ipotesi pessimistica per quali valori di $g$ il cliente successivo potrà essere accontentato.
 \end{enumerate}
 }
 
 \renewcommand{\Risposta}{
 \begin{enumerate}
-	\renewcommand{\labelenumi}{(\alph{enumi})} 
-	\item Per avere la massima probabilit\`{a} di accontentare anche
-	il cliente successivo, il barman deve miscelare mezzo litro di
-	birra analcolica e mezzo litro di birra a $5^{\circ}$.  In tal
-	caso potr\`{a} accontentare il cliente successivo se e solo se
-	$2.5\leq g\leq 10$, cio\`{e} nel 75\% dei casi.
+	\renewcommand{\labelenumi}{(\alph{enumi})}
+	\item Per avere la massima probabilità di accontentare anche il cliente successivo, il barman deve miscelare mezzo litro di birra analcolica e mezzo litro di birra a $5^{\circ}$.  In tal caso potrà accontentare il cliente successivo se e solo se $2.5\leq g\leq 10$, cioè nel 75\% dei casi.
 
-	\item Per avere la minima probabilit\`{a} di accontentare anche
-	il cliente successivo, il barman deve miscelare 3/4 di litro di
-	birra analcolica e 1/4 di litro di birra a $10^{\circ}$.  In tal
-	caso potr\`{a} accontentare il cliente successivo se e solo se
-	$3.75\leq g\leq 8.75$, cio\`{e} nel 50\% dei casi.
+	\item Per avere la minima probabilità di accontentare anche il cliente successivo, il barman deve miscelare 3/4 di litro di birra analcolica e 1/4 di litro di birra a $10^{\circ}$.  In tal caso potrà accontentare il cliente successivo se e solo se $3.75\leq g\leq 8.75$, cioè nel 50\% dei casi.
 \end{enumerate}
 }
 
-\renewcommand{\Aiutino}{ 
-Supponiamo che il barman ottenga la prima birra miscelando $a$ litri
-di quella analcolica, $b$ litri di quella a $5^{\circ}$, e $c$ litri
-di quella a $10^{\circ}$.  Quali relazioni devono verificare $a$, $b$,
-$c$?
+\renewcommand{\Aiutino}{
+Supponiamo che il barman ottenga la prima birra miscelando $a$ litri di quella analcolica, $b$ litri di quella a $5^{\circ}$, e $c$ litri di quella a $10^{\circ}$.  Quali relazioni devono verificare $a$, $b$, $c$?
 
-Si tratta poi di dimostrare che il cliente successivo potr\`{a} essere
-accontentato se e solo se richieder\`{a} una gradazione $g$ con
-$a/2\leq g\leq 1-c/2$.  Non resta ora che determinare per quali valori
-dei parametri tale intervallo ha ampiezza massima o minima.
+Si tratta poi di dimostrare che il cliente successivo potrà essere accontentato se e solo se richiederà una gradazione $g$ con $a/2\leq g\leq 1-c/2$.  Non resta ora che determinare per quali valori dei parametri tale intervallo ha ampiezza massima o minima.
 }
 
 \renewcommand{\SoluzioneUfficiale}{\TitoloSoluzione
-Per comodit\`{a} dividiamo tutte le gradazioni per 10: cos\`{i} le 3 
-birre standard hanno gradazione 0, 1/2, 1, mentre il primo cliente 
-richiede gradazione 1/4. Supponiamo che il barman accontenti il primo 
-cliente usando $a$ litri della birra a gradazione 0, $b$ litri della 
-birra a gradazione 1/2, e $c$ litri della birra a gradazione 1. 
-Chiaramente $a\geq 0$, $b\geq 0$, $c\geq 0$; inoltre
+Per comodità dividiamo tutte le gradazioni per 10: così le 3 birre standard hanno gradazione 0, 1/2, 1, mentre il primo cliente richiede gradazione 1/4. Supponiamo che il barman accontenti il primo cliente usando $a$ litri della birra a gradazione 0, $b$ litri della birra a gradazione 1/2, e $c$ litri della birra a gradazione 1. Chiaramente $a\geq 0$, $b\geq 0$, $c\geq 0$; inoltre
 \begin{equation}
 	a+b+c=1
 	\label{birre:1}
 \end{equation}
-perch\'{e} la somma deve fare 1 litro di birra, e 
+perché la somma deve fare 1 litro di birra, e
 \begin{equation}
 	\frac{b}{2}+c=a\cdot 0+b\cdot\frac{1}{2}+c\cdot 1=\frac{1}{4},
 	\label{birre:1/4}
 \end{equation}
 in quanto la gradazione totale deve essere 1/4.
 
-Mostriamo che il cliente successivo potr\`{a} essere accontentato se 
-e solo se richieder\`{a} una gradazione $g$ con
+Mostriamo che il cliente successivo potrà essere accontentato se e solo se richiederà una gradazione $g$ con
 \begin{equation}
 	\frac{a}{2}\leq g\leq 1-\frac{c}{2}.
 	\label{birre:g}
 \end{equation}
 
-Se dimostriamo questo avremo che le gradazioni disponibili per il 
-cliente successivo sono un intervallo di ampiezza
+Se dimostriamo questo avremo che le gradazioni disponibili per il cliente successivo sono un intervallo di ampiezza
 $$1-\frac{c}{2}-\frac{a}{2}=1-\frac{a+c}{2}=\frac{1+b}{2},$$
-in cui l'ultima uguaglianza segue dalla (\ref{birre:1}). Ora dalla 
-(\ref{birre:1/4}) deduciamo immediatamente che $0\leq b\leq 1/2$. A 
-questo punto \`{e} facile rispondere alle domande poste dal problema 
-come segue.
+in cui l'ultima uguaglianza segue dalla (\ref{birre:1}). Ora dalla
+(\ref{birre:1/4}) deduciamo immediatamente che $0\leq b\leq 1/2$. A
+questo punto è facile rispondere alle domande poste dal problema come segue.
 \begin{itemize}
-	\item  Il cliente successivo ha a disposizione un intervallo di 
-	gradazioni di ampiezza massima quando $b$ \`{e} il massimo 
-	possibile, cio\`{e} quando $b=1/2$. Tenendo conto della 
-	(\ref{birre:1}) e della (\ref{birre:1/4}), questo corrisponde ad 
-	avere $a=1/2$, $b=1/2$, $c=0$, cio\`{e} al caso in cui il barman 
-	ottiene la birra per il primo cliente mescolando mezzo litro di 
-	quella analcolica e mezzo litro di quella a gradazione 1/2. 
-	Tenendo conto della (\ref{birre:g}), in tal caso il cliente 
-	successivo sar\`{a} accontentabile se e solo se $1/4\leq g\leq 
-	1$, cio\`{e} nel 75\% dei casi. 
+	\item  Il cliente successivo ha a disposizione un intervallo di gradazioni di ampiezza massima quando $b$ è il massimo possibile, cioè quando $b=1/2$. Tenendo conto della
+	(\ref{birre:1}) e della (\ref{birre:1/4}), questo corrisponde ad
+	avere $a=1/2$, $b=1/2$, $c=0$, cioè al caso in cui il barman ottiene la birra per il primo cliente mescolando mezzo litro di quella analcolica e mezzo litro di quella a gradazione 1/2.
+	Tenendo conto della (\ref{birre:g}), in tal caso il cliente
+	successivo sarà accontentabile se e solo se $1/4\leq g\leq
+	1$, cioè nel 75\% dei casi.
 
-	\item  Il cliente successivo ha a disposizione un intervallo di 
-	gradazioni di ampiezza minima quando $b$ \`{e} il minimo 
-	possibile, cio\`{e} quando $b=0$. Tenendo conto della 
-	(\ref{birre:1}) e della (\ref{birre:1/4}), questo corrisponde ad 
-	avere $a=3/4$, $b=0$, $c=1/4$, cio\`{e} al caso in cui il barman 
-	ottiene la birra per il primo cliente mescolando 3/4 di litro di 
-	quella analcolica e 1/4 di litro di quella a gradazione 1. 
-	Tenendo conto della (\ref{birre:g}), in tal caso il cliente 
-	successivo sar\`{a} accontentabile se e solo se $3/8\leq g\leq 
-	7/8$, cio\`{e} nel 50\% dei casi. 
+	\item  Il cliente successivo ha a disposizione un intervallo di gradazioni di ampiezza minima quando $b$ è il minimo possibile, cioè quando $b=0$. Tenendo conto della
+	(\ref{birre:1}) e della (\ref{birre:1/4}), questo corrisponde ad
+	avere $a=3/4$, $b=0$, $c=1/4$, cioè al caso in cui il barman ottiene la birra per il primo cliente mescolando 3/4 di litro di quella analcolica e 1/4 di litro di quella a gradazione 1.
+	Tenendo conto della (\ref{birre:g}), in tal caso il cliente
+	successivo sarà accontentabile se e solo se $3/8\leq g\leq
+	7/8$, cioè nel 50\% dei casi.
 \end{itemize}
 
 Resta dunque da dimostrare la (\ref{birre:g}).  Dopo aver accontentato
-il primo cliente, restano $(1-a)$ litri a gradazione 0, $(1-b)$ litri
-a gradazione 1/2, e $(1-c)$ litri a gradazione 1.  La birra da 1 litro
-pi\`{u} leggera che si pu\`{o} produrre in queste condizioni \`{e}
-quella ottenuta usando tutta la birra a gradazione 0 disponibile,
-cio\`{e} $(1-a)$ litri, e la restante parte, cio\`{e} $a$ litri, a
-gradazione 1/2.  Questa scelta \`{e} possibile in quanto sono rimasti
-almeno $a$ litri di birra a gradazione 1/2, dal momento che $a\leq 1-b$
+il primo cliente, restano $(1-a)$ litri a gradazione 0, $(1-b)$ litri a gradazione 1/2, e $(1-c)$ litri a gradazione 1.  La birra da 1 litro più leggera che si può produrre in queste condizioni è quella ottenuta usando tutta la birra a gradazione 0 disponibile, cioè $(1-a)$ litri, e la restante parte, cioè $a$ litri, a gradazione 1/2.  Questa scelta è possibile in quanto sono rimasti almeno $a$ litri di birra a gradazione 1/2, dal momento che $a\leq 1-b$
 per via della (\ref{birre:1}).  La birra ottenuta in questo modo ha
 gradazione
 $$(1-a)\cdot 0+a\cdot \frac{1}{2}=\frac{a}{2},$$
-il che giustifica intanto la disuguaglianza $g\geq a/2$, e mostra 
-come produrre 1 litro di birra a gradazione esattamente $a/2$.
+il che giustifica intanto la disuguaglianza $g\geq a/2$, e mostra come produrre 1 litro di birra a gradazione esattamente $a/2$.
 
-Simmetricamente, la birra da 1 litro pi\`{u} alcolica che il cliente 
-successivo pu\`{o} avere \`{e}
-quella ottenuta usando tutta la birra a gradazione 1 disponibile,
-cio\`{e} $(1-c)$ litri, e la restante parte, cio\`{e} $c$ litri, a
-gradazione 1/2.  Questa scelta \`{e} possibile in quanto $c\leq 1-b$
-per lo stesso motivo di prima, e porta ad una birra di gradazione 
-totale
+Simmetricamente, la birra da 1 litro più alcolica che il cliente successivo può avere è quella ottenuta usando tutta la birra a gradazione 1 disponibile, cioè $(1-c)$ litri, e la restante parte, cioè $c$ litri, a gradazione 1/2.  Questa scelta è possibile in quanto $c\leq 1-b$ per lo stesso motivo di prima, e porta ad una birra di gradazione totale
 $$c\cdot\frac{1}{2}+(1-c)\cdot 1=1-\frac{c}{2}.$$
 
-Questo giustifica la disuguaglianza $g\leq 1-c/2$, e mostra 
-come produrre 1 litro di birra a gradazione esattamente 
-$1-c/2$.
+Questo giustifica la disuguaglianza $g\leq 1-c/2$, e mostra come produrre 1 litro di birra a gradazione esattamente $1-c/2$.
 
-Resta da dimostrare che tutte le gradazioni intermedie tra $a/2$ e
-$1-c/2$ sono pure ottenibili.  A tal fine il barman pu\`{o} produrre 1
-litro di birra a gradazione $a/2$ procedendo come descritto, ed 1
-litro di birra a gradazione $1-c/2$ procedendo come descritto.  Si
-noti che questo lo porta ad usare $a$ litri di birra a gradazione 1/2
-per produrre quella a gradazione $a/2$, e $c$ litri di birra a
-gradazione 1/2 per produrre quella a gradazione $1-c/2$.  Sommati ai
-$b$ litri di birra a gradazione 1/2 gi\`{a} utilizzati per il primo
-cliente, il totale fa esattamente 1.  A questo punto \`{e} evidente
+Resta da dimostrare che tutte le gradazioni intermedie tra $a/2$ e $1-c/2$ sono pure ottenibili.  A tal fine il barman può produrre 1 litro di birra a gradazione $a/2$ procedendo come descritto, ed 1 litro di birra a gradazione $1-c/2$ procedendo come descritto.  Si noti che questo lo porta ad usare $a$ litri di birra a gradazione 1/2 per produrre quella a gradazione $a/2$, e $c$ litri di birra a gradazione 1/2 per produrre quella a gradazione $1-c/2$.  Sommati ai $b$ litri di birra a gradazione 1/2 già utilizzati per il primo cliente, il totale fa esattamente 1.  A questo punto è evidente
 che tutte le gradazioni che soddisfano la (\ref{birre:g}) possono
 essere ottenute miscelando in maniera opportuna le 2 birre
 ``estremali'' appena prodotte.  }
@@ -160,12 +89,7 @@ essere ottenute miscelando in maniera opportuna le 2 birre
 }
 
 \renewcommand{\Osservazioni}{
-\`{E} possibile, seguendo la strategia a due passi descritta nella 
-soluzione, determinare in funzione di $a$, $b$, $c$, $g$ le 
-proporzioni secondo cui miscellare le 3 birre all'arrivo del cliente 
-successivo. Con qualche calcolo, che \`{e} comunque istruttivo 
-svolgere, si ottiene che le birre di gradazione 0, 1/2, 1 devono 
-essere mescolate, rispettivamente, nelle seguenti quantit\`{a}:
+È possibile, seguendo la strategia a due passi descritta nella soluzione, determinare in funzione di $a$, $b$, $c$, $g$ le proporzioni secondo cui miscellare le 3 birre all'arrivo del cliente successivo. Con qualche calcolo, che è comunque istruttivo svolgere, si ottiene che le birre di gradazione 0, 1/2, 1 devono essere mescolate, rispettivamente, nelle seguenti quantità:
 $$a'=\frac{(1-a)(2-c-2g)}{1+b},
 \hspace{3em}
 b'=\frac{2(a-ac-ag+cg)}{1+b},
@@ -173,8 +97,7 @@ b'=\frac{2(a-ac-ag+cg)}{1+b},
 c'=\frac{(1-c)(2g-a)}{1+b}.$$
 
 Con qualche calcolo si verifica che, nelle ipotesi (\ref{birre:g}), si
-ha che $0\leq a'\leq 1-a$, $0\leq b'\leq 1-b$, $0\leq c'\leq 1-c$, ed
-inoltre $a'+b'+c'=1$ e $b'/2+c'=g$.
+ha che $0\leq a'\leq 1-a$, $0\leq b'\leq 1-b$, $0\leq c'\leq 1-c$, ed inoltre $a'+b'+c'=1$ e $b'/2+c'=g$.
 }
 
 \renewcommand{\Commenti}{

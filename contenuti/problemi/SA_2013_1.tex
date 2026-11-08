@@ -3,18 +3,14 @@
 \renewcommand{\NumeroProblema}{1}
 
 \renewcommand{\Testo}{
-Per ogni numero reale $x$, indichiamo con $\lfloor x\rfloor$ 
-la \emph{parte intera} di $x$, definita come il pi\`{u} grande 
-intero minore od uguale ad $x$.
+Per ogni numero reale $x$, indichiamo con $\lfloor x\rfloor$ la \emph{parte intera} di $x$, definita come il più grande intero minore o uguale ad $x$.
 
 \begin{enumerate}
-	\item[(a)]  Determinare per quali valori del parametro reale $a>0$ 
-	l'equazione
+	\item[(a)] Determinare per quali valori del parametro reale $a>0$ l'equazione
 	$$ax^{2}+10^{\lfloor x\rfloor}=2013$$
 	ammette almeno una soluzione reale $x>0$.
 
-	\item[(b)]  Determinare per quali valori del parametro reale $a>0$ 
-	l'equazione
+	\item[(b)] Determinare per quali valori del parametro reale $a>0$ l'equazione
 	$$ax^{2}+10^{-\lfloor x\rfloor}=2013$$
 	ammette almeno una soluzione reale $x>0$.
 \end{enumerate}
@@ -22,9 +18,7 @@ intero minore od uguale ad $x$.
 
 \renewcommand{\Risposta}{
 \begin{enumerate}
-	\renewcommand{\labelenumi}{(\alph{enumi})}
-	\item  L'equazione ha almeno una soluzione $x>0$ se e solo se $a$ 
-	verifica una delle seguenti 4 relazioni:
+	\item[(a)] L'equazione ha almeno una soluzione $x>0$ se e solo se $a$ verifica una delle seguenti 4 relazioni:
 	$$\frac{1013}{16}<a\leq\frac{1013}{9},
 	\quad\quad\quad
 	\frac{1913}{9}<a\leq\frac{1913}{4},
@@ -33,23 +27,18 @@ intero minore od uguale ad $x$.
 	\quad\quad\quad
 	2012<a.$$
 
-	\item  L'equazione ha almeno una soluzione $x>0$ per ogni $a>0$. 
+	\item[(b)] L'equazione ha almeno una soluzione $x>0$ per ogni $a>0$.
 \end{enumerate}
 }
 
 \renewcommand{\Aiutino}{
-Scrivere l'equazione portando la potenza di 10 a destra, quindi 
-cercare di capire come sono fatti i grafici delle funzioni a destra e 
-sinistra. A destra c'\`{e} una funzione a gradini, a sinistra una 
-famiglia di parabole~\ldots
+Scrivere l'equazione portando la potenza di 10 a destra, quindi cercare di capire come sono fatti i grafici delle funzioni a destra e sinistra. A destra c'è una funzione a gradini, a sinistra una famiglia di parabole~\ldots
 
-Questo permette di capire come vanno le cose. Per formalizzare il 
-discorso algebricamente, conviene cercare di capire quando 
-l'equazione ha una soluzione con $\lfloor x\rfloor=n$.}
+Questo permette di capire come vanno le cose. Per formalizzare il discorso algebricamente, conviene cercare di capire quando l'equazione ha una soluzione con $\lfloor x\rfloor=n$.
+}
 
 \renewcommand{\SoluzioneUfficiale}{\TitoloSoluzione\DomandaA
-Mostriamo che l'equazione ha almeno una soluzione $x>0$ se e solo se $a$ 
-verifica una delle seguenti 4 relazioni:
+Mostriamo che l'equazione ha almeno una soluzione $x>0$ se e solo se $a$ verifica una delle seguenti 4 relazioni:
 $$\frac{1013}{16}<a\leq\frac{1013}{9},
 \quad\quad\quad
 \frac{1913}{9}<a\leq\frac{1913}{4},
@@ -58,67 +47,43 @@ $$\frac{1013}{16}<a\leq\frac{1013}{9},
 \quad\quad\quad
 2012<a.$$
 
-Iniziamo osservando che, essendo $a>0$, per $x>0$ i due addendi a 
-sinistra sono entrambi positivi, dunque in particolare $10^{\lfloor 
-x\rfloor}\leq 2013$, da cui $0\leq\lfloor x\rfloor\leq 3$. Pertanto 
-$\lfloor x\rfloor$ pu\`{o} assumere soltanto i valori 0, 1, 2, 3.
+Iniziamo osservando che, essendo $a>0$, per $x>0$ i due addendi a sinistra sono entrambi positivi, dunque in particolare $10^{\lfloor x\rfloor}\leq 2013$, da cui $0\leq\lfloor x\rfloor\leq 3$. Pertanto $\lfloor x\rfloor$ può assumere soltanto i valori 0, 1, 2, 3.
 \begin{itemize}
-	\item  Se $\lfloor x\rfloor=0$, allora l'equazione diventa 
-	$ax^{2}=2013-10^{0}=2012$, la quale ha come soluzione positiva 
-	$x=\sqrt{2012/a}$. Ora si deve avere che $0\leq x<1$, in modo da 
-	avere $\lfloor x\rfloor=0$, e questo accade se e solo se
+	\item Se $\lfloor x\rfloor=0$, allora l'equazione diventa $ax^{2}=2013-10^{0}=2012$, la quale ha come soluzione positiva $x=\sqrt{2012/a}$. Ora si deve avere che $0\leq x<1$, in modo da avere $\lfloor x\rfloor=0$, e questo accade se e solo se
 	$$0\leq\sqrt{\frac{2012}{a}}<1.$$
-	
-	La prima disuguaglianza \`{e} sempre verificata, la seconda vale 
-	se e solo se $a>2012$.
-	
-	\item  Se $\lfloor x\rfloor=1$, allora l'equazione diventa 
-	$ax^{2}=2013-10^{1}=2003$, la quale ha come soluzione positiva 
-	$x=\sqrt{2003/a}$. Dovendo essere $\lfloor x\rfloor=1$, si 
-	dovr\`{a} avere che $1\leq x<2$, il che \`{e} vero se e solo se
+
+	La prima disuguaglianza è sempre verificata, la seconda vale se e solo se $a>2012$.
+
+	\item Se $\lfloor x\rfloor=1$, allora l'equazione diventa $ax^{2}=2013-10^{1}=2003$, la quale ha come soluzione positiva $x=\sqrt{2003/a}$. Dovendo essere $\lfloor x\rfloor=1$, si dovrà avere che $1\leq x<2$, il che è vero se e solo se
 	$$1\leq\sqrt{\frac{2003}{a}}<2.$$
-	
+
 	Con facili calcoli si ottiene che questo accade se e solo se
 	$$\frac{2003}{4}<a\leq 2003.$$
 
-	\item  Se $\lfloor x\rfloor=2$, allora l'equazione diventa 
-	$ax^{2}=2013-10^{2}=1913$, la quale ha come soluzione positiva 
-	$x=\sqrt{1913/a}$. Dovendo essere $\lfloor x\rfloor=2$, si 
-	dovr\`{a} avere che $2\leq x<3$, il che \`{e} vero se e solo se
+	\item Se $\lfloor x\rfloor=2$, allora l'equazione diventa $ax^{2}=2013-10^{2}=1913$, la quale ha come soluzione positiva $x=\sqrt{1913/a}$. Dovendo essere $\lfloor x\rfloor=2$, si dovrà avere che $2\leq x<3$, il che è vero se e solo se
 	$$2\leq\sqrt{\frac{1913}{a}}<3.$$
-	
+
 	Con facili calcoli si ottiene che questo accade se e solo se
 	$$\frac{1913}{9}<a\leq\frac{1913}{4}.$$
 
-	\item  Se $\lfloor x\rfloor=3$, allora l'equazione diventa 
-	$ax^{2}=2013-10^{3}=1013$, la quale ha come soluzione positiva 
-	$x=\sqrt{1013/a}$. Dovendo essere $\lfloor x\rfloor=3$, si 
-	dovr\`{a} avere che $3\leq x<4$, il che \`{e} vero se e solo se
-	$$3\leq\sqrt{\frac{1913}{a}}<4.$$
-	
+	\item Se $\lfloor x\rfloor=3$, allora l'equazione diventa $ax^{2}=2013-10^{3}=1013$, la quale ha come soluzione positiva $x=\sqrt{1013/a}$. Dovendo essere $\lfloor x\rfloor=3$, si dovrà avere che $3\leq x<4$, il che è vero se e solo se
+	$$3\leq\sqrt{\frac{1013}{a}}<4.$$
+
 	Con facili calcoli si ottiene che questo accade se e solo se
 	$$\frac{1013}{16}<a\leq\frac{1013}{9}.$$
 \end{itemize}
 
-Abbiamo cos\`{i} ottenuto le 4 relazioni che descrivono l'insieme dei 
-valori di $a$ per cui l'equazione ha almeno una soluzione $x>0$. La 
-dimostrazione presentata mostra anche che tale soluzione positiva, 
-per i valori di $a$ per cui esiste, \`{e} unica.
+Abbiamo così ottenuto le 4 relazioni che descrivono l'insieme dei valori di $a$ per cui l'equazione ha almeno una soluzione $x>0$. La dimostrazione presentata mostra anche che tale soluzione positiva, per i valori di $a$ per cui esiste, è unica.
 
 \DomandaB
 
-Mostriamo che l'equazione ha almeno una soluzione $x>0$ per ogni 
-$a>0$. Consideriamo l'insieme degli interi $k\geq 0$ tali che
+Mostriamo che l'equazione ha almeno una soluzione $x>0$ per ogni $a>0$. Consideriamo l'insieme degli interi $k\geq 0$ tali che
 \begin{equation}
 	ak^{2}+10^{-k}\leq 2013.
 	\label{defn:k0}
 \end{equation}
 
-Tale insieme \`{e} non vuoto in quanto contiene per lo meno $k=0$, ed 
-ha solo un numero finito di elementi in quanto la (\ref{defn:k0}) non 
-pu\`{o} valere se $k$ \`{e} sufficientemente grande (ad esempio per 
-$k>\sqrt{2013/a}$). Sia quindi $k_{0}$ il pi\`{u} grande valore di 
-$k$ che soddisfa la (\ref{defn:k0}). Si avr\`{a} dunque che
+Tale insieme è non vuoto in quanto contiene perlomeno $k=0$, ed ha solo un numero finito di elementi in quanto la (\ref{defn:k0}) non può valere se $k$ è sufficientemente grande (ad esempio per $k>\sqrt{2013/a}$). Sia quindi $k_{0}$ il più grande valore di $k$ che soddisfa la (\ref{defn:k0}). Si avrà dunque che
 \begin{equation}
 	ak_{0}^{2}+10^{-k_{0}}\leq 2013,
 	\label{k0-1}
@@ -128,93 +93,53 @@ $k$ che soddisfa la (\ref{defn:k0}). Si avr\`{a} dunque che
 	\label{k0-2}
 \end{equation}
 
-Mostriamo ora che l'equazione proposta ha una soluzione con $\lfloor 
-x\rfloor=k_{0}$, che sar\`{a} quindi data dalla formula
+Mostriamo ora che l'equazione proposta ha una soluzione con $\lfloor x\rfloor=k_{0}$, che sarà quindi data dalla formula
 $$x=\sqrt{\frac{2013-10^{-k_{0}}}{a}}.$$
 
-Per avere che si tratta effettivamente di una soluzione, dobbiamo
-verificare che $\lfloor x\rfloor=k_{0}$, cio\`{e}
+Per avere che si tratta effettivamente di una soluzione, dobbiamo verificare che $\lfloor x\rfloor=k_{0}$, cioè
 $$k_{0}\leq\sqrt{\frac{2013-10^{-k_{0}}}{a}}< k_{0}+1.$$
 
-Eleviamo al quadrato e moltiplichiamo per $a$. La prima disuguaglianza 
-diventa 
-$$ak_{0}^{2}\leq 2013-10^{-k_{0}},$$ 
-che \`{e} equivalente alla 
-(\ref{k0-1}). La seconda disuguaglianza diventa 
-$$2013-10^{-k_{0}}<a(k_{0}+1)^{2},$$ 
-la quale segue dalla (\ref{k0-2}) 
-dal momento che 
+Eleviamo al quadrato e moltiplichiamo per $a$. La prima disuguaglianza diventa
+$$ak_{0}^{2}\leq 2013-10^{-k_{0}},$$
+che è equivalente alla (\ref{k0-1}). La seconda disuguaglianza diventa
+$$2013-10^{-k_{0}}<a(k_{0}+1)^{2},$$
+la quale segue dalla (\ref{k0-2}) dal momento che
 $$2013-10^{-k_{0}}<2013-10^{-(k_{0}+1)}<a(k_{0}+1)^{2}.$$
 }
 
 \renewcommand{\SoluzioniAlternative}{
 
-Presentiamo un approccio alternativo al punto~(b), pi\`{u} simile a
-quello che abbiamo gi\`{a} adottato per il punto~(a).  Iniziamo a
-chiederci per quali valori di $a$ esiste una soluzione con $\lfloor
-x\rfloor=0$.  In tal caso l'equazione diventa $ax^{2}+1=2013$, da cui
-$x=\sqrt{2012/a}$ (siamo infatti interessati solo alle soluzioni
-positive).  Questa \`{e} effettivamente una soluzione se e solo se
+Presentiamo un approccio alternativo al punto~(b), più simile a quello che abbiamo già adottato per il punto~(a). Iniziamo a chiederci per quali valori di $a$ esiste una soluzione con $\lfloor x\rfloor=0$. In tal caso l'equazione diventa $ax^{2}+1=2013$, da cui $x=\sqrt{2012/a}$ (siamo infatti interessati solo alle soluzioni positive). Questa è effettivamente una soluzione se e solo se
 $$0\leq\sqrt{\frac{2012}{a}}<1,$$
 il che accade se e solo se $a>2012$.
 
-Cerchiamo ora pi\`{u} in generale soluzioni con $\lfloor
-x\rfloor=n$. Risolvendo ed imponendo la condizione $n\leq x<n+1$, 
-troviamo che deve essere
+Cerchiamo ora più in generale soluzioni con $\lfloor x\rfloor=n$, dove $n\geq 1$. Risolvendo ed imponendo la condizione $n\leq x<n+1$, troviamo che deve essere
 $$n\leq\sqrt{\frac{2013-10^{-n}}{a}}<n+1,$$
 da cui con facili calcoli troviamo le condizioni
 $$\frac{2013-10^{-n}}{(n+1)^{2}}<a\leq\frac{2013-10^{-n}}{n^{2}}.$$
 
-Questo mostra che, per ogni intero $n\geq 0$, l'equazione ha una
-soluzione con $\lfloor x\rfloor=n$ se e solo se il parametro $a$
-appartiene ad un opportuno insieme $I_{n}$.  Per $n=0$ tale insieme
-\`{e} la semiretta $I_{0}=(2012,+\infty)$.  Per $n\geq 1$ l'insieme
-$I_{n}$ \`{e} un intervallo del tipo $(A_{n},B_{n}]$ con
-$$A_{n}=\frac{2013-10^{-n}}{(n+1)^{2}}, \hspace{3em}
-B_{n}=\frac{2013-10^{-n}}{n^{2}}.$$
+Questo mostra che, per ogni intero $n\geq 0$, l'equazione ha una soluzione con $\lfloor x\rfloor=n$ se e solo se il parametro $a$ appartiene ad un opportuno insieme $I_{n}$. Per $n=0$ tale insieme è la semiretta $I_{0}=(A_{0},+\infty)=(2012,+\infty)$. Per $n\geq 1$ l'insieme $I_{n}$ è un intervallo del tipo $(A_{n},B_{n}]$, dove
+$$A_{n}=\frac{2013-10^{-n}}{(n+1)^{2}} \quad(n\geq 0), \hspace{3em}
+B_{n}=\frac{2013-10^{-n}}{n^{2}} \quad(n\geq 1).$$
 
-L'insieme degli $a$ per cui c'\`{e} soluzione \`{e} dunque l'unione di
-$I_{n}$ al variare di $n\geq 0$.  Mostriamo ora che tale unione \`{e}
-costituita da tutti gli $a>0$.  Questo segue da tre osservazioni.
-Innanzitutto $I_{0}$ copre una semiretta.  Poi per ogni $n\geq 0$ si
-ha che $$B_{n+1}=\frac{2013-10^{-(n+1)}}{(n+1)^{2}}>
+L'insieme degli $a$ per cui c'è soluzione è dunque l'unione di $I_{n}$ al variare di $n\geq 0$. Mostriamo ora che tale unione è costituita da tutti gli $a>0$. Questo segue da tre osservazioni. Innanzitutto $I_{0}$ copre una semiretta. Poi per ogni $n\geq 0$ si ha che
+$$B_{n+1}=\frac{2013-10^{-(n+1)}}{(n+1)^{2}}>
 \frac{2013-10^{-n}}{(n+1)^{2}}=A_{n},$$
-quindi ogni intervallo $I_{n+1}$ si sovrappone al precedente $I_{n}$. 
-Infine si ha che
+quindi ogni intervallo $I_{n+1}$ si sovrappone al precedente $I_{n}$. Infine si ha che
 $$\lim_{n\to +\infty}A_{n}=
 \lim_{n\to +\infty}\frac{2013-10^{-n}}{(n+1)^{2}}=0,$$
 per cui l'unione degli $I_{n}$ invade tutta la semiretta positiva.
 }
 
-\renewcommand{\Osservazioni}{Entrambi le equazioni ammettono una 
-interpretazione grafica piuttosto semplice. Per il punto~(a), 
-riscriviamo l'equazione nella forma
+\renewcommand{\Osservazioni}{
+Entrambe le equazioni ammettono una interpretazione grafica piuttosto semplice. Per il punto~(a), riscriviamo l'equazione nella forma
 $$ax^{2}=2013-10^{\lfloor x\rfloor}.$$
 
-Il grafico della funzione a destra, per $x>0$, \`{e} costituito da una
-successione di ``scalini'' di lunghezza unitaria, di cui solo i primi
-4 (corrispondenti a $\lfloor x\rfloor=0,1,2,3$) hanno altezza
-positiva.  Il grafico della funzione $ax^{2}$ \`{e} una parabola
-rivolta verso l'alto la cui ``apertura'' varia in funzione del
-parametro $a$.
+Il grafico della funzione a destra, per $x>0$, è costituito da una successione di ``scalini'' di lunghezza unitaria, di cui solo i primi 4 (corrispondenti a $\lfloor x\rfloor=0,1,2,3$) hanno altezza positiva.  Il grafico della funzione $ax^{2}$ è una parabola rivolta verso l'alto la cui ``apertura'' varia in funzione del parametro $a$.
 
-\`{E} chiaro quindi che per ciascuno dei 4 scalini esiste un 
-intervallo di valori di $a$ per cui \`{e} intersecato dalla parabola. 
-\`{E} chiaro anche che per $a$ sufficientemente grande la parabola 
-\`{e} cos\`{i} stretta da intersecare sempre il primo scalino, quello 
-corrispondente a $\lfloor x\rfloor=0$. Gli estremi degli intervalli 
-di $a$ per cui c'\`{e} soluzione sono proprio i valori di $a$ per cui 
-la parabola $ax^{2}$ passa per gli estremi degli scalini. 
+È chiaro quindi che per ciascuno dei 4 scalini esiste un intervallo di valori di $a$ per cui è intersecato dalla parabola. È chiaro anche che per $a$ sufficientemente grande la parabola è così stretta da intersecare sempre il primo scalino, quello corrispondente a $\lfloor x\rfloor=0$. Gli estremi degli intervalli di $a$ per cui c'è soluzione sono proprio i valori di $a$ per cui la parabola $ax^{2}$ passa per gli estremi degli scalini.
 
-La situazione \`{e} rappresentatata nella Figura~1a.  Gli unici 4
-gradini che stanno nel primo quadrante hanno altezza 2012, 2003, 1913
-e 1013, rispettivamente (per ovvie ragioni la figura non pu\`{o}
-essere in scala).  Come si vede, esistono parabole che intersecano i
-gradini, corrispondenti dunque a valori di $a$ per cui c'\`{e} una
-soluzione $x>0$, necessariamente unica.  Ci sono per\`{o} anche
-parabole, rappresentate tratteggiate, che passano tra un gradino e
-l'altro senza attraversarne nessuno, corrispondenti quindi a valori di
-$a$ per cui l'equazione non ha soluzioni positive.  \bigskip
+La situazione è rappresentata nella Figura~1a.  Gli unici 4 gradini che stanno nel primo quadrante hanno altezza 2012, 2003, 1913 e 1013, rispettivamente (per ovvie ragioni la figura non può essere in scala). Come si vede, esistono parabole che intersecano i gradini, corrispondenti dunque a valori di $a$ per cui c'è una soluzione $x>0$, necessariamente unica. Ci sono però anche parabole, rappresentate tratteggiate, che passano tra un gradino e l'altro senza attraversarne nessuno, corrispondenti quindi a valori di $a$ per cui l'equazione non ha soluzioni positive.  \bigskip
 
 {\centering
 \hfill
@@ -268,13 +193,7 @@ $a$ per cui l'equazione non ha soluzioni positive.  \bigskip
 Per il punto~(b), riscriviamo l'equazione nella forma
 $$ax^{2}=2013-10^{-\lfloor x\rfloor}.$$
 
-La situazione \`{e} rappresentatata nella Figura~1b.  Ora ci sono
-infiniti gradini nel primo quadrante, con altezze che partono da 2012
-e crescono tendendo asintoticamente a 2013.  \`{E} evidente che tutte
-le parabole intersecano almeno uno scalino, ma ci sono anche parabole,
-come quella centrale nella figura, che intersecano 2 scalini.  Questo
-mostra che ora la soluzione $x>0$ non \`{e} necessariamente unica per ogni
-valore $a>0$ del parametro.  }
+La situazione è rappresentata nella Figura~1b.  Ora ci sono infiniti gradini nel primo quadrante, con altezze che partono da 2012 e crescono tendendo asintoticamente a 2013.  È evidente che tutte le parabole intersecano almeno uno scalino, ma ci sono anche parabole, come quella centrale nella figura, che intersecano 2 scalini. Questo mostra che ora la soluzione $x>0$ non è necessariamente unica per ogni valore $a>0$ del parametro.  }
 
 \renewcommand{\Commenti}{
-}
+}%
