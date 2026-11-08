@@ -17,7 +17,8 @@ from pathlib import Path
 import re
 import shutil
 
-from genera_dati_sito import conversion_status, generator_sha256, pandoc_version
+from genera_dati_sito import (conversion_status, generator_sha256,
+                              pandoc_version, inspect_figure_issues)
 
 
 def main() -> int:
@@ -39,6 +40,7 @@ def main() -> int:
     gen_id=generator_sha256()
     pandoc_id=pandoc_version()
     rows=[]
+    figure_rows=[]
     for src in sorted(args.sorgenti.glob('SA_????_*.tex')):
         m=re.fullmatch(r'SA_(\d{4})_(\d+)\.tex',src.name)
         if not m:continue
@@ -50,6 +52,9 @@ def main() -> int:
         title=titles.get(key,f'Problema {n}')
         state,why=conversion_status(src,target,title,gen_id,pandoc_id)
         rows.append((state,src.name,why))
+        issues=inspect_figure_issues(src.read_text(encoding='utf-8'))
+        if issues['pstricks'] or issues['da_ricostruire']:
+            figure_rows.append((src.name,issues))
     if not rows:p.error('Nessun sorgente canonico corrisponde alla selezione')
     counts=Counter(state for state,_,_ in rows)
     print('ProblemiSSSUP - allineamento LaTeX/web')
@@ -66,7 +71,26 @@ def main() -> int:
             print(f'  {state:<8} {name}: {why}')
         if len(pending)>limit:
             print(f'  ... altri {len(pending)-limit} (usa --dettagli)')
+    count_pst=sum(i['pstricks'] for _,i in figure_rows)
+    count_missing=sum(len(i['da_ricostruire']) for _,i in figure_rows)
+    print('\nFigure da trattare (controllo indipendente dall\'allineamento):')
+    print(f'  INCOMPLETO (figure segnalate): {len(figure_rows)} problemi')
+    print(f'  Disegni PSTricks non convertiti: {count_pst}')
+    print(f'  Figure da ricostruire: {count_missing}')
+    if figure_rows:
+        limit=len(figure_rows) if args.dettagli else 12
+        for name,issues in figure_rows[:limit]:
+            pieces=[]
+            if issues['pstricks']:
+                pieces.append(f"{issues['pstricks']} PSTricks")
+            if issues['da_ricostruire']:
+                refs=', '.join(x['riferimento'] for x in issues['da_ricostruire'])
+                pieces.append('da ricostruire: '+refs)
+            print('  INCOMPLETO '+name+': '+'; '.join(pieces))
+        if len(figure_rows)>limit:
+            print(f'  ... altri {len(figure_rows)-limit} (usa --dettagli)')
     print('\nNB: ALLINEATO significa tecnicamente aggiornato, NON verificato sul piano matematico.')
+    print('NB: assenza di figure segnalate non implica completezza editoriale.')
     return 1 if pending else 0
 
 

@@ -27,6 +27,36 @@ JS_SUFFIX = ");"
 
 FIELDS=['Testo','Risposta','Aiutino','SoluzioneUfficiale','SoluzioniAlternative','Osservazioni','Commenti']
 
+# I commenti-marcatori appartengono ai sorgenti canonici e non vengono
+# mostrati da TeX. Nel sito diventano segnaposto nello stesso punto.
+MISSING_FIGURE_RE = re.compile(
+    r'^[ \t]*%[ \t]*SSSUP-FIGURA-DA-RICOSTRUIRE:[ \t]*(?P<ref>[^\r\n]+?)[ \t]*$',
+    flags=re.M,
+)
+PSTRICKS_INLINE_RE = re.compile(r'\\pspicture\b.*?\\endpspicture\b', flags=re.S)
+PSTRICKS_ENV_RE = re.compile(r'\\begin\{pspicture\}.*?\\end\{pspicture\}', flags=re.S)
+
+
+def inspect_figure_issues(tex: str) -> dict:
+    """Legge le figure pendenti direttamente dalle macro del sorgente.
+
+    Non deduce che un problema sia completo dall'assenza di segnalazioni.
+    """
+    pst = 0
+    missing = []
+    for field in FIELDS:
+        value = extract_macro(tex, field)
+        if value is None:
+            continue
+        for match in MISSING_FIGURE_RE.finditer(value):
+            missing.append({'campo': field, 'riferimento': match.group('ref').strip()})
+        clean = no_comments(value)
+        pst += len(PSTRICKS_INLINE_RE.findall(clean))
+        clean = PSTRICKS_INLINE_RE.sub('', clean)
+        pst += len(PSTRICKS_ENV_RE.findall(clean))
+    return {'pstricks': pst, 'da_ricostruire': missing}
+
+
 
 def extract_macro(text: str, name: str) -> str | None:
     pattern=r'\\renewcommand\s*\{\\'+re.escape(name)+r'\}\s*\{'
@@ -64,13 +94,24 @@ def no_comments(text: str) -> str:
 
 def has_content(text: str | None) -> bool:
     if text is None:return False
+    # Anche un campo contenente solo un disegno da completare e' contenuto.
+    if MISSING_FIGURE_RE.search(text):return True
     v=no_comments(text)
+    if PSTRICKS_INLINE_RE.search(v) or PSTRICKS_ENV_RE.search(v):return True
     v=re.sub(r'\\(?:ldots|dots|quad|qquad|par|medskip|smallskip)\b','',v)
     v=re.sub(r'\\[A-Za-z@]+\*?(?:\[[^\]]*\])?','',v)
     return bool(re.sub(r'[{}\s.~\\]','',v))
 
 
-def preprocess(text: str) -> tuple[str,int]:
+def preprocess(text: str) -> tuple[str,int,list[str]]:
+    missing=[]
+
+    def mark_missing(match):
+        missing.append(match.group('ref').strip())
+        # I ritorni a capo isolano il marcatore come blocco Pandoc.
+        return '\n\nSSSUPFIGURAMANCANTE'+str(len(missing))+'FINE\n\n'
+
+    text=MISSING_FIGURE_RE.sub(mark_missing,text)
     text=no_comments(text)
     for letter in 'ABCDEFG':
         text=re.sub(r'\\Domanda'+letter+r'\b',r'\\textbf{Punto ('+letter.lower()+r').} ',text)
@@ -80,14 +121,14 @@ def preprocess(text: str) -> tuple[str,int]:
         nonlocal figure_count
         figure_count+=1
         return 'SSSUPFIGURASEGNAPOSTO'+str(figure_count)+'FINE'
-    text=re.sub(r'\\pspicture\b.*?\\endpspicture\b',figure,text,flags=re.S)
-    text=re.sub(r'\\begin\{pspicture\}.*?\\end\{pspicture\}',figure,text,flags=re.S)
+    text=PSTRICKS_INLINE_RE.sub(figure,text)
+    text=PSTRICKS_ENV_RE.sub(figure,text)
     text=re.sub(r'\\psset\{[^{}]*\}','',text)
-    return text,figure_count
+    return text,figure_count,missing
 
 
 def convert(text: str, provenance: str) -> tuple[str,int]:
-    text, figures=preprocess(text)
+    text, figures, missing=preprocess(text)
 
     # Protegge ambienti numerati e riferimenti prima di Pandoc.
     protected = {}
@@ -117,6 +158,11 @@ def convert(text: str, provenance: str) -> tuple[str,int]:
     for n in range(1,figures+1):
         token='SSSUPFIGURASEGNAPOSTO'+str(n)+'FINE'
         marker='<span class="figure-placeholder">Disegno PSTricks non ancora convertito (figura '+str(n)+').</span>'
+        h=h.replace('<p>'+token+'</p>',marker).replace(token,marker)
+    for n, reference in enumerate(missing, 1):
+        token='SSSUPFIGURAMANCANTE'+str(n)+'FINE'
+        marker=('<span class="figure-placeholder">Figura da ricostruire in LaTeX '
+                '(riferimento storico: '+escape(reference)+').</span>')
         h=h.replace('<p>'+token+'</p>',marker).replace(token,marker)
     return h,figures
 
@@ -174,6 +220,9 @@ def conversion_status(src: Path, output: Path, title: str,
         return 'OBSOLETO','conversione legacy priva di impronte verificabili'
     if meta.get('sections_sha256')!=sections_sha256(data['sections']):
         return 'ERRORE','frammenti HTML modificati dopo la conversione'
+    figures=data.get('figure_issues')
+    if not isinstance(figures,dict) or meta.get('figures_sha256')!=sections_sha256(figures):
+        return 'OBSOLETO','metadati sulle figure assenti o da rigenerare'
     if meta.get('latex_sha256')!=digest:
         return 'OBSOLETO','il sorgente LaTeX e cambiato'
     if meta.get('generator_sha256')!=version_hash:
@@ -222,8 +271,8 @@ def main():
             continue
         tex=f.read_text(encoding='utf8')
         fields={}
-        warnings=[]
         pictures=0
+        issues=inspect_figure_issues(tex)
         for field in FIELDS:
             v=extract_macro(tex,field)
             if not has_content(v):continue
@@ -233,14 +282,26 @@ def main():
         if not fields.get('Testo'):
             print('ERRORE: testo mancante o vuoto in',f.name,file=sys.stderr)
             return 2
-        problem={'year':y,'number':n,'title':title,'source':f.name,'sections':fields}
+        # Controllo di coerenza fra inventario e conversione dei PSTricks.
+        if pictures != issues['pstricks']:
+            raise RuntimeError(f'Conteggio PSTricks incoerente in {f.name}: '
+                               f"conversione={pictures}, inventario={issues['pstricks']}")
+        problem={'year':y,'number':n,'title':title,'source':f.name,
+                 'sections':fields,'figure_issues':issues}
         problem['_build']={
             'latex_sha256':digest,
             'generator_sha256':gen_id,
             'pandoc_version':pandoc_id,
             'sections_sha256':sections_sha256(fields),
+            'figures_sha256':sections_sha256(issues),
         }
-        if pictures:problem['warning']=f'{pictures} disegni PSTricks sono segnaposto: verificare la resa grafica prima di pubblicare.'
+        warnings=[]
+        if pictures:
+            warnings.append(f'{pictures} figure PSTricks non convertite')
+        if issues['da_ricostruire']:
+            warnings.append(f"{len(issues['da_ricostruire'])} figure da ricostruire in LaTeX")
+        if warnings:
+            problem['warning']='; '.join(warnings)+'. Verificare prima di pubblicare.'
         payload='window.SSSUP.registerProblem('+json.dumps(problem,ensure_ascii=False,separators=(',',':'))+');\n'
         path.write_text(payload,encoding='utf8')
         changed+=1
