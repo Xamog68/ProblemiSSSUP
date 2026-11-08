@@ -36,6 +36,19 @@ confuse con le verifiche matematiche ancora aperte.
 - [ ] Valutare se introdurre i 96 titoli redazionali nei sorgenti canonici;
       per ora restano separati in `sito/dati/titoli.json`.
 
+## Test a risposta multipla (cantiere distinto)
+
+- [ ] Catalogare le prove a risposta multipla del Sant'Anna, a partire
+      dall'archivio locale `fonti-locali/originali/compiti_20261107_completo.zip`
+      e dall'inventario
+      `fonti-locali/inventari/INVENTARIO_COMPITI_CORRETTO_20261107.md`.
+- [ ] Ricostruire per ogni annata sessioni, testi, versioni e risposte,
+      verificando in particolare il materiale del periodo 2014–2016.
+- [ ] Valutare una sezione autonoma del sito e, eventualmente, un fascicolo
+      separato per i quiz. Conservare gli originali e documentare le fonti.
+- [ ] Non confondere il recupero dei quiz con quello delle prove a risposta
+      aperta mancanti del 2014–2020: sono due obiettivi distinti.
+
 ## Libro PDF
 
 - [x] Compilare il libro storico sul Mac (205 pagine, 7 novembre 2026).
