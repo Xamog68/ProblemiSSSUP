@@ -23,9 +23,30 @@ Determinare come bisogna spostare la base dell'obelisco.
 \end{enumerate}
 }
 
-\renewcommand{\Risposta}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Poniamo la base iniziale in $(0,0)$, la parete nel piano $x=-d$ e usiamo $z$ per l'altezza.
+\begin{enumerate}
+\item[(a)] L'ombra della punta percorre tutta la retta del terreno $x=d/3$.
+\item[(b)] Se la velocità desiderata è $v>0$, poniamo $s=vt/\sqrt2$. Per ottenere l'ombra $Q(t)=(h-s,s,0)$, il riflettore deve stare in
+\[
+L(t)=\left(-d,-\frac{ds}{h-s},h+\frac{hd}{h-s}\right),\qquad0\leq s<h.
+\]
+L'altra direzione a $45^\circ$ si ottiene cambiando segno alla coordinata $y$.
+\item[(c)] Con il riflettore fisso in $(-d,0,h+d)$ basta muovere la base secondo
+\[
+P(t)=\left(-\frac{ds}{h+d},\frac{ds}{h+d},0\right).
+\]
+La base procede a velocità costante $vd/(h+d)$ nella stessa direzione dell'ombra.
+\end{enumerate}
+}
 
-\renewcommand{\Aiutino}{}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Interseca con il piano del terreno la retta che passa per riflettore e punta dell'obelisco. Con obelisco fermo, l'ombra è una proiezione centrale; con riflettore fermo e altezza dell'obelisco costante, la posizione dell'ombra dipende invece in modo affine dalla posizione della base.
+}
 
 \renewcommand{\SoluzioneUfficiale}{}
 
@@ -34,3 +55,35 @@ Determinare come bisogna spostare la base dell'obelisco.
 \renewcommand{\Osservazioni}{}
 
 \renewcommand{\Commenti}{}
+
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Scegliamo coordinate con la base iniziale dell'obelisco in $P=(0,0,0)$, la punta in $U=(0,0,h)$ e la parete nel piano $x=-d$. Un riflettore $L=(-d,u,z)$ proietta un'ombra finita della punta se $z>h$. La semiretta da $L$ per $U$ incontra il terreno in
+\[
+Q=\left(\frac{hd}{z-h},-\frac{hu}{z-h},0\right).
+\]
+
+\paragraph{Punto (a).}
+Per $z=4h$ si ottiene $Q=(d/3,-u/3,0)$. Al variare di $u$ si percorre tutta la retta $x=d/3$, parallela alla parete.
+
+\paragraph{Punto (b).}
+La configurazione iniziale richiesta ha ombra $Q(0)=(h,0,0)$; dalla formula precedente si ricava $L(0)=(-d,0,h+d)$. Una delle due traiettorie a $45^\circ$ verso la parete, percorsa con velocità $v$, è
+\[
+Q(t)=(h-s,s,0),\qquad s=vt/\sqrt2.
+\]
+Risolvendo rispetto a $u,z$ si trovano
+\[
+u=-\frac{ds}{h-s},\qquad z=h+\frac{hd}{h-s}.
+\]
+Il riflettore segue dunque sulla parete la retta $z+u=h+d$, ma con velocità non costante. La realizzazione è possibile per $s<h$: quando l'ombra si avvicina alla base, il riflettore deve allontanarsi indefinitamente. Non è possibile proseguire oltre $s=h$ con un riflettore finito sulla parete e l'obelisco fermo. La traiettoria riflessa rispetto a $y=0$ è analoga.
+
+\paragraph{Punto (c).}
+Fissiamo $L=(-d,0,h+d)$ e spostiamo la base in $P=(x,y,0)$, con punta $(x,y,h)$. L'intersezione della semiretta luminosa con il terreno è
+\[
+Q=\left(h+\frac{h+d}{d}x,\frac{h+d}{d}y,0\right).
+\]
+Imponendo $Q=(h-s,s,0)$ si ottiene la traiettoria indicata nella risposta. La base si muove quindi lungo una retta, a velocità costante; in particolare riproduce tutto il tratto realizzabile nel punto precedente senza richiedere velocità divergenti.
+}

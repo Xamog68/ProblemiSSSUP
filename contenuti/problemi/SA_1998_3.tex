@@ -6,7 +6,14 @@
 hanno tutti coordiante razionali.  Dimostrare che l'area del triangolo
 è un numero razionale.}
 
-\renewcommand{\Risposta}{\ldots}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Se i vertici sono $(x_1,y_1)$, $(x_2,y_2)$ e $(x_3,y_3)$, l'area è
+\[
+\frac12\left|(x_2-x_1)(y_3-y_1)-(x_3-x_1)(y_2-y_1)\right|\in\mathbb Q.
+\]
+}
 
 \renewcommand{\Aiutino}{Vi sono diversi approcci possibili.
 \begin{itemize}
@@ -28,4 +35,15 @@ hanno tutti coordiante razionali.  Dimostrare che l'area del triangolo
 }
 
 \renewcommand{\Commenti}{
+}
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Indichiamo i vertici con $A=(x_1,y_1)$, $B=(x_2,y_2)$ e $C=(x_3,y_3)$, dove tutte le coordinate sono razionali. Il parallelogrammo generato dai vettori $B-A$ e $C-A$ ha area uguale al valore assoluto del loro determinante; il triangolo ne occupa la metà. Quindi
+\[
+\operatorname{Area}(ABC)=\frac12\left|(x_2-x_1)(y_3-y_1)-(x_3-x_1)(y_2-y_1)\right|.
+\]
+Differenze, prodotti, somma, valore assoluto e divisione per $2$ conservano la razionalità. L'area è pertanto razionale. La formula comprende anche il caso degenere, nel quale l'area è zero.
 }

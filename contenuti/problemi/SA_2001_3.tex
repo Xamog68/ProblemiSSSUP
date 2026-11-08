@@ -8,7 +8,11 @@ Scuola S. Anna, ce n'è almeno uno dei quattro che è amico degli altri tre.  Di
 {\small Nota.  Si usi la convenzione che $A$ amico di $B$ implica $B$
 amico di $A$.}}
 
-\renewcommand{\Risposta}{\ldots}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Esiste uno studente amico di tutti gli altri, assumendo che gli studenti siano almeno quattro, come implicito nel contesto.
+}
 
 \renewcommand{\Aiutino}{Conviene procedere per casi.  Supponiamo che
 ci sia un $A$ che non conosce un certo $B$.  Prendiamo ora un terzo studente $C$.  Abbiamo 3 casi: o $C$ conosce tutti e allora abbiamo finito, o $C$ non conosce qualcuno diverso da $A$ e $B$ (ma in questo caso \ldots), o $C$ non conosce almeno uno tra $A$ e $B$, diciamo $A$.
@@ -24,4 +28,17 @@ Prendiamo ora un quarto studente $D$: chi può non conoscere $D$?}
 }
 
 \renewcommand{\Commenti}{
+}
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Supponiamo che gli studenti siano almeno quattro. Consideriamo il grafo dei rapporti di \emph{non amicizia}: due vertici sono collegati esattamente quando i due studenti non sono amici. L'ipotesi dice che ogni gruppo di quattro vertici contiene almeno un vertice isolato nel sottografo indotto.
+
+Due spigoli disgiunti sarebbero impossibili, perché i loro quattro estremi non avrebbero vertici isolati. Pertanto tutti gli spigoli del grafo si incontrano a due a due. Se ci sono due spigoli $AB$ e $AC$, ogni ulteriore spigolo o passa per $A$ oppure è $BC$. Se compare $BC$, non possono comparire spigoli con un estremo esterno al triangolo $ABC$, perché sarebbero disgiunti da uno dei suoi lati. Se invece tutti gli spigoli passano per $A$, non possono essercene tre distinti: $A$ e tre suoi vicini formerebbero quattro vertici senza isolati.
+
+In ogni caso, compresi quelli con zero o un solo spigolo, tutti i vertici non isolati sono al più tre. Poiché gli studenti sono almeno quattro, esiste un vertice isolato nel grafo delle non amicizie. Lo studente corrispondente è amico di tutti gli altri.
+
+Se ci fossero meno di quattro studenti, l'ipotesi sui gruppi di quattro sarebbe vuota e non basterebbe, in generale, a concludere.
 }

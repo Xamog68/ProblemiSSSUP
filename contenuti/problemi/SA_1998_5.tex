@@ -33,3 +33,24 @@ formulare una congettura da dimostrare.  }
 
 \renewcommand{\Commenti}{
 }
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Per un intero dispari $n\neq-1$, scriviamo
+\[
+n+1=2^k d,\qquad k\geq1,\quad d\text{ dispari}.
+\]
+Posto $a_0=n$, la relazione dell'algoritmo equivale a
+\[
+a_{j+1}+1=\frac32(a_j+1).
+\]
+Per induzione, finché l'algoritmo prosegue,
+\[
+a_j=3^j2^{k-j}d-1\qquad(0\leq j\leq k).
+\]
+Per $j<k$ il termine a destra è dispari; per $j=k$ è pari. Pertanto vengono prodotti esattamente $k$ termini $a_1,\ldots,a_k$.
+
+\emph{Precisazione sul dominio.} La conclusione vale in particolare per ogni intero positivo dispari. Se ``numero dispari'' comprende anche tutti gli interi negativi, l'enunciato ha l'eccezione $n=-1$: in quel caso tutti i termini sono $-1$ e l'algoritmo non si arresta. Il testo originale non è stato modificato.
+}

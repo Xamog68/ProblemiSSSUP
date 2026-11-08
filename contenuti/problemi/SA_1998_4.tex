@@ -23,3 +23,17 @@ possibili?  Quanti (e quali) sono i casi favorevoli? }
 
 \renewcommand{\Commenti}{
 }
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+I $6^3=216$ esiti ordinati sono equiprobabili. Conviene contare quelli per cui la somma supera $14$. Se i risultati sono $d_1,d_2,d_3$, poniamo $z_i=6-d_i$. La condizione $d_1+d_2+d_3\geq15$ diventa
+\[
+z_1+z_2+z_3\leq3,\qquad z_i\geq0.
+\]
+Il numero di terne di somma $j$ è $\binom{j+2}{2}$; per $j=0,1,2,3$ si ottengono rispettivamente $1,3,6,10$ terne. Tutte rispettano automaticamente $z_i\leq5$. Gli esiti sfavorevoli sono dunque $20$, e la probabilità richiesta è
+\[
+1-\frac{20}{216}=\frac{49}{54}.
+\]
+}

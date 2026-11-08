@@ -35,9 +35,21 @@ $$\frac{x}{2023}=\operatorname{\mathsf{approx}}\left(\sqrt{\operatorname{\mathsf
 \end{enumerate}
 }
 
-\renewcommand{\Risposta}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+\begin{enumerate}
+\item[(a)] Per esempio $333{,}4$, $333{,}4$, $333{,}2$: la somma degli arrotondamenti è $999$.
+\item[(b)] Il minimo è $751$ e il massimo è $1250$.
+\item[(c)] Le sole soluzioni sono $x=2023\cdot2022$ e $x=2023^2$.
+\end{enumerate}
+}
 
-\renewcommand{\Aiutino}{}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+La regola equivale a $\operatorname{\mathsf{approx}}(x)=\lfloor x+1/2\rfloor$. L'errore di arrotondamento appartiene a $(-1/2,1/2]$, con estremi diversi. Nel punto (c) il membro destro è intero, quindi $x$ deve essere un multiplo intero di $2023$.
+}
 
 \renewcommand{\SoluzioneUfficiale}{}
 
@@ -46,3 +58,34 @@ $$\frac{x}{2023}=\operatorname{\mathsf{approx}}\left(\sqrt{\operatorname{\mathsf
 \renewcommand{\Osservazioni}{}
 
 \renewcommand{\Commenti}{}
+
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Scriviamo $R(x)=\lfloor x+1/2\rfloor$. Si ha sempre
+\[
+-\frac12<R(x)-x\leq\frac12.
+\]
+
+\paragraph{Punto (a).}
+I tre numeri $333{,}4$, $333{,}4$, $333{,}2$ sommano $1000$, ma si arrotondano tutti a $333$.
+
+\paragraph{Punto (b).}
+La somma $M$ degli arrotondamenti è un intero e soddisfa $-250<M-1000\leq250$. Quindi $751\leq M\leq1250$. Il massimo si realizza prendendo $250$ numeri uguali a $1{,}5$ e $250$ uguali a $2{,}5$.
+
+Per il minimo prendiamo $249$ numeri uguali a $1{,}498$ e $251$ uguali a $2{,}498$. La somma dei numeri è $249+502+500\cdot0{,}498=1000$, mentre la somma degli arrotondamenti è $249+502=751$.
+
+\paragraph{Punto (c).}
+Il membro destro dell'equazione è un intero non negativo; poiché $x>0$, possiamo scrivere $x=2023k$ con $k\geq1$ intero. Allora $R(x)=x$ e la condizione è
+\[
+k-\frac12\leq\sqrt{2023k}<k+\frac12.
+\]
+Elevando al quadrato si ottengono
+\[
+k(k-2024)+\frac14\leq0,\qquad
+k(k-2022)+\frac14>0.
+\]
+Per interi positivi, la prima impone $k\leq2023$ e la seconda $k\geq2022$. Restano $k=2022,2023$, che soddisfano entrambe le condizioni.
+}

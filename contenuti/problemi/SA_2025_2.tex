@@ -25,9 +25,21 @@ Indicato con $B(a)$ il numero di date bilanciate in un certo anno $a$, determina
 \end{enumerate}
 }
 
-\renewcommand{\Risposta}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: rielaborazione e sviluppo di appunti forniti
+\begin{enumerate}
+\item[(a)] Con date di nascita uniformemente distribuite nei rispettivi anni, la percentuale attesa è $100\cdot221/365\approx60{,}548\%$. Senza un'ipotesi sulla distribuzione delle nascite, la percentuale effettiva non è determinabile.
+\item[(b)] Giuseppe è nato il $12$ febbraio di un anno non bisestile; Enrico il $1$ maggio, $78$ giorni dopo.
+\item[(c)] Un solo valore distinto: $B(a)=6$ sia negli anni comuni sia negli anni bisestili. ``Quest'anno'' si riferisce al $2025$.
+\end{enumerate}
+}
 
-\renewcommand{\Aiutino}{}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: rielaborazione e sviluppo di appunti forniti
+Una data è ambigua esattamente quando entrambi i numeri sono fra $1$ e $12$. Nel punto (b) confronta la massima distanza fra date in mesi distanti due posizioni con la minima distanza in mesi distanti tre posizioni. Per (c), sottrai dal numero di giorni precedenti ciascun mese il numero del mese stesso, e confronta i residui modulo $7$.
+}
 
 \renewcommand{\SoluzioneUfficiale}{}
 
@@ -36,3 +48,43 @@ Indicato con $B(a)$ il numero di date bilanciate in un certo anno $a$, determina
 \renewcommand{\Osservazioni}{}
 
 \renewcommand{\Commenti}{}
+
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: rielaborazione e sviluppo di appunti forniti
+La soluzione rielabora i due fogli di appunti forniti. Una data $X/Y$ è ambigua esattamente quando $1\leq X,Y\leq12$.
+
+\paragraph{Punto (a).}
+Gli anni $2006$ e $2007$ hanno entrambi $365$ giorni. Le date ambigue sono $12^2=144$: tutte vengono accettate, anche quando rappresentano un compleanno diverso. Le restanti $365-144=221$ date vengono rifiutate perché il giorno europeo viene interpretato come un mese maggiore di $12$.
+
+Assumendo date di nascita uniformi, la probabilità di errore è $221/365$ e la percentuale attesa è circa $60{,}548\%$. Un numero molto grande di concorrenti non sostituisce l'ipotesi di uniformità: senza un modello o dati sui compleanni non si può stabilire la percentuale effettiva.
+
+\paragraph{Punto (b).}
+Se i mesi delle due nascite differiscono di al più due, la distanza massima è $31+31+11=73$ giorni. Se differiscono di almeno tre, la distanza minima è data dai tre mesi consecutivi più corti, meno la massima differenza fra i giorni del mese:
+\[
+28+31+30-11=78.
+\]
+Per avere una distanza fra $74$ e $78$ serve quindi uguaglianza: anno non bisestile, prima nascita il $12$ febbraio e seconda il $1$ maggio. Con quattro o più mesi di distanza il minimo sarebbe ancora maggiore.
+
+\paragraph{Punto (c).}
+Sia $M_j$ il numero di giorni che precedono il mese $j$. Le due interpretazioni della data sono nello stesso giorno della settimana se e solo se
+\[
+M_Y+X\equiv M_X+Y\pmod7,
+\quad\text{ossia}\quad M_Y-Y\equiv M_X-X\pmod7.
+\]
+Per un anno comune, i residui $M_j-j$, da gennaio a dicembre, sono
+\[
+6,1,0,2,3,5,6,1,3,4,6,0;
+\]
+per un anno bisestile sono
+\[
+6,1,1,3,4,6,0,2,4,5,0,1.
+\]
+In entrambi i casi un residuo compare tre volte, tre residui compaiono due volte e gli altri una volta. Il numero di coppie di mesi $X<Y$ con residuo uguale è quindi
+\[
+\binom32+3\binom22=6.
+\]
+L'anno $2025$ dell'enunciato non introduce eccezioni: per tutti gli anni dal $2001$ al $2025$, e più in generale per qualunque anno comune o bisestile, $B(a)=6$. I valori distinti sono dunque uno solo.
+}

@@ -45,3 +45,40 @@ la retta di terra.}
 
 \renewcommand{\Commenti}{
 }
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Poniamo $H=h+d$. Per simmetria, ombra e penombra sono concentriche rispetto al punto della piazza sotto i due centri. Introduciamo
+\[
+\rho_u=\max\left\{0,\frac{rd-h(R-r)}{\sqrt{d^2-(R-r)^2}}\right\},\qquad
+\rho_p=\frac{rd+h(R+r)}{\sqrt{d^2-(R+r)^2}}.
+\]
+I denominatori sono positivi grazie a $d>R+r$.
+
+\paragraph{Geometria delle tangenti.}
+Consideriamo la sezione verticale per i centri. Le tangenti comuni esterne ai due cerchi delimitano il cono d'ombra. Esse si incontrano sull'asse a quota
+\[
+z_u=h-\frac{rd}{R-r},
+\]
+e formano con l'asse un angolo $\gamma$ tale che $\sin\gamma=(R-r)/d$. Se $z_u\leq0$, l'intersezione del cono con il terreno ha raggio $(-z_u)\tan\gamma$, che è precisamente $\rho_u$. Se $z_u>0$, il cono termina sopra il terreno e non vi è una regione di ombra totale.
+
+Le tangenti comuni interne delimitano la regione nella quale almeno parte della sfera luminosa è occultata. Il loro punto d'incontro ha quota
+\[
+z_p=h+\frac{rd}{R+r},
+\]
+e l'angolo con l'asse soddisfa $\sin\eta=(R+r)/d$. Il raggio esterno della zona interessata è $z_p\tan\eta=\rho_p$.
+
+\paragraph{Punti (a) e (b).}
+Trascurando i bordi, che hanno area nulla, le aree richieste sono quindi
+\[
+\operatorname{Area}(\text{ombra})=\pi\rho_u^2,
+\qquad
+\operatorname{Area}(\text{penombra})=\pi(\rho_p^2-\rho_u^2).
+\]
+Se $rd<h(R-r)$, la prima regione è vuota e la penombra è il disco di raggio $\rho_p$. Quando $rd=h(R-r)$, l'ombra si riduce al punto sull'asse e ha area zero.
+
+\paragraph{Punto (c).}
+Per $d\to+\infty$ entrambi i raggi tendono a $r$. L'area d'ombra tende dunque a $\pi r^2$, mentre l'area di penombra tende a zero.
+}

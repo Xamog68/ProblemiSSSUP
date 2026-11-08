@@ -42,3 +42,24 @@ utili sono $a+b+c+d+e$ modulo \ldots\ e $a-b+c-d+e$ modulo \ldots.}
 
 \renewcommand{\Commenti}{
 }
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Codifichiamo le lettere $A,B,C,D,E,F,M,N,O,P$ mediante i residui $0,1,2,3,4,5,6,7,8,9$ modulo $10$. Ogni mossa aggiunge $1$ oppure $-1$ a due posizioni adiacenti. Di conseguenza la quantità
+\[
+I=x_1-x_2+x_3-x_4+x_5\pmod{10}
+\]
+è invariante: i contributi delle due posizioni modificate si cancellano. Questo ragionamento comprende anche i passaggi ciclici tra $P$ e $A$.
+
+All'inizio, nella configurazione $AAAAA$, l'invariante è zero. Per $BABBO$ vale invece
+\[
+1-0+1-1+8\equiv9\pmod{10},
+\]
+mentre per $MAMMA$ vale
+\[
+6-0+6-6+0\equiv6\pmod{10}.
+\]
+Nessuna delle due combinazioni è raggiungibile, qualunque siano le scelte dei cilindri adiacenti che si muovono insieme a quello azionato.
+}

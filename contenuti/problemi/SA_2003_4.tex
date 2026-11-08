@@ -36,3 +36,20 @@ risulta divisibile per 9, altrimenti vince Paolo.
 
 \renewcommand{\Commenti}{
 }
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+\paragraph{Punto (a).}
+Paolo sceglie inizialmente $2$. Se Francesca risponde con $x\in\{1,\ldots,6\}$, Paolo sceglie $7-x$. Prima dell'ultima mossa la somma vale $9$; aggiungendo un numero da $1$ a $6$, Francesca non può ottenere un multiplo di $9$. Vince quindi Paolo.
+
+\paragraph{Punto (b).}
+Se $9$ divide $k$, Francesca risponde sempre a ogni numero $x$ di Paolo con $7-x$. Ogni coppia di mosse totalizza $7$, quindi la somma finale è $7k$, multipla di $9$.
+
+Se invece $9$ non divide $k$, scriviamo $7k=9m+r$ con $r\in\{1,\ldots,8\}$. Paolo inizia con un numero $a$ e successivamente risponde a ogni mossa $x$ di Francesca con $7-x$, fino alla propria ultima mossa. Prima dell'ultima mossa di Francesca la somma è
+\[
+a+7(k-1)=9m+r+a-7.
+\]
+Se $1\leq r\leq6$, scegliamo $a=7-r$; se $r=7$ o $r=8$, scegliamo $a=1$. Si ottiene rispettivamente un residuo $0$, $1$ o $2$ modulo $9$. Qualunque numero da $1$ a $6$ aggiunga Francesca, il residuo finale non è zero. Quindi Paolo ha una strategia vincente esattamente quando $k$ non è multiplo di $9$.
+}

@@ -19,9 +19,23 @@ Determinare la probabilità che il secondo hard disk  si guasti in un anno stret
 \end{enumerate}
 }
 
-\renewcommand{\Risposta}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Assumendo guasti indipendenti e probabilità di sopravvivenza annuale costante, condizionata al funzionamento iniziale:
+\begin{enumerate}
+\item[(a)] $(1-p^3)^2$.
+\item[(b)] $(1-p)/(1+p)$ per $0\leq p<1$; per $p=1$ la probabilità è zero.
+\item[(c)] $p(1-p)/(2-p^2)$.
+\end{enumerate}
+Senza tali ipotesi probabilistiche, le sole informazioni marginali del testo non determinano univocamente le risposte.
+}
 
-\renewcommand{\Aiutino}{}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Modella l'anno del primo guasto con una variabile geometrica: $\Pr(T=k)=p^{k-1}(1-p)$. Nei punti (b) e (c) somma sugli anni possibili e usa una serie geometrica. Distingui il caso $p=1$, in cui il primo disco non si guasta mai.
+}
 
 \renewcommand{\SoluzioneUfficiale}{}
 
@@ -30,3 +44,34 @@ Determinare la probabilità che il secondo hard disk  si guasti in un anno stret
 \renewcommand{\Osservazioni}{}
 
 \renewcommand{\Commenti}{}
+
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Esplicitiamo il modello probabilistico usuale: i dischi sono indipendenti e, per ciascun disco ancora funzionante, la probabilità di sopravvivere al successivo anno è sempre la stessa. Con parametro $p<1$, l'anno $T$ del primo guasto ha quindi distribuzione
+\[
+\Pr(T=k)=p^{k-1}(1-p),\qquad k=1,2,\ldots.
+\]
+Queste ipotesi sono necessarie: il testo non specifica completamente le dipendenze fra i guasti.
+
+\paragraph{Punto (a).}
+Un disco sopravvive ai primi tre anni con probabilità $p^3$, quindi si guasta entro quel termine con probabilità $1-p^3$. Per indipendenza, la probabilità che ciò avvenga per entrambi è $(1-p^3)^2$.
+
+\paragraph{Punto (b).}
+Per $p<1$,
+\[
+\Pr(T_1=T_2)=\sum_{k=1}^{\infty}(1-p)^2p^{2(k-1)}
+=\frac{(1-p)^2}{1-p^2}=\frac{1-p}{1+p}.
+\]
+Per $p=1$ non avviene alcun guasto e la probabilità richiesta è zero; non si considera ``guastarsi nello stesso anno'' il non guastarsi mai.
+
+\paragraph{Punto (c).}
+Se il primo disco si guasta nell'anno $k$, il secondo deve sopravvivere a tutti i primi $k$ anni, evento di probabilità $(p/2)^k$. Pertanto
+\[
+\Pr(T_2>T_1)=\sum_{k=1}^{\infty}(1-p)p^{k-1}\left(\frac p2\right)^k
+=\frac{p(1-p)}{2-p^2}.
+\]
+La formula vale anche agli estremi: per $p=0$ entrambi si guastano nel primo anno; per $p=1$ il primo non si guasta mai e il secondo non può guastarsi in un anno successivo al suo.
+}

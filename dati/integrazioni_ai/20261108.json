@@ -1,0 +1,1740 @@
+{
+  "schema": 1,
+  "data": "2026-11-08",
+  "autore": "ChatGPT",
+  "stato": "BOZZE AI DA VERIFICARE",
+  "ambito": "Solo campi Risposta/Aiutino mancanti e SoluzioneRedazionale se SoluzioneUfficiale assente o segnaposto.",
+  "archivi_ingresso": {
+    "contenuti.zip": "85f0f4b6b43d6b4523a5bdb8f36b9e7a5795ddbcce5ad40fa5d06802ac1de55a",
+    "Archive(1).zip": "8d4d085dda85f6a3705f53a8669f44a4558d4bf91f980e142be1318efa8f0b0d"
+  },
+  "problemi": [
+    {
+      "id": "1996_1",
+      "file": "contenuti/problemi/SA_1996_1.tex",
+      "sha256_prima": "65b25af53a19935d755eb293075db2d01e1477a08cbf0d44fbf852e4ae349ea5",
+      "aggiunte": [
+        {
+          "campo": "Risposta",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_1996_1.tex:Testo"
+          ],
+          "sha256_contenuto": "9c8ef59b19b2efb0f03a73e5dd133cb9677d3438a5e66ea0e537351c4632c8ca"
+        }
+      ],
+      "note_da_verificare": [],
+      "sha256_dopo": "e522733c0d2d230882ef7b3cece71cf55a926e42890b9b674c227b9bc4113c2c",
+      "modificato": true
+    },
+    {
+      "id": "1996_2",
+      "file": "contenuti/problemi/SA_1996_2.tex",
+      "sha256_prima": "2aa3967ab4369ad66a99d2d08f7e6b33ade79248eb0f8e7132412efa80225074",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "2aa3967ab4369ad66a99d2d08f7e6b33ade79248eb0f8e7132412efa80225074",
+      "modificato": false
+    },
+    {
+      "id": "1996_3",
+      "file": "contenuti/problemi/SA_1996_3.tex",
+      "sha256_prima": "0147295a4021ef8fb814af50288cd199fb1a575c10fd303bd07f063f45d125de",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "0147295a4021ef8fb814af50288cd199fb1a575c10fd303bd07f063f45d125de",
+      "modificato": false
+    },
+    {
+      "id": "1996_4",
+      "file": "contenuti/problemi/SA_1996_4.tex",
+      "sha256_prima": "bd9b26aee373bd4483b6c65694b6186685648cc4348f23c65a895af97716396d",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "bd9b26aee373bd4483b6c65694b6186685648cc4348f23c65a895af97716396d",
+      "modificato": false
+    },
+    {
+      "id": "1996_5",
+      "file": "contenuti/problemi/SA_1996_5.tex",
+      "sha256_prima": "271ea38b880254db4aeac392f5b2ddc702333c72b34b4c826ab5d84de3245193",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "271ea38b880254db4aeac392f5b2ddc702333c72b34b4c826ab5d84de3245193",
+      "modificato": false
+    },
+    {
+      "id": "1996_6",
+      "file": "contenuti/problemi/SA_1996_6.tex",
+      "sha256_prima": "55ab99efcaf3e5a6770d649a13f0d550314322050fc502c3023526b346c0bf8b",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "55ab99efcaf3e5a6770d649a13f0d550314322050fc502c3023526b346c0bf8b",
+      "modificato": false
+    },
+    {
+      "id": "1997_1",
+      "file": "contenuti/problemi/SA_1997_1.tex",
+      "sha256_prima": "3e68a0aa6f37b761c9ab2abc9c8b255daf074e01d807f48610050fe39cbfecdf",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "3e68a0aa6f37b761c9ab2abc9c8b255daf074e01d807f48610050fe39cbfecdf",
+      "modificato": false
+    },
+    {
+      "id": "1997_2",
+      "file": "contenuti/problemi/SA_1997_2.tex",
+      "sha256_prima": "fe20f65b09871c660fde215d50e1caae1bcd116af86e0262ef18472d75ff1f92",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "fe20f65b09871c660fde215d50e1caae1bcd116af86e0262ef18472d75ff1f92",
+      "modificato": false
+    },
+    {
+      "id": "1997_3",
+      "file": "contenuti/problemi/SA_1997_3.tex",
+      "sha256_prima": "3dc42ddc8660975150c2c24adac867ca3e10444799595547a61ed78c57c61fef",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "3dc42ddc8660975150c2c24adac867ca3e10444799595547a61ed78c57c61fef",
+      "modificato": false
+    },
+    {
+      "id": "1997_4",
+      "file": "contenuti/problemi/SA_1997_4.tex",
+      "sha256_prima": "1c9bb7db2e91340416b6a07103e3ce89957a0aeb3f613e143921906659c6be45",
+      "aggiunte": [
+        {
+          "campo": "Risposta",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: sintesi della soluzione preesistente",
+          "fonti": [
+            "contenuti/problemi/SA_1997_4.tex:Testo",
+            "contenuti/problemi/SA_1997_4.tex:SoluzioneUfficiale (sintesi per la risposta)"
+          ],
+          "sha256_contenuto": "542b7edaab4bf6a09834ec921e12fee8b9f55a180884b294aa87769c950459b1"
+        }
+      ],
+      "note_da_verificare": [],
+      "sha256_dopo": "d6b6e26d5d1c0c8eac4c580dd985e233e6aa2d649d529f8988552ab8f128fe63",
+      "modificato": true
+    },
+    {
+      "id": "1997_5",
+      "file": "contenuti/problemi/SA_1997_5.tex",
+      "sha256_prima": "811bece172896cb073a1dd5ccaac6d08af2d4a0395d72bcef5fed39542dc0b06",
+      "aggiunte": [
+        {
+          "campo": "Risposta",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: sintesi della soluzione preesistente",
+          "fonti": [
+            "contenuti/problemi/SA_1997_5.tex:Testo",
+            "contenuti/problemi/SA_1997_5.tex:SoluzioneUfficiale (sintesi per la risposta)"
+          ],
+          "sha256_contenuto": "e719227497dad8cb9d7e0cce08e906da85088b5faf3eb3e3ee47f9087e39c92d"
+        }
+      ],
+      "note_da_verificare": [],
+      "sha256_dopo": "c7ad2382633111e8879a88595271b7c9b4bf5887ac072ba538a86b87588f07d2",
+      "modificato": true
+    },
+    {
+      "id": "1997_6",
+      "file": "contenuti/problemi/SA_1997_6.tex",
+      "sha256_prima": "d2cc2cf136eb4957cb7b9861860ae73262edbea1f38c0f05b643b55fa16dfc86",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "d2cc2cf136eb4957cb7b9861860ae73262edbea1f38c0f05b643b55fa16dfc86",
+      "modificato": false
+    },
+    {
+      "id": "1998_1",
+      "file": "contenuti/problemi/SA_1998_1.tex",
+      "sha256_prima": "8b2d917ff841f1adeba8253c2e55f3828285cdcc173a692a9137eee27f5fa0ef",
+      "aggiunte": [
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_1998_1.tex:Testo"
+          ],
+          "sha256_contenuto": "a6e7ee2a331be6eefa2017abca54a53d753a85f0fd6bbd90fabd7e948ef198eb"
+        }
+      ],
+      "note_da_verificare": [],
+      "sha256_dopo": "02ce7401eab086c0043d7ed8f4b04cd9e8be24ddf2e33decca237a2bb872d362",
+      "modificato": true
+    },
+    {
+      "id": "1998_2",
+      "file": "contenuti/problemi/SA_1998_2.tex",
+      "sha256_prima": "7eeae079499fbe5fc15c4fd1a8730a4baad8e7aab23fd9501de065bf23df360b",
+      "aggiunte": [
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_1998_2.tex:Testo"
+          ],
+          "sha256_contenuto": "70e0c07c7cf1657a8db45c2ae67cf7b0abb6f9c5944733024b08210ed2679f7a"
+        }
+      ],
+      "note_da_verificare": [
+        "La conclusione presuppone due corde distinte, come normalmente inteso; due copie della stessa corda non la implicano."
+      ],
+      "sha256_dopo": "92f6b7892e50dfe6d16fa9b4a81ae147b979d8235ba067d001288650ccf04f00",
+      "modificato": true
+    },
+    {
+      "id": "1998_3",
+      "file": "contenuti/problemi/SA_1998_3.tex",
+      "sha256_prima": "28ae05576d0b97c6e2ca6650dcb51eb84b50cffbba82df6f1c096d02f65e4341",
+      "aggiunte": [
+        {
+          "campo": "Risposta",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_1998_3.tex:Testo"
+          ],
+          "sha256_contenuto": "19bb1cd2cf5e8a610919284946f0b2802a6e0c30532151055e94c072b62677c5"
+        },
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_1998_3.tex:Testo"
+          ],
+          "sha256_contenuto": "c44515b781e26fba38c53b81e3775fbfb328856d28a359adfb7d6717702d89f1"
+        }
+      ],
+      "note_da_verificare": [],
+      "sha256_dopo": "a21e7c4e6f0b5ab66b6583d681b32cc0df74077cd307d3e741128f5884fa68f6",
+      "modificato": true
+    },
+    {
+      "id": "1998_4",
+      "file": "contenuti/problemi/SA_1998_4.tex",
+      "sha256_prima": "2e487dcb8ca25078543e960765fb0e1119d07533d6f1f65af7be8fb6a30da200",
+      "aggiunte": [
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_1998_4.tex:Testo"
+          ],
+          "sha256_contenuto": "e7ff6636dc4615abbd0ecddb9be0460beed983ece166a5154388f6ff23a10606"
+        }
+      ],
+      "note_da_verificare": [],
+      "sha256_dopo": "e353e224b601ca8cd4ecb37aff06e875965528d4bef908d6e14e432ef0742f0c",
+      "modificato": true
+    },
+    {
+      "id": "1998_5",
+      "file": "contenuti/problemi/SA_1998_5.tex",
+      "sha256_prima": "00aeed08a480024acf90a9d6d24135e8a3324aab069f75b750be063b92ac26ab",
+      "aggiunte": [
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_1998_5.tex:Testo"
+          ],
+          "sha256_contenuto": "ef2fe257ce592f3f4f9bb4dd8d78af8da2c3e8db337afa873c9d19cef03e6446"
+        }
+      ],
+      "note_da_verificare": [
+        "Ipotesi da precisare: n=-1 e un controesempio se il dominio comprende gli interi negativi; la formula vale per ogni dispari diverso da -1."
+      ],
+      "sha256_dopo": "2501f25edb71f1bc20d17240db85998f22b532ab4984fb60c9f019ddf47ddc4b",
+      "modificato": true
+    },
+    {
+      "id": "1998_6",
+      "file": "contenuti/problemi/SA_1998_6.tex",
+      "sha256_prima": "b0b9d831d82120e40dea4c34c045be3df6731e54ba4fababfd717251ab30853c",
+      "aggiunte": [
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_1998_6.tex:Testo"
+          ],
+          "sha256_contenuto": "dcc35c6754b65925207d5ceba8d09f4473330096a5a4e93f84eb41ecebb9d492"
+        }
+      ],
+      "note_da_verificare": [
+        "Conflitto segnalato, non corretto: la Risposta preesistente contiene 1+q^3/3 nel tratto intermedio; dal testo e dal calcolo deriva 1+q^2/3."
+      ],
+      "sha256_dopo": "2b3807ca31e4d0cd3f1e03ca5aac3ab92eda591e877fce3d781db571424e19c2",
+      "modificato": true
+    },
+    {
+      "id": "1999_1",
+      "file": "contenuti/problemi/SA_1999_1.tex",
+      "sha256_prima": "172c74df77dfebc5c662dc46bb810a68feb58a45c09cc52c0872f0c9c44c54b1",
+      "aggiunte": [
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_1999_1.tex:Testo"
+          ],
+          "sha256_contenuto": "329d96a7d7b8e81c3a41ee058a4bbafc2f4439bbc23090e467bab93eb36cffb0"
+        }
+      ],
+      "note_da_verificare": [],
+      "sha256_dopo": "bd2d655d4c938094f56611f548a7b87b17866f6e589f84d8e2424f50c223f6db",
+      "modificato": true
+    },
+    {
+      "id": "1999_2",
+      "file": "contenuti/problemi/SA_1999_2.tex",
+      "sha256_prima": "f71dfc87dc05ff02f3484850297aac5df17e60502d5bdfcde7009416ea293482",
+      "aggiunte": [
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_1999_2.tex:Testo"
+          ],
+          "sha256_contenuto": "f0712b7a00ab9c55f0c9e646fa1c1ae710ed9b2c43704445efa63d75653b297b"
+        }
+      ],
+      "note_da_verificare": [],
+      "sha256_dopo": "a0134da915adf6fe15b6d0fb14793d104a54607a393cc17f88bcaebcf606abb9",
+      "modificato": true
+    },
+    {
+      "id": "1999_3",
+      "file": "contenuti/problemi/SA_1999_3.tex",
+      "sha256_prima": "2038e6cee2754a49eb76086c4c872ffea82019c6b274198caed1b16ff66d94f4",
+      "aggiunte": [
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_1999_3.tex:Testo"
+          ],
+          "sha256_contenuto": "1d75d2cf8e73244cf26b0f94b7c495438428305b37935ecacf8e0ff5bba2c3b1"
+        }
+      ],
+      "note_da_verificare": [],
+      "sha256_dopo": "55a6608ebea054564254343eb38e0f768604cbfab54d639208c1a97870e8f117",
+      "modificato": true
+    },
+    {
+      "id": "1999_4",
+      "file": "contenuti/problemi/SA_1999_4.tex",
+      "sha256_prima": "baed807a6a8bb926270d85da876ddb4fb5202652289df1bcd2a7f40fafb5900b",
+      "aggiunte": [
+        {
+          "campo": "Risposta",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_1999_4.tex:Testo"
+          ],
+          "sha256_contenuto": "dd3cef629a1e5d17078cca648030c417096ba66832e2817376b3aefbbf35ef1f"
+        },
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_1999_4.tex:Testo"
+          ],
+          "sha256_contenuto": "21fba6627f6ab30d961865f5b27e2d795e0e9f0b7d9aaf03b933f705650a3b05"
+        }
+      ],
+      "note_da_verificare": [],
+      "sha256_dopo": "eb4622429926b145b9e3e492a14fa4602022469f738f45c9e25adec1cb5c7c92",
+      "modificato": true
+    },
+    {
+      "id": "2000_1",
+      "file": "contenuti/problemi/SA_2000_1.tex",
+      "sha256_prima": "fbde3cf95e379bdd0e1b4ffb48c9c47e37c0d6e6028a14eec069153e206ea372",
+      "aggiunte": [
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2000_1.tex:Testo"
+          ],
+          "sha256_contenuto": "f276f2e3d958909e4e065829747f1ef54235b0461a99beb28533bf55f4a4beba"
+        }
+      ],
+      "note_da_verificare": [],
+      "sha256_dopo": "d2d0f78a906c0ab07785dc3614c5bd898bc19aeabab33636e0a373766aca7020",
+      "modificato": true
+    },
+    {
+      "id": "2000_2",
+      "file": "contenuti/problemi/SA_2000_2.tex",
+      "sha256_prima": "fb7645676e7aeb5a6cd3054f2873ab575c09160a05b94cb4c305cc3002930925",
+      "aggiunte": [
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2000_2.tex:Testo"
+          ],
+          "sha256_contenuto": "f9b40edb1b86ffe1fa1ef9187987d744b0d542f765962450c620b7c5eb3da12e"
+        }
+      ],
+      "note_da_verificare": [
+        "Conflitto con le formule preesistenti di Risposta, lasciate intatte: il bordo dell'ombra totale usa R-r e sqrt(d^2-(R-r)^2); il bordo esterno della penombra usa R+r. Le aree nella nuova bozza sono ricavate dalle due famiglie di tangenti."
+      ],
+      "sha256_dopo": "ff7d6a81007df37e2229784eb2a6aee5d9108ff7c843bdf4ef7a529589002f8e",
+      "modificato": true
+    },
+    {
+      "id": "2000_3",
+      "file": "contenuti/problemi/SA_2000_3.tex",
+      "sha256_prima": "0869a7e5438b348f1c17c313c6aabfee58e85f4f68dc92dc1a5841e7c21f9701",
+      "aggiunte": [
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2000_3.tex:Testo"
+          ],
+          "sha256_contenuto": "13baacf9aafc7881506509e86ac357363f5511d41d783f18932ed43439792bb0"
+        }
+      ],
+      "note_da_verificare": [
+        "La soluzione usa indipendenza delle risposte, non enunciata esplicitamente nel testo."
+      ],
+      "sha256_dopo": "c9a0a26dc778b51f6f38809c6c7c5fd69fb42f7a0a3d90285e149ded23d4295c",
+      "modificato": true
+    },
+    {
+      "id": "2000_4",
+      "file": "contenuti/problemi/SA_2000_4.tex",
+      "sha256_prima": "6a6496c55f0aaa3aca1c5a605fbcf32a7362dccea83684760b655952b42cf109",
+      "aggiunte": [
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2000_4.tex:Testo"
+          ],
+          "sha256_contenuto": "8a2381b8eee7f8ddf08ed410334ca3ea19d9160c9d66ea5832b8c3ce2844dd94"
+        }
+      ],
+      "note_da_verificare": [],
+      "sha256_dopo": "699c23ac2dbca91339013773e92efee36e2840e5964f6e0b351c090ab8ccf1b3",
+      "modificato": true
+    },
+    {
+      "id": "2001_1",
+      "file": "contenuti/problemi/SA_2001_1.tex",
+      "sha256_prima": "f87996e49153b27d0ae476b263a84998bf79a6d9e39001fceb7181ca110d8169",
+      "aggiunte": [
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2001_1.tex:Testo"
+          ],
+          "sha256_contenuto": "9c24f0a2c5a5120300d4f9241f13e5f90e7dfe3e3984c68d60ea09eeae3f368f"
+        }
+      ],
+      "note_da_verificare": [],
+      "sha256_dopo": "faea41767944c3db8b2a4b2711f8e5c53efa1254345902c62cd7933cfa07047d",
+      "modificato": true
+    },
+    {
+      "id": "2001_2",
+      "file": "contenuti/problemi/SA_2001_2.tex",
+      "sha256_prima": "626a41a8d966519623fa3f6a7a085367ac665665cec238cf4825bacf294b41d2",
+      "aggiunte": [
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2001_2.tex:Testo"
+          ],
+          "sha256_contenuto": "9c78031a247402ee1f1d3b27d12496b982c3365b29a5b9e1c12a6a4a10861b50"
+        }
+      ],
+      "note_da_verificare": [],
+      "sha256_dopo": "e85b57feb317c38e8ea350c2793978df5437c8cff68b77308157ebf15860bbb6",
+      "modificato": true
+    },
+    {
+      "id": "2001_3",
+      "file": "contenuti/problemi/SA_2001_3.tex",
+      "sha256_prima": "72eea85fd29b51932b9b5e0c1929481702ec17f5a48e20fd463e0fe7be2e34e1",
+      "aggiunte": [
+        {
+          "campo": "Risposta",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2001_3.tex:Testo"
+          ],
+          "sha256_contenuto": "d61a68cabd5c8c6fee30248df4d5520bea469ca2b97dd586f212085cb0074fa0"
+        },
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2001_3.tex:Testo"
+          ],
+          "sha256_contenuto": "6b68f9ea32cd004c62da29d6d7fa89547dfc265f1839e35d89e404921ec51f1b"
+        }
+      ],
+      "note_da_verificare": [
+        "Esplicitata l'ipotesi implicita di almeno quattro studenti."
+      ],
+      "sha256_dopo": "f22237d06be1fae8a12226b14e77f6ac37b69cb1cf8c4cf4996f99d5ebade96e",
+      "modificato": true
+    },
+    {
+      "id": "2001_4",
+      "file": "contenuti/problemi/SA_2001_4.tex",
+      "sha256_prima": "e5df74e0618ca985636fead285145e6c44c20493e31b12e72f3bc5db4cabedd5",
+      "aggiunte": [
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2001_4.tex:Testo"
+          ],
+          "sha256_contenuto": "3cfb48ba5bc465d4f45b32925f0790cb471ffb04d3775aa81826913c200a44da"
+        }
+      ],
+      "note_da_verificare": [],
+      "sha256_dopo": "44d6145d7baff92868f0aebf4ec8dc3923e514af9f9fdcd6a3421498674b986d",
+      "modificato": true
+    },
+    {
+      "id": "2002_1",
+      "file": "contenuti/problemi/SA_2002_1.tex",
+      "sha256_prima": "5f5390e7b6f8ecd54f4f67d022d2e3d378e01efece277c4e0d922c690c7d6066",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "5f5390e7b6f8ecd54f4f67d022d2e3d378e01efece277c4e0d922c690c7d6066",
+      "modificato": false
+    },
+    {
+      "id": "2002_2",
+      "file": "contenuti/problemi/SA_2002_2.tex",
+      "sha256_prima": "e663f835b64d66481c0e53a1e93fc115803aae145797efaeffa8dbcccc630fcd",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "e663f835b64d66481c0e53a1e93fc115803aae145797efaeffa8dbcccc630fcd",
+      "modificato": false
+    },
+    {
+      "id": "2002_3",
+      "file": "contenuti/problemi/SA_2002_3.tex",
+      "sha256_prima": "ab72bc069279cf71cf03204d824a6b2682b2dde987b8d664b6b788fba7011389",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "ab72bc069279cf71cf03204d824a6b2682b2dde987b8d664b6b788fba7011389",
+      "modificato": false
+    },
+    {
+      "id": "2002_4",
+      "file": "contenuti/problemi/SA_2002_4.tex",
+      "sha256_prima": "b5294105a7c38eb932734529ebf75b0f4a4a86268846d48b9b7d9945cdf554fd",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "b5294105a7c38eb932734529ebf75b0f4a4a86268846d48b9b7d9945cdf554fd",
+      "modificato": false
+    },
+    {
+      "id": "2003_1",
+      "file": "contenuti/problemi/SA_2003_1.tex",
+      "sha256_prima": "dd4b1d6c2dd2bec35716572e27b98a48034208c1160e9fb5820382b5c3eb3e34",
+      "aggiunte": [
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2003_1.tex:Testo"
+          ],
+          "sha256_contenuto": "903ee2a99a2aa427e15da52cc487123bfc20e0d4d809e3e29f1451c5d17c6617"
+        }
+      ],
+      "note_da_verificare": [],
+      "sha256_dopo": "7410dcf5cb46f2df8a6115033811430c70192c588a40cf206ccd160b02ce5a7e",
+      "modificato": true
+    },
+    {
+      "id": "2003_2",
+      "file": "contenuti/problemi/SA_2003_2.tex",
+      "sha256_prima": "3e20b081ed77cc41fe404e8e4af7049787b4dd8cfb48e5d642b4860d8531fe2e",
+      "aggiunte": [
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2003_2.tex:Testo"
+          ],
+          "sha256_contenuto": "c29358f953e13597c1d30af611534359bf0221ef7615b7559cb5e79dfb3b3489"
+        }
+      ],
+      "note_da_verificare": [],
+      "sha256_dopo": "21c1dbf07ec3534ea011eb8431a05d0386fff3fe81f3ff60943d10e72b011c07",
+      "modificato": true
+    },
+    {
+      "id": "2003_3",
+      "file": "contenuti/problemi/SA_2003_3.tex",
+      "sha256_prima": "618674e54fe79994d14627e5a6d83b71817ba3a93589fff5215fa208c5e9c512",
+      "aggiunte": [
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2003_3.tex:Testo"
+          ],
+          "sha256_contenuto": "05d60ea9977b5272eb440f52640f6d42ef956640fe78c3d1d1eb88c4fb35deb3"
+        }
+      ],
+      "note_da_verificare": [],
+      "sha256_dopo": "82c555264bcd36043318a6163c5b90f24fb373e8e30ad6d7d38a65e12fb09355",
+      "modificato": true
+    },
+    {
+      "id": "2003_4",
+      "file": "contenuti/problemi/SA_2003_4.tex",
+      "sha256_prima": "51e0f01e581d0d2b80de2a104d7264a5820af42241d3c9f23464091f9c4e087a",
+      "aggiunte": [
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2003_4.tex:Testo"
+          ],
+          "sha256_contenuto": "19bb43e4797a6eca58f85eafacb6e5a61b144eb5bef1ef9c62507bc49118d465"
+        }
+      ],
+      "note_da_verificare": [],
+      "sha256_dopo": "23b2eafa3b703041c6a99a2314c4cb0a3cd4796e2f580c18264fb40694a7e7f5",
+      "modificato": true
+    },
+    {
+      "id": "2004_1",
+      "file": "contenuti/problemi/SA_2004_1.tex",
+      "sha256_prima": "c1c57ecde0b7d4f5f38d594a99b3303fa112b5da1a13d6a1384c44350279febf",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "c1c57ecde0b7d4f5f38d594a99b3303fa112b5da1a13d6a1384c44350279febf",
+      "modificato": false
+    },
+    {
+      "id": "2004_2",
+      "file": "contenuti/problemi/SA_2004_2.tex",
+      "sha256_prima": "b258dd47f1ce236c87aa4d3400f08d4f4a8af2d23750f598d189b4c5e73acf63",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "b258dd47f1ce236c87aa4d3400f08d4f4a8af2d23750f598d189b4c5e73acf63",
+      "modificato": false
+    },
+    {
+      "id": "2004_3",
+      "file": "contenuti/problemi/SA_2004_3.tex",
+      "sha256_prima": "42f3f94addd42825d909912e1e90e464f6aa9266ff8a1b05820f56b8d24b2ccc",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "42f3f94addd42825d909912e1e90e464f6aa9266ff8a1b05820f56b8d24b2ccc",
+      "modificato": false
+    },
+    {
+      "id": "2004_4",
+      "file": "contenuti/problemi/SA_2004_4.tex",
+      "sha256_prima": "99a5564e8ba29d119b9ab1082132773b5a3a3b0ad0c7ebca562c1d6f4be2b8ba",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "99a5564e8ba29d119b9ab1082132773b5a3a3b0ad0c7ebca562c1d6f4be2b8ba",
+      "modificato": false
+    },
+    {
+      "id": "2005_1",
+      "file": "contenuti/problemi/SA_2005_1.tex",
+      "sha256_prima": "2ef377a737d1a1976464244eaeabbdf06a60bf42bd3fb42e15e74b0825256003",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "2ef377a737d1a1976464244eaeabbdf06a60bf42bd3fb42e15e74b0825256003",
+      "modificato": false
+    },
+    {
+      "id": "2005_2",
+      "file": "contenuti/problemi/SA_2005_2.tex",
+      "sha256_prima": "028c373e4fb41cef2cf2e29b0d2d6cb974077878a838665f39e34ea27f7bcdc0",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "028c373e4fb41cef2cf2e29b0d2d6cb974077878a838665f39e34ea27f7bcdc0",
+      "modificato": false
+    },
+    {
+      "id": "2005_3",
+      "file": "contenuti/problemi/SA_2005_3.tex",
+      "sha256_prima": "0925088f86e1845afb7df0d38b23793b1fec0007fe8aaf7d5f3804231adbf758",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "0925088f86e1845afb7df0d38b23793b1fec0007fe8aaf7d5f3804231adbf758",
+      "modificato": false
+    },
+    {
+      "id": "2005_4",
+      "file": "contenuti/problemi/SA_2005_4.tex",
+      "sha256_prima": "1bddd2fcd5e8773d96293f90781169d351ca22ee0950040af000ee95a0183980",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "1bddd2fcd5e8773d96293f90781169d351ca22ee0950040af000ee95a0183980",
+      "modificato": false
+    },
+    {
+      "id": "2006_1",
+      "file": "contenuti/problemi/SA_2006_1.tex",
+      "sha256_prima": "2a5771a5c62813eafcf18bcc594346726d6e4f5b48e35b0166a53aadf182d455",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "2a5771a5c62813eafcf18bcc594346726d6e4f5b48e35b0166a53aadf182d455",
+      "modificato": false
+    },
+    {
+      "id": "2006_2",
+      "file": "contenuti/problemi/SA_2006_2.tex",
+      "sha256_prima": "449ac150b7d24594b70007fca2bd32fdb119000eb43ed04ca6e225a53396cce6",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "449ac150b7d24594b70007fca2bd32fdb119000eb43ed04ca6e225a53396cce6",
+      "modificato": false
+    },
+    {
+      "id": "2006_3",
+      "file": "contenuti/problemi/SA_2006_3.tex",
+      "sha256_prima": "9127bf60a20d02ab3db0e2e8ea8a7eae1105baf8e5a3c6f42e13383fce9e1751",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "9127bf60a20d02ab3db0e2e8ea8a7eae1105baf8e5a3c6f42e13383fce9e1751",
+      "modificato": false
+    },
+    {
+      "id": "2006_4",
+      "file": "contenuti/problemi/SA_2006_4.tex",
+      "sha256_prima": "91c63fe437565065634a3e53d3cfe1a66acd8ed876dfb96c904ed7e51e93fd11",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "91c63fe437565065634a3e53d3cfe1a66acd8ed876dfb96c904ed7e51e93fd11",
+      "modificato": false
+    },
+    {
+      "id": "2007_1",
+      "file": "contenuti/problemi/SA_2007_1.tex",
+      "sha256_prima": "86022af069a0690295936615774c23b1b6eae5fdc8bda90fb0ddf99b74728174",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "86022af069a0690295936615774c23b1b6eae5fdc8bda90fb0ddf99b74728174",
+      "modificato": false
+    },
+    {
+      "id": "2007_2",
+      "file": "contenuti/problemi/SA_2007_2.tex",
+      "sha256_prima": "387ba6612143dda8249a5e2f83f626d0fcc4beda18179e3a34a103b2404dacef",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "387ba6612143dda8249a5e2f83f626d0fcc4beda18179e3a34a103b2404dacef",
+      "modificato": false
+    },
+    {
+      "id": "2007_3",
+      "file": "contenuti/problemi/SA_2007_3.tex",
+      "sha256_prima": "dfe461e8ddc6fd8092a3d7842701e42f287f434ba929f60a1b11b6161cee12ab",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "dfe461e8ddc6fd8092a3d7842701e42f287f434ba929f60a1b11b6161cee12ab",
+      "modificato": false
+    },
+    {
+      "id": "2007_4",
+      "file": "contenuti/problemi/SA_2007_4.tex",
+      "sha256_prima": "270dbdbe90f1bbb3d0aff1ee16a74477802a9532eed65a26228b1a571f924d90",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "270dbdbe90f1bbb3d0aff1ee16a74477802a9532eed65a26228b1a571f924d90",
+      "modificato": false
+    },
+    {
+      "id": "2008_1",
+      "file": "contenuti/problemi/SA_2008_1.tex",
+      "sha256_prima": "99d9866bf6037cc6b4c4c5e44b78f66c7944c70f09213d5965336825152206c7",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "99d9866bf6037cc6b4c4c5e44b78f66c7944c70f09213d5965336825152206c7",
+      "modificato": false
+    },
+    {
+      "id": "2008_2",
+      "file": "contenuti/problemi/SA_2008_2.tex",
+      "sha256_prima": "0993d1547fe1456b5838648224b905a99433946b1dfc19d961b9086e4f5ee284",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "0993d1547fe1456b5838648224b905a99433946b1dfc19d961b9086e4f5ee284",
+      "modificato": false
+    },
+    {
+      "id": "2008_3",
+      "file": "contenuti/problemi/SA_2008_3.tex",
+      "sha256_prima": "e6319b2e41a0cfbbf6529a7933a6e41acdd8ec0690d111146e30b89ca5524c3b",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "e6319b2e41a0cfbbf6529a7933a6e41acdd8ec0690d111146e30b89ca5524c3b",
+      "modificato": false
+    },
+    {
+      "id": "2008_4",
+      "file": "contenuti/problemi/SA_2008_4.tex",
+      "sha256_prima": "7fe504ae1132d48a3ff1b3aeec9af828c0de13d1b9531a789e4eaaf6ebe6ad35",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "7fe504ae1132d48a3ff1b3aeec9af828c0de13d1b9531a789e4eaaf6ebe6ad35",
+      "modificato": false
+    },
+    {
+      "id": "2009_1",
+      "file": "contenuti/problemi/SA_2009_1.tex",
+      "sha256_prima": "970e6e46ec04eb4fb3f03c34f4854c8932d8568842117fd8ca0eba05f9ac5ff5",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "970e6e46ec04eb4fb3f03c34f4854c8932d8568842117fd8ca0eba05f9ac5ff5",
+      "modificato": false
+    },
+    {
+      "id": "2009_2",
+      "file": "contenuti/problemi/SA_2009_2.tex",
+      "sha256_prima": "08871d20322b64265260d554c79234c1cd9b4db55e0615663950c1825d8d7f6a",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "08871d20322b64265260d554c79234c1cd9b4db55e0615663950c1825d8d7f6a",
+      "modificato": false
+    },
+    {
+      "id": "2009_3",
+      "file": "contenuti/problemi/SA_2009_3.tex",
+      "sha256_prima": "bf2591960d1252f93c76bcc5ce5d228ed5f6ce97d1254ad3c952b09110a4cd64",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "bf2591960d1252f93c76bcc5ce5d228ed5f6ce97d1254ad3c952b09110a4cd64",
+      "modificato": false
+    },
+    {
+      "id": "2009_4",
+      "file": "contenuti/problemi/SA_2009_4.tex",
+      "sha256_prima": "e991fbb1dd3b177daadff5fe346763ca417c583420adec5811392b1fc75d0314",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "e991fbb1dd3b177daadff5fe346763ca417c583420adec5811392b1fc75d0314",
+      "modificato": false
+    },
+    {
+      "id": "2010_1",
+      "file": "contenuti/problemi/SA_2010_1.tex",
+      "sha256_prima": "1987c5726e0c9a91e2b98bb88eebd8bc28b5864e4882e72b8300b52172825a00",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "1987c5726e0c9a91e2b98bb88eebd8bc28b5864e4882e72b8300b52172825a00",
+      "modificato": false
+    },
+    {
+      "id": "2010_2",
+      "file": "contenuti/problemi/SA_2010_2.tex",
+      "sha256_prima": "ec8c01a6608cd146d4fda5bde3a9a952cc205f5aa7725326cf842db40398a9f3",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "ec8c01a6608cd146d4fda5bde3a9a952cc205f5aa7725326cf842db40398a9f3",
+      "modificato": false
+    },
+    {
+      "id": "2010_3",
+      "file": "contenuti/problemi/SA_2010_3.tex",
+      "sha256_prima": "503b03b66a17ee77dc30dad86102d494c7f6365dfebb86493e0690a3993dfd13",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "503b03b66a17ee77dc30dad86102d494c7f6365dfebb86493e0690a3993dfd13",
+      "modificato": false
+    },
+    {
+      "id": "2010_4",
+      "file": "contenuti/problemi/SA_2010_4.tex",
+      "sha256_prima": "4c3ffcb8d9f95aab75a509c6aee377ca8d4db2287c4c146264acdbf0b33d3619",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "4c3ffcb8d9f95aab75a509c6aee377ca8d4db2287c4c146264acdbf0b33d3619",
+      "modificato": false
+    },
+    {
+      "id": "2011_1",
+      "file": "contenuti/problemi/SA_2011_1.tex",
+      "sha256_prima": "7d364b60adedeee1cf397b399cbea70f7d48ef5c3a1b2cb34a2e9ad281350f73",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "7d364b60adedeee1cf397b399cbea70f7d48ef5c3a1b2cb34a2e9ad281350f73",
+      "modificato": false
+    },
+    {
+      "id": "2011_2",
+      "file": "contenuti/problemi/SA_2011_2.tex",
+      "sha256_prima": "ac4938a2409cd9e99e883f1bec86c5504432ff14161d44725fa5744f3d7c4a63",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "ac4938a2409cd9e99e883f1bec86c5504432ff14161d44725fa5744f3d7c4a63",
+      "modificato": false
+    },
+    {
+      "id": "2011_3",
+      "file": "contenuti/problemi/SA_2011_3.tex",
+      "sha256_prima": "ba50f0be48cbd67fa82b14cad846a9603cd1d876166301934d9db125ac1910b4",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "ba50f0be48cbd67fa82b14cad846a9603cd1d876166301934d9db125ac1910b4",
+      "modificato": false
+    },
+    {
+      "id": "2011_4",
+      "file": "contenuti/problemi/SA_2011_4.tex",
+      "sha256_prima": "badc9a7fd38296b30c0777fda6316f605cfe15a064b1feb8220198c2c70229ec",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "badc9a7fd38296b30c0777fda6316f605cfe15a064b1feb8220198c2c70229ec",
+      "modificato": false
+    },
+    {
+      "id": "2012_1",
+      "file": "contenuti/problemi/SA_2012_1.tex",
+      "sha256_prima": "2dbd4735c4d6dae71f70d4cb563d269fce15de110299ec0f39ffaa039d588620",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "2dbd4735c4d6dae71f70d4cb563d269fce15de110299ec0f39ffaa039d588620",
+      "modificato": false
+    },
+    {
+      "id": "2012_2",
+      "file": "contenuti/problemi/SA_2012_2.tex",
+      "sha256_prima": "79cbef82628962e7819d1580ed8c98cca0064023de787cef2f783936bd12149d",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "79cbef82628962e7819d1580ed8c98cca0064023de787cef2f783936bd12149d",
+      "modificato": false
+    },
+    {
+      "id": "2012_3",
+      "file": "contenuti/problemi/SA_2012_3.tex",
+      "sha256_prima": "0242ba8dca83442355623282372488d723a1334ace47d779cb10aa20907c5d1d",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "0242ba8dca83442355623282372488d723a1334ace47d779cb10aa20907c5d1d",
+      "modificato": false
+    },
+    {
+      "id": "2012_4",
+      "file": "contenuti/problemi/SA_2012_4.tex",
+      "sha256_prima": "64cd4dc70e785afe2fcff6353c22671bcde39bde7a2d47adca1e181d893f7336",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "64cd4dc70e785afe2fcff6353c22671bcde39bde7a2d47adca1e181d893f7336",
+      "modificato": false
+    },
+    {
+      "id": "2013_1",
+      "file": "contenuti/problemi/SA_2013_1.tex",
+      "sha256_prima": "46e1ba2d2f1d6f7613a2ad97239c034848d44472488c12cec41422b22bef00b3",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "46e1ba2d2f1d6f7613a2ad97239c034848d44472488c12cec41422b22bef00b3",
+      "modificato": false
+    },
+    {
+      "id": "2013_2",
+      "file": "contenuti/problemi/SA_2013_2.tex",
+      "sha256_prima": "deb6b53a00369da53c305b0cd7f7b2b638d1f61b5b8f5b5c311efb67598bfab1",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "deb6b53a00369da53c305b0cd7f7b2b638d1f61b5b8f5b5c311efb67598bfab1",
+      "modificato": false
+    },
+    {
+      "id": "2013_3",
+      "file": "contenuti/problemi/SA_2013_3.tex",
+      "sha256_prima": "09a1f5d9fa7e7a62a9279cb3aa967e04611a71c37ca7d52c2266c1f664ca8669",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "09a1f5d9fa7e7a62a9279cb3aa967e04611a71c37ca7d52c2266c1f664ca8669",
+      "modificato": false
+    },
+    {
+      "id": "2013_4",
+      "file": "contenuti/problemi/SA_2013_4.tex",
+      "sha256_prima": "680ac41a047a202292ad685bdd55b1afe5fa640116da7f89649b44ce46a65c1c",
+      "aggiunte": [],
+      "note_da_verificare": [],
+      "sha256_dopo": "680ac41a047a202292ad685bdd55b1afe5fa640116da7f89649b44ce46a65c1c",
+      "modificato": false
+    },
+    {
+      "id": "2021_1",
+      "file": "contenuti/problemi/SA_2021_1.tex",
+      "sha256_prima": "f20a6084ac93c863ab4ff96120588a06562428d128b3e30a1dd643d60b2331f9",
+      "aggiunte": [
+        {
+          "campo": "Risposta",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2021_1.tex:Testo"
+          ],
+          "sha256_contenuto": "2967aac6f8b0997bbfef500f3558f557d40deb1984c647813fe65ae988a957be"
+        },
+        {
+          "campo": "Aiutino",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2021_1.tex:Testo"
+          ],
+          "sha256_contenuto": "d9f36a976f3dccec18abca51213a5017dae459d88ab88da987d24bf45bc89318"
+        },
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2021_1.tex:Testo"
+          ],
+          "sha256_contenuto": "5fe102517ce14859dc444748729e0e6bbb4f35dd62a41f39ac0c19f6b7489425"
+        }
+      ],
+      "note_da_verificare": [
+        "Esplicitate partenza da fermo e convenzione sugli istanti di cambio del semaforo. Il caso verde residuo=40 dipende dalla convenzione."
+      ],
+      "sha256_dopo": "470314e4512c0012d44d1d2ecd513d0ae10259d677966d54fc18a47b1fd5a975",
+      "modificato": true
+    },
+    {
+      "id": "2021_2",
+      "file": "contenuti/problemi/SA_2021_2.tex",
+      "sha256_prima": "53cc1841bb7390f037b812a451debf21a170658b5e1044ca61b2abfe8364e53d",
+      "aggiunte": [
+        {
+          "campo": "Risposta",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2021_2.tex:Testo"
+          ],
+          "sha256_contenuto": "c1a18e4bde396ca4f36beafa604e5f3501190713604e5ec5e0c9f5f504c0d67f"
+        },
+        {
+          "campo": "Aiutino",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2021_2.tex:Testo"
+          ],
+          "sha256_contenuto": "dcbd3d6aead06c4d98d20dcae75da3fb817d89752a1585d1aba3f3304ac8a8af"
+        },
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2021_2.tex:Testo"
+          ],
+          "sha256_contenuto": "6205d6ea1a3e62b23dbbea37410215f3ec8b6461fd6bbd64057fa07b7c018152"
+        }
+      ],
+      "note_da_verificare": [],
+      "sha256_dopo": "04d06696ec3226acecb701e4b50ff68c43864e87295996db53fee7433066b2c7",
+      "modificato": true
+    },
+    {
+      "id": "2021_3",
+      "file": "contenuti/problemi/SA_2021_3.tex",
+      "sha256_prima": "e86d612187a384c7c71c0f195fda4a72d4cc422f64ea92fd051ceaa6ac237ff7",
+      "aggiunte": [
+        {
+          "campo": "Risposta",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2021_3.tex:Testo"
+          ],
+          "sha256_contenuto": "7698ba8954f76245178ae1add986f4ac23526854e02f55e266930506ca5fd0ca"
+        },
+        {
+          "campo": "Aiutino",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2021_3.tex:Testo"
+          ],
+          "sha256_contenuto": "95cfaa82bdf0c501473cafa778016198b565ab146493a7971f740f17123df047"
+        },
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2021_3.tex:Testo"
+          ],
+          "sha256_contenuto": "46ee3446eb762a5f0e7d64a59fecd75e72b3ec2392ebeae50bdd721712bdfb64"
+        }
+      ],
+      "note_da_verificare": [
+        "Il moto richiesto nel punto (b) ha un limite temporale: con obelisco fermo non si attraversa la sua base con un riflettore finito sulla parete."
+      ],
+      "sha256_dopo": "f7d9438501f9e305f225648fe0927e1a76290353d67ffc8e877b5fd7b2a35623",
+      "modificato": true
+    },
+    {
+      "id": "2022_1",
+      "file": "contenuti/problemi/SA_2022_1.tex",
+      "sha256_prima": "a4e5610a28fd2fc98b1cecda7963f010b33e9b97ea340e341a1274ed6627867a",
+      "aggiunte": [
+        {
+          "campo": "Risposta",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2022_1.tex:Testo"
+          ],
+          "sha256_contenuto": "8cd96913a10ab156ed2ad2a566424f2695852f59eb676f92dda4e64284ce3895"
+        },
+        {
+          "campo": "Aiutino",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2022_1.tex:Testo"
+          ],
+          "sha256_contenuto": "83b8ba1f320c486c47bbd692a2befe32e19b98b9a094599c0b1540ab1a35edc7"
+        },
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2022_1.tex:Testo"
+          ],
+          "sha256_contenuto": "44bc1a7508e90eb51c076eb678330d609d027f4b290bc84dc173e9eeeae446af"
+        }
+      ],
+      "note_da_verificare": [
+        "I conteggi includono l'incrocio iniziale. Nei punti (b) e (c) si usano le orientazioni appropriate ai due tipi di vertice, non lo stesso orientamento di bordo di una griglia pari."
+      ],
+      "sha256_dopo": "8a01f366938017f68a16e2908eb589ed5c728622d75e4860307008e1afde75ac",
+      "modificato": true
+    },
+    {
+      "id": "2022_2",
+      "file": "contenuti/problemi/SA_2022_2.tex",
+      "sha256_prima": "359f2114b5e0b44dd8a886cfcecb801b518920222db72498355c0f50b261653b",
+      "aggiunte": [
+        {
+          "campo": "Risposta",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2022_2.tex:Testo"
+          ],
+          "sha256_contenuto": "cab9b26d83a872fddb809d2d76f6aef97b96deb84a21b83226a38650e7b56265"
+        },
+        {
+          "campo": "Aiutino",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2022_2.tex:Testo"
+          ],
+          "sha256_contenuto": "dc84f5e87b1fdaa77198a8363569746f203ebd007cd1d8573acd549eca3f0d47"
+        },
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2022_2.tex:Testo"
+          ],
+          "sha256_contenuto": "c77b2a571e061566b5f49fc0f20d6ad722bafb09c357849b71961944725fe53b"
+        }
+      ],
+      "note_da_verificare": [],
+      "sha256_dopo": "c5a0789e3f1e633d09a8897852c7d030589083e7522212a2c2aa510b9320191c",
+      "modificato": true
+    },
+    {
+      "id": "2022_3",
+      "file": "contenuti/problemi/SA_2022_3.tex",
+      "sha256_prima": "fe29d297b40472cd47f9e1ef9da2184743e7c4ad30579cea0c3cb1a1a0b61881",
+      "aggiunte": [
+        {
+          "campo": "Risposta",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2022_3.tex:Testo"
+          ],
+          "sha256_contenuto": "ffb0d337ee8830a372205df76cf547a247b2193e1ce77139add2d533991ce004"
+        },
+        {
+          "campo": "Aiutino",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2022_3.tex:Testo"
+          ],
+          "sha256_contenuto": "dba0161080bd4487bcac3d0fd7e2c86fb5003ccdf5183eaa31971ad6dfbd86ce"
+        },
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2022_3.tex:Testo"
+          ],
+          "sha256_contenuto": "13ffd574f7ab268e18da4b08cbf2d0d67f59f28893af26dfd0faa99ce6cb2506"
+        }
+      ],
+      "note_da_verificare": [
+        "Prova geometrica nuova, da riesaminare in particolare nel lemma di riduzione dei percorsi a corde e archi; verificato anche numericamente il minimo per ingressi/uscite sul cerchio."
+      ],
+      "sha256_dopo": "d66e49a447dd98d1481923b48d154cd00cebdc07a258620905c4d2b16375da1d",
+      "modificato": true
+    },
+    {
+      "id": "2023_1",
+      "file": "contenuti/problemi/SA_2023_1.tex",
+      "sha256_prima": "cedf6cf1549d20fc39009ce481389c1390362e9fdf4b953f7c466c7759a0d069",
+      "aggiunte": [
+        {
+          "campo": "Risposta",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2023_1.tex:Testo"
+          ],
+          "sha256_contenuto": "86c8688b71706e2184f34284c5298d816f696ba37dab7b855c911b4047172270"
+        },
+        {
+          "campo": "Aiutino",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2023_1.tex:Testo"
+          ],
+          "sha256_contenuto": "235a0d3725f3e9944b89c30416d48b6470a86e61e1b267f8ad8780b6dd27d2bb"
+        },
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2023_1.tex:Testo"
+          ],
+          "sha256_contenuto": "2e24dbd0a40bc065699e931513dcbe563771613e4a228ec216761eba36c7425e"
+        }
+      ],
+      "note_da_verificare": [],
+      "sha256_dopo": "be76ad687e81913b3b93d605c6167412175da62b25a4596912c88b330213bade",
+      "modificato": true
+    },
+    {
+      "id": "2023_2",
+      "file": "contenuti/problemi/SA_2023_2.tex",
+      "sha256_prima": "2aaaab27e8e9b0f8f3858eb06ab5ef76fb1722872998623ca9788882257b1160",
+      "aggiunte": [
+        {
+          "campo": "Risposta",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2023_2.tex:Testo"
+          ],
+          "sha256_contenuto": "4102f953c6ade67f2eda64670429580d06867c29540c62934a7ce9f6d781fea9"
+        },
+        {
+          "campo": "Aiutino",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2023_2.tex:Testo"
+          ],
+          "sha256_contenuto": "7c6bf63dd8e1a260475ee9769e98b77c827cc13afc2c0423136b84ca6c728fe6"
+        },
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2023_2.tex:Testo"
+          ],
+          "sha256_contenuto": "86d58ade1d2e0e72eab92f434af1233e194247a659bef743407b3b36361bec50"
+        }
+      ],
+      "note_da_verificare": [
+        "Indipendenza dei dischi e modello geometrico di sopravvivenza annuale sono assunzioni esplicite della nuova bozza, non dati completamente specificati dal testo."
+      ],
+      "sha256_dopo": "b6ef7eb6215252bed6cfa4ce0b33feb3f27e1f249da059a0c9923d360388f02d",
+      "modificato": true
+    },
+    {
+      "id": "2023_3",
+      "file": "contenuti/problemi/SA_2023_3.tex",
+      "sha256_prima": "a7b78870204a5883ae11d65d844e7d34ae31edd717308cf98eda7a59868e6d6c",
+      "aggiunte": [
+        {
+          "campo": "Risposta",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2023_3.tex:Testo"
+          ],
+          "sha256_contenuto": "191811ea9a0a4315f1067ef51997ee8fb8861023f8bbfa23cd6acd178e103966"
+        },
+        {
+          "campo": "Aiutino",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2023_3.tex:Testo"
+          ],
+          "sha256_contenuto": "5c6a7e1f25f20e6daf79df1a549d57b54111242e5946c2d86bc6797276c49c19"
+        },
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: elaborazione nuova dal testo",
+          "fonti": [
+            "contenuti/problemi/SA_2023_3.tex:Testo"
+          ],
+          "sha256_contenuto": "fc75972171b4f3eec861cc6e92d3ab5e629a94264176704b8c15f2a1a591932d"
+        }
+      ],
+      "note_da_verificare": [],
+      "sha256_dopo": "65781d0987039eaaffe71b4105913bfe4508cf6f745b37286d8ea7199ad79aa6",
+      "modificato": true
+    },
+    {
+      "id": "2024_1",
+      "file": "contenuti/problemi/SA_2024_1.tex",
+      "sha256_prima": "e928ddeba1dc68de23262a193300b6154da171f2c58ca66ea78299db4a9abe41",
+      "aggiunte": [
+        {
+          "campo": "Risposta",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: rielaborazione e sviluppo di appunti forniti",
+          "fonti": [
+            "contenuti/problemi/SA_2024_1.tex:Testo",
+            "2024/SSSUP_2024-P1.pdf"
+          ],
+          "sha256_contenuto": "5388eb6a39de6bb90542c7c570748779e32021a8bb09df25e837575ddc85e2f3"
+        },
+        {
+          "campo": "Aiutino",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: rielaborazione e sviluppo di appunti forniti",
+          "fonti": [
+            "contenuti/problemi/SA_2024_1.tex:Testo",
+            "2024/SSSUP_2024-P1.pdf"
+          ],
+          "sha256_contenuto": "dc77f4cecc71bc0d9bf07aed9fb607bdcc14fa0eb47f9f72e01597374a424f55"
+        },
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: rielaborazione e sviluppo di appunti forniti",
+          "fonti": [
+            "contenuti/problemi/SA_2024_1.tex:Testo",
+            "2024/SSSUP_2024-P1.pdf"
+          ],
+          "sha256_contenuto": "e9b8016df74742b194541e95bea4fcd98c036ca69dc9ce7c5eb165a06ad7456e"
+        }
+      ],
+      "note_da_verificare": [
+        "Convenzione di illuminazione tangente esplicitata seguendo la bozza: h>=1. Con archi aperti la soglia e h>1."
+      ],
+      "sha256_dopo": "fd89b761663668fdee123bfbb2ae42f2d3769725bc4b1fd83db2ea2f35d6811b",
+      "modificato": true
+    },
+    {
+      "id": "2024_2",
+      "file": "contenuti/problemi/SA_2024_2.tex",
+      "sha256_prima": "821ee965ca1b24bca289789b68d3afbd384762aa1c5137399f32feef9103c938",
+      "aggiunte": [
+        {
+          "campo": "Risposta",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: soluzione nuova dal testo e dalla figura fornita",
+          "fonti": [
+            "contenuti/problemi/SA_2024_2.tex:Testo",
+            "2024/squares.pdf (geometria delle cerniere e configurazioni; soluzione elaborata ex novo)"
+          ],
+          "sha256_contenuto": "7bca7e1baca9bfd3bb97552035b467f067a9ef34d708559edbc7f621ac7402ea"
+        },
+        {
+          "campo": "Aiutino",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: soluzione nuova dal testo e dalla figura fornita",
+          "fonti": [
+            "contenuti/problemi/SA_2024_2.tex:Testo",
+            "2024/squares.pdf (geometria delle cerniere e configurazioni; soluzione elaborata ex novo)"
+          ],
+          "sha256_contenuto": "7c73febfb127104c57a488521bb7816c670a6c25003c78e7368ecb8bbd26a65b"
+        },
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: soluzione nuova dal testo e dalla figura fornita",
+          "fonti": [
+            "contenuti/problemi/SA_2024_2.tex:Testo",
+            "2024/squares.pdf (geometria delle cerniere e configurazioni; soluzione elaborata ex novo)"
+          ],
+          "sha256_contenuto": "4a3b0e85fe6d3b2ca477eb23c3e2ff55dcb9297f992b1510cc1cbf81929d1804"
+        }
+      ],
+      "note_da_verificare": [
+        "Soluzione nuova basata sulla famiglia di aperture sincrone rappresentata da squares.pdf; verificare che il testo intenda esattamente questa famiglia e non ulteriori montaggi delle cerniere."
+      ],
+      "sha256_dopo": "1c845f13f30a0cb0b9e93a6ee1e0b77a79fd8df9851784f48e4b1aa638061b6b",
+      "modificato": true
+    },
+    {
+      "id": "2024_3",
+      "file": "contenuti/problemi/SA_2024_3.tex",
+      "sha256_prima": "7fd0c0aa66ac2ccb792cbac471ed75b0c15122e8cba3f20c430db2ef5a3c1361",
+      "aggiunte": [
+        {
+          "campo": "Risposta",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: rielaborazione e sviluppo di appunti forniti",
+          "fonti": [
+            "contenuti/problemi/SA_2024_3.tex:Testo",
+            "2024/SSSUP_2024-P3.pdf"
+          ],
+          "sha256_contenuto": "967bd23874dac531b4df571e169dfbbd87ff0f83e3a80babff232c268235b7c8"
+        },
+        {
+          "campo": "Aiutino",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: rielaborazione e sviluppo di appunti forniti",
+          "fonti": [
+            "contenuti/problemi/SA_2024_3.tex:Testo",
+            "2024/SSSUP_2024-P3.pdf"
+          ],
+          "sha256_contenuto": "edd844fd2dad31090bd23d51501f99d83a73602f6b848f501bc1a8a5acd2897f"
+        },
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: rielaborazione e sviluppo di appunti forniti",
+          "fonti": [
+            "contenuti/problemi/SA_2024_3.tex:Testo",
+            "2024/SSSUP_2024-P3.pdf"
+          ],
+          "sha256_contenuto": "27a913318dc4ded0f0015c8bc18bc90cb032d32ea9eec250e6cd9ea68c2a4c84"
+        }
+      ],
+      "note_da_verificare": [
+        "Il punto (c) mantiene esplicitamente l'indipendenza delle risposte; senza di essa le marginali a,b,c non bastano."
+      ],
+      "sha256_dopo": "bf5dbf40f8ab09196637a93f138e2f4ec7498a8c609076e3491a6e09362c16f6",
+      "modificato": true
+    },
+    {
+      "id": "2025_1",
+      "file": "contenuti/problemi/SA_2025_1.tex",
+      "sha256_prima": "0f371ea28d327a0a3a6303df4204c7895f5541e8148f2a52d4c5966e083c7d8c",
+      "aggiunte": [
+        {
+          "campo": "Risposta",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: rielaborazione e sviluppo di appunti forniti",
+          "fonti": [
+            "contenuti/problemi/SA_2025_1.tex:Testo",
+            "2025/Soluzione_P1.tex"
+          ],
+          "sha256_contenuto": "ef0aabeafa4ebe25b08f45d448e075214eb6ae70358004c52bca63db77c66a93"
+        },
+        {
+          "campo": "Aiutino",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: rielaborazione e sviluppo di appunti forniti",
+          "fonti": [
+            "contenuti/problemi/SA_2025_1.tex:Testo",
+            "2025/Soluzione_P1.tex"
+          ],
+          "sha256_contenuto": "83dd19a22d517d9077aa5af0cd0c35366c40eb7657038d6533f7ac672dd718c8"
+        },
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: rielaborazione e sviluppo di appunti forniti",
+          "fonti": [
+            "contenuti/problemi/SA_2025_1.tex:Testo",
+            "2025/Soluzione_P1.tex"
+          ],
+          "sha256_contenuto": "e4879b7d684885ac8b58e36953f9de98999c787bc24687edd3aa170ad1188298"
+        }
+      ],
+      "note_da_verificare": [
+        "Esplicitata l'ipotesi di dadi equi e indipendenti, adottata dalla bozza ricevuta."
+      ],
+      "sha256_dopo": "ab28ef5312316895b4da13ac78ec18ceb0e78fbe56711dcc537bcc5d788118f7",
+      "modificato": true
+    },
+    {
+      "id": "2025_2",
+      "file": "contenuti/problemi/SA_2025_2.tex",
+      "sha256_prima": "374c4e23ece3cba8a84f2faab3c4ba39b59a3c961349fd023967c271b65388cf",
+      "aggiunte": [
+        {
+          "campo": "Risposta",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: rielaborazione e sviluppo di appunti forniti",
+          "fonti": [
+            "contenuti/problemi/SA_2025_2.tex:Testo",
+            "2025/Soluzione_P2.pdf"
+          ],
+          "sha256_contenuto": "d8f529eaa2342546a9a1f322627eb2916f408543ae1671859d55ac55eb437532"
+        },
+        {
+          "campo": "Aiutino",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: rielaborazione e sviluppo di appunti forniti",
+          "fonti": [
+            "contenuti/problemi/SA_2025_2.tex:Testo",
+            "2025/Soluzione_P2.pdf"
+          ],
+          "sha256_contenuto": "165010e74c0a3da57371a277a042a4105a7829999c91e8735ef7a1358189190c"
+        },
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: rielaborazione e sviluppo di appunti forniti",
+          "fonti": [
+            "contenuti/problemi/SA_2025_2.tex:Testo",
+            "2025/Soluzione_P2.pdf"
+          ],
+          "sha256_contenuto": "7968b13cc18bff57642d183177f2b6de080b2305677cef00ab05b7be02ec0b5d"
+        }
+      ],
+      "note_da_verificare": [
+        "Nel punto (a) la bozza assume uniformita delle date: restituita una percentuale attesa, non una percentuale empirica determinata dai soli dati del testo. Quest'anno=2025."
+      ],
+      "sha256_dopo": "455b1e8cf15867bdd8f633cf6046b8282a804b826113b0ef3606cedddc569e4e",
+      "modificato": true
+    },
+    {
+      "id": "2025_3",
+      "file": "contenuti/problemi/SA_2025_3.tex",
+      "sha256_prima": "ca36cd97b10284f69d831c514fe9093020724c28f61fd9176b86a897c0148410",
+      "aggiunte": [
+        {
+          "campo": "Risposta",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: rielaborazione e sviluppo di appunti forniti",
+          "fonti": [
+            "contenuti/problemi/SA_2025_3.tex:Testo",
+            "2025/Soluzione_P3.pdf (punti a-c; completamento AI del punto d)"
+          ],
+          "sha256_contenuto": "c3c603c2c790ab4c6f9a74318a9c806ac8a093cf876a49f65c2f5e64a67a24e4"
+        },
+        {
+          "campo": "Aiutino",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: rielaborazione e sviluppo di appunti forniti",
+          "fonti": [
+            "contenuti/problemi/SA_2025_3.tex:Testo",
+            "2025/Soluzione_P3.pdf (punti a-c; completamento AI del punto d)"
+          ],
+          "sha256_contenuto": "ddf323338924d1059e82d574ed04f9d97bcf0d25c47f822745fb9d56c5c799f7"
+        },
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: rielaborazione e sviluppo di appunti forniti",
+          "fonti": [
+            "contenuti/problemi/SA_2025_3.tex:Testo",
+            "2025/Soluzione_P3.pdf (punti a-c; completamento AI del punto d)"
+          ],
+          "sha256_contenuto": "23e14b7eed28b0b18e4de53e26b62cf0b89319227451c76cec9bb85a51fef3fa"
+        }
+      ],
+      "note_da_verificare": [
+        "Il pentagono di area 299/200 nel punto (d) e un contributo AI nuovo rispetto alla bozza manoscritta, verificato per inclusione dei vertici."
+      ],
+      "sha256_dopo": "a428255ade913a4ba74cbb154ab2c04db454e637f41a00636d4743d6b078ab68",
+      "modificato": true
+    },
+    {
+      "id": "2026_1",
+      "file": "contenuti/problemi/SA_2026_1.tex",
+      "sha256_prima": "96a102f2f8bb4a2a0a5ad376200438115677e8e737466db142311f473a025142",
+      "aggiunte": [
+        {
+          "campo": "Risposta",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: rielaborazione e sviluppo di appunti forniti",
+          "fonti": [
+            "contenuti/problemi/SA_2026_1.tex:Testo",
+            "2026/PI_ChatGPT_umana.pdf"
+          ],
+          "sha256_contenuto": "dfc38330eab004ac60440e01056dfcf6d49468bab72820224cad4ec07536c123"
+        },
+        {
+          "campo": "Aiutino",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: rielaborazione e sviluppo di appunti forniti",
+          "fonti": [
+            "contenuti/problemi/SA_2026_1.tex:Testo",
+            "2026/PI_ChatGPT_umana.pdf"
+          ],
+          "sha256_contenuto": "bc23f87d1b6b3de836152b7f48fe69ec4b57d38a75acf242da82f68592586971"
+        },
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: rielaborazione e sviluppo di appunti forniti",
+          "fonti": [
+            "contenuti/problemi/SA_2026_1.tex:Testo",
+            "2026/PI_ChatGPT_umana.pdf"
+          ],
+          "sha256_contenuto": "bc0326c52d1a2468e11bbca5d349da60adb35e3f02f277ac0db014ff887675ba"
+        }
+      ],
+      "note_da_verificare": [
+        "Corretto nella rielaborazione, non nel PDF originale, il verso dell'asse perpendicolare: AC e l'asse della corda BD, non viceversa. Assunti quadrilateri semplici non degeneri."
+      ],
+      "sha256_dopo": "5484a4d7c5feace53b081510fe53eccc9b39838fd25531dadf44c42fac3f4f7b",
+      "modificato": true
+    },
+    {
+      "id": "2026_2",
+      "file": "contenuti/problemi/SA_2026_2.tex",
+      "sha256_prima": "9330fbb6045ce3ba3e5dd8b04f171e1e7ff8f7cc4f64aac056a6112b79daf50f",
+      "aggiunte": [
+        {
+          "campo": "Risposta",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: rielaborazione e sviluppo di appunti forniti",
+          "fonti": [
+            "contenuti/problemi/SA_2026_2.tex:Testo",
+            "2026/P2_ChatGPT.pdf"
+          ],
+          "sha256_contenuto": "97df7dd154ed20b1bc390bbeb441ed9ad85962dd1eb40fe713f9c23462d4e43c"
+        },
+        {
+          "campo": "Aiutino",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: rielaborazione e sviluppo di appunti forniti",
+          "fonti": [
+            "contenuti/problemi/SA_2026_2.tex:Testo",
+            "2026/P2_ChatGPT.pdf"
+          ],
+          "sha256_contenuto": "672824b31a6074f8826018a2830f04eccdd9cedbb9411dfaab977f979c9cc9d0"
+        },
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: rielaborazione e sviluppo di appunti forniti",
+          "fonti": [
+            "contenuti/problemi/SA_2026_2.tex:Testo",
+            "2026/P2_ChatGPT.pdf"
+          ],
+          "sha256_contenuto": "dab6a1128323656a6809611b47f53e4c5da1de8cb0cc7b0803cb21f96933cb18"
+        }
+      ],
+      "note_da_verificare": [
+        "Esplicitati scorta iniziale illimitata e numero finito di viaggi. Rafforzata la necessita della soglia C/2: non basta presumerla per ogni tratto di una strategia arbitraria."
+      ],
+      "sha256_dopo": "6f174171213bced173f080bbf9957d33aeb5996749864ae7047211405c396a86",
+      "modificato": true
+    },
+    {
+      "id": "2026_3",
+      "file": "contenuti/problemi/SA_2026_3.tex",
+      "sha256_prima": "3bd41b896023bbf8e4e0191a75e02380732eb7a57da0ba5150db2cfc36e177d8",
+      "aggiunte": [
+        {
+          "campo": "Risposta",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: rielaborazione e sviluppo di appunti forniti",
+          "fonti": [
+            "contenuti/problemi/SA_2026_3.tex:Testo",
+            "2026/P3_ChatGPT-1.pdf"
+          ],
+          "sha256_contenuto": "d1a0bc9030ae07b10c7b2d8b41db828b9fa17b171e58087ac4a95a218104cf42"
+        },
+        {
+          "campo": "Aiutino",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: rielaborazione e sviluppo di appunti forniti",
+          "fonti": [
+            "contenuti/problemi/SA_2026_3.tex:Testo",
+            "2026/P3_ChatGPT-1.pdf"
+          ],
+          "sha256_contenuto": "7538b9b50f201a2f829dfcef084c89e09a365f8a5f358025724ba811ad6cf1a1"
+        },
+        {
+          "campo": "SoluzioneRedazionale",
+          "stato": "bozza_ai_da_verificare",
+          "origine": "AI: rielaborazione e sviluppo di appunti forniti",
+          "fonti": [
+            "contenuti/problemi/SA_2026_3.tex:Testo",
+            "2026/P3_ChatGPT-1.pdf"
+          ],
+          "sha256_contenuto": "9c6872d722d8897f2b3abcca1bcd9ce3c1496edbe9c4672acc8d66b86c8a7159"
+        }
+      ],
+      "note_da_verificare": [
+        "Corretti nella nuova rielaborazione due conti del PDF: la differenza nel punto (b) e N-2499, non N-2500; 101*99*97=969903. Nel punto (d) distinta strategia ottima/deterministica da randomizzazione arbitraria."
+      ],
+      "sha256_dopo": "168564fd67de104da5cd9054eb01e155ceb60051619f73d782e8687f5ef7cee8",
+      "modificato": true
+    }
+  ],
+  "controlli_preservazione": {
+    "file_canonici": 96,
+    "file_modificati": 43,
+    "file_identici_byte_per_byte": 53,
+    "campi_preesistenti_non_vuoti": "TUTTI IDENTICI, verificati automaticamente",
+    "testi_figure_osservazioni_alternative_commenti": "IDENTICI, inclusi gli spazi e i commenti originari",
+    "modifiche_esterne_ai_campi_consentiti": "SOLO appendice SoluzioneRedazionale e marcatori di provenienza"
+  },
+  "conteggi_aggiunte": {
+    "Risposta": 24,
+    "Aiutino": 18,
+    "SoluzioneRedazionale": 40
+  }
+}

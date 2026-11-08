@@ -27,3 +27,18 @@ Quali sono i punteggi delle 4 squadre?  Come si possono ottenere?}
 
 \renewcommand{\Commenti}{
 }
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Le partite sono sei. Ciascuna assegna complessivamente due punti in caso di pareggio e tre altrimenti, perciò la somma dei quattro punteggi è compresa tra $12$ e $18$. Se i punteggi sono $s,s+1,s+2,s+3$, la somma è $4s+6$: le sole possibilità sono $14$ e $18$.
+
+Se la somma fosse $18$, tutte le partite avrebbero un vincitore e i punteggi sarebbero multipli di $3$, incompatibili con quattro interi consecutivi. La somma è dunque $14$, e i punteggi sono $2,3,4,5$. Vi sono esattamente due partite non pareggiate, perché ogni partita di questo tipo aggiunge un punto alla somma minima $12$.
+
+Le due vittorie note, Italia contro Germania e Germania contro Spagna, esauriscono queste partite. Tutte le altre sono pareggi. Ne deriva l'unica classifica:
+\[
+\text{Italia }5,\quad \text{Germania }4,\quad
+\text{Francia }3,\quad \text{Spagna }2.
+\]
+}

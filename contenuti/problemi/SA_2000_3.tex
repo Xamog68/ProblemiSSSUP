@@ -64,3 +64,33 @@ tra le $f_{n}$ di indice dispari.}
 
 \renewcommand{\Commenti}{
 }
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Assumiamo che gli esiti delle risposte alle diverse domande siano indipendenti, ciascuno con probabilità $p$ di successo. La sola probabilità marginale indicata nel testo, senza questa ipotesi, non determina la probabilità di superare il test.
+
+Rispondendo a $n$ domande e indovinandone $X$, il punteggio è $2X-n$. Per $n<5$ non si può superare il test. Inoltre rispondere a $2j$ domande non è meglio che rispondere alle prime $2j-1$, per $2j=6,8,10$: ogni esito che supera la soglia con $2j$ risposte la supera già dopo le prime $2j-1$. Per $0<p<1$ il confronto è stretto.
+
+Restano le probabilità
+\[
+f_5=p^5,\qquad f_7=p^6(7-6p),\qquad
+f_9=p^7(36-63p+28p^2).
+\]
+Esse si confrontano senza risolvere equazioni di grado elevato, perché
+\[
+f_7-f_5=p^5(1-p)(6p-1),\qquad
+f_9-f_7=7p^6(1-p)^2(4p-1).
+\]
+Per $0<p<1/6$ vince $f_5$; per $1/6<p<1/4$ vince $f_7$; per $1/4<p<1$ vince $f_9$. Nei due valori di confine sono ottimali entrambe le strategie adiacenti. Per $p=0$ nessuna strategia supera il test; per $p=1$ basta rispondere ad almeno cinque domande.
+
+Il massimo è dunque
+\[
+\begin{cases}
+p^5,&0\leq p\leq1/6,\\
+7p^6-6p^7,&1/6\leq p\leq1/4,\\
+36p^7-63p^8+28p^9,&1/4\leq p\leq1.
+\end{cases}
+\]
+}

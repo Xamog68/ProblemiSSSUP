@@ -18,9 +18,22 @@ $$\lim_{n\to\infty}p_n.$$
 \end{enumerate}
 }
 
-\renewcommand{\Risposta}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: rielaborazione e sviluppo di appunti forniti
+\begin{enumerate}
+\item[(a)] $p_1=7/12$.
+\item[(b)] $\displaystyle p_n=\frac1{6^{n+1}}\sum_{k=1}^{6}k^n$.
+\item[(c)] $\displaystyle\lim_{n\to\infty}p_n=1/6$.
+\end{enumerate}
+Le probabilità si intendono per dadi equi e lanci indipendenti.
+}
 
-\renewcommand{\Aiutino}{}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: rielaborazione e sviluppo di appunti forniti
+Condiziona sul risultato $k$ del difensore. Per vincere, nessuno degli $n$ dadi dell'attaccante deve superare $k$. Nel limite, separa il termine con $k=6$ dagli altri cinque.
+}
 
 \renewcommand{\SoluzioneUfficiale}{}
 
@@ -29,3 +42,33 @@ $$\lim_{n\to\infty}p_n.$$
 \renewcommand{\Osservazioni}{}
 
 \renewcommand{\Commenti}{}
+
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: rielaborazione e sviluppo di appunti forniti
+Assumiamo dadi equi e lanci indipendenti, come nella bozza fornita. Condizionando sul risultato $k$ del difensore, egli vince se e solo se tutti i dadi dell'attaccante mostrano un valore non superiore a $k$. La probabilità condizionata è $(k/6)^n$.
+
+\paragraph{Punto (a).}
+Per un solo dado dell'attaccante,
+\[
+p_1=\frac16\sum_{k=1}^{6}\frac k6=\frac{21}{36}=\frac7{12}.
+\]
+
+\paragraph{Punto (b).}
+Per ogni intero positivo $n$,
+\[
+p_n=\frac16\sum_{k=1}^{6}\left(\frac k6\right)^n
+=\frac1{6^{n+1}}\sum_{k=1}^{6}k^n.
+\]
+
+\paragraph{Punto (c).}
+Il termine con $k=6$ vale sempre $1/6$. Gli altri soddisfano
+\[
+0\leq p_n-\frac16
+\leq\frac56\left(\frac56\right)^n
+=\left(\frac56\right)^{n+1}\longrightarrow0.
+\]
+Segue $p_n\to1/6$.
+}

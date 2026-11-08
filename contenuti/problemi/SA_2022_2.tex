@@ -23,9 +23,21 @@ Cosa possiamo dire del passo che ha tenuto Antonio?
 {\small Nota. Si intende che i sorpassi effettuati sulla linea di partenza/arrivo non si contano. Il passo di un corridore è di 5:27 al~km se il corridore impiega 5 minuti e 27 secondi per percorrere 1~km.}
 }
 
-\renewcommand{\Risposta}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+\begin{enumerate}
+\item[(a)] Il passo è strettamente compreso tra $4{:}18$ e $4{:}30$ al km.
+\item[(b)] La probabilità è $29/243$.
+\item[(c)] Il passo è strettamente compreso tra $5{:}11{,}5$ e $5{:}12{,}5$ al km. Se lo si esprime in un numero intero di secondi al km, l'unica possibilità è $5{:}12$.
+\end{enumerate}
+}
 
-\renewcommand{\Aiutino}{}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Con velocità costanti, due corridori si sorpassano durante il percorso esattamente quando l'ordine di arrivo è opposto all'ordine di partenza, escludendo le uguaglianze all'arrivo. Lavora sui tempi totali dei $10$ km. Nel punto (c), partire cinque secondi dopo può aumentare il numero di sorpassi solo passando dall'altra parte della partenza di una coppia.
+}
 
 \renewcommand{\SoluzioneUfficiale}{}
 
@@ -34,3 +46,51 @@ Cosa possiamo dire del passo che ha tenuto Antonio?
 \renewcommand{\Osservazioni}{}
 
 \renewcommand{\Commenti}{}
+
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Misuriamo i tempi in minuti. Per due corridori che corrono a passo costante, un sorpasso nel tratto aperto fra partenza e arrivo equivale all'inversione stretta dell'ordine fra partenza e arrivo.
+
+\paragraph{Punto (a).}
+Prendiamo come tempo zero la partenza del trentesimo corridore e indichiamo con $t\in(0,1)$ il ritardo di Antonio. Se $T$ è il suo tempo sui $10$ km, poniamo $D=50-T$. Il corridore partito al tempo $-j$, con $j=0,1,\ldots,29$, viene superato esattamente quando
+\[
+t+T<50-j,\qquad\text{cioè}\qquad j<D-t.
+\]
+Avere esattamente sei sorpassi equivale a $5<D-t\leq6$. Poiché $0<t<1$, si ha $5<D<7$, e ogni valore interno è realizzabile. Quindi $43<T<45$ minuti: dividendo per $10$ si ottiene l'intervallo della risposta.
+
+\paragraph{Punto (b).}
+I tempi dei tre ritmi sono $48$ minuti $20$ secondi, $51$ minuti $40$ secondi e $55$ minuti. Fra ritmi consecutivi la differenza è $3$ minuti $20$ secondi, fra gli estremi $6$ minuti $40$ secondi.
+
+Se il trentesimo è veloce, non subisce sorpassi. Per non effettuarne deve trovare il ritmo veloce nei tre predecessori immediati e un ritmo non lento nei tre ancora precedenti. La probabilità condizionata è $(1/3)^3(2/3)^3=8/729$. Se è lento, per simmetria, si ottiene la stessa probabilità, guardando i sei successori.
+
+Se ha ritmo intermedio, supera i lenti fra i tre predecessori immediati ed è superato dai veloci fra i tre successori immediati. I due conteggi sono indipendenti e hanno distribuzione binomiale con parametri $3,1/3$. La probabilità che siano uguali è
+\[
+\sum_{j=0}^{3}\binom3j^2
+\left(\frac13\right)^{2j}\left(\frac23\right)^{6-2j}
+=\frac{64+144+36+1}{729}=\frac{245}{729}.
+\]
+Mediando sui tre ritmi si trova $(8+245+8)/(3\cdot729)=29/243$.
+
+\paragraph{Punto (c).}
+I due tempi dei componenti delle coppie sono $50$ e $160/3$ minuti. Antonio deve avere $50<T<160/3$, altrimenti non potrebbe sia effettuare sia subire sorpassi. Poniamo
+\[
+D_f=T-50,\qquad D_s=160/3-T,\qquad D_f+D_s=10/3,
+\]
+e ancora $t\in(0,1)$ come ritardo rispetto alla trentesima coppia. Un sorpasso effettuato significa $0<D_s-t\leq1$; due sorpassi subiti significano $2<t+D_f\leq3$.
+
+Ritardare di $\delta=1/12$ di minuto, restando tra le medesime due coppie, non può aumentare i sorpassi effettuati. Deve quindi essere $11/12<t<1$: Antonio parte, nella situazione ipotetica, dopo la coppia successiva. Per continuare a subire esattamente due sorpassi, perduto quello del veloce di tale coppia, deve aggiungersi il sorpasso del veloce della terza coppia successiva. Ponendo $q=t+D_f$, la condizione è
+\[
+\frac{35}{12}<q\leq3.
+\]
+Queste condizioni garantiscono anche i due sorpassi effettuati: prima il lento della trentesima coppia, e dopo il ritardo i lenti della trentesima e trentunesima, senza raggiungere il precedente.
+
+Eliminando $t$ da $11/12<t<1$ e $35/12<t+D_f\leq3$ si ottiene
+\[
+\frac{23}{12}<D_f<\frac{25}{12},\qquad
+51\text{ min }55\text{ s}<T<52\text{ min }5\text{ s}.
+\]
+Ogni valore interno ammette una scelta di $t$ che rispetta le condizioni. Dividendo per $10$ si conclude.
+}

@@ -34,9 +34,22 @@ $$
 \end{enumerate}
 }
 
-\renewcommand{\Risposta}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: rielaborazione e sviluppo di appunti forniti
+Per quadrilateri semplici non degeneri:
+\begin{enumerate}
+\item[(a)] Marco ottiene l'area corretta esattamente per i quadrati.
+\item[(b)] Pasquale ottiene l'area corretta esattamente per i rettangoli.
+\item[(c)] Thomas può ottenerla esattamente per gli aquiloni ciclici: unione di due triangoli rettangoli congruenti lungo l'ipotenusa comune. Deve scegliere uno degli estremi di tale ipotenusa, dove si incontrano due lati uguali.
+\end{enumerate}
+}
 
-\renewcommand{\Aiutino}{}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: rielaborazione e sviluppo di appunti forniti
+L'area di un triangolo non supera la metà del prodotto di due suoi lati. Applica questa stima tagliando il quadrilatero secondo entrambe le diagonali. Per Thomas, usa inoltre $2K\leq AC\cdot BD\leq AB\cdot CD+BC\cdot DA$ e analizza tutti i casi di uguaglianza.
+}
 
 \renewcommand{\SoluzioneUfficiale}{}
 
@@ -45,3 +58,48 @@ $$
 \renewcommand{\Osservazioni}{}
 
 \renewcommand{\Commenti}{}
+
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: rielaborazione e sviluppo di appunti forniti
+La soluzione rielabora la bozza fornita. Consideriamo un quadrilatero semplice non degenere $ABCD$, con lati consecutivi $a,b,c,d$ e area $K$. Anche nel caso concavo, l'area è non superiore alla somma delle aree dei due triangoli determinati da una diagonale. Quindi
+\[
+2K\leq ab+cd,\qquad2K\leq ad+bc.
+\]
+L'uguaglianza nella prima stima richiede una decomposizione senza sovrapposizioni e angoli retti in $B,D$; nella seconda richiede angoli retti in $A,C$. I quadrilateri di uguaglianza risultano dunque convessi.
+
+\paragraph{Punto (a).}
+Usando $2ab\leq a^2+b^2$ e $2cd\leq c^2+d^2$,
+\[
+K\leq\frac{ab+cd}{2}\leq\frac{a^2+b^2+c^2+d^2}{4}=M.
+\]
+L'uguaglianza richiede $B,D$ retti, $a=b$ e $c=d$. I due triangoli rettangoli isosceli hanno la medesima ipotenusa $AC$, quindi sono congruenti e tutti e quattro i lati sono uguali. Il quadrilatero è un quadrato; viceversa ogni quadrato realizza l'uguaglianza.
+
+\paragraph{Punto (b).}
+Sommando le due stime iniziali,
+\[
+4K\leq ab+cd+ad+bc=(a+c)(b+d).
+\]
+L'uguaglianza richiede tutti e quattro gli angoli retti, cioè un rettangolo. Per un rettangolo la formula di Pasquale coincide effettivamente con l'area.
+
+\paragraph{Punto (c).}
+Supponiamo che Thomas scelga $A$. Per le diagonali vale
+\[
+2K\leq AC\cdot BD\leq ac+bd.
+\]
+La prima disuguaglianza segue dalla formula dell'area tramite il prodotto vettoriale delle diagonali; la seconda è la disuguaglianza di Tolomeo. Per completezza, identificando il piano con i complessi, quest'ultima segue dalla disuguaglianza triangolare applicata all'identità
+\[
+(z_A-z_C)(z_B-z_D)=(z_A-z_B)(z_C-z_D)+(z_A-z_D)(z_B-z_C).
+\]
+Sommando con $2K\leq ab+cd$ otteniamo
+\[
+4K\leq ab+cd+ac+bd=(a+d)(b+c),
+\]
+ossia $K\leq T$.
+
+Per avere uguaglianza sono necessari angoli retti in $B,D$ e diagonali perpendicolari. I due angoli retti collocano $B,D$ sulla circonferenza di diametro $AC$. Poiché il diametro $AC$ è perpendicolare alla corda $BD$, ne è l'asse: $B$ e $D$ sono simmetrici rispetto ad $AC$. Quindi $AB=AD$ e $BC=CD$, e i due triangoli rettangoli sono congruenti.
+
+Viceversa, incollando due triangoli rettangoli congruenti lungo l'ipotenusa si ottiene un aquilone ciclico. Scegliendo come $A$ uno degli estremi dell'ipotenusa, si ha $a=d$, $b=c$, $K=ab$ e $T=ab$. Ciò comprende quadrati e aquiloni non quadrati, per esempio quelli ottenuti da due triangoli con cateti $2,3$.
+}

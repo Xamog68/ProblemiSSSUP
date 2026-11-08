@@ -1,0 +1,131 @@
+{
+  "stato_editoriale": "BOZZE AI DA VERIFICARE",
+  "preservazione": {
+    "file_canonici": 96,
+    "file_modificati": 43,
+    "file_identici_byte_per_byte": 53,
+    "campi_preesistenti_non_vuoti": "TUTTI IDENTICI, verificati automaticamente",
+    "testi_figure_osservazioni_alternative_commenti": "IDENTICI, inclusi gli spazi e i commenti originari",
+    "modifiche_esterne_ai_campi_consentiti": "SOLO appendice SoluzioneRedazionale e marcatori di provenienza"
+  },
+  "compilazione": {
+    "esito": "OK",
+    "strumento": "pdfLaTeX",
+    "campi_nuovi": 82,
+    "pagine_documento_test": 57,
+    "ambito": "Compilazione isolata dei nuovi campi e caricamento dei 43 sorgenti integrati; non compilazione del master storico SA_Book.tex e non prova del convertitore web."
+  },
+  "controlli_matematici_mirati": [
+    {
+      "controllo": "1998.4 conteggio dadi",
+      "esito": "OK",
+      "dettaglio": ""
+    },
+    {
+      "controllo": "1998.5 arresto",
+      "esito": "OK",
+      "dettaglio": "Tutti i dispari positivi fino a 9999"
+    },
+    {
+      "controllo": "2000.1 congruenza",
+      "esito": "OK",
+      "dettaglio": ""
+    },
+    {
+      "controllo": "2003.3 completamento quadrati",
+      "esito": "OK",
+      "dettaglio": ""
+    },
+    {
+      "controllo": "2003.3 fattorizzazione intera",
+      "esito": "OK",
+      "dettaglio": ""
+    },
+    {
+      "controllo": "2001.1 identita",
+      "esito": "OK",
+      "dettaglio": ""
+    },
+    {
+      "controllo": "2000.3 confronti",
+      "esito": "OK",
+      "dettaglio": ""
+    },
+    {
+      "controllo": "1999.3 guadagni",
+      "esito": "OK",
+      "dettaglio": ""
+    },
+    {
+      "controllo": "2003.1 classifica",
+      "esito": "OK",
+      "dettaglio": ""
+    },
+    {
+      "controllo": "2003.4 strategie",
+      "esito": "OK",
+      "dettaglio": "Induzione numerica esatta per 1<=k<=30"
+    },
+    {
+      "controllo": "2021.2 persistence",
+      "esito": "OK",
+      "dettaglio": ""
+    },
+    {
+      "controllo": "2021.2 soglia",
+      "esito": "OK",
+      "dettaglio": ""
+    },
+    {
+      "controllo": "2021.2 frequenze",
+      "esito": "OK",
+      "dettaglio": ""
+    },
+    {
+      "controllo": "2022.2 probabilita",
+      "esito": "OK",
+      "dettaglio": "[Fraction(8, 729), Fraction(245, 729), Fraction(8, 729)]"
+    },
+    {
+      "controllo": "2022.2 intervallo",
+      "esito": "OK",
+      "dettaglio": "Test esatto del centro e degli estremi dell'intervallo"
+    },
+    {
+      "controllo": "2022.3 costi geometrici",
+      "esito": "OK",
+      "dettaglio": "101x101 coppie di contatti, otto valori di beta; controllo numerico, non prova"
+    },
+    {
+      "controllo": "2024.2 poligono elastico",
+      "esito": "OK",
+      "dettaglio": "Coordinate di tutti i vertici, 21 configurazioni; area, perimetro e raggio"
+    },
+    {
+      "controllo": "2025.2 calendario",
+      "esito": "OK",
+      "dettaglio": "Tutte le date ambigue in anno comune e bisestile"
+    },
+    {
+      "controllo": "2025.3 pentagono capiente",
+      "esito": "OK",
+      "dettaglio": "Inclusione esatta del rettangolo 2 x 1/10; area=299/200"
+    },
+    {
+      "controllo": "2026.3 aritmetica",
+      "esito": "OK",
+      "dettaglio": ""
+    },
+    {
+      "controllo": "2000.2 tangenti ombra",
+      "esito": "OK",
+      "dettaglio": "Verifica indipendente dei bordi mediante raggi angolari delle sfere"
+    },
+    {
+      "controllo": "2022.1 reticolo orientato",
+      "esito": "OK",
+      "dettaglio": "BFS: massimo ritorno 14 per distanza di andata 10; conteggi a raggio 999: 500001 e 499998, con origine inclusa. Controllo finito, non sostitutivo della prova."
+    }
+  ],
+  "avvertenza": "I controlli simbolici, esaustivi finiti e numerici non equivalgono a una revisione matematica indipendente dell'intero corpus."
+}

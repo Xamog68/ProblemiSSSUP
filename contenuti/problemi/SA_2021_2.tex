@@ -32,9 +32,25 @@ Così, per esempio, $S(76)=7+6=13$ e $S(S(76))=S(13)=1+3=4$, dunque $T(76)=4$ e 
 \bigskip
 }
 
-\renewcommand{\Risposta}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+\begin{enumerate}
+\item[(a)] Il massimo è $3$, per esempio per $n=2089$.
+\item[(b)] $N=2\cdot10^{22}-2$.
+\item[(c)] I valori più probabili sono $1$ e $2$, ciascuno con probabilità $2223/20000$. Gli altri sette valori hanno probabilità $2222/20000$.
+\end{enumerate}
+}
 
-\renewcommand{\Aiutino}{}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+\begin{enumerate}
+\item[(a)] Tra $2000$ e $3000$ la somma delle cifre non supera $29$.
+\item[(b)] Trova prima il più piccolo numero che richiede tre passaggi; poi cerca il più piccolo numero la cui somma delle cifre sia quel numero.
+\item[(c)] La somma delle cifre conserva il resto modulo $9$; per i multipli positivi di $9$ il risultato finale è $9$, non zero.
+\end{enumerate}
+}
 
 \renewcommand{\SoluzioneUfficiale}{}
 
@@ -43,3 +59,33 @@ Così, per esempio, $S(76)=7+6=13$ e $S(S(76))=S(13)=1+3=4$, dunque $T(76)=4$ e 
 \renewcommand{\Osservazioni}{}
 
 \renewcommand{\Commenti}{}
+
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Per un numero già composto da una sola cifra intendiamo $P(n)=0$.
+
+\paragraph{Punto (a).}
+Per $2000\leq n\leq3000$ si ha $S(n)\leq29$. Un numero non superiore a $29$ ha somma delle cifre non superiore a $10$, e questa diventa una sola cifra con al più un ulteriore passaggio. Quindi $P(n)\leq3$. Il valore $3$ si ottiene perché
+\[
+2089\longmapsto19\longmapsto10\longmapsto1.
+\]
+
+\paragraph{Punto (b).}
+Il più piccolo numero che richiede due passaggi è $19$: sotto $19$ la somma delle cifre è al più $9$. Il più piccolo numero che richiede tre passaggi è quindi $199$, che ha somma $19$. Infatti ogni numero inferiore a $199$ ha somma delle cifre al più $18$, mentre $199\mapsto19\mapsto10\mapsto1$.
+
+Per richiedere almeno quattro passaggi un numero deve dunque avere somma delle cifre almeno $199$. Servono almeno $23$ cifre, perché $22\cdot9=198$. Fra i numeri di $23$ cifre, il primo che raggiunge tale somma è
+\[
+n_0=1\underbrace{99\cdots9}_{22\ \text{cifre}}=2\cdot10^{22}-1.
+\]
+Ogni numero più piccolo ha somma inferiore a $199$, mentre $S(n_0)=199$ e $P(n_0)=4$. Quindi $N=n_0-1$.
+
+\paragraph{Punto (c).}
+Poiché $10\equiv1\pmod9$, si ha $S(n)\equiv n\pmod9$, e lo stesso vale a ogni iterazione. Ne segue
+\[
+T(n)=1+((n-1)\bmod9).
+\]
+Ora $20000=9\cdot2222+2$. Nei $2222$ blocchi completi di nove numeri tutti i risultati compaiono una volta per blocco; i due numeri residui hanno risultati $1$ e $2$. Si ottengono le frequenze indicate.
+}

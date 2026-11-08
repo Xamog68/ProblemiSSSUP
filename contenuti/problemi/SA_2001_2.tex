@@ -41,3 +41,24 @@ che stiamo cercando.  }
 
 \renewcommand{\Commenti}{
 }
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Possiamo prendere il raggio terrestre uguale a $1$ e scegliere la longitudine centrale tra i due aeroporti come longitudine zero. Le coordinate dei due punti sono
+\[
+A=\left(\cos\theta\cos\frac\varphi2,-\cos\theta\sin\frac\varphi2,\sin\theta\right),
+\qquad
+B=\left(\cos\theta\cos\frac\varphi2,\cos\theta\sin\frac\varphi2,\sin\theta\right).
+\]
+Il piano del cerchio massimo passante per $A,B$ e per l'origine ha equazione
+\[
+z=\frac{\tan\theta}{\cos(\varphi/2)}x.
+\]
+L'arco minore è simmetrico rispetto al piano $y=0$ e il suo punto di massima quota è su tale piano, con $x>0$. Se $\lambda$ è la sua latitudine, allora $z/x=\tan\lambda$, da cui
+\[
+\lambda_{\max}=\arctan\left(\frac{\tan\theta}{\cos(\varphi/2)}\right).
+\]
+A $\varphi$ fissato, per $\theta\to0$ questa quantità tende a zero. A $\theta>0$ fissato, per $\varphi\to\pi^-$ il denominatore tende a zero positivo e la latitudine massima tende a $\pi/2$: il percorso si avvicina al polo nord.
+}

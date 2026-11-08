@@ -29,9 +29,22 @@ Determinare (in funzione di $V$) il massimo volume possibile per questa sfera in
 %
 }
 
-\renewcommand{\Risposta}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Indichiamo con $a$ il lato della base.
+\begin{enumerate}
+\item[(a)] $a=(3\sqrt2\,V)^{1/3}$.
+\item[(b)] $S\in[\sqrt3\,(18V^2)^{1/3},+\infty)$.
+\item[(c)] Il massimo volume della sfera è $\pi V/8$, realizzato quando l'altezza della piramide è $\sqrt2$ volte il lato di base.
+\end{enumerate}
+}
 
-\renewcommand{\Aiutino}{}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Scrivi $V=a^2h/3$. Per la superficie laterale usa l'altezza di una faccia, $\sqrt{h^2+a^2/4}$. Per la sfera massima puoi cercare il centro sull'asse della piramide e imporre l'uguaglianza delle distanze dalla base e dalle facce laterali; poi ottimizza rispetto al rapporto $2h/a$.
+}
 
 \renewcommand{\SoluzioneUfficiale}{}
 
@@ -40,3 +53,41 @@ Determinare (in funzione di $V$) il massimo volume possibile per questa sfera in
 \renewcommand{\Osservazioni}{}
 
 \renewcommand{\Commenti}{}
+
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Consideriamo la piramide regolare descritta nel testo, con vertice sopra il centro del quadrato di base. Siano $a>0$ il lato e $h>0$ l'altezza. Vale $a^2h=3V$.
+
+\paragraph{Punto (a).}
+La proiezione di uno spigolo laterale sul piano di base misura $a/\sqrt2$. L'inclinazione di $45^\circ$ impone $h=a/\sqrt2$, quindi $V=a^3/(3\sqrt2)$ e $a=(3\sqrt2 V)^{1/3}$.
+
+\paragraph{Punto (b).}
+L'altezza di ogni faccia triangolare è $\sqrt{h^2+a^2/4}$. Pertanto
+\[
+S=2a\sqrt{h^2+a^2/4},\qquad
+S^2=a^4+\frac{36V^2}{a^2}.
+\]
+La derivata rispetto ad $a$ si annulla solo quando $a^6=18V^2$, dove si ha il minimo. Il valore minimo è $S_{\min}=\sqrt3(18V^2)^{1/3}$. Poiché $S$ è continua e tende a infinito sia per $a\to0$ sia per $a\to\infty$, tutti i valori maggiori o uguali a tale minimo sono realizzati.
+
+\paragraph{Punto (c).}
+Per un raggio fissato, l'insieme dei centri delle sfere contenute nella piramide è convesso e invariante per le simmetrie del quadrato. Mediando un centro con i suoi ruotati di $90^\circ$ otteniamo un centro sull'asse, con la stessa ammissibilità. Possiamo quindi cercare la sfera massima sull'asse.
+
+Se il centro ha quota $z$, la distanza dalla base è $z$ e quella da ciascun piano laterale è $a(h-z)/\sqrt{4h^2+a^2}$. Il minimo delle due è massimo quando coincidono. Il raggio massimo per quella piramide è dunque
+\[
+r=\frac{ah}{a+\sqrt{a^2+4h^2}}
+ =\frac{h}{1+\sqrt{1+(2h/a)^2}}.
+\]
+Poniamo $t=2h/a$ e $u=\sqrt{1+t^2}>1$. Poiché $V=a^3t/6$, si ha
+\[
+\frac{r^3}{V}=\frac34\frac{t^2}{(1+\sqrt{1+t^2})^3}
+=\frac34\frac{u-1}{(u+1)^2}.
+\]
+La derivata dell'ultima frazione ha il segno di $3-u$, perciò il massimo si ha per $u=3$, cioè $h/a=\sqrt2$. Si ottiene $r^3=3V/32$ e quindi
+\[
+\operatorname{Vol}(\text{sfera})=\frac{4\pi}{3}r^3\leq\frac{\pi V}{8},
+\]
+con uguaglianza nella piramide appena individuata.
+}

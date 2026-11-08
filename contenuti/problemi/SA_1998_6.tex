@@ -40,3 +40,32 @@ quello del trasporto unicamente via mare.}
 
 \renewcommand{\Commenti}{
 }
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Sia $m$ la quantità inviata via mare. Se $m>0$, il costo totale è
+\[
+F_q(m)=2(q-m)+1+\frac{m^2}{3}
+      =2q-2+\frac{(m-3)^2}{3},\qquad 0<m\leq q.
+\]
+Se invece non si utilizza il trasporto marittimo, non si paga il suo costo fisso e la spesa è $2q$.
+
+Per $0<q\leq3$, il minimo tra le strategie che usano il mare si ottiene con $m=q$ ed è $1+q^2/3$. Esso non supera $2q$ esattamente quando
+\[
+q^2-6q+3\leq0.
+\]
+Nell'intervallo considerato ciò equivale a $q\geq3-\sqrt6$.
+
+Per $q\geq3$, la scelta ottimale è $m=3$, con costo $2q-2$, inferiore a $2q$. Pertanto
+\[
+C(q)=
+\begin{cases}
+2q,&0\leq q\leq3-\sqrt6,\\
+1+q^2/3,&3-\sqrt6\leq q\leq3,\\
+2q-2,&q\geq3.
+\end{cases}
+\]
+Nel punto $q=3-\sqrt6$ sono equivalenti il trasporto interamente terrestre e quello interamente marittimo. Per $q>3$ si inviano tre unità via mare e le restanti via terra.
+}

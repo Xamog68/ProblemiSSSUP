@@ -6,7 +6,15 @@
 Costruire (con riga e compasso) un triangolo $ABC$ di cui sono dati la lunghezza $2p$ del perimetro, l'ampiezza $\alpha$ dell'angolo in $A$ e la lunghezza $h$ dell'altezza relativa al lato $BC$.
 }
 
-\renewcommand{\Risposta}{\ldots}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: sintesi della soluzione preesistente
+Per $p,h>0$ e $0<\alpha<\pi$, la costruzione è possibile se e solo se
+\[
+h\cos(\alpha/2)\leq p\bigl(1-\sin(\alpha/2)\bigr).
+\]
+Si disegna l'angolo di vertice $A$ e ampiezza $\alpha$, si prende $S$ su una sua semiretta con $AS=p$ e si costruisce la circonferenza tangente alle due semirette in $S$ e nel punto simmetrico. Una tangente comune interna a questa circonferenza e a quella di centro $A$ e raggio $h$ individua, sulle due semirette, i vertici $B,C$.
+}
 
 \renewcommand{\Aiutino}{
 Disegniamo l'angolo con vertice in $A$.  La retta $BC$ deve essere

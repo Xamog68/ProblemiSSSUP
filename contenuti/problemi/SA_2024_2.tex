@@ -22,9 +22,22 @@ Per ogni configurazione, chiamiamo \emph{rombo incluso} ciascuno dei 4 rombi bia
 \end{enumerate}
 }
 
-\renewcommand{\Risposta}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: soluzione nuova dal testo e dalla figura fornita
+Per la famiglia di configurazioni rappresentata nella figura:
+\begin{enumerate}
+\item[(a)] $P=4+4\sqrt6$.
+\item[(b)] $\displaystyle\max\frac AP=\frac{17}{4+8\sqrt2}$, nella configurazione (C).
+\item[(c)] Il massimo raggio è $\displaystyle\sqrt{\frac72+\sqrt{10}}$. Si realizza per un angolo di rotazione $\theta=\tfrac12\arctan3$, e non nella configurazione (C).
+\end{enumerate}
+}
 
-\renewcommand{\Aiutino}{}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: soluzione nuova dal testo e dalla figura fornita
+Descrivi il movimento alternato dei quadrati con un angolo $0\leq\theta\leq\pi/4$ e poni $s=\cos\theta+\sin\theta$. L'area di ciascun rombo incluso è $\sin2\theta=s^2-1$. Il bordo elastico è un ottagono ottenuto tagliando quattro angoli di un quadrato di lato $3s$. Per il cerchio minimo usa la simmetria centrale e cerca il vertice più lontano dal centro.
+}
 
 \renewcommand{\SoluzioneUfficiale}{}
 
@@ -33,3 +46,45 @@ Per ogni configurazione, chiamiamo \emph{rombo incluso} ciascuno dei 4 rombi bia
 \renewcommand{\Osservazioni}{}
 
 \renewcommand{\Commenti}{}
+
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: soluzione nuova dal testo e dalla figura fornita
+Usiamo la configurazione delle cerniere mostrata in \texttt{squares.pdf}. Dopo una rotazione e una traslazione complessive, possiamo descrivere l'apertura con $0\leq\theta\leq\pi/4$: i quadrati adiacenti ruotano di angoli opposti, mentre i loro centri formano un reticolo quadrato di passo
+\[
+s=c+t,\qquad c=\cos\theta,\quad t=\sin\theta.
+\]
+Il centro del quadrato centrale è l'origine e i nove centri sono $(is,js)$, con $i,j\in\{-1,0,1\}$. I quadrati di una parità del reticolo sono ruotati di $\theta$, quelli dell'altra di $-\theta$. Le coordinate dei vertici si ottengono aggiungendo ai centri le rotazioni di $(\pm1/2,\pm1/2)$. Il rombo incluso ha diagonali $2c$ e $2t$, quindi area
+\[
+u=2ct=\sin2\theta=s^2-1.
+\]
+
+\paragraph{Perimetro e area dell'inviluppo.}
+Il più piccolo quadrato con lati paralleli agli assi che contiene la configurazione ha lato $3s$. Il bordo elastico ne taglia i quattro angoli: ogni triangolo asportato ha cateti $c,t$, mentre il lato obliquo che lo sostituisce misura $1$. I quattro lati paralleli agli assi rimasti misurano ciascuno $2s$. Ne segue
+\[
+P=8s+4,\qquad A=9s^2-2ct=8s^2+1=9+8u.
+\]
+Per $u=1/2$ si ha $s=\sqrt{3/2}$ e dunque $P=4+4\sqrt6$, che risolve il punto (a).
+
+\paragraph{Punto (b).}
+Poiché $1\leq s\leq\sqrt2$,
+\[
+\frac AP=\frac{8s^2+1}{8s+4}.
+\]
+La derivata ha numeratore $64s^2+64s-8$, positivo nell'intervallo. Il rapporto cresce dunque fino a $s=\sqrt2$, cioè alla configurazione (C), e il massimo è $17/(4+8\sqrt2)$.
+
+\paragraph{Punto (c).}
+La figura è simmetrica rispetto all'origine. Ogni coppia di vertici opposti $Q,-Q$ impone a un cerchio contenitore raggio almeno $|Q|$; il cerchio centrato nell'origine con raggio massimo $|Q|$ contiene tutti i quadrati. Questo è quindi il cerchio minimo.
+
+Per $0\leq t\leq c$, uno dei vertici più lontani ha coordinate
+\[
+Q=\left(\frac{3c+t}{2},\frac{3(c+t)}{2}\right).
+\]
+Il confronto con l'altro vertice esterno del quadrato d'angolo dà una differenza dei quadrati delle distanze pari a $2(c^2-t^2)\geq0$; i quadrati non d'angolo non possono dare distanze maggiori. Pertanto
+\[
+R^2=|Q|^2=\frac72+\cos2\theta+3\sin2\theta.
+\]
+Il massimo di $\cos u+3\sin u$ per $0\leq u\leq\pi/2$ è $\sqrt{10}$ e si ha per $\tan u=3$. Si ottengono il raggio e l'angolo indicati nella risposta.
+}

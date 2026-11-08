@@ -24,3 +24,22 @@ e poi $k=4$ (probabilità 1/6).}
 
 \renewcommand{\Commenti}{
 }
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Se il primo lancio vale $n$, il risultato del primo lancio successivo non superiore a $n$ è uniforme su $\{1,\ldots,n\}$. Infatti, per ciascun $j\leq n$, la probabilità che sia proprio $j$ è
+\[
+\sum_{r=0}^{\infty}\left(\frac{6-n}{6}\right)^r\frac16=\frac1n.
+\]
+Puntando sul numero $j$, il guadagno medio per partita è pertanto
+\[
+G(j)=\frac j6\sum_{n=j}^6\frac1n.
+\]
+Per $1\leq j\leq5$,
+\[
+G(j+1)-G(j)=\frac16\left(\sum_{n=j+1}^6\frac1n-1\right).
+\]
+Per $j=1$ la somma è $29/20>1$, mentre per $j=2$ è $19/20<1$ e per indici maggiori diminuisce ulteriormente. Dunque $G$ cresce da $1$ a $2$ e poi decresce: conviene puntare sul $2$, con guadagno medio $G(2)=29/60$ gettoni per partita.
+}

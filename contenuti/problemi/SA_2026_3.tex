@@ -21,9 +21,25 @@ Il giocatore~A, onesto, resta bendato e sceglie sempre a caso la pallina da estr
 \end{enumerate}
 }
 
-\renewcommand{\Risposta}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: rielaborazione e sviluppo di appunti forniti
+\begin{enumerate}
+\item[(a)] La somma totale è dispari, quindi il pareggio è impossibile.
+\item[(b)] Basta scegliere i numeri $2503,2504,\ldots,2603$.
+\item[(c)] Sì: con $1,\ldots,96,10001,\ldots,10005$ e B che prende sempre una pallina grande disponibile, la probabilità di vittoria di B è
+\[
+1-\frac{15}{101\cdot99\cdot97}=1-\frac{15}{969903}>99{,}99\%.
+\]
+\item[(d)] No per strategie deterministiche di B, e quindi no se B massimizza la propria probabilità di vittoria. Se invece si ammettono strategie randomizzate deliberatamente non ottimali, il $50\%$ è possibile: questa distinzione va precisata nell'interpretazione del testo.
+\end{enumerate}
+}
 
-\renewcommand{\Aiutino}{}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: rielaborazione e sviluppo di appunti forniti
+Usa la parità per (a), numeri tutti vicini a una grande costante per (b), e cinque numeri dominanti rispetto agli altri per (c). Per (d), fissata una strategia deterministica di B, conta le foglie equiprobabili dell'albero delle scelte di A: il loro numero è un prodotto di numeri dispari.
+}
 
 \renewcommand{\SoluzioneUfficiale}{}
 
@@ -32,3 +48,42 @@ Il giocatore~A, onesto, resta bendato e sceglie sempre a caso la pallina da estr
 \renewcommand{\Osservazioni}{}
 
 \renewcommand{\Commenti}{}
+
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: rielaborazione e sviluppo di appunti forniti
+Rielaboriamo la bozza fornita, esplicitando al punto (d) il ruolo della strategia di B.
+
+\paragraph{Punto (a).}
+La somma di $51$ interi dispari e $50$ interi pari è dispari. Se le due somme finali fossero uguali, la somma totale sarebbe pari. Quindi non ci sono pareggi.
+
+\paragraph{Punto (b).}
+Prendiamo $N+1,\ldots,N+101$, con $N$ pari. Ci sono esattamente $51$ dispari. La somma dei $51$ numeri più piccoli meno la somma dei $50$ più grandi vale
+\[
+51N+\frac{51\cdot52}{2}-\left(50N+\frac{101\cdot102}{2}-\frac{51\cdot52}{2}\right)=N-2499.
+\]
+Per esempio $N=2502$ rende questa differenza positiva. A vince pertanto anche nella peggiore assegnazione possibile, qualunque sia la strategia di B.
+
+\paragraph{Punto (c).}
+Scegliamo $96$ numeri piccoli $1,\ldots,96$ e cinque numeri grandi $M+1,\ldots,M+5$, con $M=10000$. La parità richiesta è rispettata: $48+3=51$ dispari. Poiché $M>4656+15$, possedere la maggioranza dei cinque numeri grandi basta a vincere, indipendentemente dai numeri piccoli.
+
+B prende un numero grande ogni volta che ne resta almeno uno. Perché A ne prenda tre, deve pescarne uno in ognuna delle sue prime tre mosse: se in una di queste prende un numero piccolo, B esaurisce abbastanza presto i grandi da impedirgli la maggioranza. La probabilità di vittoria di A è quindi esattamente
+\[
+\frac5{101}\cdot\frac3{99}\cdot\frac1{97}
+=\frac{15}{969903}<\frac1{10000}.
+\]
+B vince con probabilità maggiore del $99{,}99\%$.
+
+\paragraph{Punto (d).}
+Fissiamo una strategia deterministica di B, che può dipendere da tutta la storia precedente. Le scelte casuali di A formano un albero con $101,99,97,\ldots,1$ possibilità a livelli successivi. Le
+\[
+D=101\cdot99\cdot97\cdots3\cdot1
+\]
+foglie hanno tutte probabilità $1/D$. La probabilità di vittoria di ciascun giocatore è quindi un intero diviso per $D$, e non può essere $1/2$, dato che $D$ è dispari.
+
+Anche se si ammettono strategie randomizzate, una strategia ottimale per B può essere scelta deterministica: per induzione a ritroso nell'albero finito, a ogni sua decisione basta scegliere una mossa che massimizzi la probabilità di vittoria futura. Pertanto il valore ottimale non può essere $1/2$.
+
+Se invece B è autorizzato a randomizzare senza voler massimizzare la vittoria, la conclusione cambia. Una strategia che gli fa perdere certamente è prendere sempre il numero minimo rimasto: ogni sua pallina è minore di quella che A prenderà subito dopo, e A possiede inoltre la prima pallina. Per i numeri del punto (c), mescolando questa strategia perdente con quella che vince con probabilità $p_B>1/2$, e scegliendo quest'ultima con probabilità $1/(2p_B)$, B ottiene probabilità esattamente $1/2$. Dunque la risposta ``no'' richiede la convenzione deterministica oppure l'interpretazione di gioco ottimale.
+}

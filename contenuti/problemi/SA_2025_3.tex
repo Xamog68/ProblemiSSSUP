@@ -19,9 +19,26 @@ Un rettangolo si dice \emph{trasportabile} se la somma delle lunghezze della bas
 \end{enumerate}
 }
 
-\renewcommand{\Risposta}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: rielaborazione e sviluppo di appunti forniti
+\begin{enumerate}
+\item[(a)] Il minimo lato è $\sqrt2$.
+\item[(b)] Sì, il triangolo equilatero di lato $13/6$ è capiente.
+\item[(c)] Per $0\leq t\leq1/2$ sono capienti i trapezi di vertici $(0,0),(2,0),(1+t,1),(t,1)$; hanno tutti area $3/2$ e sono a due a due non congruenti.
+\item[(d)] Sì. Un esempio è il pentagono
+\[
+P=\{(x,y):0\leq y\leq1,\ 0\leq x\leq19/10,\ x+y\leq2\},
+\]
+che ha area $299/200<3/2$.
+\end{enumerate}
+}
 
-\renewcommand{\Aiutino}{}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: rielaborazione e sviluppo di appunti forniti
+Basta trattare i rettangoli con somma dei lati esattamente $2$, ponendo $\ell=2-w$ e $0<w\leq1$. Per (a), ruotali di $45^\circ$. Per (b) e (c), metti il lato lungo parallelo alla base del triangolo o del trapezio. Per (d), taglia un piccolo angolo del trapezio rettangolo: i rettangoli non troppo sottili continuano a starci come prima, e quelli sottili possono essere collocati obliquamente.
+}
 
 \renewcommand{\SoluzioneUfficiale}{}
 
@@ -30,3 +47,52 @@ Un rettangolo si dice \emph{trasportabile} se la somma delle lunghezze della bas
 \renewcommand{\Osservazioni}{}
 
 \renewcommand{\Commenti}{}
+
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: rielaborazione e sviluppo di appunti forniti
+Ogni rettangolo con somma dei lati minore di $2$ è contenuto in un rettangolo con somma dei lati uguale a $2$. Basta dunque considerare lati $\ell=2-w$ e $w$, con $0<w\leq1$.
+
+\paragraph{Punto (a).}
+Un quadrato capiente di lato $L$ deve contenere rettangoli con lato lungo arbitrariamente vicino a $2$. Il suo diametro $L\sqrt2$ deve quindi essere almeno $2$, da cui $L\geq\sqrt2$. Viceversa, ruotando un rettangolo trasportabile di $45^\circ$, entrambe le dimensioni del suo rettangolo circoscritto parallelo agli assi valgono $(\ell+w)/\sqrt2\leq\sqrt2$. Il quadrato di lato $\sqrt2$ basta.
+
+\paragraph{Punto (b).}
+Disponiamo il triangolo equilatero con la base di lunghezza $13/6$ orizzontale. La larghezza della sua sezione a quota $w$ è $13/6-2w/\sqrt3$. Un rettangolo di lati $2-w$ e $w$, centrato orizzontalmente e appoggiato alla base, è contenuto se
+\[
+2-w\leq\frac{13}{6}-\frac{2w}{\sqrt3}.
+\]
+La differenza fra destra e sinistra è affine in $w$, quindi basta verificarla per $w=0$ e $w=1$. Nel primo caso vale $1/6>0$; nel secondo la condizione è $12\leq7\sqrt3$, vera perché $144<147$.
+
+\paragraph{Punto (c).}
+Nel trapezio $T_t$ di vertici $(0,0),(2,0),(1+t,1),(t,1)$, con $0\leq t\leq1/2$, la sezione a quota $y$ è l'intervallo
+\[
+ty\leq x\leq2-(1-t)y.
+\]
+Il rettangolo $[tw,tw+2-w]\times[0,w]$ è contenuto nel trapezio: per $y\leq w$ il suo bordo sinistro è a destra di $ty$ e quello destro a sinistra di $2-(1-t)y$. Ogni $T_t$ è quindi capiente e ha area $(2+1)/2=3/2$. I lati obliqui hanno lunghezze $\sqrt{1+t^2}$ e $\sqrt{1+(1-t)^2}$; per $t\in[0,1/2]$ la coppia non ordinata di queste lunghezze determina $t$. I trapezi sono perciò a due a due non congruenti.
+
+\paragraph{Punto (d).}
+Questa costruzione completa il punto non sviluppato negli appunti ricevuti. Partiamo dal trapezio rettangolo $T_0$ e tagliamo il vertice $(2,0)$ con la retta $x=19/10$. Otteniamo
+\[
+P=\{0\leq y\leq1,\ 0\leq x\leq19/10,\ x+y\leq2\},
+\]
+di area $3/2-(1/10)^2/2=299/200$.
+
+Se $w\geq1/10$, il rettangolo $[0,2-w]\times[0,w]$ è ancora contenuto in $P$. Se $w\leq1/10$, basta mostrare che $P$ contiene un rettangolo di lati $2$ e $1/10$, perché esso contiene tutti i rettangoli di tale secondo gruppo.
+
+Un tale rettangolo ha i vertici
+\[
+\left(0,\frac2{\sqrt5}\right),\quad
+\left(\frac4{\sqrt5},0\right),\quad
+\left(\frac{41}{10\sqrt5},\frac1{5\sqrt5}\right),\quad
+\left(\frac1{10\sqrt5},\frac{11}{5\sqrt5}\right).
+\]
+I suoi vettori lato sono $(4,-2)/\sqrt5$ e $(1,2)/(10\sqrt5)$: sono perpendicolari e hanno lunghezze $2$ e $1/10$. Tutti i vertici soddisfano le disequazioni che definiscono $P$: in particolare
+\[
+\frac{11}{5\sqrt5}<1,\qquad
+\frac{41}{10\sqrt5}<\frac{19}{10},\qquad
+\frac{43}{10\sqrt5}<2.
+\]
+Per convessità, l'intero rettangolo è contenuto in $P$. Il pentagono è dunque capiente e ha area strettamente minore di $3/2$.
+}

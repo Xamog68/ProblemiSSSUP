@@ -17,9 +17,28 @@ Un camion deve attraversare un deserto lungo 1000~km e consuma 1~litro di carbur
 \end{enumerate}
 }
 
-\renewcommand{\Risposta}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: rielaborazione e sviluppo di appunti forniti
+Assumendo carburante illimitato disponibile alla partenza:
+\begin{enumerate}
+\item[(a)] Un deposito al km $250$, un viaggio di andata e ritorno per alimentarlo e poi l'attraversamento finale. Consumo minimo: $1500$ litri.
+\item[(b)] Servono $3$ depositi; per esempio ai km $200,400,600$.
+\item[(c)] Per $C>0$, il minimo è
+\[
+N(C)=\begin{cases}
+0,&C\geq1000,\\
+\left\lfloor 2000/C-1\right\rfloor,&0<C<1000.
+\end{cases}
+\]
+\end{enumerate}
+}
 
-\renewcommand{\Aiutino}{}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: rielaborazione e sviluppo di appunti forniti
+Un viaggio di andata e ritorno fra due punti distanti $d$ lascia al massimo $C-2d$ litri netti oltre il tratto. Per accumulare carburante occorre $d<C/2$, mentre l'ultimo viaggio può coprire fino a $C$. Attenzione alla disuguaglianza stretta quando si conta il numero minimo di depositi.
+}
 
 \renewcommand{\SoluzioneUfficiale}{}
 
@@ -28,3 +47,32 @@ Un camion deve attraversare un deserto lungo 1000~km e consuma 1~litro di carbur
 \renewcommand{\Osservazioni}{}
 
 \renewcommand{\Commenti}{}
+
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: rielaborazione e sviluppo di appunti forniti
+Assumiamo una scorta illimitata alla partenza, assenza di depositi inizialmente già riforniti, e numero finito, ma non prefissato, di viaggi. Il carburante può essere trasportato solo nel serbatoio. Rielaboriamo la strategia della bozza ricevuta, precisando il limite inferiore sul numero di depositi.
+
+\paragraph{Punto (a).}
+Sia $x$ la posizione dell'unico deposito. Dal deposito all'arrivo devono restare al più $750$ km, quindi $x\geq250$. Poiché un solo pieno non basta all'intero percorso, occorre almeno un ritorno alla partenza dopo aver alimentato il deposito. La distanza totale percorsa è quindi almeno $1000+2x\geq1500$ km, e il consumo è almeno $1500$ litri.
+
+Il limite si realizza con $x=250$. Si parte con $750$ litri, si arriva con $500$, se ne depositano $250$ e si torna alla partenza con gli altri $250$. Si riparte con $750$ litri; al km $250$ ne restano $500$, ai quali si aggiungono i $250$ del deposito. Con il pieno si percorrono gli ultimi $750$ km. Il consumo totale è $1500$ litri.
+
+\paragraph{Limite generale.}
+Fra due punti consecutivi di rifornimento distanti $d$, un'escursione che attraversa il tratto e poi torna indietro può trasferire oltre il tratto al massimo $C-2d$ litri netti, e ancora meno se percorre altra strada. Se $d\geq C/2$, queste escursioni non possono accumulare una riserva oltre il tratto, inizialmente privo di carburante. Dopo l'ultimo attraversamento senza ritorno, tutta la distanza residua dal punto di rifornimento precedente è perciò al più $C$.
+
+Con $N\geq1$ depositi, consideriamo il primo tratto lungo almeno $C/2$, se esiste: prima di esso tutti i tratti sono più corti di $C/2$, e dal suo estremo sinistro all'arrivo restano al più $C$. Se invece tutti i tratti fino all'ultimo deposito sono più corti di $C/2$, l'ultimo tratto è comunque al più $C$. Per attraversare una distanza $L>C$, in entrambi i casi è necessaria
+\[
+L<C+N\frac C2.
+\]
+La disuguaglianza è stretta: se si usano $N$ tratti per trasferire riserve, ciascuno deve avere lunghezza strettamente inferiore a $C/2$.
+
+La condizione è anche sufficiente. Se $L<C+NC/2$, scegliamo $N$ tratti positivi di lunghezza minore di $C/2$, seguiti da un ultimo tratto non superiore a $C$, con somma $L$. A ogni tappa, viaggi ripetuti depositano una quantità positiva $C-2d$. Partendo da una riserva sufficientemente grande nella tappa precedente, si può così accumulare qualunque quantità finita richiesta alla successiva. Procedendo da sinistra a destra, si preparano riserve sufficienti per l'attraversamento finale.
+
+\paragraph{Punti (b) e (c).}
+Per $C=500$ la condizione è $1000<500+250N$, quindi $N\geq3$. I depositi ai km $200,400,600$ realizzano un esempio.
+
+In generale, se $C\geq1000$ non serve alcun deposito. Per $0<C<1000$ occorre e basta un intero $N>2000/C-2$, il cui minimo è $\lfloor2000/C-1\rfloor$.
+}

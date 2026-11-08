@@ -27,9 +27,21 @@ Determinare i possibili valori di $b$ per cui questo può accadere.
 \end{enumerate}
 }
 
-\renewcommand{\Risposta}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: rielaborazione e sviluppo di appunti forniti
+\begin{enumerate}
+\item[(a)] Le probabilità di vincere sono $25/27$ per A, $7/9$ per B e $8/27$ per C; sommano $2$.
+\item[(b)] Copiando da A oppure da B, C vince con probabilità $2/9$.
+\item[(c)] Mantenendo l'indipendenza delle risposte, i valori possibili sono $1/2\leq b\leq2/3$. Per ciascuno di essi si può prendere $a=2-1/b$ e $c=1/[3(1-b)]$.
+\end{enumerate}
+}
 
-\renewcommand{\Aiutino}{}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: rielaborazione e sviluppo di appunti forniti
+Conta quando ciascuno viene escluso: A perde soltanto se sbaglia e gli altri due rispondono bene; B perde se sbaglia mentre C risponde bene. Ricorda che la somma delle tre probabilità di vittoria è sempre $2$. Quando C copia, le risposte non sono più indipendenti.
+}
 
 \renewcommand{\SoluzioneUfficiale}{}
 
@@ -38,3 +50,35 @@ Determinare i possibili valori di $b$ per cui questo può accadere.
 \renewcommand{\Osservazioni}{}
 
 \renewcommand{\Commenti}{}
+
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: rielaborazione e sviluppo di appunti forniti
+La soluzione segue lo schema degli appunti forniti. Quando le tre risposte sono indipendenti e hanno probabilità di correttezza $a,b,c$, si ottiene
+\[
+P_A=1-(1-a)bc,\qquad P_B=1-(1-b)c,\qquad P_C=c(1-ab).
+\]
+Infatti A viene escluso solo se sbaglia mentre entrambi gli altri rispondono bene. B viene escluso quando sbaglia e C risponde bene: A gli passa comunque davanti. C deve rispondere bene e almeno uno fra A e B deve sbagliare. Le tre espressioni sommano $2$, come deve avvenire perché si assegnano sempre due borse.
+
+\paragraph{Punto (a).}
+Per $a=b=c=1/3$ si ha
+\[
+P_A=25/27,\qquad P_B=7/9,\qquad P_C=8/27.
+\]
+
+\paragraph{Punto (b).}
+Se C copia da A, vince soltanto quando A risponde bene e B sbaglia. La probabilità è $(1/3)(2/3)=2/9$. Se copia da B, vince soltanto quando B risponde bene e A sbaglia, con la medesima probabilità. Non si possono qui usare le formule per tre risposte indipendenti sostituendo semplicemente $c=1/3$.
+
+\paragraph{Punto (c).}
+Assumiamo che resti valida l'indipendenza delle tre risposte. Se le probabilità di vittoria coincidono, valgono tutte $2/3$. Dalle prime due formule ricaviamo
+\[
+(1-a)bc=\frac13,\qquad (1-b)c=\frac13.
+\]
+Quindi $b,c>0$, e dividendo si trova $(1-a)b=1-b$, ossia
+\[
+a=2-\frac1b,\qquad c=\frac1{3(1-b)}.
+\]
+Le condizioni $0\leq a,c\leq1$ equivalgono a $1/2\leq b\leq2/3$. Per ogni $b$ in tale intervallo, le formule danno probabilità ammissibili e, sostituendo, tutte e tre le probabilità di vittoria valgono $2/3$.
+}

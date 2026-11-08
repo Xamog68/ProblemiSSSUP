@@ -26,15 +26,17 @@ MACRO_CONTENUTO = (
     "Risposta",
     "Aiutino",
     "SoluzioneUfficiale",
+    "SoluzioneRedazionale",
     "SoluzioniAlternative",
     "Osservazioni",
     "Commenti",
 )
 ATTESI = {
     "Testo": 78,
-    "Risposta": 72,
+    "Risposta": 78,
     "Aiutino": 78,
     "SoluzioneUfficiale": 56,
+    "SoluzioneRedazionale": 22,
     "SoluzioniAlternative": 21,
     "Osservazioni": 33,
     "Commenti": 2,

@@ -26,3 +26,20 @@ possono essere uguali?}
 
 \renewcommand{\Commenti}{
 }
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Il primo membro è almeno $1$, mentre il secondo è al più $1$. L'uguaglianza richiede quindi simultaneamente
+\[
+\sin x=0,\qquad |\sin(\alpha x)|=1.
+\]
+Esistono pertanto interi $k,m$, con $k\neq0$, tali che
+\[
+x=k\pi,\qquad \alpha k\pi=\frac{(2m+1)\pi}{2}.
+\]
+Ne segue $\alpha=(2m+1)/(2k)$: riducendo la frazione, il denominatore resta pari, perché il numeratore è dispari.
+
+Viceversa, sia $\alpha=p/q$ una frazione irriducibile con $q>0$ pari. Allora $p$ è dispari e basta prendere $x=q\pi/2$: si ha $\sin x=0$ e $|\sin(\alpha x)|=|\sin(p\pi/2)|=1$. La condizione richiesta è dunque esattamente quella indicata nella risposta preesistente.
+}

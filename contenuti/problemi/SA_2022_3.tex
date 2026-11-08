@@ -61,9 +61,29 @@ Determinare il percorso che unisce il punto $A$ al punto $B$ con il minimo costo
 %\end{enumerate}
 }
 
-\renewcommand{\Risposta}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+\begin{enumerate}
+\item[(a)] Il costo minimo è $4\sqrt2-2$: si raggiunge il punto del disco bianco più vicino ad $A$, lo si attraversa gratuitamente e si esce dal punto più vicino a $B$.
+\item[(b)] Si segue uno dei due percorsi esterni simmetrici, formati da due tangenti al cerchio unitario e dall'arco minore che le unisce. Il costo è $2\sqrt3+\pi/3$.
+\item[(c)] Posto $\beta_* =\sqrt3+\pi/6-1$, il minimo è
+\[
+\min\{2+2\beta,\ 2\sqrt3+\pi/3\}.
+\]
+Per $\beta<\beta_*$ è ottimale il segmento $AB$; per $\beta>\beta_*$ sono ottimali i percorsi tangenti con arco esterno. Alla soglia sono ottimali entrambe le possibilità.
+\end{enumerate}
+}
 
-\renewcommand{\Aiutino}{}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+\begin{enumerate}
+\item[(a)] Calcola separatamente le distanze di $A$ e $B$ dal disco nel quale il movimento è gratuito.
+\item[(b)] Una corda del cerchio colorato può essere sostituita dall'arco minore sul bordo: confronta il costo della corda con la lunghezza dell'arco.
+\item[(c)] Non basta confrontare intuitivamente diametro e aggiramento: bisogna escludere un attraversamento obliquo. Parametrizza i punti di ingresso e uscita sul cerchio e usa convessità dei tratti esterni e concavità del costo risultante.
+\end{enumerate}
+}
 
 \renewcommand{\SoluzioneUfficiale}{}
 
@@ -72,3 +92,60 @@ Determinare il percorso che unisce il punto $A$ al punto $B$ con il minimo costo
 \renewcommand{\Osservazioni}{}
 
 \renewcommand{\Commenti}{}
+
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+\paragraph{Punto (a).}
+Fuori dal disco bianco il costo per unità è $1$; al suo interno è zero. La distanza di ciascuno dei punti $A,B$ dal disco bianco è $2\sqrt2-1$. Un percorso che lo raggiunge deve pagare almeno la somma di queste due distanze, e tale somma si realizza con i due segmenti più corti e un qualunque collegamento interno al disco. Un percorso che non raggiunge il disco costa almeno $AB=4>4\sqrt2-2$. Il minimo è quindi $4\sqrt2-2$.
+
+\paragraph{Punti (b) e (c).}
+Con $\alpha=1$ il disco bianco non ha più alcun ruolo. Il percorso rettilineo costa $2+2\beta$. Il percorso più corto interamente esterno al disco unitario è formato da due tangenti di lunghezza $\sqrt3$ e da un arco di ampiezza $\pi/3$; costa quindi
+\[
+E=2\sqrt3+\frac\pi3.
+\]
+Per $0\leq\beta\leq1$, se $L_i,L_e$ sono le lunghezze percorse dentro e fuori dal disco, un percorso che entra nel disco soddisfa $L_e\geq2$ e $L_e+L_i\geq4$. Di conseguenza
+\[
+L_e+\beta L_i\geq2+2\beta,
+\]
+con uguaglianza sul diametro. Un percorso che resta fuori costa almeno $4$ e non migliora tale valore.
+
+Resta il caso $\beta>1$. Giustifichiamo che nessun attraversamento obliquo migliora i due candidati. Possiamo riflettere nel semipiano superiore gli eventuali tratti inferiori senza aumentare il costo. Per un punto del semicerchio superiore a distanza angolare $u\in[0,\pi]$ dall'estremo sinistro $(-1,0)$, la minima lunghezza di un collegamento da $A$ che resta fuori dal disco è
+\[
+f(u)=\begin{cases}
+\sqrt{5-4\cos u},&0\leq u\leq\pi/3,\\
+\sqrt3+u-\pi/3,&\pi/3\leq u\leq\pi.
+\end{cases}
+\]
+La prima parte è il segmento diretto, la seconda una tangente seguita da un arco. La funzione è crescente e convessa; nella prima parte
+\[
+f''(u)=\frac{-4\cos^2u+10\cos u-4}{(5-4\cos u)^{3/2}}\geq0,
+\]
+e la derivata raggiunge $1$ al raccordo.
+
+Fra due punti della circonferenza separati da un angolo $\delta\in[0,\pi]$, il minimo costo di un collegamento che può usare bordo e interno è
+\[
+\min\{\delta,\ 2\beta\sin(\delta/2)\}.
+\]
+Per verificarlo, definiamo $d(s)=\min\{s,2\beta\sin(s/2)\}$ su $[0,\pi]$. Questa funzione è crescente, concava e nulla in zero. Infatti, se le due espressioni si incontrano, lo fanno una sola volta dopo zero, perché $\sin(s/2)/(s/2)$ è strettamente decrescente; al raccordo la derivata passa da $1$ a $\beta\cos(s/2)<1$. Una funzione crescente e concava, nulla in zero, è subadditiva: per $a+b\leq\pi$, le due disuguaglianze di concavità con estremi $0,a+b$ danno $d(a)+d(b)\geq d(a+b)$. Ne segue che $d$ applicata alla distanza angolare minore è una distanza sul cerchio (se $a+b>\pi$, si riducono $a,b$ fino a somma $\pi$).
+
+Ogni tratto interno fra due punti del cerchio costa almeno $\beta$ volte la loro corda, e ogni tratto esterno almeno la lunghezza dell'arco minore. Entrambi i costi sono almeno $d$ della distanza angolare. La disuguaglianza triangolare, applicata ai contatti successivi con il cerchio, dà il limite inferiore $d(\delta)$. Esso è realizzato dall'arco oppure dalla corda. L'argomento vale anche per un numero infinito di contatti, per approssimazione e continuità.
+
+Indichiamo con $u,v$ le distanze angolari del primo e dell'ultimo contatto dal punto sinistro e da quello destro. Se $u+v\geq\pi$, la sola parte esterna costa almeno $2f(\pi/2)=E$. Se $u+v\leq\pi$, un collegamento lungo il bordo non migliora $E$; per quello con una corda, la convessità di $f$ dà, posto $t=(u+v)/2$,
+\[
+f(u)+f(v)+2\beta\cos t\geq2f(t)+2\beta\cos t.
+\]
+Per $0\leq t\leq\pi/3$, ponendo $x=\cos t\in[1/2,1]$, l'ultima espressione è
+\[
+2\sqrt{5-4x}+2\beta x,
+\]
+concava in $x$. Per $\pi/3\leq t\leq\pi/2$ essa è $2\sqrt3+2t-2\pi/3+2\beta\cos t$, concava in $t$. Basta dunque confrontare i tre valori agli estremi:
+\[
+2+2\beta,\qquad2\sqrt3+\beta,\qquad E.
+\]
+Il valore intermedio non è mai il minimo: per $\beta\geq\pi/3$ non migliora $E$; per $1<\beta<\pi/3$ supera $2+2\beta$, dato che $2\sqrt3-2>\pi/3$.
+
+Il costo minimo è quindi $\min\{2+2\beta,E\}$. L'uguaglianza fra i due valori dà $\beta_* =\sqrt3+\pi/6-1$. In particolare $\beta=2$ ricade nel regime di aggiramento esterno. Il bordo del disco colorato ha costo $1$, come specificato nel testo, ed è essenziale per realizzare il percorso con arco.
+}

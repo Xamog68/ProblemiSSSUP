@@ -48,9 +48,26 @@ Determinare quanti sono gli incroci raggiungibili a partire da $B$ con un costo 
 \end{enumerate}
 }
 
-\renewcommand{\Risposta}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+\begin{enumerate}
+\item[(a)] Il massimo costo del ritorno è $14$.
+\item[(b)] Gli incroci raggiungibili, contando anche $A$ (costo zero), sono $500001$.
+\item[(c)] Gli incroci raggiungibili, contando anche $B$, sono $499998$.
+\end{enumerate}
+Se si esclude l'incrocio di partenza dai conteggi, i due ultimi numeri diminuiscono di uno.
+}
 
-\renewcommand{\Aiutino}{}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+\begin{enumerate}
+\item[(a)] Una traslazione di un passo in entrambe le coordinate inverte tutti i sensi di marcia. Trasla il percorso di andata e percorrilo a ritroso.
+\item[(b)] Usa coordinate non negative a partire dal vertice e distingui gli incroci con entrambe le coordinate dispari.
+\item[(c)] Ripeti il conteggio con il senso della prima strada verticale invertito. Fai attenzione alla colonna del vertice iniziale.
+\end{enumerate}
+}
 
 \renewcommand{\SoluzioneUfficiale}{}
 
@@ -59,3 +76,32 @@ Determinare quanti sono gli incroci raggiungibili a partire da $B$ con un costo 
 \renewcommand{\Osservazioni}{}
 
 \renewcommand{\Commenti}{}
+
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Numeriamo righe e colonne con interi. Per la parte (a), lontano dal bordo possiamo adottare la convenzione: sulle righe pari si va a est, su quelle dispari a ovest; sulle colonne pari si va a nord, su quelle dispari a sud.
+
+\paragraph{Punto (a).}
+Un percorso di lunghezza $10$ ha estremi dello stesso colore nella colorazione a scacchiera. Traslando il percorso di un vettore $\delta=(\pm1,\pm1)$, si invertono tutte le direzioni delle strade, per cui il percorso traslato può essere percorso da $Y+\delta$ a $X+\delta$.
+
+Se la somma delle coordinate di $X,Y$ è pari, si può scegliere $\delta=(1,-1)$ oppure $(-1,1)$; se è dispari, $\delta=(1,1)$ oppure $(-1,-1)$. Verificando i due passi sulle righe e colonne alternate, si vede che si può andare da $Y$ a $Y+\delta$ in due tratti e da $X+\delta$ a $X$ in due tratti. Il ritorno costa quindi al più $2+10+2=14$.
+
+Il valore è raggiunto, per esempio, da due incroci di coordinate $(0,0)$ e $(10,0)$ rispetto a un'origine interna con righe e colonne pari orientate come sopra. L'andata costa $10$. Un ritorno di costo $12$ dovrebbe compiere dieci passi verso ovest e una sola escursione verticale di andata e ritorno; ma entrambe le colonne estreme sono orientate a nord, rendendo impossibile tale escursione. Il ritorno non può avere costo dispari. Un percorso di costo $14$ è
+\[
+(10,0)\to(10,1)\to(-1,1)\to(-1,0)\to(0,0),
+\]
+dove i segmenti orizzontali abbreviati indicano tutti i relativi tratti.
+
+\paragraph{Punto (b).}
+Poniamo $A=(0,0)$, con coordinate da $0$ a $999$ verso l'interno. Le righe pari vanno verso destra e le colonne pari verso l'alto. Se almeno una delle coordinate $x,y$ è pari, il costo è $x+y$: si raggiunge il punto usando prima la strada di bordo opportuna. Se entrambe sono dispari, un cammino monotono è impossibile, ma bastano due tratti in più, andando fino alla successiva colonna pari e tornando indietro sulla riga dispari. Nella regione di interesse non si incontra il bordo opposto.
+
+I punti con $x+y\leq999$ sono $1000\cdot1001/2=500500$. Vanno esclusi quelli con entrambe le coordinate dispari e $x+y=998$: sono $499$. Quindi il numero cercato è $500500-499=500001$.
+
+\paragraph{Punto (c).}
+Usiamo coordinate orientate verso l'interno a partire da $B=(0,0)$: la riga zero va a destra, mentre la colonna zero è diretta verso il vertice. Le colonne dispari vanno dunque verso l'alto. Per $x\geq1$, il costo è $x+y$, tranne quando $x$ è pari e $y$ dispari, nel qual caso è $x+y+2$. Per $x=0$, il costo è $y+2$ se $y$ è dispari, e $y+4$ se $y>0$ è pari; il costo dell'origine è zero. Queste formule si ottengono usando la colonna $x=1$ per salire e una riga dispari per tornare alla colonna zero; la parità dei cammini e i sensi delle strade ne danno anche i limiti inferiori.
+
+Dal triangolo di $500500$ punti vanno esclusi i $500$ punti con $x$ pari, $y$ dispari e $x+y=999$, e i due punti $(0,996),(0,998)$. Restano $500500-500-2=499998$ incroci.
+}

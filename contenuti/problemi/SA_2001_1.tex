@@ -26,3 +26,23 @@ di destra si ottiene \ldots}
 
 \renewcommand{\Commenti}{
 }
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Poniamo $a=\sqrt[15]{x}$ e $b=\sqrt[15]{y}$; essendo le radici di indice dispari, questo è lecito per ogni $x,y\in\mathbb R$. Le uguaglianze diventano
+\[
+a-b=a^3-b^3=a^5-b^5.
+\]
+Se $a=b$, ogni coppia $(x,y)=(\alpha,\alpha)$ è soluzione. Se $a\neq b$, dividiamo per $a-b$ e otteniamo
+\[
+a^2+ab+b^2=1,
+\qquad a^4+a^3b+a^2b^2+ab^3+b^4=1.
+\]
+Sottraendo la seconda espressione dal quadrato della prima si trova
+\[
+ab(a+b)^2=0.
+\]
+Dunque $a=0$, oppure $b=0$, oppure $a=-b$. Nelle prime due possibilità l'altra variabile vale $1$ o $-1$; nell'ultima vale $a^2=1$. Sono quindi possibili esattamente le sei coppie ordinate di elementi distinti dell'insieme $\{-1,0,1\}$. Elevando alla quindicesima potenza si ottengono le medesime sei coppie per $(x,y)$, e la sostituzione conferma che funzionano tutte.
+}

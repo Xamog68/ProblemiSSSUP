@@ -44,3 +44,26 @@ determinando quanti sono i modi di ottenere 7 o 14 lanciando 3 dadi.}
 
 \renewcommand{\Commenti}{
 }
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+\paragraph{Divisibilità per $6$: punti (a) e (c).}
+Condizioniamo sui primi $n-1$ lanci. Qualunque sia la loro somma, tra $1,\ldots,6$ vi è esattamente un valore dell'ultimo lancio che rende la somma totale multipla di $6$. La probabilità è dunque $1/6$ per ogni $n\geq1$, e in particolare per $n=3$.
+
+\paragraph{Divisibilità per $7$: punti (b) e (d).}
+Sia $p_n$ la probabilità cercata dopo $n$ lanci. Se la somma dei primi $n$ risultati è già multipla di $7$, nessun valore del lancio successivo mantiene la divisibilità. In caso contrario, esattamente una delle sei facce la realizza. Quindi
+\[
+p_{n+1}=\frac{1-p_n}{6},\qquad p_1=0.
+\]
+Sottraendo il punto fisso $1/7$,
+\[
+p_{n+1}-\frac17=-\frac16\left(p_n-\frac17\right).
+\]
+Per induzione segue
+\[
+p_n=\frac17+\frac{(-1)^n}{7\cdot6^{n-1}}.
+\]
+Per $n=3$ si ottiene $p_3=1/7-1/252=5/36$.
+}

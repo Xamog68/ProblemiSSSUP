@@ -7,7 +7,11 @@ proprietà che presi comunque 2 di essi ne esiste un terzo giacente sulla retta 
 	
 Dimostrare che allora tutti gli $n$ punti sono allineati.}
 
-\renewcommand{\Risposta}{\ldots}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Tutti i punti appartengono a una stessa retta. Se non fossero allineati, una coppia punto--retta di distanza positiva minima produrrebbe una coppia con distanza ancora minore.
+}
 
 \renewcommand{\Aiutino}{Supponiamo che non siano tutti allineati.
 Allora ci saranno delle coppie punto-retta in cui la retta (che passa per due dei punti dati) non contiene il punto (anche questo tra quelli dati).  Tra tutte queste coppie, ce ne sarà una per cui la distanza del punto dalla retta risulta minima.  Sulla retta c'è almeno un altro punto, e utilizzandolo opportunamente non è
@@ -23,4 +27,21 @@ difficile trovare una coppia punto-retta con distanza inferiore.}
 }
 
 \renewcommand{\Commenti}{
+}
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Supponiamo per assurdo che i punti non siano tutti allineati. Fra tutte le coppie $(P,r)$, dove $P$ è uno dei punti e $r$ è una retta determinata da altri due punti che non contiene $P$, scegliamone una con distanza minima $h>0$. La scelta è possibile perché le coppie sono in numero finito.
+
+Sia $H$ la proiezione di $P$ su $r$. Per l'ipotesi, $r$ contiene almeno tre punti dell'insieme. Almeno due, diciamo $A$ e $B$, giacciono sulla stessa semiretta di origine $H$, ammettendo anche $H$ come estremo; scegliamo $A$ non più lontano da $H$ di $B$. Allora
+\[
+AB\leq HB<PB.
+\]
+Calcolando l'area del triangolo $PAB$ prima con base $AB$ e poi con base $PB$, otteniamo
+\[
+\operatorname{dist}(A,PB)=h\frac{AB}{PB}<h.
+\]
+La retta $PB$ è determinata da due punti dell'insieme e non contiene $A$, quindi questa è una coppia ammissibile con distanza positiva inferiore alla minima. La contraddizione conclude la dimostrazione.
 }

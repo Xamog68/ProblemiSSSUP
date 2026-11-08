@@ -38,3 +38,32 @@ sinistra.
 
 \renewcommand{\Commenti}{
 }
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Portiamo a sinistra tutti i termini tranne la costante e poniamo
+\[
+f(x,y)=6x^2+y^2-4xy-y.
+\]
+La condizione richiesta è $f(x,y)+a\geq0$.
+
+\paragraph{Punto (a).}
+Il completamento dei quadrati dà
+\[
+f(x,y)=2\left(x-\frac12\right)^2+
+\left(y-2x-\frac12\right)^2-\frac34.
+\]
+Il minimo reale è dunque $-3/4$, raggiunto solo in $(1/2,3/2)$. La minima costante è $a=3/4$ e l'uguaglianza si ha solo in quel punto.
+
+\paragraph{Punto (b).}
+Per gli interi è particolarmente utile la fattorizzazione
+\[
+f(x,y)=2x(x-1)+(y-2x)(y-2x-1).
+\]
+Ciascun prodotto di due interi consecutivi è non negativo. Quindi $f\geq0$ e il valore $a=0$ funziona; non si può scegliere $a<0$, perché $f(0,0)=0$. L'uguaglianza richiede $x\in\{0,1\}$ e $y-2x\in\{0,1\}$, cioè precisamente
+\[
+(0,0),\ (0,1),\ (1,2),\ (1,3).
+\]
+}

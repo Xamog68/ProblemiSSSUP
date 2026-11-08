@@ -40,3 +40,27 @@ risolvendo una disequazione.}
 
 \renewcommand{\Commenti}{
 }
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Misuriamo le lunghezze in metri e indichiamo con $x\in[0,500]$ la distanza della piattaforma dal centro. Per simmetria non importa su quale metà del diametro si trovi. I due costi sono
+\[
+E(x)=\sqrt{500^2+x^2},\qquad F(x)=5(500-x).
+\]
+
+\paragraph{Punto (a).}
+Lo sponsor paga il minore dei due costi, quindi l'istituto paga $\max\{E(x),F(x)\}$. La funzione $E$ è crescente, $F$ è decrescente, ed esse si incontrano in un unico punto. Il massimo ha il suo minimo proprio in tale punto. L'equazione
+\[
+500^2+x^2=25(500-x)^2
+\]
+ha radici $375$ e $2000/3$; solo $375$ appartiene all'intervallo ammesso. Il costo minimo dell'istituto è allora $625$ euro.
+
+\paragraph{Punto (b).}
+La ditta riceve la somma $E(x)+F(x)$, indipendentemente da chi paga. Per $x\geq0$ si ha $\sqrt{500^2+x^2}\leq500+x$, quindi
+\[
+E(x)+F(x)\leq3000-4x\leq3000.
+\]
+Il massimo $3000$ euro si ottiene solo per $x=0$: la piattaforma deve stare nel centro.
+}

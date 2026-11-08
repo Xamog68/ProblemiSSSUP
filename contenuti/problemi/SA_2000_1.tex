@@ -23,3 +23,18 @@ decine, quindi a quella delle centinaia.}
 
 \renewcommand{\Commenti}{
 }
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Cerchiamo $n^3\equiv111\pmod{1000}$. La cifra delle unità deve essere $1$, perché solo $1$ tra le cifre da $0$ a $9$ ha cubo congruo a $1$ modulo $10$. Scriviamo $n=1+10a$; modulo $100$,
+\[
+n^3\equiv1+30a\equiv11,
+\]
+quindi $3a\equiv1\pmod{10}$ e $a\equiv7\pmod{10}$. Pertanto $n=71+100b$. Modulo $1000$,
+\[
+n^3\equiv71^3+300\cdot71^2b\equiv911+300b.
+\]
+La condizione diventa $3b\equiv2\pmod{10}$, cioè $b\equiv4\pmod{10}$. Tutte le soluzioni sono dunque $n\equiv471\pmod{1000}$ e il minimo positivo è $471$. In effetti $471^3=104487111$.
+}

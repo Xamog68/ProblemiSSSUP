@@ -25,3 +25,17 @@ trovati sono effettivamente soluzioni.}
 
 \renewcommand{\Commenti}{
 }
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Interpretiamo la scrittura come $x\lfloor x\lfloor x\rfloor\rfloor=84$. Se $x<0$, allora $x\lfloor x\rfloor>0$ e quindi il membro sinistro è non positivo. Se $0\leq x<4$, esso è al più $x^3<64$; se $x\geq5$, è almeno $125$. Ne segue $4\leq x<5$ e dunque $\lfloor x\rfloor=4$.
+
+Posto $k=\lfloor4x\rfloor$, abbiamo $k\in\{16,17,18,19\}$ e $x=84/k$. La condizione che definisce $k$ diventa
+\[
+k\leq\frac{336}{k}<k+1,
+\qquad\text{ossia}\qquad k^2\leq336<k(k+1).
+\]
+Tra i quattro candidati solo $k=18$ soddisfa entrambe le disuguaglianze. Si ottiene $x=84/18=14/3$; sostituendo, $\lfloor x\rfloor=4$ e $\lfloor4x\rfloor=18$, per cui questa è effettivamente una soluzione e l'unica.
+}

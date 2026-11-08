@@ -25,9 +25,22 @@ Determinare il tempo minimo entro il quale Antonio è \emph{sicuro} di poter arr
 {\small Nota: supponiamo che lo scooter sia puntiforme, che non ci siano problemi di traffico, che la strada sia a senso unico (per cui non si può tornare indietro), e che né la strada né lo scooter abbiano limiti di velocità. }
 }
 
-\renewcommand{\Risposta}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Si assume che lo scooter parta da fermo. Poniamo $\tau=40(\sqrt2-1)$ secondi.
+\begin{enumerate}
+\item[(a)] Il minimo è $60+\tau=20+40\sqrt2$ secondi: attendere $20$ secondi e poi accelerare sempre al massimo.
+\item[(b)] Se il rosso dura ancora $r$ secondi, il minimo è $\max\{40,r\}+\tau$. Se il verde dura ancora $g$ secondi, il minimo è $40\sqrt2$ per $g>40$, e $g+60+\tau$ per $0<g\leq40$. Qui il passaggio esattamente all'accensione del rosso non è consentito.
+\item[(c)] Il minimo tempo garantito è ancora $20+40\sqrt2$ secondi. La strategia del punto (a) funziona per qualunque durata residua del rosso compresa tra $0$ e $60$ secondi.
+\end{enumerate}
+}
 
-\renewcommand{\Aiutino}{}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Per arrivare al semaforo servono almeno $40$ secondi; inoltre la velocità con cui lo si attraversa non può superare $40$ m/s. Cerca quindi il primo istante non inferiore a $40$ in cui il semaforo è verde, e raggiungilo con velocità $40$. Nel punto (c), considera il caso peggiore in cui il rosso sia appena iniziato.
+}
 
 \renewcommand{\SoluzioneUfficiale}{}
 
@@ -36,3 +49,28 @@ Determinare il tempo minimo entro il quale Antonio è \emph{sicuro} di poter arr
 \renewcommand{\Osservazioni}{}
 
 \renewcommand{\Commenti}{}
+
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal testo
+Assumiamo partenza da fermo, accelerazione al più $1$ m/s$^2$, velocità non negativa e passaggio consentito dall'accensione del verde fino a prima dell'accensione del rosso.
+
+Se il semaforo viene raggiunto al tempo $t$, necessariamente $800\leq t^2/2$, quindi $t\geq40$. Inoltre la velocità $v$ in quel punto non può superare $40$: per raggiungere $v$ partendo da fermo, anche con frenate intermedie, servono almeno $v^2/2$ metri. Equivalentemente, guardando a ritroso gli ultimi $v$ secondi, la velocità è almeno la rampa $v-(t-s)$.
+
+Dopo il semaforo restano $800$ metri. Partendo con velocità al più $40$, essi richiedono almeno
+\[
+\tau=-40+\sqrt{40^2+1600}=40(\sqrt2-1)
+\]
+secondi. Per ogni istante verde $t\geq40$, questo limite è raggiunto attendendo alla partenza $t-40$ secondi e poi accelerando sempre al massimo. Il problema si riduce dunque a trovare il primo istante verde $t_*\geq40$, e il minimo totale è $t_*+\tau$.
+
+\paragraph{Punto (a).}
+Il primo verde inizia a $60$ secondi. Dunque $t_*=60$ e il tempo minimo è $60+\tau=20+40\sqrt2$.
+
+\paragraph{Punto (b).}
+Se il rosso dura ancora $r\in(0,60]$ secondi, il prossimo intervallo verde è $[r,r+60)$ e contiene $\max\{r,40\}$. Se invece il verde dura ancora $g\in(0,60]$ secondi, $40$ è un istante utilizzabile esattamente quando $g>40$. Negli altri casi occorre attendere il successivo verde, che comincia a $g+60$. Queste osservazioni danno le formule della risposta. Una diversa convenzione sul passaggio nell'istante esatto di cambio del colore modifica soltanto il caso limite $g=40$.
+
+\paragraph{Punto (c).}
+Il caso in cui il rosso sia appena cominciato impone lo stesso limite inferiore del punto (a). D'altra parte, attendendo $20$ secondi e poi accelerando al massimo si attraversa il semaforo esattamente al tempo $60$. Qualunque sia il residuo $r\in(0,60]$, in quell'istante il semaforo è verde, perché $60\in[r,r+60)$. Si ottiene quindi il limite e la strategia è ottimale nel senso richiesto.
+}

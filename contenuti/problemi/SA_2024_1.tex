@@ -19,9 +19,23 @@ Per ogni numero reale $h>0$ indichiamo con $N(h)$ il minimo numero di punti, tut
 \end{enumerate}
 }
 
-\renewcommand{\Risposta}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: rielaborazione e sviluppo di appunti forniti
+Con la convenzione degli appunti ricevuti, che considera illuminati anche i punti raggiunti da un raggio tangente:
+\begin{enumerate}
+\item[(a)] $N(h)=3$ se e solo se $h\geq1$.
+\item[(b)] $N(1/2)=4$.
+\item[(c)] Il limite è $\pi^2/2$.
+\end{enumerate}
+In generale $N(h)=\left\lceil\pi/\arccos(1/(1+h))\right\rceil$. Se si richiede illuminazione strettamente non tangente, il punto (a) diventa $h>1$; gli altri due risultati non cambiano.
+}
 
-\renewcommand{\Aiutino}{}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: rielaborazione e sviluppo di appunti forniti
+Una lampadina a distanza $1+h$ dal centro illumina un arco di semiampiezza $\gamma$ con $\cos\gamma=1/(1+h)$. Confronta la somma delle lunghezze degli archi con l'intera circonferenza e disponi le lampadine a intervalli angolari uguali. Per il limite, usa $1-\cos\gamma\sim\gamma^2/2$.
+}
 
 \renewcommand{\SoluzioneUfficiale}{}
 
@@ -30,3 +44,36 @@ Per ogni numero reale $h>0$ indichiamo con $N(h)$ il minimo numero di punti, tut
 \renewcommand{\Osservazioni}{}
 
 \renewcommand{\Commenti}{}
+
+% Aggiunta redazionale: la soluzione preesistente non viene modificata.
+\providecommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-08; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: rielaborazione e sviluppo di appunti forniti
+Seguiamo gli appunti forniti, includendo fra i punti illuminati quelli nei quali il raggio è tangente alla circonferenza. Una lampadina si trova a distanza $r=1+h$ dal centro. Il triangolo formato dal centro, dalla lampadina e da un punto di tangenza è rettangolo, quindi il semiangolo dell'arco illuminato è
+\[
+\gamma=\arccos\frac1{1+h},\qquad0<\gamma<\frac\pi2.
+\]
+Ogni arco ha lunghezza angolare $2\gamma$. Per coprire la circonferenza con $n$ archi è necessario $2n\gamma\geq2\pi$; la condizione è anche sufficiente, disponendo le lampadine con angoli equidistanti. Dunque
+\[
+N(h)=\left\lceil\frac\pi\gamma\right\rceil.
+\]
+
+\paragraph{Punto (a).}
+Due lampadine non bastano, perché $\gamma<\pi/2$. Tre bastano esattamente quando $\gamma\geq\pi/3$, ossia quando $1/(1+h)\leq1/2$, cioè $h\geq1$.
+
+\paragraph{Punto (b).}
+Per $h=1/2$, $\cos\gamma=2/3$ e si ha $\pi/4<\gamma<\pi/3$. Pertanto $3<\pi/\gamma<4$ e servono quattro lampadine.
+
+\paragraph{Punto (c).}
+Per $h\to0^+$ anche $\gamma\to0$ e
+\[
+1-\cos\gamma=\frac{h}{1+h},\qquad \frac h{\gamma^2}\longrightarrow\frac12.
+\]
+Inoltre $\pi/\gamma\leq N(h)<\pi/\gamma+1$, quindi $\gamma N(h)\to\pi$. Ne segue
+\[
+hN(h)^2=\frac h{\gamma^2}\bigl(\gamma N(h)\bigr)^2\longrightarrow\frac{\pi^2}{2}.
+\]
+
+Se i punti di tangenza non vengono considerati illuminati, occorre invece $n\gamma>\pi$ e $N(h)=\lfloor\pi/\gamma\rfloor+1$. Questa distinzione riguarda soltanto i valori di soglia e va fissata editorialmente.
+}
