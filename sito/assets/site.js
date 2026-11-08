@@ -46,7 +46,8 @@
     heading.textContent='Un archivio, trentun anni di problemi.';
     subtitle.textContent='I testi sono conservati in LaTeX. Il sito è un modo diverso di consultarli.';
     main.replaceChildren();
-    main.append(el('p','intro','Una pagina per ogni anno dal 1996 al 2026. Le caselle verdi sono navigabili in questa anteprima; quelle bianche hanno i sorgenti canonici ma non ancora i dati web; le grigie corrispondono alle prove da recuperare.'));
+    main.append(el('p','intro','Una pagina per ogni anno dal 1996 al 2026. Le caselle verdi indicano prove consultabili; quelle grigie le prove ancora da recuperare.'));
+    main.append(el('p','intro','Questa raccolta inizia nel 1996. Le prove precedenti sono coperte dal volume di Guido Torrigiani, Sebastiano Francaviglia e Tullio Franzoni, pubblicato da Zanichelli nel 1995.'));
     const grid=el('div','year-grid');
     for (const y of catalog.years) {
       const cls=y.missing?'missing':y.preview?'ready':'source-only';
@@ -57,12 +58,12 @@
     }
     main.append(grid);
     const legend=el('div','legend');
-    for(const [cls,text] of [['is-ready','Anteprima consultabile'],['is-source','LaTeX presente, conversione da completare'],['is-missing','Prova da recuperare']])legend.append(el('span',cls,text));
+    for(const [cls,text] of [['is-ready','Problemi consultabili'],['is-source','Materiali in preparazione'],['is-missing','Prova da recuperare']])legend.append(el('span',cls,text));
     main.append(legend);
     const note=el('div','notice');
-    note.textContent='Questa è una versione tecnica, non il sito pubblico: per il 2013 trovi quattro problemi con tutti i materiali già convertiti; dal 2021 al 2026 ci sono tre testi per anno. Le figure e le macro storiche devono essere controllate prima della pubblicazione.';
+    note.textContent='Archivio indipendente e non ufficiale, in revisione. I contenuti generati dall’AI sono segnalati con le stelline e l’indicazione «Bozza AI · Da verificare». Alcune figure e soluzioni preesistenti richiedono ulteriori controlli.';
     main.append(note);
-    main.append(el('p','intro','Suggerimento: apri il 2013 e usa la navigazione fissa nell’angolo in basso a destra. La voce Strumenti contiene anche «Confronta lunghezze». Nessun dato matematico deve essere riconvertito per cambiare l’interfaccia.'));
+    main.append(el('p','intro','Apri un anno per consultare i problemi. La barra di navigazione in basso a destra consente di spostarsi fra i problemi e tornare all’elenco degli anni.'));
   }
   function loadProblem(year,number) {
     const key=`${year}_${number}`;
@@ -138,6 +139,9 @@
     const dock=el('nav','nav-dock');
     dock.setAttribute('aria-label','Navigazione rapida e strumenti');
     const row=el('div','nav-dock-row');
+    const toYears=link('← Anni','index.html','dock-index');
+    toYears.setAttribute('aria-label','Torna all’elenco di tutti gli anni');
+    row.append(toYears);
     if(y && y.preview>1){
       row.append(el('span','dock-caption','Vai al problema'));
       for(let n=1;n<=y.preview;n++) {
@@ -279,9 +283,9 @@
     heading.textContent=`Problema ${y.year}.${problemTarget}: testo e materiali.`;
     subtitle.textContent='Il problema completo in una scheda separata, con tutti i materiali inizialmente aperti.';
     main.replaceChildren();
-    main.append(link('← Torna alla prova del '+y.year,linkFor(y.year,problemTarget),'intro'));
+    main.append(link('← Torna alla prova del '+y.year,linkFor(y.year,problemTarget),'back-years'));
     if(y.missing || !y.preview || problemTarget < 1 || problemTarget > y.preview) {
-      main.append(el('p','notice','Problema non disponibile in questa anteprima.'));
+      main.append(el('p','notice','Problema non disponibile nell’archivio online.'));
       return;
     }
     const data=await loadProblem(y.year,problemTarget);
@@ -302,7 +306,7 @@
     heading.textContent=`La prova del ${y.year}.`;
     subtitle.textContent=y.missing?'Testi ancora da recuperare.':`${y.count} problemi nell’archivio canonico · testi sempre visibili, materiali aggiuntivi a richiesta.`;
     main.replaceChildren();
-    main.append(link('← Torna a tutti gli anni','index.html','intro'));
+    main.append(link('← Torna a tutti gli anni','index.html','back-years'));
     if(y.missing){
       const area=el('div','no-content');area.append(el('h2','','Prova non ancora reperita'));
       area.append(el('p','','La pagina dell’anno esiste già. Quando recupereremo i testi, i problemi appariranno qui automaticamente.'));
@@ -310,7 +314,7 @@
     }
     if(!y.preview){
       const area=el('div','no-content');area.append(el('h2','','Sorgenti LaTeX già presenti'));
-      area.append(el('p','',`I ${y.count} problemi del ${y.year} sono nell’archivio canonico, ma non sono stati convertiti in questa confezione dimostrativa. Non li sostituiamo con testi inventati.`));
+      area.append(el('p','',`I ${y.count} problemi del ${y.year} sono nell’archivio canonico, ma non risultano ancora disponibili sul sito.`));
       area.append(el('p','','Una volta installato Pandoc, il generatore potrà produrre i dati web dei singoli problemi. L’interfaccia resterà invariata.'));
       main.append(area);return;
     }
@@ -326,6 +330,7 @@
       if(s.status==='fulfilled')slot.append(renderProblem(s.value));
       else slot.append(el('p','notice',`Non riesco a leggere il problema ${y.year}.${i+1}: ${s.reason.message}`));
     }
+    main.append(link('← Torna a tutti gli anni','index.html','back-years back-years-bottom'));
     main.append(el('p','jump-top',''));
     main.lastChild.append(link('↑ Torna in cima','#'));
     updateStats();

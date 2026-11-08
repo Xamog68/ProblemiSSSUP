@@ -116,3 +116,13 @@ main{min-height:380px;padding-top:30px;padding-bottom:110px}
    senza alterare quelli interni e le liste delle risposte/soluzioni. */
 .math-body > ol { list-style-type: lower-alpha; }
 .math-body > ol > li::marker { content: "(" counter(list-item, lower-alpha) ") "; }
+
+
+/* Pages: ritorno all'indice ben riconoscibile. */
+.back-years{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 17px;margin:0 0 22px;background:var(--sea);color:white;border:2px solid var(--sea);border-radius:9px;text-decoration:none;font:750 14px/1.35 system-ui,-apple-system,sans-serif;box-shadow:0 3px 9px #132b3a1b}
+.back-years:hover{background:#0e5e59;border-color:#0e5e59;color:white;text-decoration:none}
+.back-years:focus-visible,.dock-index:focus-visible{outline:3px solid #e1a449;outline-offset:3px}
+.back-years-bottom{margin:6px 0 18px}
+.dock-index{display:inline-flex;align-items:center;justify-content:center;min-height:32px;padding:6px 13px;white-space:nowrap;border-radius:8px;background:var(--sea);color:white;text-decoration:none;font-weight:750;border:1px solid #0e655f}
+.dock-index:hover{background:#105b56;color:white;text-decoration:none}
+@media(max-width:620px){.back-years{font-size:13px;padding:9px 13px}.dock-index{font-size:12px;padding:6px 9px}.nav-dock-row{flex-wrap:wrap;justify-content:center}.nav-dock{max-width:calc(100vw - 20px)}}
