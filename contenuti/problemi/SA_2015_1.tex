@@ -1,27 +1,284 @@
+% SSSUP-BOZZA-AI: nuovi campi Risposta, Aiutino, SoluzioneRedazionale; ChatGPT; 2026-11-10; DA VERIFICARE.
+% NOTA REDAZIONALE FUTURA: nel Testo precisare che se esce croce si perde la cifra puntata. Testo qui invariato.
 % SSSUP-FONTE-STORICA: fonti-locali/originali/2014-2020.zip
 % Anno 2015, esercizio 1. Trascrizione redazionale dal PDF della prova scritta.
 % Verificare editorialmente la trasposizione prima di considerarla definitiva.
 \renewcommand{\Anno}{2015}
 \renewcommand{\NumeroProblema}{1}
-
 \renewcommand{\Testo}{
 Si consideri di giocare a testa o croce con la seguente variante: si lancia una moneta esattamente $n$ volte, decidendo prima di ciascun lancio se scommettere 1 o 2 euro su ``testa''. Si vince il gioco se la somma accumulata dopo gli $n$ lanci è maggiore o uguale a 3 euro, si perde altrimenti.
 
 \begin{enumerate}
 \item[(a)] Per $n=3,4,5$ si individui una strategia ottimale che garantisca la massima probabilità di vittoria e si determini tale probabilità.
-
 \item[(b)] Per ogni $n>2$ si determinino le probabilità di vittoria relative alle due strategie di puntata costante (ossia puntare ad ogni lancio sempre 1 euro, oppure sempre 2 euro).
 
 \item[(c)] Per ciascun $n>5$ si individui una strategia migliore di entrambe le costanti, determinando la corrispondente probabilità di vittoria.
-
 \item[(d)] Si descriva qualitativamente l'andamento della probabilità della strategia migliore al variare di $n$, fornendo qualche argomento giustificativo dell'asserzione.
 \end{enumerate}
 }
 
-\renewcommand{\Risposta}{}
-\renewcommand{\Aiutino}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-10; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal Testo di SA_2015_1.tex
+\begin{enumerate}
+\item[(a)] Le probabilit\`a ottimali per $n=3,4,5$ sono, rispettivamente,
+$1/4$, $5/16$, $11/32$. Una strategia ottimale consiste nel puntare
+$2$ euro quando il saldo \`e minore di $3$, e $1$ euro altrimenti.
+\item[(b)] Ponendo
+\[
+ A_n=\frac{1}{2^n}\sum_{h=\lceil(n+3)/2\rceil}^{n}\binom nh,
+ \qquad
+ B_n=\frac{1}{2^n}\sum_{h=\lceil(n+2)/2\rceil}^{n}\binom nh,
+\]
+le probabilit\`a delle puntate costanti di $1$ e $2$ euro sono
+rispettivamente $A_n$ e $B_n$. Inoltre $A_n\leq B_n$, con uguaglianza
+per $n$ dispari.
+\item[(c)] Le modifiche finali della strategia costante di $2$ euro
+descritte nella soluzione danno
+\[
+ Q_n=B_n+\frac{1}{2^n}
+ \begin{cases}
+ \displaystyle\binom{n-1}{(n+1)/2},&n\text{ dispari},\\[4pt]
+ \displaystyle\binom{n-3}{n/2},&n\text{ pari}.
+ \end{cases}
+\]
+Per ogni $n>5$ risulta $Q_n>B_n\geq A_n$.
+\item[(d)] La probabilit\`a ottimale $P_n$ \`e non decrescente e
+\[
+ \lim_{n\to\infty}P_n=\frac23.
+\]
+La strategia a soglia indicata in (a) \`e ottimale per ogni $n$.
+\end{enumerate}
+}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-10; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal Testo di SA_2015_1.tex
+La scelta pu\`o dipendere dal saldo e dal numero di lanci ancora
+disponibili. Partire dall'ultimo lancio e confrontare le due possibili
+puntate. Per le strategie costanti basta contare le teste. Per migliorarle,
+cercare situazioni vicine alla fine in cui una puntata pi\`u piccola
+mette al sicuro una vincita che quella pi\`u grande potrebbe perdere.
+Attenzione: raggiungere $3$ euro prima dell'ultimo lancio non permette
+di smettere di giocare.
+}
 \renewcommand{\SoluzioneUfficiale}{}
-\renewcommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-10; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal Testo di SA_2015_1.tex
+Interpretiamo il gioco nel senso usuale: la moneta \`e equa, i lanci sono
+indipendenti e il saldo iniziale \`e zero. Puntando $a$ euro il saldo
+varia di $+a$ con testa e di $-a$ con croce. Non sono posti vincoli
+alle perdite intermedie e si deve puntare a tutti gli $n$ lanci.
+
+\textbf{(a) Calcolo a ritroso.}
+Indichiamo con $V_m(s)$ la massima probabilit\`a di vittoria quando
+il saldo \`e $s\in\mathbb Z$ e rimangono $m$ lanci. Allora
+\[
+ V_0(s)=
+ \begin{cases}1,&s\geq3,\\0,&s<3,\end{cases}
+\]
+e, per $m\geq1$,
+\[
+ V_m(s)=\frac12\max\bigl\{
+ V_{m-1}(s-1)+V_{m-1}(s+1),\,
+ V_{m-1}(s-2)+V_{m-1}(s+2)\bigr\}.
+\]
+Infatti, fissata la prima puntata, dopo il lancio si pu\`o proseguire
+in modo ottimale in ciascuno dei due stati raggiunti. Questa ricorrenza
+considera dunque anche le strategie che dipendono da tutta la storia
+precedente: a parit\`a di saldo e di lanci residui, la storia non offre
+ulteriori vantaggi.
+
+I valori utili al calcolo sono riportati nella tabella; le quattro
+colonne centrali contengono $2^m V_m(s)$.
+\[
+\begin{array}{c|rrrr|c}
+ m&s=-2&s=-1&s=1&s=2&V_{m+1}(0)\\ \hline
+ 2&0&1&1&2&2/8\\
+ 3&1&1&4&4&5/16\\
+ 4&2&5&6&9&11/32
+\end{array}
+\]
+Pertanto
+\[
+ P_3=\frac14,\qquad P_4=\frac5{16},\qquad P_5=\frac{11}{32}.
+\]
+Una strategia che realizza questi valori \`e
+\[
+ a(s)=\begin{cases}2,&s<3,\\1,&s\geq3.\end{cases}
+\]
+In fondo dimostreremo che essa \`e ottimale per qualunque orizzonte.
+
+\textbf{(b) Puntate costanti.}
+Se $H$ \`e il numero delle teste, con puntata costante di $1$ euro
+il saldo finale \`e $2H-n$, mentre con puntata costante di $2$ euro
+\`e $2(2H-n)$. Nel primo caso occorre
+$H\geq\lceil(n+3)/2\rceil$; nel secondo, poich\'e il saldo \`e pari,
+occorre $H\geq\lceil(n+2)/2\rceil$. Ne seguono le formule di $A_n$
+e $B_n$ nella risposta. Per $n$ dispari le soglie coincidono;
+per $n$ pari la soglia della puntata di $2$ euro \`e inferiore di uno.
+
+\textbf{(c) Un miglioramento esplicito delle due costanti.}
+Non occorre qui trovare una strategia ottimale: basta migliorarle entrambe.
+
+Se $n$ \`e dispari, puntiamo $2$ euro nei primi $n-1$ lanci.
+Nell'ultimo puntiamo $1$ euro se il saldo \`e $4$, e $2$ euro altrimenti.
+Con saldo $4$ la puntata ridotta garantisce la vittoria, mentre quella
+costante vince soltanto con testa. La probabilit\`a di avere saldo $4$
+dopo $n-1$ lanci \`e
+\[
+ \frac{1}{2^{n-1}}\binom{n-1}{(n+1)/2}.
+\]
+Il guadagno di probabilit\`a rispetto a $B_n$ \`e la met\`a di questa
+quantit\`a, e si ottiene la formula di $Q_n$ per $n$ dispari.
+
+Se $n$ \`e pari e $n\geq6$, puntiamo $2$ euro nei primi $n-3$ lanci.
+Se il saldo raggiunto \`e $6$, puntiamo $1$ euro in ciascuno dei tre
+lanci rimanenti; altrimenti continuiamo sempre con $2$ euro.
+Partendo da $6$, tre puntate di $1$ euro garantiscono un saldo finale
+almeno uguale a $3$. Tre puntate di $2$ euro perdono soltanto con tre
+croci, evento di probabilit\`a $1/8$. Inoltre
+\[
+ \mathbb P\{\text{saldo }6\text{ dopo }n-3\text{ lanci}\}
+ =\frac{1}{2^{n-3}}\binom{n-3}{n/2}.
+\]
+Questo fornisce la formula di $Q_n$ per $n$ pari. I coefficienti
+binomiali che compaiono negli incrementi sono positivi per tutti gli
+$n$ richiesti, quindi $Q_n>B_n\geq A_n$.
+
+\textbf{(d) Andamento della probabilit\`a ottimale.}
+La probabilit\`a ottimale \`e non decrescente e tende a $2/3$, non a $1/2$
+e nemmeno a $1$. Il vantaggio di adattare le puntate, quindi, non
+scompare aumentando il numero di lanci. Diamo una giustificazione
+completa mediante ricorrenze elementari.
+
+\emph{Ottimalit\`a della strategia a soglia.}
+Sia $u_m(s)$ la probabilit\`a di vittoria con la strategia $a(s)$
+indicata in (a), e poniamo $M_m(s)=2^m u_m(s)$. Si ha
+\[
+ M_{m+1}(s)=
+ \begin{cases}
+ M_m(s-2)+M_m(s+2),&s\leq2,\\
+ M_m(s-1)+M_m(s+1),&s\geq3,
+ \end{cases}
+ \qquad M_0(s)=\begin{cases}0,&s<3,\\1,&s\geq3.\end{cases}
+\]
+Introduciamo numeri non negativi $b_{m,j}$, per $j\geq0$, mediante
+\[
+ b_{0,0}=1,\qquad b_{0,j}=0\quad(j>0),
+\]
+\[
+ b_{m+1,0}=b_{m,1},\qquad
+ b_{m+1,j}=b_{m,j-1}+b_{m,j+1}\quad(j\geq1).
+\]
+Consideriamo la differenza fra i due possibili proseguimenti:
+\[
+ \Delta_m(s)=M_m(s-2)+M_m(s+2)-M_m(s-1)-M_m(s+1).
+\]
+Vale l'identit\`a
+\[
+ \Delta_m(s)=
+ \begin{cases}
+ b_{m,j},&s=1-2j,\quad j\geq0,\\
+ 0,&s\leq2\text{ pari, oppure }s=3,\\
+ -b_{m,j},&s=4+j,\quad j\geq0.
+ \end{cases}
+\]
+La verifica \`e per induzione. Per $m=0$ gli unici valori non nulli
+sono $\Delta_0(1)=1$ e $\Delta_0(4)=-1$. Nei tratti $s\leq0$ e $s\geq5$
+la ricorrenza di $\Delta$ \`e, rispettivamente,
+\[
+ \Delta_{m+1}(s)=\Delta_m(s-2)+\Delta_m(s+2),\qquad
+ \Delta_{m+1}(s)=\Delta_m(s-1)+\Delta_m(s+1).
+\]
+Nei quattro punti rimanenti, sostituendo la ricorrenza di $M$, si trova
+\[
+\begin{aligned}
+ \Delta_{m+1}(1)&=\Delta_m(-1),\\
+ \Delta_{m+1}(2)&=\Delta_m(0)+\Delta_m(3),\\
+ \Delta_{m+1}(3)&=\Delta_m(1)+\Delta_m(4),\\
+ \Delta_{m+1}(4)&=\Delta_m(2)+\Delta_m(3)+\Delta_m(5).
+\end{aligned}
+\]
+Queste formule conservano esattamente l'identit\`a dichiarata.
+Dunque $\Delta_m(s)\geq0$ sotto quota $3$, mentre
+$\Delta_m(s)\leq0$ da quota $3$ in su. La strategia a soglia sceglie
+sempre un massimo nella ricorrenza di $V$: per induzione su $m$,
+$u_m(s)=V_m(s)$ per ogni $m$ e $s$.
+
+\emph{Monotonia rispetto al numero di lanci.}
+Poniamo
+\[
+ R_m=M_m(-2)+M_m(2)-2M_m(0).
+\]
+Allora
+\[
+ P_{m+1}-P_m=\frac{R_m}{2^{m+1}}.
+\]
+Le ricorrenze appena ottenute danno
+\[
+ R_0=0,\qquad R_1=1,\qquad R_{m+2}=R_m+b_{m,2}.
+\]
+Per esplicitare l'ultimo passaggio, ponendo
+$d_m(s)=M_m(s)-M_m(s-1)$, l'identit\`a $\Delta_m(0)=0$ implica
+$d_m(2)=d_m(-1)$ e $R_m=d_m(1)-d_m(0)$. Una e due applicazioni
+della ricorrenza di $M$ forniscono
+\[
+ R_{m+1}=d_m(3)-d_m(-2),\qquad
+ R_{m+2}=R_m+d_m(2)-d_m(-4)
+        =R_m+\Delta_m(-3).
+\]
+Poich\'e $\Delta_m(-3)=b_{m,2}\geq0$, tutti gli $R_m$ sono non negativi,
+e quindi $P_m$ \`e non decrescente.
+
+\emph{Limite.}
+Un'altra identit\`a utile, verificabile per induzione, \`e
+\[
+ M_m(2-2j)+M_m(3+j)+M_m(4+j)=2^{m+1}
+ \qquad(j\geq0).
+\]
+Infatti, per $j\geq1$ il membro sinistro al passo $m+1$ \`e la somma
+dei membri sinistri al passo $m$ con indici $j-1$ e $j+1$;
+per $j=0$ \`e la somma di quelli con indici $0$ e $1$.
+Il caso iniziale \`e immediato.
+
+Prendendo $j=0$ e tornando alle probabilit\`a,
+\[
+ u_{m+1}(3)=\frac{u_m(2)+u_m(4)}2
+          =1-\frac12u_m(3).
+\]
+Siccome $u_0(3)=1$, segue
+\[
+ u_m(3)=\frac23+\frac{(-1)^m}{3\cdot2^m}.
+\]
+La probabilit\`a ottimale non diminuisce aumentando il saldo iniziale:
+basta imitare le puntate di una strategia che parte da un saldo minore.
+Pertanto
+\[
+ P_m=u_m(0)\leq u_m(3),
+ \qquad \limsup_{m\to\infty}P_m\leq\frac23.
+\]
+
+Per la disuguaglianza opposta, partiamo da zero e chiamiamo $\tau$
+il primo istante in cui la strategia a soglia raggiunge saldo $4$.
+Prima di $\tau$ il saldo varia sempre di $\pm2$; il livello $4$ viene
+raggiunto con probabilit\`a uno. Ad esempio, dividendo i saldi per $2$,
+la probabilit\`a di raggiungere $2$ prima di $-k$ \`e $k/(k+2)$:
+questa formula segue dalla ricorrenza delle medie con valori al bordo
+$0$ e $1$, e tende a $1$ quando $k$ tende all'infinito.
+
+Fissato $\varepsilon>0$, scegliamo $K$ tale che
+$\mathbb P(\tau\leq K)\geq1-\varepsilon$ e $N$ tale che
+$u_r(3)\geq2/3-\varepsilon$ per ogni $r\geq N$.
+Per $n\geq K+N$, sull'evento $\tau\leq K$ rimangono almeno $N$ lanci
+e si parte da saldo $4$. Usando $u_r(4)\geq u_r(3)$ otteniamo
+\[
+ P_n\geq(1-\varepsilon)\left(\frac23-\varepsilon\right).
+\]
+Facendo tendere $\varepsilon$ a zero si conclude che
+$\liminf P_n\geq2/3$. Insieme alla maggiorazione precedente questo
+prova $P_n\to2/3$.
+}
 \renewcommand{\SoluzioniAlternative}{}
 \renewcommand{\Osservazioni}{}
 \renewcommand{\Commenti}{}

@@ -1,3 +1,4 @@
+% SSSUP-BOZZA-AI: nuovi campi Risposta, Aiutino, SoluzioneRedazionale; ChatGPT; 2026-11-10; DA VERIFICARE.
 % SSSUP-FONTE-STORICA: fonti-locali/originali/2014-2020.zip
 % Anno 2015, esercizio 2. Trascrizione redazionale dal PDF della prova scritta.
 % Verificare editorialmente la trasposizione prima di considerarla definitiva.
@@ -6,13 +7,10 @@
 
 \renewcommand{\Testo}{
 La Scuola Superiore Sant'Anna deve cablare un'aula in modo tale che:
-
 \begin{quote}
 L'impianto elettrico realizzato \textbf{garantisca} la presenza di \textbf{almeno una presa elettrica} (rappresentata dal simbolo in figura sotto) ad una distanza di \textbf{al più un metro} da \textbf{ogni punto} della stanza.
 \end{quote}
-
 L'impianto deve essere realizzato utilizzando una sola \textbf{presa fissa}, (disponibile gratuitamente e da collocare sul pavimento dell'aula ove ritenuto più opportuno), e un numero arbitrario di \emph{prese triple} e \emph{prolunghe}, schematizzate nella figura sottostante.
-
 \begin{center}
 % SSSUP-FIGURA-RICOSTRUITA: simboli elettrici da Scritto-MAT-2015.pdf.
 \psset{unit=0.70cm}
@@ -45,23 +43,202 @@ L'impianto deve essere realizzato utilizzando una sola \textbf{presa fissa}, (di
   \rput(10.4,-.67){prolunga}
 \end{pspicture}
 \end{center}
-
 Considerando tutte le prese come puntiformi, determinare:
 \begin{enumerate}
 \item[(a)] l'impianto di costo minimo che garantisca la copertura di una stanza di $2\times2$ metri nel caso in cui ogni presa tripla costi 1 Euro e una prolunga lunga $\ell\in\mathbb R$ metri costi $\ell$ Euro (si possono usare prolunghe di lunghezza arbitraria);
-
 \item[(b)] l'impianto di costo minimo che garantisca la copertura di una stanza di $2\times2$ metri nel caso in cui ogni presa tripla costi 1 Euro e si abbia a disposizione \textbf{unicamente} prolunghe di un metro di lunghezza, ciascuna di costo 1 Euro;
 
 \item[(c)] il lato $D$ della stanza quadrata di dimensione massima che è possibile coprire con prese triple (al costo di 1 Euro a pezzo) e prolunghe di lunghezza 1 metro (al costo di 1 Euro a pezzo), avendo a disposizione 6 Euro.
 \end{enumerate}
-
 \textbf{Commento.} In assenza di una soluzione esatta, sono accettabili soluzioni approssimate, a patto che la copertura sia garantita. In questo caso, sarà valutata positivamente anche la capacità di fornire una misura di \emph{distanza} dall'ottimo. Esempio: ``la soluzione XYZ costa 10 Euro, ma garantisco che non esiste soluzione che costi meno di 3 Euro.
 }
-
-\renewcommand{\Risposta}{}
-\renewcommand{\Aiutino}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-10; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal Testo di SA_2015_2.tex
+Si contano le prese libere e alimentate. Nei punti (a) e (c) forniamo
+costruzioni e stime rigorose, non un ottimo esatto.
+\begin{enumerate}
+\item[(a)] Indicando con $C_{\min}$ il costo minimo,
+\[
+ 2\sqrt2\leq C_{\min}\leq7-2\sqrt3,
+ \qquad 2.8284\ldots\leq C_{\min}\leq3.5359\ldots\quad\text{euro}.
+\]
+La costruzione proposta costa esattamente $7-2\sqrt3$ euro.
+\item[(b)] Il costo minimo \`e esattamente $5$ euro.
+\item[(c)] Indicando con $D_{\max}$ il massimo lato,
+\[
+ 2\sqrt2\leq D_{\max}\leq\sqrt{8+\pi},
+ \qquad 2.8284\ldots\leq D_{\max}\leq3.3379\ldots\quad\text{metri}.
+\]
+Con $6$ euro si copre un quadrato di lato $2\sqrt2$.
+\end{enumerate}
+}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-10; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal Testo di SA_2015_2.tex
+Ogni presa libera copre un disco di raggio $1$. Cominciare dai quattro
+vertici della stanza e chiedersi se tre dischi possano bastare.
+Distinguere il numero delle prese libere dal numero delle loro
+posizioni: una tripla aumenta di due il primo, ma non crea una
+nuova posizione. Per costruire impianti verificabili, dividere la
+stanza in quattro quadrati e coprirli separatamente. Per una stima
+superiore della superficie copribile, considerare tutti i punti
+a distanza al pi\`u $1$ dall'intera rete dei cavi.
+}
 \renewcommand{\SoluzioneUfficiale}{}
-\renewcommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-10; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: AI: elaborazione nuova dal Testo di SA_2015_2.tex
+Una presa utile deve essere alimentata e libera: non contiamo come
+disponibile una presa gi\`a occupata dalla spina di una prolunga o di
+una tripla. Come richiesto, prese e triple sono puntiformi.
+
+\textbf{Due osservazioni preliminari.}
+Anzitutto, per coprire un quadrato di lato $2$ servono almeno quattro
+posizioni distinte di prese. Dimostriamo che tre dischi chiusi di
+raggio $1$ non possono coprirlo.
+
+Identifichiamo il quadrato con $[0,2]^2$. Fra quattro vertici e tre
+dischi, uno dei dischi deve contenere due vertici. Essi non possono
+essere opposti; essendo distanti $2$, il centro del disco \`e
+necessariamente il punto medio del lato che li unisce. Ruotando
+il quadrato possiamo supporre che questo centro sia $(1,0)$.
+
+Quel disco non copre alcun punto dei due lati verticali al di sopra
+dei vertici inferiori. I due dischi rimanenti devono dunque coprire
+entrambi i lati verticali, inclusi gli estremi per chiusura.
+In particolare coprono tutti e quattro i vertici: ciascuno deve
+contenerne due adiacenti. I loro centri sono quindi o $(1,0),(1,2)$,
+oppure $(0,1),(2,1)$. Nel primo caso non \`e coperto $(0,1)$;
+nel secondo non \`e coperto $(1,2)$, nemmeno dal disco iniziale.
+La contraddizione dimostra l'affermazione.
+
+Inoltre, se si utilizzano $T$ triple ed $E$ prolunghe, il numero
+delle prese libere non supera $1+2T$: inserire una prolunga consuma
+una presa e ne rende disponibile un'altra, mentre inserire una
+tripla consuma una presa e ne rende disponibili tre. Le posizioni
+distinte delle prese non superano $E+1$, perch\'e soltanto una
+prolunga pu\`o portare una presa in una nuova posizione. Per coprire
+il quadrato di lato $2$ sono perci\`o necessari
+\[
+ T\geq2,\qquad E\geq3.
+\]
+
+\textbf{(a) Prolunghe di lunghezza arbitraria.}
+Poniamo $b=\sqrt3/2$ e collochiamo quattro prese nei punti
+\[
+ A=(1/2,b),\quad B=(3/2,b),\quad
+ C=(1/2,2-b),\quad D=(3/2,2-b).
+\]
+La presa $A$ copre tutto il quadrato $[0,1]^2$: per i suoi punti
+\[
+ (x-1/2)^2+(y-b)^2\leq\frac14+b^2=1.
+\]
+Per simmetria le altre tre prese coprono gli altri tre quadrati
+unitari in cui si suddivide la stanza.
+
+Mettiamo la presa fissa in $C$, con una tripla. Da essa partono
+le prolunghe $CA$ e $CD$. Mettiamo una seconda tripla in $D$ e
+colleghiamo da l\`i $B$ con una terza prolunga. Rimangono prese
+libere in tutti e quattro i punti. Le lunghezze sono
+\[
+ |CA|=|DB|=2-\sqrt3,\qquad |CD|=1.
+\]
+Il costo complessivo \`e quindi
+\[
+ 2+1+2(2-\sqrt3)=7-2\sqrt3.
+\]
+
+Per una minorazione, qualunque impianto deve avere almeno due triple.
+Siano $U,V$ due vertici opposti del quadrato e $P,Q$ due prese che
+li coprono. Allora
+\[
+ |PQ|\geq |UV|-|UP|-|VQ|\geq2\sqrt2-2.
+\]
+Poich\'e l'impianto \`e connesso, la lunghezza totale $L$ dei cavi
+\`e almeno $|PQ|$. Ne segue
+\[
+ C=T+L\geq2+(2\sqrt2-2)=2\sqrt2.
+\]
+Abbiamo dunque una costruzione garantita, con scarto dall'ottimo
+non superiore a
+\[
+ (7-2\sqrt3)-2\sqrt2=0.70747\ldots\quad\text{euro}.
+\]
+Non affermiamo che la costruzione sia esattamente ottimale.
+
+\textbf{(b) Solo prolunghe di un metro.}
+Ogni impianto ha costo $T+E$. Le osservazioni preliminari danno
+$T+E\geq2+3=5$.
+
+Il costo $5$ si realizza con prese nei centri dei quattro quadrati
+unitari:
+\[
+ A=(1/2,1/2),\quad B=(3/2,1/2),\quad
+ C=(1/2,3/2),\quad D=(3/2,3/2).
+\]
+La presa fissa \`e in $C$, con una tripla; una seconda tripla \`e in
+$D$. Usiamo le tre prolunghe $CA$, $CD$, $DB$, tutte lunghe un metro.
+Le quattro posizioni restano disponibili. Ogni quadrato unitario
+\`e coperto dalla presa nel suo centro, essendo $\sqrt2/2<1$.
+Il costo minimo \`e perci\`o esattamente $5$ euro.
+
+\textbf{(c) Sei euro e stanza il pi\`u possibile grande.}
+Consideriamo il quadrato $[0,2\sqrt2]^2$ e mettiamo la presa fissa
+nel suo centro $O=(\sqrt2,\sqrt2)$. Inseriamo una tripla nella presa
+fissa e una seconda tripla in una delle uscite della prima: nello
+stesso punto sono ora disponibili cinque uscite.
+
+Da quattro di esse facciamo partire quattro prolunghe di un metro,
+fino ai centri dei quattro quadrati di lato $\sqrt2$ che suddividono
+la stanza. Questi centri hanno coordinate
+\[
+ (x,y),\qquad x,y\in\{\sqrt2/2,\,3\sqrt2/2\},
+\]
+e distano esattamente $1$ da $O$. Il raggio circoscritto di ciascun
+quadrato piccolo \`e $1$, dunque le quattro prese coprono tutta la
+stanza. Il costo \`e $2+4=6$ euro e
+\[
+ D_{\max}\geq2\sqrt2.
+\]
+
+Per misurare la distanza dall'ottimo, consideriamo un qualunque
+impianto da non pi\`u di $6$ euro che copra un quadrato di lato
+almeno $2\sqrt2$. Servono almeno due triple, perch\'e altrimenti
+le prese libere sarebbero al pi\`u tre e non potrebbero coprire
+nemmeno un quadrato di lato $2$ contenuto nella stanza. Restano
+quindi al pi\`u quattro prolunghe, per una lunghezza totale $L\leq4$.
+
+L'area di tutti i punti a distanza al pi\`u $1$ da una rete connessa
+di cavi di lunghezza totale $L$ \`e al pi\`u
+\[
+ \pi+2L.
+\]
+Per verificarlo, possiamo sostituire i cavi con i segmenti che
+uniscono le medesime estremit\`a: le prese restano nelle stesse
+posizioni e la lunghezza non aumenta. Partiamo dal disco unitario
+centrato nella presa fissa e aggiungiamo i segmenti in ordine di
+connessione. Il segmento di lunghezza $\ell$, insieme ai punti
+a distanza al pi\`u $1$ da esso, forma una regione di area
+$\pi+2\ell$. Il disco unitario alla sua estremit\`a iniziale \`e
+per\`o gi\`a presente: la nuova area aggiunta \`e al pi\`u $2\ell$.
+Sommando si ottiene la stima. Eventuali sovrapposizioni riducono
+ulteriormente l'area.
+
+La stanza \`e contenuta in questa regione, perch\'e tutte le prese
+appartengono alla rete. Pertanto
+\[
+ D^2\leq\pi+2L\leq\pi+8,
+ \qquad D_{\max}\leq\sqrt{8+\pi}.
+\]
+La costruzione ha dunque uno scarto in lunghezza dall'ottimo
+non superiore a
+\[
+ \sqrt{8+\pi}-2\sqrt2=0.50948\ldots\quad\text{metri}.
+\]
+Anche qui la stima \`e garantita, ma non si sostiene di aver
+determinato il massimo esatto.
+}
 \renewcommand{\SoluzioniAlternative}{}
 \renewcommand{\Osservazioni}{}
 \renewcommand{\Commenti}{}
