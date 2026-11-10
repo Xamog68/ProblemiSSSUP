@@ -1080,6 +1080,34 @@
       "categoria": "svg"
     },
     {
+      "id": "SA_2015_2__Testo__01",
+      "campo": "Testo",
+      "sha256_sorgente": "d184013ae0b947c045e9a87c3688b58ff08489003b6a48d20ff5ffa5fce76771",
+      "sha256_svg": "0aea67b713817627a66fb691d255493fe49c768cc39b499e6689666f9d7a39f1",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2016_1__Testo__01",
+      "campo": "Testo",
+      "sha256_sorgente": "0a7cedb81f12936efb10e2822ec68c1a98f25e55378077a14aff8ef9d95af40d",
+      "sha256_svg": "8742deb5156d708a7edd5cbaf9a42592ebf41123b9d72f63d3fd4b51015dd934",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2017_3__Testo__01",
+      "campo": "Testo",
+      "sha256_sorgente": "74dc3aa1c8d059d21e37e3ac6ac8c6e1c995cc98bc2213112b65fc350764abef",
+      "sha256_svg": "9637c8dbc5179a154b0122a37f99ec2d74cdc30e0b383a31f1a60a8381bff6f7",
+      "categoria": "svg"
+    },
+    {
+      "id": "SA_2020_1__Testo__01",
+      "campo": "Testo",
+      "sha256_sorgente": "6459a59b7b4f6d36c87a94d5ef01ef78f85fc082658d7bf17d45cbe885d70e33",
+      "sha256_svg": "5057e9253f84598543bd2fd737a3d5be9007d090df276d7ad16e36f676eda23a",
+      "categoria": "svg"
+    },
+    {
       "id": "SA_2022_1__Testo__01",
       "campo": "Testo",
       "sha256_sorgente": "8a01f366938017f68a16e2908eb589ed5c728622d75e4860307008e1afde75ac",
