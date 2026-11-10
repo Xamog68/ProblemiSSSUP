@@ -20,10 +20,151 @@ Si determini:
 NB: la valutazione dell'esercizio sarà crescente con la qualità delle stime proposte.
 }
 
-\renewcommand{\Risposta}{}
-\renewcommand{\Aiutino}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-10; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-10; elaborazione dalla traccia canonica; revisione matematica umana pendente.
+Posto $x=r/\ell$, valgono le stime
+\[
+\left\lceil\pi x^2\right\rceil\le N(r,\ell)\le
+\min\left\{\left\lceil2x\right\rceil^2,
+\left\lfloor\pi x^2+4x+1\right\rfloor\right\}.
+\]
+Indicando con $R_k$ il massimo raggio copribile con $k$ quadrati,
+\[
+R_1=\frac\ell2,\qquad
+R_2\ge\frac{\ell}{2\cos(\pi/8)}\simeq0.541196\,\ell,
+\qquad R_3\ge\frac58\ell.
+\]
+Per $R_2$ e $R_3$ si forniscono costruzioni garantite, senza affermarne
+l'ottimalit\`a.
+}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-10; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-10; elaborazione dalla traccia canonica; revisione matematica umana pendente.
+Per una stima dal basso, confrontare le aree. Per una stima dall'alto,
+partire da una quadrettatura; traslarla e fare una media pu\`o migliorare
+il risultato. Con due quadrati conviene provare a ruotarne uno rispetto
+all'altro. Con tre, si pu\`o affidare a un solo quadrato una piccola calotta
+del cerchio e coprire la parte restante con gli altri due.
+}
 \renewcommand{\SoluzioneUfficiale}{}
-\renewcommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-10; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-10; elaborazione dalla traccia canonica; revisione matematica umana pendente.
+Assumiamo $r,\ell>0$ e intendiamo per cerchio il disco pieno, come richiesto
+dalla copertura della regione nera. Per similitudine possiamo ragionare
+con quadrati di lato $1$ e un disco di raggio $x=r/\ell$.
+
+\textbf{(a) Stime per eccesso.}
+Una prima stima immediata si ottiene racchiudendo il disco nel quadrato
+di lato $2r$. Una griglia di $\lceil2r/\ell\rceil$ quadrati per lato
+copre questo quadrato, quindi
+\[
+N(r,\ell)\le\left\lceil\frac{2r}{\ell}\right\rceil^2.
+\]
+
+Si pu\`o ottenere una stima migliore per $r/\ell$ grande mediando sulle
+traslazioni di una quadrettatura.
+Lavoriamo con $\ell=1$ e sia $D$ il disco di raggio $x$ centrato nell'origine.
+Per $t\in[0,1)^2$, consideriamo i quadrati
+\[
+k+t+[0,1]^2,\qquad k\in\mathbb Z^2,
+\]
+e prendiamo tutti quelli che incontrano $D$. Essi lo ricoprono.
+Un quadrato con vertice inferiore sinistro $u$ incontra $D$ precisamente
+quando
+\[
+u\in K:=\{p-q:p\in D,\ q\in[0,1]^2\}.
+\]
+La regione $K$ \`e il quadrato $[-1,0]^2$ allargato di una distanza $x$:
+si compone del quadrato, di quattro rettangoli di dimensioni $1$ e $x$,
+e di quattro quarti di disco di raggio $x$. Pertanto
+\[
+\operatorname{area}(K)=1+4x+\pi x^2.
+\]
+Se $M(t)$ \`e il numero dei quadrati selezionati, la sua media al variare
+di $t$ \`e proprio quest'area. Infatti, indicando con $\mathbf1_K$
+la funzione che vale $1$ su $K$ e $0$ altrove,
+\[
+\int_{[0,1)^2}M(t)\,dt
+=\sum_{k\in\mathbb Z^2}\int_{[0,1)^2}\mathbf1_K(k+t)\,dt
+=\operatorname{area}(K).
+\]
+Solo un numero finito di addendi \`e non nullo.
+Esiste quindi almeno una traslazione con
+$M(t)\le1+4x+\pi x^2$. Poich\'e $M(t)$ \`e intero,
+\[
+N(r,\ell)\le\left\lfloor\pi x^2+4x+1\right\rfloor.
+\]
+Possiamo prendere il minimo fra questa stima e quella elementare iniziale.
+
+\textbf{(b) Stima per difetto.}
+L'area dell'unione di $N$ quadrati non supera $N\ell^2$, anche se i quadrati
+sono ruotati o sovrapposti. Se coprono il disco, necessariamente
+\[
+\pi r^2\le N\ell^2,
+\qquad\text{quindi}\qquad
+N(r,\ell)\ge\left\lceil\frac{\pi r^2}{\ell^2}\right\rceil.
+\]
+In particolare, le stime ottenute hanno lo stesso termine principale:
+$N(r,\ell)/(r/\ell)^2$ tende a $\pi$ quando $r/\ell$ tende a infinito.
+
+\textbf{(c) Un quadrato.}
+Un quadrato di lato $\ell$ contiene il disco concentrico di raggio $\ell/2$.
+Viceversa, la proiezione del disco su una direzione perpendicolare a un lato
+ha lunghezza $2r$, quindi non pu\`o essere contenuto nel quadrato se
+$2r>\ell$. In questo caso otteniamo anche il valore esatto:
+\[
+R_1=\frac\ell2.
+\]
+
+\textbf{(d) Due quadrati.}
+Prendiamo due quadrati concentrici di lato $\ell$, il secondo ruotato di
+$\pi/4$ rispetto al primo. Mostriamo che la loro unione contiene il disco
+concentrico di raggio
+\[
+R=\frac{\ell}{2\cos(\pi/8)}.
+\]
+Per la simmetria della configurazione basta considerare un punto di
+coordinate polari $(\rho,\theta)$ con $0\le\theta\le\pi/4$ e $\rho\le R$.
+Se $\pi/8\le\theta\le\pi/4$, il valore assoluto di ciascuna coordinata
+rispetto ai lati del primo quadrato \`e al pi\`u
+$\rho\cos\theta\le R\cos(\pi/8)=\ell/2$.
+Se $0\le\theta\le\pi/8$, lo stesso argomento nel sistema ruotato di
+$\pi/4$ usa invece $\cos(\pi/4-\theta)\le\cos(\pi/8)$.
+In entrambi i casi il punto appartiene ad almeno uno dei due quadrati.
+Ne segue la stima richiesta
+\[
+R_2\ge\frac{\ell}{2\cos(\pi/8)}\simeq0.541196\,\ell.
+\]
+Non affermiamo che questa disposizione sia ottimale fra tutte quelle
+possibili con due quadrati.
+
+\textbf{(e) Tre quadrati.}
+Basta costruire una copertura con lato $1$ e raggio $5/8$, e poi riscalare.
+Consideriamo i tre quadrati
+\[
+\begin{split}
+Q_1&=[-1,0]\times[-5/8,3/8],\\
+Q_2&=[0,1]\times[-5/8,3/8],\\
+Q_3&=[-1/2,1/2]\times[3/8,11/8].
+\end{split}
+\]
+I primi due coprono il rettangolo $[-1,1]\times[-5/8,3/8]$ e quindi tutta
+la parte del disco $x^2+y^2\le(5/8)^2$ situata sotto la retta $y=3/8$.
+Per la parte sopra tale retta si ha
+\[
+x^2\le\frac{25}{64}-y^2\le\frac{25}{64}-\frac9{64}=\frac14,
+\qquad \frac38\le y\le\frac58.
+\]
+Questa calotta \`e pertanto contenuta in $Q_3$.
+Abbiamo cos\`i una copertura completa, da cui
+\[
+R_3\ge\frac58\ell.
+\]
+Anche questa \`e una stima per difetto rigorosa, non una dichiarazione
+sul massimo raggio possibile con tre quadrati.
+}
 \renewcommand{\SoluzioniAlternative}{}
 \renewcommand{\Osservazioni}{}
 \renewcommand{\Commenti}{}

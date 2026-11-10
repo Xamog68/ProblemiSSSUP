@@ -1082,14 +1082,14 @@
     {
       "id": "SA_2015_2__Testo__01",
       "campo": "Testo",
-      "sha256_sorgente": "d184013ae0b947c045e9a87c3688b58ff08489003b6a48d20ff5ffa5fce76771",
+      "sha256_sorgente": "93cf37a4e499be2d4e962b0159445ca3d4bd5b42cb8426428bad9226d5bd316b",
       "sha256_svg": "0aea67b713817627a66fb691d255493fe49c768cc39b499e6689666f9d7a39f1",
       "categoria": "svg"
     },
     {
       "id": "SA_2016_1__Testo__01",
       "campo": "Testo",
-      "sha256_sorgente": "0a7cedb81f12936efb10e2822ec68c1a98f25e55378077a14aff8ef9d95af40d",
+      "sha256_sorgente": "d991abe2a4c7b466889c00fdac11ad7ee9deb8bdd478f377b18f5856a8903ee9",
       "sha256_svg": "8742deb5156d708a7edd5cbaf9a42592ebf41123b9d72f63d3fd4b51015dd934",
       "categoria": "svg"
     },

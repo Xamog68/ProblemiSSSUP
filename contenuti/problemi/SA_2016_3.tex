@@ -13,10 +13,77 @@ La Scuola Sant'Anna vuole allestire una lotteria tra i propri studenti. Chi vuol
 \end{enumerate}
 }
 
-\renewcommand{\Risposta}{}
-\renewcommand{\Aiutino}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-10; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-10; elaborazione dalla traccia canonica; revisione matematica umana pendente.
+(a) $81/4=20.25$ euro.
+(b) $121/6=20.1666\ldots$ euro, facendo la media anche sulla pallina spostata.
+Se il prezzo deve essere espresso in centesimi, i minimi sono rispettivamente
+$20.25$ e $20.17$ euro.
+}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-10; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-10; elaborazione dalla traccia canonica; revisione matematica umana pendente.
+Il prezzo di pareggio \`e il valore atteso della vincita. Nel secondo caso,
+calcolare prima la vincita media sapendo quale numero \`e stato spostato,
+e solo dopo fare la media sui dieci possibili numeri. Attenzione:
+senza questa condizione, le due estrazioni non sono pi\`u indipendenti.
+}
 \renewcommand{\SoluzioneUfficiale}{}
-\renewcommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-10; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-10; elaborazione dalla traccia canonica; revisione matematica umana pendente.
+Sia $p$ il prezzo del biglietto e sia $V$ la vincita del giocatore.
+Trascurando costi organizzativi non menzionati nel testo, il guadagno medio
+della Scuola per biglietto \`e $p-\mathbb E[V]$.
+Il prezzo minimo richiesto coincide quindi con $\mathbb E[V]$.
+
+\textbf{(a) Urne iniziali.}
+Se $X$ e $Y$ sono i numeri estratti, le variabili sono indipendenti e
+uniformemente distribuite su $\{0,1,\ldots,9\}$.
+Poich\'e
+\[
+\mathbb E[X]=\mathbb E[Y]=\frac{0+1+\cdots+9}{10}=\frac92,
+\]
+si ottiene
+\[
+\mathbb E[V]=\mathbb E[XY]=\mathbb E[X]\mathbb E[Y]
+=\frac{81}{4}=20.25.
+\]
+
+\textbf{(b) Trasferimento di una pallina casuale.}
+Per simmetria possiamo supporre che la pallina sia spostata dalla prima
+urna alla seconda. Indichiamo con $K$ il suo numero, uniforme su
+$\{0,1,\ldots,9\}$.
+Condizionatamente a $K=k$, la prima urna contiene $9$ palline con somma
+$45-k$, mentre la seconda ne contiene $11$ con somma $45+k$.
+Le due estrazioni sono indipendenti una volta fissato $k$, dunque
+\[
+\mathbb E[V\mid K=k]
+=\frac{45-k}{9}\,\frac{45+k}{11}
+=\frac{2025-k^2}{99}.
+\]
+Ora facciamo la media anche sulla scelta della pallina spostata.
+Dato che $\sum_{k=0}^9k^2=285$, risulta
+\[
+\mathbb E[V]
+=\frac1{10}\sum_{k=0}^9\frac{2025-k^2}{99}
+=\frac{20250-285}{990}
+=\frac{121}{6}.
+\]
+Il prezzo teorico minimo \`e quindi $121/6$ euro. Se sono ammessi soltanto
+centesimi interi, bisogna arrotondare per eccesso a $20.17$ euro.
+
+La media include il trasferimento casuale: se invece il numero spostato
+fosse noto e fissato, il prezzo di pareggio sarebbe $(2025-k^2)/99$.
+Non sarebbe corretto moltiplicare direttamente le medie delle due
+estrazioni senza condizionare. Le due medie marginali restano uguali a
+$9/2$, ma le estrazioni sono dipendenti attraverso $K$; infatti
+\[
+\mathbb E[XY]-\mathbb E[X]\mathbb E[Y]
+=\frac{121}{6}-\frac{81}{4}=-\frac1{12}.
+\]
+}
 \renewcommand{\SoluzioniAlternative}{}
 \renewcommand{\Osservazioni}{}
 \renewcommand{\Commenti}{}

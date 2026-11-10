@@ -52,10 +52,181 @@ Si desidera connettere tutte le prese della rastrelliera $C$ dei carichi ad alcu
 \end{enumerate}
 }
 
-\renewcommand{\Risposta}{}
-\renewcommand{\Aiutino}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-10; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-10; elaborazione dalla traccia canonica; revisione matematica umana pendente.
+Posto
+\[
+F(l,h)=
+\begin{cases}
+l+\dfrac{\sqrt3}{2}h,&h\le 2\sqrt3\,l,\\[3pt]
+2\sqrt{l^2+\dfrac{h^2}{4}},&h\ge 2\sqrt3\,l,
+\end{cases}
+\]
+per $n$ pari il costo minimo \`e
+\[
+\beta\min\left\{n\left(l+\frac13\right),
+\frac n2\left(F(l,h)+\frac13\right)\right\}.
+\]
+Si usano collegamenti singoli se $F(l,h)>2l+1/3$, coppie di carichi
+consecutivi se $F(l,h)<2l+1/3$; all'uguaglianza entrambe le scelte sono ottimali.
+
+Per $n=2m+1$, i collegamenti singoli sono ancora ottimali se
+$F(l,h)\ge 2l+1/3$. Nell'altro caso, posto
+$B=m(F(l,h)+1/3)+l+1/3$ e
+$\delta=\sqrt{l^2+h^2/4}-l$, si ha
+\[
+\beta B\le C_{\min}\le
+\beta\min\left\{n\left(l+\frac13\right),B+\delta\right\}.
+\]
+Questi ultimi sono limiti dimostrati, non la determinazione dell'ottimo.
+}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-10; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-10; elaborazione dalla traccia canonica; revisione matematica umana pendente.
+Confrontare il costo di due collegamenti separati con quello di una
+connessione biforcata. Prima di scegliere lo scorrimento delle rastrelliere,
+ottimizzare un singolo gruppo di due carichi: dove conviene mettere lo
+sdoppiatore? Per $n$ dispari, la posizione migliore per le coppie non \`e
+quella migliore per il carico rimasto solo.
+}
 \renewcommand{\SoluzioneUfficiale}{}
-\renewcommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-10; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-10; elaborazione dalla traccia canonica; revisione matematica umana pendente.
+% SSSUP-NOTA-REDAZIONALE: il testo definisce l come distanza fra gli assi;
+% la quota della figura ricostruita e' invece disegnata fra i bordi interni.
+% Discrepanza da verificare in seguito; Testo e figura non sono modificati.
+Assumiamo $l,h,\beta>0$ e usiamo $l$ come distanza fra gli assi delle due
+rastrelliere, come specificato nel testo. Interpretiamo il vincolo di carico
+nel senso che ogni presa utilizzata di $P$ alimenta un gruppo di uno o due
+carichi; non si collegano tra loro prese diverse di $P$.
+Il fattore $\beta$ moltiplica tutti i costi, quindi non influisce sulla scelta
+ottimale. Se $\beta=0$, tutti i collegamenti hanno costo nullo.
+
+\textbf{Il costo di un gruppo.}
+Un carico singolo richiede almeno un cavo di lunghezza $l$, oltre al costo
+$\alpha=\beta/3$ della presa. Il costo minimo per un collegamento singolo \`e
+quindi $\beta(l+1/3)$, raggiunto quando le due prese sono alla stessa altezza.
+
+Consideriamo ora due carichi a distanza verticale $d$.
+Un collegamento che li alimenta dalla stessa presa pu\`o essere ridotto,
+senza aumentare la lunghezza, a tre segmenti che si incontrano in uno
+sdoppiatore $S$; il tratto comune pu\`o anche avere lunghezza nulla.
+Mettiamo i due carichi in $(l,d/2)$ e $(l,-d/2)$ e la presa di alimentazione
+in $(0,a)$, dove per il momento anche $a$ pu\`o variare.
+Possiamo supporre che $S=(x,y)$ abbia $0\le x\le l$, poich\'e proiettare
+$S$ sulla striscia non aumenta nessuna delle tre distanze.
+Il primo segmento ha lunghezza almeno $x$; per simmetria e convessit\`a,
+la somma degli altri due \`e almeno
+\[
+2\sqrt{(l-x)^2+\frac{d^2}{4}}.
+\]
+L'uguaglianza si realizza scegliendo $a=y=0$. Dobbiamo dunque minimizzare
+\[
+f_d(x)=x+2\sqrt{(l-x)^2+\frac{d^2}{4}},
+\qquad 0\le x\le l.
+\]
+La funzione \`e convessa e
+\[
+f_d'(x)=1-\frac{2(l-x)}{\sqrt{(l-x)^2+d^2/4}}.
+\]
+Se $d\le2\sqrt3\,l$, il minimo si ha in $x=l-d/(2\sqrt3)$ e vale
+$l+\sqrt3\,d/2$: il collegamento ha forma di Y, con angoli di $120^\circ$
+nel punto di biforcazione. Se $d\ge2\sqrt3\,l$, il minimo si ha in $x=0$
+e vale $2\sqrt{l^2+d^2/4}$: lo sdoppiatore coincide con la presa di $P$.
+
+Indichiamo questa lunghezza minima con $F(l,d)$. Essa \`e strettamente
+crescente rispetto a $d$. Due carichi distinti distano almeno $h$,
+quindi ogni coppia costa almeno $\beta(F(l,h)+1/3)$.
+Il limite si raggiunge per due carichi consecutivi, con la presa di $P$
+allineata al loro punto medio.
+
+\textbf{(a) Numero pari di carichi.}
+Se una configurazione usa $k$ coppie e $n-2k$ collegamenti singoli,
+il suo costo \`e almeno
+\[
+\beta\left[
+(n-2k)\left(l+\frac13\right)
++k\left(F(l,h)+\frac13\right)\right],
+\qquad 0\le k\le\frac n2.
+\]
+L'espressione \`e affine in $k$, quindi il minimo si trova a uno degli estremi.
+Entrambi i valori estremi sono effettivamente realizzabili.
+Per $k=0$, basta allineare le rastrelliere e collegare le prese corrispondenti
+con segmenti orizzontali. Per $k=n/2$, si accoppiano il primo e il secondo
+carico, il terzo e il quarto, e cos\`i via. Uno scorrimento di $h/2$ permette
+di allineare i punti medi con una presa ogni due di $P$, e ogni coppia
+realizza la lunghezza $F(l,h)$.
+
+Pertanto
+\[
+C_{\min}=\beta\min\left\{
+n\left(l+\frac13\right),\frac n2\left(F(l,h)+\frac13\right)\right\}.
+\]
+Conviene usare le coppie precisamente quando $F(l,h)<2l+1/3$.
+Per rendere esplicita la soglia, poniamo
+\[
+h_*(l)=
+\begin{cases}
+\sqrt{\dfrac{4l}{3}+\dfrac19},&0<l\le\dfrac16,\\[5pt]
+\dfrac{2}{\sqrt3}\left(l+\dfrac13\right),&l\ge\dfrac16.
+\end{cases}
+\]
+Le due formule coincidono per $l=1/6$.
+Per $h<h_*(l)$ sono ottimali le coppie; per $h>h_*(l)$ sono ottimali
+i collegamenti singoli; per $h=h_*(l)$ entrambe le configurazioni
+raggiungono lo stesso costo minimo.
+
+\textbf{(b) Numero dispari di carichi: stime e regimi qualitativi.}
+Scriviamo $n=2m+1$. Per $n=1$ il costo minimo \`e semplicemente
+$\beta(l+1/3)$. Il medesimo confronto affine del punto precedente,
+ora con $0\le k\le m$, fornisce in generale
+\[
+C_{\min}\ge\beta\min\{A,B\},
+\quad
+A=(2m+1)\left(l+\frac13\right),
+\quad
+B=m\left(F(l,h)+\frac13\right)+l+\frac13.
+\]
+La scelta di soli collegamenti singoli realizza $\beta A$.
+Una seconda costruzione accoppia i primi $2m$ carichi e lascia solo l'ultimo,
+con uno scorrimento di $h/2$. Le coppie realizzano ancora $F(l,h)$,
+mentre il cavo del carico singolo ha lunghezza $\sqrt{l^2+h^2/4}$.
+Le prese necessarie sono distinte: numerando le altezze dei carichi con
+$0,h,\ldots,2mh$, si usano in $P$ le altezze
+$(2j+1/2)h$, con $j=0,\ldots,m-1$, per le coppie e $(2m+1/2)h$ per l'ultimo.
+
+Posto $\delta=\sqrt{l^2+h^2/4}-l$, otteniamo quindi
+\[
+\beta\min\{A,B\}\le C_{\min}
+\le\beta\min\{A,B+\delta\}.
+\]
+In particolare, se $h\ge h_*(l)$, allora $B\ge A$ e i collegamenti singoli
+sono ottimali anche nel caso dispari.
+Se invece $h<h_*(l)$, la costruzione con $m$ coppie e un carico singolo
+costa al massimo $\beta\delta$ pi\`u dell'ottimo.
+Essa \`e certamente migliore di tutti i collegamenti singoli quando
+\[
+m\left(2l+\frac13-F(l,h)\right)>\delta.
+\]
+A parametri $l,h$ fissati in questo regime, la disuguaglianza vale per
+$m$ sufficientemente grande.
+
+Un'altra conclusione semplice si ottiene senza scorrimento.
+Per ogni coppia consecutiva si pu\`o portare un cavo orizzontale al primo
+carico e proseguire verticalmente fino al secondo, mettendo lo sdoppiatore
+nel punto di arrivo del tratto orizzontale.
+La lunghezza \`e $l+h$, mentre il carico rimasto solo richiede lunghezza $l$.
+Per $n\ge3$ questa configurazione costa meno dei soli collegamenti singoli
+se $h<l+1/3$.
+
+Abbiamo dunque una regione in cui i collegamenti singoli sono ottimali,
+una regione in cui certamente non lo sono, e limiti espliciti sul costo
+che differiscono al pi\`u di $\beta\delta$, indipendentemente da $n$.
+Non abbiamo determinato tutte le soglie intermedie n\'e la migliore
+traslazione nel caso dispari; il testo ammette un'analisi qualitativa.
+}
 \renewcommand{\SoluzioniAlternative}{}
 \renewcommand{\Osservazioni}{}
 \renewcommand{\Commenti}{}
