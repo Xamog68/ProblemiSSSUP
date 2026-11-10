@@ -1,0 +1,42 @@
+% SSSUP-FONTE-STORICA: fonti-locali/originali/2014-2020.zip
+% Anno 2017, esercizio 3. Testo storico; figura TikZ ricostruita in PSTricks.
+% Verificare editorialmente la trasposizione prima di considerarla definitiva.
+\renewcommand{\Anno}{2017}
+\renewcommand{\NumeroProblema}{3}
+
+\renewcommand{\Testo}{
+Una scacchiera $n\times m$ (in figura quella $3\times5$) contiene $nm-1$ piastrelle quadrate ed uno spazio vuoto (in nero nella figura). Una {\it mossa} è lo spostamento di una piastrella in un quadrato adiacente (che deve essere necessariamente vuoto).
+\begin{center}
+% SSSUP-FIGURA-RICOSTRUITA: scacchiera 3 x 5, originale TikZ 2017.
+\psset{unit=0.57cm}
+\begin{pspicture}(-0.65,-0.48)(5.40,3.70)
+  \multido{\n=0+1}{6}{\psline[linecolor=gray,linewidth=.45pt](\n,0)(\n,3)}
+  \multido{\n=0+1}{4}{\psline[linecolor=gray,linewidth=.45pt](0,\n)(5,\n)}
+  \psframe[fillstyle=solid,fillcolor=black,linestyle=none](2,1)(3,2)
+  \rput(0.5,3.40){1}
+  \rput(1.5,3.40){2}
+  \rput(2.5,3.40){3}
+  \rput(3.5,3.40){4}
+  \rput(4.5,3.40){5}
+  \rput(-.36,2.5){1}
+  \rput(-.36,1.5){2}
+  \rput(-.36,0.5){3}
+\end{pspicture}
+\end{center}
+
+\begin{enumerate}
+\item[(a)] Mostrare che per spostare lo spazio vuoto dalla posizione $(h,k)$ alla posizione $(h+p, k+q)$ il numero minimo di {\it mosse} è $|p|+|q|$.
+
+\item[(b)] Nel caso di scacchiera $3\times5$ determinare il minimo numero di {\it mosse} per portare una piastrella dalla posizione $(1,1)$ alla posizione $(3,5)$ nel caso in cui lo spazio vuoto si trovi inizialmente in $(2,1)$ e nel caso in cui lo spazio vuoto si trovi inizialmente in $(1,2)$.
+
+\item[(c)] Nel caso di scacchiera $3\times5$, sapendo che lo spazio vuoto potrebbe inizialmente trovarsi in una qualsiasi casella diversa da $(1,1)$, determinare il {\it Valor Medio} del numero minimo di {\it mosse} per spostare una piastrella dalla posizione $(1,1)$ alla posizione $(3,5)$.
+\end{enumerate}
+}
+
+\renewcommand{\Risposta}{}
+\renewcommand{\Aiutino}{}
+\renewcommand{\SoluzioneUfficiale}{}
+\renewcommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioniAlternative}{}
+\renewcommand{\Osservazioni}{}
+\renewcommand{\Commenti}{}

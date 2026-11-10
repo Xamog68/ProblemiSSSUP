@@ -1,0 +1,108 @@
+% SSSUP-FONTE-STORICA: fonti-locali/originali/2014-2020.zip
+% Anno 2020, esercizio 1. Testo storico; figura ricostruita da PDF.
+% Verificare editorialmente la trasposizione prima di considerarla definitiva.
+\renewcommand{\Anno}{2020}
+\renewcommand{\NumeroProblema}{1}
+
+\renewcommand{\Testo}{
+Un albero del Sant'Anna è cresciuto secondo le seguenti regole:
+\begin{itemize}
+\item il tronco è un segmento verticale di lunghezza $1$ metro ed il tronco si considera un ramo;
+\item alla fine di ogni ramo di lunghezza $\ell$, dipartono due rami di lunghezza $\rho\times\ell$, con $\rho\in[0,1]$;
+\item i due rami che dipartono da uno stesso ramo formano un angolo $\alpha\in[0,2\pi]$ fra di loro, ogni ramo forma quindi un angolo $\pi-\frac{\alpha}{2}$ con il ramo da cui è stato originato;
+\item si definisce \emph{profondità} di un ramo il numero di giunzioni che è necessario attraversare per giungere fino al tronco. Il tronco ha quindi profondità $0$.
+\end{itemize}
+
+\begin{center}
+% SSSUP-FIGURA-RICOSTRUITA: albero, ispirato a 2020figura.pdf.
+% Rami disegnati ricorsivamente per alpha=pi/2 e rho=1/2.
+\psset{unit=1.07cm}
+\begin{pspicture}(-2.45,-.25)(2.45,4.95)
+  \psset{linewidth=.65pt,linecap=1}
+  \psline(0,0)(0,2.4)
+  \psline(0.0000,2.4000)(-0.8485,3.2485)
+  \psline(-0.8485,3.2485)(-1.4485,3.2485)
+  \psline(-1.4485,3.2485)(-1.6607,3.0364)
+  \psline(-1.6607,3.0364)(-1.6607,2.8864)
+  \psline(-1.6607,2.8864)(-1.6076,2.8334)
+  \psline(-1.6607,2.8864)(-1.7137,2.8334)
+  \psline(-1.6607,3.0364)(-1.8107,3.0364)
+  \psline(-1.8107,3.0364)(-1.8637,2.9834)
+  \psline(-1.8107,3.0364)(-1.8637,3.0894)
+  \psline(-1.4485,3.2485)(-1.6607,3.4607)
+  \psline(-1.6607,3.4607)(-1.8107,3.4607)
+  \psline(-1.8107,3.4607)(-1.8637,3.4076)
+  \psline(-1.8107,3.4607)(-1.8637,3.5137)
+  \psline(-1.6607,3.4607)(-1.6607,3.6107)
+  \psline(-1.6607,3.6107)(-1.7137,3.6637)
+  \psline(-1.6607,3.6107)(-1.6076,3.6637)
+  \psline(-0.8485,3.2485)(-0.8485,3.8485)
+  \psline(-0.8485,3.8485)(-1.0607,4.0607)
+  \psline(-1.0607,4.0607)(-1.2107,4.0607)
+  \psline(-1.2107,4.0607)(-1.2637,4.0076)
+  \psline(-1.2107,4.0607)(-1.2637,4.1137)
+  \psline(-1.0607,4.0607)(-1.0607,4.2107)
+  \psline(-1.0607,4.2107)(-1.1137,4.2637)
+  \psline(-1.0607,4.2107)(-1.0076,4.2637)
+  \psline(-0.8485,3.8485)(-0.6364,4.0607)
+  \psline(-0.6364,4.0607)(-0.6364,4.2107)
+  \psline(-0.6364,4.2107)(-0.6894,4.2637)
+  \psline(-0.6364,4.2107)(-0.5834,4.2637)
+  \psline(-0.6364,4.0607)(-0.4864,4.0607)
+  \psline(-0.4864,4.0607)(-0.4334,4.1137)
+  \psline(-0.4864,4.0607)(-0.4334,4.0076)
+  \psline(0.0000,2.4000)(0.8485,3.2485)
+  \psline(0.8485,3.2485)(0.8485,3.8485)
+  \psline(0.8485,3.8485)(0.6364,4.0607)
+  \psline(0.6364,4.0607)(0.4864,4.0607)
+  \psline(0.4864,4.0607)(0.4334,4.0076)
+  \psline(0.4864,4.0607)(0.4334,4.1137)
+  \psline(0.6364,4.0607)(0.6364,4.2107)
+  \psline(0.6364,4.2107)(0.5834,4.2637)
+  \psline(0.6364,4.2107)(0.6894,4.2637)
+  \psline(0.8485,3.8485)(1.0607,4.0607)
+  \psline(1.0607,4.0607)(1.0607,4.2107)
+  \psline(1.0607,4.2107)(1.0076,4.2637)
+  \psline(1.0607,4.2107)(1.1137,4.2637)
+  \psline(1.0607,4.0607)(1.2107,4.0607)
+  \psline(1.2107,4.0607)(1.2637,4.1137)
+  \psline(1.2107,4.0607)(1.2637,4.0076)
+  \psline(0.8485,3.2485)(1.4485,3.2485)
+  \psline(1.4485,3.2485)(1.6607,3.4607)
+  \psline(1.6607,3.4607)(1.6607,3.6107)
+  \psline(1.6607,3.6107)(1.6076,3.6637)
+  \psline(1.6607,3.6107)(1.7137,3.6637)
+  \psline(1.6607,3.4607)(1.8107,3.4607)
+  \psline(1.8107,3.4607)(1.8637,3.5137)
+  \psline(1.8107,3.4607)(1.8637,3.4076)
+  \psline(1.4485,3.2485)(1.6607,3.0364)
+  \psline(1.6607,3.0364)(1.8107,3.0364)
+  \psline(1.8107,3.0364)(1.8637,3.0894)
+  \psline(1.8107,3.0364)(1.8637,2.9834)
+  \psline(1.6607,3.0364)(1.6607,2.8864)
+  \psline(1.6607,2.8864)(1.7137,2.8334)
+  \psline(1.6607,2.8864)(1.6076,2.8334)
+  \psarc[linewidth=.45pt](0,2.4){.54}{45}{135}
+  \rput(0,3.12){$\alpha$}
+  \rput(-.99,3.05){$\rho$}
+  \rput(.99,3.05){$\rho$}
+  \rput[r](-.12,1.18){$1$}
+\end{pspicture}
+\end{center}
+
+\noindent\emph{Un esempio di albero con rami di profondità fino a $5$ e con $\alpha=\frac\pi2$, $\rho=\frac12$.}
+
+\begin{enumerate}
+\item[(a)] Con $\alpha=\pi$, determinare tutti i valori di $\rho$ per cui l'albero ``tocca terra'' in un punto diverso dal tronco.
+\item[(b)] Con $\alpha=\frac\pi 2$, quale è l'altezza massima, in funzione di $\rho$?
+\item[(c)] Dato un punto arbitrario del piano, trovare, se esiste, una coppia di valori $(\alpha, \rho)$ tale che il punto appartenga all'albero costruito con tali valori.
+\end{enumerate}
+}
+
+\renewcommand{\Risposta}{}
+\renewcommand{\Aiutino}{}
+\renewcommand{\SoluzioneUfficiale}{}
+\renewcommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioniAlternative}{}
+\renewcommand{\Osservazioni}{}
+\renewcommand{\Commenti}{}
