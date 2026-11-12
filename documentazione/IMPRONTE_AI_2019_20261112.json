@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "data": "2026-11-12",
+  "autore": "ChatGPT (OpenAI)",
+  "stato": "DA-VERIFICARE",
+  "base_bytes": "ProblemiSSSUP_testi_2014_2020_revisionati.zip, copia gia disponibile nella conversazione",
+  "verifica_online": "I tre sorgenti canonici main sono stati letti integralmente via web e confrontati con la base. Il confronto online e testuale, non un hash remoto.",
+  "files": {
+    "contenuti/problemi/SA_2019_1.tex": {
+      "base_sha256": "a587ab1d6e576320ef2aa7f75ec49cf1263d4337d069374d8889d0f3bec6cc4c",
+      "draft_sha256": "01817c08fbd59193df6c8ece4ed9ff34626f7fd1d6f8d3e15e649f5e2b56ef34",
+      "url_canonico": "https://raw.githubusercontent.com/Xamog68/ProblemiSSSUP/main/contenuti/problemi/SA_2019_1.tex",
+      "campi_aggiunti": [
+        "Risposta",
+        "Aiutino",
+        "SoluzioneRedazionale"
+      ]
+    },
+    "contenuti/problemi/SA_2019_2.tex": {
+      "base_sha256": "805e52bf3c76a826aa5557de9a121c436cd95dea538ac7945d07d5a8e1fe183d",
+      "draft_sha256": "5589c756ed26edaeb1b3e112be0f812987134604557f584bf19e25a786ebe293",
+      "url_canonico": "https://raw.githubusercontent.com/Xamog68/ProblemiSSSUP/main/contenuti/problemi/SA_2019_2.tex",
+      "campi_aggiunti": [
+        "Risposta",
+        "Aiutino",
+        "SoluzioneRedazionale"
+      ]
+    },
+    "contenuti/problemi/SA_2019_3.tex": {
+      "base_sha256": "76be7a7bcdfc880b022afe707c47bfbe0d5bd7697e34bf79c4950c80b753c4a0",
+      "draft_sha256": "1531fdf0f6fd683a081db6f1b566659eeec49204e2ff9ffc4d38195a89c622f4",
+      "url_canonico": "https://raw.githubusercontent.com/Xamog68/ProblemiSSSUP/main/contenuti/problemi/SA_2019_3.tex",
+      "campi_aggiunti": [
+        "Risposta",
+        "Aiutino",
+        "SoluzioneRedazionale"
+      ]
+    }
+  }
+}

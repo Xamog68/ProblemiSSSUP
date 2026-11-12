@@ -13,10 +13,99 @@ La Scuola Sant'Anna ha comprato alcuni computer che, una volta installati e mess
 \end{enumerate}
 }
 
-\renewcommand{\Risposta}{}
-\renewcommand{\Aiutino}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-12; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-12; derivato dalla traccia canonica; revisione umana pendente.
+Nel modello di guasti indipendenti e probabilit\`a annua $p$
+condizionata al fatto che il computer sia ancora funzionante, per $0<p\le1$:
+\[
+\text{(a)}\quad \frac{p(1-p)^N}{2-p},\qquad
+\text{(b)}\quad \frac{(1-p)^{N+1}}{2-p},\qquad
+\text{(c)}\quad \frac{p^2(1-p)^3}{3-3p+p^2}.
+\]
+Per $p=0$ tutte e tre le probabilit\`a sono nulle.
+Nella prima formula $(1-p)^0=1$, anche per $p=1$.
+}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-12; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-12; derivato dalla traccia canonica; revisione umana pendente.
+Porre $q=1-p$ e fissare l'anno in cui si guasta il computer entrato
+in funzione per ultimo. Quanti anni devono avere superato senza guasti
+gli altri computer? Per il punto (b), ricordare che ``prima'' significa
+in un anno strettamente precedente. Le somme che si ottengono sono
+serie geometriche.
+}
 \renewcommand{\SoluzioneUfficiale}{}
-\renewcommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-12; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-12; derivato dalla traccia canonica; revisione umana pendente.
+\textbf{Modello probabilistico.}
+Interpretiamo $p$ come la probabilit\`a di guastarsi nel corso di un anno,
+condizionata al fatto che il computer sia funzionante all'inizio di quell'anno.
+Assumiamo inoltre indipendenti le durate di vita dei diversi computer.
+Queste precisazioni, necessarie per i calcoli seguenti, non sono
+esplicitate nel Testo. L'intervallo di un anno e la registrazione dell'anno
+sono intesi nello stesso modello discreto per tutti i computer.
+
+Se $p=0$, nessun computer si guasta: gli eventi richiesti hanno
+probabilit\`a zero. Supponiamo dunque $0<p\le1$ e poniamo $q=1-p$.
+Numeriamo con $0,1,2,\ldots$ gli anni di attivit\`a di un computer,
+comprendendo l'anno di entrata in funzione. Se $X$ \`e il numero
+dell'anno in cui avviene il guasto, allora
+\[
+ \Pr(X=j)=q^j p\quad(j\ge0),\qquad
+ \Pr(X>j)=q^{j+1}.
+\]
+Infatti il computer deve superare senza guasti $j$ anni e guastarsi
+nell'anno successivo, oppure superare tutti i primi $j+1$ anni.
+
+\textbf{(a) Guasto nello stesso anno.}
+Poniamo uguale a $0$ l'anno di installazione di $A$; quello di $B$ \`e $N$.
+Se entrambi si guastano nell'anno $N+j$, le loro et\`a al guasto
+sono rispettivamente $N+j$ e $j$. Per indipendenza e per la
+disgiunzione degli eventi relativi ai diversi anni,
+\[
+ \Pr(\text{stesso anno})
+ =\sum_{j=0}^{\infty}(p q^{N+j})(p q^j)
+ =\frac{p^2q^N}{1-q^2}
+ =\frac{p q^N}{2-p}.
+\]
+
+\textbf{(b) Il computer $B$ si guasta prima di $A$.}
+Se $B$ si guasta nell'anno $N+j$, il computer $A$ deve essere ancora
+funzionante al termine di quello stesso anno. La probabilit\`a richiesta \`e
+quindi
+\[
+ \sum_{j=0}^{\infty}(p q^j)q^{N+j+1}
+ =\frac{p q^{N+1}}{1-q^2}
+ =\frac{q^{N+1}}{2-p}.
+\]
+Il fattore $q$ aggiuntivo distingue questo evento dal caso in cui si
+ammetta anche il guasto nello stesso anno.
+
+\textbf{(c) Tre computer.}
+Il primo anno in cui possono guastarsi tutti e tre \`e il 2019.
+Se il guasto comune avviene nel 2019 pi\`u $j$ anni, le et\`a sono
+$j+2$, $j+1$, $j$. Pertanto
+\[
+ \Pr(\text{stesso anno per tutti e tre})
+ =\sum_{j=0}^{\infty}p^3q^{3j+3}
+ =\frac{p^3q^3}{1-q^3}
+ =\frac{p^2q^3}{1+q+q^2}
+ =\frac{p^2(1-p)^3}{3-3p+p^2}.
+\]
+
+Per $p=1$ ciascun computer si guasta nell'anno di installazione:
+il punto (a) vale $1$ se $N=0$ e $0$ altrimenti, mentre (b) e (c)
+valgono $0$, come nelle formule. Per $p=0$ non si deve utilizzare
+per continuit\`a la formula del punto (b): il suo limite per $p\to0^+$
+\`e $1/2$, ma quando $p=0$ non avviene alcun guasto.
+
+Senza indipendenza, il Testo non determina univocamente le risposte.
+Per esempio, con $N=0$ e $0<p<1$, due durate di vita identiche,
+ciascuna con la distribuzione geometrica sopra indicata, darebbero
+probabilit\`a $1$ di guasto nello stesso anno, anzich\'e $p/(2-p)$.
+}
 \renewcommand{\SoluzioniAlternative}{}
 \renewcommand{\Osservazioni}{}
 \renewcommand{\Commenti}{}

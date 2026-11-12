@@ -21,10 +21,105 @@ Quattro allievi del Sant'Anna (Antonio, Beatrice, Cinzia e Dario, indicati con A
 \end{enumerate}
 }
 
-\renewcommand{\Risposta}{}
-\renewcommand{\Aiutino}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-12; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-12; derivato dalla traccia canonica; revisione umana pendente.
+(a) La squadra $A,C$ ha una strategia vincente se $N$ non \`e divisibile
+per $n+1$; altrimenti ha una strategia vincente la squadra $B,D$.
+
+(b) Vince con certezza la squadra $B,D$: pu\`o far aumentare la somma
+di $22$ a ogni giro completo, fino a lasciare $16$ da raggiungere,
+e poi concludere nel giro successivo con la strategia descritta
+nella soluzione.
+}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-12; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-12; derivato dalla traccia canonica; revisione umana pendente.
+Nel caso (a), cercare una somma costante da ottenere con ogni coppia
+di mosse successive. Nel caso (b), non \`e necessario imporre la stessa
+somma a entrambe le coppie: provare invece a controllare il totale
+di un intero giro $A,B,C,D$. La parte finale, vicino al traguardo,
+va trattata separatamente.
+}
 \renewcommand{\SoluzioneUfficiale}{}
-\renewcommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-12; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-12; derivato dalla traccia canonica; revisione umana pendente.
+\textbf{(a) Limiti tutti uguali.}
+Scriviamo
+\[
+ N=k(n+1)+r,\qquad 0\le r\le n.
+\]
+Se $r>0$, il giocatore $A$ inizia dicendo $r$. Se questo raggiunge gi\`a
+$N$, la sua squadra ha vinto. Altrimenti, dopo ogni mossa $x$ di $B$
+o di $D$, il successivo giocatore della squadra $A,C$ dice $n+1-x$.
+Questa risposta \`e consentita, perch\'e $1\le x\le n$ implica
+$1\le n+1-x\le n$.
+
+La distanza dal traguardo, all'inizio di ogni turno della squadra
+avversaria, \`e cos\`i un multiplo positivo di $n+1$. Ogni coppia
+mossa-risposta la riduce di $n+1$, finch\'e una risposta raggiunge
+esattamente $N$. La squadra $A,C$ vince dunque con certezza.
+
+Se $r=0$, sono invece $B$ e $D$ a rispondere a ogni mossa $x$ di $A$
+o di $C$ con $n+1-x$. Lo stesso argomento prova che vince $B,D$.
+
+\textbf{(b) Limiti $15,10,5,10$ e traguardo $500$.}
+La squadra vincente \`e $B,D$. La strategia ha una fase ripetitiva
+e una chiusura.
+
+\emph{Un giro che aggiunge $22$.}
+Supponiamo che, all'inizio di un turno di $A$, manchino
+$22k+16$ unit\`a, con $k\ge1$. Se $A$ dice $a\in\{1,\ldots,15\}$,
+il giocatore $B$ risponde con
+\[
+ b=\max\{1,11-a\}.
+\]
+Si ha $1\le b\le10$ e, ponendo $u=a+b$,
+\[
+ 11\le u\le16.
+\]
+Infatti per $a\le10$ si ottiene $u=11$; per $a\ge11$ si ha $b=1$
+e quindi $12\le u\le16$.
+
+Dopo che $C$ ha detto $c\in\{1,\ldots,5\}$, il giocatore $D$ dice
+\[
+ d=22-u-c.
+\]
+Poich\'e $12\le u+c\le21$, anche questa mossa \`e consentita:
+$1\le d\le10$. L'intero giro ha aggiunto esattamente $22$.
+Tutte le somme intermedie sono inferiori al traguardo, perch\'e
+all'inizio del giro mancano almeno $38$ unit\`a e il giro ne aggiunge $22$.
+
+Dato che
+\[
+ 500=22\cdot22+16,
+\]
+la squadra $B,D$ ripete questa procedura per $22$ giri, portando
+la somma a $484$ e lasciando il turno ad $A$.
+
+\emph{La chiusura quando mancano $16$.}
+Se $A$ dice $a\ge6$, il giocatore $B$ dice $16-a$, numero compreso
+fra $1$ e $10$, e vince immediatamente.
+
+Se invece $1\le a\le5$, il giocatore $B$ dice $6-a$, numero compreso
+fra $1$ e $5$. Mancano ora $10$ unit\`a e tocca a $C$.
+Qualunque sia la sua scelta $c\in\{1,\ldots,5\}$,
+il giocatore $D$ conclude dicendo $10-c$, numero compreso fra $5$ e $9$.
+La vittoria di $B,D$ \`e pertanto garantita anche in questo caso.
+
+\textbf{Sul possibile superamento di $N$.}
+Il Testo non specifica che cosa succeda se si supera il traguardo.
+Le strategie appena costruite non richiedono una convenzione aggiuntiva:
+a ogni turno degli avversari la distanza da $N$ \`e maggiore della loro
+mossa massima, e le risposte della squadra vincente non superano mai $N$.
+Nel caso (a), gli avversari trovano una distanza almeno $n+1$.
+Nel caso (b), durante i giri completi $A$ trova almeno $38$ e $C$
+almeno $22$; nella chiusura trovano rispettivamente $16$ e, quando
+il turno di $C$ viene raggiunto, $10$.
+Quindi gli avversari non possono nemmeno evitare la sconfitta
+oltrepassando volontariamente il traguardo.
+}
 \renewcommand{\SoluzioniAlternative}{}
 \renewcommand{\Osservazioni}{}
 \renewcommand{\Commenti}{}

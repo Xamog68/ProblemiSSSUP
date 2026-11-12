@@ -16,10 +16,229 @@ $$\sqrt{A}\le CP\qquad\hbox{per ogni figura ottenuta incollando due triangoli}.$
 \end{enumerate}
 }
 
-\renewcommand{\Risposta}{}
-\renewcommand{\Aiutino}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-12; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-12; derivato dalla traccia canonica; revisione umana pendente.
+Nel preliminare $C=1/\sqrt{12\sqrt3}$.
+
+(a) L'incollamento che scambia gli estremi del lato comune produce sempre
+un parallelogramma. Quello speculare produce un triangolo esattamente
+quando il triangolo di partenza \`e rettangolo e si incolla lungo un cateto;
+produce un parallelogramma esattamente quando il triangolo \`e isoscele
+con base sul lato comune.
+
+(b) Il pezzo ottimale \`e un triangolo rettangolo isoscele, incollato
+lungo l'ipotenusa: si ottiene un quadrato e $P_{\min}=4\sqrt{2A}$.
+
+(c) Il pezzo ottimale \`e met\`a di un esagono regolare tagliato lungo
+una diagonale fra vertici opposti: un trapezio isoscele con basi $2a,a$
+e lati obliqui $a$. Si ottiene l'esagono regolare e
+$P_{\min}=4\sqrt[4]{3}\sqrt A$.
+
+Se $A$ \`e l'area del singolo pezzo, le costanti ottimali in (b) e (c)
+sono rispettivamente $1/(4\sqrt2)$ e $1/(4\sqrt[4]{3})$.
+Se invece si usa l'area totale $S=2A$, le costanti nella disuguaglianza
+$\sqrt S\le CP$ sono $1/4$ e $1/\sqrt{8\sqrt3}$.
+}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-12; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-12; derivato dalla traccia canonica; revisione umana pendente.
+Per il preliminare, usare la formula di Erone.
+Nell'incollamento il lato comune scompare dal bordo: il pezzo ottimale
+non deve necessariamente essere quello di perimetro minimo preso da solo.
+Per il punto (c), contare quanti vertici distinti pu\`o avere la figura
+unita e confrontarla con il poligono regolare corrispondente.
+Distinguere sempre l'area del singolo pezzo da quella della figura ottenuta.
+}
 \renewcommand{\SoluzioneUfficiale}{}
-\renewcommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-12; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-12; derivato dalla traccia canonica; revisione umana pendente.
+\textbf{Notazione per le aree.}
+Manteniamo $A$ per l'area di un singolo pezzo e indichiamo con $S=2A$
+l'area della figura ottenuta dall'incollamento.
+Il Testo usa $A$ prima per il pezzo e poi in una disuguaglianza riferita
+alla figura: per evitare equivoci, riporteremo le costanti in entrambe
+le convenzioni. I poligoni sono intesi semplici e non degeneri;
+il perimetro della figura unita non comprende il lato divenuto interno.
+
+\textbf{Preliminare: un solo triangolo.}
+Siano $a,b,c$ i lati e $s=(a+b+c)/2$ il semiperimetro.
+La formula di Erone e la disuguaglianza fra media aritmetica
+e media geometrica danno
+\[
+ A^2=s(s-a)(s-b)(s-c)
+ \le s\left(\frac{s}{3}\right)^3
+ =\frac{s^4}{27}.
+\]
+L'uguaglianza si verifica esattamente quando $s-a=s-b=s-c$,
+cio\`e quando il triangolo \`e equilatero.
+Poich\'e $P=2s$, segue
+\[
+ A\le\frac{P^2}{12\sqrt3},\qquad
+ P_{\min}=\sqrt{12\sqrt3\,A},\qquad
+ C=\frac1{\sqrt{12\sqrt3}}.
+\]
+L'uguaglianza nel triangolo equilatero dimostra anche
+che la costante non pu\`o essere ridotta.
+
+\textbf{(a) Le forme possibili.}
+Chiamiamo $U,V$ gli estremi del lato comune e $W$ il terzo vertice
+del primo triangolo. La seconda copia deve stare nell'altro semipiano
+rispetto alla retta $UV$. A meno di coincidenze dovute a simmetrie,
+le possibilit\`a sono due.
+
+Se gli estremi del lato si corrispondono senza scambiarsi, il nuovo
+vertice $W'$ \`e il riflesso di $W$ rispetto alla retta $UV$.
+La figura ha contorno $U,W,V,W'$. Indicando con $\alpha,\beta$
+gli angoli del triangolo in $U,V$, i corrispondenti angoli dell'unione
+sono $2\alpha,2\beta$. Il contorno \`e dunque un quadrilatero,
+eventualmente concavo, salvo quando uno di questi angoli \`e piatto.
+Questo accade esattamente se $\alpha=\pi/2$ oppure $\beta=\pi/2$:
+il triangolo di partenza \`e rettangolo e il lato comune \`e un cateto.
+In tal caso l'unione \`e un triangolo.
+
+Nella stessa disposizione speculare, le diagonali del quadrilatero
+sono $UV$ e $WW'$. Esse si tagliano a met\`a esattamente quando
+$W$ appartiene all'asse di $UV$, cio\`e quando $UW=VW$.
+Pertanto si ottiene un parallelogramma esattamente nel caso isoscele
+con base $UV$; si tratta allora di un rombo.
+
+Se invece si scambiano gli estremi, la seconda copia si ottiene
+con una rotazione di $180$ gradi intorno al punto medio di $UV$.
+Il nuovo vertice \`e $W''=U+V-W$, in notazione vettoriale.
+Le diagonali $UV$ e $WW''$ hanno lo stesso punto medio,
+quindi l'unione \`e sempre un parallelogramma non degenere.
+Questo esaurisce le possibilit\`a anche quando alcuni lati del
+triangolo sono uguali.
+
+\textbf{(b) Due triangoli.}
+Indichiamo con $a,b$ i due lati del singolo triangolo che non vengono
+incollati e con $\gamma$ l'angolo compreso. Il perimetro esterno \`e
+$P=2(a+b)$, mentre
+\[
+ A=\frac12 ab\sin\gamma
+ \le\frac12 ab
+ \le\frac{(a+b)^2}{8}
+ =\frac{P^2}{32}.
+\]
+Ne segue $P\ge4\sqrt{2A}$.
+Per avere uguaglianza occorrono e bastano $\gamma=\pi/2$ e $a=b$.
+Il triangolo \`e dunque rettangolo isoscele; il lato incollato
+\`e l'ipotenusa e l'unione \`e un quadrato di lato $\sqrt{2A}$.
+
+Con l'area del singolo triangolo la costante ottimale \`e
+$1/(4\sqrt2)$. Con l'area totale $S=2A$ la stessa conclusione
+si scrive $\sqrt S\le P/4$, quindi la costante \`e $1/4$.
+
+\textbf{(c) Due quadrilateri.}
+Usiamo la seguente disuguaglianza poligonale, giustificata in fondo
+alla soluzione: un poligono convesso con al pi\`u $m$ vertici,
+area $B$ e perimetro $Q$, soddisfa
+\[
+ B\le\frac{Q^2}{4m\tan(\pi/m)},
+\]
+con uguaglianza soltanto per il poligono regolare con $m$ lati.
+
+Due quadrilateri incollati lungo un lato hanno al pi\`u sei vertici
+distinti complessivi. Il loro inviluppo convesso $H$ ha quindi
+al pi\`u sei vertici. Passando all'inviluppo convesso, l'area
+non diminuisce e il perimetro non aumenta: ogni rientranza viene
+sostituita da una corda, pi\`u corta della corrispondente spezzata.
+Indicando con $P_H$ il perimetro di $H$, otteniamo
+\[
+ 2A=S\le\operatorname{area}(H)
+ \le\frac{P_H^2}{24\tan(\pi/6)}
+ =\frac{P_H^2}{8\sqrt3}
+ \le\frac{P^2}{8\sqrt3}.
+\]
+Pertanto
+\[
+ P\ge4\sqrt[4]{3}\sqrt A.
+\]
+L'argomento copre anche quadrilateri concavi e ulteriori contatti
+fra i bordi: per il limite inferiore conta soltanto l'inviluppo convesso.
+
+Il limite si raggiunge prendendo un esagono regolare di lato $a$
+e dividendolo con una diagonale fra vertici opposti.
+Le due met\`a sono trapezi isosceli congruenti, con basi $2a,a$,
+lati obliqui $a$ e altezza $\sqrt3\,a/2$.
+L'area di ciascun trapezio \`e
+\[
+ A=\frac{(2a+a)}2\frac{\sqrt3}{2}a
+ =\frac{3\sqrt3}{4}a^2,
+\]
+mentre il perimetro dell'esagono \`e $6a$.
+Scegliendo $a=\sqrt{4A/(3\sqrt3)}$ si ottiene proprio
+$P=4\sqrt[4]{3}\sqrt A$.
+
+Inoltre, l'uguaglianza nelle disuguaglianze precedenti impone
+che l'unione sia l'esagono regolare. Per dividerlo in due quadrilateri
+con un lato in comune bisogna unire due vertici opposti;
+il pezzo ottimale \`e dunque, a meno di similitudini e isometrie,
+il trapezio appena descritto.
+
+Le costanti ottimali sono perci\`o
+\[
+ \frac{\sqrt A}{P}\le\frac1{4\sqrt[4]{3}},
+ \qquad
+ \frac{\sqrt S}{P}\le\frac1{\sqrt{8\sqrt3}}.
+\]
+
+\textbf{Giustificazione della disuguaglianza poligonale.}
+Fissiamo il perimetro $Q>0$ e massimizziamo l'area fra i poligoni
+convessi con al pi\`u $m$ vertici. Un massimo esiste per compattezza,
+dopo aver fissato un vertice per eliminare le traslazioni.
+Un massimo ha esattamente $m$ vertici effettivi: se ne avesse meno,
+si potrebbe sostituire un lato con due segmenti che formano un
+piccolo triangolo esterno. Al variare dell'altezza $h$ di questo
+triangolo, l'area aumenta di un termine proporzionale ad $h$,
+mentre il perimetro aumenta solo di un termine proporzionale ad $h^2$.
+Una riscalatura per ripristinare $Q$ lascerebbe quindi un aumento
+di area per $h$ sufficientemente piccolo. Il poligono massimizzante
+\`e dunque strettamente convesso.
+
+Fissiamo ora i vicini di uno dei suoi vertici e facciamo variare
+quel vertice mantenendo costante la somma dei due lati adiacenti.
+Il luogo delle posizioni possibili \`e un'ellisse con fuochi nei vicini.
+La parte variabile dell'area \`e l'area del triangolo formato dai tre
+vertici. Il massimo locale si trova nel punto dell'ellisse pi\`u lontano
+dalla retta dei fuochi, cio\`e sull'asse del segmento che li unisce.
+I due lati adiacenti sono perci\`o uguali. Ripetendo il ragionamento,
+tutti i lati del poligono sono uguali.
+
+Per $m\ge4$, consideriamo quattro vertici consecutivi e variamo
+i due intermedi, mantenendo fissi gli estremi e le lunghezze
+dei tre lati consecutivi. Anche il quarto lato del quadrilatero,
+che \`e una diagonale del poligono, resta fisso.
+Se $t$ \`e una diagonale di questo quadrilatero e $\theta,\varphi$
+sono i due angoli opposti a $t$, la derivata della sua area rispetto
+a $t$ \`e
+\[
+ \frac{t}{2}\bigl(\cot\theta+\cot\varphi\bigr).
+\]
+Per un singolo triangolo la formula segue derivando il teorema
+del coseno e l'espressione dell'area; le due derivate si sommano.
+Le variazioni sono ammissibili localmente grazie alla stretta convessit\`a.
+Al massimo la derivata \`e nulla, dunque
+$\sin(\theta+\varphi)=0$ e quindi $\theta+\varphi=\pi$.
+I quattro vertici sono perci\`o conciclici.
+Applicando il ragionamento a gruppi consecutivi che hanno tre vertici
+in comune, tutti i vertici del poligono appartengono alla stessa
+circonferenza. Per $m=3$ questa propriet\`a \`e automatica.
+
+Un poligono convesso equilatero e ciclico \`e regolare:
+le corde uguali individuano archi consecutivi uguali. Non pu\`o
+comparire un arco maggiore al posto di quello minore, perch\'e,
+assieme agli altri $m-1$ archi, la somma supererebbe $2\pi$.
+Se il lato \`e $Q/m$, l'apotema \`e
+$Q/(2m\tan(\pi/m))$. L'area massima \`e pertanto
+\[
+ \frac12 Q\frac{Q}{2m\tan(\pi/m)}
+ =\frac{Q^2}{4m\tan(\pi/m)},
+\]
+come richiesto, con uguaglianza precisamente nel caso regolare.
+}
 \renewcommand{\SoluzioniAlternative}{}
 \renewcommand{\Osservazioni}{}
 \renewcommand{\Commenti}{}
