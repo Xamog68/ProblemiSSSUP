@@ -18,10 +18,89 @@ $$\lim_{n\to\infty}p_{2n+1}.$$
 \end{enumerate}
 }
 
-\renewcommand{\Risposta}{}
-\renewcommand{\Aiutino}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-12; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-12; derivato dalla traccia canonica; revisione umana pendente.
+Assumendo $a,b$ indipendenti e uniformi in $[0,1]$,
+\[
+ p_3=\frac4{15\sqrt3},\qquad
+ p_n=\begin{cases}
+ 0,&n\ \text{pari},\\[2pt]
+ \displaystyle\frac{(n-1)^2}{(2n-1)n^{\,n/(n-1)}},&n\ \text{dispari},
+ \end{cases}
+ \qquad \lim_{n\to\infty}p_{2n+1}=\frac12.
+\]
+}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-12; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-12; derivato dalla traccia canonica; revisione umana pendente.
+Studiare gli zeri della derivata e distinguere la parit\`a del grado.
+Nel caso dispari, esprimere il valore del minimo locale in funzione
+di $a$: la condizione richiesta diventa una disuguaglianza fra $a$ e $b$.
+La probabilit\`a \`e l'area di una regione del quadrato $[0,1]^2$.
+}
 \renewcommand{\SoluzioneUfficiale}{}
-\renewcommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-12; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-12; derivato dalla traccia canonica; revisione umana pendente.
+\textbf{Modello probabilistico.}
+Interpretiamo ``scelti a caso'' nel senso che $a$ e $b$ sono
+indipendenti e uniformemente distribuiti in $[0,1]$.
+Questa convenzione, non esplicitata nel Testo, equivale a scegliere
+uniformemente il punto $(a,b)$ nel quadrato unitario.
+
+\textbf{Grado pari.}
+Se $n$ \`e pari, $P_n'(x)=nx^{n-1}-a$ ha un solo zero.
+Il polinomio \`e strettamente decrescente prima di quel punto e
+strettamente crescente dopo: ha al pi\`u due radici reali distinte.
+Quindi $p_n=0$ per ogni $n$ pari.
+
+\textbf{Grado dispari.}
+Supponiamo $n\ge3$ dispari e $a>0$, e poniamo
+\[
+ u=\left(\frac an\right)^{1/(n-1)}.
+\]
+Gli zeri della derivata sono $-u$ e $u$, rispettivamente un massimo
+locale e un minimo locale. Usando $a=nu^{n-1}$ si ottiene
+\[
+ P_n(-u)=b+(n-1)u^n>0,\qquad
+ P_n(u)=b-(n-1)u^n.
+\]
+Poich\'e il polinomio tende a $-\infty$ a sinistra e a $+\infty$
+a destra, le tre radici reali sono distinte esattamente quando
+\[
+ 0\le b<g_n(a):=(n-1)\left(\frac an\right)^{n/(n-1)}.
+\]
+L'uguaglianza produce una radice multipla e va esclusa.
+Il caso $a=0$ non produce tre radici distinte. Queste frontiere hanno
+comunque area nulla. Inoltre
+$g_n(a)\le(n-1)/n^{n/(n-1)}<1$ per $0\le a\le1$.
+
+La probabilit\`a cercata \`e dunque
+\[
+ \begin{split}
+ p_n&=\int_0^1g_n(a)\,da\\
+ &=\frac{n-1}{n^{n/(n-1)}}
+       \int_0^1a^{n/(n-1)}\,da
+  =\frac{(n-1)^2}{(2n-1)n^{n/(n-1)}}.
+ \end{split}
+\]
+Ponendo $n=3$ si ricava $p_3=4/(15\sqrt3)$, che risponde al punto (a).
+
+\textbf{Limite lungo i gradi dispari.}
+Riscriviamo la formula come
+\[
+ p_n=\frac{(1-1/n)^2}{2-1/n}\,n^{-1/(n-1)}.
+\]
+Il primo fattore tende a $1/2$ e il secondo tende a $1$, perch\'e
+$\log n/(n-1)\to0$. Pertanto $p_{2n+1}\to1/2$.
+La successione completa $(p_n)$ non converge, essendo nulla ai gradi pari.
+
+Senza la convenzione probabilistica iniziale, la risposta non \`e
+univoca: per esempio la scelta dipendente $b=a$, con $a$ uniforme,
+ha entrambe le marginali uniformi ma non soddisfa mai
+$b<g_n(a)$ per $a>0$, e d\`a probabilit\`a zero.
+}
 \renewcommand{\SoluzioniAlternative}{}
 \renewcommand{\Osservazioni}{}
 \renewcommand{\Commenti}{}

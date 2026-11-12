@@ -12,10 +12,145 @@ Un'aula deve essere riconfigurata per il rientro durante una pandemia e si decid
 \end{enumerate}
 }
 
-\renewcommand{\Risposta}{}
-\renewcommand{\Aiutino}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-12; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-12; derivato dalla traccia canonica; revisione umana pendente.
+\textbf{Risultati parziali.}
+\begin{enumerate}
+\item[(a)] Per $n=1,2$ la risposta \`e no; per ogni intero $n\ge7$
+la risposta \`e s\`i. I casi $n=3,4,5,6$ non sono risolti in questa bozza.
+\item[(b)] Si possono sistemare $13$ studenti in un'aula $4\times9$ m,
+con una striscia libera larga $2$ m. Per il massimo globale $M_*$ si ha
+$13\le M_*\le14$; il limite superiore usa la disuguaglianza di Oler,
+richiamata nella soluzione. Non \`e dimostrata l'ottimalit\`a della
+configurazione da $13$ studenti, n\'e classificata l'aula ottimale.
+\end{enumerate}
+}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-12; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-12; derivato dalla traccia canonica; revisione umana pendente.
+Confrontare la griglia quadrata con file sfalsate: fra due file consecutive
+si pu\`o ridurre la distanza verticale mantenendo quella fra studenti.
+Per l'aula rettangolare, fissare prima quale lato ospita la striscia e
+scrivere le dimensioni del rettangolo rimasto. Una costruzione fornisce
+un limite inferiore, non dimostra da sola che nessun'altra disposizione
+possa contenere pi\`u studenti.
+}
 \renewcommand{\SoluzioneUfficiale}{}
-\renewcommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-12; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-12; derivato dalla traccia canonica; revisione umana pendente.
+\textbf{Ambito della bozza.}
+Assumiamo $n$ intero positivo e interpretiamo la striscia del punto (b)
+come una fascia rettangolare lungo un intero lato dell'aula, senza studenti.
+Il Testo chiede una classificazione e un massimo esatti: i risultati
+seguenti sono parziali e non vengono presentati come una risposta completa.
+
+\textbf{(a) Due impossibilit\`a e una costruzione generale.}
+Per $n=1$ suddividiamo l'aula in quattro quadrati di lato $1$ m.
+Il loro diametro \`e $\sqrt2<2$, quindi ogni quadrato contiene al pi\`u
+uno studente: non si possono superare $4$ studenti.
+Per $n=2$ suddividiamo il quadrato di lato $4$ m in nove quadrati
+di lato $4/3$ m, ciascuno di diametro $4\sqrt2/3<2$.
+Non si possono quindi superare $9$ studenti.
+I punti sui bordi della suddivisione si assegnano a una sola delle
+celle adiacenti; le stime sui diametri restano valide.
+Le griglie regolari raggiungono entrambi i limiti.
+
+Per $n\ge7$ poniamo $n+2$ file orizzontali alle quote
+\[
+ y_j=j\sqrt3,\qquad j=0,\ldots,n+1.
+\]
+Nelle file di indice pari mettiamo studenti alle ascisse
+$0,2,\ldots,2n$, e nelle file dispari alle ascisse
+$1,3,\ldots,2n-1$. La costruzione entra nel quadrato, perch\'e
+\[
+ (n+1)\sqrt3\le2n\qquad(n\ge7).
+\]
+Nella stessa fila le distanze sono almeno $2$; fra file consecutive
+la distanza minima \`e $\sqrt{1+3}=2$; fra file non consecutive
+la sola distanza verticale \`e almeno $2\sqrt3>2$.
+Il numero di studenti \`e
+\[
+ n(n+2)+\left\lceil\frac{n+2}{2}\right\rceil
+ =(n+1)^2+\left\lceil\frac{n+2}{2}\right\rceil-1
+ >(n+1)^2.
+\]
+Questa dimostrazione non tratta i casi $n=3,4,5,6$.
+Il fatto che la medesima costruzione non vi entri non \`e
+una dimostrazione di impossibilit\`a.
+
+\textbf{(b) Una configurazione da tredici studenti.}
+Consideriamo l'aula $[0,4]\times[0,9]$, di area $36$ m$^2$.
+Disponiamo cinque file alle quote
+\[
+ 0,\quad\sqrt3,\quad2\sqrt3,\quad3\sqrt3,\quad4\sqrt3.
+\]
+Le tre file di indice pari hanno ascisse $0,2,4$ e le due dispari
+ascisse $1,3$. In tutto ci sono $3+2+3+2+3=13$ studenti,
+con distanze reciproche almeno $2$ per lo stesso controllo del punto (a).
+Poich\'e $4\sqrt3<7$, la striscia $[0,4]\times[7,9]$ \`e libera
+anche sul suo bordo inferiore e ha larghezza $2$ m.
+
+La stessa disposizione lascia fra l'ultima fila e la parete superiore
+una distanza $9-4\sqrt3\simeq2.0718$ m. Si pu\`o quindi allargare
+la striscia fino a tale valore se si ammettono studenti sul bordo
+che la separa dalla zona dei banchi; altrimenti si pu\`o scegliere
+qualunque larghezza strettamente minore. Non \`e una misura
+massimizzata fra tutte le configurazioni possibili.
+
+\textbf{Una stima superiore elementare.}
+Sia $a$ la lunghezza del lato lungo cui si trova la striscia;
+l'altro lato \`e $36/a$, con $4\le a\le9$. Poich\'e la fascia \`e
+larga almeno $2$, tutti gli studenti stanno in un rettangolo di lati
+$a$ e $36/a-2$, eventualmente traslato.
+I dischi di raggio $1$ centrati negli studenti hanno interni disgiunti.
+La loro unione \`e contenuta nell'allargamento di questo rettangolo
+di distanza $1$, che ha area
+\[
+ a(36/a-2)+2(a+36/a-2)+\pi
+ =32+\frac{72}{a}+\pi\le50+\pi.
+\]
+Se gli studenti sono $m$, segue $m\pi\le50+\pi$, dunque $m\le16$.
+Questa \`e una stima autonoma ma non ottimale.
+
+\textbf{Miglioramento mediante un risultato esterno.}
+La disuguaglianza di Oler afferma che, per $m$ punti a distanze
+reciproche almeno $2$ in un insieme convesso compatto di area $A$
+e perimetro $P$,
+\[
+ m\le\frac{A}{2\sqrt3}+\frac P4+1.
+\]
+Questo risultato esterno viene qui utilizzato, non dimostrato;
+una dimostrazione \`e in J.~H.~Folkman e R.~L.~Graham,
+\emph{A Packing Inequality for Compact Convex Subsets of the Plane},
+Canadian Mathematical Bulletin \textbf{12} (1969), 745--752,
+DOI: 10.4153/CMB-1969-096-7. Il loro enunciato per distanza $1$
+si adatta qui mediante un cambiamento di scala di fattore $2$.
+
+Applicandolo al rettangolo precedente otteniamo
+\[
+ m\le F(a):=\frac{18-a}{\sqrt3}+\frac a2+\frac{18}{a},
+ \qquad 4\le a\le9.
+\]
+Poich\'e $F''(a)=36/a^3>0$, il massimo di $F$ sull'intervallo
+si trova a uno degli estremi. Inoltre
+\[
+ F(4)=\frac{13}{2}+\frac{14}{\sqrt3}<15,
+ \qquad
+ F(9)=\frac{13}{2}+3\sqrt3<F(4).
+\]
+Essendo $m$ intero, si ha $m\le14$. Insieme alla costruzione:
+\[
+ \boxed{13\le M_*\le14.}
+\]
+
+\textbf{Questioni non risolte in questa bozza.}
+Restano la classificazione di (a) per $n=3,4,5,6$ e la scelta fra
+$13$ e $14$ nel punto (b), con la conseguente determinazione delle
+aule ottimali e delle fasce associate. In particolare, non viene
+affermato che $4\times9$ sia l'aula ottimale.
+}
 \renewcommand{\SoluzioniAlternative}{}
 \renewcommand{\Osservazioni}{}
 \renewcommand{\Commenti}{}

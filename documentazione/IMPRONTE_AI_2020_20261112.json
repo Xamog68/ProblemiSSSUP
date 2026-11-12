@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-12",
+  "author": "ChatGPT (OpenAI)",
+  "status": "BOZZE AI DA VERIFICARE",
+  "base": "ProblemiSSSUP_testi_2014_2020_revisionati.zip; contenuto confrontato con main tramite lettura web, non hash remoto",
+  "files": {
+    "contenuti/problemi/SA_2020_1.tex": {
+      "base_sha256": "6459a59b7b4f6d36c87a94d5ef01ef78f85fc082658d7bf17d45cbe885d70e33",
+      "output_sha256": "b453534da681b27c989f9d59312c891145f04de2658f0eb2d630d5652861fd9a"
+    },
+    "contenuti/problemi/SA_2020_2.tex": {
+      "base_sha256": "1c4875890cf7eaa1284739afca4fefc2837b10e43444abf4f36e4731a53ab81e",
+      "output_sha256": "061eb09c5e2f4e878c83807bd64d30cfc82c412e5a6644095cc94f8d9f9facc9"
+    },
+    "contenuti/problemi/SA_2020_3.tex": {
+      "base_sha256": "025f45fef2aeb921bc16caf214c1011fb90e7d0d0425f9fffc89774da470f90f",
+      "output_sha256": "fefcee4ae5d9a35c2f719bd3e49fc033263e30d5a4a256d3946299fd48b264bf"
+    }
+  }
+}

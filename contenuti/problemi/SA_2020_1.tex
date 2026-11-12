@@ -99,10 +99,219 @@ Un albero del Sant'Anna è cresciuto secondo le seguenti regole:
 \end{enumerate}
 }
 
-\renewcommand{\Risposta}{}
-\renewcommand{\Aiutino}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-12; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-12; derivato dalla traccia canonica; revisione umana pendente.
+La risposta dipende dal significato di albero infinito. Ponendo il tronco
+fra $(0,0)$ e $(0,1)$ e includendo i punti limite dei rami:
+\begin{enumerate}
+\item[(a)] $\rho\in[1/\sqrt2,1]$.
+\item[(b)] $H(\rho)=(1+\rho/\sqrt2)/(1-\rho^2)$ per $0\le\rho<1$;
+per $\rho=1$ l'altezza non \`e limitata.
+\item[(c)] Ogni punto $(x,y)$ del piano appartiene a un albero. Una scelta \`e
+\[
+ M=\max\{1,|x|,|y-1|\},\qquad
+ \alpha=\pi,\qquad \rho=\sqrt{\frac{M}{M+1}}.
+\]
+\end{enumerate}
+Se si considerano soltanto i segmenti di profondit\`a finita, in (a)
+l'estremo $1/\sqrt2$ va escluso e in (b), per $0<\rho<1$, $H$ \`e un
+supremo non raggiunto. Anche per l'unione dei rami finiti ogni punto del
+piano appartiene a qualche albero: la soluzione fornisce una costruzione
+separata, che in generale usa un diverso valore di $\rho$.
+}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-12; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-12; derivato dalla traccia canonica; revisione umana pendente.
+Prima di tutto, distinguere l'unione dei rami dalla sua chiusura.
+Con $\alpha=\pi$ i rami sono alternativamente orizzontali e verticali:
+separare quindi le due coordinate e sommare serie geometriche.
+Con $\alpha=\pi/2$, quali sono i maggiori incrementi verticali possibili
+alle profondit\`a pari e dispari? Per (c), osservare che una serie
+geometrica con segni variabili pu\`o riempire un intervallo.
+}
 \renewcommand{\SoluzioneUfficiale}{}
-\renewcommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-12; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-12; derivato dalla traccia canonica; revisione umana pendente.
+\textbf{Precisazione del modello.}
+Fissiamo il tronco da $O=(0,0)$ a $(0,1)$ e il terreno sulla retta $y=0$.
+Interpretiamo la ramificazione come due rotazioni di $\pm\alpha/2$
+rispetto alla direzione del ramo precedente, coerentemente con la figura.
+Non tronchiamo i rami quando si intersecano o attraversano il terreno.
+Indichiamo con $T_{\alpha,\rho}$ l'unione di tutti i segmenti di
+profondit\`a finita e con $\overline T_{\alpha,\rho}$ la sua chiusura.
+Il Testo non specifica quale dei due insiemi chiami ``albero''.
+La distinzione cambia alcune risposte: la manteniamo esplicita.
+
+\textbf{(a) Contatto con il terreno.}
+Per $\alpha=\pi$ i rami di profondit\`a dispari sono orizzontali,
+quelli di profondit\`a pari sono verticali. Per $0\le\rho<1$, dopo
+il tronco, la somma delle lunghezze dei rami verticali lungo un percorso \`e
+\[
+ B=\rho^2+\rho^4+\rho^6+\cdots=\frac{\rho^2}{1-\rho^2}.
+\]
+Ogni punto successivo al tronco ha dunque ordinata almeno $1-B$.
+Se $\rho<1/\sqrt2$, questa quantit\`a \`e positiva: nessun ramo,
+nemmeno al limite, tocca il terreno fuori dal tronco.
+
+Si pu\`o scegliere un percorso che vada sempre a destra nei tratti
+orizzontali e sempre verso il basso in quelli verticali. Se
+$1/\sqrt2<\rho<1$, una somma finita $\rho^2+\cdots+\rho^{2k}$
+supera $1$: un segmento verticale incontra quindi il terreno con
+ascissa positiva. Per $\rho=1$ basta il ramo di profondit\`a $2$,
+che va da $(1,1)$ a $(1,0)$.
+
+Quando $\rho=1/\sqrt2$, ogni somma verticale finita \`e minore di $1$,
+ma il percorso appena descritto converge a
+\[
+ \left(\frac{\rho}{1-\rho^2},\,
+       1-\frac{\rho^2}{1-\rho^2}\right)=(\sqrt2,0).
+\]
+Questo punto appartiene alla chiusura, non all'unione dei segmenti.
+Pertanto la condizione \`e $\rho\ge1/\sqrt2$ per l'albero chiuso e
+$\rho>1/\sqrt2$ per l'unione dei rami finiti.
+
+\textbf{(b) Altezza.}
+Ora ogni svolta \`e di $\pi/4$. Alle profondit\`a pari la direzione
+forma con la verticale un multiplo di $\pi/2$, quindi l'incremento
+verticale \`e al pi\`u $\rho^{2j}$. Alle profondit\`a dispari forma
+un multiplo dispari di $\pi/4$, quindi l'incremento \`e al pi\`u
+$\rho^{2j+1}/\sqrt2$. Anche i punti interni ai segmenti rispettano
+il limite ottenuto sommando questi incrementi positivi.
+Per $0\le\rho<1$ segue
+\[
+ H\le\sum_{j=0}^{\infty}\rho^{2j}
+      +\frac1{\sqrt2}\sum_{j=0}^{\infty}\rho^{2j+1}
+   =\frac{1+\rho/\sqrt2}{1-\rho^2}.
+\]
+Alternando una svolta a destra e una a sinistra si ottengono
+successivamente un ramo diagonale verso l'alto e un ramo verticale
+verso l'alto. Tutti gli incrementi raggiungono cos\`i il rispettivo
+limite: le ordinate dei vertici tendono al valore indicato.
+Per $0<\rho<1$ nessuna somma finita raggiunge la somma infinita;
+perci\`o si tratta di un supremo su $T_{\pi/2,\rho}$ e di un massimo
+su $\overline T_{\pi/2,\rho}$. Per $\rho=0$ il massimo \`e $1$,
+mentre per $\rho=1$ lo stesso percorso sale senza limite.
+
+\textbf{(c) Un albero chiuso che contiene un punto assegnato.}
+Dimostriamo prima un fatto sulle serie con segni. Se $1/2\le r<1$, allora
+\[
+ \left\{\sum_{j=0}^{\infty}\varepsilon_j r^j:
+              \varepsilon_j\in\{-1,1\}\right\}
+ =\left[-\frac1{1-r},\frac1{1-r}\right].
+\]
+Posto $I=[-1/(1-r),1/(1-r)]$, i due intervalli $-1+rI$ e $1+rI$
+ricoprono $I$: i loro estremi esterni sono quelli di $I$ e i loro
+estremi interni si sovrappongono proprio quando $r\ge1/2$.
+Dato $z\in I$, si pu\`o dunque scegliere $\varepsilon_0$ con
+$z=\varepsilon_0+rz_1$ e $z_1\in I$, e ripetere la scelta.
+Dopo $m$ passi il resto ha modulo al pi\`u $r^m/(1-r)$, che tende a zero.
+Questo dimostra il fatto e fornisce un algoritmo per scegliere i segni.
+
+Torniamo ad $\alpha=\pi$, con $1/\sqrt2\le\rho<1$, e poniamo $r=\rho^2$.
+Dopo il tronco, a ogni tratto orizzontale si pu\`o scegliere liberamente
+destra o sinistra, e a ogni tratto verticale alto o basso. Le scelte
+sono indipendenti in senso geometrico: entrambe le direzioni
+perpendicolari sono disponibili a ogni bivio. Le coordinate dei punti
+limite dei percorsi sono quindi
+\[
+ x=\rho\sum_{j=0}^{\infty}\varepsilon_j r^j,
+ \qquad
+ y=1+r\sum_{j=0}^{\infty}\eta_j r^j,
+ \qquad \varepsilon_j,\eta_j\in\{-1,1\}.
+\]
+Applicando il fatto precedente a entrambe le coordinate, si ottiene
+l'intero rettangolo
+\[
+ R_\rho=
+ \left[-\frac{\rho}{1-\rho^2},\frac{\rho}{1-\rho^2}\right]
+ \times
+ \left[1-\frac{\rho^2}{1-\rho^2},1+\frac{\rho^2}{1-\rho^2}\right].
+\]
+Tutti i rami finiti sono contenuti nello stesso rettangolo, compreso
+il tronco perch\'e $\rho^2/(1-\rho^2)\ge1$.
+Pertanto $\overline T_{\pi,\rho}=R_\rho$.
+
+Dato ora $(x,y)\in\mathbb R^2$, scegliamo
+\[
+ M=\max\{1,|x|,|y-1|\},\qquad \rho=\sqrt{\frac{M}{M+1}}.
+\]
+Allora $1/\sqrt2\le\rho<1$ e
+\[
+ \frac{\rho^2}{1-\rho^2}=M,
+ \qquad
+ \frac{\rho}{1-\rho^2}=\sqrt{M(M+1)}\ge M.
+\]
+Il punto assegnato appartiene dunque a $R_\rho$, che \`e l'albero
+chiuso di parametri $(\pi,\rho)$.
+
+\textbf{(c), complemento: appartenenza a un ramo finito.}
+Anche senza aggiungere i punti limite, ogni punto del piano appartiene
+a qualche albero. La formula precedente non basta a provarlo;
+forniamo una costruzione distinta, sempre con $\alpha=\pi$.
+
+Per $\rho=1$, l'unione dei rami contiene l'intera griglia delle rette
+$x\in\mathbb Z$ e $y\in\mathbb Z$. Infatti, dopo $k$ coppie di passi
+orizzontale--verticale si raggiunge ogni nodo intero $(u,v)$ con
+$u\equiv v-1\equiv k\pmod2$ e $|u|,|v-1|\le k$.
+Facendo crescere $k$ si raggiungono tutti i nodi con $u+v$ dispari;
+da essi partono entrambi i segmenti orizzontali unitari, e dai loro
+estremi entrambi i segmenti verticali unitari. Si ottengono quindi
+tutti i lati della griglia. Se almeno una coordinata del punto
+assegnato \`e intera, la scelta $\rho=1$ risolve il problema.
+
+Negli altri casi possiamo supporre $x>0$, grazie alla simmetria
+rispetto all'asse verticale. Scegliamo un intero pari $Y_0$ con
+$|y-Y_0|<1$, e poniamo $b=Y_0-1$ e $q=|b|$. Il numero $q$ \`e dispari.
+Per un intero $k$ grande, consideriamo un percorso con $2k$ tratti
+orizzontali, i primi $k$ verso destra e i successivi $k$ verso sinistra.
+La loro somma algebrica \`e
+\[
+ X_k(\rho)=\rho\,\frac{(1-\rho^{2k})^2}{1-\rho^2},
+ \qquad 0<\rho<1,
+\]
+con estensione continua $X_k(1)=0$. Posto $\rho_0=1-x/k^2$, per
+$k$ sufficientemente grande si ha $0<\rho_0<1$ e
+\[
+ X_k(\rho_0)\longrightarrow 2x>x.
+\]
+Per verificare il limite basta usare
+$1-\rho_0^2\sim2x/k^2$ e $1-\rho_0^{2k}\sim2x/k$.
+Per il teorema dei valori intermedi esiste dunque
+\[
+ \rho_k\in(1-x/k^2,1)\quad\hbox{con}\quad X_k(\rho_k)=x.
+\]
+
+Restano da scegliere i versi dei tratti verticali. Fra i primi
+$2k-1$ scegliamo i primi $q$ con segno $\operatorname{sgn}(b)$,
+e quelli rimasti a coppie con segni $+1,-1$.
+Il numero dei tratti rimasti \`e pari. Per $\rho=1$ l'ordinata
+raggiunta sarebbe esattamente $1+b=Y_0$.
+Per $\rho=\rho_k$, posto $r=\rho_k^2$, l'ordinata $Y_k$ all'inizio
+dell'ultimo tratto verticale soddisfa
+\[
+ |Y_k-Y_0|\le(1-r)\left(\frac{q(q+1)}2+k\right)\longrightarrow0.
+\]
+Infatti $1-r^j\le j(1-r)$ controlla i primi $q$ termini;
+ciascuna coppia successiva vale $r^j-r^{j+1}$ e ha modulo
+al pi\`u $1-r$. Inoltre $1-r<2x/k^2$.
+L'ultimo tratto verticale ha lunghezza $\rho_k^{4k}\to1$.
+Poich\'e $|y-Y_0|<1$, per $k$ abbastanza grande risulta
+\[
+ |y-Y_k|<\rho_k^{4k}.
+\]
+Scegliendo l'ultimo tratto verso l'alto o verso il basso, secondo
+il segno di $y-Y_k$, esso contiene il punto $(x,y)$.
+Per $x<0$ si riflettono tutte le scelte orizzontali.
+
+La costruzione \`e finita: si aumenta $k$, si sceglie una radice di
+$X_k(\rho)=|x|$ nell'intervallo indicato e si verifica l'ultima
+disuguaglianza. Le stime dimostrano che per $k$ sufficientemente grande
+il procedimento riesce. Il punto appartiene allora a un ramo di
+profondit\`a $4k$, non soltanto alla chiusura dell'albero.
+Non viene cercato il valore minimo della profondit\`a.
+}
 \renewcommand{\SoluzioniAlternative}{}
 \renewcommand{\Osservazioni}{}
 \renewcommand{\Commenti}{}
