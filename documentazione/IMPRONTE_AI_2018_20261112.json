@@ -1,0 +1,32 @@
+[
+  {
+    "file": "contenuti/problemi/SA_2018_1.tex",
+    "sha256_prima": "82622a399da674723ef0b372a2688dc7eacbe46199fe13f7ef83d69cafde999e",
+    "sha256_dopo": "b539b7510d5e97ce08bc6200ab33b59b898a53a5d6623847b46f084c0cdb4ccc",
+    "campi_aggiunti": [
+      "Risposta",
+      "Aiutino",
+      "SoluzioneRedazionale"
+    ]
+  },
+  {
+    "file": "contenuti/problemi/SA_2018_2.tex",
+    "sha256_prima": "427ab12cce4c62278107a7f482d0d2ce615dbe9b1c67c82baa3b51154f616d19",
+    "sha256_dopo": "f5e9cbe86e1660de9617ebc4f724fd4a2f61b3872666554c955e23ea6886cd8c",
+    "campi_aggiunti": [
+      "Risposta",
+      "Aiutino",
+      "SoluzioneRedazionale"
+    ]
+  },
+  {
+    "file": "contenuti/problemi/SA_2018_3.tex",
+    "sha256_prima": "c6f4fd390a5ff5a51e9283bcd9d51601c095813e218e40ba613cb6cf240601a5",
+    "sha256_dopo": "0dfba699ade0f4c87069e8bfaaf72c57bf881f73a0d520b04eb82e3f8bf36477",
+    "campi_aggiunti": [
+      "Risposta",
+      "Aiutino",
+      "SoluzioneRedazionale"
+    ]
+  }
+]

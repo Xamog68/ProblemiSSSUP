@@ -19,10 +19,106 @@ Lo stato di Santannaland utilizza come moneta nazionale il Piso e la Banca Centr
 \end{enumerate}
 }
 
-\renewcommand{\Risposta}{}
-\renewcommand{\Aiutino}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-12; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-12; derivato dalla traccia canonica; revisione umana pendente.
+Assumendo tagli interi positivi, (a) le due scelte ottimali sono
+$1$ e $10$ Piso, oppure $1$ e $11$ Piso. In entrambi i casi
+il numero medio minimo di banconote \`e $91/10=9{,}1$.
+
+(b) Per $N\ge2$ un taglio deve essere $1$; il secondo \`e un intero
+$d\in\{2,\ldots,N\}$ che minimizza
+\[
+ M_N(d)=\frac1N\sum_{s=1}^{N}
+ \left(\left\lfloor\frac{s}{d}\right\rfloor+s-d\left\lfloor\frac{s}{d}\right\rfloor\right).
+\]
+La formula esplicita nella soluzione permette il confronto esatto
+per ogni $N$, includendo eventuali ex aequo. Per $N=1$ basta il taglio $1$;
+il secondo taglio, maggiore di $1$, non viene utilizzato.
+}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-12; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-12; derivato dalla traccia canonica; revisione umana pendente.
+Quale taglio \`e obbligatorio per pagare un bene da un Piso?
+Fissato l'altro taglio $d$, scrivere ciascun prezzo come $s=ad+b$,
+con $0\le b<d$. Per calcolare la media, raggruppare i prezzi
+in blocchi di $d$ valori consecutivi. Non dare per scontato
+che il taglio ottimale sia unico.
+}
 \renewcommand{\SoluzioneUfficiale}{}
-\renewcommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-12; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-12; derivato dalla traccia canonica; revisione umana pendente.
+\textbf{Convenzione sui tagli.}
+Interpretiamo i tagli come numeri interi positivi di Piso e i prezzi
+$1,\ldots,N$ come equiprobabili. L'integralit\`a dei tagli, usuale
+in questa lettura del problema, non \`e esplicitata nel Testo.
+
+Per poter pagare esattamente un Piso, uno dei due tagli deve essere $1$.
+Indichiamo l'altro con $d\ge2$. Per pagare $s$, conviene usare il maggior
+numero possibile di banconote da $d$: sostituire una di queste con $d$
+banconote da $1$ aumenta infatti il numero di banconote di $d-1$.
+Scrivendo $s=ad+b$, con $0\le b<d$, il numero minimo \`e quindi $a+b$.
+
+\textbf{Formula per la somma.}
+Poniamo $N=qd+r$, con $0\le r<d$, e indichiamo con $S_N(d)$ la somma
+dei numeri minimi di banconote per tutti i prezzi da $1$ a $N$.
+Poich\'e
+\[
+ \sum_{s=1}^{N}\left\lfloor\frac{s}{d}\right\rfloor
+ =\frac{dq(q-1)}2+q(r+1),
+\]
+si ottiene
+\[
+ \boxed{
+ S_N(d)=\frac{N(N+1)}2
+ -(d-1)\left(\frac{dq(q-1)}2+q(r+1)\right),
+ \qquad M_N(d)=\frac{S_N(d)}N.
+ }
+\]
+Nella somma dei quozienti ci sono $d$ occorrenze di ciascun valore
+$0,\ldots,q-1$ e $r+1$ occorrenze di $q$, se si include anche il prezzo
+$0$, che non altera il risultato.
+
+\textbf{(a) Il caso $N=100$.}
+Basta considerare $2\le d\le100$: un taglio maggiore di $100$ non viene
+mai usato e d\`a media $50{,}5$.
+Se $d\le5$, il numero di banconote per pagare $s$ \`e almeno $s/d$,
+e quindi
+\[
+ S_{100}(d)\ge\frac{5050}{d}\ge1010.
+\]
+Se $d\ge21$, ogni possibile resto modulo $d$ compare al massimo cinque
+volte fra i prezzi $1,\ldots,100$. La somma dei cento resti \`e pertanto
+almeno $5(0+1+\cdots+19)=950$; a maggior ragione
+$S_{100}(d)\ge950$.
+Restano soltanto quindici valori, per i quali la formula precedente d\`a
+\[
+\begin{array}{c|rrrrrrrr}
+ d&6&7&8&9&10&11&12&13\\\hline
+ S_{100}(d)&1050&976&934&914&910&910&914&934
+\end{array}
+\]
+\[
+\begin{array}{c|rrrrrrr}
+ d&14&15&16&17&18&19&20\\\hline
+ S_{100}(d)&955&976&1000&1050&1055&1090&1155.
+\end{array}
+\]
+Il minimo \`e $910$, raggiunto soltanto per $d=10$ e $d=11$.
+La media minima \`e dunque $910/100=9{,}1$.
+
+\textbf{(b) Il caso generale.}
+Per $N\ge2$ non serve considerare $d>N$, perch\'e il taglio non verrebbe
+usato, mentre $d=2$ migliora strettamente tale scelta.
+La formula di $S_N(d)$ fornisce quindi un procedimento finito ed esatto:
+per ciascun $d=2,\ldots,N$ si calcolano quoziente $q$, resto $r$ e
+$S_N(d)$, e si conservano tutti i valori di $d$ che realizzano il minimo.
+Questa \`e una caratterizzazione esatta per ogni $N$, non un'approssimazione
+basata sull'arrotondamento di una radice quadrata.
+L'ottimo pu\`o non essere unico, come gi\`a mostra il caso $N=100$.
+Per $N=1$ occorre soltanto una banconota da $1$ per l'unico acquisto.
+}
 \renewcommand{\SoluzioniAlternative}{}
 \renewcommand{\Osservazioni}{}
 \renewcommand{\Commenti}{}

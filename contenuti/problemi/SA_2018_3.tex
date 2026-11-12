@@ -19,10 +19,184 @@ A causa del consumo della lama della taglierina, ogni taglio ha un prezzo $k_3$.
 \end{enumerate}
 }
 
-\renewcommand{\Risposta}{}
-\renewcommand{\Aiutino}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-12; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-12; derivato dalla traccia canonica; revisione umana pendente.
+\textbf{Risultati parziali, non un ottimo globale certificato.}
+Nel modello di tagli rettilinei su un pezzo alla volta, senza spessore
+di taglio e con riuso dei ritagli, siano $C_9$ e $C_{9{,}5}$ i costi minimi.
+Le costruzioni e le stime dimostrate nella soluzione danno
+\[
+ 4445k_1\le C_9\le
+ \min\{4489k_1+134k_3,\;4467k_1+157k_3,\;4445k_1+181k_3\},
+\]
+\[
+ 3989k_2\le C_{9{,}5}\le3991k_2+128k_3.
+\]
+In particolare $4445$ \`e il numero minimo di mattonelle da $9$ cm
+che occorre acquistare, ma ci\`o non determina da solo il costo minimo.
+
+(b) Ponendo $p=0{,}99$, per la posa da un angolo descritta nella soluzione,
+con tagli indipendenti e addebitati anche se falliscono, il costo atteso \`e
+\[
+ 4356k_1+132\frac{k_1+k_3}{p}
+ +\frac{k_1+(1+p)k_3}{p^2}.
+\]
+Questa \`e l'attesa di una strategia specificata, non il minimo atteso
+fra tutte le strategie. Restano da determinare l'ottimo globale di costo,
+la regione completa di convenienza e l'eventuale ottimo atteso.
+}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-12; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-12; derivato dalla traccia canonica; revisione umana pendente.
+Lavorare in centimetri e confrontare $600=66\cdot9+6$ con
+$600=63\cdot9{,}5+1{,}5$.
+Non \`e obbligatorio mettere la prima mattonella intera in un angolo:
+la fascia residua pu\`o essere divisa fra due pareti opposte.
+Contare separatamente mattonelle acquistate e tagli effettuati,
+riutilizzando i ritagli. Per la parte aleatoria, distinguere una
+mattonella che richiede un solo taglio da una che ne richiede due o pi\`u.
+}
 \renewcommand{\SoluzioneUfficiale}{}
-\renewcommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-12; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-12; derivato dalla traccia canonica; revisione umana pendente.
+\textbf{Portata della soluzione e convenzioni.}
+Questa \`e una soluzione parziale: fornisce costruzioni esplicite,
+limiti inferiori e costi attesi di strategie determinate, ma non
+certifica il minimo globale richiesto dal punto (a).
+Assumiamo $k_1,k_2>0$ e $k_3\ge0$. Ogni taglio \`e rettilineo,
+attraversa un solo pezzo e ha spessore trascurabile; non si impilano
+mattonelle per tagliarle insieme. I ritagli possono essere riutilizzati.
+Le pose qui considerate hanno lati paralleli alle pareti e sono
+reticoli rettangolari, senza giunzioni a T: due pezzi adiacenti condividono
+un intero lato. Tutti i pezzi tagliati sono sul bordo della stanza.
+Non si assume, senza dimostrarlo, che fra queste pose vi sia l'ottimo
+fra tutte quelle ammesse dal testo.
+
+\textbf{(a) Limiti inferiori per area.}
+La stanza misura $600\times600$ cm. Qualunque posa richiede almeno
+\[
+ \left\lceil\frac{600^2}{9^2}\right\rceil=4445
+ \quad\hbox{oppure}\quad
+ \left\lceil\frac{600^2}{9{,}5^2}\right\rceil=3989
+\]
+mattonelle acquistate. Poich\'e i tagli non hanno costo negativo,
+\[
+ C_9\ge4445k_1,\qquad C_{9{,}5}\ge3989k_2.
+\]
+
+\textbf{Mattonelle da $9$ cm: tre pose.}
+Poich\'e $600=66\cdot9+6$, nelle tre costruzioni il blocco di mattonelle
+intere \`e sempre formato da $66^2=4356$ mattonelle.
+
+\emph{Posa A: partenza da un angolo.}
+Il blocco intero occupa un quadrato $594\times594$ aderente a due pareti.
+Restano $132$ rettangoli $9\times6$ e un quadrato $6\times6$.
+Ciascun rettangolo si ottiene da una nuova mattonella con un taglio;
+il quadrato richiede una nuova mattonella e due tagli. Si ha quindi
+\[
+ C_A=4489k_1+134k_3.
+\]
+Questi conteggi sono minimi per questa specifica posa: due rettangoli
+$9\times6$, oppure uno di essi insieme al quadrato $6\times6$,
+non possono provenire dalla stessa mattonella, gi\`a per ragioni di area.
+Ogni rettangolo richiede almeno un taglio, il quadrato almeno due.
+
+\emph{Posa B: fasce da $3$ cm su due pareti opposte.}
+Centriamo il blocco intero in una direzione e lo appoggiamo a una parete
+nell'altra. Servono $132$ rettangoli $9\times3$, $66$ rettangoli
+$9\times6$ e due rettangoli $3\times6$ agli angoli.
+I primi si ricavano da $44$ mattonelle, ciascuna divisa in tre strisce
+con due tagli. I secondi richiedono $66$ mattonelle e $66$ tagli.
+I due pezzi d'angolo si ricavano da una sola mattonella con tre tagli:
+si estrae un rettangolo $6\times9$ e lo si divide in tre rettangoli
+$6\times3$, utilizzandone due. Ne segue
+\[
+ C_B=4467k_1+157k_3.
+\]
+
+\emph{Posa C: fasce da $3$ cm su tutte le pareti.}
+Centriamo il blocco $594\times594$ nella stanza. Servono $264$
+rettangoli $9\times3$ e quattro quadrati $3\times3$.
+I rettangoli provengono da $88$ mattonelle con $176$ tagli.
+Per i quattro quadrati basta un'altra mattonella: due tagli estraggono
+un quadrato $6\times6$ e altri tre lo dividono nei quattro quadrati
+richiesti. Pertanto
+\[
+ C_C=4445k_1+181k_3.
+\]
+Questa posa raggiunge il limite inferiore di $4445$ mattonelle acquistate.
+\`E dunque ottima per il solo numero di mattonelle, ma non per questo
+\`e ottima per ogni costo dei tagli.
+Ad esempio, per $k_1=k_3=1$ la posa A costa $4623$ e la posa C costa $4626$.
+
+\textbf{Mattonelle da $9{,}5$ cm.}
+Usiamo un blocco $63\times63$ di mattonelle intere, appoggiato a due
+pareti, poich\'e $600=63\cdot9{,}5+1{,}5$.
+Restano $126$ rettangoli $9{,}5\times1{,}5$ e un quadrato
+$1{,}5\times1{,}5$.
+Da ciascuna di $21$ mattonelle ricaviamo sei rettangoli con sei tagli,
+lasciando una striscia di scarto larga $0{,}5$ cm.
+Il quadrato finale richiede un'ulteriore mattonella e due tagli.
+Abbiamo costruito una posa di costo
+\[
+ U_{9{,}5}=3991k_2+128k_3.
+\]
+
+\textbf{Confronti che si possono concludere rigorosamente.}
+Poniamo $U_9=\min\{C_A,C_B,C_C\}$.
+Se $U_9<3989k_2$, le mattonelle da $9$ cm sono certamente pi\`u
+convenienti, perch\'e una loro posa costa meno di qualunque posa da
+$9{,}5$ cm. Se invece $3991k_2+128k_3<4445k_1$, sono certamente
+pi\`u convenienti le mattonelle da $9{,}5$ cm.
+Fuori da queste regioni le stime non decidono il confronto.
+Non sarebbe corretto presentare il solo confronto fra due costruzioni
+come confronto fra i rispettivi ottimi globali.
+
+\textbf{(b) Costo atteso di una strategia di taglio.}
+Assumiamo che ciascun taglio riesca con probabilit\`a $p=0{,}99$,
+indipendentemente dagli altri, e che anche i tagli falliti siano pagati.
+Per ogni mattonella completiamo tutti i tagli prima di posarne i pezzi;
+se un taglio fallisce, scartiamo tutti i pezzi di quella mattonella e
+ripetiamo la stessa procedura su una nuova. Questo specifica anche
+come si trattano i pezzi gi\`a ricavati prima di una rottura.
+
+Se occorrono $m$ tagli riusciti, indichiamo con $A_m$ il costo atteso
+per produrre il lotto di pezzi di una mattonella. Un tentativo costa
+in media
+\[
+ k_1+k_3(1+p+\cdots+p^{m-1}),
+\]
+perch\'e il taglio numero $j$ viene eseguito soltanto se i $j-1$
+precedenti sono riusciti. Il tentativo termina con successo con
+probabilit\`a $p^m$; altrimenti si ricomincia. Dunque
+\[
+ A_m=k_1+k_3(1+p+\cdots+p^{m-1})+(1-p^m)A_m,
+\]
+ossia
+\[
+ \boxed{A_m=\frac{k_1+k_3(1+p+\cdots+p^{m-1})}{p^m}.}
+\]
+Le tre pose precedenti hanno quindi, con questa procedura, costi attesi
+\[
+ \begin{aligned}
+ E_A&=4356k_1+132A_1+A_2,\\
+ E_B&=4356k_1+66A_1+44A_2+A_3,\\
+ E_C&=4356k_1+88A_2+A_5.
+ \end{aligned}
+\]
+In particolare
+\[
+ E_A=4356k_1+132\frac{k_1+k_3}{p}
+              +\frac{k_1+(1+p)k_3}{p^2}.
+\]
+Per $p=1$ si ritrovano esattamente i costi deterministici delle tre pose.
+Il minimo di $E_A,E_B,E_C$ \`e il migliore fra questi tre procedimenti,
+non il minimo atteso globale. Una soluzione completa richiederebbe
+anche la minimizzazione sulle altre pose e sulle altre possibili
+strategie di taglio e riutilizzo; qui tale ottimalit\`a non \`e dimostrata.
+}
 \renewcommand{\SoluzioniAlternative}{}
 \renewcommand{\Osservazioni}{}
 \renewcommand{\Commenti}{}

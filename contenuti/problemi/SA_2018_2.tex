@@ -22,10 +22,151 @@ Supponiamo che ogni persona commetta un'infrazione ogni tempo $T$. Per cercare d
 \end{enumerate}
 }
 
-\renewcommand{\Risposta}{}
-\renewcommand{\Aiutino}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-12; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-12; derivato dalla traccia canonica; revisione umana pendente.
+Assumiamo infrazioni periodiche di periodo $T$, con le prime in $(0,T]$,
+e che un recupero maturato nello stesso istante di un'infrazione
+venga applicato prima della decurtazione.
+
+(a) Per due amici la condizione esatta \`e $T\ge L/10$.
+
+(b) Per $n$ amici, indipendentemente dalle fasi delle infrazioni,
+\[
+ T\ge\frac{L}{20-\lceil19/n\rceil}\quad\hbox{\`e necessario},
+ \qquad
+ T\ge\frac{L}{19-\lceil18/n\rceil}\quad\hbox{\`e sufficiente}.
+\]
+Se le infrazioni complessive sono equidistanti, a intervalli $T/n$,
+la condizione esatta \`e
+\[
+ \boxed{T\ge\frac{nL}{19n-18}.}
+\]
+Per $n$ generale le fasi possono cambiare la risposta: il Testo non
+le precisa, perci\`o l'ultima formula non \`e una risposta incondizionata
+all'enunciato originale.
+}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-12; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-12; derivato dalla traccia canonica; revisione umana pendente.
+Senza alcun recupero, una patente pu\`o assorbire al massimo $19$
+infrazioni: la ventesima la sospende.
+Provare ad attribuire blocchi di $19$ infrazioni a un amico alla volta,
+ciclicamente. Per dimostrare l'impossibilit\`a, considerare il primo
+istante in cui qualcuno recupera punti: chi ha assorbito tutte le
+infrazioni durante il suo intervallo di riposo?
+Nel caso generale occorre distinguere infrazioni simultanee e sfalsate.
+}
 \renewcommand{\SoluzioneUfficiale}{}
-\renewcommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-12; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-12; derivato dalla traccia canonica; revisione umana pendente.
+\textbf{Modello temporale e ambiguit\`a.}
+Supponiamo $L,T>0$. Ciascun amico commette un'infrazione a intervalli
+regolari $T$, con la prima in $(0,T]$; ogni infrazione deve essere
+attribuita a uno degli amici. Le fasi possono essere diverse o coincidere.
+Quando un recupero e una decurtazione cadono nello stesso istante,
+applichiamo prima il recupero. Questa convenzione \`e necessaria per
+includere le uguaglianze nelle condizioni sufficienti.
+L'enunciato non precisa n\'e le fasi n\'e tale precedenza.
+
+Una patente parte da $20$ punti e non pu\`o mai arrivare a zero:
+senza recuperi pu\`o dunque assorbire al massimo $19$ infrazioni.
+Le strategie che seguono non hanno bisogno dei bonus di due punti:
+utilizzano soltanto il ripristino a un massimo che \`e almeno $20$.
+I bonus non invalidano neppure le dimostrazioni di impossibilit\`a,
+perch\'e anche il primo bonus richiede un intervallo $L$ senza infrazioni.
+
+\textbf{Una condizione necessaria per $n$ amici.}
+Poniamo
+\[
+ k=\left\lfloor\frac{19(n-1)}n\right\rfloor+1
+   =20-\left\lceil\frac{19}n\right\rceil.
+\]
+Supponiamo per assurdo $L>kT$ e che si riesca a evitare tutte le sospensioni.
+Prima o poi deve avvenire un aumento di punti, altrimenti le scorte
+iniziali si esauriscono. Sia $t_*$ il primo istante di un aumento.
+La patente che ne beneficia non ha ricevuto infrazioni nell'intervallo
+aperto $(t_*-L,t_*)$, e $t_*\ge L$.
+Un intervallo di lunghezza maggiore di $kT$ contiene almeno $k$
+infrazioni commesse da ciascun amico, dunque almeno $nk$ complessive.
+Queste devono essere state attribuite alle altre $n-1$ patenti.
+Prima di $t_*$ nessuna ha recuperato punti e ciascuna pu\`o aver
+assorbito al massimo $19$ infrazioni. Ma
+\[
+ nk>19(n-1),
+\]
+contraddizione. \`E quindi necessario $L\le kT$.
+
+\textbf{Una strategia sufficiente per $n$ amici.}
+Ordiniamo tutte le infrazioni, anche quelle simultanee, in una successione
+di istanti $t_1\le t_2\le\cdots$. Per gli eventi simultanei scegliamo un
+ordine che si ripeta a ogni periodo. Allora
+\[
+ t_{j+n}=t_j+T.
+\]
+Attribuiamo le prime $19$ infrazioni al primo amico, le successive $19$
+al secondo, e cos\`i via; dopo l'ultimo amico ricominciamo dal primo.
+Fra l'ultima infrazione di un blocco e la prima del blocco successivo
+della stessa persona ci sono
+\[
+ D=19(n-1)+1=19n-18
+\]
+intervalli fra eventi consecutivi. Pertanto il tempo di riposo \`e almeno
+\[
+ t_{j+D}-t_j\ge
+ \left\lfloor\frac Dn\right\rfloor T
+ =\left(19-\left\lceil\frac{18}n\right\rceil\right)T.
+\]
+Se quest'ultima quantit\`a \`e almeno $L$, la patente ha recuperato
+il proprio massimo prima del nuovo blocco. Ogni blocco toglie soltanto
+$19$ punti, quindi nessuna patente viene sospesa.
+
+\textbf{(a) Due amici.}
+Per $n=2$ i due interi delle condizioni precedenti sono entrambi $10$.
+La condizione necessaria e quella sufficiente coincidono:
+\[
+ \boxed{T\ge L/10.}
+\]
+In particolare, attribuire alternativamente $19$ infrazioni a ciascuno
+garantisce a ogni patente un intervallo di riposo esattamente $10T$,
+qualunque sia lo sfasamento delle due sequenze periodiche.
+Con $T<L/10$, prima del primo recupero l'altro amico dovrebbe invece
+assorbire almeno $20$ infrazioni.
+
+\textbf{(b) Una risposta esatta con infrazioni equidistanti.}
+Se le fasi sono uniformemente sfalsate, tutte le infrazioni complessive
+avvengono a intervalli $\delta=T/n$.
+La strategia a blocchi di $19$ concede un riposo esattamente
+$D\delta$, quindi funziona se $L\le D\delta$.
+Viceversa, se $L>D\delta$, nell'intervallo che precede il primo aumento
+di punti si verificano almeno $D$ infrazioni, tutte a carico delle altre
+$n-1$ patenti, ma $D=19(n-1)+1>19(n-1)$.
+Dunque
+\[
+ L\le\frac{19n-18}{n}T
+ \quad\Longleftrightarrow\quad
+ T\ge\frac{nL}{19n-18}
+\]
+\`e condizione necessaria e sufficiente in questo modello.
+Il caso $n=1$ restituisce correttamente $T\ge L$.
+
+\textbf{Perch\'e non si possono omettere le fasi.}
+Prendiamo $n=19$ e $L=18{,}5T$.
+Se tutte le infrazioni sono simultanee agli istanti $T,2T,\ldots$,
+attribuiamo le $19$ infrazioni di ogni istante a un solo amico,
+ruotando fra i $19$ amici. Ogni patente perde $19$ punti, poi riposa
+$19T>L$ prima di essere usata di nuovo: la strategia funziona.
+Se invece le infrazioni sono equidistanti, il massimo intervallo
+compatibile con la condizione appena dimostrata \`e
+\[
+ \frac{343}{19}T<18{,}5T=L,
+\]
+e nessuna strategia pu\`o funzionare.
+Le due situazioni rispettano entrambe l'ipotesi di un'infrazione ogni $T$
+per persona. Il testo, senza ulteriori precisazioni, non determina
+quindi una sola condizione esatta per tutti gli $n$.
+}
 \renewcommand{\SoluzioniAlternative}{}
 \renewcommand{\Osservazioni}{}
 \renewcommand{\Commenti}{}
