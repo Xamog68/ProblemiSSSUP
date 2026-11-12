@@ -33,10 +33,176 @@ Una scacchiera $n\times m$ (in figura quella $3\times5$) contiene $nm-1$ piastre
 \end{enumerate}
 }
 
-\renewcommand{\Risposta}{}
-\renewcommand{\Aiutino}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-10; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-10; derivato dalla traccia canonica; revisione umana pendente.
+(a) Il minimo \`e $|p|+|q|$, purch\'e le due caselle indicate
+appartengano alla scacchiera.
+
+(b) Occorrono $20$ mosse se il vuoto parte da $(2,1)$,
+e $18$ mosse se parte da $(1,2)$.
+
+(c) Se il vuoto parte da $(r,c)\ne(1,1)$, il minimo \`e
+\[
+\boxed{M(r,c)=18+|r-1|+|c-2|.}
+\]
+La media aritmetica sulle $14$ posizioni possibili \`e
+\[
+\boxed{\frac1{14}\sum M(r,c)=\frac{41}{2}=20.5.}
+\]
+}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-10; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-10; derivato dalla traccia canonica; revisione umana pendente.
+Per (a), ogni mossa del vuoto cambia una sola coordinata
+di una unit\`a.
+Per (b) e (c), seguire soltanto la \emph{piastrella designata}
+e la posizione del vuoto: delle altre piastrelle non serve conoscere
+l'identit\`a. Quando la piastrella designata avanza di una casella,
+lo spazio vuoto resta nella sua posizione precedente.
+Quante mosse servono per portare di nuovo il vuoto davanti
+alla piastrella, a seconda che questa continui diritta
+o cambi direzione?
+}
 \renewcommand{\SoluzioneUfficiale}{}
-\renewcommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-10; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-10; derivato dalla traccia canonica; revisione umana pendente.
+\textbf{(a) Spostamento dello spazio vuoto.}
+Ogni mossa scambia lo spazio vuoto con una piastrella adiacente,
+e quindi ne modifica una sola coordinata di una unit\`a.
+Per passare da $(h,k)$ a $(h+p,k+q)$ servono almeno $|p|+|q|$ mosse.
+Viceversa, spostando il vuoto lungo un cammino formato da
+$|p|$ passi verticali e $|q|$ orizzontali, senza uscire dal rettangolo,
+si raggiunge la destinazione in esattamente tante mosse.
+
+\textbf{(b) Piastrella designata.}
+Seguiamo soltanto la piastrella che inizialmente si trova
+in $(1,1)$, che chiameremo \emph{piastrella speciale},
+e il vuoto. Ogni spostamento della piastrella speciale \`e una mossa,
+mentre il vuoto pu\`o anche muoversi scambiandosi con le altre piastrelle.
+
+Indichiamo con $k$ il numero di spostamenti della piastrella speciale.
+Poich\'e deve andare da $(1,1)$ a $(3,5)$,
+la distanza di Manhattan fra origine e destinazione \`e $6$.
+Dunque $k\ge6$ e $k$ \`e pari. Possiamo inoltre supporre che
+due spostamenti consecutivi della piastrella speciale
+non si annullino a vicenda: se la piastrella passasse da $A$ a $B$
+e subito dopo da $B$ ad $A$, la configurazione formata da
+\emph{piastrella speciale e vuoto} tornerebbe identica a prima
+dei due scambi, quindi potremmo eliminare l'intero tratto intermedio.
+
+Fra due spostamenti consecutivi che non si annullano,
+il vuoto deve passare dalla casella appena lasciata dalla
+piastrella alla casella in cui questa si sposter\`a.
+Se la piastrella \emph{cambia direzione}, tali due caselle
+sono a distanza di Manhattan $2$, e servono almeno due
+mosse del vuoto. Se la piastrella procede \emph{diritta},
+le due caselle stanno ai lati opposti della posizione attuale
+della piastrella: il vuoto deve aggirarla, e servono
+almeno quattro mosse.
+
+Se $k\ge8$, anche usando soltanto due mosse del vuoto
+fra tutti gli spostamenti consecutivi della piastrella speciale,
+si ottiene il limite inferiore
+\[
+ k+2(k-1)\ge22. \tag{1}
+\]
+Per trovare il minimo basta quindi considerare $k=6$,
+se \`e disponibile una costruzione con non pi\`u di $20$ mosse.
+In tal caso la piastrella speciale deve fare esattamente
+quattro passi a destra (D) e due in basso (B), in qualche ordine.
+
+Se il primo passo \`e a destra, la sequenza di sei passi
+pu\`o cambiare direzione al massimo quattro volte.
+Nei cinque passaggi fra uno spostamento della piastrella
+e il successivo ve ne sar\`a dunque almeno uno diritto:
+servono almeno
+\[
+6+4\cdot2+1\cdot4=18\quad\text{mosse}. \tag{2}
+\]
+Se invece il primo passo \`e in basso, la sequenza pu\`o
+cambiare direzione al massimo tre volte; ne segue
+\[
+6+3\cdot2+2\cdot4=20\quad\text{mosse}. \tag{3}
+\]
+Questi limiti non contano eventuali mosse \emph{iniziali}
+necessarie per portare il vuoto a contatto con la piastrella speciale.
+
+Il limite $18$ \`e raggiungibile con il vuoto inizialmente
+in $(1,2)$. Basta far seguire alla piastrella speciale
+la sequenza di passi
+\[
+ \text{destra, basso, destra, basso, destra, destra}.
+\]
+Fra gli spostamenti della piastrella, il vuoto si porta
+davanti a essa con due mosse per ciascuno dei quattro
+cambi di direzione e con quattro mosse nell'unico tratto diritto.
+Tutti questi piccoli aggiramenti si possono effettuare
+all'interno della scacchiera $3\times5$, dando in totale $18$ mosse.
+
+Se il vuoto parte in $(2,1)$, un primo passo della
+piastrella speciale verso il basso richiede almeno $20$ mosse,
+per (3); per un primo passo verso destra, occorrono
+almeno due mosse preliminari per condurre il vuoto da
+$(2,1)$ a $(1,2)$, e poi almeno $18$ mosse, per (2).
+Il risultato \`e quindi ancora $20$, ed \`e raggiungibile
+portando prima il vuoto in $(1,2)$ attraverso $(2,2)$.
+Il limite (1) esclude percorsi pi\`u lunghi che possano migliorare
+questi valori.
+
+\textbf{(c) Media sulle posizioni iniziali del vuoto.}
+Sia $(r,c)$ una delle $14$ caselle diverse da $(1,1)$.
+Prima del primo spostamento della piastrella speciale,
+il vuoto deve raggiungere una delle due caselle adiacenti
+$(1,2)$ e $(2,1)$. Poniamo
+\[
+ d_R=|r-1|+|c-2|,\qquad d_B=|r-2|+|c-1|.
+\]
+I cammini pi\`u brevi del vuoto verso $(1,2)$ evitano
+sempre la casella $(1,1)$, dunque richiedono esattamente
+$d_R$ mosse. Dalle stime precedenti, se la piastrella speciale
+compie sei passi, il numero totale delle mosse \`e almeno
+\[
+ \min\{d_R+18,\ d_B+20\}=d_R+18,
+\]
+poich\'e la disuguaglianza triangolare d\`a $d_R\le d_B+2$.
+Se invece la piastrella speciale compie almeno otto passi,
+dalle stesse osservazioni e da (1) servono almeno
+\[
+\min\{d_R,d_B\}+22\ge d_R+20>d_R+18
+\]
+mosse. Portando prima il vuoto in $(1,2)$ lungo un cammino
+minimo e poi eseguendo la costruzione di $18$ mosse,
+si ottiene esattamente $d_R+18$. Quindi
+\[
+ \boxed{M(r,c)=18+|r-1|+|c-2|.}
+\]
+
+I valori minimi, con righe e colonne corrispondenti alle caselle
+della scacchiera, sono
+\[
+\begin{array}{c|ccccc}
+ &1&2&3&4&5\\ \hline
+1&\text{--}&18&19&20&21\\
+2&20&19&20&21&22\\
+3&21&20&21&22&23
+\end{array}
+\]
+La somma delle distanze $d_R$ sulle $14$ caselle \`e
+$6+12+17=35$. Interpretando il ``valor medio'' richiesto
+come media aritmetica sulle $14$ posizioni iniziali,
+si ottiene
+\[
+\frac1{14}\sum_{(r,c)\ne(1,1)} M(r,c)
+=18+\frac{35}{14}=\boxed{\frac{41}{2}}.
+\]
+
+\textit{Nota sul testo.} Se si interpreta ``valor medio'' come
+valore atteso, \`e necessario supporre che tutte le posizioni
+iniziali del vuoto siano equiprobabili; il testo originale
+non esplicita questa ipotesi.
+}
 \renewcommand{\SoluzioniAlternative}{}
 \renewcommand{\Osservazioni}{}
 \renewcommand{\Commenti}{}

@@ -17,10 +17,66 @@ In un'urna ci sono 100 palline, alcune bianche, le altre nere. Si sa che:
 \end{enumerate}
 }
 
-\renewcommand{\Risposta}{}
-\renewcommand{\Aiutino}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-10; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-10; derivato dalla traccia canonica; revisione umana pendente.
+(a) Ci sono $55$ palline bianche e $45$ nere.
+
+(b) Per $N\ge2$ la condizione \`e realizzabile se e solo se $N=k^2$
+per un intero $k\ge2$; in tal caso la composizione \`e univocamente
+\[
+B=\frac{k^2+k}{2},\qquad N-B=\frac{k^2-k}{2},
+\]
+dove $B$ indica il numero di palline bianche.
+}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-10; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-10; derivato dalla traccia canonica; revisione umana pendente.
+Indicare con $B$ e $C$ i numeri di palline bianche e nere.
+Calcolare in due modi il numero di coppie non ordinate di palline:
+quelle dello stesso colore e quelle di colore diverso.
+Dall'uguaglianza delle probabilit\`a si ottiene una condizione
+aritmetica molto semplice sulla differenza $B-C$.
+}
 \renewcommand{\SoluzioneUfficiale}{}
-\renewcommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-10; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-10; derivato dalla traccia canonica; revisione umana pendente.
+Scriviamo $B$ per il numero di palline bianche e $C=N-B$
+per quello delle palline nere, con $B\ge C$.
+Supponiamo $N\ge2$, affinch\'e l'estrazione di due palline sia possibile.
+Le coppie non ordinate di palline distinte sono $\binom N2$ ed hanno
+tutte la stessa probabilit\`a di essere estratte.
+Le coppie dello stesso colore sono
+$\binom B2+\binom C2$; quelle di colore diverso sono $BC$.
+L'uguaglianza delle probabilit\`a equivale pertanto a
+\[
+\binom B2+\binom C2=BC,
+\]
+ossia, moltiplicando per $2$,
+\[
+ B(B-1)+C(C-1)=2BC.
+\]
+Riordinando e usando $B+C=N$ otteniamo
+\[
+ (B-C)^2=B+C=N.
+\]
+
+\textbf{(a)} Se $N=100$, siccome $B\ge C$, deve essere $B-C=10$.
+Insieme a $B+C=100$ segue $B=55$ e $C=45$.
+
+\textbf{(b)} Per un intero $N\ge2$, la condizione impone che
+$N=k^2$ sia un quadrato perfetto, con $k=B-C\ge0$.
+Viceversa, se $N=k^2$ con $k\ge2$, i numeri
+\[
+ B=\frac{k^2+k}{2},\qquad C=\frac{k^2-k}{2}
+\]
+sono interi non negativi, hanno somma $N$, differenza $k$ e soddisfano
+l'uguaglianza delle probabilit\`a.
+La soluzione \`e unica perch\'e sono assegnati sia la somma sia la
+differenza. Per $N\ge2$ non quadrato non esiste alcuna composizione.
+Il caso $N=1$ \`e escluso, perch\'e non si possono estrarre due palline.
+}
 \renewcommand{\SoluzioniAlternative}{}
 \renewcommand{\Osservazioni}{}
 \renewcommand{\Commenti}{}

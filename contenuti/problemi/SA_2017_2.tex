@@ -26,10 +26,127 @@ del campanile di Pisa e osserva che:
 \end{enumerate}
 }
 
-\renewcommand{\Risposta}{}
-\renewcommand{\Aiutino}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-10; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-10; derivato dalla traccia canonica; revisione umana pendente.
+Ponendo $s$ uguale ai giri orari della lancetta corta in un'ora
+e $x$ ai giri \emph{con segno} della lancetta lunga (positivi in senso orario),
+si ha $2<s<3$ e
+\[
+3<|s-x|<5.
+\]
+(a) La lancetta lunga non pu\`o essere ferma.
+
+(b) I valori possibili sono precisamente
+\[
+\boxed{x\in(-3,0)\,\cup\,(5,8).}
+\]
+La prima alternativa rappresenta meno di tre giri in senso antiorario;
+la seconda fra cinque e otto giri in senso orario.
+Se si assume che anche la lancetta lunga giri in senso orario,
+resta soltanto $5<x<8$.
+
+(c) In un minuto la lancetta pi\`u veloce percorre un angolo
+(in valore assoluto) appartenente a
+\[
+\boxed{(12^\circ,18^\circ)\,\cup\,(30^\circ,48^\circ).}
+\]
+Se entrambe ruotano in senso orario, l'angolo \`e fra
+$30^\circ$ e $48^\circ$, estremi esclusi.
+}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-10; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-10; derivato dalla traccia canonica; revisione umana pendente.
+Misurare le posizioni angolari in \emph{giri} anzich\'e in gradi.
+Due lancette si sovrappongono quando la differenza delle loro posizioni
+\`e un numero intero. Studiare quanti interi pu\`o attraversare
+un intervallo di lunghezza pari alla differenza delle velocit\`a,
+tenendo conto che all'istante iniziale le lancette non coincidono.
+Prestare attenzione al fatto che il testo precisa il verso di moto
+solo per la lancetta corta.
+}
 \renewcommand{\SoluzioneUfficiale}{}
-\renewcommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-10; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), sessione ProblemiSSSUP del 2026-11-10; derivato dalla traccia canonica; revisione umana pendente.
+Misuriamo il tempo in ore e le posizioni angolari in giri completi.
+Indichiamo con $s$ la velocit\`a angolare (in giri/ora) della lancetta
+corta, positiva in senso orario. Per ipotesi
+\[
+2<s<3.
+\]
+Indichiamo invece con $x\in\mathbb R$ la velocit\`a
+\emph{con segno} della lancetta lunga, ancora positiva in senso orario.
+Il testo non ne specifica il verso.
+
+Sia $\theta\in(0,1)$ la parte frazionaria della differenza fra le
+posizioni angolari iniziali: $\theta\ne0$ perch\'e al primo rintocco
+le lancette non sono sovrapposte.
+Dopo $t$ ore la differenza fra le posizioni, a meno di un intero,
+\`e
+\[
+\theta+(s-x)t.
+\]
+Le lancette si sovrappongono quando questa espressione \`e intera.
+Pertanto il numero di sovrapposizioni in un'ora \`e il numero di interi
+attraversati dal segmento compreso fra $\theta$ e $\theta+s-x$,
+contando l'eventuale coincidenza finale ma non quella iniziale
+(che, per ipotesi, non c'\`e).
+
+Un segmento di lunghezza $d>0$ con punto iniziale non intero pu\`o
+contenere, durante il suo percorso, esattamente quattro attraversamenti
+di interi, per qualche posizione iniziale, se e solo se
+\[
+3<d<5.
+\]
+Infatti, per $d\le3$ gli attraversamenti sono al pi\`u tre;
+per $d\ge5$ sono almeno cinque. Se $3<d<5$, scegliendo
+opportunamente la parte frazionaria della posizione iniziale,
+se ne possono avere esattamente quattro.
+Applicando questo criterio alla velocit\`a relativa otteniamo
+\[
+\boxed{3<|s-x|<5.}\tag{1}
+\]
+
+\textbf{(a)} Se la lancetta lunga fosse ferma, $x=0$,
+e (1) richiederebbe $3<s<5$, in contrasto con $2<s<3$.
+
+\textbf{(b)} Risolvendo (1) rispetto a $x$ troviamo due possibilit\`a:
+\[
+ s-5<x<s-3
+ \qquad\hbox{oppure}\qquad
+ s+3<x<s+5.
+\]
+Poich\'e $s$ pu\`o essere qualunque numero di $(2,3)$, l'unione
+degli intervalli ammissibili \`e
+\[
+ \boxed{x\in(-3,0)\cup(5,8).}
+\]
+Ogni valore di questi intervalli \`e effettivamente possibile,
+perch\'e per esso si pu\`o scegliere $s\in(2,3)$ e poi
+una posizione iniziale che dia quattro sovrapposizioni.
+In particolare, i giri in senso antiorario non sono esclusi
+dal testo originale.
+Se \emph{si aggiunge} l'ipotesi che la lancetta lunga proceda
+anch'essa in senso orario, la risposta \`e soltanto $5<x<8$.
+
+\textbf{(c)} La lancetta pi\`u veloce, in valore assoluto,
+percorre $\max\{s,|x|\}$ giri in un'ora. Nel caso $x\in(-3,0)$
+questa quantit\`a pu\`o assumere esattamente tutti i valori
+fra $2$ e $3$; nel caso $x\in(5,8)$ coincide con $x$
+e pu\`o assumere esattamente tutti i valori fra $5$ e $8$.
+Un giro/ora corrisponde a $6^\circ$ al minuto, quindi gli spostamenti
+possibili durante un minuto sono precisamente
+\[
+ (12^\circ,18^\circ)\cup(30^\circ,48^\circ).
+\]
+Gli estremi non sono raggiunti a causa delle disuguaglianze strette.
+
+\textit{Nota sul testo.} Il verso di rotazione della lancetta lunga
+non \`e specificato: l'esclusione della soluzione antioraria
+sarebbe dunque un'ipotesi aggiuntiva, da esplicitare
+in un'eventuale revisione redazionale.
+}
 \renewcommand{\SoluzioniAlternative}{}
 \renewcommand{\Osservazioni}{}
 \renewcommand{\Commenti}{}
