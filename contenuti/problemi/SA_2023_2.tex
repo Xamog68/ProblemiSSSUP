@@ -39,7 +39,31 @@ Modella l'anno del primo guasto con una variabile geometrica: $\Pr(T=k)=p^{k-1}(
 
 \renewcommand{\SoluzioneUfficiale}{}
 
-\renewcommand{\SoluzioniAlternative}{}
+\renewcommand{\SoluzioniAlternative}{
+% SSSUP-BOZZA-AI: SoluzioniAlternative; autore=ChatGPT; data=2026-11-13; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: rielaborazione redazionale AI da appunti di soluzione 2023, archivio privato Concorsi/SSSUP_2023/Soluzioni/soluzioni_es2.pdf, pagina 1
+\TitoloSoluzioneAlternativaA
+\textbf{Ricorrenze a un anno (punti (b) e (c)).}
+Assumiamo, come nella soluzione redazionale, che le sopravvivenze annuali siano indipendenti e che i parametri restino costanti finché i dischi funzionano.
+
+\emph{Punto (b).} Sia $X$ la probabilità che i due dischi si guastino nello stesso anno. Al termine del primo anno possono verificarsi tre situazioni: entrambi si sono guastati (probabilità $(1-p)^2$), entrambi funzionano ancora (probabilità $p^2$), oppure soltanto uno si è guastato. Nell'ultimo caso i guasti non potranno più avvenire nello stesso anno. Nel secondo caso il problema riparte esattamente nelle condizioni iniziali. Pertanto
+\[
+X=(1-p)^2+p^2X.
+\]
+Per $0\le p<1$ si ricava
+\[
+X=\frac{(1-p)^2}{1-p^2}=\frac{1-p}{1+p}.
+\]
+Se $p=1$ nessun disco si guasta, perciò $X=0$: la ricorrenza, da sola, in questo caso diventa l'identità $X=X$ e non determina il valore.
+
+\emph{Punto (c).} Scriviamo $q=p/2$ per la probabilità annua di sopravvivenza del disco meno affidabile e indichiamo con $Y$ la probabilità che quest'ultimo si guasti in un anno strettamente successivo al primo disco. Al termine del primo anno, l'evento desiderato è già assicurato se il primo disco si è guastato e il secondo funziona ancora, con probabilità $(1-p)q$. Se entrambi funzionano ancora, con probabilità $pq$, siamo nella situazione iniziale. Tutti gli altri esiti non possono contribuire all'evento. Dunque
+\[
+Y=(1-p)q+pqY,
+\qquad
+Y=\frac{(1-p)q}{1-pq}=\frac{p(1-p)}{2-p^2}.
+\]
+La seconda formula vale per tutti i valori $0\le p\le1$, compresi gli estremi.
+}
 
 \renewcommand{\Osservazioni}{}
 

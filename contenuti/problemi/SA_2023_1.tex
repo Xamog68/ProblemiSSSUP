@@ -55,7 +55,25 @@ La regola equivale a $\operatorname{\mathsf{approx}}(x)=\lfloor x+1/2\rfloor$. L
 
 \renewcommand{\SoluzioniAlternative}{}
 
-\renewcommand{\Osservazioni}{}
+\renewcommand{\Osservazioni}{
+% SSSUP-BOZZA-AI: Osservazioni; autore=ChatGPT; data=2026-11-13; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: rielaborazione redazionale AI da appunti di soluzione 2023, archivio privato Concorsi/SSSUP_2023/Soluzioni/SSSUP_2023_Sol.pdf, pagina 3
+\TitoloOsservazione
+Nel punto (b), gli estremi si possono realizzare anche con esempi particolarmente semplici, suggeriti negli appunti storici della prova.
+
+Per il massimo $1250$, basta prendere
+\[
+x_1=\cdots=x_{499}=\frac12,\qquad x_{500}=750+\frac12.
+\]
+La somma dei $500$ numeri è $1000$, mentre gli arrotondamenti sono $499$ volte $1$ e una volta $751$, per un totale di $1250$.
+
+Per il minimo $751$, fissiamo $0<\varepsilon<1/499$ e prendiamo
+\[
+x_1=\cdots=x_{499}=\frac12-\varepsilon,
+\qquad x_{500}=750+\frac12+499\varepsilon.
+\]
+Anche in questo caso la somma è $1000$. I primi $499$ numeri si arrotondano a $0$, e l'ultimo a $751$. Questo realizza il minimo senza dover suddividere i numeri in più gruppi.
+}
 
 \renewcommand{\Commenti}{}
 

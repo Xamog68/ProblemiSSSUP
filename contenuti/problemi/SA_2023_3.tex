@@ -48,7 +48,46 @@ Scrivi $V=a^2h/3$. Per la superficie laterale usa l'altezza di una faccia, $\sqr
 
 \renewcommand{\SoluzioneUfficiale}{}
 
-\renewcommand{\SoluzioniAlternative}{}
+\renewcommand{\SoluzioniAlternative}{
+% SSSUP-BOZZA-AI: SoluzioniAlternative; autore=ChatGPT; data=2026-11-13; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: rielaborazione redazionale AI da appunti di soluzione 2023, archivio privato Concorsi/SSSUP_2023/Soluzioni/SSSUP_2023_Sol.pdf, pagina 8
+\TitoloSoluzioneAlternativaA
+\textbf{Punto (c): una dimostrazione algebrica mediante il discriminante.}
+Indichiamo con $a$ il lato del quadrato di base, con $h$ l'altezza della piramide e con $r$ il raggio della più grande sfera che essa contiene. Come osservato nella soluzione redazionale, per simmetria possiamo scegliere il centro della sfera sull'asse della piramide; la sfera massima è tangente alla base e alle quattro facce. Il suo raggio è quindi il rapporto fra tre volte il volume e l'area totale della superficie:
+\[
+r=\frac{3V}{a^2+S},
+\qquad
+S=2a\sqrt{h^2+\frac{a^2}{4}}
+=\sqrt{a^4+\frac{36V^2}{a^2}},
+\]
+poiché $a^2h=3V$.
+
+Poniamo $t=a^2>0$. Dalla relazione precedente ricaviamo
+\[
+\frac{3V}{r}-t=\sqrt{t^2+\frac{36V^2}{t}}.
+\]
+Elevando al quadrato e semplificando, si ottiene
+\[
+2rt^2-3Vt+12Vr^2=0.
+\]
+Perché esista un valore reale di $t$, il discriminante di questo trinomio deve essere non negativo:
+\[
+\Delta=9V^2-96Vr^3\ge0.
+\]
+Pertanto
+\[
+r^3\le\frac{3V}{32},
+\qquad
+\operatorname{Vol}(\text{sfera})=\frac{4\pi}{3}r^3\le\frac{\pi V}{8}.
+\]
+L'uguaglianza si realizza davvero: scegliendo una piramide con $h=\sqrt2\,a$, si ha
+\[
+r=\frac{a}{2\sqrt2},\qquad
+V=\frac{\sqrt2\,a^3}{3},\qquad
+r^3=\frac{3V}{32}.
+\]
+La condizione sul discriminante fornisce quindi non soltanto un limite superiore, ma il massimo esatto, senza derivare alcuna funzione.
+}
 
 \renewcommand{\Osservazioni}{}
 
