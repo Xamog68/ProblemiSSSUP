@@ -14,10 +14,107 @@ Un mangiatore partecipa ad una gara sulle 10 ore. È sempre osservato da almeno 
 \end{enumerate}
 }
 
-\renewcommand{\Risposta}{}
-\renewcommand{\Aiutino}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-14; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: Bozza ChatGPT 2026-11-10, recuperata e revisionata redazionalmente il 2026-11-14; revisione matematica umana pendente.
+\begin{enumerate}
+\item[(a)] $18$ kg.
+\item[(b)] $6$ kg.
+\end{enumerate}
+}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-14; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: Bozza ChatGPT 2026-11-10, recuperata e revisionata redazionalmente il 2026-11-14; revisione matematica umana pendente.
+Rappresentare le ore di osservazione come intervalli di lunghezza $1$ che
+ricoprono $[0,10]$. Per il massimo, cercare una sottofamiglia minimale
+che ricopra ancora tutte le dieci ore. Per il minimo, scegliere giudici
+presenti in istanti distanziati di due ore. In entrambi i casi verificare
+che le stime possano essere raggiunte.
+}
 \renewcommand{\SoluzioneUfficiale}{}
-\renewcommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-14; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: Bozza ChatGPT 2026-11-10, recuperata e revisionata redazionalmente il 2026-11-14; revisione matematica umana pendente.
+Indichiamo con $I_j$ l'intervallo di osservazione del giudice $j$.
+Ogni $I_j$ ha lunghezza $1$, gli intervalli ricoprono $[0,10]$ e la
+quantità mangiata durante ciascuno di essi è esattamente $1$ kg.
+Si intende che il cibo è consumato nel tempo, senza concentrare una
+quantità positiva in un singolo istante.
+
+\medskip
+\noindent\textbf{(a) Massimo.}
+Fra gli intervalli dei giudici scegliamo una sottofamiglia minimale
+che ricopra $[0,10]$, ordinata da sinistra a destra:
+$I_1,\ldots,I_m$. Scriviamo $I_i=[s_i,s_i+1]$. Necessariamente
+$s_1=0$, $s_m=9$, e gli inizi sono strettamente crescenti.
+La minimalità implica che $I_i$ e $I_{i+2}$ siano disgiunti
+(o, più precisamente, che $s_{i+2}>s_i+1$): altrimenti
+$I_{i+1}$ si potrebbe eliminare senza perdere la copertura.
+Quindi
+\[
+ s_3>1,\quad s_5>2,\quad\ldots,\quad s_{19}>9.
+\]
+Poiché tutti gli inizi sono al più $9$, non possono esserci
+$19$ intervalli: $m\leq18$. La quantità totale mangiata è
+al più la somma di quelle mangiate nei $m$ intervalli, quindi
+non supera $18$ kg.
+
+Per vedere che $18$ kg sono possibili, consideriamo $18$ giudici
+con intervalli
+\[
+ I_k=\left[\frac{9k}{17},\frac{9k}{17}+1\right],
+ \qquad k=0,1,\ldots,17.
+\]
+Essi ricoprono $[0,10]$. Poiché $2\cdot9/17>1$, ciascun
+intervallo contiene un piccolo sottointervallo non osservato da
+nessun altro giudice. Il concorrente può mangiare esattamente
+$1$ kg in ciascuno di questi $18$ sottointervalli e nulla
+altrove: ogni giudice registra esattamente $1$ kg.
+
+\medskip
+\noindent\textbf{(b) Minimo.}
+Scegliamo sei giudici che osservino, rispettivamente, agli istanti
+$0,2,4,6,8,10$. Due intervalli di lunghezza $1$ che
+contengono istanti distanti almeno $2$ hanno interni disgiunti.
+I sei giudici hanno quindi osservato complessivamente almeno
+$6$ kg distinti di cibo, e il totale non può essere inferiore
+ a $6$ kg.
+
+Per realizzare $6$ kg prendiamo undici giudici con intervalli
+\[
+ J_k=\left[\frac{9k}{10},\frac{9k}{10}+1\right],
+ \qquad k=0,1,\ldots,10.
+\]
+Questi intervalli ricoprono tutte le dieci ore. Facciamo
+mangiare $1$ kg in una piccola porzione dell'intersezione
+$J_0\cap J_1$, poi $1$ kg in $J_2\cap J_3$, e analogamente
+nelle intersezioni $J_4\cap J_5$, $J_6\cap J_7$ e
+$J_8\cap J_9$. Infine facciamo mangiare $1$ kg in una
+porzione di $J_{10}$ che non appartenga a $J_9$.
+Le sei porzioni possono essere scelte in modo che ciascuna
+sia osservata esattamente dai giudici indicati. Ogni giudice
+registra quindi $1$ kg, mentre il totale è $6$ kg.
+}
 \renewcommand{\SoluzioniAlternative}{}
-\renewcommand{\Osservazioni}{}
+\renewcommand{\Osservazioni}{
+% SSSUP-BOZZA-AI: Osservazioni; autore=ChatGPT; data=2026-11-14; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: Nota redazionale AI sul modello di consumo e sui punti estremi; revisione umana pendente.
+\textbf{Una precisazione sui consumi istantanei.}
+Nel punto (b) si interpreta il consumo come un processo nel tempo:
+la quantit\`a complessivamente mangiata fino all'istante $t$ \`e
+una funzione continua di $t$. Non occorre supporre una velocit\`a
+massima di ingestione: basta escludere che una quantit\`a positiva
+venga consumata in un singolo istante.
+
+L'ipotesi \`e rilevante agli estremi degli intervalli di osservazione.
+Se, in un modello puramente formale, ammettessimo consumi impulsivi
+concentrati in singoli istanti e considerassimo inclusi entrambi gli
+estremi di ciascun turno, potremmo assegnare ai dieci giudici i turni
+$[0,1],[1,2],\ldots,[9,10]$ e far mangiare un chilogrammo
+esattamente agli istanti $1,3,5,7,9$. Ciascun giudice registrerebbe
+un chilogrammo, per un totale di soli $5$ kg: ogni ``impulso'' sarebbe
+conteggiato da due giudici adiacenti. Sono i \emph{mangiatori di delta
+di Dirac}, che non consideriamo nella gara. Per consumi senza atomi
+il minimo \`e invece $6$ kg.
+}
 \renewcommand{\Commenti}{}

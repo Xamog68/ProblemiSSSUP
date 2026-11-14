@@ -131,3 +131,17 @@ main{min-height:380px;padding-top:30px;padding-bottom:110px}
 .dock-index{display:inline-flex;align-items:center;justify-content:center;min-height:32px;padding:6px 13px;white-space:nowrap;border-radius:8px;background:var(--sea);color:white;text-decoration:none;font-weight:750;border:1px solid #0e655f}
 .dock-index:hover{background:#105b56;color:white;text-decoration:none}
 @media(max-width:620px){.back-years{font-size:13px;padding:9px 13px}.dock-index{font-size:12px;padding:6px 9px}.nav-dock-row{flex-wrap:wrap;justify-content:center}.nav-dock{max-width:calc(100vw - 20px)}}
+
+/* SSSUP-NAV-3: tre pulsanti reali su un'unica riga in ogni annata. */
+.sssup-year-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;align-items:stretch;margin:0 0 23px}
+.sssup-year-links-bottom{margin:14px 0 22px}
+.sssup-year-button{display:flex;align-items:center;min-width:0;min-height:43px;padding:10px 15px;background:white;color:#116660;text-decoration:none;border:1px solid #a8ccc5;border-radius:9px;box-shadow:0 2px 7px #132b3a12;font:700 14px/1.35 system-ui,-apple-system,sans-serif}
+a.sssup-year-button:hover{background:var(--sea-soft);text-decoration:none}
+a.sssup-year-button:focus-visible{outline:3px solid #e1a449;outline-offset:2px}
+.sssup-year-prev{justify-content:flex-start;text-align:left}
+.sssup-year-center{justify-content:center;text-align:center;background:var(--sea);border-color:var(--sea);color:white}
+a.sssup-year-center:hover{background:#0e5e59;color:white}
+.sssup-year-next{justify-content:flex-end;text-align:right}
+.sssup-year-off{background:#f3f5f5;color:#8c989d;border-color:#e5e9ea;box-shadow:none}
+@media(max-width:620px){.sssup-year-links{gap:5px}.sssup-year-button{min-height:42px;font-size:12px;padding:9px 6px}}
+

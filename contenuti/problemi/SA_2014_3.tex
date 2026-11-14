@@ -16,10 +16,103 @@ Supponiamo che ad un certo punto del gioco uno dei giocatori (a cui spetta il tu
 \end{enumerate}
 }
 
-\renewcommand{\Risposta}{}
-\renewcommand{\Aiutino}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-10; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), bozza AI 2014 del 2026-11-10; ricostruzione indipendente dal Testo storico; revisione umana pendente.
+\begin{enumerate}
+\item[(a)] La probabilità che il gioco non termini è $0$.
+\item[(b)] La probabilità richiesta è $3/5$.
+\item[(c)] La probabilità di vittoria del giocatore di turno
+che ha $n$ carte (contro $n+1$) è
+\[
+ P_n=\begin{cases}
+ \dfrac{n+4}{2(n+2)},&n\text{ pari},\\[4pt]
+ \dfrac{n+3}{2(n+2)},&n\text{ dispari}.
+ \end{cases}
+\]
+\end{enumerate}
+}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-10; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), bozza AI 2014 del 2026-11-10; ricostruzione indipendente dal Testo storico; revisione umana pendente.
+Dopo lo scarto iniziale, ogni carta ordinaria rimasta in mano
+a un giocatore ha la propria compagna in mano all'altro.
+Di conseguenza, pescare una carta diversa dal jolly fa
+scartare una coppia. Conviene introdurre la probabilità
+$P_n$ di vittoria per chi deve pescare e possiede $n$
+carte, mentre l'avversario ne possiede $n+1$ (compreso il
+jolly), e condizionare alla prima pescata.
+}
 \renewcommand{\SoluzioneUfficiale}{}
-\renewcommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-10; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), bozza AI 2014 del 2026-11-10; ricostruzione indipendente dal Testo storico; revisione umana pendente.
+Ogni coppia di carte ordinarie dello stesso valore viene
+scartata appena si trova nella mano di un giocatore.
+Quindi tutte le carte ordinarie ancora in gioco si trovano
+in coppie divise fra i due giocatori, una carta per mano.
+Se le mani hanno $n$ e $n+1$ carte, il jolly si trova
+necessariamente nella mano più numerosa: ciascun giocatore
+ha infatti $n$ carte ordinarie.
+
+Indichiamo con $P_n$ la probabilità che vinca chi deve
+pescare e ha $n$ carte, mentre l'avversario ne ha $n+1$.
+Per $n=0$ il primo giocatore ha già vinto, dunque $P_0=1$.
+
+Alla prima pescata, con probabilità $1/(n+1)$ viene preso
+il jolly. Le dimensioni delle mani si scambiano e tocca
+all'altro giocatore pescare: la probabilità di vittoria
+del giocatore iniziale diventa $1-P_n$.
+Con probabilità $n/(n+1)$ viene invece pescata una carta
+ordinaria, che forma una coppia e viene scartata. Per
+$n\geq2$, al turno successivo l'avversario pesca
+necessariamente una carta ordinaria, scartando un'altra
+coppia: si ritorna alla medesima situazione con $n-2$
+carte nella mano del giocatore iniziale. Il contributo
+è pertanto $P_{n-2}$. Se $n=1$, la pescata ordinaria
+fa vincere immediatamente il primo giocatore.
+
+Perciò
+\[
+ P_1=\frac12(1-P_1)+\frac12,
+ \qquad P_1=\frac23,
+\]
+e, per $n\geq2$,
+\[
+ P_n=\frac1{n+1}(1-P_n)
+        +\frac n{n+1}P_{n-2},
+ \qquad
+ P_n=\frac{1+nP_{n-2}}{n+2}.
+\]
+In particolare
+\[
+ P_2=\frac{1+2P_0}{4}=\frac34,
+ \qquad
+ P_3=\frac{1+3P_1}{5}=\frac35.
+\]
+
+Per induzione separata sugli indici pari e dispari,
+dalla ricorrenza segue
+\[
+ P_n=\begin{cases}
+ \dfrac{n+4}{2(n+2)},&n\text{ pari},\\[4pt]
+ \dfrac{n+3}{2(n+2)},&n\text{ dispari}.
+ \end{cases}
+\]
+
+Resta da verificare che il gioco finisca quasi certamente.
+Finché vi sono $n$ coppie ordinarie, ogni pescata del
+giocatore con $n$ carte ha probabilità $n/(n+1)>0$
+di eliminare una coppia, mentre la pescata del jolly
+si limita a invertire i ruoli dei due giocatori.
+La probabilità di pescare il jolly per $k$ tentativi
+consecutivi, senza eliminare alcuna coppia, è
+$(1/(n+1))^k$, che tende a zero. Quindi, con probabilità
+$1$, prima o poi il numero di coppie diminuisce.
+Ripetendo l'argomento un numero finito di volte, si
+arriva certamente, salvo un evento di probabilità nulla,
+alla fine della partita. Questo dimostra (a).
+}
 \renewcommand{\SoluzioniAlternative}{}
 \renewcommand{\Osservazioni}{}
 \renewcommand{\Commenti}{}

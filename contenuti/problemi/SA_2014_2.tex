@@ -20,10 +20,80 @@ Nella regione di Toscolandia esistono tre città: FI, PI, LI, disposte ai vertic
 \end{enumerate}
 }
 
-\renewcommand{\Risposta}{}
-\renewcommand{\Aiutino}{}
+\renewcommand{\Risposta}{
+% SSSUP-BOZZA-AI: Risposta; autore=ChatGPT; data=2026-11-10; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), bozza AI 2014 del 2026-11-10; ricostruzione indipendente dal Testo storico; revisione umana pendente.
+\begin{enumerate}
+\item[(a)] $p(\sqrt{6800}-20)$ euro, ossia circa $9.3693$ euro
+se $p=0.15$.
+\item[(b)] Posto $b(d)=p(\sqrt{6400+d^2}-d)$, il prezzo
+ottimale è $b(d)$ per $0\leq d<60$, oppure $80p$ per
+$d>60$. Per $d=60$ entrambi i prezzi sono ottimali.
+\end{enumerate}
+}
+\renewcommand{\Aiutino}{
+% SSSUP-BOZZA-AI: Aiutino; autore=ChatGPT; data=2026-11-10; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), bozza AI 2014 del 2026-11-10; ricostruzione indipendente dal Testo storico; revisione umana pendente.
+Confrontare, separatamente per gli abitanti di PI e di LI,
+il costo del treno con quello dell'auto. Si ottengono due
+soglie per il prezzo del biglietto: il ricavo cambia formula
+quando si supera una di esse. Basta confrontare i ricavi
+massimi ottenibili nelle due fasce di prezzo.
+}
 \renewcommand{\SoluzioneUfficiale}{}
-\renewcommand{\SoluzioneRedazionale}{}
+\renewcommand{\SoluzioneRedazionale}{
+% SSSUP-BOZZA-AI: SoluzioneRedazionale; autore=ChatGPT; data=2026-11-10; stato=DA-VERIFICARE
+% SSSUP-PROVENIENZA: ChatGPT (OpenAI), bozza AI 2014 del 2026-11-10; ricostruzione indipendente dal Testo storico; revisione umana pendente.
+Sia $x$ il prezzo del biglietto PI--FI, e sia $N$ il numero
+di viaggiatori provenienti da ciascuna delle due città.
+
+Per un abitante di PI, il viaggio in auto costa $80p$ euro.
+Poiché in caso di parità si preferisce il treno, tutti gli
+abitanti di PI scelgono il treno se e solo se
+\[
+ x\leq A:=80p.
+\]
+
+Per un abitante di LI il tragitto diretto in auto misura
+$\sqrt{80^2+d^2}=\sqrt{6400+d^2}$ chilometri, mentre
+l'alternativa auto fino a PI e treno fino a FI costa
+$dp+x$. Pertanto i viaggiatori di LI prendono il treno
+se e solo se
+\[
+ x\leq B:=p(\sqrt{6400+d^2}-d).
+\]
+Per $d\geq0$ si ha $0<B\leq A$.
+
+Il ricavo ferroviario è dunque
+\[
+ R(x)=
+ \begin{cases}
+  2Nx,&0\leq x\leq B,\\
+  Nx,&B<x\leq A,\\
+  0,&x>A.
+ \end{cases}
+\]
+(In caso di coincidenza delle soglie, la fascia centrale
+è vuota.) Le uniche possibilità per il massimo sono
+$R(B)=2NB$ e $R(A)=NA$. Conviene scegliere $B$ quando
+$2B\geq A$, cioè quando
+\[
+ 2(\sqrt{6400+d^2}-d)\geq80
+ \quad\Longleftrightarrow\quad d\leq60.
+\]
+Per $d<60$ il prezzo ottimale è quindi $B$; per $d>60$
+è $A$; per $d=60$ entrambi danno lo stesso ricavo massimo.
+
+Nel caso (a), $d=20<60$ e dunque
+\[
+ x=p(\sqrt{6800}-20).
+\]
+Con $p=0.15$ il risultato è circa $9.3693$ euro.
+Se il prezzo deve essere espresso in centesimi, conviene
+arrotondare per difetto a $9.36$ euro: arrotondando per
+eccesso a $9.37$ euro i viaggiatori di LI non prenderebbero
+il treno.
+}
 \renewcommand{\SoluzioniAlternative}{}
 \renewcommand{\Osservazioni}{}
 \renewcommand{\Commenti}{}

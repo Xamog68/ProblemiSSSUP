@@ -334,13 +334,30 @@
     if(window.ResizeObserver)new ResizeObserver(()=>requestAnimationFrame(updateStats)).observe(main.querySelector('article.problem'));
     window.addEventListener('resize',updateStats);
   }
+  // SSSUP-NAV-3: precedente | elenco degli anni | successivo.
+  function sssupYearNavThree(y, bottom=false) {
+    const nav=el('nav','sssup-year-links'+(bottom?' sssup-year-links-bottom':''));
+    nav.setAttribute('aria-label',`Navigazione tra gli anni, ${y.year}`);
+    const years=Array.from(new Set(catalog.years.map(item=>Number(item.year))))
+      .filter(Number.isFinite).sort((a,b)=>a-b);
+    const i=years.indexOf(y.year);
+    const previous=i>0 ? years[i-1] : null;
+    const following=i>=0 && i<years.length-1 ? years[i+1] : null;
+    const before=previous!==null
+      ? link(`\u2190 ${previous}`,linkFor(previous),'sssup-year-button sssup-year-prev')
+      : el('span','sssup-year-button sssup-year-prev sssup-year-off','\u2190 Precedente');
+    const center=link('Tutti gli anni','index.html','sssup-year-button sssup-year-center');
+    const after=following!==null
+      ? link(`${following} \u2192`,linkFor(following),'sssup-year-button sssup-year-next')
+      : el('span','sssup-year-button sssup-year-next sssup-year-off','Successivo \u2192');
+    nav.append(before,center,after);
+    return nav;
+  }
   async function showYear(y) {
     heading.textContent=`La prova del ${y.year}.`;
     subtitle.textContent=y.missing?'Testi ancora da recuperare.':`${y.count} problemi nell’archivio canonico · testi sempre visibili, materiali aggiuntivi a richiesta.`;
     main.replaceChildren();
-    main.append(y.missing || !y.preview
-      ? link('← Torna a tutti gli anni','index.html','back-years')
-      : yearNeighborLink(y,-1));
+    main.append(sssupYearNavThree(y));
     if(y.missing){
       const area=el('div','no-content');area.append(el('h2','','Prova non ancora reperita'));
       area.append(el('p','','La pagina dell’anno esiste già. Quando recupereremo i testi, i problemi appariranno qui automaticamente.'));
@@ -364,7 +381,7 @@
       if(s.status==='fulfilled')slot.append(renderProblem(s.value));
       else slot.append(el('p','notice',`Non riesco a leggere il problema ${y.year}.${i+1}: ${s.reason.message}`));
     }
-    main.append(yearNeighborLink(y,1));
+    main.append(sssupYearNavThree(y, true));
     main.append(el('p','jump-top',''));
     main.lastChild.append(link('↑ Torna in cima','#'));
     updateStats();
