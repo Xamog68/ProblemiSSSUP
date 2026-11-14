@@ -1,0 +1,82 @@
+{
+  "schema": 1,
+  "problema": "SA_2026_1",
+  "anno": 2026,
+  "numero": 1,
+  "titolo": "Problema 2026.1",
+  "elaborati": 105,
+  "analitici_disponibili": 86,
+  "stato": "bozza_da_verificare",
+  "pubblicabile": true,
+  "ai_da_verificare": true,
+  "criterio_sottodomande": "punteggio_pieno",
+  "conteggi": "punteggi_analitici_con_parziali_non_semantici",
+  "sottodomande": [
+    {
+      "id": "a",
+      "contributo": 80,
+      "sostanzialmente_completo": 8,
+      "non_classificabili": 19
+    },
+    {
+      "id": "b",
+      "contributo": 74,
+      "sostanzialmente_completo": 6,
+      "non_classificabili": 19
+    },
+    {
+      "id": "c",
+      "contributo": 48,
+      "sostanzialmente_completo": 2,
+      "non_classificabili": 19
+    }
+  ],
+  "top_matematica": {
+    "5": {
+      "effettivi": 5,
+      "contributo_problema": 5,
+      "almeno_meta": 5,
+      "almeno_quattro_quinti": 3,
+      "anche_top_problema": 3,
+      "completi_stretti": {
+        "a": 4,
+        "b": 4,
+        "c": 2
+      },
+      "analitici_nel_top": 5
+    },
+    "10": {
+      "effettivi": 10,
+      "contributo_problema": 10,
+      "almeno_meta": 10,
+      "almeno_quattro_quinti": 4,
+      "anche_top_problema": 9,
+      "completi_stretti": {
+        "a": 6,
+        "b": 5,
+        "c": 2
+      },
+      "analitici_nel_top": 10
+    },
+    "20": {
+      "effettivi": 21,
+      "contributo_problema": 21,
+      "almeno_meta": 14,
+      "almeno_quattro_quinti": 5,
+      "anche_top_problema": 14,
+      "completi_stretti": {
+        "a": 8,
+        "b": 6,
+        "c": 2
+      },
+      "analitici_nel_top": 21
+    }
+  },
+  "osservazioni": [
+    "I punteggi analitici sono presenti per 86 dei 105 elaborati: gli altri 19 non sono considerati zero nelle sottodomande.",
+    "Fra i 86 elaborati analitici, il punteggio pieno compare 8 volte in (a), 6 in (b), 2 in (c)."
+  ],
+  "metodologia": "I punteggi per (a), (b), (c) sono quote fra 0 e 1 nella scheda privata «Esercizio 1». Le barre indicano soltanto i 86 elaborati con valutazione analitica. Il punteggio pieno richiede quota 1; non abbiamo applicato soglie arbitrarie per dedurre una completezza sostanziale. I conteggi Top sono minimi documentati dove mancano valutazioni analitiche. Le classifiche derivano dal punteggio complessivo dei tre problemi di matematica, con ex aequo inclusi.",
+  "nota_riservatezza": "Solo dati aggregati anonimi; tabellone Excel custodito fuori dai file versionati. La classifica riguarda la prova di matematica, non la graduatoria finale.",
+  "fonte_aggregata": "Scheda Esercizio 1 e Totali"
+}

@@ -1,3 +1,4 @@
+/* SSSUP-2026-ALL-STATS */
 /* ProblemiSSSUP: statistics are a separate, optional layer; no LaTeX/site.js rewriting. */
 (() => {
   'use strict';
@@ -25,12 +26,13 @@
 
   function makeChart(stats) {
     const wrapper = E('div','sssup-a-graph');
-    const n = stats.elaborati;
+    const n = stats.analitici_disponibili || stats.elaborati;
     const subs = stats.sottodomande;
     const maxValue = Math.max(10, Math.ceil(n / 20) * 20);
     const left=51, right=672, top=32, bottom=235;
     const svg=S('svg',{viewBox:'0 0 720 285',role:'img',preserveAspectRatio:'xMidYMid meet'});
-    const description = `Su ${n} elaborati: `+subs.map(p => `punto ${p.id}: ${p.contributo} con contributo riconosciuto e ${p.sostanzialmente_completo} sostanzialmente completi`).join('; ');
+    const criterion = stats.criterio_sottodomande === 'punteggio_pieno' ? 'con punteggio pieno documentato' : 'sostanzialmente completi';
+    const description = `Su ${n} elaborati con parziali: `+subs.map(p => `punto ${p.id}: ${p.contributo} con contributo riconosciuto e ${p.sostanzialmente_completo} ${criterion}`).join('; ');
     svg.setAttribute('aria-label',description);
     for (let i=0;i<=4;i++) {
       const value=Math.round(maxValue*i/4);
@@ -86,13 +88,14 @@
           const item = group.completi_sostanziali[sub.id];
           if (!item || item.stato === 'non_ricostruibile') continue;
           const partial = item.da_verificare > 0;
-          const label = `Hanno sostanzialmente completato (${sub.id})${partial ? ' — minimo documentato' : ''}`;
+          const what = stats.criterio_sottodomande === 'punteggio_pieno' ? 'Hanno punteggio pieno documentato' : 'Hanno sostanzialmente completato';
+          const label = `${what} (${sub.id})${partial ? ' — minimo documentato' : ''}`;
           rows.push([label, `${item.documentati} su ${group.effettivi}`]);
         }
       } else if(group.completi_stretti) {
         for (const sub of stats.sottodomande) {
           if(Object.hasOwn(group.completi_stretti,sub.id))
-            rows.push([`Hanno completato (${sub.id}) senza penalizzazioni`,`${group.completi_stretti[sub.id]} su ${group.effettivi}`]);
+            rows.push([`Hanno punteggio pieno documentato (${sub.id})${Number.isInteger(group.analitici_nel_top) && group.analitici_nel_top < group.effettivi ? ' — minimo certo' : ''}`,`${group.completi_stretti[sub.id]} su ${group.effettivi}`]);
         }
       } else {
         rows.push(['Hanno ottenuto un contributo utile nel problema',`${group.contributo_problema} su ${group.effettivi}`]);
@@ -107,6 +110,8 @@
       const toReview = group.completi_sostanziali && Object.values(group.completi_sostanziali)
         .some(row => row.stato === 'ricostruzione_da_verificare' && row.da_verificare > 0);
       footnote.textContent=`Il gruppo comprende ${group.effettivi} elaborati${group.effettivi>Number(key)?', inclusi gli ex aequo alla soglia':''}. La classifica usa tutti e tre i problemi di matematica, non la graduatoria finale di ammissione.${toReview?' Nei conteggi segnalati come minimi documentati restano casi da verificare.':''}`;
+      if(stats.analitici_disponibili < stats.elaborati && Number.isInteger(group.analitici_nel_top))
+        footnote.textContent += ` Per le sottodomande ci sono dati analitici relativi a ${group.analitici_nel_top} dei ${group.effettivi} elaborati del gruppo.${group.analitici_nel_top < group.effettivi ? ' Le cifre riportate sono minimi certi.' : ''}`;
     }
     for(const key of ['5','10','20']) {
       const b=E('button','',`Top ${key}`);
@@ -175,9 +180,13 @@
     heading.append(E('h3','','Fin dove sono arrivati i candidati?'));
     inner.append(heading);
     text(inner,'Bozza AI · Da verificare. I conteggi e le interpretazioni richiedono un controllo editoriale.','sssup-a-note');
-    text(inner,`${stats.elaborati} elaborati corretti · conteggi anonimi`,'sssup-a-kicker');
+    const coverageText = stats.analitici_disponibili && stats.analitici_disponibili < stats.elaborati
+      ? `${stats.analitici_disponibili} griglie analitiche su ${stats.elaborati} elaborati · altri dati non classificabili per sottodomanda`
+      : `${stats.elaborati} elaborati corretti · conteggi anonimi`;
+    text(inner,coverageText,'sssup-a-kicker');
     const legend=E('div','sssup-a-legend');
-    for(const [label,cls] of [['Contributo utile','a'],['Sostanzialmente completo','b']]) {
+    const fullLabel = stats.criterio_sottodomande === 'punteggio_pieno' ? 'Punteggio pieno (criterio prudente)' : 'Sostanzialmente completo';
+    for(const [label,cls] of [['Contributo utile','a'],[fullLabel,'b']]) {
       const item=E('span');item.append(E('i',`sssup-a-chip ${cls}`),document.createTextNode(label));legend.append(item);
     }
     inner.append(legend,makeChart(stats));

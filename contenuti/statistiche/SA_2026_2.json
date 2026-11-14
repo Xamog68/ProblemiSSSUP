@@ -1,0 +1,82 @@
+{
+  "schema": 1,
+  "problema": "SA_2026_2",
+  "anno": 2026,
+  "numero": 2,
+  "titolo": "Problema 2026.2",
+  "elaborati": 105,
+  "analitici_disponibili": 105,
+  "stato": "bozza_da_verificare",
+  "pubblicabile": true,
+  "ai_da_verificare": true,
+  "criterio_sottodomande": "punteggio_pieno",
+  "conteggi": "punteggi_analitici_con_parziali_non_semantici",
+  "sottodomande": [
+    {
+      "id": "a",
+      "contributo": 100,
+      "sostanzialmente_completo": 85,
+      "non_classificabili": 0
+    },
+    {
+      "id": "b",
+      "contributo": 81,
+      "sostanzialmente_completo": 34,
+      "non_classificabili": 0
+    },
+    {
+      "id": "c",
+      "contributo": 64,
+      "sostanzialmente_completo": 19,
+      "non_classificabili": 0
+    }
+  ],
+  "top_matematica": {
+    "5": {
+      "effettivi": 5,
+      "contributo_problema": 5,
+      "almeno_meta": 5,
+      "almeno_quattro_quinti": 5,
+      "anche_top_problema": 4,
+      "completi_stretti": {
+        "a": 5,
+        "b": 5,
+        "c": 4
+      },
+      "analitici_nel_top": 5
+    },
+    "10": {
+      "effettivi": 10,
+      "contributo_problema": 10,
+      "almeno_meta": 10,
+      "almeno_quattro_quinti": 10,
+      "anche_top_problema": 8,
+      "completi_stretti": {
+        "a": 9,
+        "b": 10,
+        "c": 9
+      },
+      "analitici_nel_top": 10
+    },
+    "20": {
+      "effettivi": 21,
+      "contributo_problema": 21,
+      "almeno_meta": 19,
+      "almeno_quattro_quinti": 17,
+      "anche_top_problema": 15,
+      "completi_stretti": {
+        "a": 19,
+        "b": 16,
+        "c": 13
+      },
+      "analitici_nel_top": 21
+    }
+  },
+  "osservazioni": [
+    "Nel punto (a) 100 candidati hanno ottenuto credito e 85 il punteggio pieno; nel punto (c) i numeri scendono a 64 e 19.",
+    "Il voto finale P2 è una trasformazione dei parziali, non necessariamente la somma di (a), (b), (c)."
+  ],
+  "metodologia": "I punteggi storici delle sottodomande 2-a, 2-b, 2-c sono compresi fra 0 e 10. Credito = valore positivo; punteggio pieno = esattamente 10. Non equivale a una validazione editoriale della soluzione sostanzialmente completa. I punteggi P2 definitivi sono quelli della scheda Totali, non somme meccaniche dei parziali. Le classifiche derivano dai tre problemi di matematica, inclusi gli ex aequo.",
+  "nota_riservatezza": "Solo dati aggregati anonimi; tabellone Excel custodito fuori dai file versionati. La classifica riguarda la prova di matematica, non la graduatoria finale.",
+  "fonte_aggregata": "Scheda Esercizio_2 e Totali"
+}

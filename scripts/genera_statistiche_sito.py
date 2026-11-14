@@ -104,6 +104,13 @@ def main():
     index=target/'indice.json'; output=json.dumps(manifest,ensure_ascii=False,indent=2)+'\n'
     if not index.exists() or index.read_text(encoding='utf-8')!=output:
         index.write_text(output,encoding='utf-8')
+    # Indice sincrono minimale: permette di mostrare subito il conteggio esatto.
+    # Non contiene dati di candidati, solo gli ID delle schede pubblicate.
+    keys_js='window.SSSUP_STATS_KEYS = '+json.dumps(manifest['problemi'],ensure_ascii=False)+';\n'
+    js_index=target/'indice.js'
+    if not js_index.exists() or js_index.read_text(encoding='utf-8')!=keys_js:
+        js_index.write_text(keys_js,encoding='utf-8')
+    # SSSUP-2026-ALL-STATS
     print(f'Statistiche web: {len(validated)} schede ({len(list(source.glob("SA_*.json")))} totali nel catalogo)')
     if args.includi_bozze:
         print('ATTENZIONE: versione per anteprima con conteggi provvisori! Prima del push rieseguire SENZA --includi-bozze.')
