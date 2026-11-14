@@ -118,6 +118,11 @@ main{min-height:380px;padding-top:30px;padding-bottom:110px}
 .math-body > ol > li::marker { content: "(" counter(list-item, lower-alpha) ") "; }
 
 
+/* Risposte e Aiutini: (a), (b), ... soltanto per liste che corrispondono
+   alle sottodomande nel Testo (classe aggiunta dall'interfaccia). */
+.subquestion-list { list-style-type: lower-alpha; }
+.subquestion-list > li::marker { content: "(" counter(list-item, lower-alpha) ") "; }
+
 /* Pages: ritorno all'indice ben riconoscibile. */
 .back-years{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 17px;margin:0 0 22px;background:var(--sea);color:white;border:2px solid var(--sea);border-radius:9px;text-decoration:none;font:750 14px/1.35 system-ui,-apple-system,sans-serif;box-shadow:0 3px 9px #132b3a1b}
 .back-years:hover{background:#0e5e59;border-color:#0e5e59;color:white;text-decoration:none}

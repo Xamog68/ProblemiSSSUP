@@ -42,6 +42,25 @@
     if(section)p.set('sezione',section);
     return 'index.html?'+p.toString()+(number?'#problema-'+number:'');
   }
+  // Navigazione fra annate consultabili; salta gli eventuali anni mancanti.
+  function adjacentYear(y, step) {
+    const years=catalog.years.filter(entry=>!entry.missing && entry.preview>0)
+      .map(entry=>entry.year).sort((a,b)=>a-b);
+    const pos=years.indexOf(y.year);
+    return pos<0 ? undefined : years[pos+step];
+  }
+  function yearNeighborLink(y, step) {
+    const target=adjacentYear(y,step);
+    if(target===undefined){
+      return link(step<0?'← Tutti gli anni':'Tutti gli anni →','index.html','back-years');
+    }
+    const label=step<0?`← Anno ${target}`:`Anno ${target} →`;
+    const a=link(label,linkFor(target),'back-years');
+    a.setAttribute('aria-label',step<0
+      ? `Vai all’anno precedente, ${target}`
+      : `Vai all’anno successivo, ${target}`);
+    return a;
+  }
   function showIndex() {
     heading.textContent='Un archivio, trentun anni di problemi.';
     subtitle.textContent='I testi sono conservati in LaTeX. Il sito è un modo diverso di consultarli.';
@@ -236,6 +255,19 @@
     const body=el('div','math-body');body.innerHTML=data.sections?.Testo||'';article.append(body);
     if(data.warning)article.append(el('div','problem-alert',data.warning));
     const {extras,count}=makeDetails(data);
+    // La stessa numerazione alfabetica del Testo nelle liste corrispondenti
+    // di Risposta e Aiutino. Le liste annidate o non corrispondenti restano intatte.
+    const questionList=body.querySelector(':scope > ol');
+    const numberOfQuestions=questionList
+      ? questionList.querySelectorAll(':scope > li').length : 0;
+    if(numberOfQuestions>1) {
+      for(const detail of extras.querySelectorAll('details.extra[data-field="Risposta"], details.extra[data-field="Aiutino"]')) {
+        const list=detail.querySelector(':scope > .extra-body > ol');
+        if(list && list.querySelectorAll(':scope > li').length===numberOfQuestions){
+          list.classList.add('subquestion-list');
+        }
+      }
+    }
     if(standalone){
       article.classList.add('standalone-problem');
       if(count){
@@ -306,7 +338,9 @@
     heading.textContent=`La prova del ${y.year}.`;
     subtitle.textContent=y.missing?'Testi ancora da recuperare.':`${y.count} problemi nell’archivio canonico · testi sempre visibili, materiali aggiuntivi a richiesta.`;
     main.replaceChildren();
-    main.append(link('← Torna a tutti gli anni','index.html','back-years'));
+    main.append(y.missing || !y.preview
+      ? link('← Torna a tutti gli anni','index.html','back-years')
+      : yearNeighborLink(y,-1));
     if(y.missing){
       const area=el('div','no-content');area.append(el('h2','','Prova non ancora reperita'));
       area.append(el('p','','La pagina dell’anno esiste già. Quando recupereremo i testi, i problemi appariranno qui automaticamente.'));
@@ -330,7 +364,7 @@
       if(s.status==='fulfilled')slot.append(renderProblem(s.value));
       else slot.append(el('p','notice',`Non riesco a leggere il problema ${y.year}.${i+1}: ${s.reason.message}`));
     }
-    main.append(link('← Torna a tutti gli anni','index.html','back-years back-years-bottom'));
+    main.append(yearNeighborLink(y,1));
     main.append(el('p','jump-top',''));
     main.lastChild.append(link('↑ Torna in cima','#'));
     updateStats();

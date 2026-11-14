@@ -263,112 +263,112 @@
     {
       "id": "SA_2004_3__SoluzioneUfficiale__01",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "42f3f94addd42825d909912e1e90e464f6aa9266ff8a1b05820f56b8d24b2ccc",
+      "sha256_sorgente": "56eb94e4d189e51923d13512b51ddf7e8ba41b4581762718ae863ff1bde80254",
       "sha256_svg": "1266f3e49c34ede36d5eafbf55d5f688275b1ebdbc2d3f2ca8f5e3cdf63d4018",
       "categoria": "griglia-da-valutare"
     },
     {
       "id": "SA_2004_4__SoluzioneUfficiale__01",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "99a5564e8ba29d119b9ab1082132773b5a3a3b0ad0c7ebca562c1d6f4be2b8ba",
-      "sha256_svg": "fa48ca8820ddad94748bc96bdd2cb6369b8e3dbc693d051d9a17f773c1aea15c",
+      "sha256_sorgente": "b3a08063c7cecf2f57a6462a708e7313ad58cb1baf534009c5760de846235576",
+      "sha256_svg": "88b269bdcb6fcc34de2e0bafb7f6eea6ec08eb008d054c0f85354229a2c6da03",
       "categoria": "svg"
     },
     {
       "id": "SA_2004_4__SoluzioneUfficiale__02",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "99a5564e8ba29d119b9ab1082132773b5a3a3b0ad0c7ebca562c1d6f4be2b8ba",
+      "sha256_sorgente": "b3a08063c7cecf2f57a6462a708e7313ad58cb1baf534009c5760de846235576",
       "sha256_svg": "a37e20c6b9dca11b0193f0547f47641f9754adcef159bc084f48ff852d94968b",
       "categoria": "svg"
     },
     {
       "id": "SA_2004_4__SoluzioneUfficiale__03",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "99a5564e8ba29d119b9ab1082132773b5a3a3b0ad0c7ebca562c1d6f4be2b8ba",
+      "sha256_sorgente": "b3a08063c7cecf2f57a6462a708e7313ad58cb1baf534009c5760de846235576",
       "sha256_svg": "35129e971e6966fbbf0348079e7598ef3c47da823f6dbdf24a8fefb76b8b8ba9",
       "categoria": "svg"
     },
     {
       "id": "SA_2004_4__SoluzioneUfficiale__04",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "99a5564e8ba29d119b9ab1082132773b5a3a3b0ad0c7ebca562c1d6f4be2b8ba",
+      "sha256_sorgente": "b3a08063c7cecf2f57a6462a708e7313ad58cb1baf534009c5760de846235576",
       "sha256_svg": "c79f3fb8599c4a50ffbe83b9df03c85ed789965ec686ed7789675bc3bdf498d2",
       "categoria": "svg"
     },
     {
       "id": "SA_2004_4__SoluzioneUfficiale__05",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "99a5564e8ba29d119b9ab1082132773b5a3a3b0ad0c7ebca562c1d6f4be2b8ba",
+      "sha256_sorgente": "b3a08063c7cecf2f57a6462a708e7313ad58cb1baf534009c5760de846235576",
       "sha256_svg": "0771b54c25ad6283384c215bcde97561be2fb1438d346f8eca298539485ac036",
       "categoria": "svg"
     },
     {
       "id": "SA_2004_4__SoluzioneUfficiale__06",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "99a5564e8ba29d119b9ab1082132773b5a3a3b0ad0c7ebca562c1d6f4be2b8ba",
+      "sha256_sorgente": "b3a08063c7cecf2f57a6462a708e7313ad58cb1baf534009c5760de846235576",
       "sha256_svg": "0adaea445bbb9e2bba37e5ab4380b0ecd137befe9faa0c7a64401f2aea7bae22",
       "categoria": "svg"
     },
     {
       "id": "SA_2004_4__SoluzioneUfficiale__07",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "99a5564e8ba29d119b9ab1082132773b5a3a3b0ad0c7ebca562c1d6f4be2b8ba",
+      "sha256_sorgente": "b3a08063c7cecf2f57a6462a708e7313ad58cb1baf534009c5760de846235576",
       "sha256_svg": "01a5477ea732ccc275a98bc70d8d398c463c8102de416daa9749c12de1338357",
       "categoria": "svg"
     },
     {
       "id": "SA_2004_4__SoluzioneUfficiale__08",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "99a5564e8ba29d119b9ab1082132773b5a3a3b0ad0c7ebca562c1d6f4be2b8ba",
+      "sha256_sorgente": "b3a08063c7cecf2f57a6462a708e7313ad58cb1baf534009c5760de846235576",
       "sha256_svg": "041c23aa17b665e19bb3b3fcb983ff7e89d8cadc5ca5cdd538a1166d886d0ba2",
       "categoria": "svg"
     },
     {
       "id": "SA_2005_2__SoluzioneUfficiale__01",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "028c373e4fb41cef2cf2e29b0d2d6cb974077878a838665f39e34ea27f7bcdc0",
+      "sha256_sorgente": "68302f1bcbb561c0580503e44e3298ec6b74ecc19e15d44a7fe0c567db33eed5",
       "sha256_svg": "8de08b26793a1fbfd7affe04022793f0125da31be73879a59f01937888d6a5f6",
       "categoria": "svg"
     },
     {
       "id": "SA_2005_2__SoluzioneUfficiale__02",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "028c373e4fb41cef2cf2e29b0d2d6cb974077878a838665f39e34ea27f7bcdc0",
-      "sha256_svg": "d4854dbe6c2b6a23dbeab91f3d8c2fb517451f80242c1b5e8702ec332a902798",
+      "sha256_sorgente": "68302f1bcbb561c0580503e44e3298ec6b74ecc19e15d44a7fe0c567db33eed5",
+      "sha256_svg": "3e9a7cf6d8d3c6fe4a9f3d19523254d7c151aac4da00a99802ee90bc0989c1ae",
       "categoria": "svg"
     },
     {
       "id": "SA_2005_2__SoluzioneUfficiale__03",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "028c373e4fb41cef2cf2e29b0d2d6cb974077878a838665f39e34ea27f7bcdc0",
+      "sha256_sorgente": "68302f1bcbb561c0580503e44e3298ec6b74ecc19e15d44a7fe0c567db33eed5",
       "sha256_svg": "3a710c05eaacce5937948c0e6ec9c61336420616f67b561f60d9748e10f0a69d",
       "categoria": "svg"
     },
     {
       "id": "SA_2005_2__SoluzioneUfficiale__04",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "028c373e4fb41cef2cf2e29b0d2d6cb974077878a838665f39e34ea27f7bcdc0",
+      "sha256_sorgente": "68302f1bcbb561c0580503e44e3298ec6b74ecc19e15d44a7fe0c567db33eed5",
       "sha256_svg": "3da265d51e92932b571cc960e726229fd21788b0cdd2f409c22fdd7a08411215",
       "categoria": "svg"
     },
     {
       "id": "SA_2005_2__SoluzioniAlternative__01",
       "campo": "SoluzioniAlternative",
-      "sha256_sorgente": "028c373e4fb41cef2cf2e29b0d2d6cb974077878a838665f39e34ea27f7bcdc0",
+      "sha256_sorgente": "68302f1bcbb561c0580503e44e3298ec6b74ecc19e15d44a7fe0c567db33eed5",
       "sha256_svg": "2ec6a5271676bbe79e6599d01d3f19b754a610efdcec906c22aad956d98bed99",
       "categoria": "svg"
     },
     {
       "id": "SA_2005_2__SoluzioniAlternative__02",
       "campo": "SoluzioniAlternative",
-      "sha256_sorgente": "028c373e4fb41cef2cf2e29b0d2d6cb974077878a838665f39e34ea27f7bcdc0",
+      "sha256_sorgente": "68302f1bcbb561c0580503e44e3298ec6b74ecc19e15d44a7fe0c567db33eed5",
       "sha256_svg": "3232f311027a8b57b1853114e241e50c346e2391a201ba62c03aad6b2d790558",
       "categoria": "svg"
     },
     {
       "id": "SA_2005_2__Testo__01",
       "campo": "Testo",
-      "sha256_sorgente": "028c373e4fb41cef2cf2e29b0d2d6cb974077878a838665f39e34ea27f7bcdc0",
+      "sha256_sorgente": "68302f1bcbb561c0580503e44e3298ec6b74ecc19e15d44a7fe0c567db33eed5",
       "sha256_svg": "33aab61e86495dc0e31dc919f795e1798858362100eaa419325aec9f503b8819",
       "categoria": "svg"
     },
@@ -389,28 +389,28 @@
     {
       "id": "SA_2006_3__Aiutino__01",
       "campo": "Aiutino",
-      "sha256_sorgente": "9127bf60a20d02ab3db0e2e8ea8a7eae1105baf8e5a3c6f42e13383fce9e1751",
-      "sha256_svg": "f2966bbbf9de5717cdd9f1b05e1bd649103b9636e543e4a583a54b6130454953",
+      "sha256_sorgente": "1f29d67fd2178a740e8943ab9c713169e5abd073d90bc6b75179d825d9f6c30a",
+      "sha256_svg": "a45c69e0ab2c520f60703c7a935dd9df732fb89287130bdd4173f16ea8861947",
       "categoria": "svg"
     },
     {
       "id": "SA_2006_3__SoluzioneUfficiale__01",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "9127bf60a20d02ab3db0e2e8ea8a7eae1105baf8e5a3c6f42e13383fce9e1751",
+      "sha256_sorgente": "1f29d67fd2178a740e8943ab9c713169e5abd073d90bc6b75179d825d9f6c30a",
       "sha256_svg": "ee4aae0668f93e547068e40b69fcf25bf070be91521d282f709d63f7fa2d9030",
       "categoria": "svg"
     },
     {
       "id": "SA_2006_3__SoluzioneUfficiale__02",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "9127bf60a20d02ab3db0e2e8ea8a7eae1105baf8e5a3c6f42e13383fce9e1751",
+      "sha256_sorgente": "1f29d67fd2178a740e8943ab9c713169e5abd073d90bc6b75179d825d9f6c30a",
       "sha256_svg": "0a84957dfc16b5261bd8acdd2c3d2470368f6e316a3ae3d692153170d776a543",
       "categoria": "svg"
     },
     {
       "id": "SA_2006_3__SoluzioneUfficiale__03",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "9127bf60a20d02ab3db0e2e8ea8a7eae1105baf8e5a3c6f42e13383fce9e1751",
+      "sha256_sorgente": "1f29d67fd2178a740e8943ab9c713169e5abd073d90bc6b75179d825d9f6c30a",
       "sha256_svg": "c67805ca430faf6e6dbcdc7578dc1dc0e1740c583c9726fbefbd8c54cff663f9",
       "categoria": "svg"
     },
@@ -431,112 +431,112 @@
     {
       "id": "SA_2007_1__Aiutino__01",
       "campo": "Aiutino",
-      "sha256_sorgente": "86022af069a0690295936615774c23b1b6eae5fdc8bda90fb0ddf99b74728174",
+      "sha256_sorgente": "b74182208fbadb892bffd619b65dedd22ffb6c97e9da70a6788d630473f89144",
       "sha256_svg": "d9dde1164dc00ee035648687134778f73df19a67f3eb13b2e07147e3d28527be",
       "categoria": "svg"
     },
     {
       "id": "SA_2007_1__Aiutino__02",
       "campo": "Aiutino",
-      "sha256_sorgente": "86022af069a0690295936615774c23b1b6eae5fdc8bda90fb0ddf99b74728174",
+      "sha256_sorgente": "b74182208fbadb892bffd619b65dedd22ffb6c97e9da70a6788d630473f89144",
       "sha256_svg": "8f566d6b0822eb7efd370b22be6ff150f8a4c229bbbecce8d5172262a56198d6",
       "categoria": "svg"
     },
     {
       "id": "SA_2007_1__SoluzioneUfficiale__01",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "86022af069a0690295936615774c23b1b6eae5fdc8bda90fb0ddf99b74728174",
+      "sha256_sorgente": "b74182208fbadb892bffd619b65dedd22ffb6c97e9da70a6788d630473f89144",
       "sha256_svg": "598bcdf1bd7a41cb8812c0333cd6b77322d86f2e27b10cb136407a6d41a82990",
       "categoria": "svg"
     },
     {
       "id": "SA_2007_1__SoluzioneUfficiale__02",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "86022af069a0690295936615774c23b1b6eae5fdc8bda90fb0ddf99b74728174",
+      "sha256_sorgente": "b74182208fbadb892bffd619b65dedd22ffb6c97e9da70a6788d630473f89144",
       "sha256_svg": "54437e195f1d10c032674295944586b5388227a159e4cb86317cf0f2143b7935",
       "categoria": "svg"
     },
     {
       "id": "SA_2007_1__SoluzioneUfficiale__03",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "86022af069a0690295936615774c23b1b6eae5fdc8bda90fb0ddf99b74728174",
+      "sha256_sorgente": "b74182208fbadb892bffd619b65dedd22ffb6c97e9da70a6788d630473f89144",
       "sha256_svg": "719130c0424edf80c091e7e4d80bd746dd7b189e2876743aaf3c7883004b6c1c",
       "categoria": "svg"
     },
     {
       "id": "SA_2007_1__SoluzioneUfficiale__04",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "86022af069a0690295936615774c23b1b6eae5fdc8bda90fb0ddf99b74728174",
+      "sha256_sorgente": "b74182208fbadb892bffd619b65dedd22ffb6c97e9da70a6788d630473f89144",
       "sha256_svg": "ebd548b0997fc020dddf1556dd732541cfd5ca0aca225ad9bc3620158acd0499",
       "categoria": "svg"
     },
     {
       "id": "SA_2007_1__SoluzioniAlternative__01",
       "campo": "SoluzioniAlternative",
-      "sha256_sorgente": "86022af069a0690295936615774c23b1b6eae5fdc8bda90fb0ddf99b74728174",
+      "sha256_sorgente": "b74182208fbadb892bffd619b65dedd22ffb6c97e9da70a6788d630473f89144",
       "sha256_svg": "8576269a044b94d19b2059954a6da262182ed4de68605fe085c4169224e7a145",
       "categoria": "svg"
     },
     {
       "id": "SA_2007_1__SoluzioniAlternative__02",
       "campo": "SoluzioniAlternative",
-      "sha256_sorgente": "86022af069a0690295936615774c23b1b6eae5fdc8bda90fb0ddf99b74728174",
+      "sha256_sorgente": "b74182208fbadb892bffd619b65dedd22ffb6c97e9da70a6788d630473f89144",
       "sha256_svg": "5b6e783b3e307f0bcead5151ebd2a7f232bf39db49793644ce1eab6bc26309af",
       "categoria": "svg"
     },
     {
       "id": "SA_2007_1__Testo__01",
       "campo": "Testo",
-      "sha256_sorgente": "86022af069a0690295936615774c23b1b6eae5fdc8bda90fb0ddf99b74728174",
+      "sha256_sorgente": "b74182208fbadb892bffd619b65dedd22ffb6c97e9da70a6788d630473f89144",
       "sha256_svg": "329be6757ebac36562e3ad6a84ad55f74d9dc432859bbac989c52cf360dc5a29",
       "categoria": "svg"
     },
     {
       "id": "SA_2007_2__SoluzioneUfficiale__01",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "387ba6612143dda8249a5e2f83f626d0fcc4beda18179e3a34a103b2404dacef",
+      "sha256_sorgente": "77ca5df1fe0c47078f497c2e2bfa920ca7e8490235188a4d936869e5e15ded8b",
       "sha256_svg": "d3dff3de570fa1084212c97fb003a0777143cbc9419e4f8271584b356cea0fac",
       "categoria": "tabella-candidata"
     },
     {
       "id": "SA_2007_2__SoluzioneUfficiale__02",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "387ba6612143dda8249a5e2f83f626d0fcc4beda18179e3a34a103b2404dacef",
+      "sha256_sorgente": "77ca5df1fe0c47078f497c2e2bfa920ca7e8490235188a4d936869e5e15ded8b",
       "sha256_svg": "4920617f38cdb6a14cf8f987115c8f9b80d754cdceca74805ae638e7070449df",
       "categoria": "tabella-candidata"
     },
     {
       "id": "SA_2007_2__SoluzioneUfficiale__03",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "387ba6612143dda8249a5e2f83f626d0fcc4beda18179e3a34a103b2404dacef",
+      "sha256_sorgente": "77ca5df1fe0c47078f497c2e2bfa920ca7e8490235188a4d936869e5e15ded8b",
       "sha256_svg": "d612a4c5ec692d7eed4af43e2baf4a3b4a0873eb924143c6d1c3b5507b67cb24",
       "categoria": "tabella-candidata"
     },
     {
       "id": "SA_2007_2__SoluzioneUfficiale__04",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "387ba6612143dda8249a5e2f83f626d0fcc4beda18179e3a34a103b2404dacef",
+      "sha256_sorgente": "77ca5df1fe0c47078f497c2e2bfa920ca7e8490235188a4d936869e5e15ded8b",
       "sha256_svg": "de9adedd9b4f0543d20bc14712b7775dc1cc1c4e925e81a9c58858bf330bccce",
       "categoria": "tabella-candidata"
     },
     {
       "id": "SA_2007_2__SoluzioniAlternative__01",
       "campo": "SoluzioniAlternative",
-      "sha256_sorgente": "387ba6612143dda8249a5e2f83f626d0fcc4beda18179e3a34a103b2404dacef",
+      "sha256_sorgente": "77ca5df1fe0c47078f497c2e2bfa920ca7e8490235188a4d936869e5e15ded8b",
       "sha256_svg": "2f439c4e035ae60d645d0588893116e825de770742cb30bc86cf70d49dee25c1",
       "categoria": "tabella-candidata"
     },
     {
       "id": "SA_2007_2__SoluzioniAlternative__02",
       "campo": "SoluzioniAlternative",
-      "sha256_sorgente": "387ba6612143dda8249a5e2f83f626d0fcc4beda18179e3a34a103b2404dacef",
+      "sha256_sorgente": "77ca5df1fe0c47078f497c2e2bfa920ca7e8490235188a4d936869e5e15ded8b",
       "sha256_svg": "d612a4c5ec692d7eed4af43e2baf4a3b4a0873eb924143c6d1c3b5507b67cb24",
       "categoria": "tabella-candidata"
     },
     {
       "id": "SA_2007_2__SoluzioniAlternative__03",
       "campo": "SoluzioniAlternative",
-      "sha256_sorgente": "387ba6612143dda8249a5e2f83f626d0fcc4beda18179e3a34a103b2404dacef",
+      "sha256_sorgente": "77ca5df1fe0c47078f497c2e2bfa920ca7e8490235188a4d936869e5e15ded8b",
       "sha256_svg": "3f4efa30be30832320a5347dbc9145e2d9e6ae8053f5dbacc38c5cd2df3e5559",
       "categoria": "tabella-candidata"
     },
@@ -592,154 +592,154 @@
     {
       "id": "SA_2008_2__Aiutino__01",
       "campo": "Aiutino",
-      "sha256_sorgente": "0993d1547fe1456b5838648224b905a99433946b1dfc19d961b9086e4f5ee284",
+      "sha256_sorgente": "5d16e111f97785d81a874b3c175a7f8f350d4e7a764d289bb5442e7b1f0892ce",
       "sha256_svg": "44ae09b39e5a5aecd62363d214cb1be569d184447425b9a2f1a640074093629b",
       "categoria": "svg"
     },
     {
       "id": "SA_2008_2__SoluzioneUfficiale__01",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "0993d1547fe1456b5838648224b905a99433946b1dfc19d961b9086e4f5ee284",
-      "sha256_svg": "10c2e1b6ec283a399e37e949f8bc79e249ad87a6b62609fe1d562151212e8933",
+      "sha256_sorgente": "5d16e111f97785d81a874b3c175a7f8f350d4e7a764d289bb5442e7b1f0892ce",
+      "sha256_svg": "ac1b76b4d64734029050c9d668e2c01e94571a88548183cc002e80c976335447",
       "categoria": "svg"
     },
     {
       "id": "SA_2008_2__SoluzioneUfficiale__02",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "0993d1547fe1456b5838648224b905a99433946b1dfc19d961b9086e4f5ee284",
+      "sha256_sorgente": "5d16e111f97785d81a874b3c175a7f8f350d4e7a764d289bb5442e7b1f0892ce",
       "sha256_svg": "1fc16938c5b72046dee3d2f6d1da51b42c58618ba58e2948c1b2a5225459de24",
       "categoria": "svg"
     },
     {
       "id": "SA_2008_2__SoluzioneUfficiale__03",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "0993d1547fe1456b5838648224b905a99433946b1dfc19d961b9086e4f5ee284",
+      "sha256_sorgente": "5d16e111f97785d81a874b3c175a7f8f350d4e7a764d289bb5442e7b1f0892ce",
       "sha256_svg": "e6add801b1c31d537648e98869483ced237261fb890f26f0dd327eddb56e4ecd",
       "categoria": "svg"
     },
     {
       "id": "SA_2008_2__SoluzioneUfficiale__04",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "0993d1547fe1456b5838648224b905a99433946b1dfc19d961b9086e4f5ee284",
+      "sha256_sorgente": "5d16e111f97785d81a874b3c175a7f8f350d4e7a764d289bb5442e7b1f0892ce",
       "sha256_svg": "78c5c456597bc20e37f38c338111cf0ddbcdc63b78759f30561c61bb7e0ea55a",
       "categoria": "svg"
     },
     {
       "id": "SA_2008_2__SoluzioneUfficiale__05",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "0993d1547fe1456b5838648224b905a99433946b1dfc19d961b9086e4f5ee284",
+      "sha256_sorgente": "5d16e111f97785d81a874b3c175a7f8f350d4e7a764d289bb5442e7b1f0892ce",
       "sha256_svg": "169260917bfc82d9b9c354fa10aabf4fbc71f5dd6016fea3aa8334af8c3edc70",
       "categoria": "svg"
     },
     {
       "id": "SA_2008_2__SoluzioneUfficiale__06",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "0993d1547fe1456b5838648224b905a99433946b1dfc19d961b9086e4f5ee284",
+      "sha256_sorgente": "5d16e111f97785d81a874b3c175a7f8f350d4e7a764d289bb5442e7b1f0892ce",
       "sha256_svg": "6cbfe233b72a6fbdb3123cfd2e7c3766489af339979f76eb6d42746442e64c23",
       "categoria": "svg"
     },
     {
       "id": "SA_2008_2__SoluzioneUfficiale__07",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "0993d1547fe1456b5838648224b905a99433946b1dfc19d961b9086e4f5ee284",
+      "sha256_sorgente": "5d16e111f97785d81a874b3c175a7f8f350d4e7a764d289bb5442e7b1f0892ce",
       "sha256_svg": "295c75658ec682444ec9f5170ed004e051a3689b3c29cb656d18e64913444f85",
       "categoria": "svg"
     },
     {
       "id": "SA_2008_2__SoluzioneUfficiale__08",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "0993d1547fe1456b5838648224b905a99433946b1dfc19d961b9086e4f5ee284",
-      "sha256_svg": "fcdc92c54a316710305bd3cb33b628e7792f67053163bb0184323112d60c4b71",
+      "sha256_sorgente": "5d16e111f97785d81a874b3c175a7f8f350d4e7a764d289bb5442e7b1f0892ce",
+      "sha256_svg": "307d3e4b1740798f82eb55f819b46dfb44dd89d4709232b530f700cf17de4b55",
       "categoria": "svg"
     },
     {
       "id": "SA_2008_2__SoluzioneUfficiale__09",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "0993d1547fe1456b5838648224b905a99433946b1dfc19d961b9086e4f5ee284",
+      "sha256_sorgente": "5d16e111f97785d81a874b3c175a7f8f350d4e7a764d289bb5442e7b1f0892ce",
       "sha256_svg": "7c98022c0250c00466fc8ecf68dfbafdc260dd01f87db6245cba8459d033fb74",
       "categoria": "svg"
     },
     {
       "id": "SA_2009_4__SoluzioneUfficiale__01",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "e991fbb1dd3b177daadff5fe346763ca417c583420adec5811392b1fc75d0314",
+      "sha256_sorgente": "6af7386c544f3569a66e43bcad783c25d6eca197f1d4762e083147313e3dbea3",
       "sha256_svg": "2cbc82a2f8cec4d071e44b55d618a55e9331490bc0ac6f0a5dbde2a1efa58758",
       "categoria": "svg"
     },
     {
       "id": "SA_2009_4__SoluzioneUfficiale__02",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "e991fbb1dd3b177daadff5fe346763ca417c583420adec5811392b1fc75d0314",
+      "sha256_sorgente": "6af7386c544f3569a66e43bcad783c25d6eca197f1d4762e083147313e3dbea3",
       "sha256_svg": "9c3d06be8e41a2338a4e7a77c46111ae582911699181bd20d2799b5c814ce9a4",
       "categoria": "svg"
     },
     {
       "id": "SA_2009_4__SoluzioneUfficiale__03",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "e991fbb1dd3b177daadff5fe346763ca417c583420adec5811392b1fc75d0314",
+      "sha256_sorgente": "6af7386c544f3569a66e43bcad783c25d6eca197f1d4762e083147313e3dbea3",
       "sha256_svg": "0e2e34757dfd3d52eb57098e25f247a21b7ab8e8af913c729b9d794289fd1e41",
       "categoria": "svg"
     },
     {
       "id": "SA_2009_4__SoluzioneUfficiale__04",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "e991fbb1dd3b177daadff5fe346763ca417c583420adec5811392b1fc75d0314",
+      "sha256_sorgente": "6af7386c544f3569a66e43bcad783c25d6eca197f1d4762e083147313e3dbea3",
       "sha256_svg": "720744502505eb523399fbdcd0d454af5314ad129f9963d91d4077486c38c37f",
       "categoria": "svg"
     },
     {
       "id": "SA_2009_4__SoluzioneUfficiale__05",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "e991fbb1dd3b177daadff5fe346763ca417c583420adec5811392b1fc75d0314",
+      "sha256_sorgente": "6af7386c544f3569a66e43bcad783c25d6eca197f1d4762e083147313e3dbea3",
       "sha256_svg": "a475b0f70f80a6882fd65f552559ce6473abaf5f21d23ebb479e2940e6aa193a",
       "categoria": "svg"
     },
     {
       "id": "SA_2009_4__SoluzioneUfficiale__06",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "e991fbb1dd3b177daadff5fe346763ca417c583420adec5811392b1fc75d0314",
+      "sha256_sorgente": "6af7386c544f3569a66e43bcad783c25d6eca197f1d4762e083147313e3dbea3",
       "sha256_svg": "aedda76f15f6da814e587a1257c5d49adac37c89f1e7792dfd60a19876d88930",
       "categoria": "svg"
     },
     {
       "id": "SA_2009_4__SoluzioneUfficiale__07",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "e991fbb1dd3b177daadff5fe346763ca417c583420adec5811392b1fc75d0314",
+      "sha256_sorgente": "6af7386c544f3569a66e43bcad783c25d6eca197f1d4762e083147313e3dbea3",
       "sha256_svg": "e947bba14d5f4a4041f49bede3cbe777d101fb0d9cd34e5caf7721be417a54ba",
       "categoria": "svg"
     },
     {
       "id": "SA_2009_4__SoluzioneUfficiale__08",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "e991fbb1dd3b177daadff5fe346763ca417c583420adec5811392b1fc75d0314",
+      "sha256_sorgente": "6af7386c544f3569a66e43bcad783c25d6eca197f1d4762e083147313e3dbea3",
       "sha256_svg": "537629d127626cac3dcafe699f23991a2464838e0e67163934013e0fdd093afd",
       "categoria": "svg"
     },
     {
       "id": "SA_2009_4__SoluzioneUfficiale__09",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "e991fbb1dd3b177daadff5fe346763ca417c583420adec5811392b1fc75d0314",
+      "sha256_sorgente": "6af7386c544f3569a66e43bcad783c25d6eca197f1d4762e083147313e3dbea3",
       "sha256_svg": "36ff24ad95cacb148cefb40764b39ae2dff641cabccbd87bc8d32ea4c3d36bf5",
       "categoria": "svg"
     },
     {
       "id": "SA_2009_4__SoluzioneUfficiale__10",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "e991fbb1dd3b177daadff5fe346763ca417c583420adec5811392b1fc75d0314",
+      "sha256_sorgente": "6af7386c544f3569a66e43bcad783c25d6eca197f1d4762e083147313e3dbea3",
       "sha256_svg": "30f73450f80b505ac2078f47cffe4fc48ec72c9f105a3c5a3e92284fd12abe19",
       "categoria": "svg"
     },
     {
       "id": "SA_2009_4__SoluzioneUfficiale__11",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "e991fbb1dd3b177daadff5fe346763ca417c583420adec5811392b1fc75d0314",
+      "sha256_sorgente": "6af7386c544f3569a66e43bcad783c25d6eca197f1d4762e083147313e3dbea3",
       "sha256_svg": "e215a730afff7fa788207376c482a95982c7d1171ad29c1353949c0225aef790",
       "categoria": "svg"
     },
     {
       "id": "SA_2009_4__SoluzioneUfficiale__12",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "e991fbb1dd3b177daadff5fe346763ca417c583420adec5811392b1fc75d0314",
+      "sha256_sorgente": "6af7386c544f3569a66e43bcad783c25d6eca197f1d4762e083147313e3dbea3",
       "sha256_svg": "4ec955959df43628256e4d4290f934cac851320acbacfa4a50fac268ddee8a7b",
       "categoria": "svg"
     },
@@ -753,77 +753,77 @@
     {
       "id": "SA_2010_4__Osservazioni__01",
       "campo": "Osservazioni",
-      "sha256_sorgente": "15a2f40c2aca51368f55cd7e58675237e6c2aee5425c7c874826cdf1329842e0",
+      "sha256_sorgente": "9fb07d0ce4c6085e3994bf2c4f48e19fc14a62ea5b5c210ef09cfb0f5721b13a",
       "sha256_svg": "b2f127980901c748761e24335d012b22e8865071ee10910284cbcc84d1bcf36a",
       "categoria": "svg"
     },
     {
       "id": "SA_2010_4__Osservazioni__02",
       "campo": "Osservazioni",
-      "sha256_sorgente": "15a2f40c2aca51368f55cd7e58675237e6c2aee5425c7c874826cdf1329842e0",
+      "sha256_sorgente": "9fb07d0ce4c6085e3994bf2c4f48e19fc14a62ea5b5c210ef09cfb0f5721b13a",
       "sha256_svg": "a5a54d6cfce01bd2fe322e192eab427f62f3e9b373e37355df1446acf5c9d846",
       "categoria": "svg"
     },
     {
       "id": "SA_2010_4__Osservazioni__03",
       "campo": "Osservazioni",
-      "sha256_sorgente": "15a2f40c2aca51368f55cd7e58675237e6c2aee5425c7c874826cdf1329842e0",
-      "sha256_svg": "818e456f52ad0c6d00ea4c3f3f49e6e54c0bf9a0aa9613514c92f6a4e338bdef",
+      "sha256_sorgente": "9fb07d0ce4c6085e3994bf2c4f48e19fc14a62ea5b5c210ef09cfb0f5721b13a",
+      "sha256_svg": "503fbe6e64955302b0cdf6af2be268fff0d451dcbcfbd42fb078927be67a4687",
       "categoria": "svg"
     },
     {
       "id": "SA_2010_4__Osservazioni__04",
       "campo": "Osservazioni",
-      "sha256_sorgente": "15a2f40c2aca51368f55cd7e58675237e6c2aee5425c7c874826cdf1329842e0",
-      "sha256_svg": "20fc2eeb8ef857b96eff2df444caafbfcdbc57ee52e00b64cf33f1625928cfcf",
+      "sha256_sorgente": "9fb07d0ce4c6085e3994bf2c4f48e19fc14a62ea5b5c210ef09cfb0f5721b13a",
+      "sha256_svg": "a1a91c6dc8d25b64abdac7371526a8a30b58df41096a687f8e6a26c109dc95c1",
       "categoria": "svg"
     },
     {
       "id": "SA_2010_4__Osservazioni__05",
       "campo": "Osservazioni",
-      "sha256_sorgente": "15a2f40c2aca51368f55cd7e58675237e6c2aee5425c7c874826cdf1329842e0",
-      "sha256_svg": "904543706eefe7a73e6b84a109a408cdcdeccf14206083eb6985f183cb64cace",
+      "sha256_sorgente": "9fb07d0ce4c6085e3994bf2c4f48e19fc14a62ea5b5c210ef09cfb0f5721b13a",
+      "sha256_svg": "fb5bb6736e6be81e29cd8b4196d4c54cd35c53dd1f36862a21476cd2508a2395",
       "categoria": "svg"
     },
     {
       "id": "SA_2010_4__Osservazioni__06",
       "campo": "Osservazioni",
-      "sha256_sorgente": "15a2f40c2aca51368f55cd7e58675237e6c2aee5425c7c874826cdf1329842e0",
-      "sha256_svg": "1c0419229b9412fed979bf01afc5ad733e45ae38161eaa5b633981b38f9edb24",
+      "sha256_sorgente": "9fb07d0ce4c6085e3994bf2c4f48e19fc14a62ea5b5c210ef09cfb0f5721b13a",
+      "sha256_svg": "3e486195fff48caa1fd31c4d29749147122973485c448bbea4cb4a146cb69fd5",
       "categoria": "svg"
     },
     {
       "id": "SA_2010_4__SoluzioneUfficiale__01",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "15a2f40c2aca51368f55cd7e58675237e6c2aee5425c7c874826cdf1329842e0",
+      "sha256_sorgente": "9fb07d0ce4c6085e3994bf2c4f48e19fc14a62ea5b5c210ef09cfb0f5721b13a",
       "sha256_svg": "a8d03e5c73bb587dab7dfa39b4a50b77ac51b3a70941fd8f3d78ebded65c06e7",
       "categoria": "svg"
     },
     {
       "id": "SA_2010_4__SoluzioneUfficiale__02",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "15a2f40c2aca51368f55cd7e58675237e6c2aee5425c7c874826cdf1329842e0",
+      "sha256_sorgente": "9fb07d0ce4c6085e3994bf2c4f48e19fc14a62ea5b5c210ef09cfb0f5721b13a",
       "sha256_svg": "b0241e517a9da5679a8ea9d678a9e7bf19bc9979ee13d5c2cf3dec9b409f10b4",
       "categoria": "svg"
     },
     {
       "id": "SA_2010_4__SoluzioneUfficiale__03",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "15a2f40c2aca51368f55cd7e58675237e6c2aee5425c7c874826cdf1329842e0",
+      "sha256_sorgente": "9fb07d0ce4c6085e3994bf2c4f48e19fc14a62ea5b5c210ef09cfb0f5721b13a",
       "sha256_svg": "af39bdb07b1a45580811a55eaae8069c54568f2f5a3b5ce8313af0393860ddee",
       "categoria": "svg"
     },
     {
       "id": "SA_2010_4__SoluzioneUfficiale__04",
       "campo": "SoluzioneUfficiale",
-      "sha256_sorgente": "15a2f40c2aca51368f55cd7e58675237e6c2aee5425c7c874826cdf1329842e0",
+      "sha256_sorgente": "9fb07d0ce4c6085e3994bf2c4f48e19fc14a62ea5b5c210ef09cfb0f5721b13a",
       "sha256_svg": "1c032aa7f993dd490c015df31bdbc83b03b543c0d3089563610c210430b3e765",
       "categoria": "svg"
     },
     {
       "id": "SA_2010_4__SoluzioniAlternative__01",
       "campo": "SoluzioniAlternative",
-      "sha256_sorgente": "15a2f40c2aca51368f55cd7e58675237e6c2aee5425c7c874826cdf1329842e0",
+      "sha256_sorgente": "9fb07d0ce4c6085e3994bf2c4f48e19fc14a62ea5b5c210ef09cfb0f5721b13a",
       "sha256_svg": "1ada8a42a5ecb16d89d861449dc60b1dd6bf8d5ccf280cd4596f5a24c74eb9fb",
       "categoria": "svg"
     },
