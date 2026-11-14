@@ -53,7 +53,7 @@ LOCAL_USE_RE = re.compile(
 )
 AI_DRAFT_RE = re.compile(
     r'(?m)^[ \t]*%[ \t]*SSSUP-BOZZA-AI:[ \t]*'
-    r'(Risposta|Aiutino|SoluzioneRedazionale)\s*;[^\r\n]*'
+    r'(Risposta|Aiutino|SoluzioneRedazionale|SoluzioniAlternative|Osservazioni|Commenti)\s*;[^\r\n]*'
     r'\bstato=DA-VERIFICARE\b'
 )
 AI_SOURCE_RE = re.compile(r'(?m)^[ \t]*%[ \t]*SSSUP-PROVENIENZA:[ \t]*(.+?)\s*$')
