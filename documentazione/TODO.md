@@ -94,3 +94,5 @@ confuse con le verifiche matematiche ancora aperte.
       che le bozze vengono approvate o corrette.
 - [ ] Conservare il materiale originale e gli inventari locali fuori da Git
       finché non ne sia definita l'eventuale pubblicabilità.
+
+- **Statistiche web — contatore dei contenuti:** all'apertura di un problema il contatore mostra inizialmente 3 contenuti e passa a 4 quando viene caricata la sezione statistiche. Sincronizzare il conteggio con il caricamento asincrono, evitando il cambiamento visibile.

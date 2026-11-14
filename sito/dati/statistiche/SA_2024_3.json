@@ -1,0 +1,113 @@
+{
+  "schema": 1,
+  "problema": "SA_2024_3",
+  "anno": 2024,
+  "numero": 3,
+  "titolo": "Le borse di studio",
+  "elaborati": 102,
+  "stato": "bozza_da_verificare",
+  "pubblicabile": true,
+  "conteggi": "minimi_documentati_semiautomatici",
+  "sottodomande": [
+    {
+      "id": "a",
+      "contributo": 72,
+      "sostanzialmente_completo": 64,
+      "non_classificabili": 7
+    },
+    {
+      "id": "b",
+      "contributo": 61,
+      "sostanzialmente_completo": 58,
+      "non_classificabili": 10
+    },
+    {
+      "id": "c",
+      "contributo": 53,
+      "sostanzialmente_completo": 2,
+      "non_classificabili": 6
+    }
+  ],
+  "top_matematica": {
+    "5": {
+      "effettivi": 5,
+      "contributo_problema": 5,
+      "almeno_meta": 5,
+      "almeno_quattro_quinti": 3,
+      "anche_top_problema": 1,
+      "completi_sostanziali": {
+        "a": {
+          "documentati": 5,
+          "da_verificare": 0,
+          "stato": "ricostruzione_da_verificare"
+        },
+        "b": {
+          "documentati": 5,
+          "da_verificare": 0,
+          "stato": "ricostruzione_da_verificare"
+        },
+        "c": {
+          "documentati": 1,
+          "da_verificare": 0,
+          "stato": "ricostruzione_da_verificare"
+        }
+      }
+    },
+    "10": {
+      "effettivi": 10,
+      "contributo_problema": 10,
+      "almeno_meta": 10,
+      "almeno_quattro_quinti": 7,
+      "anche_top_problema": 5,
+      "completi_sostanziali": {
+        "a": {
+          "documentati": 10,
+          "da_verificare": 0,
+          "stato": "ricostruzione_da_verificare"
+        },
+        "b": {
+          "documentati": 10,
+          "da_verificare": 0,
+          "stato": "ricostruzione_da_verificare"
+        },
+        "c": {
+          "documentati": 2,
+          "da_verificare": 0,
+          "stato": "ricostruzione_da_verificare"
+        }
+      }
+    },
+    "20": {
+      "effettivi": 20,
+      "contributo_problema": 20,
+      "almeno_meta": 20,
+      "almeno_quattro_quinti": 13,
+      "anche_top_problema": 13,
+      "completi_sostanziali": {
+        "a": {
+          "documentati": 19,
+          "da_verificare": 1,
+          "stato": "ricostruzione_da_verificare"
+        },
+        "b": {
+          "documentati": 19,
+          "da_verificare": 1,
+          "stato": "ricostruzione_da_verificare"
+        },
+        "c": {
+          "documentati": 2,
+          "da_verificare": 2,
+          "stato": "ricostruzione_da_verificare"
+        }
+      }
+    }
+  },
+  "osservazioni": [
+    "Le prime due domande hanno avuto un buon tasso di successo; il salto difficile è descrivere tutte le terne ammissibili nell’ultima.",
+    "Un risultato molto alto in questo singolo problema era relativamente comune, e non bastava da solo a identificare i migliori della prova complessiva."
+  ],
+  "metodologia": "Per ciascuna sottodomanda abbiamo confrontato i commenti, i punteggi parziali esplicitamente annotati e il totale del problema. I casi determinati vengono contati come minimi documentati; quelli non univoci sono dichiarati da verificare. Il grafico deriva da una prima codifica qualitativa prudente. Nessuna statistica riguarda la graduatoria finale di ammissione.",
+  "nota_riservatezza": "Solo dati aggregati; fonte dei conteggi: tabelloni e verbalini privati (non allegati). La classifica matematica non e la graduatoria finale di ammissione.",
+  "revisione_micro_punteggi": "ricostruzione da verbale e totale, da validare",
+  "ai_da_verificare": true
+}

@@ -1,0 +1,152 @@
+{
+  "schema": 1,
+  "problema": "SA_2026_3",
+  "anno": 2026,
+  "numero": 3,
+  "titolo": "Le palline nell’urna",
+  "elaborati": 105,
+  "stato": "quantitativo_controllato",
+  "pubblicabile": true,
+  "conteggi": "punteggi_analitici_con_revisione",
+  "sottodomande": [
+    {
+      "id": "a",
+      "contributo": 97,
+      "sostanzialmente_completo": 75,
+      "non_classificabili": 0
+    },
+    {
+      "id": "b",
+      "contributo": 48,
+      "sostanzialmente_completo": 32,
+      "non_classificabili": 0
+    },
+    {
+      "id": "c",
+      "contributo": 36,
+      "sostanzialmente_completo": 9,
+      "non_classificabili": 0
+    },
+    {
+      "id": "d",
+      "contributo": 3,
+      "sostanzialmente_completo": 2,
+      "non_classificabili": 0
+    }
+  ],
+  "top_matematica": {
+    "5": {
+      "effettivi": 5,
+      "contributo_problema": 5,
+      "almeno_meta": 5,
+      "almeno_quattro_quinti": 4,
+      "anche_top_problema": 4,
+      "completi_stretti": {
+        "a": 5,
+        "b": 5,
+        "c": 4,
+        "d": 1
+      },
+      "completi_sostanziali": {
+        "a": {
+          "documentati": 5,
+          "da_verificare": 0,
+          "stato": "controllato"
+        },
+        "b": {
+          "documentati": 5,
+          "da_verificare": 0,
+          "stato": "controllato"
+        },
+        "c": {
+          "documentati": 4,
+          "da_verificare": 0,
+          "stato": "controllato"
+        },
+        "d": {
+          "documentati": 1,
+          "da_verificare": 0,
+          "stato": "controllato"
+        }
+      }
+    },
+    "10": {
+      "effettivi": 10,
+      "contributo_problema": 10,
+      "almeno_meta": 10,
+      "almeno_quattro_quinti": 5,
+      "anche_top_problema": 5,
+      "completi_stretti": {
+        "a": 9,
+        "b": 10,
+        "c": 5,
+        "d": 1
+      },
+      "completi_sostanziali": {
+        "a": {
+          "documentati": 9,
+          "da_verificare": 0,
+          "stato": "controllato"
+        },
+        "b": {
+          "documentati": 10,
+          "da_verificare": 0,
+          "stato": "controllato"
+        },
+        "c": {
+          "documentati": 5,
+          "da_verificare": 0,
+          "stato": "controllato"
+        },
+        "d": {
+          "documentati": 1,
+          "da_verificare": 0,
+          "stato": "controllato"
+        }
+      }
+    },
+    "20": {
+      "effettivi": 21,
+      "contributo_problema": 21,
+      "almeno_meta": 17,
+      "almeno_quattro_quinti": 7,
+      "anche_top_problema": 13,
+      "completi_stretti": {
+        "a": 19,
+        "b": 17,
+        "c": 6,
+        "d": 2
+      },
+      "completi_sostanziali": {
+        "a": {
+          "documentati": 19,
+          "da_verificare": 0,
+          "stato": "controllato"
+        },
+        "b": {
+          "documentati": 18,
+          "da_verificare": 0,
+          "stato": "controllato"
+        },
+        "c": {
+          "documentati": 6,
+          "da_verificare": 0,
+          "stato": "controllato"
+        },
+        "d": {
+          "documentati": 2,
+          "da_verificare": 0,
+          "stato": "controllato"
+        }
+      }
+    }
+  },
+  "osservazioni": [
+    "Il punto (a) è stato sostanzialmente completato da 75 candidati; al punto (c) ci sono riusciti soltanto in 9.",
+    "Tutti i primi dieci della matematica hanno completato senza penalizzazioni il punto (b), ma soltanto uno il punto (d): non è necessario risolvere ogni domanda estrema."
+  ],
+  "metodologia": "Grafico: dal tabellone analitico, credito positivo e sostanziale completezza (incluse due sviste off-by-one nel punto b). Nella tabella Top 5/10/20, il conteggio per punto usa lo stesso criterio. Gli ex aequo sono inclusi, e la classifica e quella della prova di matematica, non dell’ammissione.",
+  "nota_riservatezza": "Solo dati aggregati; fonte dei conteggi: tabelloni e verbalini privati (non allegati). La classifica matematica non e la graduatoria finale di ammissione.",
+  "revisione_micro_punteggi": "punteggi analitici",
+  "ai_da_verificare": true
+}

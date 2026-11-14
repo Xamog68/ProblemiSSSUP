@@ -1,0 +1,35 @@
+/* Scheda 'Come e andata al concorso?' -- namespace isolato. */
+.sssup-analytics .extra-body {font:14px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;color:var(--ink,#162839);padding:20px}
+.sssup-analytics .sssup-a-top {display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.sssup-analytics .sssup-a-kicker {color:var(--quiet,#53677a);font-size:12px;margin:0 0 12px}
+.sssup-analytics .sssup-a-flag {font-size:11px;color:#85601e;background:#fff4db;border:1px solid #e9d09c;border-radius:16px;padding:3px 9px}
+.sssup-analytics h3 {font:normal 24px/1.25 Georgia,serif;margin:8px 0 10px;color:var(--ink,#162839)}
+.sssup-analytics h4 {font:750 15px/1.4 system-ui,sans-serif;margin:23px 0 9px;color:#153a43}
+.sssup-analytics .sssup-a-legend {display:flex;flex-wrap:wrap;gap:14px;font-size:12px;color:var(--quiet,#53677a);margin:12px 0 6px}
+.sssup-analytics .sssup-a-chip {display:inline-block;width:11px;height:11px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.sssup-analytics .sssup-a-chip.a {background:#75b7ad}.sssup-analytics .sssup-a-chip.b {background:#0e6b65}
+.sssup-analytics .sssup-a-graph {border:1px solid var(--line,#dce4e9);border-radius:10px;overflow-x:auto;padding:13px 13px 5px;background:white}
+.sssup-analytics .sssup-a-graph svg {display:block;min-width:450px;width:100%;height:auto}
+.sssup-analytics .sssup-a-graph svg text {font:12px system-ui,sans-serif;fill:#506372}
+.sssup-analytics .sssup-a-graph svg .sssup-a-count {font-size:13px;font-weight:760;fill:#233d4b}
+.sssup-analytics .sssup-a-graph svg .sssup-a-id {font-size:14px;font-weight:760;fill:#132b3a}
+.sssup-analytics .sssup-a-graph svg .sssup-a-axis {stroke:#d9e5e8;stroke-width:1}
+.sssup-analytics .sssup-a-note {font-size:12px;color:var(--quiet,#53677a);margin:10px 0!important}
+.sssup-analytics .sssup-a-switch {display:inline-flex;flex-wrap:wrap;gap:4px;padding:4px;background:#eff5f3;border:1px solid #d3e1dc;border-radius:9px;margin:6px 0 12px}
+.sssup-analytics .sssup-a-switch button {border:0;border-radius:6px;background:transparent;color:#36565b;font:730 13px/1.4 system-ui,sans-serif;padding:6px 14px}
+.sssup-analytics .sssup-a-switch button[aria-pressed=true] {background:#126b65;color:white;box-shadow:0 1px 4px #132b3a18}
+.sssup-analytics .sssup-a-table {overflow-x:auto;border:1px solid var(--line,#dce4e9);border-radius:9px}
+.sssup-analytics .sssup-a-table table {width:100%;border-collapse:collapse;font:13px/1.5 system-ui,sans-serif}
+.sssup-analytics .sssup-a-table td,.sssup-analytics .sssup-a-table th {padding:10px 12px;border-bottom:1px solid #e2e8e8;text-align:left}
+.sssup-analytics .sssup-a-table th {background:#f5f9f8;color:#4c6270;font-weight:700}
+.sssup-analytics .sssup-a-table td:last-child,.sssup-analytics .sssup-a-table th:last-child {text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.sssup-analytics .sssup-a-table td:last-child {color:#166a62;font-weight:750}
+.sssup-analytics .sssup-a-table tr:last-child td{border:0}
+.sssup-analytics .sssup-a-takeaways {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:14px 0}
+.sssup-analytics .sssup-a-takeaways p {margin:0!important;padding:0 0 0 12px;border-left:3px solid #a6cdc4;font:13px/1.58 system-ui,sans-serif;color:#425765}
+.sssup-analytics .sssup-a-method {border-top:1px solid var(--line,#dce4e9);padding-top:12px;margin-top:18px}
+.sssup-analytics .sssup-a-method summary {display:list-item!important;list-style:disclosure-closed!important;border:0!important;background:transparent!important;padding:3px!important;color:#275f5a!important;font:700 12px/1.5 system-ui,sans-serif!important}
+.sssup-analytics .sssup-a-method[open] summary{list-style:disclosure-open!important}
+.sssup-analytics .sssup-a-method summary:after{display:none!important}
+.sssup-analytics .sssup-a-method p {font:12px/1.6 system-ui,sans-serif;color:#53677a;margin:8px 0!important}
+@media(max-width:700px){.sssup-analytics .extra-body{padding:14px}.sssup-analytics .sssup-a-takeaways{grid-template-columns:1fr}}

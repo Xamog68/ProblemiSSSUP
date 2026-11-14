@@ -1,0 +1,134 @@
+{
+  "schema": 1,
+  "problema": "SA_2025_3",
+  "anno": 2025,
+  "numero": 3,
+  "titolo": "I poligoni capienti",
+  "elaborati": 110,
+  "stato": "bozza_da_verificare",
+  "pubblicabile": true,
+  "conteggi": "minimi_documentati_semiautomatici",
+  "sottodomande": [
+    {
+      "id": "a",
+      "contributo": 67,
+      "sostanzialmente_completo": 18,
+      "non_classificabili": 5
+    },
+    {
+      "id": "b",
+      "contributo": 42,
+      "sostanzialmente_completo": 9,
+      "non_classificabili": 7
+    },
+    {
+      "id": "c",
+      "contributo": 23,
+      "sostanzialmente_completo": 4,
+      "non_classificabili": 2
+    },
+    {
+      "id": "d",
+      "contributo": 2,
+      "sostanzialmente_completo": 0,
+      "non_classificabili": 0
+    }
+  ],
+  "top_matematica": {
+    "5": {
+      "effettivi": 6,
+      "contributo_problema": 6,
+      "almeno_meta": 6,
+      "almeno_quattro_quinti": 3,
+      "anche_top_problema": 3,
+      "completi_sostanziali": {
+        "a": {
+          "documentati": 4,
+          "da_verificare": 1,
+          "stato": "ricostruzione_da_verificare"
+        },
+        "b": {
+          "documentati": 4,
+          "da_verificare": 0,
+          "stato": "ricostruzione_da_verificare"
+        },
+        "c": {
+          "documentati": 2,
+          "da_verificare": 0,
+          "stato": "ricostruzione_da_verificare"
+        },
+        "d": {
+          "documentati": 0,
+          "da_verificare": 6,
+          "stato": "non_ricostruibile"
+        }
+      }
+    },
+    "10": {
+      "effettivi": 10,
+      "contributo_problema": 10,
+      "almeno_meta": 10,
+      "almeno_quattro_quinti": 4,
+      "anche_top_problema": 7,
+      "completi_sostanziali": {
+        "a": {
+          "documentati": 6,
+          "da_verificare": 2,
+          "stato": "ricostruzione_da_verificare"
+        },
+        "b": {
+          "documentati": 5,
+          "da_verificare": 1,
+          "stato": "ricostruzione_da_verificare"
+        },
+        "c": {
+          "documentati": 3,
+          "da_verificare": 0,
+          "stato": "ricostruzione_da_verificare"
+        },
+        "d": {
+          "documentati": 0,
+          "da_verificare": 10,
+          "stato": "non_ricostruibile"
+        }
+      }
+    },
+    "20": {
+      "effettivi": 20,
+      "contributo_problema": 20,
+      "almeno_meta": 15,
+      "almeno_quattro_quinti": 4,
+      "anche_top_problema": 15,
+      "completi_sostanziali": {
+        "a": {
+          "documentati": 12,
+          "da_verificare": 3,
+          "stato": "ricostruzione_da_verificare"
+        },
+        "b": {
+          "documentati": 7,
+          "da_verificare": 3,
+          "stato": "ricostruzione_da_verificare"
+        },
+        "c": {
+          "documentati": 3,
+          "da_verificare": 0,
+          "stato": "ricostruzione_da_verificare"
+        },
+        "d": {
+          "documentati": 0,
+          "da_verificare": 20,
+          "stato": "non_ricostruibile"
+        }
+      }
+    }
+  },
+  "osservazioni": [
+    "Nella geometria della capienza, indovinare una dimensione o disegnare una figura non sostituisce una dimostrazione valida per tutti i casi.",
+    "Gli argomenti quantitativi documentati nell’ultimo punto sono rarissimi."
+  ],
+  "metodologia": "Per ciascuna sottodomanda abbiamo confrontato i commenti, i punteggi parziali esplicitamente annotati e il totale del problema. I casi determinati vengono contati come minimi documentati; quelli non univoci sono dichiarati da verificare. Il grafico deriva da una prima codifica qualitativa prudente. Nessuna statistica riguarda la graduatoria finale di ammissione.",
+  "nota_riservatezza": "Solo dati aggregati; fonte dei conteggi: tabelloni e verbalini privati (non allegati). La classifica matematica non e la graduatoria finale di ammissione.",
+  "revisione_micro_punteggi": "ricostruzione da verbale e totale, da validare",
+  "ai_da_verificare": true
+}
